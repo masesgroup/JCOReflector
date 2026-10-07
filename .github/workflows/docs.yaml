@@ -8,6 +8,8 @@ on:
   push:
     # only trigger on branches, not on tags
     branches: 'master'
+    paths-ignore:
+      - 'docs/**'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -38,6 +40,11 @@ jobs:
                 break
               fi
               if [[ $added_modified_file == "src/jvm/src/"* ]]; then
+                echo "$added_modified_file is under the directory 'src/'."
+                echo "run_job=true" >> $GITHUB_OUTPUT
+                break
+              fi
+              if [[ $added_modified_file == "src/net/"* ]]; then
                 echo "$added_modified_file is under the directory 'src/'."
                 echo "run_job=true" >> $GITHUB_OUTPUT
                 break

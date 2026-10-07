@@ -103,7 +103,9 @@ public class PACKAGE_CLASS_NAME<GENERIC_CLASS_PARAMETERS> extends NetObject impl
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
      */
     @SuppressWarnings("unchecked")
     public PACKAGE_CLASS_NAME(JCObject instance) {

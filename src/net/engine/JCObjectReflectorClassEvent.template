@@ -1,3 +1,10 @@
+    /**
+     * Invokes the .NET member addEVENT_JAVA_NAME.
+     *
+     * @param handler the argument of type {@code EVENT_HANDLER_TYPE}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public METHOD_MODIFIER_KEYWORDvoid addEVENT_JAVA_NAME(EVENT_HANDLER_TYPE handler) throws Throwable {
         if (EVENT_OBJECT == null)
             throw new java.lang.UnsupportedOperationException("EVENT_OBJECT is null.");
@@ -8,6 +15,13 @@
         }
     }
 
+    /**
+     * Invokes the .NET member removeEVENT_JAVA_NAME.
+     *
+     * @param handler the argument of type {@code EVENT_HANDLER_TYPE}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public METHOD_MODIFIER_KEYWORDvoid removeEVENT_JAVA_NAME(EVENT_HANDLER_TYPE handler) throws Throwable {
         if (EVENT_OBJECT == null)
             throw new java.lang.UnsupportedOperationException("EVENT_OBJECT is null.");

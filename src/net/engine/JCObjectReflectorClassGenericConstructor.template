@@ -1,3 +1,11 @@
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * CTOR_JAVADOC_PARAMS
+     * @throws Throwable if the .NET constructor fails
+     * THROWABLE_JAVADOC
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public PACKAGE_CLASS_NAME(CTOR_PARAMETERS) throws ThrowableTHROWABLE_TEMPLATE {
         try {
             // add reference to assemblyName.dll file

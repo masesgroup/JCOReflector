@@ -1,6 +1,11 @@
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToPROPERTY_INTERFACE_NAME method available in PROPERTY_INTERFACE_NAME to obtain an object with an invocable method
+     *
+     * @return never returns: the call always throws an {@code UnsupportedOperationException}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * THROWABLE_JAVADOC
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
      */
     @Deprecated
     public METHOD_MODIFIER_KEYWORDPROPERTY_OUTPUTTYPE[] getPROPERTY_JAVA_NAME(PROPERTY_PARAMETERS) throws ThrowableTHROWABLE_TEMPLATE {

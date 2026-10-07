@@ -88,6 +88,13 @@ public class PACKAGE_CLASS_NAME extends NetObject implements Iterator<PACKAGE_IN
         }
     }
 
+    /**
+     * Invokes the .NET member addReference.
+     *
+     * @param ref the argument of type {@code String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     protected final void addReference(String ref) throws Throwable {
         try {
             bridge.AddReference(ref);

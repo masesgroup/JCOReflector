@@ -101,7 +101,10 @@ public class VariableValue_1<T extends IJCOBridgeReflected> extends system.activ
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public VariableValue_1(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class VariableValue_1<T extends IJCOBridgeReflected> extends system.activ
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Expressions.VariableValue-1.-ctor" target="_top">.NET documentation</a>
+     */
     public VariableValue_1() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -160,6 +169,13 @@ public class VariableValue_1<T extends IJCOBridgeReflected> extends system.activ
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param variable the argument of type {@code Variable}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Expressions.VariableValue-1.-ctor" target="_top">.NET documentation</a>
+     */
     public VariableValue_1(Variable variable) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -180,6 +196,13 @@ public class VariableValue_1<T extends IJCOBridgeReflected> extends system.activ
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Variable.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Expressions.VariableValue-1.Variable" target="_top">.NET documentation</a>
+     */
     public Variable getVariable() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -195,6 +218,13 @@ public class VariableValue_1<T extends IJCOBridgeReflected> extends system.activ
         }
     }
 
+    /**
+     * Sets the value of the .NET property Variable.
+     *
+     * @param Variable the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Expressions.VariableValue-1.Variable" target="_top">.NET documentation</a>
+     */
     public void setVariable(Variable Variable) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

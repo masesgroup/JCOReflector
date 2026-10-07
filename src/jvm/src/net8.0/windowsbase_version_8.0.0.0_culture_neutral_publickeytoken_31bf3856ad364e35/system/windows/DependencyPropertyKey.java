@@ -100,7 +100,10 @@ public class DependencyPropertyKey extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DependencyPropertyKey(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,29 @@ public class DependencyPropertyKey extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member OverrideMetadata.
+     *
+     * @param forType the argument of type {@code NetType}
+     * @param typeMetadata the argument of type {@code PropertyMetadata}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.DependencyPropertyKey.OverrideMetadata" target="_top">.NET documentation</a>
+     */
     public void OverrideMetadata(NetType forType, PropertyMetadata typeMetadata) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.security.SecurityException, system.io.IOException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.FormatException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -169,6 +195,13 @@ public class DependencyPropertyKey extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property DependencyProperty.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.DependencyPropertyKey.DependencyProperty" target="_top">.NET documentation</a>
+     */
     public DependencyProperty getDependencyProperty() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

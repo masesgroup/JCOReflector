@@ -51,5 +51,10 @@ import org.mases.jcobridge.netreflection.*;
  * @version 2.0.0.0
  */
 public interface IMethodInvoker {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * 
+     */
     public void Invoke();
 }

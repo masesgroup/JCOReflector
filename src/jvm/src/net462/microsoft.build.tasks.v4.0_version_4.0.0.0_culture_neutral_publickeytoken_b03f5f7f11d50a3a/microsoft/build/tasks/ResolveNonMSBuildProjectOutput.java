@@ -101,7 +101,10 @@ public class ResolveNonMSBuildProjectOutput extends microsoft.build.tasks.Resolv
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ResolveNonMSBuildProjectOutput(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,15 @@ public class ResolveNonMSBuildProjectOutput extends microsoft.build.tasks.Resolv
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveNonMSBuildProjectOutput.-ctor" target="_top">.NET documentation</a>
+     */
     public ResolveNonMSBuildProjectOutput() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -162,6 +174,31 @@ public class ResolveNonMSBuildProjectOutput extends microsoft.build.tasks.Resolv
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Execute.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.xml.schema.XmlSchemaException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveNonMSBuildProjectOutput.Execute" target="_top">.NET documentation</a>
+     */
     public boolean Execute() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.FormatException, system.NotImplementedException, system.IndexOutOfRangeException, system.xml.XmlException, system.xml.schema.XmlSchemaException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +217,13 @@ public class ResolveNonMSBuildProjectOutput extends microsoft.build.tasks.Resolv
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ResolvedOutputPaths.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveNonMSBuildProjectOutput.ResolvedOutputPaths" target="_top">.NET documentation</a>
+     */
     public final ITaskItem[] getResolvedOutputPaths() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +245,13 @@ public class ResolveNonMSBuildProjectOutput extends microsoft.build.tasks.Resolv
         }
     }
 
+    /**
+     * Sets the value of the .NET property ResolvedOutputPaths.
+     *
+     * @param ResolvedOutputPaths the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveNonMSBuildProjectOutput.ResolvedOutputPaths" target="_top">.NET documentation</a>
+     */
     public void setResolvedOutputPaths(ITaskItem[] ResolvedOutputPaths) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -211,6 +262,13 @@ public class ResolveNonMSBuildProjectOutput extends microsoft.build.tasks.Resolv
         }
     }
 
+    /**
+     * Gets the value of the .NET property UnresolvedProjectReferences.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveNonMSBuildProjectOutput.UnresolvedProjectReferences" target="_top">.NET documentation</a>
+     */
     public final ITaskItem[] getUnresolvedProjectReferences() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -232,6 +290,13 @@ public class ResolveNonMSBuildProjectOutput extends microsoft.build.tasks.Resolv
         }
     }
 
+    /**
+     * Sets the value of the .NET property UnresolvedProjectReferences.
+     *
+     * @param UnresolvedProjectReferences the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveNonMSBuildProjectOutput.UnresolvedProjectReferences" target="_top">.NET documentation</a>
+     */
     public void setUnresolvedProjectReferences(ITaskItem[] UnresolvedProjectReferences) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -242,6 +307,13 @@ public class ResolveNonMSBuildProjectOutput extends microsoft.build.tasks.Resolv
         }
     }
 
+    /**
+     * Gets the value of the .NET property PreresolvedProjectOutputs.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveNonMSBuildProjectOutput.PreresolvedProjectOutputs" target="_top">.NET documentation</a>
+     */
     public java.lang.String getPreresolvedProjectOutputs() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -256,6 +328,13 @@ public class ResolveNonMSBuildProjectOutput extends microsoft.build.tasks.Resolv
         }
     }
 
+    /**
+     * Sets the value of the .NET property PreresolvedProjectOutputs.
+     *
+     * @param PreresolvedProjectOutputs the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveNonMSBuildProjectOutput.PreresolvedProjectOutputs" target="_top">.NET documentation</a>
+     */
     public void setPreresolvedProjectOutputs(java.lang.String PreresolvedProjectOutputs) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

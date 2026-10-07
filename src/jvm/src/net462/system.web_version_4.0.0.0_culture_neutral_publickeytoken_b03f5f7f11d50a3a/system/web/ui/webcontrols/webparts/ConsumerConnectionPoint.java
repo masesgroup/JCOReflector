@@ -102,7 +102,10 @@ public class ConsumerConnectionPoint extends system.web.ui.webcontrols.webparts.
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ConsumerConnectionPoint(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,28 @@ public class ConsumerConnectionPoint extends system.web.ui.webcontrols.webparts.
     public ConsumerConnectionPoint() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param callbackMethod the argument of type {@code MethodInfo}
+     * @param interfaceType the argument of type {@code NetType}
+     * @param controlType the argument of type {@code NetType}
+     * @param displayName the argument of type {@code java.lang.String}
+     * @param id the argument of type {@code java.lang.String}
+     * @param allowsMultipleConnections the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint.-ctor" target="_top">.NET documentation</a>
+     */
     public ConsumerConnectionPoint(MethodInfo callbackMethod, NetType interfaceType, NetType controlType, java.lang.String displayName, java.lang.String id, boolean allowsMultipleConnections) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +192,15 @@ public class ConsumerConnectionPoint extends system.web.ui.webcontrols.webparts.
     
     // Methods section
     
+    /**
+     * Invokes the .NET member SupportsConnection.
+     *
+     * @param control the argument of type {@code Control}
+     * @param secondaryInterfaces the argument of type {@code ConnectionInterfaceCollection}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint.SupportsConnection" target="_top">.NET documentation</a>
+     */
     public boolean SupportsConnection(Control control, ConnectionInterfaceCollection secondaryInterfaces) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -181,6 +215,15 @@ public class ConsumerConnectionPoint extends system.web.ui.webcontrols.webparts.
         }
     }
 
+    /**
+     * Invokes the .NET member SetObject.
+     *
+     * @param control the argument of type {@code Control}
+     * @param data the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint.SetObject" target="_top">.NET documentation</a>
+     */
     public void SetObject(Control control, NetObject data) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

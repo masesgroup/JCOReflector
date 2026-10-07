@@ -98,7 +98,10 @@ public class Debugger extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Debugger(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -145,6 +148,12 @@ public class Debugger extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Debugger.-ctor" target="_top">.NET documentation</a>
+     */
     public Debugger() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -159,6 +168,13 @@ public class Debugger extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member IsLogging.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Debugger.IsLogging" target="_top">.NET documentation</a>
+     */
     public static boolean IsLogging() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -173,6 +189,20 @@ public class Debugger extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Launch.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Debugger.Launch" target="_top">.NET documentation</a>
+     */
     public static boolean Launch() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -187,6 +217,19 @@ public class Debugger extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Break.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Debugger.Break" target="_top">.NET documentation</a>
+     */
     public static void Break() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -197,6 +240,15 @@ public class Debugger extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Log.
+     *
+     * @param level the argument of type {@code int}
+     * @param category the argument of type {@code java.lang.String}
+     * @param message the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Debugger.Log" target="_top">.NET documentation</a>
+     */
     public static void Log(int level, java.lang.String category, java.lang.String message) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -207,6 +259,14 @@ public class Debugger extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member NotifyOfCrossThreadDependency.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Debugger.NotifyOfCrossThreadDependency" target="_top">.NET documentation</a>
+     */
     public static void NotifyOfCrossThreadDependency() throws Throwable, system.InvalidOperationException, system.threading.ThreadAbortException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -221,6 +281,13 @@ public class Debugger extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsAttached.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Debugger.IsAttached" target="_top">.NET documentation</a>
+     */
     public static boolean getIsAttached() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

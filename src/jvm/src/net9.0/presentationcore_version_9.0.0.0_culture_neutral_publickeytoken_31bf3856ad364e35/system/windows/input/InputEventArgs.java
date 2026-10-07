@@ -100,7 +100,10 @@ public class InputEventArgs extends system.windows.RoutedEventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public InputEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,14 @@ public class InputEventArgs extends system.windows.RoutedEventArgs  {
     public InputEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param inputDevice the argument of type {@code InputDevice}
+     * @param timestamp the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.InputEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public InputEventArgs(InputDevice inputDevice, int timestamp) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +180,13 @@ public class InputEventArgs extends system.windows.RoutedEventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Timestamp.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.InputEventArgs.Timestamp" target="_top">.NET documentation</a>
+     */
     public int getTimestamp() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -209,6 +227,13 @@ public class InputEventArgs extends system.windows.RoutedEventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Device.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.InputEventArgs.Device" target="_top">.NET documentation</a>
+     */
     public InputDevice getDevice() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -224,6 +249,13 @@ public class InputEventArgs extends system.windows.RoutedEventArgs  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Device.
+     *
+     * @param Device the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.InputEventArgs.Device" target="_top">.NET documentation</a>
+     */
     public void setDevice(InputDevice Device) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -103,7 +103,10 @@ public class ServiceMetadataContractBehavior extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ServiceMetadataContractBehavior(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,12 @@ public class ServiceMetadataContractBehavior extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.ServiceMetadataContractBehavior.-ctor" target="_top">.NET documentation</a>
+     */
     public ServiceMetadataContractBehavior() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -160,6 +169,13 @@ public class ServiceMetadataContractBehavior extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param metadataGenerationDisabled the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.ServiceMetadataContractBehavior.-ctor" target="_top">.NET documentation</a>
+     */
     public ServiceMetadataContractBehavior(boolean metadataGenerationDisabled) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -177,8 +193,14 @@ public class ServiceMetadataContractBehavior extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIContractBehavior method available in IContractBehavior to obtain an object with an invocable method
+     *
+     * @param contractDescription the argument of type {@code ContractDescription}
+     * @param endpoint the argument of type {@code ServiceEndpoint}
+     * @param bindingParameters the argument of type {@code BindingParameterCollection}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.IContractBehavior.AddBindingParameters" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void AddBindingParameters(ContractDescription contractDescription, ServiceEndpoint endpoint, BindingParameterCollection bindingParameters) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIContractBehavior to obtain the full interface.");
     }
@@ -186,8 +208,14 @@ public class ServiceMetadataContractBehavior extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIContractBehavior method available in IContractBehavior to obtain an object with an invocable method
+     *
+     * @param contractDescription the argument of type {@code ContractDescription}
+     * @param endpoint the argument of type {@code ServiceEndpoint}
+     * @param clientRuntime the argument of type {@code ClientRuntime}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.IContractBehavior.ApplyClientBehavior" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void ApplyClientBehavior(ContractDescription contractDescription, ServiceEndpoint endpoint, ClientRuntime clientRuntime) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIContractBehavior to obtain the full interface.");
     }
@@ -195,8 +223,14 @@ public class ServiceMetadataContractBehavior extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIContractBehavior method available in IContractBehavior to obtain an object with an invocable method
+     *
+     * @param contractDescription the argument of type {@code ContractDescription}
+     * @param endpoint the argument of type {@code ServiceEndpoint}
+     * @param dispatchRuntime the argument of type {@code DispatchRuntime}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.IContractBehavior.ApplyDispatchBehavior" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void ApplyDispatchBehavior(ContractDescription contractDescription, ServiceEndpoint endpoint, DispatchRuntime dispatchRuntime) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIContractBehavior to obtain the full interface.");
     }
@@ -204,8 +238,13 @@ public class ServiceMetadataContractBehavior extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIContractBehavior method available in IContractBehavior to obtain an object with an invocable method
+     *
+     * @param contractDescription the argument of type {@code ContractDescription}
+     * @param endpoint the argument of type {@code ServiceEndpoint}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.IContractBehavior.Validate" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void Validate(ContractDescription contractDescription, ServiceEndpoint endpoint) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIContractBehavior to obtain the full interface.");
     }
@@ -214,6 +253,13 @@ public class ServiceMetadataContractBehavior extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property MetadataGenerationDisabled.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.ServiceMetadataContractBehavior.MetadataGenerationDisabled" target="_top">.NET documentation</a>
+     */
     public boolean getMetadataGenerationDisabled() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -228,6 +274,13 @@ public class ServiceMetadataContractBehavior extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MetadataGenerationDisabled.
+     *
+     * @param MetadataGenerationDisabled the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.ServiceMetadataContractBehavior.MetadataGenerationDisabled" target="_top">.NET documentation</a>
+     */
     public void setMetadataGenerationDisabled(boolean MetadataGenerationDisabled) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -103,7 +103,10 @@ public class MuxLogger extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public MuxLogger(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,17 @@ public class MuxLogger extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.MuxLogger.-ctor" target="_top">.NET documentation</a>
+     */
     public MuxLogger() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.collections.generic.KeyNotFoundException {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +178,17 @@ public class MuxLogger extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member UnregisterLoggers.
+     *
+     * @param submissionId the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.MuxLogger.UnregisterLoggers" target="_top">.NET documentation</a>
+     */
     public boolean UnregisterLoggers(int submissionId) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,6 +203,14 @@ public class MuxLogger extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Initialize.
+     *
+     * @param eventSource the argument of type {@code IEventSource}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.MuxLogger.Initialize" target="_top">.NET documentation</a>
+     */
     public void Initialize(IEventSource eventSource) throws Throwable, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +221,15 @@ public class MuxLogger extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Initialize.
+     *
+     * @param eventSource the argument of type {@code IEventSource}
+     * @param maxNodeCount the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.MuxLogger.Initialize" target="_top">.NET documentation</a>
+     */
     public void Initialize(IEventSource eventSource, int maxNodeCount) throws Throwable, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +240,21 @@ public class MuxLogger extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RegisterLogger.
+     *
+     * @param submissionId the argument of type {@code int}
+     * @param logger the argument of type {@code ILogger}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.MuxLogger.RegisterLogger" target="_top">.NET documentation</a>
+     */
     public void RegisterLogger(int submissionId, ILogger logger) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +265,16 @@ public class MuxLogger extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Shutdown.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.MuxLogger.Shutdown" target="_top">.NET documentation</a>
+     */
     public void Shutdown() throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -222,6 +289,13 @@ public class MuxLogger extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Verbosity.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.MuxLogger.Verbosity" target="_top">.NET documentation</a>
+     */
     public LoggerVerbosity getVerbosity() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -237,6 +311,13 @@ public class MuxLogger extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Verbosity.
+     *
+     * @param Verbosity the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.MuxLogger.Verbosity" target="_top">.NET documentation</a>
+     */
     public void setVerbosity(LoggerVerbosity Verbosity) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -247,6 +328,13 @@ public class MuxLogger extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Parameters.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.MuxLogger.Parameters" target="_top">.NET documentation</a>
+     */
     public java.lang.String getParameters() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -261,6 +349,13 @@ public class MuxLogger extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Parameters.
+     *
+     * @param Parameters the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.MuxLogger.Parameters" target="_top">.NET documentation</a>
+     */
     public void setParameters(java.lang.String Parameters) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

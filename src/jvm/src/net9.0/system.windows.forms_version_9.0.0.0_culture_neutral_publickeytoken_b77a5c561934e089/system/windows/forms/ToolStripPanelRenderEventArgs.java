@@ -101,7 +101,10 @@ public class ToolStripPanelRenderEventArgs extends system.EventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ToolStripPanelRenderEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,19 @@ public class ToolStripPanelRenderEventArgs extends system.EventArgs  {
     public ToolStripPanelRenderEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param g the argument of type {@code Graphics}
+     * @param toolStripPanel the argument of type {@code ToolStripPanel}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripPanelRenderEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public ToolStripPanelRenderEventArgs(Graphics g, ToolStripPanel toolStripPanel) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +186,13 @@ public class ToolStripPanelRenderEventArgs extends system.EventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Handled.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripPanelRenderEventArgs.Handled" target="_top">.NET documentation</a>
+     */
     public boolean getHandled() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +207,13 @@ public class ToolStripPanelRenderEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Handled.
+     *
+     * @param Handled the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripPanelRenderEventArgs.Handled" target="_top">.NET documentation</a>
+     */
     public void setHandled(boolean Handled) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +224,13 @@ public class ToolStripPanelRenderEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Graphics.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripPanelRenderEventArgs.Graphics" target="_top">.NET documentation</a>
+     */
     public Graphics getGraphics() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -209,6 +246,13 @@ public class ToolStripPanelRenderEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ToolStripPanel.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripPanelRenderEventArgs.ToolStripPanel" target="_top">.NET documentation</a>
+     */
     public ToolStripPanel getToolStripPanel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

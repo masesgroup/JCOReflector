@@ -101,7 +101,10 @@ public class BindableAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public BindableAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,14 @@ public class BindableAttribute extends system.Attribute  {
     public BindableAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param bindable the argument of type {@code boolean}
+     * @param direction the argument of type {@code BindingDirection}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.BindableAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public BindableAttribute(boolean bindable, BindingDirection direction) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -161,6 +172,13 @@ public class BindableAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param bindable the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.BindableAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public BindableAttribute(boolean bindable) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -171,6 +189,14 @@ public class BindableAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param flags the argument of type {@code BindableSupport}
+     * @param direction the argument of type {@code BindingDirection}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.BindableAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public BindableAttribute(BindableSupport flags, BindingDirection direction) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -181,6 +207,13 @@ public class BindableAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param flags the argument of type {@code BindableSupport}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.BindableAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public BindableAttribute(BindableSupport flags) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -196,6 +229,13 @@ public class BindableAttribute extends system.Attribute  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member IsDefaultAttribute.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.BindableAttribute.IsDefaultAttribute" target="_top">.NET documentation</a>
+     */
     public boolean IsDefaultAttribute() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -214,6 +254,13 @@ public class BindableAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Bindable.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.BindableAttribute.Bindable" target="_top">.NET documentation</a>
+     */
     public boolean getBindable() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -228,6 +275,13 @@ public class BindableAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Direction.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.BindableAttribute.Direction" target="_top">.NET documentation</a>
+     */
     public BindingDirection getDirection() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

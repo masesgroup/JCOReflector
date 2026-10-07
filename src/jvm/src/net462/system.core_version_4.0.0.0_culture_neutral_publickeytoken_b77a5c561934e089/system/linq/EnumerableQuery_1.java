@@ -104,7 +104,10 @@ public class EnumerableQuery_1<T extends IJCOBridgeReflected> extends system.lin
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public EnumerableQuery_1(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,13 @@ public class EnumerableQuery_1<T extends IJCOBridgeReflected> extends system.lin
     public EnumerableQuery_1() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param enumerable the argument of type {@code IEnumerable_1}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.EnumerableQuery-1.-ctor" target="_top">.NET documentation</a>
+     */
     public EnumerableQuery_1(IEnumerable_1 enumerable) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -166,6 +176,13 @@ public class EnumerableQuery_1<T extends IJCOBridgeReflected> extends system.lin
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param expression the argument of type {@code Expression}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.EnumerableQuery-1.-ctor" target="_top">.NET documentation</a>
+     */
     public EnumerableQuery_1(Expression expression) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -186,8 +203,13 @@ public class EnumerableQuery_1<T extends IJCOBridgeReflected> extends system.lin
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIQueryProvider method available in IQueryProvider to obtain an object with an invocable method
+     *
+     * @param expression the argument of type {@code Expression}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.IQueryProvider.CreateQuery" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public IQueryable CreateQuery(Expression expression) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIQueryProvider to obtain the full interface.");
     }
@@ -195,8 +217,13 @@ public class EnumerableQuery_1<T extends IJCOBridgeReflected> extends system.lin
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIQueryProvider method available in IQueryProvider to obtain an object with an invocable method
+     *
+     * @param expression the argument of type {@code Expression}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.IQueryProvider.Execute" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public NetObject Execute(Expression expression) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIQueryProvider to obtain the full interface.");
     }

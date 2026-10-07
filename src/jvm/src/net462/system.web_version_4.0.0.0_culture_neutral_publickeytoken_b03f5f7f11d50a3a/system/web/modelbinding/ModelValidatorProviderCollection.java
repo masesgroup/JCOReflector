@@ -106,7 +106,10 @@ public class ModelValidatorProviderCollection extends system.collections.objectm
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ModelValidatorProviderCollection(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,12 @@ public class ModelValidatorProviderCollection extends system.collections.objectm
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelValidatorProviderCollection.-ctor" target="_top">.NET documentation</a>
+     */
     public ModelValidatorProviderCollection() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -163,6 +172,14 @@ public class ModelValidatorProviderCollection extends system.collections.objectm
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param list the argument of type {@code IList_1}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelValidatorProviderCollection.-ctor" target="_top">.NET documentation</a>
+     */
     public ModelValidatorProviderCollection(IList_1 list) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -177,6 +194,15 @@ public class ModelValidatorProviderCollection extends system.collections.objectm
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetValidators.
+     *
+     * @param metadata the argument of type {@code ModelMetadata}
+     * @param context the argument of type {@code ModelBindingExecutionContext}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelValidatorProviderCollection.GetValidators" target="_top">.NET documentation</a>
+     */
     public IEnumerable_1 GetValidators(ModelMetadata metadata, ModelBindingExecutionContext context) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

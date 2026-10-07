@@ -100,7 +100,10 @@ public class IXmlMtomWriterInitializerImplementation extends NetObject implement
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IXmlMtomWriterInitializerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -142,6 +145,20 @@ public class IXmlMtomWriterInitializerImplementation extends NetObject implement
 
     // Methods section
     
+    /**
+     * Invokes the .NET member SetOutput.
+     *
+     * @param stream the argument of type {@code Stream}
+     * @param encoding the argument of type {@code Encoding}
+     * @param maxSizeInBytes the argument of type {@code int}
+     * @param startInfo the argument of type {@code java.lang.String}
+     * @param boundary the argument of type {@code java.lang.String}
+     * @param startUri the argument of type {@code java.lang.String}
+     * @param writeMessageHeaders the argument of type {@code boolean}
+     * @param ownsStream the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.IXmlMtomWriterInitializer.SetOutput" target="_top">.NET documentation</a>
+     */
     public void SetOutput(Stream stream, Encoding encoding, int maxSizeInBytes, java.lang.String startInfo, java.lang.String boundary, java.lang.String startUri, boolean writeMessageHeaders, boolean ownsStream) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

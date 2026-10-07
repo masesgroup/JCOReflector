@@ -100,7 +100,10 @@ public class IPrincipalImplementation extends NetObject implements IPrincipal {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IPrincipalImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -142,6 +145,14 @@ public class IPrincipalImplementation extends NetObject implements IPrincipal {
 
     // Methods section
     
+    /**
+     * Invokes the .NET member IsInRole.
+     *
+     * @param role the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Principal.IPrincipal.IsInRole" target="_top">.NET documentation</a>
+     */
     public boolean IsInRole(java.lang.String role) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -160,6 +171,13 @@ public class IPrincipalImplementation extends NetObject implements IPrincipal {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Identity.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Principal.IPrincipal.Identity" target="_top">.NET documentation</a>
+     */
     public IIdentity getIdentity() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -100,7 +100,10 @@ public class HotSpotCollection extends system.web.ui.StateManagedCollection  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public HotSpotCollection(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class HotSpotCollection extends system.web.ui.StateManagedCollection  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.HotSpotCollection.-ctor" target="_top">.NET documentation</a>
+     */
     public HotSpotCollection() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -161,6 +170,14 @@ public class HotSpotCollection extends system.web.ui.StateManagedCollection  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param spot the argument of type {@code HotSpot}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.HotSpotCollection.Add" target="_top">.NET documentation</a>
+     */
     public int Add(HotSpot spot) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +218,14 @@ public class HotSpotCollection extends system.web.ui.StateManagedCollection  {
         }
     }
 
+    /**
+     * Invokes the .NET member Insert.
+     *
+     * @param index the argument of type {@code int}
+     * @param spot the argument of type {@code HotSpot}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.HotSpotCollection.Insert" target="_top">.NET documentation</a>
+     */
     public void Insert(int index, HotSpot spot) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -211,6 +236,13 @@ public class HotSpotCollection extends system.web.ui.StateManagedCollection  {
         }
     }
 
+    /**
+     * Invokes the .NET member Remove.
+     *
+     * @param spot the argument of type {@code HotSpot}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.HotSpotCollection.Remove" target="_top">.NET documentation</a>
+     */
     public void Remove(HotSpot spot) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -221,6 +253,13 @@ public class HotSpotCollection extends system.web.ui.StateManagedCollection  {
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveAt.
+     *
+     * @param index the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.HotSpotCollection.RemoveAt" target="_top">.NET documentation</a>
+     */
     public void RemoveAt(int index) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -105,7 +105,10 @@ public class ISecureConversationSessionImplementation extends NetObject implemen
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ISecureConversationSessionImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,14 @@ public class ISecureConversationSessionImplementation extends NetObject implemen
 
     // Methods section
     
+    /**
+     * Invokes the .NET member TryReadSessionTokenIdentifier.
+     *
+     * @param reader the argument of type {@code XmlReader}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.ISecureConversationSession.TryReadSessionTokenIdentifier" target="_top">.NET documentation</a>
+     */
     public boolean TryReadSessionTokenIdentifier(XmlReader reader) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -161,6 +172,13 @@ public class ISecureConversationSessionImplementation extends NetObject implemen
         }
     }
 
+    /**
+     * Invokes the .NET member WriteSessionTokenIdentifier.
+     *
+     * @param writer the argument of type {@code XmlDictionaryWriter}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.ISecureConversationSession.WriteSessionTokenIdentifier" target="_top">.NET documentation</a>
+     */
     public void WriteSessionTokenIdentifier(XmlDictionaryWriter writer) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -175,6 +193,13 @@ public class ISecureConversationSessionImplementation extends NetObject implemen
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property RemoteIdentity.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.ISecureConversationSession.RemoteIdentity" target="_top">.NET documentation</a>
+     */
     public EndpointIdentity getRemoteIdentity() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +215,13 @@ public class ISecureConversationSessionImplementation extends NetObject implemen
         }
     }
 
+    /**
+     * Gets the value of the .NET property Id.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.ISecureConversationSession.Id" target="_top">.NET documentation</a>
+     */
     public java.lang.String getId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

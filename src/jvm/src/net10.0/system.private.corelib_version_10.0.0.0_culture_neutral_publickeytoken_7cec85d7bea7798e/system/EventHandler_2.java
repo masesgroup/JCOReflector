@@ -173,7 +173,10 @@ public class EventHandler_2<TSender extends IJCOBridgeReflected, TEventArgs exte
         callerInstance = instance;
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     @SuppressWarnings("unchecked")
     public EventHandler_2(java.lang.Object instance) throws Throwable {
@@ -196,6 +199,14 @@ public class EventHandler_2<TSender extends IJCOBridgeReflected, TEventArgs exte
         return JCOBridgeInstance.translateException(ne);
     }
 
+    /**
+     * Invokes the .NET member DynamicInvoke.
+     *
+     * @param sender the argument of type {@code TSender}
+     * @param e the argument of type {@code TEventArgs}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Delegate.DynamicInvoke" target="_top">.NET documentation</a>
+     */
     public void DynamicInvoke(TSender sender, TEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,7 +218,10 @@ public class EventHandler_2<TSender extends IJCOBridgeReflected, TEventArgs exte
     }
 
     /**
-     * Methods invoked in JVM when an event is raised in CLR 
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param sender the .NET argument of type {@code TSender}
+     * @param e the .NET argument of type {@code TEventArgs}
      */
     public void Invoke(TSender sender, TEventArgs e) {
     }

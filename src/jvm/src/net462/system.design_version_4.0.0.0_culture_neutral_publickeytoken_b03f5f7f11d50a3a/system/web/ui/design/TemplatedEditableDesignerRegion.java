@@ -100,7 +100,10 @@ public class TemplatedEditableDesignerRegion extends system.web.ui.design.Editab
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TemplatedEditableDesignerRegion(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,14 @@ public class TemplatedEditableDesignerRegion extends system.web.ui.design.Editab
     public TemplatedEditableDesignerRegion() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param templateDefinition the argument of type {@code TemplateDefinition}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.TemplatedEditableDesignerRegion.-ctor" target="_top">.NET documentation</a>
+     */
     public TemplatedEditableDesignerRegion(TemplateDefinition templateDefinition) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +180,13 @@ public class TemplatedEditableDesignerRegion extends system.web.ui.design.Editab
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsSingleInstanceTemplate.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.TemplatedEditableDesignerRegion.IsSingleInstanceTemplate" target="_top">.NET documentation</a>
+     */
     public boolean getIsSingleInstanceTemplate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +201,13 @@ public class TemplatedEditableDesignerRegion extends system.web.ui.design.Editab
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsSingleInstanceTemplate.
+     *
+     * @param IsSingleInstanceTemplate the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.TemplatedEditableDesignerRegion.IsSingleInstanceTemplate" target="_top">.NET documentation</a>
+     */
     public void setIsSingleInstanceTemplate(boolean IsSingleInstanceTemplate) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +218,13 @@ public class TemplatedEditableDesignerRegion extends system.web.ui.design.Editab
         }
     }
 
+    /**
+     * Gets the value of the .NET property TemplateDefinition.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.TemplatedEditableDesignerRegion.TemplateDefinition" target="_top">.NET documentation</a>
+     */
     public TemplateDefinition getTemplateDefinition() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

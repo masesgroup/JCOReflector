@@ -100,7 +100,10 @@ public class TabControlAutomationPeer extends system.windows.automation.peers.Se
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TabControlAutomationPeer(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,17 @@ public class TabControlAutomationPeer extends system.windows.automation.peers.Se
     public TabControlAutomationPeer() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param owner the argument of type {@code TabControl}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Peers.TabControlAutomationPeer.-ctor" target="_top">.NET documentation</a>
+     */
     public TabControlAutomationPeer(TabControl owner) throws Throwable, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file

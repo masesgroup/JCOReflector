@@ -103,7 +103,10 @@ public class RouteBase extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public RouteBase(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,14 @@ public class RouteBase extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetRouteData.
+     *
+     * @param httpContext the argument of type {@code HttpContextBase}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Routing.RouteBase.GetRouteData" target="_top">.NET documentation</a>
+     */
     public RouteData GetRouteData(HttpContextBase httpContext) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -171,6 +182,15 @@ public class RouteBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetVirtualPath.
+     *
+     * @param requestContext the argument of type {@code RequestContext}
+     * @param values the argument of type {@code RouteValueDictionary}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Routing.RouteBase.GetVirtualPath" target="_top">.NET documentation</a>
+     */
     public VirtualPathData GetVirtualPath(RequestContext requestContext, RouteValueDictionary values) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +210,13 @@ public class RouteBase extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property RouteExistingFiles.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Routing.RouteBase.RouteExistingFiles" target="_top">.NET documentation</a>
+     */
     public boolean getRouteExistingFiles() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +231,13 @@ public class RouteBase extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RouteExistingFiles.
+     *
+     * @param RouteExistingFiles the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Routing.RouteBase.RouteExistingFiles" target="_top">.NET documentation</a>
+     */
     public void setRouteExistingFiles(boolean RouteExistingFiles) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

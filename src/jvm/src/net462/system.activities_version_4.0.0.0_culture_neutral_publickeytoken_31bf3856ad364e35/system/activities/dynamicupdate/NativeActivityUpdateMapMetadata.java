@@ -100,7 +100,10 @@ public class NativeActivityUpdateMapMetadata extends system.activities.dynamicup
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public NativeActivityUpdateMapMetadata(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,24 @@ public class NativeActivityUpdateMapMetadata extends system.activities.dynamicup
     
     // Methods section
     
+    /**
+     * Invokes the .NET member SaveOriginalValue.
+     *
+     * @param updatedChildActivity the argument of type {@code Activity}
+     * @param originalValue the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.NativeActivityUpdateMapMetadata.SaveOriginalValue" target="_top">.NET documentation</a>
+     */
     public void SaveOriginalValue(Activity updatedChildActivity, NetObject originalValue) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -165,6 +186,19 @@ public class NativeActivityUpdateMapMetadata extends system.activities.dynamicup
         }
     }
 
+    /**
+     * Invokes the .NET member SaveOriginalValue.
+     *
+     * @param propertyName the argument of type {@code java.lang.String}
+     * @param originalValue the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.NativeActivityUpdateMapMetadata.SaveOriginalValue" target="_top">.NET documentation</a>
+     */
     public void SaveOriginalValue(java.lang.String propertyName, NetObject originalValue) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

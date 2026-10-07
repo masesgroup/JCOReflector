@@ -51,5 +51,11 @@ import org.mases.jcobridge.netreflection.*;
  * @version 2.0.0.0
  */
 public interface IWaitOrTimerCallback {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param state the .NET argument of type {@code System.Object}
+     * @param timedOut the .NET argument of type {@code System.Boolean}
+     */
     public void Invoke(NetObject state, boolean timedOut);
 }

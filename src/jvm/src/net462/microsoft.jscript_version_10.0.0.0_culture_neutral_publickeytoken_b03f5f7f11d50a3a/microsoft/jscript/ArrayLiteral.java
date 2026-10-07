@@ -101,7 +101,10 @@ public class ArrayLiteral extends microsoft.jscript.AST  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ArrayLiteral(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,14 @@ public class ArrayLiteral extends microsoft.jscript.AST  {
     public ArrayLiteral() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param context the argument of type {@code Context}
+     * @param elements the argument of type {@code ASTList}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.ArrayLiteral.-ctor" target="_top">.NET documentation</a>
+     */
     public ArrayLiteral(Context context, ASTList elements) throws Throwable {
         try {
             // add reference to assemblyName.dll file

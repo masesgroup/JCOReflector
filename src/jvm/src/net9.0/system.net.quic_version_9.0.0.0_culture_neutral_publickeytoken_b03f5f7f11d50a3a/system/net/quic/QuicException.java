@@ -105,7 +105,9 @@ public class QuicException extends system.io.IOException {
         super();
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
      */
     public QuicException(java.lang.Object instance) {
         super(instance);
@@ -166,6 +168,15 @@ public class QuicException extends system.io.IOException {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param error the argument of type {@code QuicError}
+     * @param applicationErrorCode the argument of type {@code Nullable_1}
+     * @param message the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Quic.QuicException.-ctor" target="_top">.NET documentation</a>
+     */
     public QuicException(QuicError error, Nullable_1 applicationErrorCode, java.lang.String message) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -184,6 +195,13 @@ public class QuicException extends system.io.IOException {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property QuicError.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Quic.QuicException.QuicError" target="_top">.NET documentation</a>
+     */
     public QuicError getQuicError() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -199,6 +217,13 @@ public class QuicException extends system.io.IOException {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ApplicationErrorCode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Quic.QuicException.ApplicationErrorCode" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getApplicationErrorCode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -214,6 +239,13 @@ public class QuicException extends system.io.IOException {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TransportErrorCode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Quic.QuicException.TransportErrorCode" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getTransportErrorCode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

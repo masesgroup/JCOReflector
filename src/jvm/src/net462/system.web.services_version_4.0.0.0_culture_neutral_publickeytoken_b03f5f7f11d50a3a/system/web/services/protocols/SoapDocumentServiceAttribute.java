@@ -102,7 +102,10 @@ public class SoapDocumentServiceAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SoapDocumentServiceAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,12 @@ public class SoapDocumentServiceAttribute extends system.Attribute  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapDocumentServiceAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public SoapDocumentServiceAttribute() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -159,6 +168,13 @@ public class SoapDocumentServiceAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param use the argument of type {@code SoapBindingUse}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapDocumentServiceAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public SoapDocumentServiceAttribute(SoapBindingUse use) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +185,14 @@ public class SoapDocumentServiceAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param use the argument of type {@code SoapBindingUse}
+     * @param paramStyle the argument of type {@code SoapParameterStyle}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapDocumentServiceAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public SoapDocumentServiceAttribute(SoapBindingUse use, SoapParameterStyle paramStyle) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -187,6 +211,13 @@ public class SoapDocumentServiceAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Use.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapDocumentServiceAttribute.Use" target="_top">.NET documentation</a>
+     */
     public SoapBindingUse getUse() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +233,13 @@ public class SoapDocumentServiceAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Use.
+     *
+     * @param Use the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapDocumentServiceAttribute.Use" target="_top">.NET documentation</a>
+     */
     public void setUse(SoapBindingUse Use) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -212,6 +250,13 @@ public class SoapDocumentServiceAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ParameterStyle.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapDocumentServiceAttribute.ParameterStyle" target="_top">.NET documentation</a>
+     */
     public SoapParameterStyle getParameterStyle() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -227,6 +272,13 @@ public class SoapDocumentServiceAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ParameterStyle.
+     *
+     * @param ParameterStyle the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapDocumentServiceAttribute.ParameterStyle" target="_top">.NET documentation</a>
+     */
     public void setParameterStyle(SoapParameterStyle ParameterStyle) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -237,6 +289,13 @@ public class SoapDocumentServiceAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RoutingStyle.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapDocumentServiceAttribute.RoutingStyle" target="_top">.NET documentation</a>
+     */
     public SoapServiceRoutingStyle getRoutingStyle() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -252,6 +311,13 @@ public class SoapDocumentServiceAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RoutingStyle.
+     *
+     * @param RoutingStyle the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapDocumentServiceAttribute.RoutingStyle" target="_top">.NET documentation</a>
+     */
     public void setRoutingStyle(SoapServiceRoutingStyle RoutingStyle) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

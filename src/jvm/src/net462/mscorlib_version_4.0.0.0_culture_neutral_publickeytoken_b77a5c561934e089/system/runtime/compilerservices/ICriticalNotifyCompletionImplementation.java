@@ -101,7 +101,10 @@ public class ICriticalNotifyCompletionImplementation extends NetObject implement
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ICriticalNotifyCompletionImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -143,6 +146,13 @@ public class ICriticalNotifyCompletionImplementation extends NetObject implement
 
     // Methods section
     
+    /**
+     * Invokes the .NET member OnCompleted.
+     *
+     * @param continuation the argument of type {@code Action}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.ICriticalNotifyCompletion.OnCompleted" target="_top">.NET documentation</a>
+     */
     public void OnCompleted(Action continuation) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -153,6 +163,13 @@ public class ICriticalNotifyCompletionImplementation extends NetObject implement
         }
     }
 
+    /**
+     * Invokes the .NET member UnsafeOnCompleted.
+     *
+     * @param continuation the argument of type {@code Action}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.ICriticalNotifyCompletion.UnsafeOnCompleted" target="_top">.NET documentation</a>
+     */
     public void UnsafeOnCompleted(Action continuation) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

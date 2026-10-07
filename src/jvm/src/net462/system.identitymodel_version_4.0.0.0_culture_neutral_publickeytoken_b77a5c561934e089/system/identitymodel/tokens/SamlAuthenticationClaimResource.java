@@ -102,7 +102,10 @@ public class SamlAuthenticationClaimResource extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SamlAuthenticationClaimResource(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,27 @@ public class SamlAuthenticationClaimResource extends NetObject  {
     public SamlAuthenticationClaimResource() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param authenticationInstant the argument of type {@code DateTime}
+     * @param authenticationMethod the argument of type {@code java.lang.String}
+     * @param dnsAddress the argument of type {@code java.lang.String}
+     * @param ipAddress the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SamlAuthenticationClaimResource.-ctor" target="_top">.NET documentation</a>
+     */
     public SamlAuthenticationClaimResource(DateTime authenticationInstant, java.lang.String authenticationMethod, java.lang.String dnsAddress, java.lang.String ipAddress) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
@@ -162,6 +186,29 @@ public class SamlAuthenticationClaimResource extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param authenticationInstant the argument of type {@code DateTime}
+     * @param authenticationMethod the argument of type {@code java.lang.String}
+     * @param dnsAddress the argument of type {@code java.lang.String}
+     * @param ipAddress the argument of type {@code java.lang.String}
+     * @param authorityBindings the argument of type {@code IEnumerable_1}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SamlAuthenticationClaimResource.-ctor" target="_top">.NET documentation</a>
+     */
     public SamlAuthenticationClaimResource(DateTime authenticationInstant, java.lang.String authenticationMethod, java.lang.String dnsAddress, java.lang.String ipAddress, IEnumerable_1 authorityBindings) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
@@ -172,6 +219,29 @@ public class SamlAuthenticationClaimResource extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param authenticationInstant the argument of type {@code DateTime}
+     * @param authenticationMethod the argument of type {@code java.lang.String}
+     * @param dnsAddress the argument of type {@code java.lang.String}
+     * @param ipAddress the argument of type {@code java.lang.String}
+     * @param authorityBindings the argument of type {@code ReadOnlyCollection_1}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SamlAuthenticationClaimResource.-ctor" target="_top">.NET documentation</a>
+     */
     public SamlAuthenticationClaimResource(DateTime authenticationInstant, java.lang.String authenticationMethod, java.lang.String dnsAddress, java.lang.String ipAddress, ReadOnlyCollection_1 authorityBindings) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
@@ -191,6 +261,13 @@ public class SamlAuthenticationClaimResource extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AuthorityBindings.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SamlAuthenticationClaimResource.AuthorityBindings" target="_top">.NET documentation</a>
+     */
     public ReadOnlyCollection_1 getAuthorityBindings() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,6 +283,13 @@ public class SamlAuthenticationClaimResource extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AuthenticationInstant.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SamlAuthenticationClaimResource.AuthenticationInstant" target="_top">.NET documentation</a>
+     */
     public DateTime getAuthenticationInstant() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -221,6 +305,13 @@ public class SamlAuthenticationClaimResource extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AuthenticationMethod.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SamlAuthenticationClaimResource.AuthenticationMethod" target="_top">.NET documentation</a>
+     */
     public java.lang.String getAuthenticationMethod() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -235,6 +326,13 @@ public class SamlAuthenticationClaimResource extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DnsAddress.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SamlAuthenticationClaimResource.DnsAddress" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDnsAddress() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -249,6 +347,13 @@ public class SamlAuthenticationClaimResource extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IPAddress.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SamlAuthenticationClaimResource.IPAddress" target="_top">.NET documentation</a>
+     */
     public java.lang.String getIPAddress() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

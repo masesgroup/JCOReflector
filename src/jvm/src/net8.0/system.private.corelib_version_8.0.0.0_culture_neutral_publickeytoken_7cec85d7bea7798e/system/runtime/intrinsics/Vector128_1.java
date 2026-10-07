@@ -100,7 +100,10 @@ public class Vector128_1<T extends IJCOBridgeReflected> extends system.ValueType
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Vector128_1(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,17 @@ public class Vector128_1<T extends IJCOBridgeReflected> extends system.ValueType
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Equals.
+     *
+     * @param other the argument of type {@code Vector128_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector128-1.Equals" target="_top">.NET documentation</a>
+     */
     public boolean Equals(Vector128_1 other) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -173,6 +187,13 @@ public class Vector128_1<T extends IJCOBridgeReflected> extends system.ValueType
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsSupported.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector128-1.IsSupported" target="_top">.NET documentation</a>
+     */
     public static boolean getIsSupported() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -187,6 +208,17 @@ public class Vector128_1<T extends IJCOBridgeReflected> extends system.ValueType
         }
     }
 
+    /**
+     * Gets the value of the .NET property Count.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector128-1.Count" target="_top">.NET documentation</a>
+     */
     public static int getCount() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

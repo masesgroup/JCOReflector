@@ -99,7 +99,10 @@ public class DisplayColumnAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DisplayColumnAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,15 @@ public class DisplayColumnAttribute extends system.Attribute  {
     public DisplayColumnAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param displayColumn the argument of type {@code java.lang.String}
+     * @param sortColumn the argument of type {@code java.lang.String}
+     * @param sortDescending the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.DataAnnotations.DisplayColumnAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public DisplayColumnAttribute(java.lang.String displayColumn, java.lang.String sortColumn, boolean sortDescending) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -159,6 +171,14 @@ public class DisplayColumnAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param displayColumn the argument of type {@code java.lang.String}
+     * @param sortColumn the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.DataAnnotations.DisplayColumnAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public DisplayColumnAttribute(java.lang.String displayColumn, java.lang.String sortColumn) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +189,13 @@ public class DisplayColumnAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param displayColumn the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.DataAnnotations.DisplayColumnAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public DisplayColumnAttribute(java.lang.String displayColumn) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -188,6 +215,13 @@ public class DisplayColumnAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property SortDescending.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.DataAnnotations.DisplayColumnAttribute.SortDescending" target="_top">.NET documentation</a>
+     */
     public boolean getSortDescending() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +236,13 @@ public class DisplayColumnAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DisplayColumn.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.DataAnnotations.DisplayColumnAttribute.DisplayColumn" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDisplayColumn() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +257,13 @@ public class DisplayColumnAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SortColumn.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.DataAnnotations.DisplayColumnAttribute.SortColumn" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSortColumn() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

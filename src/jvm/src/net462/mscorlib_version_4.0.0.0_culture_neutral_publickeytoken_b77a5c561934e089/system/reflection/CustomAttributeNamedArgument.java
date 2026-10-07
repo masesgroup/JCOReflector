@@ -101,7 +101,10 @@ public class CustomAttributeNamedArgument extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CustomAttributeNamedArgument(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,17 @@ public class CustomAttributeNamedArgument extends system.ValueType  {
     public CustomAttributeNamedArgument() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param memberInfo the argument of type {@code MemberInfo}
+     * @param value the argument of type {@code NetObject}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.CustomAttributeNamedArgument.-ctor" target="_top">.NET documentation</a>
+     */
     public CustomAttributeNamedArgument(MemberInfo memberInfo, NetObject value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
@@ -161,6 +175,15 @@ public class CustomAttributeNamedArgument extends system.ValueType  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param memberInfo the argument of type {@code MemberInfo}
+     * @param typedArgument the argument of type {@code CustomAttributeTypedArgument}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.CustomAttributeNamedArgument.-ctor" target="_top">.NET documentation</a>
+     */
     public CustomAttributeNamedArgument(MemberInfo memberInfo, CustomAttributeTypedArgument typedArgument) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -180,6 +203,13 @@ public class CustomAttributeNamedArgument extends system.ValueType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsField.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.CustomAttributeNamedArgument.IsField" target="_top">.NET documentation</a>
+     */
     public boolean getIsField() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +224,13 @@ public class CustomAttributeNamedArgument extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TypedValue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.CustomAttributeNamedArgument.TypedValue" target="_top">.NET documentation</a>
+     */
     public CustomAttributeTypedArgument getTypedValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -209,6 +246,13 @@ public class CustomAttributeNamedArgument extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MemberInfo.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.CustomAttributeNamedArgument.MemberInfo" target="_top">.NET documentation</a>
+     */
     public MemberInfo getMemberInfo() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -224,6 +268,13 @@ public class CustomAttributeNamedArgument extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MemberName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.CustomAttributeNamedArgument.MemberName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getMemberName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

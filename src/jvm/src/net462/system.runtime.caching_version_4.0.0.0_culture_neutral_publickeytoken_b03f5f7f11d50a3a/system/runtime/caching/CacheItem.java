@@ -98,7 +98,10 @@ public class CacheItem extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CacheItem(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,13 @@ public class CacheItem extends NetObject  {
     public CacheItem() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param key the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Caching.CacheItem.-ctor" target="_top">.NET documentation</a>
+     */
     public CacheItem(java.lang.String key) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -158,6 +168,14 @@ public class CacheItem extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param key the argument of type {@code java.lang.String}
+     * @param value the argument of type {@code NetObject}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Caching.CacheItem.-ctor" target="_top">.NET documentation</a>
+     */
     public CacheItem(java.lang.String key, NetObject value) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +186,15 @@ public class CacheItem extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param key the argument of type {@code java.lang.String}
+     * @param value the argument of type {@code NetObject}
+     * @param regionName the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Caching.CacheItem.-ctor" target="_top">.NET documentation</a>
+     */
     public CacheItem(java.lang.String key, NetObject value, java.lang.String regionName) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -187,6 +214,13 @@ public class CacheItem extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Value.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Caching.CacheItem.Value" target="_top">.NET documentation</a>
+     */
     public NetObject getValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +236,13 @@ public class CacheItem extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Value.
+     *
+     * @param Value the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Caching.CacheItem.Value" target="_top">.NET documentation</a>
+     */
     public void setValue(NetObject Value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -212,6 +253,13 @@ public class CacheItem extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Key.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Caching.CacheItem.Key" target="_top">.NET documentation</a>
+     */
     public java.lang.String getKey() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -226,6 +274,13 @@ public class CacheItem extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Key.
+     *
+     * @param Key the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Caching.CacheItem.Key" target="_top">.NET documentation</a>
+     */
     public void setKey(java.lang.String Key) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -236,6 +291,13 @@ public class CacheItem extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RegionName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Caching.CacheItem.RegionName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getRegionName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -250,6 +312,13 @@ public class CacheItem extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RegionName.
+     *
+     * @param RegionName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Caching.CacheItem.RegionName" target="_top">.NET documentation</a>
+     */
     public void setRegionName(java.lang.String RegionName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

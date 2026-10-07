@@ -105,7 +105,10 @@ public class UIPermission extends system.security.CodeAccessPermission  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public UIPermission(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,13 @@ public class UIPermission extends system.security.CodeAccessPermission  {
     public UIPermission() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param state the argument of type {@code PermissionState}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.UIPermission.-ctor" target="_top">.NET documentation</a>
+     */
     public UIPermission(PermissionState state) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +175,13 @@ public class UIPermission extends system.security.CodeAccessPermission  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param clipboardFlag the argument of type {@code UIPermissionClipboard}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.UIPermission.-ctor" target="_top">.NET documentation</a>
+     */
     public UIPermission(UIPermissionClipboard clipboardFlag) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -175,6 +192,14 @@ public class UIPermission extends system.security.CodeAccessPermission  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param windowFlag the argument of type {@code UIPermissionWindow}
+     * @param clipboardFlag the argument of type {@code UIPermissionClipboard}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.UIPermission.-ctor" target="_top">.NET documentation</a>
+     */
     public UIPermission(UIPermissionWindow windowFlag, UIPermissionClipboard clipboardFlag) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -185,6 +210,13 @@ public class UIPermission extends system.security.CodeAccessPermission  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param windowFlag the argument of type {@code UIPermissionWindow}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.UIPermission.-ctor" target="_top">.NET documentation</a>
+     */
     public UIPermission(UIPermissionWindow windowFlag) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -200,6 +232,14 @@ public class UIPermission extends system.security.CodeAccessPermission  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member IsSubsetOf.
+     *
+     * @param target the argument of type {@code IPermission}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.UIPermission.IsSubsetOf" target="_top">.NET documentation</a>
+     */
     public boolean IsSubsetOf(IPermission target) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -214,6 +254,13 @@ public class UIPermission extends system.security.CodeAccessPermission  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsUnrestricted.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.UIPermission.IsUnrestricted" target="_top">.NET documentation</a>
+     */
     public boolean IsUnrestricted() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -228,6 +275,13 @@ public class UIPermission extends system.security.CodeAccessPermission  {
         }
     }
 
+    /**
+     * Invokes the .NET member Copy.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.UIPermission.Copy" target="_top">.NET documentation</a>
+     */
     public IPermission Copy() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -243,6 +297,14 @@ public class UIPermission extends system.security.CodeAccessPermission  {
         }
     }
 
+    /**
+     * Invokes the .NET member Intersect.
+     *
+     * @param target the argument of type {@code IPermission}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.UIPermission.Intersect" target="_top">.NET documentation</a>
+     */
     public IPermission Intersect(IPermission target) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -258,6 +320,14 @@ public class UIPermission extends system.security.CodeAccessPermission  {
         }
     }
 
+    /**
+     * Invokes the .NET member Union.
+     *
+     * @param target the argument of type {@code IPermission}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.UIPermission.Union" target="_top">.NET documentation</a>
+     */
     public IPermission Union(IPermission target) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -273,6 +343,13 @@ public class UIPermission extends system.security.CodeAccessPermission  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToXml.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.UIPermission.ToXml" target="_top">.NET documentation</a>
+     */
     public SecurityElement ToXml() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -288,6 +365,13 @@ public class UIPermission extends system.security.CodeAccessPermission  {
         }
     }
 
+    /**
+     * Invokes the .NET member FromXml.
+     *
+     * @param esd the argument of type {@code SecurityElement}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.UIPermission.FromXml" target="_top">.NET documentation</a>
+     */
     public void FromXml(SecurityElement esd) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -302,6 +386,13 @@ public class UIPermission extends system.security.CodeAccessPermission  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Clipboard.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.UIPermission.Clipboard" target="_top">.NET documentation</a>
+     */
     public UIPermissionClipboard getClipboard() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -317,6 +408,13 @@ public class UIPermission extends system.security.CodeAccessPermission  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Clipboard.
+     *
+     * @param Clipboard the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.UIPermission.Clipboard" target="_top">.NET documentation</a>
+     */
     public void setClipboard(UIPermissionClipboard Clipboard) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -327,6 +425,13 @@ public class UIPermission extends system.security.CodeAccessPermission  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Window.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.UIPermission.Window" target="_top">.NET documentation</a>
+     */
     public UIPermissionWindow getWindow() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -342,6 +447,13 @@ public class UIPermission extends system.security.CodeAccessPermission  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Window.
+     *
+     * @param Window the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.UIPermission.Window" target="_top">.NET documentation</a>
+     */
     public void setWindow(UIPermissionWindow Window) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

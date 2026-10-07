@@ -102,7 +102,10 @@ public class NegotiateAuthenticationClientOptions extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public NegotiateAuthenticationClientOptions(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,12 @@ public class NegotiateAuthenticationClientOptions extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Security.NegotiateAuthenticationClientOptions.-ctor" target="_top">.NET documentation</a>
+     */
     public NegotiateAuthenticationClientOptions() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +176,13 @@ public class NegotiateAuthenticationClientOptions extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property RequireMutualAuthentication.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Security.NegotiateAuthenticationClientOptions.RequireMutualAuthentication" target="_top">.NET documentation</a>
+     */
     public boolean getRequireMutualAuthentication() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -181,6 +197,13 @@ public class NegotiateAuthenticationClientOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RequireMutualAuthentication.
+     *
+     * @param RequireMutualAuthentication the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Security.NegotiateAuthenticationClientOptions.RequireMutualAuthentication" target="_top">.NET documentation</a>
+     */
     public void setRequireMutualAuthentication(boolean RequireMutualAuthentication) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -191,6 +214,13 @@ public class NegotiateAuthenticationClientOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Credential.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Security.NegotiateAuthenticationClientOptions.Credential" target="_top">.NET documentation</a>
+     */
     public NetworkCredential getCredential() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,6 +236,13 @@ public class NegotiateAuthenticationClientOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Credential.
+     *
+     * @param Credential the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Security.NegotiateAuthenticationClientOptions.Credential" target="_top">.NET documentation</a>
+     */
     public void setCredential(NetworkCredential Credential) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +253,13 @@ public class NegotiateAuthenticationClientOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RequiredProtectionLevel.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Security.NegotiateAuthenticationClientOptions.RequiredProtectionLevel" target="_top">.NET documentation</a>
+     */
     public ProtectionLevel getRequiredProtectionLevel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -231,6 +275,13 @@ public class NegotiateAuthenticationClientOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RequiredProtectionLevel.
+     *
+     * @param RequiredProtectionLevel the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Security.NegotiateAuthenticationClientOptions.RequiredProtectionLevel" target="_top">.NET documentation</a>
+     */
     public void setRequiredProtectionLevel(ProtectionLevel RequiredProtectionLevel) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -241,6 +292,13 @@ public class NegotiateAuthenticationClientOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Binding.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Security.NegotiateAuthenticationClientOptions.Binding" target="_top">.NET documentation</a>
+     */
     public ChannelBinding getBinding() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -256,6 +314,13 @@ public class NegotiateAuthenticationClientOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Binding.
+     *
+     * @param Binding the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Security.NegotiateAuthenticationClientOptions.Binding" target="_top">.NET documentation</a>
+     */
     public void setBinding(ChannelBinding Binding) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -266,6 +331,13 @@ public class NegotiateAuthenticationClientOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AllowedImpersonationLevel.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Security.NegotiateAuthenticationClientOptions.AllowedImpersonationLevel" target="_top">.NET documentation</a>
+     */
     public TokenImpersonationLevel getAllowedImpersonationLevel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -281,6 +353,13 @@ public class NegotiateAuthenticationClientOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AllowedImpersonationLevel.
+     *
+     * @param AllowedImpersonationLevel the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Security.NegotiateAuthenticationClientOptions.AllowedImpersonationLevel" target="_top">.NET documentation</a>
+     */
     public void setAllowedImpersonationLevel(TokenImpersonationLevel AllowedImpersonationLevel) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -291,6 +370,13 @@ public class NegotiateAuthenticationClientOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Package.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Security.NegotiateAuthenticationClientOptions.Package" target="_top">.NET documentation</a>
+     */
     public java.lang.String getPackage() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -305,6 +391,13 @@ public class NegotiateAuthenticationClientOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Package.
+     *
+     * @param Package the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Security.NegotiateAuthenticationClientOptions.Package" target="_top">.NET documentation</a>
+     */
     public void setPackage(java.lang.String Package) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -315,6 +408,13 @@ public class NegotiateAuthenticationClientOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TargetName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Security.NegotiateAuthenticationClientOptions.TargetName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTargetName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -329,6 +429,13 @@ public class NegotiateAuthenticationClientOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TargetName.
+     *
+     * @param TargetName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Security.NegotiateAuthenticationClientOptions.TargetName" target="_top">.NET documentation</a>
+     */
     public void setTargetName(java.lang.String TargetName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

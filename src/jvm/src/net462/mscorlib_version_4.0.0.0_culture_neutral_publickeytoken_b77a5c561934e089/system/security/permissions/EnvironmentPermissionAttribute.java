@@ -102,7 +102,10 @@ public class EnvironmentPermissionAttribute extends system.security.permissions.
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public EnvironmentPermissionAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,13 @@ public class EnvironmentPermissionAttribute extends system.security.permissions.
     public EnvironmentPermissionAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param action the argument of type {@code SecurityAction}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.EnvironmentPermissionAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public EnvironmentPermissionAttribute(SecurityAction action) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +177,23 @@ public class EnvironmentPermissionAttribute extends system.security.permissions.
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CreatePermission.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.EnvironmentPermissionAttribute.CreatePermission" target="_top">.NET documentation</a>
+     */
     public IPermission CreatePermission() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.NullReferenceException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -186,6 +213,14 @@ public class EnvironmentPermissionAttribute extends system.security.permissions.
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property All.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.EnvironmentPermissionAttribute.All" target="_top">.NET documentation</a>
+     */
     public java.lang.String getAll() throws Throwable, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +235,13 @@ public class EnvironmentPermissionAttribute extends system.security.permissions.
         }
     }
 
+    /**
+     * Sets the value of the .NET property All.
+     *
+     * @param All the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.EnvironmentPermissionAttribute.All" target="_top">.NET documentation</a>
+     */
     public void setAll(java.lang.String All) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -210,6 +252,13 @@ public class EnvironmentPermissionAttribute extends system.security.permissions.
         }
     }
 
+    /**
+     * Gets the value of the .NET property Read.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.EnvironmentPermissionAttribute.Read" target="_top">.NET documentation</a>
+     */
     public java.lang.String getRead() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -224,6 +273,13 @@ public class EnvironmentPermissionAttribute extends system.security.permissions.
         }
     }
 
+    /**
+     * Sets the value of the .NET property Read.
+     *
+     * @param Read the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.EnvironmentPermissionAttribute.Read" target="_top">.NET documentation</a>
+     */
     public void setRead(java.lang.String Read) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -234,6 +290,13 @@ public class EnvironmentPermissionAttribute extends system.security.permissions.
         }
     }
 
+    /**
+     * Gets the value of the .NET property Write.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.EnvironmentPermissionAttribute.Write" target="_top">.NET documentation</a>
+     */
     public java.lang.String getWrite() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -248,6 +311,13 @@ public class EnvironmentPermissionAttribute extends system.security.permissions.
         }
     }
 
+    /**
+     * Sets the value of the .NET property Write.
+     *
+     * @param Write the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.EnvironmentPermissionAttribute.Write" target="_top">.NET documentation</a>
+     */
     public void setWrite(java.lang.String Write) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

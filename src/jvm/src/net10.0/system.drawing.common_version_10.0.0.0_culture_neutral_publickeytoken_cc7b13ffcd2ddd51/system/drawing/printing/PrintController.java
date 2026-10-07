@@ -102,7 +102,10 @@ public class PrintController extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PrintController(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,15 @@ public class PrintController extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member OnStartPage.
+     *
+     * @param document the argument of type {@code PrintDocument}
+     * @param e the argument of type {@code PrintPageEventArgs}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Printing.PrintController.OnStartPage" target="_top">.NET documentation</a>
+     */
     public Graphics OnStartPage(PrintDocument document, PrintPageEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -170,6 +182,14 @@ public class PrintController extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member OnEndPage.
+     *
+     * @param document the argument of type {@code PrintDocument}
+     * @param e the argument of type {@code PrintPageEventArgs}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Printing.PrintController.OnEndPage" target="_top">.NET documentation</a>
+     */
     public void OnEndPage(PrintDocument document, PrintPageEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +200,16 @@ public class PrintController extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member OnEndPrint.
+     *
+     * @param document the argument of type {@code PrintDocument}
+     * @param e the argument of type {@code PrintEventArgs}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Printing.PrintController.OnEndPrint" target="_top">.NET documentation</a>
+     */
     public void OnEndPrint(PrintDocument document, PrintEventArgs e) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +220,22 @@ public class PrintController extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member OnStartPrint.
+     *
+     * @param document the argument of type {@code PrintDocument}
+     * @param e the argument of type {@code PrintEventArgs}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.drawing.printing.InvalidPrinterException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Printing.PrintController.OnStartPrint" target="_top">.NET documentation</a>
+     */
     public void OnStartPrint(PrintDocument document, PrintEventArgs e) throws Throwable, system.ArgumentException, system.componentmodel.Win32Exception, system.InvalidOperationException, system.PlatformNotSupportedException, system.drawing.printing.InvalidPrinterException, system.ArgumentNullException, system.ArrayTypeMismatchException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +250,13 @@ public class PrintController extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsPreview.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Printing.PrintController.IsPreview" target="_top">.NET documentation</a>
+     */
     public boolean getIsPreview() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

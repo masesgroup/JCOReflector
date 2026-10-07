@@ -99,7 +99,10 @@ public class MenuCommands extends system.componentmodel.design.StandardCommands 
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public MenuCommands(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class MenuCommands extends system.componentmodel.design.StandardCommands 
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Design.MenuCommands.-ctor" target="_top">.NET documentation</a>
+     */
     public MenuCommands() throws Throwable {
         try {
             // add reference to assemblyName.dll file

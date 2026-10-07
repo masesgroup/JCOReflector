@@ -102,7 +102,10 @@ public class PipeAccessRule extends system.security.accesscontrol.AccessRule  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PipeAccessRule(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,22 @@ public class PipeAccessRule extends system.security.accesscontrol.AccessRule  {
     public PipeAccessRule() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param identity the argument of type {@code IdentityReference}
+     * @param rights the argument of type {@code PipeAccessRights}
+     * @param type the argument of type {@code AccessControlType}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Pipes.PipeAccessRule.-ctor" target="_top">.NET documentation</a>
+     */
     public PipeAccessRule(IdentityReference identity, PipeAccessRights rights, AccessControlType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
@@ -162,6 +181,21 @@ public class PipeAccessRule extends system.security.accesscontrol.AccessRule  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param identity the argument of type {@code java.lang.String}
+     * @param rights the argument of type {@code PipeAccessRights}
+     * @param type the argument of type {@code AccessControlType}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Pipes.PipeAccessRule.-ctor" target="_top">.NET documentation</a>
+     */
     public PipeAccessRule(java.lang.String identity, PipeAccessRights rights, AccessControlType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         try {
             // add reference to assemblyName.dll file
@@ -181,6 +215,13 @@ public class PipeAccessRule extends system.security.accesscontrol.AccessRule  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property PipeAccessRights.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Pipes.PipeAccessRule.PipeAccessRights" target="_top">.NET documentation</a>
+     */
     public PipeAccessRights getPipeAccessRights() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

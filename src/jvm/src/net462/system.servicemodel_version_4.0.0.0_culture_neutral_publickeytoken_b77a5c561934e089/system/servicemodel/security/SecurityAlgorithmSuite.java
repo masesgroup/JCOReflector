@@ -99,7 +99,10 @@ public class SecurityAlgorithmSuite extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SecurityAlgorithmSuite(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,14 @@ public class SecurityAlgorithmSuite extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member IsAsymmetricKeyLengthSupported.
+     *
+     * @param length the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.SecurityAlgorithmSuite.IsAsymmetricKeyLengthSupported" target="_top">.NET documentation</a>
+     */
     public boolean IsAsymmetricKeyLengthSupported(int length) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -166,6 +177,14 @@ public class SecurityAlgorithmSuite extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsAsymmetricKeyWrapAlgorithmSupported.
+     *
+     * @param algorithm the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.SecurityAlgorithmSuite.IsAsymmetricKeyWrapAlgorithmSupported" target="_top">.NET documentation</a>
+     */
     public boolean IsAsymmetricKeyWrapAlgorithmSupported(java.lang.String algorithm) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +199,14 @@ public class SecurityAlgorithmSuite extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsAsymmetricSignatureAlgorithmSupported.
+     *
+     * @param algorithm the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.SecurityAlgorithmSuite.IsAsymmetricSignatureAlgorithmSupported" target="_top">.NET documentation</a>
+     */
     public boolean IsAsymmetricSignatureAlgorithmSupported(java.lang.String algorithm) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +221,14 @@ public class SecurityAlgorithmSuite extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsCanonicalizationAlgorithmSupported.
+     *
+     * @param algorithm the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.SecurityAlgorithmSuite.IsCanonicalizationAlgorithmSupported" target="_top">.NET documentation</a>
+     */
     public boolean IsCanonicalizationAlgorithmSupported(java.lang.String algorithm) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +243,14 @@ public class SecurityAlgorithmSuite extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsDigestAlgorithmSupported.
+     *
+     * @param algorithm the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.SecurityAlgorithmSuite.IsDigestAlgorithmSupported" target="_top">.NET documentation</a>
+     */
     public boolean IsDigestAlgorithmSupported(java.lang.String algorithm) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -222,6 +265,14 @@ public class SecurityAlgorithmSuite extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsEncryptionAlgorithmSupported.
+     *
+     * @param algorithm the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.SecurityAlgorithmSuite.IsEncryptionAlgorithmSupported" target="_top">.NET documentation</a>
+     */
     public boolean IsEncryptionAlgorithmSupported(java.lang.String algorithm) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -236,6 +287,14 @@ public class SecurityAlgorithmSuite extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsEncryptionKeyDerivationAlgorithmSupported.
+     *
+     * @param algorithm the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.SecurityAlgorithmSuite.IsEncryptionKeyDerivationAlgorithmSupported" target="_top">.NET documentation</a>
+     */
     public boolean IsEncryptionKeyDerivationAlgorithmSupported(java.lang.String algorithm) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -250,6 +309,14 @@ public class SecurityAlgorithmSuite extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsSignatureKeyDerivationAlgorithmSupported.
+     *
+     * @param algorithm the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.SecurityAlgorithmSuite.IsSignatureKeyDerivationAlgorithmSupported" target="_top">.NET documentation</a>
+     */
     public boolean IsSignatureKeyDerivationAlgorithmSupported(java.lang.String algorithm) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -264,6 +331,14 @@ public class SecurityAlgorithmSuite extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsSymmetricKeyLengthSupported.
+     *
+     * @param length the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.SecurityAlgorithmSuite.IsSymmetricKeyLengthSupported" target="_top">.NET documentation</a>
+     */
     public boolean IsSymmetricKeyLengthSupported(int length) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -278,6 +353,14 @@ public class SecurityAlgorithmSuite extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsSymmetricKeyWrapAlgorithmSupported.
+     *
+     * @param algorithm the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.SecurityAlgorithmSuite.IsSymmetricKeyWrapAlgorithmSupported" target="_top">.NET documentation</a>
+     */
     public boolean IsSymmetricKeyWrapAlgorithmSupported(java.lang.String algorithm) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -292,6 +375,14 @@ public class SecurityAlgorithmSuite extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsSymmetricSignatureAlgorithmSupported.
+     *
+     * @param algorithm the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.SecurityAlgorithmSuite.IsSymmetricSignatureAlgorithmSupported" target="_top">.NET documentation</a>
+     */
     public boolean IsSymmetricSignatureAlgorithmSupported(java.lang.String algorithm) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -310,6 +401,13 @@ public class SecurityAlgorithmSuite extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property DefaultEncryptionKeyDerivationLength.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.SecurityAlgorithmSuite.DefaultEncryptionKeyDerivationLength" target="_top">.NET documentation</a>
+     */
     public int getDefaultEncryptionKeyDerivationLength() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -350,6 +448,13 @@ public class SecurityAlgorithmSuite extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DefaultSignatureKeyDerivationLength.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.SecurityAlgorithmSuite.DefaultSignatureKeyDerivationLength" target="_top">.NET documentation</a>
+     */
     public int getDefaultSignatureKeyDerivationLength() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -390,6 +495,13 @@ public class SecurityAlgorithmSuite extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DefaultSymmetricKeyLength.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.SecurityAlgorithmSuite.DefaultSymmetricKeyLength" target="_top">.NET documentation</a>
+     */
     public int getDefaultSymmetricKeyLength() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -430,6 +542,13 @@ public class SecurityAlgorithmSuite extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Basic128.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.SecurityAlgorithmSuite.Basic128" target="_top">.NET documentation</a>
+     */
     public static SecurityAlgorithmSuite getBasic128() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -445,6 +564,13 @@ public class SecurityAlgorithmSuite extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Basic128Rsa15.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.SecurityAlgorithmSuite.Basic128Rsa15" target="_top">.NET documentation</a>
+     */
     public static SecurityAlgorithmSuite getBasic128Rsa15() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -460,6 +586,13 @@ public class SecurityAlgorithmSuite extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Basic128Sha256.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.SecurityAlgorithmSuite.Basic128Sha256" target="_top">.NET documentation</a>
+     */
     public static SecurityAlgorithmSuite getBasic128Sha256() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -475,6 +608,13 @@ public class SecurityAlgorithmSuite extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Basic128Sha256Rsa15.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.SecurityAlgorithmSuite.Basic128Sha256Rsa15" target="_top">.NET documentation</a>
+     */
     public static SecurityAlgorithmSuite getBasic128Sha256Rsa15() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -490,6 +630,13 @@ public class SecurityAlgorithmSuite extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Basic192.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.SecurityAlgorithmSuite.Basic192" target="_top">.NET documentation</a>
+     */
     public static SecurityAlgorithmSuite getBasic192() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -505,6 +652,13 @@ public class SecurityAlgorithmSuite extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Basic192Rsa15.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.SecurityAlgorithmSuite.Basic192Rsa15" target="_top">.NET documentation</a>
+     */
     public static SecurityAlgorithmSuite getBasic192Rsa15() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -520,6 +674,13 @@ public class SecurityAlgorithmSuite extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Basic192Sha256.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.SecurityAlgorithmSuite.Basic192Sha256" target="_top">.NET documentation</a>
+     */
     public static SecurityAlgorithmSuite getBasic192Sha256() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -535,6 +696,13 @@ public class SecurityAlgorithmSuite extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Basic192Sha256Rsa15.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.SecurityAlgorithmSuite.Basic192Sha256Rsa15" target="_top">.NET documentation</a>
+     */
     public static SecurityAlgorithmSuite getBasic192Sha256Rsa15() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -550,6 +718,13 @@ public class SecurityAlgorithmSuite extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Basic256.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.SecurityAlgorithmSuite.Basic256" target="_top">.NET documentation</a>
+     */
     public static SecurityAlgorithmSuite getBasic256() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -565,6 +740,13 @@ public class SecurityAlgorithmSuite extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Basic256Rsa15.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.SecurityAlgorithmSuite.Basic256Rsa15" target="_top">.NET documentation</a>
+     */
     public static SecurityAlgorithmSuite getBasic256Rsa15() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -580,6 +762,13 @@ public class SecurityAlgorithmSuite extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Basic256Sha256.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.SecurityAlgorithmSuite.Basic256Sha256" target="_top">.NET documentation</a>
+     */
     public static SecurityAlgorithmSuite getBasic256Sha256() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -595,6 +784,13 @@ public class SecurityAlgorithmSuite extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Basic256Sha256Rsa15.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.SecurityAlgorithmSuite.Basic256Sha256Rsa15" target="_top">.NET documentation</a>
+     */
     public static SecurityAlgorithmSuite getBasic256Sha256Rsa15() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -610,6 +806,13 @@ public class SecurityAlgorithmSuite extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Default.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.SecurityAlgorithmSuite.Default" target="_top">.NET documentation</a>
+     */
     public static SecurityAlgorithmSuite getDefault() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -625,6 +828,13 @@ public class SecurityAlgorithmSuite extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TripleDes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.SecurityAlgorithmSuite.TripleDes" target="_top">.NET documentation</a>
+     */
     public static SecurityAlgorithmSuite getTripleDes() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -640,6 +850,13 @@ public class SecurityAlgorithmSuite extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TripleDesRsa15.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.SecurityAlgorithmSuite.TripleDesRsa15" target="_top">.NET documentation</a>
+     */
     public static SecurityAlgorithmSuite getTripleDesRsa15() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -655,6 +872,13 @@ public class SecurityAlgorithmSuite extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TripleDesSha256.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.SecurityAlgorithmSuite.TripleDesSha256" target="_top">.NET documentation</a>
+     */
     public static SecurityAlgorithmSuite getTripleDesSha256() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -670,6 +894,13 @@ public class SecurityAlgorithmSuite extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TripleDesSha256Rsa15.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.SecurityAlgorithmSuite.TripleDesSha256Rsa15" target="_top">.NET documentation</a>
+     */
     public static SecurityAlgorithmSuite getTripleDesSha256Rsa15() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -685,6 +916,13 @@ public class SecurityAlgorithmSuite extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DefaultAsymmetricKeyWrapAlgorithm.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.SecurityAlgorithmSuite.DefaultAsymmetricKeyWrapAlgorithm" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDefaultAsymmetricKeyWrapAlgorithm() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -699,6 +937,13 @@ public class SecurityAlgorithmSuite extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DefaultAsymmetricSignatureAlgorithm.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.SecurityAlgorithmSuite.DefaultAsymmetricSignatureAlgorithm" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDefaultAsymmetricSignatureAlgorithm() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -713,6 +958,13 @@ public class SecurityAlgorithmSuite extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DefaultCanonicalizationAlgorithm.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.SecurityAlgorithmSuite.DefaultCanonicalizationAlgorithm" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDefaultCanonicalizationAlgorithm() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -727,6 +979,13 @@ public class SecurityAlgorithmSuite extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DefaultDigestAlgorithm.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.SecurityAlgorithmSuite.DefaultDigestAlgorithm" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDefaultDigestAlgorithm() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -741,6 +1000,13 @@ public class SecurityAlgorithmSuite extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DefaultEncryptionAlgorithm.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.SecurityAlgorithmSuite.DefaultEncryptionAlgorithm" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDefaultEncryptionAlgorithm() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -755,6 +1021,13 @@ public class SecurityAlgorithmSuite extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DefaultSymmetricKeyWrapAlgorithm.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.SecurityAlgorithmSuite.DefaultSymmetricKeyWrapAlgorithm" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDefaultSymmetricKeyWrapAlgorithm() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -769,6 +1042,13 @@ public class SecurityAlgorithmSuite extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DefaultSymmetricSignatureAlgorithm.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.SecurityAlgorithmSuite.DefaultSymmetricSignatureAlgorithm" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDefaultSymmetricSignatureAlgorithm() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

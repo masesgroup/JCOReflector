@@ -99,7 +99,10 @@ public class MLDsaAlgorithm extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public MLDsaAlgorithm(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,16 @@ public class MLDsaAlgorithm extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Equals.
+     *
+     * @param other the argument of type {@code MLDsaAlgorithm}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.MLDsaAlgorithm.Equals" target="_top">.NET documentation</a>
+     */
     public boolean Equals(MLDsaAlgorithm other) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -172,6 +185,13 @@ public class MLDsaAlgorithm extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property MuSizeInBytes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.MLDsaAlgorithm.MuSizeInBytes" target="_top">.NET documentation</a>
+     */
     public int getMuSizeInBytes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -212,6 +232,13 @@ public class MLDsaAlgorithm extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PrivateKeySizeInBytes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.MLDsaAlgorithm.PrivateKeySizeInBytes" target="_top">.NET documentation</a>
+     */
     public int getPrivateKeySizeInBytes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -252,6 +279,13 @@ public class MLDsaAlgorithm extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PrivateSeedSizeInBytes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.MLDsaAlgorithm.PrivateSeedSizeInBytes" target="_top">.NET documentation</a>
+     */
     public int getPrivateSeedSizeInBytes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -292,6 +326,13 @@ public class MLDsaAlgorithm extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PublicKeySizeInBytes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.MLDsaAlgorithm.PublicKeySizeInBytes" target="_top">.NET documentation</a>
+     */
     public int getPublicKeySizeInBytes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -332,6 +373,13 @@ public class MLDsaAlgorithm extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SignatureSizeInBytes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.MLDsaAlgorithm.SignatureSizeInBytes" target="_top">.NET documentation</a>
+     */
     public int getSignatureSizeInBytes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -372,6 +420,13 @@ public class MLDsaAlgorithm extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MLDsa44.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.MLDsaAlgorithm.MLDsa44" target="_top">.NET documentation</a>
+     */
     public static MLDsaAlgorithm getMLDsa44() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -387,6 +442,13 @@ public class MLDsaAlgorithm extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MLDsa65.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.MLDsaAlgorithm.MLDsa65" target="_top">.NET documentation</a>
+     */
     public static MLDsaAlgorithm getMLDsa65() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -402,6 +464,13 @@ public class MLDsaAlgorithm extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MLDsa87.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.MLDsaAlgorithm.MLDsa87" target="_top">.NET documentation</a>
+     */
     public static MLDsaAlgorithm getMLDsa87() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -417,6 +486,13 @@ public class MLDsaAlgorithm extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.MLDsaAlgorithm.Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

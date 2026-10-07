@@ -103,7 +103,10 @@ public class ICredentialPolicyImplementation extends NetObject implements ICrede
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ICredentialPolicyImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -145,6 +148,17 @@ public class ICredentialPolicyImplementation extends NetObject implements ICrede
 
     // Methods section
     
+    /**
+     * Invokes the .NET member ShouldSendCredential.
+     *
+     * @param challengeUri the argument of type {@code Uri}
+     * @param request the argument of type {@code WebRequest}
+     * @param credential the argument of type {@code NetworkCredential}
+     * @param authenticationModule the argument of type {@code IAuthenticationModule}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.ICredentialPolicy.ShouldSendCredential" target="_top">.NET documentation</a>
+     */
     public boolean ShouldSendCredential(Uri challengeUri, WebRequest request, NetworkCredential credential, IAuthenticationModule authenticationModule) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

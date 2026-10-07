@@ -111,7 +111,10 @@ public class ActivityDesignerPaint extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ActivityDesignerPaint(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -164,6 +167,26 @@ public class ActivityDesignerPaint extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetRoundedRectanglePath.
+     *
+     * @param rectangle the argument of type {@code Rectangle}
+     * @param radius the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.ActivityDesignerPaint.GetRoundedRectanglePath" target="_top">.NET documentation</a>
+     */
     public static GraphicsPath GetRoundedRectanglePath(Rectangle rectangle, int radius) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -179,6 +202,28 @@ public class ActivityDesignerPaint extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Draw3DButton.
+     *
+     * @param graphics the argument of type {@code Graphics}
+     * @param image the argument of type {@code Image}
+     * @param bounds the argument of type {@code Rectangle}
+     * @param transparency the argument of type {@code Single}
+     * @param buttonState the argument of type {@code ButtonState}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.ActivityDesignerPaint.Draw3DButton" target="_top">.NET documentation</a>
+     */
     public static void Draw3DButton(Graphics graphics, Image image, Rectangle bounds, Single transparency, ButtonState buttonState) throws Throwable, system.ArgumentNullException, system.OverflowException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.runtime.interopservices.ExternalException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -189,6 +234,25 @@ public class ActivityDesignerPaint extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DrawExpandButton.
+     *
+     * @param graphics the argument of type {@code Graphics}
+     * @param boundingRect the argument of type {@code Rectangle}
+     * @param drawExpanded the argument of type {@code boolean}
+     * @param compositeDesignerTheme the argument of type {@code CompositeDesignerTheme}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.ActivityDesignerPaint.DrawExpandButton" target="_top">.NET documentation</a>
+     */
     public static void DrawExpandButton(Graphics graphics, Rectangle boundingRect, boolean drawExpanded, CompositeDesignerTheme compositeDesignerTheme) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.componentmodel.InvalidEnumArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -199,6 +263,28 @@ public class ActivityDesignerPaint extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DrawImage.
+     *
+     * @param graphics the argument of type {@code Graphics}
+     * @param image the argument of type {@code Image}
+     * @param destination the argument of type {@code Rectangle}
+     * @param source the argument of type {@code Rectangle}
+     * @param alignment the argument of type {@code DesignerContentAlignment}
+     * @param transparency the argument of type {@code Single}
+     * @param grayscale the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.ActivityDesignerPaint.DrawImage" target="_top">.NET documentation</a>
+     */
     public static void DrawImage(Graphics graphics, Image image, Rectangle destination, Rectangle source, DesignerContentAlignment alignment, Single transparency, boolean grayscale) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -209,6 +295,24 @@ public class ActivityDesignerPaint extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DrawImage.
+     *
+     * @param graphics the argument of type {@code Graphics}
+     * @param image the argument of type {@code Image}
+     * @param destination the argument of type {@code Rectangle}
+     * @param alignment the argument of type {@code DesignerContentAlignment}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.ActivityDesignerPaint.DrawImage" target="_top">.NET documentation</a>
+     */
     public static void DrawImage(Graphics graphics, Image image, Rectangle destination, DesignerContentAlignment alignment) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -219,6 +323,25 @@ public class ActivityDesignerPaint extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DrawRoundedRectangle.
+     *
+     * @param graphics the argument of type {@code Graphics}
+     * @param drawingPen the argument of type {@code Pen}
+     * @param rectangle the argument of type {@code Rectangle}
+     * @param radius the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.ActivityDesignerPaint.DrawRoundedRectangle" target="_top">.NET documentation</a>
+     */
     public static void DrawRoundedRectangle(Graphics graphics, Pen drawingPen, Rectangle rectangle, int radius) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -229,6 +352,28 @@ public class ActivityDesignerPaint extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DrawText.
+     *
+     * @param graphics the argument of type {@code Graphics}
+     * @param font the argument of type {@code Font}
+     * @param text the argument of type {@code java.lang.String}
+     * @param boundingRect the argument of type {@code Rectangle}
+     * @param alignment the argument of type {@code StringAlignment}
+     * @param textQuality the argument of type {@code TextQuality}
+     * @param textBrush the argument of type {@code Brush}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.ActivityDesignerPaint.DrawText" target="_top">.NET documentation</a>
+     */
     public static void DrawText(Graphics graphics, Font font, java.lang.String text, Rectangle boundingRect, StringAlignment alignment, TextQuality textQuality, Brush textBrush) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

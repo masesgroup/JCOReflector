@@ -99,7 +99,10 @@ public class SqlMethodAttribute extends microsoft.sqlserver.server.SqlFunctionAt
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SqlMethodAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class SqlMethodAttribute extends microsoft.sqlserver.server.SqlFunctionAt
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlMethodAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public SqlMethodAttribute() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +173,13 @@ public class SqlMethodAttribute extends microsoft.sqlserver.server.SqlFunctionAt
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property InvokeIfReceiverIsNull.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlMethodAttribute.InvokeIfReceiverIsNull" target="_top">.NET documentation</a>
+     */
     public boolean getInvokeIfReceiverIsNull() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,6 +194,13 @@ public class SqlMethodAttribute extends microsoft.sqlserver.server.SqlFunctionAt
         }
     }
 
+    /**
+     * Sets the value of the .NET property InvokeIfReceiverIsNull.
+     *
+     * @param InvokeIfReceiverIsNull the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlMethodAttribute.InvokeIfReceiverIsNull" target="_top">.NET documentation</a>
+     */
     public void setInvokeIfReceiverIsNull(boolean InvokeIfReceiverIsNull) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +211,13 @@ public class SqlMethodAttribute extends microsoft.sqlserver.server.SqlFunctionAt
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsMutator.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlMethodAttribute.IsMutator" target="_top">.NET documentation</a>
+     */
     public boolean getIsMutator() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +232,13 @@ public class SqlMethodAttribute extends microsoft.sqlserver.server.SqlFunctionAt
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsMutator.
+     *
+     * @param IsMutator the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlMethodAttribute.IsMutator" target="_top">.NET documentation</a>
+     */
     public void setIsMutator(boolean IsMutator) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -212,6 +249,13 @@ public class SqlMethodAttribute extends microsoft.sqlserver.server.SqlFunctionAt
         }
     }
 
+    /**
+     * Gets the value of the .NET property OnNullCall.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlMethodAttribute.OnNullCall" target="_top">.NET documentation</a>
+     */
     public boolean getOnNullCall() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -226,6 +270,13 @@ public class SqlMethodAttribute extends microsoft.sqlserver.server.SqlFunctionAt
         }
     }
 
+    /**
+     * Sets the value of the .NET property OnNullCall.
+     *
+     * @param OnNullCall the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlMethodAttribute.OnNullCall" target="_top">.NET documentation</a>
+     */
     public void setOnNullCall(boolean OnNullCall) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

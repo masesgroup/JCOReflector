@@ -99,7 +99,10 @@ public class MenuAdapter extends system.web.ui.webcontrols.adapters.WebControlAd
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public MenuAdapter(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class MenuAdapter extends system.web.ui.webcontrols.adapters.WebControlAd
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.Adapters.MenuAdapter.-ctor" target="_top">.NET documentation</a>
+     */
     public MenuAdapter() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -163,8 +172,12 @@ public class MenuAdapter extends system.web.ui.webcontrols.adapters.WebControlAd
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIPostBackEventHandler method available in IPostBackEventHandler to obtain an object with an invocable method
+     *
+     * @param eventArgument the argument of type {@code java.lang.String}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.IPostBackEventHandler.RaisePostBackEvent" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void RaisePostBackEvent(java.lang.String eventArgument) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPostBackEventHandler to obtain the full interface.");
     }

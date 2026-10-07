@@ -100,7 +100,10 @@ public class MailMessageEventArgs extends system.web.ui.webcontrols.LoginCancelE
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public MailMessageEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,13 @@ public class MailMessageEventArgs extends system.web.ui.webcontrols.LoginCancelE
     public MailMessageEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param message the argument of type {@code MailMessage}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.MailMessageEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public MailMessageEventArgs(MailMessage message) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +179,13 @@ public class MailMessageEventArgs extends system.web.ui.webcontrols.LoginCancelE
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Message.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.MailMessageEventArgs.Message" target="_top">.NET documentation</a>
+     */
     public MailMessage getMessage() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -100,7 +100,10 @@ public class BoundPropertyEntry extends system.web.ui.PropertyEntry  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public BoundPropertyEntry(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -159,6 +162,13 @@ public class BoundPropertyEntry extends system.web.ui.PropertyEntry  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Generated.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.BoundPropertyEntry.Generated" target="_top">.NET documentation</a>
+     */
     public boolean getGenerated() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -173,6 +183,13 @@ public class BoundPropertyEntry extends system.web.ui.PropertyEntry  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Generated.
+     *
+     * @param Generated the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.BoundPropertyEntry.Generated" target="_top">.NET documentation</a>
+     */
     public void setGenerated(boolean Generated) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +200,13 @@ public class BoundPropertyEntry extends system.web.ui.PropertyEntry  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsEncoded.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.BoundPropertyEntry.IsEncoded" target="_top">.NET documentation</a>
+     */
     public boolean getIsEncoded() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +221,13 @@ public class BoundPropertyEntry extends system.web.ui.PropertyEntry  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsEncoded.
+     *
+     * @param IsEncoded the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.BoundPropertyEntry.IsEncoded" target="_top">.NET documentation</a>
+     */
     public void setIsEncoded(boolean IsEncoded) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +238,13 @@ public class BoundPropertyEntry extends system.web.ui.PropertyEntry  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ReadOnlyProperty.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.BoundPropertyEntry.ReadOnlyProperty" target="_top">.NET documentation</a>
+     */
     public boolean getReadOnlyProperty() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -221,6 +259,13 @@ public class BoundPropertyEntry extends system.web.ui.PropertyEntry  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ReadOnlyProperty.
+     *
+     * @param ReadOnlyProperty the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.BoundPropertyEntry.ReadOnlyProperty" target="_top">.NET documentation</a>
+     */
     public void setReadOnlyProperty(boolean ReadOnlyProperty) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -231,6 +276,13 @@ public class BoundPropertyEntry extends system.web.ui.PropertyEntry  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TwoWayBound.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.BoundPropertyEntry.TwoWayBound" target="_top">.NET documentation</a>
+     */
     public boolean getTwoWayBound() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -245,6 +297,13 @@ public class BoundPropertyEntry extends system.web.ui.PropertyEntry  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TwoWayBound.
+     *
+     * @param TwoWayBound the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.BoundPropertyEntry.TwoWayBound" target="_top">.NET documentation</a>
+     */
     public void setTwoWayBound(boolean TwoWayBound) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -255,6 +314,13 @@ public class BoundPropertyEntry extends system.web.ui.PropertyEntry  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UseSetAttribute.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.BoundPropertyEntry.UseSetAttribute" target="_top">.NET documentation</a>
+     */
     public boolean getUseSetAttribute() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -269,6 +335,13 @@ public class BoundPropertyEntry extends system.web.ui.PropertyEntry  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property UseSetAttribute.
+     *
+     * @param UseSetAttribute the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.BoundPropertyEntry.UseSetAttribute" target="_top">.NET documentation</a>
+     */
     public void setUseSetAttribute(boolean UseSetAttribute) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -279,6 +352,13 @@ public class BoundPropertyEntry extends system.web.ui.PropertyEntry  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ParsedExpressionData.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.BoundPropertyEntry.ParsedExpressionData" target="_top">.NET documentation</a>
+     */
     public NetObject getParsedExpressionData() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -294,6 +374,13 @@ public class BoundPropertyEntry extends system.web.ui.PropertyEntry  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ParsedExpressionData.
+     *
+     * @param ParsedExpressionData the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.BoundPropertyEntry.ParsedExpressionData" target="_top">.NET documentation</a>
+     */
     public void setParsedExpressionData(NetObject ParsedExpressionData) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -304,6 +391,13 @@ public class BoundPropertyEntry extends system.web.ui.PropertyEntry  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ControlID.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.BoundPropertyEntry.ControlID" target="_top">.NET documentation</a>
+     */
     public java.lang.String getControlID() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -318,6 +412,13 @@ public class BoundPropertyEntry extends system.web.ui.PropertyEntry  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ControlID.
+     *
+     * @param ControlID the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.BoundPropertyEntry.ControlID" target="_top">.NET documentation</a>
+     */
     public void setControlID(java.lang.String ControlID) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -328,6 +429,13 @@ public class BoundPropertyEntry extends system.web.ui.PropertyEntry  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Expression.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.BoundPropertyEntry.Expression" target="_top">.NET documentation</a>
+     */
     public java.lang.String getExpression() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -342,6 +450,13 @@ public class BoundPropertyEntry extends system.web.ui.PropertyEntry  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Expression.
+     *
+     * @param Expression the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.BoundPropertyEntry.Expression" target="_top">.NET documentation</a>
+     */
     public void setExpression(java.lang.String Expression) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -352,6 +467,13 @@ public class BoundPropertyEntry extends system.web.ui.PropertyEntry  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ExpressionPrefix.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.BoundPropertyEntry.ExpressionPrefix" target="_top">.NET documentation</a>
+     */
     public java.lang.String getExpressionPrefix() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -366,6 +488,13 @@ public class BoundPropertyEntry extends system.web.ui.PropertyEntry  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ExpressionPrefix.
+     *
+     * @param ExpressionPrefix the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.BoundPropertyEntry.ExpressionPrefix" target="_top">.NET documentation</a>
+     */
     public void setExpressionPrefix(java.lang.String ExpressionPrefix) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -376,6 +505,13 @@ public class BoundPropertyEntry extends system.web.ui.PropertyEntry  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FieldName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.BoundPropertyEntry.FieldName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getFieldName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -390,6 +526,13 @@ public class BoundPropertyEntry extends system.web.ui.PropertyEntry  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property FieldName.
+     *
+     * @param FieldName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.BoundPropertyEntry.FieldName" target="_top">.NET documentation</a>
+     */
     public void setFieldName(java.lang.String FieldName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -400,6 +543,13 @@ public class BoundPropertyEntry extends system.web.ui.PropertyEntry  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FormatString.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.BoundPropertyEntry.FormatString" target="_top">.NET documentation</a>
+     */
     public java.lang.String getFormatString() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -414,6 +564,13 @@ public class BoundPropertyEntry extends system.web.ui.PropertyEntry  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property FormatString.
+     *
+     * @param FormatString the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.BoundPropertyEntry.FormatString" target="_top">.NET documentation</a>
+     */
     public void setFormatString(java.lang.String FormatString) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -424,6 +581,13 @@ public class BoundPropertyEntry extends system.web.ui.PropertyEntry  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ControlType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.BoundPropertyEntry.ControlType" target="_top">.NET documentation</a>
+     */
     public NetType getControlType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -439,6 +603,13 @@ public class BoundPropertyEntry extends system.web.ui.PropertyEntry  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ControlType.
+     *
+     * @param ControlType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.BoundPropertyEntry.ControlType" target="_top">.NET documentation</a>
+     */
     public void setControlType(NetType ControlType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -449,6 +620,13 @@ public class BoundPropertyEntry extends system.web.ui.PropertyEntry  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ExpressionBuilder.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.BoundPropertyEntry.ExpressionBuilder" target="_top">.NET documentation</a>
+     */
     public ExpressionBuilder getExpressionBuilder() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -464,6 +642,13 @@ public class BoundPropertyEntry extends system.web.ui.PropertyEntry  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ExpressionBuilder.
+     *
+     * @param ExpressionBuilder the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.BoundPropertyEntry.ExpressionBuilder" target="_top">.NET documentation</a>
+     */
     public void setExpressionBuilder(ExpressionBuilder ExpressionBuilder) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

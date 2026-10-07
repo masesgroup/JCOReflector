@@ -102,7 +102,10 @@ public class XmlXapResolver extends system.xml.XmlResolver  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XmlXapResolver(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,12 @@ public class XmlXapResolver extends system.xml.XmlResolver  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlXapResolver.-ctor" target="_top">.NET documentation</a>
+     */
     public XmlXapResolver() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -163,6 +172,25 @@ public class XmlXapResolver extends system.xml.XmlResolver  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetEntity.
+     *
+     * @param absoluteUri the argument of type {@code Uri}
+     * @param role the argument of type {@code java.lang.String}
+     * @param ofObjectToReturn the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlXapResolver.GetEntity" target="_top">.NET documentation</a>
+     */
     public NetObject GetEntity(Uri absoluteUri, java.lang.String role, NetType ofObjectToReturn) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.xml.XmlException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,6 +206,13 @@ public class XmlXapResolver extends system.xml.XmlResolver  {
         }
     }
 
+    /**
+     * Invokes the .NET member RegisterApplicationResourceStreamResolver.
+     *
+     * @param appStreamResolver the argument of type {@code IApplicationResourceStreamResolver}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlXapResolver.RegisterApplicationResourceStreamResolver" target="_top">.NET documentation</a>
+     */
     public static void RegisterApplicationResourceStreamResolver(IApplicationResourceStreamResolver appStreamResolver) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

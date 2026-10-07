@@ -104,7 +104,10 @@ public class DefaultValueAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DefaultValueAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,13 @@ public class DefaultValueAttribute extends system.Attribute  {
     public DefaultValueAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param value the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.DefaultValueAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public DefaultValueAttribute(boolean value) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +174,13 @@ public class DefaultValueAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param value the argument of type {@code byte}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.DefaultValueAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public DefaultValueAttribute(byte value) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -174,6 +191,13 @@ public class DefaultValueAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param value the argument of type {@code char}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.DefaultValueAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public DefaultValueAttribute(char value) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -184,6 +208,13 @@ public class DefaultValueAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param value the argument of type {@code double}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.DefaultValueAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public DefaultValueAttribute(double value) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -194,6 +225,13 @@ public class DefaultValueAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param value the argument of type {@code short}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.DefaultValueAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public DefaultValueAttribute(short value) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -204,6 +242,13 @@ public class DefaultValueAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param value the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.DefaultValueAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public DefaultValueAttribute(int value) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -214,6 +259,13 @@ public class DefaultValueAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param value the argument of type {@code long}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.DefaultValueAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public DefaultValueAttribute(long value) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -224,6 +276,13 @@ public class DefaultValueAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param value the argument of type {@code SByte}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.DefaultValueAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public DefaultValueAttribute(SByte value) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -234,6 +293,13 @@ public class DefaultValueAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param value the argument of type {@code Single}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.DefaultValueAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public DefaultValueAttribute(Single value) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -244,6 +310,13 @@ public class DefaultValueAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param value the argument of type {@code NetObject}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.DefaultValueAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public DefaultValueAttribute(NetObject value) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -254,6 +327,13 @@ public class DefaultValueAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param value the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.DefaultValueAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public DefaultValueAttribute(java.lang.String value) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -264,6 +344,29 @@ public class DefaultValueAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param type the argument of type {@code NetType}
+     * @param value the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.io.FileLoadException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.DefaultValueAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public DefaultValueAttribute(NetType type, java.lang.String value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.TypeLoadException, system.FormatException, system.io.FileLoadException, system.io.FileNotFoundException, system.OverflowException, system.InvalidCastException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
@@ -274,6 +377,13 @@ public class DefaultValueAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param value the argument of type {@code UInt16}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.DefaultValueAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public DefaultValueAttribute(UInt16 value) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -284,6 +394,13 @@ public class DefaultValueAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param value the argument of type {@code UInt32}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.DefaultValueAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public DefaultValueAttribute(UInt32 value) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -294,6 +411,13 @@ public class DefaultValueAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param value the argument of type {@code UInt64}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.DefaultValueAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public DefaultValueAttribute(UInt64 value) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -313,6 +437,21 @@ public class DefaultValueAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Value.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.DefaultValueAttribute.Value" target="_top">.NET documentation</a>
+     */
     public NetObject getValue() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -101,7 +101,10 @@ public class PipeOptions extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PipeOptions(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,27 @@ public class PipeOptions extends NetObject  {
     public PipeOptions() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param pool the argument of type {@code MemoryPool_1}
+     * @param readerScheduler the argument of type {@code PipeScheduler}
+     * @param writerScheduler the argument of type {@code PipeScheduler}
+     * @param pauseWriterThreshold the argument of type {@code long}
+     * @param resumeWriterThreshold the argument of type {@code long}
+     * @param minimumSegmentSize the argument of type {@code int}
+     * @param useSynchronizationContext the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Pipelines.PipeOptions.-ctor" target="_top">.NET documentation</a>
+     */
     public PipeOptions(MemoryPool_1 pool, PipeScheduler readerScheduler, PipeScheduler writerScheduler, long pauseWriterThreshold, long resumeWriterThreshold, int minimumSegmentSize, boolean useSynchronizationContext) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +194,13 @@ public class PipeOptions extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property UseSynchronizationContext.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Pipelines.PipeOptions.UseSynchronizationContext" target="_top">.NET documentation</a>
+     */
     public boolean getUseSynchronizationContext() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +215,13 @@ public class PipeOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MinimumSegmentSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Pipelines.PipeOptions.MinimumSegmentSize" target="_top">.NET documentation</a>
+     */
     public int getMinimumSegmentSize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -224,6 +262,13 @@ public class PipeOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PauseWriterThreshold.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Pipelines.PipeOptions.PauseWriterThreshold" target="_top">.NET documentation</a>
+     */
     public long getPauseWriterThreshold() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -264,6 +309,13 @@ public class PipeOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ResumeWriterThreshold.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Pipelines.PipeOptions.ResumeWriterThreshold" target="_top">.NET documentation</a>
+     */
     public long getResumeWriterThreshold() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -304,6 +356,13 @@ public class PipeOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Pool.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Pipelines.PipeOptions.Pool" target="_top">.NET documentation</a>
+     */
     public MemoryPool_1 getPool() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -319,6 +378,13 @@ public class PipeOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Default.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Pipelines.PipeOptions.Default" target="_top">.NET documentation</a>
+     */
     public static PipeOptions getDefault() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -334,6 +400,13 @@ public class PipeOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ReaderScheduler.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Pipelines.PipeOptions.ReaderScheduler" target="_top">.NET documentation</a>
+     */
     public PipeScheduler getReaderScheduler() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -349,6 +422,13 @@ public class PipeOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property WriterScheduler.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Pipelines.PipeOptions.WriterScheduler" target="_top">.NET documentation</a>
+     */
     public PipeScheduler getWriterScheduler() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

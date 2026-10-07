@@ -101,7 +101,10 @@ public class TargetConverter extends system.componentmodel.StringConverter  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TargetConverter(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class TargetConverter extends system.componentmodel.StringConverter  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.TargetConverter.-ctor" target="_top">.NET documentation</a>
+     */
     public TargetConverter() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -162,6 +171,14 @@ public class TargetConverter extends system.componentmodel.StringConverter  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetStandardValuesExclusive.
+     *
+     * @param context the argument of type {@code ITypeDescriptorContext}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.TargetConverter.GetStandardValuesExclusive" target="_top">.NET documentation</a>
+     */
     public boolean GetStandardValuesExclusive(ITypeDescriptorContext context) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -176,6 +193,14 @@ public class TargetConverter extends system.componentmodel.StringConverter  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetStandardValuesSupported.
+     *
+     * @param context the argument of type {@code ITypeDescriptorContext}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.TargetConverter.GetStandardValuesSupported" target="_top">.NET documentation</a>
+     */
     public boolean GetStandardValuesSupported(ITypeDescriptorContext context) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

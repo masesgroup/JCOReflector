@@ -103,7 +103,10 @@ public class IBindableTemplateImplementation extends NetObject implements IBinda
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IBindableTemplateImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -145,6 +148,14 @@ public class IBindableTemplateImplementation extends NetObject implements IBinda
 
     // Methods section
     
+    /**
+     * Invokes the .NET member ExtractValues.
+     *
+     * @param container the argument of type {@code Control}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.IBindableTemplate.ExtractValues" target="_top">.NET documentation</a>
+     */
     public IOrderedDictionary ExtractValues(Control container) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -160,6 +171,13 @@ public class IBindableTemplateImplementation extends NetObject implements IBinda
         }
     }
 
+    /**
+     * Invokes the .NET member InstantiateIn.
+     *
+     * @param container the argument of type {@code Control}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.IBindableTemplate.InstantiateIn" target="_top">.NET documentation</a>
+     */
     public void InstantiateIn(Control container) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

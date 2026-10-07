@@ -101,7 +101,10 @@ public class CompilerParameters extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CompilerParameters(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,15 @@ public class CompilerParameters extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.CompilerParameters.-ctor" target="_top">.NET documentation</a>
+     */
     public CompilerParameters() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
@@ -158,6 +170,16 @@ public class CompilerParameters extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param assemblyNames the argument of type {@code java.lang.String[]}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.CompilerParameters.-ctor" target="_top">.NET documentation</a>
+     */
     public CompilerParameters(java.lang.String[] assemblyNames) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +190,17 @@ public class CompilerParameters extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param assemblyNames the argument of type {@code java.lang.String[]}
+     * @param outputName the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.CompilerParameters.-ctor" target="_top">.NET documentation</a>
+     */
     public CompilerParameters(java.lang.String[] assemblyNames, java.lang.String outputName) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
@@ -178,6 +211,18 @@ public class CompilerParameters extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param assemblyNames the argument of type {@code java.lang.String[]}
+     * @param outputName the argument of type {@code java.lang.String}
+     * @param includeDebugInformation the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.CompilerParameters.-ctor" target="_top">.NET documentation</a>
+     */
     public CompilerParameters(java.lang.String[] assemblyNames, java.lang.String outputName, boolean includeDebugInformation) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
@@ -196,6 +241,13 @@ public class CompilerParameters extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property GenerateExecutable.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.CompilerParameters.GenerateExecutable" target="_top">.NET documentation</a>
+     */
     public boolean getGenerateExecutable() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -210,6 +262,13 @@ public class CompilerParameters extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property GenerateExecutable.
+     *
+     * @param GenerateExecutable the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.CompilerParameters.GenerateExecutable" target="_top">.NET documentation</a>
+     */
     public void setGenerateExecutable(boolean GenerateExecutable) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -220,6 +279,13 @@ public class CompilerParameters extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property GenerateInMemory.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.CompilerParameters.GenerateInMemory" target="_top">.NET documentation</a>
+     */
     public boolean getGenerateInMemory() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -234,6 +300,13 @@ public class CompilerParameters extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property GenerateInMemory.
+     *
+     * @param GenerateInMemory the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.CompilerParameters.GenerateInMemory" target="_top">.NET documentation</a>
+     */
     public void setGenerateInMemory(boolean GenerateInMemory) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -244,6 +317,13 @@ public class CompilerParameters extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IncludeDebugInformation.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.CompilerParameters.IncludeDebugInformation" target="_top">.NET documentation</a>
+     */
     public boolean getIncludeDebugInformation() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -258,6 +338,13 @@ public class CompilerParameters extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IncludeDebugInformation.
+     *
+     * @param IncludeDebugInformation the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.CompilerParameters.IncludeDebugInformation" target="_top">.NET documentation</a>
+     */
     public void setIncludeDebugInformation(boolean IncludeDebugInformation) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -268,6 +355,13 @@ public class CompilerParameters extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TreatWarningsAsErrors.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.CompilerParameters.TreatWarningsAsErrors" target="_top">.NET documentation</a>
+     */
     public boolean getTreatWarningsAsErrors() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -282,6 +376,13 @@ public class CompilerParameters extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TreatWarningsAsErrors.
+     *
+     * @param TreatWarningsAsErrors the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.CompilerParameters.TreatWarningsAsErrors" target="_top">.NET documentation</a>
+     */
     public void setTreatWarningsAsErrors(boolean TreatWarningsAsErrors) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -292,6 +393,13 @@ public class CompilerParameters extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property WarningLevel.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.CompilerParameters.WarningLevel" target="_top">.NET documentation</a>
+     */
     public int getWarningLevel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -332,6 +440,13 @@ public class CompilerParameters extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property WarningLevel.
+     *
+     * @param WarningLevel the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.CompilerParameters.WarningLevel" target="_top">.NET documentation</a>
+     */
     public void setWarningLevel(int WarningLevel) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -342,6 +457,19 @@ public class CompilerParameters extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TempFiles.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.CompilerParameters.TempFiles" target="_top">.NET documentation</a>
+     */
     public TempFileCollection getTempFiles() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.security.SecurityException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -357,6 +485,13 @@ public class CompilerParameters extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TempFiles.
+     *
+     * @param TempFiles the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.CompilerParameters.TempFiles" target="_top">.NET documentation</a>
+     */
     public void setTempFiles(TempFileCollection TempFiles) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -367,6 +502,13 @@ public class CompilerParameters extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EmbeddedResources.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.CompilerParameters.EmbeddedResources" target="_top">.NET documentation</a>
+     */
     public StringCollection getEmbeddedResources() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -382,6 +524,13 @@ public class CompilerParameters extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LinkedResources.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.CompilerParameters.LinkedResources" target="_top">.NET documentation</a>
+     */
     public StringCollection getLinkedResources() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -397,6 +546,13 @@ public class CompilerParameters extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ReferencedAssemblies.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.CompilerParameters.ReferencedAssemblies" target="_top">.NET documentation</a>
+     */
     public StringCollection getReferencedAssemblies() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -412,6 +568,17 @@ public class CompilerParameters extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Evidence.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.CompilerParameters.Evidence" target="_top">.NET documentation</a>
+     */
     public Evidence getEvidence() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -427,6 +594,17 @@ public class CompilerParameters extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Evidence.
+     *
+     * @param Evidence the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.CompilerParameters.Evidence" target="_top">.NET documentation</a>
+     */
     public void setEvidence(Evidence Evidence) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -437,6 +615,13 @@ public class CompilerParameters extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CompilerOptions.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.CompilerParameters.CompilerOptions" target="_top">.NET documentation</a>
+     */
     public java.lang.String getCompilerOptions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -451,6 +636,13 @@ public class CompilerParameters extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CompilerOptions.
+     *
+     * @param CompilerOptions the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.CompilerParameters.CompilerOptions" target="_top">.NET documentation</a>
+     */
     public void setCompilerOptions(java.lang.String CompilerOptions) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -461,6 +653,13 @@ public class CompilerParameters extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CoreAssemblyFileName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.CompilerParameters.CoreAssemblyFileName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getCoreAssemblyFileName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -475,6 +674,13 @@ public class CompilerParameters extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CoreAssemblyFileName.
+     *
+     * @param CoreAssemblyFileName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.CompilerParameters.CoreAssemblyFileName" target="_top">.NET documentation</a>
+     */
     public void setCoreAssemblyFileName(java.lang.String CoreAssemblyFileName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -485,6 +691,13 @@ public class CompilerParameters extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MainClass.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.CompilerParameters.MainClass" target="_top">.NET documentation</a>
+     */
     public java.lang.String getMainClass() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -499,6 +712,13 @@ public class CompilerParameters extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MainClass.
+     *
+     * @param MainClass the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.CompilerParameters.MainClass" target="_top">.NET documentation</a>
+     */
     public void setMainClass(java.lang.String MainClass) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -509,6 +729,13 @@ public class CompilerParameters extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OutputAssembly.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.CompilerParameters.OutputAssembly" target="_top">.NET documentation</a>
+     */
     public java.lang.String getOutputAssembly() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -523,6 +750,13 @@ public class CompilerParameters extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property OutputAssembly.
+     *
+     * @param OutputAssembly the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.CompilerParameters.OutputAssembly" target="_top">.NET documentation</a>
+     */
     public void setOutputAssembly(java.lang.String OutputAssembly) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -533,6 +767,13 @@ public class CompilerParameters extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Win32Resource.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.CompilerParameters.Win32Resource" target="_top">.NET documentation</a>
+     */
     public java.lang.String getWin32Resource() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -547,6 +788,13 @@ public class CompilerParameters extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Win32Resource.
+     *
+     * @param Win32Resource the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.CompilerParameters.Win32Resource" target="_top">.NET documentation</a>
+     */
     public void setWin32Resource(java.lang.String Win32Resource) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

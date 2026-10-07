@@ -101,7 +101,10 @@ public class XamlAccessLevel extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XamlAccessLevel(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,16 @@ public class XamlAccessLevel extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member AssemblyAccessTo.
+     *
+     * @param assembly the argument of type {@code Assembly}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.Permissions.XamlAccessLevel.AssemblyAccessTo" target="_top">.NET documentation</a>
+     */
     public static XamlAccessLevel AssemblyAccessTo(Assembly assembly) throws Throwable, system.ArgumentNullException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -171,6 +184,22 @@ public class XamlAccessLevel extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AssemblyAccessTo.
+     *
+     * @param assemblyName the argument of type {@code AssemblyName}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.Permissions.XamlAccessLevel.AssemblyAccessTo" target="_top">.NET documentation</a>
+     */
     public static XamlAccessLevel AssemblyAccessTo(AssemblyName assemblyName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -186,6 +215,25 @@ public class XamlAccessLevel extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member PrivateAccessTo.
+     *
+     * @param assemblyQualifiedTypeName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.Permissions.XamlAccessLevel.PrivateAccessTo" target="_top">.NET documentation</a>
+     */
     public static XamlAccessLevel PrivateAccessTo(java.lang.String assemblyQualifiedTypeName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -201,6 +249,16 @@ public class XamlAccessLevel extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member PrivateAccessTo.
+     *
+     * @param type the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.Permissions.XamlAccessLevel.PrivateAccessTo" target="_top">.NET documentation</a>
+     */
     public static XamlAccessLevel PrivateAccessTo(NetType type) throws Throwable, system.ArgumentNullException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -220,6 +278,15 @@ public class XamlAccessLevel extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AssemblyAccessToAssemblyName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.Permissions.XamlAccessLevel.AssemblyAccessToAssemblyName" target="_top">.NET documentation</a>
+     */
     public AssemblyName getAssemblyAccessToAssemblyName() throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -235,6 +302,13 @@ public class XamlAccessLevel extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PrivateAccessToTypeName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.Permissions.XamlAccessLevel.PrivateAccessToTypeName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getPrivateAccessToTypeName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -249,6 +323,13 @@ public class XamlAccessLevel extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PrivateAccessToTypeName.
+     *
+     * @param PrivateAccessToTypeName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.Permissions.XamlAccessLevel.PrivateAccessToTypeName" target="_top">.NET documentation</a>
+     */
     public void setPrivateAccessToTypeName(java.lang.String PrivateAccessToTypeName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

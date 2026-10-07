@@ -101,7 +101,10 @@ public class HashCode extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public HashCode(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,30 @@ public class HashCode extends system.ValueType  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Combine.
+     *
+     * @param <T1> the type of the generic argument T1
+     * @param <T2> the type of the generic argument T2
+     * @param <T3> the type of the generic argument T3
+     * @param <T4> the type of the generic argument T4
+     * @param <T5> the type of the generic argument T5
+     * @param <T6> the type of the generic argument T6
+     * @param <T7> the type of the generic argument T7
+     * @param <T8> the type of the generic argument T8
+     * @param value1 the argument of type {@code T1}
+     * @param value2 the argument of type {@code T2}
+     * @param value3 the argument of type {@code T3}
+     * @param value4 the argument of type {@code T4}
+     * @param value5 the argument of type {@code T5}
+     * @param value6 the argument of type {@code T6}
+     * @param value7 the argument of type {@code T7}
+     * @param value8 the argument of type {@code T8}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.HashCode.Combine" target="_top">.NET documentation</a>
+     */
     public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected, T7 extends IJCOBridgeReflected, T8 extends IJCOBridgeReflected> int Combine(T1 value1, T2 value2, T3 value3, T4 value4, T5 value5, T6 value6, T7 value7, T8 value8) throws Throwable, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -196,6 +223,28 @@ public class HashCode extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Combine.
+     *
+     * @param <T1> the type of the generic argument T1
+     * @param <T2> the type of the generic argument T2
+     * @param <T3> the type of the generic argument T3
+     * @param <T4> the type of the generic argument T4
+     * @param <T5> the type of the generic argument T5
+     * @param <T6> the type of the generic argument T6
+     * @param <T7> the type of the generic argument T7
+     * @param value1 the argument of type {@code T1}
+     * @param value2 the argument of type {@code T2}
+     * @param value3 the argument of type {@code T3}
+     * @param value4 the argument of type {@code T4}
+     * @param value5 the argument of type {@code T5}
+     * @param value6 the argument of type {@code T6}
+     * @param value7 the argument of type {@code T7}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.HashCode.Combine" target="_top">.NET documentation</a>
+     */
     public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected, T7 extends IJCOBridgeReflected> int Combine(T1 value1, T2 value2, T3 value3, T4 value4, T5 value5, T6 value6, T7 value7) throws Throwable, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -236,6 +285,26 @@ public class HashCode extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Combine.
+     *
+     * @param <T1> the type of the generic argument T1
+     * @param <T2> the type of the generic argument T2
+     * @param <T3> the type of the generic argument T3
+     * @param <T4> the type of the generic argument T4
+     * @param <T5> the type of the generic argument T5
+     * @param <T6> the type of the generic argument T6
+     * @param value1 the argument of type {@code T1}
+     * @param value2 the argument of type {@code T2}
+     * @param value3 the argument of type {@code T3}
+     * @param value4 the argument of type {@code T4}
+     * @param value5 the argument of type {@code T5}
+     * @param value6 the argument of type {@code T6}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.HashCode.Combine" target="_top">.NET documentation</a>
+     */
     public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected> int Combine(T1 value1, T2 value2, T3 value3, T4 value4, T5 value5, T6 value6) throws Throwable, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -276,6 +345,24 @@ public class HashCode extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Combine.
+     *
+     * @param <T1> the type of the generic argument T1
+     * @param <T2> the type of the generic argument T2
+     * @param <T3> the type of the generic argument T3
+     * @param <T4> the type of the generic argument T4
+     * @param <T5> the type of the generic argument T5
+     * @param value1 the argument of type {@code T1}
+     * @param value2 the argument of type {@code T2}
+     * @param value3 the argument of type {@code T3}
+     * @param value4 the argument of type {@code T4}
+     * @param value5 the argument of type {@code T5}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.HashCode.Combine" target="_top">.NET documentation</a>
+     */
     public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected> int Combine(T1 value1, T2 value2, T3 value3, T4 value4, T5 value5) throws Throwable, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -316,6 +403,22 @@ public class HashCode extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Combine.
+     *
+     * @param <T1> the type of the generic argument T1
+     * @param <T2> the type of the generic argument T2
+     * @param <T3> the type of the generic argument T3
+     * @param <T4> the type of the generic argument T4
+     * @param value1 the argument of type {@code T1}
+     * @param value2 the argument of type {@code T2}
+     * @param value3 the argument of type {@code T3}
+     * @param value4 the argument of type {@code T4}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.HashCode.Combine" target="_top">.NET documentation</a>
+     */
     public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected> int Combine(T1 value1, T2 value2, T3 value3, T4 value4) throws Throwable, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -356,6 +459,20 @@ public class HashCode extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Combine.
+     *
+     * @param <T1> the type of the generic argument T1
+     * @param <T2> the type of the generic argument T2
+     * @param <T3> the type of the generic argument T3
+     * @param value1 the argument of type {@code T1}
+     * @param value2 the argument of type {@code T2}
+     * @param value3 the argument of type {@code T3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.HashCode.Combine" target="_top">.NET documentation</a>
+     */
     public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected> int Combine(T1 value1, T2 value2, T3 value3) throws Throwable, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -396,6 +513,18 @@ public class HashCode extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Combine.
+     *
+     * @param <T1> the type of the generic argument T1
+     * @param <T2> the type of the generic argument T2
+     * @param value1 the argument of type {@code T1}
+     * @param value2 the argument of type {@code T2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.HashCode.Combine" target="_top">.NET documentation</a>
+     */
     public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected> int Combine(T1 value1, T2 value2) throws Throwable, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -436,6 +565,16 @@ public class HashCode extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Combine.
+     *
+     * @param <T1> the type of the generic argument T1
+     * @param value1 the argument of type {@code T1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.HashCode.Combine" target="_top">.NET documentation</a>
+     */
     public static <T1 extends IJCOBridgeReflected> int Combine(T1 value1) throws Throwable, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -476,6 +615,13 @@ public class HashCode extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToHashCode.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.HashCode.ToHashCode" target="_top">.NET documentation</a>
+     */
     public int ToHashCode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -516,6 +662,16 @@ public class HashCode extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param <T> the type of the generic argument T
+     * @param value the argument of type {@code T}
+     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.HashCode.Add" target="_top">.NET documentation</a>
+     */
     public <T extends IJCOBridgeReflected> void Add(T value, IEqualityComparer_1 comparer) throws Throwable, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -526,6 +682,15 @@ public class HashCode extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param <T> the type of the generic argument T
+     * @param value the argument of type {@code T}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.HashCode.Add" target="_top">.NET documentation</a>
+     */
     public <T extends IJCOBridgeReflected> void Add(T value) throws Throwable, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

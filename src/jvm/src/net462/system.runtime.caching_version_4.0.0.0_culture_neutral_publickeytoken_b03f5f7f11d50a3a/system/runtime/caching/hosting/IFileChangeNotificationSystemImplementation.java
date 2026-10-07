@@ -100,7 +100,10 @@ public class IFileChangeNotificationSystemImplementation extends NetObject imple
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IFileChangeNotificationSystemImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -142,6 +145,17 @@ public class IFileChangeNotificationSystemImplementation extends NetObject imple
 
     // Methods section
     
+    /**
+     * Invokes the .NET member StartMonitoring.
+     *
+     * @param filePath the argument of type {@code java.lang.String}
+     * @param onChangedCallback the argument of type {@code OnChangedCallback}
+     * @param state the argument of type {@code JCORefOut<NetObject>}
+     * @param lastWriteTime the argument of type {@code JCORefOut<DateTimeOffset>}
+     * @param fileSize the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicLong>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Caching.Hosting.IFileChangeNotificationSystem.StartMonitoring" target="_top">.NET documentation</a>
+     */
     public void StartMonitoring(java.lang.String filePath, OnChangedCallback onChangedCallback, JCORefOut<NetObject> state, JCORefOut<DateTimeOffset> lastWriteTime, JCORefOut<java.util.concurrent.atomic.AtomicLong> fileSize) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -152,6 +166,14 @@ public class IFileChangeNotificationSystemImplementation extends NetObject imple
         }
     }
 
+    /**
+     * Invokes the .NET member StopMonitoring.
+     *
+     * @param filePath the argument of type {@code java.lang.String}
+     * @param state the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Caching.Hosting.IFileChangeNotificationSystem.StopMonitoring" target="_top">.NET documentation</a>
+     */
     public void StopMonitoring(java.lang.String filePath, NetObject state) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -100,7 +100,10 @@ public class IStartWorkflowImplementation extends NetObject implements IStartWor
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IStartWorkflowImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -142,6 +145,15 @@ public class IStartWorkflowImplementation extends NetObject implements IStartWor
 
     // Methods section
     
+    /**
+     * Invokes the .NET member StartWorkflow.
+     *
+     * @param workflowType the argument of type {@code NetType}
+     * @param namedArgumentValues the argument of type {@code Dictionary_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.IStartWorkflow.StartWorkflow" target="_top">.NET documentation</a>
+     */
     public Guid StartWorkflow(NetType workflowType, Dictionary_2 namedArgumentValues) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

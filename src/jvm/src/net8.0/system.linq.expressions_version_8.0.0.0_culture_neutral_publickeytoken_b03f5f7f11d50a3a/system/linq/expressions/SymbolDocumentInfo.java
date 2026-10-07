@@ -99,7 +99,10 @@ public class SymbolDocumentInfo extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SymbolDocumentInfo(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -158,6 +161,13 @@ public class SymbolDocumentInfo extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property DocumentType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.SymbolDocumentInfo.DocumentType" target="_top">.NET documentation</a>
+     */
     public Guid getDocumentType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -173,6 +183,13 @@ public class SymbolDocumentInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Language.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.SymbolDocumentInfo.Language" target="_top">.NET documentation</a>
+     */
     public Guid getLanguage() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +205,13 @@ public class SymbolDocumentInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LanguageVendor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.SymbolDocumentInfo.LanguageVendor" target="_top">.NET documentation</a>
+     */
     public Guid getLanguageVendor() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +227,13 @@ public class SymbolDocumentInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FileName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.SymbolDocumentInfo.FileName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getFileName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

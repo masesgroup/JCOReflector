@@ -101,7 +101,10 @@ public class WebPartMovingEventArgs extends system.web.ui.webcontrols.webparts.W
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public WebPartMovingEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,15 @@ public class WebPartMovingEventArgs extends system.web.ui.webcontrols.webparts.W
     public WebPartMovingEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param webPart the argument of type {@code WebPart}
+     * @param zone the argument of type {@code WebPartZoneBase}
+     * @param zoneIndex the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartMovingEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public WebPartMovingEventArgs(WebPart webPart, WebPartZoneBase zone, int zoneIndex) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +182,13 @@ public class WebPartMovingEventArgs extends system.web.ui.webcontrols.webparts.W
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ZoneIndex.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartMovingEventArgs.ZoneIndex" target="_top">.NET documentation</a>
+     */
     public int getZoneIndex() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -210,6 +229,13 @@ public class WebPartMovingEventArgs extends system.web.ui.webcontrols.webparts.W
         }
     }
 
+    /**
+     * Sets the value of the .NET property ZoneIndex.
+     *
+     * @param ZoneIndex the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartMovingEventArgs.ZoneIndex" target="_top">.NET documentation</a>
+     */
     public void setZoneIndex(int ZoneIndex) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -220,6 +246,13 @@ public class WebPartMovingEventArgs extends system.web.ui.webcontrols.webparts.W
         }
     }
 
+    /**
+     * Gets the value of the .NET property Zone.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartMovingEventArgs.Zone" target="_top">.NET documentation</a>
+     */
     public WebPartZoneBase getZone() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -235,6 +268,13 @@ public class WebPartMovingEventArgs extends system.web.ui.webcontrols.webparts.W
         }
     }
 
+    /**
+     * Sets the value of the .NET property Zone.
+     *
+     * @param Zone the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartMovingEventArgs.Zone" target="_top">.NET documentation</a>
+     */
     public void setZone(WebPartZoneBase Zone) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -101,7 +101,10 @@ public class BaseProperty extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public BaseProperty(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,12 @@ public class BaseProperty extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member BeginInit.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.BaseProperty.BeginInit" target="_top">.NET documentation</a>
+     */
     public void BeginInit() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -164,6 +173,12 @@ public class BaseProperty extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member EndInit.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.BaseProperty.EndInit" target="_top">.NET documentation</a>
+     */
     public void EndInit() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,6 +193,13 @@ public class BaseProperty extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IncludeInCommandLine.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.BaseProperty.IncludeInCommandLine" target="_top">.NET documentation</a>
+     */
     public boolean getIncludeInCommandLine() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -192,6 +214,13 @@ public class BaseProperty extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IncludeInCommandLine.
+     *
+     * @param IncludeInCommandLine the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.BaseProperty.IncludeInCommandLine" target="_top">.NET documentation</a>
+     */
     public void setIncludeInCommandLine(boolean IncludeInCommandLine) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +231,13 @@ public class BaseProperty extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsRequired.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.BaseProperty.IsRequired" target="_top">.NET documentation</a>
+     */
     public boolean getIsRequired() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +252,13 @@ public class BaseProperty extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsRequired.
+     *
+     * @param IsRequired the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.BaseProperty.IsRequired" target="_top">.NET documentation</a>
+     */
     public void setIsRequired(boolean IsRequired) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -226,6 +269,13 @@ public class BaseProperty extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MultipleValuesAllowed.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.BaseProperty.MultipleValuesAllowed" target="_top">.NET documentation</a>
+     */
     public boolean getMultipleValuesAllowed() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -240,6 +290,13 @@ public class BaseProperty extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MultipleValuesAllowed.
+     *
+     * @param MultipleValuesAllowed the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.BaseProperty.MultipleValuesAllowed" target="_top">.NET documentation</a>
+     */
     public void setMultipleValuesAllowed(boolean MultipleValuesAllowed) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -250,6 +307,13 @@ public class BaseProperty extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ReadOnly.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.BaseProperty.ReadOnly" target="_top">.NET documentation</a>
+     */
     public boolean getReadOnly() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -264,6 +328,13 @@ public class BaseProperty extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ReadOnly.
+     *
+     * @param ReadOnly the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.BaseProperty.ReadOnly" target="_top">.NET documentation</a>
+     */
     public void setReadOnly(boolean ReadOnly) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -274,6 +345,13 @@ public class BaseProperty extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Visible.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.BaseProperty.Visible" target="_top">.NET documentation</a>
+     */
     public boolean getVisible() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -288,6 +366,13 @@ public class BaseProperty extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Visible.
+     *
+     * @param Visible the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.BaseProperty.Visible" target="_top">.NET documentation</a>
+     */
     public void setVisible(boolean Visible) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -298,6 +383,13 @@ public class BaseProperty extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property HelpContext.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.BaseProperty.HelpContext" target="_top">.NET documentation</a>
+     */
     public int getHelpContext() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -338,6 +430,13 @@ public class BaseProperty extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property HelpContext.
+     *
+     * @param HelpContext the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.BaseProperty.HelpContext" target="_top">.NET documentation</a>
+     */
     public void setHelpContext(int HelpContext) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -348,6 +447,13 @@ public class BaseProperty extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DataSource.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.BaseProperty.DataSource" target="_top">.NET documentation</a>
+     */
     public DataSource getDataSource() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -363,6 +469,13 @@ public class BaseProperty extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DataSource.
+     *
+     * @param DataSource the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.BaseProperty.DataSource" target="_top">.NET documentation</a>
+     */
     public void setDataSource(DataSource DataSource) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -373,6 +486,13 @@ public class BaseProperty extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ContainingRule.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.BaseProperty.ContainingRule" target="_top">.NET documentation</a>
+     */
     public Rule getContainingRule() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -388,6 +508,13 @@ public class BaseProperty extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ContainingRule.
+     *
+     * @param ContainingRule the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.BaseProperty.ContainingRule" target="_top">.NET documentation</a>
+     */
     public void setContainingRule(Rule ContainingRule) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -398,6 +525,13 @@ public class BaseProperty extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Arguments.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.BaseProperty.Arguments" target="_top">.NET documentation</a>
+     */
     public List_1 getArguments() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -413,6 +547,13 @@ public class BaseProperty extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Arguments.
+     *
+     * @param Arguments the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.BaseProperty.Arguments" target="_top">.NET documentation</a>
+     */
     public void setArguments(List_1 Arguments) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -423,6 +564,13 @@ public class BaseProperty extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Metadata.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.BaseProperty.Metadata" target="_top">.NET documentation</a>
+     */
     public List_1 getMetadata() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -438,6 +586,13 @@ public class BaseProperty extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Metadata.
+     *
+     * @param Metadata the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.BaseProperty.Metadata" target="_top">.NET documentation</a>
+     */
     public void setMetadata(List_1 Metadata) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -448,6 +603,13 @@ public class BaseProperty extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ValueEditors.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.BaseProperty.ValueEditors" target="_top">.NET documentation</a>
+     */
     public List_1 getValueEditors() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -463,6 +625,13 @@ public class BaseProperty extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ValueEditors.
+     *
+     * @param ValueEditors the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.BaseProperty.ValueEditors" target="_top">.NET documentation</a>
+     */
     public void setValueEditors(List_1 ValueEditors) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -473,6 +642,13 @@ public class BaseProperty extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Category.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.BaseProperty.Category" target="_top">.NET documentation</a>
+     */
     public java.lang.String getCategory() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -487,6 +663,13 @@ public class BaseProperty extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Category.
+     *
+     * @param Category the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.BaseProperty.Category" target="_top">.NET documentation</a>
+     */
     public void setCategory(java.lang.String Category) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -497,6 +680,13 @@ public class BaseProperty extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Default.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.BaseProperty.Default" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDefault() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -511,6 +701,13 @@ public class BaseProperty extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Default.
+     *
+     * @param Default the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.BaseProperty.Default" target="_top">.NET documentation</a>
+     */
     public void setDefault(java.lang.String Default) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -521,6 +718,13 @@ public class BaseProperty extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Description.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.BaseProperty.Description" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDescription() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -535,6 +739,13 @@ public class BaseProperty extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Description.
+     *
+     * @param Description the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.BaseProperty.Description" target="_top">.NET documentation</a>
+     */
     public void setDescription(java.lang.String Description) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -545,6 +756,13 @@ public class BaseProperty extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DisplayName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.BaseProperty.DisplayName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDisplayName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -559,6 +777,13 @@ public class BaseProperty extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DisplayName.
+     *
+     * @param DisplayName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.BaseProperty.DisplayName" target="_top">.NET documentation</a>
+     */
     public void setDisplayName(java.lang.String DisplayName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -569,6 +794,13 @@ public class BaseProperty extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property F1Keyword.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.BaseProperty.F1Keyword" target="_top">.NET documentation</a>
+     */
     public java.lang.String getF1Keyword() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -583,6 +815,13 @@ public class BaseProperty extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property F1Keyword.
+     *
+     * @param F1Keyword the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.BaseProperty.F1Keyword" target="_top">.NET documentation</a>
+     */
     public void setF1Keyword(java.lang.String F1Keyword) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -593,6 +832,13 @@ public class BaseProperty extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property HelpFile.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.BaseProperty.HelpFile" target="_top">.NET documentation</a>
+     */
     public java.lang.String getHelpFile() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -607,6 +853,13 @@ public class BaseProperty extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property HelpFile.
+     *
+     * @param HelpFile the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.BaseProperty.HelpFile" target="_top">.NET documentation</a>
+     */
     public void setHelpFile(java.lang.String HelpFile) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -617,6 +870,13 @@ public class BaseProperty extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property HelpUrl.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.BaseProperty.HelpUrl" target="_top">.NET documentation</a>
+     */
     public java.lang.String getHelpUrl() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -631,6 +891,13 @@ public class BaseProperty extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property HelpUrl.
+     *
+     * @param HelpUrl the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.BaseProperty.HelpUrl" target="_top">.NET documentation</a>
+     */
     public void setHelpUrl(java.lang.String HelpUrl) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -641,6 +908,13 @@ public class BaseProperty extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.BaseProperty.Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -655,6 +929,13 @@ public class BaseProperty extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Name.
+     *
+     * @param Name the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.BaseProperty.Name" target="_top">.NET documentation</a>
+     */
     public void setName(java.lang.String Name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -665,6 +946,13 @@ public class BaseProperty extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Separator.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.BaseProperty.Separator" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSeparator() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -679,6 +967,13 @@ public class BaseProperty extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Separator.
+     *
+     * @param Separator the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.BaseProperty.Separator" target="_top">.NET documentation</a>
+     */
     public void setSeparator(java.lang.String Separator) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -689,6 +984,13 @@ public class BaseProperty extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Subcategory.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.BaseProperty.Subcategory" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSubcategory() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -703,6 +1005,13 @@ public class BaseProperty extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Subcategory.
+     *
+     * @param Subcategory the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.BaseProperty.Subcategory" target="_top">.NET documentation</a>
+     */
     public void setSubcategory(java.lang.String Subcategory) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -713,6 +1022,13 @@ public class BaseProperty extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Switch.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.BaseProperty.Switch" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSwitch() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -727,6 +1043,13 @@ public class BaseProperty extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Switch.
+     *
+     * @param Switch the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.BaseProperty.Switch" target="_top">.NET documentation</a>
+     */
     public void setSwitch(java.lang.String Switch) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -737,6 +1060,13 @@ public class BaseProperty extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SwitchPrefix.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.BaseProperty.SwitchPrefix" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSwitchPrefix() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -751,6 +1081,13 @@ public class BaseProperty extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SwitchPrefix.
+     *
+     * @param SwitchPrefix the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.BaseProperty.SwitchPrefix" target="_top">.NET documentation</a>
+     */
     public void setSwitchPrefix(java.lang.String SwitchPrefix) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

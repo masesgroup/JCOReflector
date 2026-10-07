@@ -99,7 +99,10 @@ public class MLKemAlgorithm extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public MLKemAlgorithm(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,16 @@ public class MLKemAlgorithm extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Equals.
+     *
+     * @param other the argument of type {@code MLKemAlgorithm}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.MLKemAlgorithm.Equals" target="_top">.NET documentation</a>
+     */
     public boolean Equals(MLKemAlgorithm other) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -172,6 +185,13 @@ public class MLKemAlgorithm extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CiphertextSizeInBytes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.MLKemAlgorithm.CiphertextSizeInBytes" target="_top">.NET documentation</a>
+     */
     public int getCiphertextSizeInBytes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -212,6 +232,13 @@ public class MLKemAlgorithm extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DecapsulationKeySizeInBytes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.MLKemAlgorithm.DecapsulationKeySizeInBytes" target="_top">.NET documentation</a>
+     */
     public int getDecapsulationKeySizeInBytes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -252,6 +279,13 @@ public class MLKemAlgorithm extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EncapsulationKeySizeInBytes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.MLKemAlgorithm.EncapsulationKeySizeInBytes" target="_top">.NET documentation</a>
+     */
     public int getEncapsulationKeySizeInBytes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -292,6 +326,13 @@ public class MLKemAlgorithm extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PrivateSeedSizeInBytes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.MLKemAlgorithm.PrivateSeedSizeInBytes" target="_top">.NET documentation</a>
+     */
     public int getPrivateSeedSizeInBytes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -332,6 +373,13 @@ public class MLKemAlgorithm extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SharedSecretSizeInBytes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.MLKemAlgorithm.SharedSecretSizeInBytes" target="_top">.NET documentation</a>
+     */
     public int getSharedSecretSizeInBytes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -372,6 +420,13 @@ public class MLKemAlgorithm extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MLKem1024.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.MLKemAlgorithm.MLKem1024" target="_top">.NET documentation</a>
+     */
     public static MLKemAlgorithm getMLKem1024() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -387,6 +442,13 @@ public class MLKemAlgorithm extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MLKem512.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.MLKemAlgorithm.MLKem512" target="_top">.NET documentation</a>
+     */
     public static MLKemAlgorithm getMLKem512() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -402,6 +464,13 @@ public class MLKemAlgorithm extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MLKem768.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.MLKemAlgorithm.MLKem768" target="_top">.NET documentation</a>
+     */
     public static MLKemAlgorithm getMLKem768() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -417,6 +486,13 @@ public class MLKemAlgorithm extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.MLKemAlgorithm.Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

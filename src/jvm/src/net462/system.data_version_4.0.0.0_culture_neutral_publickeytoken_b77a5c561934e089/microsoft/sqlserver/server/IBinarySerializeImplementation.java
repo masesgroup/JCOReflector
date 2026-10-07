@@ -100,7 +100,10 @@ public class IBinarySerializeImplementation extends NetObject implements IBinary
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IBinarySerializeImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -142,6 +145,13 @@ public class IBinarySerializeImplementation extends NetObject implements IBinary
 
     // Methods section
     
+    /**
+     * Invokes the .NET member Read.
+     *
+     * @param r the argument of type {@code BinaryReader}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.IBinarySerialize.Read" target="_top">.NET documentation</a>
+     */
     public void Read(BinaryReader r) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -152,6 +162,13 @@ public class IBinarySerializeImplementation extends NetObject implements IBinary
         }
     }
 
+    /**
+     * Invokes the .NET member Write.
+     *
+     * @param w the argument of type {@code BinaryWriter}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.IBinarySerialize.Write" target="_top">.NET documentation</a>
+     */
     public void Write(BinaryWriter w) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

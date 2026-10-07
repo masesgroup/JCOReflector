@@ -101,7 +101,10 @@ public class DbXmlEnabledProviderManifest extends system.data.common.DbProviderM
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DbXmlEnabledProviderManifest(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,13 @@ public class DbXmlEnabledProviderManifest extends system.data.common.DbProviderM
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetStoreFunctions.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbXmlEnabledProviderManifest.GetStoreFunctions" target="_top">.NET documentation</a>
+     */
     public ReadOnlyCollection_1 GetStoreFunctions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -169,6 +179,15 @@ public class DbXmlEnabledProviderManifest extends system.data.common.DbProviderM
         }
     }
 
+    /**
+     * Invokes the .NET member GetFacetDescriptions.
+     *
+     * @param type the argument of type {@code EdmType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbXmlEnabledProviderManifest.GetFacetDescriptions" target="_top">.NET documentation</a>
+     */
     public ReadOnlyCollection_1 GetFacetDescriptions(EdmType type) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +203,13 @@ public class DbXmlEnabledProviderManifest extends system.data.common.DbProviderM
         }
     }
 
+    /**
+     * Invokes the .NET member GetStoreTypes.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbXmlEnabledProviderManifest.GetStoreTypes" target="_top">.NET documentation</a>
+     */
     public ReadOnlyCollection_1 GetStoreTypes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

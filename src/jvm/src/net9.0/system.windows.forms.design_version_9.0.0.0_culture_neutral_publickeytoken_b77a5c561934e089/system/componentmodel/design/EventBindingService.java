@@ -106,7 +106,10 @@ public class EventBindingService extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public EventBindingService(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -162,8 +165,12 @@ public class EventBindingService extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIEventBindingService method available in IEventBindingService to obtain an object with an invocable method
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IEventBindingService.ShowCode" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public boolean ShowCode() throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEventBindingService to obtain the full interface.");
     }
@@ -171,8 +178,13 @@ public class EventBindingService extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIEventBindingService method available in IEventBindingService to obtain an object with an invocable method
+     *
+     * @param lineNumber the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IEventBindingService.ShowCode" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public boolean ShowCode(int lineNumber) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEventBindingService to obtain the full interface.");
     }
@@ -180,8 +192,14 @@ public class EventBindingService extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIEventBindingService method available in IEventBindingService to obtain an object with an invocable method
+     *
+     * @param component the argument of type {@code IComponent}
+     * @param e the argument of type {@code EventDescriptor}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IEventBindingService.ShowCode" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public boolean ShowCode(IComponent component, EventDescriptor e) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEventBindingService to obtain the full interface.");
     }
@@ -189,8 +207,13 @@ public class EventBindingService extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIEventBindingService method available in IEventBindingService to obtain an object with an invocable method
+     *
+     * @param e the argument of type {@code EventDescriptor}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IEventBindingService.GetCompatibleMethods" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public ICollection GetCompatibleMethods(EventDescriptor e) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEventBindingService to obtain the full interface.");
     }
@@ -198,8 +221,13 @@ public class EventBindingService extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIEventBindingService method available in IEventBindingService to obtain an object with an invocable method
+     *
+     * @param property the argument of type {@code PropertyDescriptor}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IEventBindingService.GetEvent" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public EventDescriptor GetEvent(PropertyDescriptor property) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEventBindingService to obtain the full interface.");
     }
@@ -207,8 +235,13 @@ public class EventBindingService extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIEventBindingService method available in IEventBindingService to obtain an object with an invocable method
+     *
+     * @param e the argument of type {@code EventDescriptor}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IEventBindingService.GetEventProperty" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public PropertyDescriptor GetEventProperty(EventDescriptor e) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEventBindingService to obtain the full interface.");
     }
@@ -216,8 +249,13 @@ public class EventBindingService extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIEventBindingService method available in IEventBindingService to obtain an object with an invocable method
+     *
+     * @param events the argument of type {@code EventDescriptorCollection}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IEventBindingService.GetEventProperties" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public PropertyDescriptorCollection GetEventProperties(EventDescriptorCollection events) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEventBindingService to obtain the full interface.");
     }
@@ -225,8 +263,14 @@ public class EventBindingService extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIEventBindingService method available in IEventBindingService to obtain an object with an invocable method
+     *
+     * @param component the argument of type {@code IComponent}
+     * @param e the argument of type {@code EventDescriptor}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IEventBindingService.CreateUniqueMethodName" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public java.lang.String CreateUniqueMethodName(IComponent component, EventDescriptor e) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEventBindingService to obtain the full interface.");
     }

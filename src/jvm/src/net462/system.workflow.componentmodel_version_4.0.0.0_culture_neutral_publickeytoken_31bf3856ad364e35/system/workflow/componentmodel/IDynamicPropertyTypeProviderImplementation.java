@@ -101,7 +101,10 @@ public class IDynamicPropertyTypeProviderImplementation extends NetObject implem
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IDynamicPropertyTypeProviderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -143,6 +146,15 @@ public class IDynamicPropertyTypeProviderImplementation extends NetObject implem
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetPropertyType.
+     *
+     * @param serviceProvider the argument of type {@code IServiceProvider}
+     * @param propertyName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.IDynamicPropertyTypeProvider.GetPropertyType" target="_top">.NET documentation</a>
+     */
     public NetType GetPropertyType(IServiceProvider serviceProvider, java.lang.String propertyName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -158,6 +170,15 @@ public class IDynamicPropertyTypeProviderImplementation extends NetObject implem
         }
     }
 
+    /**
+     * Invokes the .NET member GetAccessType.
+     *
+     * @param serviceProvider the argument of type {@code IServiceProvider}
+     * @param propertyName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.IDynamicPropertyTypeProvider.GetAccessType" target="_top">.NET documentation</a>
+     */
     public AccessTypes GetAccessType(IServiceProvider serviceProvider, java.lang.String propertyName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -99,7 +99,10 @@ public class ActivityChangeAction extends system.workflow.componentmodel.Workflo
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ActivityChangeAction(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,13 @@ public class ActivityChangeAction extends system.workflow.componentmodel.Workflo
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property OwnerActivityDottedPath.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.ActivityChangeAction.OwnerActivityDottedPath" target="_top">.NET documentation</a>
+     */
     public java.lang.String getOwnerActivityDottedPath() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -170,6 +180,13 @@ public class ActivityChangeAction extends system.workflow.componentmodel.Workflo
         }
     }
 
+    /**
+     * Sets the value of the .NET property OwnerActivityDottedPath.
+     *
+     * @param OwnerActivityDottedPath the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.ActivityChangeAction.OwnerActivityDottedPath" target="_top">.NET documentation</a>
+     */
     public void setOwnerActivityDottedPath(java.lang.String OwnerActivityDottedPath) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -100,7 +100,10 @@ public class AmbientValueAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public AmbientValueAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,13 @@ public class AmbientValueAttribute extends system.Attribute  {
     public AmbientValueAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param value the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.AmbientValueAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public AmbientValueAttribute(boolean value) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -160,6 +170,13 @@ public class AmbientValueAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param value the argument of type {@code byte}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.AmbientValueAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public AmbientValueAttribute(byte value) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +187,13 @@ public class AmbientValueAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param value the argument of type {@code char}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.AmbientValueAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public AmbientValueAttribute(char value) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -180,6 +204,13 @@ public class AmbientValueAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param value the argument of type {@code double}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.AmbientValueAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public AmbientValueAttribute(double value) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -190,6 +221,13 @@ public class AmbientValueAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param value the argument of type {@code short}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.AmbientValueAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public AmbientValueAttribute(short value) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -200,6 +238,13 @@ public class AmbientValueAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param value the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.AmbientValueAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public AmbientValueAttribute(int value) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -210,6 +255,13 @@ public class AmbientValueAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param value the argument of type {@code long}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.AmbientValueAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public AmbientValueAttribute(long value) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -220,6 +272,13 @@ public class AmbientValueAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param value the argument of type {@code Single}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.AmbientValueAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public AmbientValueAttribute(Single value) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -230,6 +289,13 @@ public class AmbientValueAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param value the argument of type {@code NetObject}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.AmbientValueAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public AmbientValueAttribute(NetObject value) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -240,6 +306,13 @@ public class AmbientValueAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param value the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.AmbientValueAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public AmbientValueAttribute(java.lang.String value) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -250,6 +323,27 @@ public class AmbientValueAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param type the argument of type {@code NetType}
+     * @param value the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.AmbientValueAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public AmbientValueAttribute(NetType type, java.lang.String value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -269,6 +363,13 @@ public class AmbientValueAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Value.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.AmbientValueAttribute.Value" target="_top">.NET documentation</a>
+     */
     public NetObject getValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

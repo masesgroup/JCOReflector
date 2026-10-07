@@ -102,7 +102,10 @@ public class KeyboardFocusChangedEventArgs extends system.windows.input.Keyboard
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public KeyboardFocusChangedEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,27 @@ public class KeyboardFocusChangedEventArgs extends system.windows.input.Keyboard
     public KeyboardFocusChangedEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param keyboard the argument of type {@code KeyboardDevice}
+     * @param timestamp the argument of type {@code int}
+     * @param oldFocus the argument of type {@code IInputElement}
+     * @param newFocus the argument of type {@code IInputElement}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.KeyboardFocusChangedEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public KeyboardFocusChangedEventArgs(KeyboardDevice keyboard, int timestamp, IInputElement oldFocus, IInputElement newFocus) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         try {
             // add reference to assemblyName.dll file
@@ -171,6 +195,13 @@ public class KeyboardFocusChangedEventArgs extends system.windows.input.Keyboard
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property NewFocus.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.KeyboardFocusChangedEventArgs.NewFocus" target="_top">.NET documentation</a>
+     */
     public IInputElement getNewFocus() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -186,6 +217,13 @@ public class KeyboardFocusChangedEventArgs extends system.windows.input.Keyboard
         }
     }
 
+    /**
+     * Gets the value of the .NET property OldFocus.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.KeyboardFocusChangedEventArgs.OldFocus" target="_top">.NET documentation</a>
+     */
     public IInputElement getOldFocus() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

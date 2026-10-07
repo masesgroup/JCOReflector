@@ -101,7 +101,10 @@ public class ISupportInitializeNotificationImplementation extends NetObject impl
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ISupportInitializeNotificationImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -143,6 +146,12 @@ public class ISupportInitializeNotificationImplementation extends NetObject impl
 
     // Methods section
     
+    /**
+     * Invokes the .NET member BeginInit.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ISupportInitializeNotification.BeginInit" target="_top">.NET documentation</a>
+     */
     public void BeginInit() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -153,6 +162,12 @@ public class ISupportInitializeNotificationImplementation extends NetObject impl
         }
     }
 
+    /**
+     * Invokes the .NET member EndInit.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ISupportInitializeNotification.EndInit" target="_top">.NET documentation</a>
+     */
     public void EndInit() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -167,6 +182,13 @@ public class ISupportInitializeNotificationImplementation extends NetObject impl
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsInitialized.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ISupportInitializeNotification.IsInitialized" target="_top">.NET documentation</a>
+     */
     public boolean getIsInitialized() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -186,6 +208,13 @@ public class ISupportInitializeNotificationImplementation extends NetObject impl
     // Instance Events section
     
 
+    /**
+     * Invokes the .NET member addInitialized.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addInitialized(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -196,6 +225,13 @@ public class ISupportInitializeNotificationImplementation extends NetObject impl
         }
     }
 
+    /**
+     * Invokes the .NET member removeInitialized.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeInitialized(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

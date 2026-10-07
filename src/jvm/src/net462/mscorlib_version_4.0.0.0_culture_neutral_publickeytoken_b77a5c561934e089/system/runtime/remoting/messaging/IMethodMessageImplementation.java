@@ -104,7 +104,10 @@ public class IMethodMessageImplementation extends NetObject implements IMethodMe
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IMethodMessageImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,14 @@ public class IMethodMessageImplementation extends NetObject implements IMethodMe
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetArg.
+     *
+     * @param argNum the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Messaging.IMethodMessage.GetArg" target="_top">.NET documentation</a>
+     */
     public NetObject GetArg(int argNum) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -161,6 +172,14 @@ public class IMethodMessageImplementation extends NetObject implements IMethodMe
         }
     }
 
+    /**
+     * Invokes the .NET member GetArgName.
+     *
+     * @param index the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Messaging.IMethodMessage.GetArgName" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetArgName(int index) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -179,6 +198,13 @@ public class IMethodMessageImplementation extends NetObject implements IMethodMe
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property HasVarArgs.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Messaging.IMethodMessage.HasVarArgs" target="_top">.NET documentation</a>
+     */
     public boolean getHasVarArgs() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +219,13 @@ public class IMethodMessageImplementation extends NetObject implements IMethodMe
         }
     }
 
+    /**
+     * Gets the value of the .NET property ArgCount.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Messaging.IMethodMessage.ArgCount" target="_top">.NET documentation</a>
+     */
     public int getArgCount() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -233,6 +266,13 @@ public class IMethodMessageImplementation extends NetObject implements IMethodMe
         }
     }
 
+    /**
+     * Gets the value of the .NET property Properties.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Messaging.IMethodMessage.Properties" target="_top">.NET documentation</a>
+     */
     public IDictionary getProperties() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -248,6 +288,13 @@ public class IMethodMessageImplementation extends NetObject implements IMethodMe
         }
     }
 
+    /**
+     * Gets the value of the .NET property MethodSignature.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Messaging.IMethodMessage.MethodSignature" target="_top">.NET documentation</a>
+     */
     public NetObject getMethodSignature() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -263,6 +310,13 @@ public class IMethodMessageImplementation extends NetObject implements IMethodMe
         }
     }
 
+    /**
+     * Gets the value of the .NET property Args.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Messaging.IMethodMessage.Args" target="_top">.NET documentation</a>
+     */
     public final NetObject[] getArgs() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -284,6 +338,13 @@ public class IMethodMessageImplementation extends NetObject implements IMethodMe
         }
     }
 
+    /**
+     * Gets the value of the .NET property MethodBase.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Messaging.IMethodMessage.MethodBase" target="_top">.NET documentation</a>
+     */
     public MethodBase getMethodBase() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -299,6 +360,13 @@ public class IMethodMessageImplementation extends NetObject implements IMethodMe
         }
     }
 
+    /**
+     * Gets the value of the .NET property LogicalCallContext.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Messaging.IMethodMessage.LogicalCallContext" target="_top">.NET documentation</a>
+     */
     public LogicalCallContext getLogicalCallContext() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -314,6 +382,13 @@ public class IMethodMessageImplementation extends NetObject implements IMethodMe
         }
     }
 
+    /**
+     * Gets the value of the .NET property MethodName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Messaging.IMethodMessage.MethodName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getMethodName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -328,6 +403,13 @@ public class IMethodMessageImplementation extends NetObject implements IMethodMe
         }
     }
 
+    /**
+     * Gets the value of the .NET property TypeName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Messaging.IMethodMessage.TypeName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTypeName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -342,6 +424,13 @@ public class IMethodMessageImplementation extends NetObject implements IMethodMe
         }
     }
 
+    /**
+     * Gets the value of the .NET property Uri.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Messaging.IMethodMessage.Uri" target="_top">.NET documentation</a>
+     */
     public java.lang.String getUri() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

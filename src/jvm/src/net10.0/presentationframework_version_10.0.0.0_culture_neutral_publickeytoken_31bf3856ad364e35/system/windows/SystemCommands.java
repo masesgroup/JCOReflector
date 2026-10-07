@@ -101,7 +101,10 @@ public class SystemCommands extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SystemCommands(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,27 @@ public class SystemCommands extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CloseWindow.
+     *
+     * @param window the argument of type {@code Window}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.SystemCommands.CloseWindow" target="_top">.NET documentation</a>
+     */
     public static void CloseWindow(Window window) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -164,6 +188,27 @@ public class SystemCommands extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member MaximizeWindow.
+     *
+     * @param window the argument of type {@code Window}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.SystemCommands.MaximizeWindow" target="_top">.NET documentation</a>
+     */
     public static void MaximizeWindow(Window window) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -174,6 +219,27 @@ public class SystemCommands extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member MinimizeWindow.
+     *
+     * @param window the argument of type {@code Window}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.SystemCommands.MinimizeWindow" target="_top">.NET documentation</a>
+     */
     public static void MinimizeWindow(Window window) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -184,6 +250,27 @@ public class SystemCommands extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RestoreWindow.
+     *
+     * @param window the argument of type {@code Window}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.SystemCommands.RestoreWindow" target="_top">.NET documentation</a>
+     */
     public static void RestoreWindow(Window window) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -194,6 +281,28 @@ public class SystemCommands extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ShowSystemMenu.
+     *
+     * @param window the argument of type {@code Window}
+     * @param screenLocation the argument of type {@code Point}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.SystemCommands.ShowSystemMenu" target="_top">.NET documentation</a>
+     */
     public static void ShowSystemMenu(Window window, Point screenLocation) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -208,6 +317,13 @@ public class SystemCommands extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CloseWindowCommand.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.SystemCommands.CloseWindowCommand" target="_top">.NET documentation</a>
+     */
     public static RoutedCommand getCloseWindowCommand() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -223,6 +339,13 @@ public class SystemCommands extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CloseWindowCommand.
+     *
+     * @param CloseWindowCommand the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.SystemCommands.CloseWindowCommand" target="_top">.NET documentation</a>
+     */
     public static void setCloseWindowCommand(RoutedCommand CloseWindowCommand) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -233,6 +356,13 @@ public class SystemCommands extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MaximizeWindowCommand.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.SystemCommands.MaximizeWindowCommand" target="_top">.NET documentation</a>
+     */
     public static RoutedCommand getMaximizeWindowCommand() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -248,6 +378,13 @@ public class SystemCommands extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MaximizeWindowCommand.
+     *
+     * @param MaximizeWindowCommand the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.SystemCommands.MaximizeWindowCommand" target="_top">.NET documentation</a>
+     */
     public static void setMaximizeWindowCommand(RoutedCommand MaximizeWindowCommand) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -258,6 +395,13 @@ public class SystemCommands extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MinimizeWindowCommand.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.SystemCommands.MinimizeWindowCommand" target="_top">.NET documentation</a>
+     */
     public static RoutedCommand getMinimizeWindowCommand() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -273,6 +417,13 @@ public class SystemCommands extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MinimizeWindowCommand.
+     *
+     * @param MinimizeWindowCommand the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.SystemCommands.MinimizeWindowCommand" target="_top">.NET documentation</a>
+     */
     public static void setMinimizeWindowCommand(RoutedCommand MinimizeWindowCommand) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -283,6 +434,13 @@ public class SystemCommands extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RestoreWindowCommand.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.SystemCommands.RestoreWindowCommand" target="_top">.NET documentation</a>
+     */
     public static RoutedCommand getRestoreWindowCommand() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -298,6 +456,13 @@ public class SystemCommands extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RestoreWindowCommand.
+     *
+     * @param RestoreWindowCommand the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.SystemCommands.RestoreWindowCommand" target="_top">.NET documentation</a>
+     */
     public static void setRestoreWindowCommand(RoutedCommand RestoreWindowCommand) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -308,6 +473,13 @@ public class SystemCommands extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ShowSystemMenuCommand.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.SystemCommands.ShowSystemMenuCommand" target="_top">.NET documentation</a>
+     */
     public static RoutedCommand getShowSystemMenuCommand() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -323,6 +495,13 @@ public class SystemCommands extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ShowSystemMenuCommand.
+     *
+     * @param ShowSystemMenuCommand the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.SystemCommands.ShowSystemMenuCommand" target="_top">.NET documentation</a>
+     */
     public static void setShowSystemMenuCommand(RoutedCommand ShowSystemMenuCommand) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

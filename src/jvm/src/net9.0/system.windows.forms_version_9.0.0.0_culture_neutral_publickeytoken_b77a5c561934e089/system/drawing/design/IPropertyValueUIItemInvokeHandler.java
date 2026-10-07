@@ -55,5 +55,12 @@ import system.drawing.design.PropertyValueUIItem;
  * @version 2.0.0.0
  */
 public interface IPropertyValueUIItemInvokeHandler {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param context the .NET argument of type {@code System.ComponentModel.ITypeDescriptorContext}
+     * @param descriptor the .NET argument of type {@code System.ComponentModel.PropertyDescriptor}
+     * @param invokedItem the .NET argument of type {@code System.Drawing.Design.PropertyValueUIItem}
+     */
     public void Invoke(ITypeDescriptorContext context, PropertyDescriptor descriptor, PropertyValueUIItem invokedItem);
 }

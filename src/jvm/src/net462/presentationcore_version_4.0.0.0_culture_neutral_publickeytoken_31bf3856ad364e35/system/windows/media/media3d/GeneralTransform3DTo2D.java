@@ -103,7 +103,10 @@ public class GeneralTransform3DTo2D extends system.windows.Freezable  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public GeneralTransform3DTo2D(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -158,6 +161,23 @@ public class GeneralTransform3DTo2D extends system.windows.Freezable  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member TryTransform.
+     *
+     * @param inPoint the argument of type {@code Point3D}
+     * @param result the argument of type {@code JCORefOut<Point>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.GeneralTransform3DTo2D.TryTransform" target="_top">.NET documentation</a>
+     */
     public boolean TryTransform(Point3D inPoint, JCORefOut<Point> result) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -172,6 +192,21 @@ public class GeneralTransform3DTo2D extends system.windows.Freezable  {
         }
     }
 
+    /**
+     * Invokes the .NET member Transform.
+     *
+     * @param point the argument of type {@code Point3D}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.GeneralTransform3DTo2D.Transform" target="_top">.NET documentation</a>
+     */
     public Point Transform(Point3D point) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +222,20 @@ public class GeneralTransform3DTo2D extends system.windows.Freezable  {
         }
     }
 
+    /**
+     * Invokes the .NET member TransformBounds.
+     *
+     * @param rect3D the argument of type {@code Rect3D}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.GeneralTransform3DTo2D.TransformBounds" target="_top">.NET documentation</a>
+     */
     public Rect TransformBounds(Rect3D rect3D) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

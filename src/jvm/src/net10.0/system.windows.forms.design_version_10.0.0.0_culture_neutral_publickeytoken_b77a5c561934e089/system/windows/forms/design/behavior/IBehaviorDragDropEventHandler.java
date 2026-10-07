@@ -52,5 +52,11 @@ import system.windows.forms.design.behavior.BehaviorDragDropEventArgs;
  * @version 2.0.0.0
  */
 public interface IBehaviorDragDropEventHandler {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param sender the .NET argument of type {@code System.Object}
+     * @param e the .NET argument of type {@code System.Windows.Forms.Design.Behavior.BehaviorDragDropEventArgs}
+     */
     public void Invoke(NetObject sender, BehaviorDragDropEventArgs e);
 }

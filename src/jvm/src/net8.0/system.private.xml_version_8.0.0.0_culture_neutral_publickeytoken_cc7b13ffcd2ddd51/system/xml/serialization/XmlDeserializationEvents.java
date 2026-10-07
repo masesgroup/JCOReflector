@@ -103,7 +103,10 @@ public class XmlDeserializationEvents extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XmlDeserializationEvents(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -162,6 +165,13 @@ public class XmlDeserializationEvents extends system.ValueType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property OnUnreferencedObject.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlDeserializationEvents.OnUnreferencedObject" target="_top">.NET documentation</a>
+     */
     public UnreferencedObjectEventHandler getOnUnreferencedObject() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -176,6 +186,13 @@ public class XmlDeserializationEvents extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property OnUnreferencedObject.
+     *
+     * @param OnUnreferencedObject the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlDeserializationEvents.OnUnreferencedObject" target="_top">.NET documentation</a>
+     */
     public void setOnUnreferencedObject(UnreferencedObjectEventHandler OnUnreferencedObject) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -186,6 +203,13 @@ public class XmlDeserializationEvents extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OnUnknownAttribute.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlDeserializationEvents.OnUnknownAttribute" target="_top">.NET documentation</a>
+     */
     public XmlAttributeEventHandler getOnUnknownAttribute() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +224,13 @@ public class XmlDeserializationEvents extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property OnUnknownAttribute.
+     *
+     * @param OnUnknownAttribute the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlDeserializationEvents.OnUnknownAttribute" target="_top">.NET documentation</a>
+     */
     public void setOnUnknownAttribute(XmlAttributeEventHandler OnUnknownAttribute) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -210,6 +241,13 @@ public class XmlDeserializationEvents extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OnUnknownElement.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlDeserializationEvents.OnUnknownElement" target="_top">.NET documentation</a>
+     */
     public XmlElementEventHandler getOnUnknownElement() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -224,6 +262,13 @@ public class XmlDeserializationEvents extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property OnUnknownElement.
+     *
+     * @param OnUnknownElement the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlDeserializationEvents.OnUnknownElement" target="_top">.NET documentation</a>
+     */
     public void setOnUnknownElement(XmlElementEventHandler OnUnknownElement) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -234,6 +279,13 @@ public class XmlDeserializationEvents extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OnUnknownNode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlDeserializationEvents.OnUnknownNode" target="_top">.NET documentation</a>
+     */
     public XmlNodeEventHandler getOnUnknownNode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -248,6 +300,13 @@ public class XmlDeserializationEvents extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property OnUnknownNode.
+     *
+     * @param OnUnknownNode the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlDeserializationEvents.OnUnknownNode" target="_top">.NET documentation</a>
+     */
     public void setOnUnknownNode(XmlNodeEventHandler OnUnknownNode) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

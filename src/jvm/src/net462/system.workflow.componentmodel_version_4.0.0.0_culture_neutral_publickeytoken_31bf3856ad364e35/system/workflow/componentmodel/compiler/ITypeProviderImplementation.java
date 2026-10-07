@@ -104,7 +104,10 @@ public class ITypeProviderImplementation extends NetObject implements ITypeProvi
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ITypeProviderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,14 @@ public class ITypeProviderImplementation extends NetObject implements ITypeProvi
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetType.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.ITypeProvider.GetType" target="_top">.NET documentation</a>
+     */
     public NetType GetType(java.lang.String name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -161,6 +172,15 @@ public class ITypeProviderImplementation extends NetObject implements ITypeProvi
         }
     }
 
+    /**
+     * Invokes the .NET member GetType.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param throwOnError the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.ITypeProvider.GetType" target="_top">.NET documentation</a>
+     */
     public NetType GetType(java.lang.String name, boolean throwOnError) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -176,6 +196,13 @@ public class ITypeProviderImplementation extends NetObject implements ITypeProvi
         }
     }
 
+    /**
+     * Invokes the .NET member GetTypes.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.ITypeProvider.GetTypes" target="_top">.NET documentation</a>
+     */
     public NetType[] GetTypes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +228,13 @@ public class ITypeProviderImplementation extends NetObject implements ITypeProvi
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ReferencedAssemblies.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.ITypeProvider.ReferencedAssemblies" target="_top">.NET documentation</a>
+     */
     public ICollection_1 getReferencedAssemblies() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +250,13 @@ public class ITypeProviderImplementation extends NetObject implements ITypeProvi
         }
     }
 
+    /**
+     * Gets the value of the .NET property TypeLoadErrors.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.ITypeProvider.TypeLoadErrors" target="_top">.NET documentation</a>
+     */
     public IDictionary_2 getTypeLoadErrors() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -231,6 +272,13 @@ public class ITypeProviderImplementation extends NetObject implements ITypeProvi
         }
     }
 
+    /**
+     * Gets the value of the .NET property LocalAssembly.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.ITypeProvider.LocalAssembly" target="_top">.NET documentation</a>
+     */
     public Assembly getLocalAssembly() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -251,6 +299,13 @@ public class ITypeProviderImplementation extends NetObject implements ITypeProvi
     // Instance Events section
     
 
+    /**
+     * Invokes the .NET member addTypeLoadErrorsChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addTypeLoadErrorsChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -261,6 +316,13 @@ public class ITypeProviderImplementation extends NetObject implements ITypeProvi
         }
     }
 
+    /**
+     * Invokes the .NET member removeTypeLoadErrorsChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeTypeLoadErrorsChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -271,6 +333,13 @@ public class ITypeProviderImplementation extends NetObject implements ITypeProvi
         }
     }
 
+    /**
+     * Invokes the .NET member addTypesChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addTypesChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -281,6 +350,13 @@ public class ITypeProviderImplementation extends NetObject implements ITypeProvi
         }
     }
 
+    /**
+     * Invokes the .NET member removeTypesChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeTypesChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

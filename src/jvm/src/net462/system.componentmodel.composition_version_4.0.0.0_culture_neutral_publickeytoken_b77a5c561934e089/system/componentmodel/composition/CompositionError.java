@@ -100,7 +100,10 @@ public class CompositionError extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CompositionError(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,13 @@ public class CompositionError extends NetObject  {
     public CompositionError() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param message the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.CompositionError.-ctor" target="_top">.NET documentation</a>
+     */
     public CompositionError(java.lang.String message) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -160,6 +170,14 @@ public class CompositionError extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param message the argument of type {@code java.lang.String}
+     * @param element the argument of type {@code ICompositionElement}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.CompositionError.-ctor" target="_top">.NET documentation</a>
+     */
     public CompositionError(java.lang.String message, ICompositionElement element) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +188,15 @@ public class CompositionError extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param message the argument of type {@code java.lang.String}
+     * @param element the argument of type {@code ICompositionElement}
+     * @param exception the argument of type {@code NetException}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.CompositionError.-ctor" target="_top">.NET documentation</a>
+     */
     public CompositionError(java.lang.String message, ICompositionElement element, NetException exception) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -180,6 +207,14 @@ public class CompositionError extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param message the argument of type {@code java.lang.String}
+     * @param exception the argument of type {@code NetException}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.CompositionError.-ctor" target="_top">.NET documentation</a>
+     */
     public CompositionError(java.lang.String message, NetException exception) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -199,6 +234,13 @@ public class CompositionError extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Element.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.CompositionError.Element" target="_top">.NET documentation</a>
+     */
     public ICompositionElement getElement() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -214,6 +256,13 @@ public class CompositionError extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Exception.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.CompositionError.Exception" target="_top">.NET documentation</a>
+     */
     public NetException getException() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -229,6 +278,13 @@ public class CompositionError extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Description.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.CompositionError.Description" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDescription() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

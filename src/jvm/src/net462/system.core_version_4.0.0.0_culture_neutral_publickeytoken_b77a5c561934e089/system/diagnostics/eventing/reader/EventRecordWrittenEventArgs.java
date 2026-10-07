@@ -100,7 +100,10 @@ public class EventRecordWrittenEventArgs extends system.EventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public EventRecordWrittenEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -159,6 +162,13 @@ public class EventRecordWrittenEventArgs extends system.EventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property EventRecord.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Eventing.Reader.EventRecordWrittenEventArgs.EventRecord" target="_top">.NET documentation</a>
+     */
     public EventRecord getEventRecord() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -174,6 +184,13 @@ public class EventRecordWrittenEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EventException.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Eventing.Reader.EventRecordWrittenEventArgs.EventException" target="_top">.NET documentation</a>
+     */
     public NetException getEventException() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

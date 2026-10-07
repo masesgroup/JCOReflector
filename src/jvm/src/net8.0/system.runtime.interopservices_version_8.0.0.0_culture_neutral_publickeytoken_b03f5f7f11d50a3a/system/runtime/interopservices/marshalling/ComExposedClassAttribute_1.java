@@ -99,7 +99,10 @@ public class ComExposedClassAttribute_1<T extends IJCOBridgeReflected> extends s
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ComExposedClassAttribute_1(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class ComExposedClassAttribute_1<T extends IJCOBridgeReflected> extends s
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Marshalling.ComExposedClassAttribute-1.-ctor" target="_top">.NET documentation</a>
+     */
     public ComExposedClassAttribute_1() throws Throwable {
         try {
             // add reference to assemblyName.dll file

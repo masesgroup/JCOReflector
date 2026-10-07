@@ -51,5 +51,12 @@ import org.mases.jcobridge.netreflection.*;
  * @version 2.0.0.0
  */
 public interface IAction_3<T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected> {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param arg1 the .NET argument of type {@code T1}
+     * @param arg2 the .NET argument of type {@code T2}
+     * @param arg3 the .NET argument of type {@code T3}
+     */
     public void Invoke(T1 arg1, T2 arg2, T3 arg3);
 }

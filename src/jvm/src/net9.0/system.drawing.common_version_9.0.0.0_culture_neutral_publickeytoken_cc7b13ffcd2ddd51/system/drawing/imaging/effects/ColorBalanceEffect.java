@@ -99,7 +99,10 @@ public class ColorBalanceEffect extends system.drawing.imaging.effects.Effect  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ColorBalanceEffect(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,23 @@ public class ColorBalanceEffect extends system.drawing.imaging.effects.Effect  {
     public ColorBalanceEffect() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param cyanRed the argument of type {@code int}
+     * @param magentaGreen the argument of type {@code int}
+     * @param yellowBlue the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.Effects.ColorBalanceEffect.-ctor" target="_top">.NET documentation</a>
+     */
     public ColorBalanceEffect(int cyanRed, int magentaGreen, int yellowBlue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +188,13 @@ public class ColorBalanceEffect extends system.drawing.imaging.effects.Effect  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CyanRed.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.Effects.ColorBalanceEffect.CyanRed" target="_top">.NET documentation</a>
+     */
     public int getCyanRed() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +235,13 @@ public class ColorBalanceEffect extends system.drawing.imaging.effects.Effect  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MagentaGreen.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.Effects.ColorBalanceEffect.MagentaGreen" target="_top">.NET documentation</a>
+     */
     public int getMagentaGreen() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -248,6 +282,13 @@ public class ColorBalanceEffect extends system.drawing.imaging.effects.Effect  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property YellowBlue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.Effects.ColorBalanceEffect.YellowBlue" target="_top">.NET documentation</a>
+     */
     public int getYellowBlue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

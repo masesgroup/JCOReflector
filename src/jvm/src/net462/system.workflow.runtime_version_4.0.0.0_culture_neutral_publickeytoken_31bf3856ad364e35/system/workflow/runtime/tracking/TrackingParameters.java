@@ -102,7 +102,10 @@ public class TrackingParameters extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TrackingParameters(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,20 @@ public class TrackingParameters extends NetObject  {
     public TrackingParameters() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param instanceId the argument of type {@code Guid}
+     * @param workflowType the argument of type {@code NetType}
+     * @param rootActivity the argument of type {@code Activity}
+     * @param callPath the argument of type {@code IList_1}
+     * @param callerInstanceId the argument of type {@code Guid}
+     * @param contextGuid the argument of type {@code Guid}
+     * @param callerContextGuid the argument of type {@code Guid}
+     * @param callerParentContextGuid the argument of type {@code Guid}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.TrackingParameters.-ctor" target="_top">.NET documentation</a>
+     */
     public TrackingParameters(Guid instanceId, NetType workflowType, Activity rootActivity, IList_1 callPath, Guid callerInstanceId, Guid contextGuid, Guid callerContextGuid, Guid callerParentContextGuid) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -171,6 +188,13 @@ public class TrackingParameters extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CallPath.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.TrackingParameters.CallPath" target="_top">.NET documentation</a>
+     */
     public IList_1 getCallPath() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -186,6 +210,13 @@ public class TrackingParameters extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CallerContextGuid.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.TrackingParameters.CallerContextGuid" target="_top">.NET documentation</a>
+     */
     public Guid getCallerContextGuid() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +232,13 @@ public class TrackingParameters extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CallerInstanceId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.TrackingParameters.CallerInstanceId" target="_top">.NET documentation</a>
+     */
     public Guid getCallerInstanceId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +254,13 @@ public class TrackingParameters extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CallerParentContextGuid.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.TrackingParameters.CallerParentContextGuid" target="_top">.NET documentation</a>
+     */
     public Guid getCallerParentContextGuid() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -231,6 +276,13 @@ public class TrackingParameters extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ContextGuid.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.TrackingParameters.ContextGuid" target="_top">.NET documentation</a>
+     */
     public Guid getContextGuid() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -246,6 +298,13 @@ public class TrackingParameters extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property InstanceId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.TrackingParameters.InstanceId" target="_top">.NET documentation</a>
+     */
     public Guid getInstanceId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -261,6 +320,13 @@ public class TrackingParameters extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property WorkflowType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.TrackingParameters.WorkflowType" target="_top">.NET documentation</a>
+     */
     public NetType getWorkflowType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -276,6 +342,13 @@ public class TrackingParameters extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RootActivity.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.TrackingParameters.RootActivity" target="_top">.NET documentation</a>
+     */
     public Activity getRootActivity() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

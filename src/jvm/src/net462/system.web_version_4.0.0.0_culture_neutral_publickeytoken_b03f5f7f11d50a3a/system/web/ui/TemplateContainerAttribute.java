@@ -100,7 +100,10 @@ public class TemplateContainerAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TemplateContainerAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,13 @@ public class TemplateContainerAttribute extends system.Attribute  {
     public TemplateContainerAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param containerType the argument of type {@code NetType}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.TemplateContainerAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public TemplateContainerAttribute(NetType containerType) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -160,6 +170,14 @@ public class TemplateContainerAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param containerType the argument of type {@code NetType}
+     * @param bindingDirection the argument of type {@code BindingDirection}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.TemplateContainerAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public TemplateContainerAttribute(NetType containerType, BindingDirection bindingDirection) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -179,6 +197,13 @@ public class TemplateContainerAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property BindingDirection.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.TemplateContainerAttribute.BindingDirection" target="_top">.NET documentation</a>
+     */
     public BindingDirection getBindingDirection() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +219,13 @@ public class TemplateContainerAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ContainerType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.TemplateContainerAttribute.ContainerType" target="_top">.NET documentation</a>
+     */
     public NetType getContainerType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

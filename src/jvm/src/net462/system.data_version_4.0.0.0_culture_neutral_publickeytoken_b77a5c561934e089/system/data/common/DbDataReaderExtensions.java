@@ -100,7 +100,10 @@ public class DbDataReaderExtensions extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DbDataReaderExtensions(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,14 @@ public class DbDataReaderExtensions extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CanGetColumnSchema.
+     *
+     * @param reader the argument of type {@code DbDataReader}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbDataReaderExtensions.CanGetColumnSchema" target="_top">.NET documentation</a>
+     */
     public static boolean CanGetColumnSchema(DbDataReader reader) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -167,6 +178,15 @@ public class DbDataReaderExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetColumnSchema.
+     *
+     * @param reader the argument of type {@code DbDataReader}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbDataReaderExtensions.GetColumnSchema" target="_top">.NET documentation</a>
+     */
     public static ReadOnlyCollection_1 GetColumnSchema(DbDataReader reader) throws Throwable, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

@@ -106,7 +106,10 @@ public class MessageBox extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public MessageBox(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -161,6 +164,31 @@ public class MessageBox extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Show.
+     *
+     * @param text the argument of type {@code java.lang.String}
+     * @param caption the argument of type {@code java.lang.String}
+     * @param buttons the argument of type {@code MessageBoxButtons}
+     * @param icon the argument of type {@code MessageBoxIcon}
+     * @param defaultButton the argument of type {@code MessageBoxDefaultButton}
+     * @param options the argument of type {@code MessageBoxOptions}
+     * @param displayHelpButton the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.componentmodel.InvalidAsynchronousStateException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.MessageBox.Show" target="_top">.NET documentation</a>
+     */
     public static DialogResult Show(java.lang.String text, java.lang.String caption, MessageBoxButtons buttons, MessageBoxIcon icon, MessageBoxDefaultButton defaultButton, MessageBoxOptions options, boolean displayHelpButton) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.ArgumentException, system.FormatException, system.componentmodel.Win32Exception, system.OverflowException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.componentmodel.InvalidAsynchronousStateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -176,6 +204,35 @@ public class MessageBox extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Show.
+     *
+     * @param text the argument of type {@code java.lang.String}
+     * @param caption the argument of type {@code java.lang.String}
+     * @param buttons the argument of type {@code MessageBoxButtons}
+     * @param icon the argument of type {@code MessageBoxIcon}
+     * @param defaultButton the argument of type {@code MessageBoxDefaultButton}
+     * @param options the argument of type {@code MessageBoxOptions}
+     * @param helpFilePath the argument of type {@code java.lang.String}
+     * @param keyword the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.InvalidAsynchronousStateException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.MessageBox.Show" target="_top">.NET documentation</a>
+     */
     public static DialogResult Show(java.lang.String text, java.lang.String caption, MessageBoxButtons buttons, MessageBoxIcon icon, MessageBoxDefaultButton defaultButton, MessageBoxOptions options, java.lang.String helpFilePath, java.lang.String keyword) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.OverflowException, system.FormatException, system.componentmodel.InvalidAsynchronousStateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -191,6 +248,36 @@ public class MessageBox extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Show.
+     *
+     * @param text the argument of type {@code java.lang.String}
+     * @param caption the argument of type {@code java.lang.String}
+     * @param buttons the argument of type {@code MessageBoxButtons}
+     * @param icon the argument of type {@code MessageBoxIcon}
+     * @param defaultButton the argument of type {@code MessageBoxDefaultButton}
+     * @param options the argument of type {@code MessageBoxOptions}
+     * @param helpFilePath the argument of type {@code java.lang.String}
+     * @param navigator the argument of type {@code HelpNavigator}
+     * @param param the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.InvalidAsynchronousStateException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.MessageBox.Show" target="_top">.NET documentation</a>
+     */
     public static DialogResult Show(java.lang.String text, java.lang.String caption, MessageBoxButtons buttons, MessageBoxIcon icon, MessageBoxDefaultButton defaultButton, MessageBoxOptions options, java.lang.String helpFilePath, HelpNavigator navigator, NetObject param) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.OverflowException, system.FormatException, system.componentmodel.InvalidAsynchronousStateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -206,6 +293,35 @@ public class MessageBox extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Show.
+     *
+     * @param text the argument of type {@code java.lang.String}
+     * @param caption the argument of type {@code java.lang.String}
+     * @param buttons the argument of type {@code MessageBoxButtons}
+     * @param icon the argument of type {@code MessageBoxIcon}
+     * @param defaultButton the argument of type {@code MessageBoxDefaultButton}
+     * @param options the argument of type {@code MessageBoxOptions}
+     * @param helpFilePath the argument of type {@code java.lang.String}
+     * @param navigator the argument of type {@code HelpNavigator}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.InvalidAsynchronousStateException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.MessageBox.Show" target="_top">.NET documentation</a>
+     */
     public static DialogResult Show(java.lang.String text, java.lang.String caption, MessageBoxButtons buttons, MessageBoxIcon icon, MessageBoxDefaultButton defaultButton, MessageBoxOptions options, java.lang.String helpFilePath, HelpNavigator navigator) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.OverflowException, system.FormatException, system.componentmodel.InvalidAsynchronousStateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -221,6 +337,34 @@ public class MessageBox extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Show.
+     *
+     * @param text the argument of type {@code java.lang.String}
+     * @param caption the argument of type {@code java.lang.String}
+     * @param buttons the argument of type {@code MessageBoxButtons}
+     * @param icon the argument of type {@code MessageBoxIcon}
+     * @param defaultButton the argument of type {@code MessageBoxDefaultButton}
+     * @param options the argument of type {@code MessageBoxOptions}
+     * @param helpFilePath the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.InvalidAsynchronousStateException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.MessageBox.Show" target="_top">.NET documentation</a>
+     */
     public static DialogResult Show(java.lang.String text, java.lang.String caption, MessageBoxButtons buttons, MessageBoxIcon icon, MessageBoxDefaultButton defaultButton, MessageBoxOptions options, java.lang.String helpFilePath) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.OverflowException, system.FormatException, system.componentmodel.InvalidAsynchronousStateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -236,6 +380,30 @@ public class MessageBox extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Show.
+     *
+     * @param text the argument of type {@code java.lang.String}
+     * @param caption the argument of type {@code java.lang.String}
+     * @param buttons the argument of type {@code MessageBoxButtons}
+     * @param icon the argument of type {@code MessageBoxIcon}
+     * @param defaultButton the argument of type {@code MessageBoxDefaultButton}
+     * @param options the argument of type {@code MessageBoxOptions}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.componentmodel.InvalidAsynchronousStateException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.MessageBox.Show" target="_top">.NET documentation</a>
+     */
     public static DialogResult Show(java.lang.String text, java.lang.String caption, MessageBoxButtons buttons, MessageBoxIcon icon, MessageBoxDefaultButton defaultButton, MessageBoxOptions options) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.ArgumentException, system.FormatException, system.componentmodel.Win32Exception, system.OverflowException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.componentmodel.InvalidAsynchronousStateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -251,6 +419,29 @@ public class MessageBox extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Show.
+     *
+     * @param text the argument of type {@code java.lang.String}
+     * @param caption the argument of type {@code java.lang.String}
+     * @param buttons the argument of type {@code MessageBoxButtons}
+     * @param icon the argument of type {@code MessageBoxIcon}
+     * @param defaultButton the argument of type {@code MessageBoxDefaultButton}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.componentmodel.InvalidAsynchronousStateException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.MessageBox.Show" target="_top">.NET documentation</a>
+     */
     public static DialogResult Show(java.lang.String text, java.lang.String caption, MessageBoxButtons buttons, MessageBoxIcon icon, MessageBoxDefaultButton defaultButton) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.ArgumentException, system.FormatException, system.componentmodel.Win32Exception, system.OverflowException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.componentmodel.InvalidAsynchronousStateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -266,6 +457,28 @@ public class MessageBox extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Show.
+     *
+     * @param text the argument of type {@code java.lang.String}
+     * @param caption the argument of type {@code java.lang.String}
+     * @param buttons the argument of type {@code MessageBoxButtons}
+     * @param icon the argument of type {@code MessageBoxIcon}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.componentmodel.InvalidAsynchronousStateException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.MessageBox.Show" target="_top">.NET documentation</a>
+     */
     public static DialogResult Show(java.lang.String text, java.lang.String caption, MessageBoxButtons buttons, MessageBoxIcon icon) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.ArgumentException, system.FormatException, system.componentmodel.Win32Exception, system.OverflowException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.componentmodel.InvalidAsynchronousStateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -281,6 +494,27 @@ public class MessageBox extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Show.
+     *
+     * @param text the argument of type {@code java.lang.String}
+     * @param caption the argument of type {@code java.lang.String}
+     * @param buttons the argument of type {@code MessageBoxButtons}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.componentmodel.InvalidAsynchronousStateException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.MessageBox.Show" target="_top">.NET documentation</a>
+     */
     public static DialogResult Show(java.lang.String text, java.lang.String caption, MessageBoxButtons buttons) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.ArgumentException, system.FormatException, system.componentmodel.Win32Exception, system.OverflowException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.componentmodel.InvalidAsynchronousStateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -296,6 +530,26 @@ public class MessageBox extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Show.
+     *
+     * @param text the argument of type {@code java.lang.String}
+     * @param caption the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.componentmodel.InvalidAsynchronousStateException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.MessageBox.Show" target="_top">.NET documentation</a>
+     */
     public static DialogResult Show(java.lang.String text, java.lang.String caption) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.ArgumentException, system.FormatException, system.componentmodel.Win32Exception, system.OverflowException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.componentmodel.InvalidAsynchronousStateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -311,6 +565,25 @@ public class MessageBox extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Show.
+     *
+     * @param text the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.componentmodel.InvalidAsynchronousStateException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.MessageBox.Show" target="_top">.NET documentation</a>
+     */
     public static DialogResult Show(java.lang.String text) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.ArgumentException, system.FormatException, system.componentmodel.Win32Exception, system.OverflowException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.componentmodel.InvalidAsynchronousStateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -326,6 +599,36 @@ public class MessageBox extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Show.
+     *
+     * @param owner the argument of type {@code IWin32Window}
+     * @param text the argument of type {@code java.lang.String}
+     * @param caption the argument of type {@code java.lang.String}
+     * @param buttons the argument of type {@code MessageBoxButtons}
+     * @param icon the argument of type {@code MessageBoxIcon}
+     * @param defaultButton the argument of type {@code MessageBoxDefaultButton}
+     * @param options the argument of type {@code MessageBoxOptions}
+     * @param helpFilePath the argument of type {@code java.lang.String}
+     * @param keyword the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.InvalidAsynchronousStateException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.MessageBox.Show" target="_top">.NET documentation</a>
+     */
     public static DialogResult Show(IWin32Window owner, java.lang.String text, java.lang.String caption, MessageBoxButtons buttons, MessageBoxIcon icon, MessageBoxDefaultButton defaultButton, MessageBoxOptions options, java.lang.String helpFilePath, java.lang.String keyword) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.OverflowException, system.FormatException, system.componentmodel.InvalidAsynchronousStateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -341,6 +644,37 @@ public class MessageBox extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Show.
+     *
+     * @param owner the argument of type {@code IWin32Window}
+     * @param text the argument of type {@code java.lang.String}
+     * @param caption the argument of type {@code java.lang.String}
+     * @param buttons the argument of type {@code MessageBoxButtons}
+     * @param icon the argument of type {@code MessageBoxIcon}
+     * @param defaultButton the argument of type {@code MessageBoxDefaultButton}
+     * @param options the argument of type {@code MessageBoxOptions}
+     * @param helpFilePath the argument of type {@code java.lang.String}
+     * @param navigator the argument of type {@code HelpNavigator}
+     * @param param the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.InvalidAsynchronousStateException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.MessageBox.Show" target="_top">.NET documentation</a>
+     */
     public static DialogResult Show(IWin32Window owner, java.lang.String text, java.lang.String caption, MessageBoxButtons buttons, MessageBoxIcon icon, MessageBoxDefaultButton defaultButton, MessageBoxOptions options, java.lang.String helpFilePath, HelpNavigator navigator, NetObject param) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.OverflowException, system.FormatException, system.componentmodel.InvalidAsynchronousStateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -356,6 +690,36 @@ public class MessageBox extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Show.
+     *
+     * @param owner the argument of type {@code IWin32Window}
+     * @param text the argument of type {@code java.lang.String}
+     * @param caption the argument of type {@code java.lang.String}
+     * @param buttons the argument of type {@code MessageBoxButtons}
+     * @param icon the argument of type {@code MessageBoxIcon}
+     * @param defaultButton the argument of type {@code MessageBoxDefaultButton}
+     * @param options the argument of type {@code MessageBoxOptions}
+     * @param helpFilePath the argument of type {@code java.lang.String}
+     * @param navigator the argument of type {@code HelpNavigator}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.InvalidAsynchronousStateException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.MessageBox.Show" target="_top">.NET documentation</a>
+     */
     public static DialogResult Show(IWin32Window owner, java.lang.String text, java.lang.String caption, MessageBoxButtons buttons, MessageBoxIcon icon, MessageBoxDefaultButton defaultButton, MessageBoxOptions options, java.lang.String helpFilePath, HelpNavigator navigator) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.OverflowException, system.FormatException, system.componentmodel.InvalidAsynchronousStateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -371,6 +735,35 @@ public class MessageBox extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Show.
+     *
+     * @param owner the argument of type {@code IWin32Window}
+     * @param text the argument of type {@code java.lang.String}
+     * @param caption the argument of type {@code java.lang.String}
+     * @param buttons the argument of type {@code MessageBoxButtons}
+     * @param icon the argument of type {@code MessageBoxIcon}
+     * @param defaultButton the argument of type {@code MessageBoxDefaultButton}
+     * @param options the argument of type {@code MessageBoxOptions}
+     * @param helpFilePath the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.InvalidAsynchronousStateException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.MessageBox.Show" target="_top">.NET documentation</a>
+     */
     public static DialogResult Show(IWin32Window owner, java.lang.String text, java.lang.String caption, MessageBoxButtons buttons, MessageBoxIcon icon, MessageBoxDefaultButton defaultButton, MessageBoxOptions options, java.lang.String helpFilePath) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.OverflowException, system.FormatException, system.componentmodel.InvalidAsynchronousStateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -386,6 +779,31 @@ public class MessageBox extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Show.
+     *
+     * @param owner the argument of type {@code IWin32Window}
+     * @param text the argument of type {@code java.lang.String}
+     * @param caption the argument of type {@code java.lang.String}
+     * @param buttons the argument of type {@code MessageBoxButtons}
+     * @param icon the argument of type {@code MessageBoxIcon}
+     * @param defaultButton the argument of type {@code MessageBoxDefaultButton}
+     * @param options the argument of type {@code MessageBoxOptions}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.componentmodel.InvalidAsynchronousStateException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.MessageBox.Show" target="_top">.NET documentation</a>
+     */
     public static DialogResult Show(IWin32Window owner, java.lang.String text, java.lang.String caption, MessageBoxButtons buttons, MessageBoxIcon icon, MessageBoxDefaultButton defaultButton, MessageBoxOptions options) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.ArgumentException, system.FormatException, system.componentmodel.Win32Exception, system.OverflowException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.componentmodel.InvalidAsynchronousStateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -401,6 +819,30 @@ public class MessageBox extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Show.
+     *
+     * @param owner the argument of type {@code IWin32Window}
+     * @param text the argument of type {@code java.lang.String}
+     * @param caption the argument of type {@code java.lang.String}
+     * @param buttons the argument of type {@code MessageBoxButtons}
+     * @param icon the argument of type {@code MessageBoxIcon}
+     * @param defaultButton the argument of type {@code MessageBoxDefaultButton}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.componentmodel.InvalidAsynchronousStateException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.MessageBox.Show" target="_top">.NET documentation</a>
+     */
     public static DialogResult Show(IWin32Window owner, java.lang.String text, java.lang.String caption, MessageBoxButtons buttons, MessageBoxIcon icon, MessageBoxDefaultButton defaultButton) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.ArgumentException, system.FormatException, system.componentmodel.Win32Exception, system.OverflowException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.componentmodel.InvalidAsynchronousStateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -416,6 +858,29 @@ public class MessageBox extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Show.
+     *
+     * @param owner the argument of type {@code IWin32Window}
+     * @param text the argument of type {@code java.lang.String}
+     * @param caption the argument of type {@code java.lang.String}
+     * @param buttons the argument of type {@code MessageBoxButtons}
+     * @param icon the argument of type {@code MessageBoxIcon}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.componentmodel.InvalidAsynchronousStateException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.MessageBox.Show" target="_top">.NET documentation</a>
+     */
     public static DialogResult Show(IWin32Window owner, java.lang.String text, java.lang.String caption, MessageBoxButtons buttons, MessageBoxIcon icon) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.ArgumentException, system.FormatException, system.componentmodel.Win32Exception, system.OverflowException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.componentmodel.InvalidAsynchronousStateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -431,6 +896,28 @@ public class MessageBox extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Show.
+     *
+     * @param owner the argument of type {@code IWin32Window}
+     * @param text the argument of type {@code java.lang.String}
+     * @param caption the argument of type {@code java.lang.String}
+     * @param buttons the argument of type {@code MessageBoxButtons}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.componentmodel.InvalidAsynchronousStateException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.MessageBox.Show" target="_top">.NET documentation</a>
+     */
     public static DialogResult Show(IWin32Window owner, java.lang.String text, java.lang.String caption, MessageBoxButtons buttons) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.ArgumentException, system.FormatException, system.componentmodel.Win32Exception, system.OverflowException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.componentmodel.InvalidAsynchronousStateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -446,6 +933,27 @@ public class MessageBox extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Show.
+     *
+     * @param owner the argument of type {@code IWin32Window}
+     * @param text the argument of type {@code java.lang.String}
+     * @param caption the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.componentmodel.InvalidAsynchronousStateException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.MessageBox.Show" target="_top">.NET documentation</a>
+     */
     public static DialogResult Show(IWin32Window owner, java.lang.String text, java.lang.String caption) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.ArgumentException, system.FormatException, system.componentmodel.Win32Exception, system.OverflowException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.componentmodel.InvalidAsynchronousStateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -461,6 +969,26 @@ public class MessageBox extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Show.
+     *
+     * @param owner the argument of type {@code IWin32Window}
+     * @param text the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.componentmodel.InvalidAsynchronousStateException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.MessageBox.Show" target="_top">.NET documentation</a>
+     */
     public static DialogResult Show(IWin32Window owner, java.lang.String text) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.ArgumentException, system.FormatException, system.componentmodel.Win32Exception, system.OverflowException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.componentmodel.InvalidAsynchronousStateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

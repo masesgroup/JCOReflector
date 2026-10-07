@@ -100,7 +100,10 @@ public class MemoryMappedFileSecurity extends system.security.accesscontrol.Obje
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public MemoryMappedFileSecurity(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,13 @@ public class MemoryMappedFileSecurity extends system.security.accesscontrol.Obje
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.MemoryMappedFiles.MemoryMappedFileSecurity.-ctor" target="_top">.NET documentation</a>
+     */
     public MemoryMappedFileSecurity() throws Throwable, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file

@@ -164,7 +164,10 @@ public class PropertyValueMorphHelper extends JCDelegate implements IJCEventEmit
         callerInstance = instance;
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PropertyValueMorphHelper(java.lang.Object instance) throws Throwable {
         super(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
@@ -186,6 +189,15 @@ public class PropertyValueMorphHelper extends JCDelegate implements IJCEventEmit
         return JCOBridgeInstance.translateException(ne);
     }
 
+    /**
+     * Invokes the .NET member DynamicInvoke.
+     *
+     * @param originalValue the argument of type {@code ModelItem}
+     * @param newModelProperty the argument of type {@code ModelProperty}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Delegate.DynamicInvoke" target="_top">.NET documentation</a>
+     */
     public NetObject DynamicInvoke(ModelItem originalValue, ModelProperty newModelProperty) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,7 +214,11 @@ public class PropertyValueMorphHelper extends JCDelegate implements IJCEventEmit
     }
 
     /**
-     * Methods invoked in JVM when an event is raised in CLR 
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param originalValue the .NET argument of type {@code System.Activities.Presentation.Model.ModelItem}
+     * @param newModelProperty the .NET argument of type {@code System.Activities.Presentation.Model.ModelProperty}
+     * @return the value returned to the CLR; this default implementation returns {@code null}
      */
     public NetObject Invoke(ModelItem originalValue, ModelProperty newModelProperty) {
         return null;

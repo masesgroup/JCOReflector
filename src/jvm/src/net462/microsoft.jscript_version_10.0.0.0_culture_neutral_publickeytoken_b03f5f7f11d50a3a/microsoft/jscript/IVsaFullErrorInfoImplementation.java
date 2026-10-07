@@ -102,7 +102,10 @@ public class IVsaFullErrorInfoImplementation extends NetObject implements IVsaFu
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IVsaFullErrorInfoImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,13 @@ public class IVsaFullErrorInfoImplementation extends NetObject implements IVsaFu
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property EndColumn.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.IVsaFullErrorInfo.EndColumn" target="_top">.NET documentation</a>
+     */
     public int getEndColumn() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +198,13 @@ public class IVsaFullErrorInfoImplementation extends NetObject implements IVsaFu
         }
     }
 
+    /**
+     * Gets the value of the .NET property EndLine.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.IVsaFullErrorInfo.EndLine" target="_top">.NET documentation</a>
+     */
     public int getEndLine() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -228,6 +245,13 @@ public class IVsaFullErrorInfoImplementation extends NetObject implements IVsaFu
         }
     }
 
+    /**
+     * Gets the value of the .NET property Line.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.IVsaFullErrorInfo.Line" target="_top">.NET documentation</a>
+     */
     public int getLine() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -268,6 +292,13 @@ public class IVsaFullErrorInfoImplementation extends NetObject implements IVsaFu
         }
     }
 
+    /**
+     * Gets the value of the .NET property Number.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.IVsaFullErrorInfo.Number" target="_top">.NET documentation</a>
+     */
     public int getNumber() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -308,6 +339,13 @@ public class IVsaFullErrorInfoImplementation extends NetObject implements IVsaFu
         }
     }
 
+    /**
+     * Gets the value of the .NET property Severity.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.IVsaFullErrorInfo.Severity" target="_top">.NET documentation</a>
+     */
     public int getSeverity() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -348,6 +386,13 @@ public class IVsaFullErrorInfoImplementation extends NetObject implements IVsaFu
         }
     }
 
+    /**
+     * Gets the value of the .NET property StartColumn.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.IVsaFullErrorInfo.StartColumn" target="_top">.NET documentation</a>
+     */
     public int getStartColumn() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -388,6 +433,13 @@ public class IVsaFullErrorInfoImplementation extends NetObject implements IVsaFu
         }
     }
 
+    /**
+     * Gets the value of the .NET property SourceItem.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.IVsaFullErrorInfo.SourceItem" target="_top">.NET documentation</a>
+     */
     public IJSVsaItem getSourceItem() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -403,6 +455,13 @@ public class IVsaFullErrorInfoImplementation extends NetObject implements IVsaFu
         }
     }
 
+    /**
+     * Gets the value of the .NET property Description.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.IVsaFullErrorInfo.Description" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDescription() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -417,6 +476,13 @@ public class IVsaFullErrorInfoImplementation extends NetObject implements IVsaFu
         }
     }
 
+    /**
+     * Gets the value of the .NET property LineText.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.IVsaFullErrorInfo.LineText" target="_top">.NET documentation</a>
+     */
     public java.lang.String getLineText() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -431,6 +497,13 @@ public class IVsaFullErrorInfoImplementation extends NetObject implements IVsaFu
         }
     }
 
+    /**
+     * Gets the value of the .NET property SourceMoniker.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.IVsaFullErrorInfo.SourceMoniker" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSourceMoniker() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

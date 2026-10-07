@@ -101,7 +101,10 @@ public class ToolboxComponentsCreatedEventArgs extends system.EventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ToolboxComponentsCreatedEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,13 @@ public class ToolboxComponentsCreatedEventArgs extends system.EventArgs  {
     public ToolboxComponentsCreatedEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param components the argument of type {@code IComponent[]}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Design.ToolboxComponentsCreatedEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public ToolboxComponentsCreatedEventArgs(IComponent[] components) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +180,16 @@ public class ToolboxComponentsCreatedEventArgs extends system.EventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Components.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Design.ToolboxComponentsCreatedEventArgs.Components" target="_top">.NET documentation</a>
+     */
     public final IComponent[] getComponents() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -101,7 +101,10 @@ public class SyndicationItemFormatter extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SyndicationItemFormatter(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,14 @@ public class SyndicationItemFormatter extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CanRead.
+     *
+     * @param reader the argument of type {@code XmlReader}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Syndication.SyndicationItemFormatter.CanRead" target="_top">.NET documentation</a>
+     */
     public boolean CanRead(XmlReader reader) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -168,6 +179,13 @@ public class SyndicationItemFormatter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ReadFrom.
+     *
+     * @param reader the argument of type {@code XmlReader}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Syndication.SyndicationItemFormatter.ReadFrom" target="_top">.NET documentation</a>
+     */
     public void ReadFrom(XmlReader reader) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,6 +196,13 @@ public class SyndicationItemFormatter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member WriteTo.
+     *
+     * @param writer the argument of type {@code XmlWriter}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Syndication.SyndicationItemFormatter.WriteTo" target="_top">.NET documentation</a>
+     */
     public void WriteTo(XmlWriter writer) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -192,6 +217,13 @@ public class SyndicationItemFormatter extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Item.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Syndication.SyndicationItemFormatter.Item" target="_top">.NET documentation</a>
+     */
     public SyndicationItem getItem() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +239,13 @@ public class SyndicationItemFormatter extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Version.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Syndication.SyndicationItemFormatter.Version" target="_top">.NET documentation</a>
+     */
     public java.lang.String getVersion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

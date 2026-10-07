@@ -100,7 +100,10 @@ public class TrackingQuery extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TrackingQuery(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,15 @@ public class TrackingQuery extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property QueryAnnotations.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.TrackingQuery.QueryAnnotations" target="_top">.NET documentation</a>
+     */
     public IDictionary_2 getQueryAnnotations() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -102,7 +102,10 @@ public class MetadataImporter extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public MetadataImporter(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,13 @@ public class MetadataImporter extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ImportAllContracts.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.MetadataImporter.ImportAllContracts" target="_top">.NET documentation</a>
+     */
     public Collection_1 ImportAllContracts() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -170,6 +180,13 @@ public class MetadataImporter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ImportAllEndpoints.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.MetadataImporter.ImportAllEndpoints" target="_top">.NET documentation</a>
+     */
     public ServiceEndpointCollection ImportAllEndpoints() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +206,13 @@ public class MetadataImporter extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property State.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.MetadataImporter.State" target="_top">.NET documentation</a>
+     */
     public Dictionary_2 getState() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +228,13 @@ public class MetadataImporter extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property KnownContracts.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.MetadataImporter.KnownContracts" target="_top">.NET documentation</a>
+     */
     public Dictionary_2 getKnownContracts() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -219,6 +250,13 @@ public class MetadataImporter extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PolicyImportExtensions.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.MetadataImporter.PolicyImportExtensions" target="_top">.NET documentation</a>
+     */
     public KeyedByTypeCollection_1 getPolicyImportExtensions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -234,6 +272,13 @@ public class MetadataImporter extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Errors.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.MetadataImporter.Errors" target="_top">.NET documentation</a>
+     */
     public Collection_1 getErrors() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

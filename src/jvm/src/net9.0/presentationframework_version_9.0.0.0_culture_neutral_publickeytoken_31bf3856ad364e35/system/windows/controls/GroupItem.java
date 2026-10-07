@@ -100,7 +100,10 @@ public class GroupItem extends system.windows.controls.ContentControl  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public GroupItem(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,16 @@ public class GroupItem extends system.windows.controls.ContentControl  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.GroupItem.-ctor" target="_top">.NET documentation</a>
+     */
     public GroupItem() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -161,6 +174,24 @@ public class GroupItem extends system.windows.controls.ContentControl  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member OnApplyTemplate.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.GroupItem.OnApplyTemplate" target="_top">.NET documentation</a>
+     */
     public void OnApplyTemplate() throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.NullReferenceException, system.InvalidCastException, system.componentmodel.Win32Exception, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -174,8 +205,14 @@ public class GroupItem extends system.windows.controls.ContentControl  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIContainItemStorage method available in IContainItemStorage to obtain an object with an invocable method
+     *
+     * @param item the argument of type {@code NetObject}
+     * @param dp the argument of type {@code DependencyProperty}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.IContainItemStorage.ReadItemValue" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public NetObject ReadItemValue(NetObject item, DependencyProperty dp) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIContainItemStorage to obtain the full interface.");
     }
@@ -183,8 +220,11 @@ public class GroupItem extends system.windows.controls.ContentControl  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIContainItemStorage method available in IContainItemStorage to obtain an object with an invocable method
+     *
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.IContainItemStorage.Clear" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void Clear() throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIContainItemStorage to obtain the full interface.");
     }
@@ -192,8 +232,13 @@ public class GroupItem extends system.windows.controls.ContentControl  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIContainItemStorage method available in IContainItemStorage to obtain an object with an invocable method
+     *
+     * @param item the argument of type {@code NetObject}
+     * @param dp the argument of type {@code DependencyProperty}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.IContainItemStorage.ClearItemValue" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void ClearItemValue(NetObject item, DependencyProperty dp) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIContainItemStorage to obtain the full interface.");
     }
@@ -201,8 +246,12 @@ public class GroupItem extends system.windows.controls.ContentControl  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIContainItemStorage method available in IContainItemStorage to obtain an object with an invocable method
+     *
+     * @param dp the argument of type {@code DependencyProperty}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.IContainItemStorage.ClearValue" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void ClearValue(DependencyProperty dp) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIContainItemStorage to obtain the full interface.");
     }
@@ -210,8 +259,14 @@ public class GroupItem extends system.windows.controls.ContentControl  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIContainItemStorage method available in IContainItemStorage to obtain an object with an invocable method
+     *
+     * @param item the argument of type {@code NetObject}
+     * @param dp the argument of type {@code DependencyProperty}
+     * @param value the argument of type {@code NetObject}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.IContainItemStorage.StoreItemValue" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void StoreItemValue(NetObject item, DependencyProperty dp, NetObject value) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIContainItemStorage to obtain the full interface.");
     }

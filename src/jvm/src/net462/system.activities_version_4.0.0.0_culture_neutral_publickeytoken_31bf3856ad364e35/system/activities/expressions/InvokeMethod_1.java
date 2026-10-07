@@ -101,7 +101,10 @@ public class InvokeMethod_1<TResult extends IJCOBridgeReflected> extends system.
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public InvokeMethod_1(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class InvokeMethod_1<TResult extends IJCOBridgeReflected> extends system.
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Expressions.InvokeMethod-1.-ctor" target="_top">.NET documentation</a>
+     */
     public InvokeMethod_1() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +177,13 @@ public class InvokeMethod_1<TResult extends IJCOBridgeReflected> extends system.
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property RunAsynchronously.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Expressions.InvokeMethod-1.RunAsynchronously" target="_top">.NET documentation</a>
+     */
     public boolean getRunAsynchronously() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +198,13 @@ public class InvokeMethod_1<TResult extends IJCOBridgeReflected> extends system.
         }
     }
 
+    /**
+     * Sets the value of the .NET property RunAsynchronously.
+     *
+     * @param RunAsynchronously the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Expressions.InvokeMethod-1.RunAsynchronously" target="_top">.NET documentation</a>
+     */
     public void setRunAsynchronously(boolean RunAsynchronously) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -192,6 +215,13 @@ public class InvokeMethod_1<TResult extends IJCOBridgeReflected> extends system.
         }
     }
 
+    /**
+     * Gets the value of the .NET property TargetObject.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Expressions.InvokeMethod-1.TargetObject" target="_top">.NET documentation</a>
+     */
     public InArgument getTargetObject() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +237,13 @@ public class InvokeMethod_1<TResult extends IJCOBridgeReflected> extends system.
         }
     }
 
+    /**
+     * Sets the value of the .NET property TargetObject.
+     *
+     * @param TargetObject the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Expressions.InvokeMethod-1.TargetObject" target="_top">.NET documentation</a>
+     */
     public void setTargetObject(InArgument TargetObject) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -217,6 +254,17 @@ public class InvokeMethod_1<TResult extends IJCOBridgeReflected> extends system.
         }
     }
 
+    /**
+     * Gets the value of the .NET property Parameters.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Expressions.InvokeMethod-1.Parameters" target="_top">.NET documentation</a>
+     */
     public Collection_1 getParameters() throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -232,6 +280,17 @@ public class InvokeMethod_1<TResult extends IJCOBridgeReflected> extends system.
         }
     }
 
+    /**
+     * Gets the value of the .NET property GenericTypeArguments.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Expressions.InvokeMethod-1.GenericTypeArguments" target="_top">.NET documentation</a>
+     */
     public Collection_1 getGenericTypeArguments() throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -247,6 +306,13 @@ public class InvokeMethod_1<TResult extends IJCOBridgeReflected> extends system.
         }
     }
 
+    /**
+     * Gets the value of the .NET property MethodName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Expressions.InvokeMethod-1.MethodName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getMethodName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -261,6 +327,13 @@ public class InvokeMethod_1<TResult extends IJCOBridgeReflected> extends system.
         }
     }
 
+    /**
+     * Sets the value of the .NET property MethodName.
+     *
+     * @param MethodName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Expressions.InvokeMethod-1.MethodName" target="_top">.NET documentation</a>
+     */
     public void setMethodName(java.lang.String MethodName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -271,6 +344,13 @@ public class InvokeMethod_1<TResult extends IJCOBridgeReflected> extends system.
         }
     }
 
+    /**
+     * Gets the value of the .NET property TargetType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Expressions.InvokeMethod-1.TargetType" target="_top">.NET documentation</a>
+     */
     public NetType getTargetType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -286,6 +366,13 @@ public class InvokeMethod_1<TResult extends IJCOBridgeReflected> extends system.
         }
     }
 
+    /**
+     * Sets the value of the .NET property TargetType.
+     *
+     * @param TargetType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Expressions.InvokeMethod-1.TargetType" target="_top">.NET documentation</a>
+     */
     public void setTargetType(NetType TargetType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

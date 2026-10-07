@@ -52,5 +52,11 @@ import system.identitymodel.tokens.SecurityToken;
  * @version 2.0.0.0
  */
 public interface IRenewedSecurityTokenHandler {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param newSecurityToken the .NET argument of type {@code System.IdentityModel.Tokens.SecurityToken}
+     * @param oldSecurityToken the .NET argument of type {@code System.IdentityModel.Tokens.SecurityToken}
+     */
     public void Invoke(SecurityToken newSecurityToken, SecurityToken oldSecurityToken);
 }

@@ -104,7 +104,10 @@ public class ItemCollection extends system.data.metadata.edm.ReadOnlyMetadataCol
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ItemCollection(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,24 @@ public class ItemCollection extends system.data.metadata.edm.ReadOnlyMetadataCol
     
     // Methods section
     
+    /**
+     * Invokes the .NET member TryGetEntityContainer.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param ignoreCase the argument of type {@code boolean}
+     * @param entityContainer the argument of type {@code JCORefOut<EntityContainer>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.ItemCollection.TryGetEntityContainer" target="_top">.NET documentation</a>
+     */
     public boolean TryGetEntityContainer(java.lang.String name, boolean ignoreCase, JCORefOut<EntityContainer> entityContainer) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -171,6 +192,22 @@ public class ItemCollection extends system.data.metadata.edm.ReadOnlyMetadataCol
         }
     }
 
+    /**
+     * Invokes the .NET member TryGetEntityContainer.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param entityContainer the argument of type {@code JCORefOut<EntityContainer>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.ItemCollection.TryGetEntityContainer" target="_top">.NET documentation</a>
+     */
     public boolean TryGetEntityContainer(java.lang.String name, JCORefOut<EntityContainer> entityContainer) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -185,6 +222,25 @@ public class ItemCollection extends system.data.metadata.edm.ReadOnlyMetadataCol
         }
     }
 
+    /**
+     * Invokes the .NET member TryGetItem.
+     *
+     * @param <T> the type of the generic argument T
+     * @param identity the argument of type {@code java.lang.String}
+     * @param ignoreCase the argument of type {@code boolean}
+     * @param item the argument of type {@code JCORefOut<T>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.ItemCollection.TryGetItem" target="_top">.NET documentation</a>
+     */
     public <T extends IJCOBridgeReflected> boolean TryGetItem(java.lang.String identity, boolean ignoreCase, JCORefOut<T> item) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -199,6 +255,23 @@ public class ItemCollection extends system.data.metadata.edm.ReadOnlyMetadataCol
         }
     }
 
+    /**
+     * Invokes the .NET member TryGetItem.
+     *
+     * @param <T> the type of the generic argument T
+     * @param identity the argument of type {@code java.lang.String}
+     * @param item the argument of type {@code JCORefOut<T>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.ItemCollection.TryGetItem" target="_top">.NET documentation</a>
+     */
     public <T extends IJCOBridgeReflected> boolean TryGetItem(java.lang.String identity, JCORefOut<T> item) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -213,6 +286,25 @@ public class ItemCollection extends system.data.metadata.edm.ReadOnlyMetadataCol
         }
     }
 
+    /**
+     * Invokes the .NET member TryGetType.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param namespaceName the argument of type {@code java.lang.String}
+     * @param ignoreCase the argument of type {@code boolean}
+     * @param type the argument of type {@code JCORefOut<EdmType>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.ItemCollection.TryGetType" target="_top">.NET documentation</a>
+     */
     public boolean TryGetType(java.lang.String name, java.lang.String namespaceName, boolean ignoreCase, JCORefOut<EdmType> type) throws Throwable, system.ArgumentNullException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -227,6 +319,24 @@ public class ItemCollection extends system.data.metadata.edm.ReadOnlyMetadataCol
         }
     }
 
+    /**
+     * Invokes the .NET member TryGetType.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param namespaceName the argument of type {@code java.lang.String}
+     * @param type the argument of type {@code JCORefOut<EdmType>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.ItemCollection.TryGetType" target="_top">.NET documentation</a>
+     */
     public boolean TryGetType(java.lang.String name, java.lang.String namespaceName, JCORefOut<EdmType> type) throws Throwable, system.ArgumentNullException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -241,6 +351,23 @@ public class ItemCollection extends system.data.metadata.edm.ReadOnlyMetadataCol
         }
     }
 
+    /**
+     * Invokes the .NET member GetFunctions.
+     *
+     * @param functionName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.ItemCollection.GetFunctions" target="_top">.NET documentation</a>
+     */
     public ReadOnlyCollection_1 GetFunctions(java.lang.String functionName) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.threading.SynchronizationLockException, system.ObjectDisposedException, system.threading.LockRecursionException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -256,6 +383,23 @@ public class ItemCollection extends system.data.metadata.edm.ReadOnlyMetadataCol
         }
     }
 
+    /**
+     * Invokes the .NET member GetFunctions.
+     *
+     * @param functionName the argument of type {@code java.lang.String}
+     * @param ignoreCase the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.ItemCollection.GetFunctions" target="_top">.NET documentation</a>
+     */
     public ReadOnlyCollection_1 GetFunctions(java.lang.String functionName, boolean ignoreCase) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.ObjectDisposedException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -271,6 +415,24 @@ public class ItemCollection extends system.data.metadata.edm.ReadOnlyMetadataCol
         }
     }
 
+    /**
+     * Invokes the .NET member GetItems.
+     *
+     * @param <T> the type of the generic argument T
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.ItemCollection.GetItems" target="_top">.NET documentation</a>
+     */
     public <T extends IJCOBridgeReflected> ReadOnlyCollection_1 GetItems() throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.threading.LockRecursionException, system.threading.WaitHandleCannotBeOpenedException, system.threading.SynchronizationLockException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -286,6 +448,19 @@ public class ItemCollection extends system.data.metadata.edm.ReadOnlyMetadataCol
         }
     }
 
+    /**
+     * Invokes the .NET member GetType.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param namespaceName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.ItemCollection.GetType" target="_top">.NET documentation</a>
+     */
     public EdmType GetType(java.lang.String name, java.lang.String namespaceName) throws Throwable, system.ArgumentNullException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -301,6 +476,22 @@ public class ItemCollection extends system.data.metadata.edm.ReadOnlyMetadataCol
         }
     }
 
+    /**
+     * Invokes the .NET member GetType.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param namespaceName the argument of type {@code java.lang.String}
+     * @param ignoreCase the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.ItemCollection.GetType" target="_top">.NET documentation</a>
+     */
     public EdmType GetType(java.lang.String name, java.lang.String namespaceName, boolean ignoreCase) throws Throwable, system.ArgumentNullException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -316,6 +507,21 @@ public class ItemCollection extends system.data.metadata.edm.ReadOnlyMetadataCol
         }
     }
 
+    /**
+     * Invokes the .NET member GetEntityContainer.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.ItemCollection.GetEntityContainer" target="_top">.NET documentation</a>
+     */
     public EntityContainer GetEntityContainer(java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -331,6 +537,23 @@ public class ItemCollection extends system.data.metadata.edm.ReadOnlyMetadataCol
         }
     }
 
+    /**
+     * Invokes the .NET member GetEntityContainer.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param ignoreCase the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.ItemCollection.GetEntityContainer" target="_top">.NET documentation</a>
+     */
     public EntityContainer GetEntityContainer(java.lang.String name, boolean ignoreCase) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -350,6 +573,13 @@ public class ItemCollection extends system.data.metadata.edm.ReadOnlyMetadataCol
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property DataSpace.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.ItemCollection.DataSpace" target="_top">.NET documentation</a>
+     */
     public DataSpace getDataSpace() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -98,7 +98,10 @@ public class CharacterMetrics extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CharacterMetrics(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -145,6 +148,12 @@ public class CharacterMetrics extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.CharacterMetrics.-ctor" target="_top">.NET documentation</a>
+     */
     public CharacterMetrics() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -155,6 +164,24 @@ public class CharacterMetrics extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param metrics the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.CharacterMetrics.-ctor" target="_top">.NET documentation</a>
+     */
     public CharacterMetrics(java.lang.String metrics) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OverflowException {
         try {
             // add reference to assemblyName.dll file
@@ -173,6 +200,13 @@ public class CharacterMetrics extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Baseline.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.CharacterMetrics.Baseline" target="_top">.NET documentation</a>
+     */
     public double getBaseline() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -213,6 +247,13 @@ public class CharacterMetrics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property BlackBoxHeight.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.CharacterMetrics.BlackBoxHeight" target="_top">.NET documentation</a>
+     */
     public double getBlackBoxHeight() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -253,6 +294,13 @@ public class CharacterMetrics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property BlackBoxWidth.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.CharacterMetrics.BlackBoxWidth" target="_top">.NET documentation</a>
+     */
     public double getBlackBoxWidth() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -293,6 +341,13 @@ public class CharacterMetrics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property BottomSideBearing.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.CharacterMetrics.BottomSideBearing" target="_top">.NET documentation</a>
+     */
     public double getBottomSideBearing() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -333,6 +388,13 @@ public class CharacterMetrics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LeftSideBearing.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.CharacterMetrics.LeftSideBearing" target="_top">.NET documentation</a>
+     */
     public double getLeftSideBearing() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -373,6 +435,13 @@ public class CharacterMetrics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RightSideBearing.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.CharacterMetrics.RightSideBearing" target="_top">.NET documentation</a>
+     */
     public double getRightSideBearing() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -413,6 +482,13 @@ public class CharacterMetrics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TopSideBearing.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.CharacterMetrics.TopSideBearing" target="_top">.NET documentation</a>
+     */
     public double getTopSideBearing() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -453,6 +529,22 @@ public class CharacterMetrics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Metrics.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.CharacterMetrics.Metrics" target="_top">.NET documentation</a>
+     */
     public java.lang.String getMetrics() throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.NotSupportedException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -467,6 +559,23 @@ public class CharacterMetrics extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Metrics.
+     *
+     * @param Metrics the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.CharacterMetrics.Metrics" target="_top">.NET documentation</a>
+     */
     public void setMetrics(java.lang.String Metrics) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArrayTypeMismatchException, system.OverflowException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -99,7 +99,10 @@ public class AttachedPropertyInfo_1<T extends IJCOBridgeReflected> extends syste
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public AttachedPropertyInfo_1(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class AttachedPropertyInfo_1<T extends IJCOBridgeReflected> extends syste
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Model.AttachedPropertyInfo-1.-ctor" target="_top">.NET documentation</a>
+     */
     public AttachedPropertyInfo_1() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -166,6 +175,13 @@ public class AttachedPropertyInfo_1<T extends IJCOBridgeReflected> extends syste
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property DefaultValue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Model.AttachedPropertyInfo-1.DefaultValue" target="_top">.NET documentation</a>
+     */
     public T getDefaultValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +196,13 @@ public class AttachedPropertyInfo_1<T extends IJCOBridgeReflected> extends syste
         }
     }
 
+    /**
+     * Sets the value of the .NET property DefaultValue.
+     *
+     * @param DefaultValue the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Model.AttachedPropertyInfo-1.DefaultValue" target="_top">.NET documentation</a>
+     */
     public void setDefaultValue(T DefaultValue) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

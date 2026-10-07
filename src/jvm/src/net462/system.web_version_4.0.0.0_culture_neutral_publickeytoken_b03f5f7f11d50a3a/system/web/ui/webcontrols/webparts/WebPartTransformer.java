@@ -99,7 +99,10 @@ public class WebPartTransformer extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public WebPartTransformer(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,14 @@ public class WebPartTransformer extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Transform.
+     *
+     * @param providerData the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartTransformer.Transform" target="_top">.NET documentation</a>
+     */
     public NetObject Transform(NetObject providerData) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -167,6 +178,13 @@ public class WebPartTransformer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateConfigurationControl.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartTransformer.CreateConfigurationControl" target="_top">.NET documentation</a>
+     */
     public Control CreateConfigurationControl() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

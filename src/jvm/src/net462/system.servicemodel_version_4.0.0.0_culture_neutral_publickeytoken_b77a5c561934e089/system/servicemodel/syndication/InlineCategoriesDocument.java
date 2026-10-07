@@ -102,7 +102,10 @@ public class InlineCategoriesDocument extends system.servicemodel.syndication.Ca
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public InlineCategoriesDocument(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,12 @@ public class InlineCategoriesDocument extends system.servicemodel.syndication.Ca
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Syndication.InlineCategoriesDocument.-ctor" target="_top">.NET documentation</a>
+     */
     public InlineCategoriesDocument() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -159,6 +168,14 @@ public class InlineCategoriesDocument extends system.servicemodel.syndication.Ca
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param categories the argument of type {@code IEnumerable_1}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Syndication.InlineCategoriesDocument.-ctor" target="_top">.NET documentation</a>
+     */
     public InlineCategoriesDocument(IEnumerable_1 categories) throws Throwable, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +186,16 @@ public class InlineCategoriesDocument extends system.servicemodel.syndication.Ca
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param categories the argument of type {@code IEnumerable_1}
+     * @param isFixed the argument of type {@code boolean}
+     * @param scheme the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Syndication.InlineCategoriesDocument.-ctor" target="_top">.NET documentation</a>
+     */
     public InlineCategoriesDocument(IEnumerable_1 categories, boolean isFixed, java.lang.String scheme) throws Throwable, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -187,6 +214,13 @@ public class InlineCategoriesDocument extends system.servicemodel.syndication.Ca
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsFixed.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Syndication.InlineCategoriesDocument.IsFixed" target="_top">.NET documentation</a>
+     */
     public boolean getIsFixed() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +235,13 @@ public class InlineCategoriesDocument extends system.servicemodel.syndication.Ca
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsFixed.
+     *
+     * @param IsFixed the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Syndication.InlineCategoriesDocument.IsFixed" target="_top">.NET documentation</a>
+     */
     public void setIsFixed(boolean IsFixed) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -211,6 +252,13 @@ public class InlineCategoriesDocument extends system.servicemodel.syndication.Ca
         }
     }
 
+    /**
+     * Gets the value of the .NET property Categories.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Syndication.InlineCategoriesDocument.Categories" target="_top">.NET documentation</a>
+     */
     public Collection_1 getCategories() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -226,6 +274,13 @@ public class InlineCategoriesDocument extends system.servicemodel.syndication.Ca
         }
     }
 
+    /**
+     * Gets the value of the .NET property Scheme.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Syndication.InlineCategoriesDocument.Scheme" target="_top">.NET documentation</a>
+     */
     public java.lang.String getScheme() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -240,6 +295,13 @@ public class InlineCategoriesDocument extends system.servicemodel.syndication.Ca
         }
     }
 
+    /**
+     * Sets the value of the .NET property Scheme.
+     *
+     * @param Scheme the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Syndication.InlineCategoriesDocument.Scheme" target="_top">.NET documentation</a>
+     */
     public void setScheme(java.lang.String Scheme) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -100,7 +100,10 @@ public class InternalMessageWrapper extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public InternalMessageWrapper(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,13 @@ public class InternalMessageWrapper extends NetObject  {
     public InternalMessageWrapper() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param msg the argument of type {@code IMessage}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Messaging.InternalMessageWrapper.-ctor" target="_top">.NET documentation</a>
+     */
     public InternalMessageWrapper(IMessage msg) throws Throwable {
         try {
             // add reference to assemblyName.dll file

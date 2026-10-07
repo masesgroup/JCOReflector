@@ -105,7 +105,10 @@ public class MethodCallMessageWrapper extends system.runtime.remoting.messaging.
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public MethodCallMessageWrapper(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,13 @@ public class MethodCallMessageWrapper extends system.runtime.remoting.messaging.
     public MethodCallMessageWrapper() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param msg the argument of type {@code IMethodCallMessage}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Messaging.MethodCallMessageWrapper.-ctor" target="_top">.NET documentation</a>
+     */
     public MethodCallMessageWrapper(IMethodCallMessage msg) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +180,14 @@ public class MethodCallMessageWrapper extends system.runtime.remoting.messaging.
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetArg.
+     *
+     * @param argNum the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Messaging.MethodCallMessageWrapper.GetArg" target="_top">.NET documentation</a>
+     */
     public NetObject GetArg(int argNum) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -185,6 +203,17 @@ public class MethodCallMessageWrapper extends system.runtime.remoting.messaging.
         }
     }
 
+    /**
+     * Invokes the .NET member GetInArg.
+     *
+     * @param argNum the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Messaging.MethodCallMessageWrapper.GetInArg" target="_top">.NET documentation</a>
+     */
     public NetObject GetInArg(int argNum) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +229,14 @@ public class MethodCallMessageWrapper extends system.runtime.remoting.messaging.
         }
     }
 
+    /**
+     * Invokes the .NET member GetArgName.
+     *
+     * @param index the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Messaging.MethodCallMessageWrapper.GetArgName" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetArgName(int index) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -214,6 +251,17 @@ public class MethodCallMessageWrapper extends system.runtime.remoting.messaging.
         }
     }
 
+    /**
+     * Invokes the .NET member GetInArgName.
+     *
+     * @param index the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Messaging.MethodCallMessageWrapper.GetInArgName" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetInArgName(int index) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -232,6 +280,13 @@ public class MethodCallMessageWrapper extends system.runtime.remoting.messaging.
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property HasVarArgs.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Messaging.MethodCallMessageWrapper.HasVarArgs" target="_top">.NET documentation</a>
+     */
     public boolean getHasVarArgs() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -246,6 +301,13 @@ public class MethodCallMessageWrapper extends system.runtime.remoting.messaging.
         }
     }
 
+    /**
+     * Gets the value of the .NET property ArgCount.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Messaging.MethodCallMessageWrapper.ArgCount" target="_top">.NET documentation</a>
+     */
     public int getArgCount() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -286,6 +348,15 @@ public class MethodCallMessageWrapper extends system.runtime.remoting.messaging.
         }
     }
 
+    /**
+     * Gets the value of the .NET property InArgCount.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Messaging.MethodCallMessageWrapper.InArgCount" target="_top">.NET documentation</a>
+     */
     public int getInArgCount() throws Throwable, system.ArgumentException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -326,6 +397,17 @@ public class MethodCallMessageWrapper extends system.runtime.remoting.messaging.
         }
     }
 
+    /**
+     * Gets the value of the .NET property Properties.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Messaging.MethodCallMessageWrapper.Properties" target="_top">.NET documentation</a>
+     */
     public IDictionary getProperties() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -341,6 +423,13 @@ public class MethodCallMessageWrapper extends system.runtime.remoting.messaging.
         }
     }
 
+    /**
+     * Gets the value of the .NET property MethodSignature.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Messaging.MethodCallMessageWrapper.MethodSignature" target="_top">.NET documentation</a>
+     */
     public NetObject getMethodSignature() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -356,6 +445,13 @@ public class MethodCallMessageWrapper extends system.runtime.remoting.messaging.
         }
     }
 
+    /**
+     * Gets the value of the .NET property Args.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Messaging.MethodCallMessageWrapper.Args" target="_top">.NET documentation</a>
+     */
     public final NetObject[] getArgs() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -377,6 +473,13 @@ public class MethodCallMessageWrapper extends system.runtime.remoting.messaging.
         }
     }
 
+    /**
+     * Sets the value of the .NET property Args.
+     *
+     * @param Args the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Messaging.MethodCallMessageWrapper.Args" target="_top">.NET documentation</a>
+     */
     public void setArgs(NetObject[] Args) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -387,6 +490,15 @@ public class MethodCallMessageWrapper extends system.runtime.remoting.messaging.
         }
     }
 
+    /**
+     * Gets the value of the .NET property InArgs.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Messaging.MethodCallMessageWrapper.InArgs" target="_top">.NET documentation</a>
+     */
     public final NetObject[] getInArgs() throws Throwable, system.ArgumentException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -408,6 +520,13 @@ public class MethodCallMessageWrapper extends system.runtime.remoting.messaging.
         }
     }
 
+    /**
+     * Gets the value of the .NET property MethodBase.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Messaging.MethodCallMessageWrapper.MethodBase" target="_top">.NET documentation</a>
+     */
     public MethodBase getMethodBase() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -423,6 +542,13 @@ public class MethodCallMessageWrapper extends system.runtime.remoting.messaging.
         }
     }
 
+    /**
+     * Gets the value of the .NET property LogicalCallContext.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Messaging.MethodCallMessageWrapper.LogicalCallContext" target="_top">.NET documentation</a>
+     */
     public LogicalCallContext getLogicalCallContext() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -438,6 +564,13 @@ public class MethodCallMessageWrapper extends system.runtime.remoting.messaging.
         }
     }
 
+    /**
+     * Gets the value of the .NET property MethodName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Messaging.MethodCallMessageWrapper.MethodName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getMethodName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -452,6 +585,13 @@ public class MethodCallMessageWrapper extends system.runtime.remoting.messaging.
         }
     }
 
+    /**
+     * Gets the value of the .NET property TypeName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Messaging.MethodCallMessageWrapper.TypeName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTypeName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -466,6 +606,13 @@ public class MethodCallMessageWrapper extends system.runtime.remoting.messaging.
         }
     }
 
+    /**
+     * Gets the value of the .NET property Uri.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Messaging.MethodCallMessageWrapper.Uri" target="_top">.NET documentation</a>
+     */
     public java.lang.String getUri() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -480,6 +627,13 @@ public class MethodCallMessageWrapper extends system.runtime.remoting.messaging.
         }
     }
 
+    /**
+     * Sets the value of the .NET property Uri.
+     *
+     * @param Uri the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Messaging.MethodCallMessageWrapper.Uri" target="_top">.NET documentation</a>
+     */
     public void setUri(java.lang.String Uri) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

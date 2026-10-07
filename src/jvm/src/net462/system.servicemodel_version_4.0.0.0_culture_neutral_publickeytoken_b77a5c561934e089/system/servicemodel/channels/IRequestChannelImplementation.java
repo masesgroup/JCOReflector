@@ -111,7 +111,10 @@ public class IRequestChannelImplementation extends NetObject implements IRequest
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IRequestChannelImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,15 @@ public class IRequestChannelImplementation extends NetObject implements IRequest
 
     // Methods section
     
+    /**
+     * Invokes the .NET member BeginClose.
+     *
+     * @param callback the argument of type {@code AsyncCallback}
+     * @param state the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.IRequestChannel.BeginClose" target="_top">.NET documentation</a>
+     */
     public IAsyncResult BeginClose(AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -168,6 +180,16 @@ public class IRequestChannelImplementation extends NetObject implements IRequest
         }
     }
 
+    /**
+     * Invokes the .NET member BeginClose.
+     *
+     * @param timeout the argument of type {@code TimeSpan}
+     * @param callback the argument of type {@code AsyncCallback}
+     * @param state the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.IRequestChannel.BeginClose" target="_top">.NET documentation</a>
+     */
     public IAsyncResult BeginClose(TimeSpan timeout, AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +205,15 @@ public class IRequestChannelImplementation extends NetObject implements IRequest
         }
     }
 
+    /**
+     * Invokes the .NET member BeginOpen.
+     *
+     * @param callback the argument of type {@code AsyncCallback}
+     * @param state the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.IRequestChannel.BeginOpen" target="_top">.NET documentation</a>
+     */
     public IAsyncResult BeginOpen(AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +229,16 @@ public class IRequestChannelImplementation extends NetObject implements IRequest
         }
     }
 
+    /**
+     * Invokes the .NET member BeginOpen.
+     *
+     * @param timeout the argument of type {@code TimeSpan}
+     * @param callback the argument of type {@code AsyncCallback}
+     * @param state the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.IRequestChannel.BeginOpen" target="_top">.NET documentation</a>
+     */
     public IAsyncResult BeginOpen(TimeSpan timeout, AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -213,6 +254,16 @@ public class IRequestChannelImplementation extends NetObject implements IRequest
         }
     }
 
+    /**
+     * Invokes the .NET member BeginRequest.
+     *
+     * @param message the argument of type {@code Message}
+     * @param callback the argument of type {@code AsyncCallback}
+     * @param state the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.IRequestChannel.BeginRequest" target="_top">.NET documentation</a>
+     */
     public IAsyncResult BeginRequest(Message message, AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -228,6 +279,17 @@ public class IRequestChannelImplementation extends NetObject implements IRequest
         }
     }
 
+    /**
+     * Invokes the .NET member BeginRequest.
+     *
+     * @param message the argument of type {@code Message}
+     * @param timeout the argument of type {@code TimeSpan}
+     * @param callback the argument of type {@code AsyncCallback}
+     * @param state the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.IRequestChannel.BeginRequest" target="_top">.NET documentation</a>
+     */
     public IAsyncResult BeginRequest(Message message, TimeSpan timeout, AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -243,6 +305,14 @@ public class IRequestChannelImplementation extends NetObject implements IRequest
         }
     }
 
+    /**
+     * Invokes the .NET member EndRequest.
+     *
+     * @param result the argument of type {@code IAsyncResult}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.IRequestChannel.EndRequest" target="_top">.NET documentation</a>
+     */
     public Message EndRequest(IAsyncResult result) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -258,6 +328,14 @@ public class IRequestChannelImplementation extends NetObject implements IRequest
         }
     }
 
+    /**
+     * Invokes the .NET member Request.
+     *
+     * @param message the argument of type {@code Message}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.IRequestChannel.Request" target="_top">.NET documentation</a>
+     */
     public Message Request(Message message) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -273,6 +351,15 @@ public class IRequestChannelImplementation extends NetObject implements IRequest
         }
     }
 
+    /**
+     * Invokes the .NET member Request.
+     *
+     * @param message the argument of type {@code Message}
+     * @param timeout the argument of type {@code TimeSpan}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.IRequestChannel.Request" target="_top">.NET documentation</a>
+     */
     public Message Request(Message message, TimeSpan timeout) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -288,6 +375,12 @@ public class IRequestChannelImplementation extends NetObject implements IRequest
         }
     }
 
+    /**
+     * Invokes the .NET member Abort.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.IRequestChannel.Abort" target="_top">.NET documentation</a>
+     */
     public void Abort() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -298,6 +391,12 @@ public class IRequestChannelImplementation extends NetObject implements IRequest
         }
     }
 
+    /**
+     * Invokes the .NET member Close.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.IRequestChannel.Close" target="_top">.NET documentation</a>
+     */
     public void Close() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -308,6 +407,13 @@ public class IRequestChannelImplementation extends NetObject implements IRequest
         }
     }
 
+    /**
+     * Invokes the .NET member Close.
+     *
+     * @param timeout the argument of type {@code TimeSpan}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.IRequestChannel.Close" target="_top">.NET documentation</a>
+     */
     public void Close(TimeSpan timeout) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -318,6 +424,13 @@ public class IRequestChannelImplementation extends NetObject implements IRequest
         }
     }
 
+    /**
+     * Invokes the .NET member EndClose.
+     *
+     * @param result the argument of type {@code IAsyncResult}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.IRequestChannel.EndClose" target="_top">.NET documentation</a>
+     */
     public void EndClose(IAsyncResult result) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -328,6 +441,13 @@ public class IRequestChannelImplementation extends NetObject implements IRequest
         }
     }
 
+    /**
+     * Invokes the .NET member EndOpen.
+     *
+     * @param result the argument of type {@code IAsyncResult}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.IRequestChannel.EndOpen" target="_top">.NET documentation</a>
+     */
     public void EndOpen(IAsyncResult result) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -338,6 +458,12 @@ public class IRequestChannelImplementation extends NetObject implements IRequest
         }
     }
 
+    /**
+     * Invokes the .NET member Open.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.IRequestChannel.Open" target="_top">.NET documentation</a>
+     */
     public void Open() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -348,6 +474,13 @@ public class IRequestChannelImplementation extends NetObject implements IRequest
         }
     }
 
+    /**
+     * Invokes the .NET member Open.
+     *
+     * @param timeout the argument of type {@code TimeSpan}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.IRequestChannel.Open" target="_top">.NET documentation</a>
+     */
     public void Open(TimeSpan timeout) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -362,6 +495,13 @@ public class IRequestChannelImplementation extends NetObject implements IRequest
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property State.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.IRequestChannel.State" target="_top">.NET documentation</a>
+     */
     public CommunicationState getState() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -377,6 +517,13 @@ public class IRequestChannelImplementation extends NetObject implements IRequest
         }
     }
 
+    /**
+     * Gets the value of the .NET property RemoteAddress.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.IRequestChannel.RemoteAddress" target="_top">.NET documentation</a>
+     */
     public EndpointAddress getRemoteAddress() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -392,6 +539,13 @@ public class IRequestChannelImplementation extends NetObject implements IRequest
         }
     }
 
+    /**
+     * Gets the value of the .NET property Via.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.IRequestChannel.Via" target="_top">.NET documentation</a>
+     */
     public Uri getVia() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -412,6 +566,13 @@ public class IRequestChannelImplementation extends NetObject implements IRequest
     // Instance Events section
     
 
+    /**
+     * Invokes the .NET member addClosed.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addClosed(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -422,6 +583,13 @@ public class IRequestChannelImplementation extends NetObject implements IRequest
         }
     }
 
+    /**
+     * Invokes the .NET member removeClosed.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeClosed(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -432,6 +600,13 @@ public class IRequestChannelImplementation extends NetObject implements IRequest
         }
     }
 
+    /**
+     * Invokes the .NET member addClosing.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addClosing(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -442,6 +617,13 @@ public class IRequestChannelImplementation extends NetObject implements IRequest
         }
     }
 
+    /**
+     * Invokes the .NET member removeClosing.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeClosing(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -452,6 +634,13 @@ public class IRequestChannelImplementation extends NetObject implements IRequest
         }
     }
 
+    /**
+     * Invokes the .NET member addFaulted.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addFaulted(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -462,6 +651,13 @@ public class IRequestChannelImplementation extends NetObject implements IRequest
         }
     }
 
+    /**
+     * Invokes the .NET member removeFaulted.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeFaulted(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -472,6 +668,13 @@ public class IRequestChannelImplementation extends NetObject implements IRequest
         }
     }
 
+    /**
+     * Invokes the .NET member addOpened.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addOpened(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -482,6 +685,13 @@ public class IRequestChannelImplementation extends NetObject implements IRequest
         }
     }
 
+    /**
+     * Invokes the .NET member removeOpened.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeOpened(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -492,6 +702,13 @@ public class IRequestChannelImplementation extends NetObject implements IRequest
         }
     }
 
+    /**
+     * Invokes the .NET member addOpening.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addOpening(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -502,6 +719,13 @@ public class IRequestChannelImplementation extends NetObject implements IRequest
         }
     }
 
+    /**
+     * Invokes the .NET member removeOpening.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeOpening(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

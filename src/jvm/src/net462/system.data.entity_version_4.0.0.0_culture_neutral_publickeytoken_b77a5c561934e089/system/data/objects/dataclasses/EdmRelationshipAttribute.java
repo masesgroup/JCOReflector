@@ -100,7 +100,10 @@ public class EdmRelationshipAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public EdmRelationshipAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,20 @@ public class EdmRelationshipAttribute extends system.Attribute  {
     public EdmRelationshipAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param relationshipNamespaceName the argument of type {@code java.lang.String}
+     * @param relationshipName the argument of type {@code java.lang.String}
+     * @param role1Name the argument of type {@code java.lang.String}
+     * @param role1Multiplicity the argument of type {@code RelationshipMultiplicity}
+     * @param role1Type the argument of type {@code NetType}
+     * @param role2Name the argument of type {@code java.lang.String}
+     * @param role2Multiplicity the argument of type {@code RelationshipMultiplicity}
+     * @param role2Type the argument of type {@code NetType}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DataClasses.EdmRelationshipAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public EdmRelationshipAttribute(java.lang.String relationshipNamespaceName, java.lang.String relationshipName, java.lang.String role1Name, RelationshipMultiplicity role1Multiplicity, NetType role1Type, java.lang.String role2Name, RelationshipMultiplicity role2Multiplicity, NetType role2Type) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -160,6 +177,21 @@ public class EdmRelationshipAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param relationshipNamespaceName the argument of type {@code java.lang.String}
+     * @param relationshipName the argument of type {@code java.lang.String}
+     * @param role1Name the argument of type {@code java.lang.String}
+     * @param role1Multiplicity the argument of type {@code RelationshipMultiplicity}
+     * @param role1Type the argument of type {@code NetType}
+     * @param role2Name the argument of type {@code java.lang.String}
+     * @param role2Multiplicity the argument of type {@code RelationshipMultiplicity}
+     * @param role2Type the argument of type {@code NetType}
+     * @param isForeignKey the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DataClasses.EdmRelationshipAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public EdmRelationshipAttribute(java.lang.String relationshipNamespaceName, java.lang.String relationshipName, java.lang.String role1Name, RelationshipMultiplicity role1Multiplicity, NetType role1Type, java.lang.String role2Name, RelationshipMultiplicity role2Multiplicity, NetType role2Type, boolean isForeignKey) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -179,6 +211,13 @@ public class EdmRelationshipAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsForeignKey.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DataClasses.EdmRelationshipAttribute.IsForeignKey" target="_top">.NET documentation</a>
+     */
     public boolean getIsForeignKey() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +232,13 @@ public class EdmRelationshipAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Role1Multiplicity.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DataClasses.EdmRelationshipAttribute.Role1Multiplicity" target="_top">.NET documentation</a>
+     */
     public RelationshipMultiplicity getRole1Multiplicity() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +254,13 @@ public class EdmRelationshipAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Role2Multiplicity.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DataClasses.EdmRelationshipAttribute.Role2Multiplicity" target="_top">.NET documentation</a>
+     */
     public RelationshipMultiplicity getRole2Multiplicity() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -223,6 +276,13 @@ public class EdmRelationshipAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RelationshipName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DataClasses.EdmRelationshipAttribute.RelationshipName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getRelationshipName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -237,6 +297,13 @@ public class EdmRelationshipAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RelationshipNamespaceName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DataClasses.EdmRelationshipAttribute.RelationshipNamespaceName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getRelationshipNamespaceName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -251,6 +318,13 @@ public class EdmRelationshipAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Role1Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DataClasses.EdmRelationshipAttribute.Role1Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getRole1Name() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -265,6 +339,13 @@ public class EdmRelationshipAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Role2Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DataClasses.EdmRelationshipAttribute.Role2Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getRole2Name() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -279,6 +360,13 @@ public class EdmRelationshipAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Role1Type.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DataClasses.EdmRelationshipAttribute.Role1Type" target="_top">.NET documentation</a>
+     */
     public NetType getRole1Type() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -294,6 +382,13 @@ public class EdmRelationshipAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Role2Type.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DataClasses.EdmRelationshipAttribute.Role2Type" target="_top">.NET documentation</a>
+     */
     public NetType getRole2Type() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

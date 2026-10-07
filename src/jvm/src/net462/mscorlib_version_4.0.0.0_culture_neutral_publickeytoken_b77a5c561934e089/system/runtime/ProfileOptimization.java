@@ -98,7 +98,10 @@ public class ProfileOptimization extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ProfileOptimization(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,13 @@ public class ProfileOptimization extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member SetProfileRoot.
+     *
+     * @param directoryPath the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.ProfileOptimization.SetProfileRoot" target="_top">.NET documentation</a>
+     */
     public static void SetProfileRoot(java.lang.String directoryPath) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -161,6 +171,13 @@ public class ProfileOptimization extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member StartProfile.
+     *
+     * @param profile the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.ProfileOptimization.StartProfile" target="_top">.NET documentation</a>
+     */
     public static void StartProfile(java.lang.String profile) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

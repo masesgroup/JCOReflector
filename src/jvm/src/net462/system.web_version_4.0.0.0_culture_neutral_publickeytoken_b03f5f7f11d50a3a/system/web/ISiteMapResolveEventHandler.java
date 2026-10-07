@@ -53,5 +53,12 @@ import system.web.SiteMapResolveEventArgs;
  * @version 2.0.0.0
  */
 public interface ISiteMapResolveEventHandler {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param sender the .NET argument of type {@code System.Object}
+     * @param e the .NET argument of type {@code System.Web.SiteMapResolveEventArgs}
+     * @return the value returned to the CLR
+     */
     public SiteMapNode Invoke(NetObject sender, SiteMapResolveEventArgs e);
 }

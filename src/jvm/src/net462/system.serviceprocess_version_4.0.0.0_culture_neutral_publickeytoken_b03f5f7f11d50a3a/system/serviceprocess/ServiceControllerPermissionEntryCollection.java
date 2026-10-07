@@ -101,7 +101,10 @@ public class ServiceControllerPermissionEntryCollection extends system.collectio
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ServiceControllerPermissionEntryCollection(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,14 @@ public class ServiceControllerPermissionEntryCollection extends system.collectio
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Contains.
+     *
+     * @param value the argument of type {@code ServiceControllerPermissionEntry}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceProcess.ServiceControllerPermissionEntryCollection.Contains" target="_top">.NET documentation</a>
+     */
     public boolean Contains(ServiceControllerPermissionEntry value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -170,6 +181,14 @@ public class ServiceControllerPermissionEntryCollection extends system.collectio
         }
     }
 
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param value the argument of type {@code ServiceControllerPermissionEntry}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceProcess.ServiceControllerPermissionEntryCollection.Add" target="_top">.NET documentation</a>
+     */
     public int Add(ServiceControllerPermissionEntry value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -210,6 +229,14 @@ public class ServiceControllerPermissionEntryCollection extends system.collectio
         }
     }
 
+    /**
+     * Invokes the .NET member IndexOf.
+     *
+     * @param value the argument of type {@code ServiceControllerPermissionEntry}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceProcess.ServiceControllerPermissionEntryCollection.IndexOf" target="_top">.NET documentation</a>
+     */
     public int IndexOf(ServiceControllerPermissionEntry value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -250,6 +277,14 @@ public class ServiceControllerPermissionEntryCollection extends system.collectio
         }
     }
 
+    /**
+     * Invokes the .NET member AddRange.
+     *
+     * @param value the argument of type {@code ServiceControllerPermissionEntry[]}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceProcess.ServiceControllerPermissionEntryCollection.AddRange" target="_top">.NET documentation</a>
+     */
     public void AddRange(ServiceControllerPermissionEntry[] value) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -260,6 +295,14 @@ public class ServiceControllerPermissionEntryCollection extends system.collectio
         }
     }
 
+    /**
+     * Invokes the .NET member AddRange.
+     *
+     * @param value the argument of type {@code ServiceControllerPermissionEntryCollection}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceProcess.ServiceControllerPermissionEntryCollection.AddRange" target="_top">.NET documentation</a>
+     */
     public void AddRange(ServiceControllerPermissionEntryCollection value) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -270,6 +313,14 @@ public class ServiceControllerPermissionEntryCollection extends system.collectio
         }
     }
 
+    /**
+     * Invokes the .NET member CopyTo.
+     *
+     * @param array the argument of type {@code ServiceControllerPermissionEntry[]}
+     * @param index the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceProcess.ServiceControllerPermissionEntryCollection.CopyTo" target="_top">.NET documentation</a>
+     */
     public void CopyTo(ServiceControllerPermissionEntry[] array, int index) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -280,6 +331,14 @@ public class ServiceControllerPermissionEntryCollection extends system.collectio
         }
     }
 
+    /**
+     * Invokes the .NET member Insert.
+     *
+     * @param index the argument of type {@code int}
+     * @param value the argument of type {@code ServiceControllerPermissionEntry}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceProcess.ServiceControllerPermissionEntryCollection.Insert" target="_top">.NET documentation</a>
+     */
     public void Insert(int index, ServiceControllerPermissionEntry value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -290,6 +349,13 @@ public class ServiceControllerPermissionEntryCollection extends system.collectio
         }
     }
 
+    /**
+     * Invokes the .NET member Remove.
+     *
+     * @param value the argument of type {@code ServiceControllerPermissionEntry}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceProcess.ServiceControllerPermissionEntryCollection.Remove" target="_top">.NET documentation</a>
+     */
     public void Remove(ServiceControllerPermissionEntry value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

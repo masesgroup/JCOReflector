@@ -98,7 +98,10 @@ public class MessageHeaderInfo extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public MessageHeaderInfo(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,13 @@ public class MessageHeaderInfo extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsReferenceParameter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.MessageHeaderInfo.IsReferenceParameter" target="_top">.NET documentation</a>
+     */
     public boolean getIsReferenceParameter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -169,6 +179,13 @@ public class MessageHeaderInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MustUnderstand.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.MessageHeaderInfo.MustUnderstand" target="_top">.NET documentation</a>
+     */
     public boolean getMustUnderstand() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +200,13 @@ public class MessageHeaderInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Relay.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.MessageHeaderInfo.Relay" target="_top">.NET documentation</a>
+     */
     public boolean getRelay() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +221,13 @@ public class MessageHeaderInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Actor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.MessageHeaderInfo.Actor" target="_top">.NET documentation</a>
+     */
     public java.lang.String getActor() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -211,6 +242,13 @@ public class MessageHeaderInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.MessageHeaderInfo.Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -225,6 +263,13 @@ public class MessageHeaderInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Namespace.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.MessageHeaderInfo.Namespace" target="_top">.NET documentation</a>
+     */
     public java.lang.String getNamespace() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -100,7 +100,10 @@ public class DbLikeExpression extends system.data.common.commandtrees.DbExpressi
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DbLikeExpression(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,14 @@ public class DbLikeExpression extends system.data.common.commandtrees.DbExpressi
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Accept.
+     *
+     * @param visitor the argument of type {@code DbExpressionVisitor}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbLikeExpression.Accept" target="_top">.NET documentation</a>
+     */
     public void Accept(DbExpressionVisitor visitor) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -169,6 +180,13 @@ public class DbLikeExpression extends system.data.common.commandtrees.DbExpressi
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Argument.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbLikeExpression.Argument" target="_top">.NET documentation</a>
+     */
     public DbExpression getArgument() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +202,13 @@ public class DbLikeExpression extends system.data.common.commandtrees.DbExpressi
         }
     }
 
+    /**
+     * Gets the value of the .NET property Escape.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbLikeExpression.Escape" target="_top">.NET documentation</a>
+     */
     public DbExpression getEscape() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -199,6 +224,13 @@ public class DbLikeExpression extends system.data.common.commandtrees.DbExpressi
         }
     }
 
+    /**
+     * Gets the value of the .NET property Pattern.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbLikeExpression.Pattern" target="_top">.NET documentation</a>
+     */
     public DbExpression getPattern() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

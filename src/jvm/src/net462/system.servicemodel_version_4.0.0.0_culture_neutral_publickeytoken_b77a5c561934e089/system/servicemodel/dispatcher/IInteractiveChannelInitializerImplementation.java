@@ -103,7 +103,10 @@ public class IInteractiveChannelInitializerImplementation extends NetObject impl
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IInteractiveChannelInitializerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -145,6 +148,16 @@ public class IInteractiveChannelInitializerImplementation extends NetObject impl
 
     // Methods section
     
+    /**
+     * Invokes the .NET member BeginDisplayInitializationUI.
+     *
+     * @param channel the argument of type {@code IClientChannel}
+     * @param callback the argument of type {@code AsyncCallback}
+     * @param state the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.IInteractiveChannelInitializer.BeginDisplayInitializationUI" target="_top">.NET documentation</a>
+     */
     public IAsyncResult BeginDisplayInitializationUI(IClientChannel channel, AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -160,6 +173,13 @@ public class IInteractiveChannelInitializerImplementation extends NetObject impl
         }
     }
 
+    /**
+     * Invokes the .NET member EndDisplayInitializationUI.
+     *
+     * @param result the argument of type {@code IAsyncResult}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.IInteractiveChannelInitializer.EndDisplayInitializationUI" target="_top">.NET documentation</a>
+     */
     public void EndDisplayInitializationUI(IAsyncResult result) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

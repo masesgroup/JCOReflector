@@ -103,7 +103,10 @@ public class HttpCapabilitiesDefaultProvider extends system.web.configuration.Ht
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public HttpCapabilitiesDefaultProvider(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,24 @@ public class HttpCapabilitiesDefaultProvider extends system.web.configuration.Ht
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @throws system.configuration.provider.ProviderException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Configuration.HttpCapabilitiesDefaultProvider.-ctor" target="_top">.NET documentation</a>
+     */
     public HttpCapabilitiesDefaultProvider() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.web.HttpException, system.InvalidOperationException, system.configuration.ConfigurationException, system.configuration.provider.ProviderException, system.NotSupportedException, system.NullReferenceException, system.configuration.ConfigurationErrorsException, system.OverflowException {
         try {
             // add reference to assemblyName.dll file
@@ -160,6 +181,23 @@ public class HttpCapabilitiesDefaultProvider extends system.web.configuration.Ht
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param parent the argument of type {@code HttpCapabilitiesDefaultProvider}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Configuration.HttpCapabilitiesDefaultProvider.-ctor" target="_top">.NET documentation</a>
+     */
     public HttpCapabilitiesDefaultProvider(HttpCapabilitiesDefaultProvider parent) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OverflowException, system.NullReferenceException {
         try {
             // add reference to assemblyName.dll file
@@ -174,6 +212,35 @@ public class HttpCapabilitiesDefaultProvider extends system.web.configuration.Ht
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetBrowserCapabilities.
+     *
+     * @param request the argument of type {@code HttpRequest}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @throws system.configuration.provider.ProviderException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.MemberAccessException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.web.HttpRequestValidationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Configuration.HttpCapabilitiesDefaultProvider.GetBrowserCapabilities" target="_top">.NET documentation</a>
+     */
     public HttpBrowserCapabilities GetBrowserCapabilities(HttpRequest request) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.security.SecurityException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.provider.ProviderException, system.NullReferenceException, system.MemberAccessException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException, system.threading.WaitHandleCannotBeOpenedException, system.web.HttpRequestValidationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +256,21 @@ public class HttpCapabilitiesDefaultProvider extends system.web.configuration.Ht
         }
     }
 
+    /**
+     * Invokes the .NET member AddDependency.
+     *
+     * @param variable the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Configuration.HttpCapabilitiesDefaultProvider.AddDependency" target="_top">.NET documentation</a>
+     */
     public void AddDependency(java.lang.String variable) throws Throwable, system.NullReferenceException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -199,6 +281,17 @@ public class HttpCapabilitiesDefaultProvider extends system.web.configuration.Ht
         }
     }
 
+    /**
+     * Invokes the .NET member AddRuleList.
+     *
+     * @param ruleList the argument of type {@code NetArrayList}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Configuration.HttpCapabilitiesDefaultProvider.AddRuleList" target="_top">.NET documentation</a>
+     */
     public void AddRuleList(NetArrayList ruleList) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -213,6 +306,13 @@ public class HttpCapabilitiesDefaultProvider extends system.web.configuration.Ht
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property UserAgentCacheKeyLength.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Configuration.HttpCapabilitiesDefaultProvider.UserAgentCacheKeyLength" target="_top">.NET documentation</a>
+     */
     public int getUserAgentCacheKeyLength() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -253,6 +353,13 @@ public class HttpCapabilitiesDefaultProvider extends system.web.configuration.Ht
         }
     }
 
+    /**
+     * Sets the value of the .NET property UserAgentCacheKeyLength.
+     *
+     * @param UserAgentCacheKeyLength the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Configuration.HttpCapabilitiesDefaultProvider.UserAgentCacheKeyLength" target="_top">.NET documentation</a>
+     */
     public void setUserAgentCacheKeyLength(int UserAgentCacheKeyLength) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -263,6 +370,13 @@ public class HttpCapabilitiesDefaultProvider extends system.web.configuration.Ht
         }
     }
 
+    /**
+     * Gets the value of the .NET property CacheTime.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Configuration.HttpCapabilitiesDefaultProvider.CacheTime" target="_top">.NET documentation</a>
+     */
     public TimeSpan getCacheTime() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -278,6 +392,13 @@ public class HttpCapabilitiesDefaultProvider extends system.web.configuration.Ht
         }
     }
 
+    /**
+     * Sets the value of the .NET property CacheTime.
+     *
+     * @param CacheTime the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Configuration.HttpCapabilitiesDefaultProvider.CacheTime" target="_top">.NET documentation</a>
+     */
     public void setCacheTime(TimeSpan CacheTime) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -288,6 +409,13 @@ public class HttpCapabilitiesDefaultProvider extends system.web.configuration.Ht
         }
     }
 
+    /**
+     * Gets the value of the .NET property ResultType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Configuration.HttpCapabilitiesDefaultProvider.ResultType" target="_top">.NET documentation</a>
+     */
     public NetType getResultType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -303,6 +431,13 @@ public class HttpCapabilitiesDefaultProvider extends system.web.configuration.Ht
         }
     }
 
+    /**
+     * Sets the value of the .NET property ResultType.
+     *
+     * @param ResultType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Configuration.HttpCapabilitiesDefaultProvider.ResultType" target="_top">.NET documentation</a>
+     */
     public void setResultType(NetType ResultType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

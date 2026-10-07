@@ -100,7 +100,10 @@ public class XamlXmlReaderSettings extends system.xaml.XamlReaderSettings  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XamlXmlReaderSettings(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class XamlXmlReaderSettings extends system.xaml.XamlReaderSettings  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlXmlReaderSettings.-ctor" target="_top">.NET documentation</a>
+     */
     public XamlXmlReaderSettings() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -157,6 +166,22 @@ public class XamlXmlReaderSettings extends system.xaml.XamlReaderSettings  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param settings the argument of type {@code XamlXmlReaderSettings}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlXmlReaderSettings.-ctor" target="_top">.NET documentation</a>
+     */
     public XamlXmlReaderSettings(XamlXmlReaderSettings settings) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.RankException, system.ArrayTypeMismatchException {
         try {
             // add reference to assemblyName.dll file
@@ -175,6 +200,13 @@ public class XamlXmlReaderSettings extends system.xaml.XamlReaderSettings  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CloseInput.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlXmlReaderSettings.CloseInput" target="_top">.NET documentation</a>
+     */
     public boolean getCloseInput() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +221,13 @@ public class XamlXmlReaderSettings extends system.xaml.XamlReaderSettings  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CloseInput.
+     *
+     * @param CloseInput the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlXmlReaderSettings.CloseInput" target="_top">.NET documentation</a>
+     */
     public void setCloseInput(boolean CloseInput) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -199,6 +238,13 @@ public class XamlXmlReaderSettings extends system.xaml.XamlReaderSettings  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SkipXmlCompatibilityProcessing.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlXmlReaderSettings.SkipXmlCompatibilityProcessing" target="_top">.NET documentation</a>
+     */
     public boolean getSkipXmlCompatibilityProcessing() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -213,6 +259,13 @@ public class XamlXmlReaderSettings extends system.xaml.XamlReaderSettings  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SkipXmlCompatibilityProcessing.
+     *
+     * @param SkipXmlCompatibilityProcessing the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlXmlReaderSettings.SkipXmlCompatibilityProcessing" target="_top">.NET documentation</a>
+     */
     public void setSkipXmlCompatibilityProcessing(boolean SkipXmlCompatibilityProcessing) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -223,6 +276,13 @@ public class XamlXmlReaderSettings extends system.xaml.XamlReaderSettings  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlSpacePreserve.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlXmlReaderSettings.XmlSpacePreserve" target="_top">.NET documentation</a>
+     */
     public boolean getXmlSpacePreserve() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -237,6 +297,13 @@ public class XamlXmlReaderSettings extends system.xaml.XamlReaderSettings  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property XmlSpacePreserve.
+     *
+     * @param XmlSpacePreserve the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlXmlReaderSettings.XmlSpacePreserve" target="_top">.NET documentation</a>
+     */
     public void setXmlSpacePreserve(boolean XmlSpacePreserve) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -247,6 +314,13 @@ public class XamlXmlReaderSettings extends system.xaml.XamlReaderSettings  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlLang.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlXmlReaderSettings.XmlLang" target="_top">.NET documentation</a>
+     */
     public java.lang.String getXmlLang() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -261,6 +335,13 @@ public class XamlXmlReaderSettings extends system.xaml.XamlReaderSettings  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property XmlLang.
+     *
+     * @param XmlLang the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlXmlReaderSettings.XmlLang" target="_top">.NET documentation</a>
+     */
     public void setXmlLang(java.lang.String XmlLang) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

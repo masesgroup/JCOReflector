@@ -99,7 +99,10 @@ public class ConstantExpectedAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ConstantExpectedAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class ConstantExpectedAttribute extends system.Attribute  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.CodeAnalysis.ConstantExpectedAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public ConstantExpectedAttribute() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +173,13 @@ public class ConstantExpectedAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Max.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.CodeAnalysis.ConstantExpectedAttribute.Max" target="_top">.NET documentation</a>
+     */
     public NetObject getMax() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -179,6 +195,13 @@ public class ConstantExpectedAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Max.
+     *
+     * @param Max the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.CodeAnalysis.ConstantExpectedAttribute.Max" target="_top">.NET documentation</a>
+     */
     public void setMax(NetObject Max) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +212,13 @@ public class ConstantExpectedAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Min.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.CodeAnalysis.ConstantExpectedAttribute.Min" target="_top">.NET documentation</a>
+     */
     public NetObject getMin() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +234,13 @@ public class ConstantExpectedAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Min.
+     *
+     * @param Min the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.CodeAnalysis.ConstantExpectedAttribute.Min" target="_top">.NET documentation</a>
+     */
     public void setMin(NetObject Min) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

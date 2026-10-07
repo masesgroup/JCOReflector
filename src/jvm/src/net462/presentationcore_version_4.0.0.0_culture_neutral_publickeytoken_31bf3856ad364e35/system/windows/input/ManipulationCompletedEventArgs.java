@@ -106,7 +106,10 @@ public class ManipulationCompletedEventArgs extends system.windows.input.InputEv
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ManipulationCompletedEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -161,6 +164,13 @@ public class ManipulationCompletedEventArgs extends system.windows.input.InputEv
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Cancel.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.ManipulationCompletedEventArgs.Cancel" target="_top">.NET documentation</a>
+     */
     public boolean Cancel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -179,6 +189,13 @@ public class ManipulationCompletedEventArgs extends system.windows.input.InputEv
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsInertial.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.ManipulationCompletedEventArgs.IsInertial" target="_top">.NET documentation</a>
+     */
     public boolean getIsInertial() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +210,13 @@ public class ManipulationCompletedEventArgs extends system.windows.input.InputEv
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsInertial.
+     *
+     * @param IsInertial the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.ManipulationCompletedEventArgs.IsInertial" target="_top">.NET documentation</a>
+     */
     public void setIsInertial(boolean IsInertial) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +227,15 @@ public class ManipulationCompletedEventArgs extends system.windows.input.InputEv
         }
     }
 
+    /**
+     * Gets the value of the .NET property Manipulators.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.ManipulationCompletedEventArgs.Manipulators" target="_top">.NET documentation</a>
+     */
     public IEnumerable_1 getManipulators() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -218,6 +251,13 @@ public class ManipulationCompletedEventArgs extends system.windows.input.InputEv
         }
     }
 
+    /**
+     * Gets the value of the .NET property ManipulationContainer.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.ManipulationCompletedEventArgs.ManipulationContainer" target="_top">.NET documentation</a>
+     */
     public IInputElement getManipulationContainer() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -233,6 +273,13 @@ public class ManipulationCompletedEventArgs extends system.windows.input.InputEv
         }
     }
 
+    /**
+     * Sets the value of the .NET property ManipulationContainer.
+     *
+     * @param ManipulationContainer the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.ManipulationCompletedEventArgs.ManipulationContainer" target="_top">.NET documentation</a>
+     */
     public void setManipulationContainer(IInputElement ManipulationContainer) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -243,6 +290,13 @@ public class ManipulationCompletedEventArgs extends system.windows.input.InputEv
         }
     }
 
+    /**
+     * Gets the value of the .NET property TotalManipulation.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.ManipulationCompletedEventArgs.TotalManipulation" target="_top">.NET documentation</a>
+     */
     public ManipulationDelta getTotalManipulation() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -258,6 +312,13 @@ public class ManipulationCompletedEventArgs extends system.windows.input.InputEv
         }
     }
 
+    /**
+     * Sets the value of the .NET property TotalManipulation.
+     *
+     * @param TotalManipulation the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.ManipulationCompletedEventArgs.TotalManipulation" target="_top">.NET documentation</a>
+     */
     public void setTotalManipulation(ManipulationDelta TotalManipulation) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -268,6 +329,13 @@ public class ManipulationCompletedEventArgs extends system.windows.input.InputEv
         }
     }
 
+    /**
+     * Gets the value of the .NET property FinalVelocities.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.ManipulationCompletedEventArgs.FinalVelocities" target="_top">.NET documentation</a>
+     */
     public ManipulationVelocities getFinalVelocities() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -283,6 +351,13 @@ public class ManipulationCompletedEventArgs extends system.windows.input.InputEv
         }
     }
 
+    /**
+     * Sets the value of the .NET property FinalVelocities.
+     *
+     * @param FinalVelocities the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.ManipulationCompletedEventArgs.FinalVelocities" target="_top">.NET documentation</a>
+     */
     public void setFinalVelocities(ManipulationVelocities FinalVelocities) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -293,6 +368,13 @@ public class ManipulationCompletedEventArgs extends system.windows.input.InputEv
         }
     }
 
+    /**
+     * Gets the value of the .NET property ManipulationOrigin.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.ManipulationCompletedEventArgs.ManipulationOrigin" target="_top">.NET documentation</a>
+     */
     public Point getManipulationOrigin() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -308,6 +390,13 @@ public class ManipulationCompletedEventArgs extends system.windows.input.InputEv
         }
     }
 
+    /**
+     * Sets the value of the .NET property ManipulationOrigin.
+     *
+     * @param ManipulationOrigin the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.ManipulationCompletedEventArgs.ManipulationOrigin" target="_top">.NET documentation</a>
+     */
     public void setManipulationOrigin(Point ManipulationOrigin) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

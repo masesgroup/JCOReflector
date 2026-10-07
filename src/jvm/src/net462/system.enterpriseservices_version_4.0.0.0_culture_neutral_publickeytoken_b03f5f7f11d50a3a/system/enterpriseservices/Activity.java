@@ -101,7 +101,10 @@ public class Activity extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Activity(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,13 @@ public class Activity extends NetObject  {
     public Activity() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param cfg the argument of type {@code ServiceConfig}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.Activity.-ctor" target="_top">.NET documentation</a>
+     */
     public Activity(ServiceConfig cfg) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -166,6 +176,13 @@ public class Activity extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member AsynchronousCall.
+     *
+     * @param serviceCall the argument of type {@code IServiceCall}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.Activity.AsynchronousCall" target="_top">.NET documentation</a>
+     */
     public void AsynchronousCall(IServiceCall serviceCall) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -176,6 +193,12 @@ public class Activity extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member BindToCurrentThread.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.Activity.BindToCurrentThread" target="_top">.NET documentation</a>
+     */
     public void BindToCurrentThread() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -186,6 +209,13 @@ public class Activity extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SynchronousCall.
+     *
+     * @param serviceCall the argument of type {@code IServiceCall}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.Activity.SynchronousCall" target="_top">.NET documentation</a>
+     */
     public void SynchronousCall(IServiceCall serviceCall) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -196,6 +226,12 @@ public class Activity extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member UnbindFromThread.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.Activity.UnbindFromThread" target="_top">.NET documentation</a>
+     */
     public void UnbindFromThread() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

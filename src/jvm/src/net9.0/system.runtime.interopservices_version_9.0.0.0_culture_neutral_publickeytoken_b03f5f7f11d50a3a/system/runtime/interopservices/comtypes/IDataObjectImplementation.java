@@ -108,7 +108,10 @@ public class IDataObjectImplementation extends NetObject implements IDataObject 
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IDataObjectImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,17 @@ public class IDataObjectImplementation extends NetObject implements IDataObject 
 
     // Methods section
     
+    /**
+     * Invokes the .NET member DAdvise.
+     *
+     * @param pFormatetc the argument of type {@code JCORefOut<FORMATETC>}
+     * @param advf the argument of type {@code ADVF}
+     * @param adviseSink the argument of type {@code IAdviseSink}
+     * @param connection the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicInteger>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComTypes.IDataObject.DAdvise" target="_top">.NET documentation</a>
+     */
     public int DAdvise(JCORefOut<FORMATETC> pFormatetc, ADVF advf, IAdviseSink adviseSink, JCORefOut<java.util.concurrent.atomic.AtomicInteger> connection) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +204,14 @@ public class IDataObjectImplementation extends NetObject implements IDataObject 
         }
     }
 
+    /**
+     * Invokes the .NET member EnumDAdvise.
+     *
+     * @param enumAdvise the argument of type {@code JCORefOut<IEnumSTATDATA>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComTypes.IDataObject.EnumDAdvise" target="_top">.NET documentation</a>
+     */
     public int EnumDAdvise(JCORefOut<IEnumSTATDATA> enumAdvise) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -230,6 +252,15 @@ public class IDataObjectImplementation extends NetObject implements IDataObject 
         }
     }
 
+    /**
+     * Invokes the .NET member GetCanonicalFormatEtc.
+     *
+     * @param formatIn the argument of type {@code JCORefOut<FORMATETC>}
+     * @param formatOut the argument of type {@code JCORefOut<FORMATETC>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComTypes.IDataObject.GetCanonicalFormatEtc" target="_top">.NET documentation</a>
+     */
     public int GetCanonicalFormatEtc(JCORefOut<FORMATETC> formatIn, JCORefOut<FORMATETC> formatOut) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -270,6 +301,14 @@ public class IDataObjectImplementation extends NetObject implements IDataObject 
         }
     }
 
+    /**
+     * Invokes the .NET member QueryGetData.
+     *
+     * @param format the argument of type {@code JCORefOut<FORMATETC>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComTypes.IDataObject.QueryGetData" target="_top">.NET documentation</a>
+     */
     public int QueryGetData(JCORefOut<FORMATETC> format) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -310,6 +349,14 @@ public class IDataObjectImplementation extends NetObject implements IDataObject 
         }
     }
 
+    /**
+     * Invokes the .NET member EnumFormatEtc.
+     *
+     * @param direction the argument of type {@code DATADIR}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComTypes.IDataObject.EnumFormatEtc" target="_top">.NET documentation</a>
+     */
     public IEnumFORMATETC EnumFormatEtc(DATADIR direction) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -325,6 +372,13 @@ public class IDataObjectImplementation extends NetObject implements IDataObject 
         }
     }
 
+    /**
+     * Invokes the .NET member DUnadvise.
+     *
+     * @param connection the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComTypes.IDataObject.DUnadvise" target="_top">.NET documentation</a>
+     */
     public void DUnadvise(int connection) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -335,6 +389,14 @@ public class IDataObjectImplementation extends NetObject implements IDataObject 
         }
     }
 
+    /**
+     * Invokes the .NET member GetData.
+     *
+     * @param format the argument of type {@code JCORefOut<FORMATETC>}
+     * @param medium the argument of type {@code JCORefOut<STGMEDIUM>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComTypes.IDataObject.GetData" target="_top">.NET documentation</a>
+     */
     public void GetData(JCORefOut<FORMATETC> format, JCORefOut<STGMEDIUM> medium) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -345,6 +407,14 @@ public class IDataObjectImplementation extends NetObject implements IDataObject 
         }
     }
 
+    /**
+     * Invokes the .NET member GetDataHere.
+     *
+     * @param format the argument of type {@code JCORefOut<FORMATETC>}
+     * @param medium the argument of type {@code JCORefOut<STGMEDIUM>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComTypes.IDataObject.GetDataHere" target="_top">.NET documentation</a>
+     */
     public void GetDataHere(JCORefOut<FORMATETC> format, JCORefOut<STGMEDIUM> medium) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -355,6 +425,15 @@ public class IDataObjectImplementation extends NetObject implements IDataObject 
         }
     }
 
+    /**
+     * Invokes the .NET member SetData.
+     *
+     * @param formatIn the argument of type {@code JCORefOut<FORMATETC>}
+     * @param medium the argument of type {@code JCORefOut<STGMEDIUM>}
+     * @param release the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComTypes.IDataObject.SetData" target="_top">.NET documentation</a>
+     */
     public void SetData(JCORefOut<FORMATETC> formatIn, JCORefOut<STGMEDIUM> medium, boolean release) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

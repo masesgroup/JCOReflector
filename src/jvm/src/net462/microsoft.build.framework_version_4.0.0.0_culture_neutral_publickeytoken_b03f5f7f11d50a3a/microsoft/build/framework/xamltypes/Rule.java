@@ -109,7 +109,10 @@ public class Rule extends microsoft.build.framework.xamltypes.RuleSchema  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Rule(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,14 @@ public class Rule extends microsoft.build.framework.xamltypes.RuleSchema  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.Rule.-ctor" target="_top">.NET documentation</a>
+     */
     public Rule() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +181,18 @@ public class Rule extends microsoft.build.framework.xamltypes.RuleSchema  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetProperty.
+     *
+     * @param propertyName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.Rule.GetProperty" target="_top">.NET documentation</a>
+     */
     public BaseProperty GetProperty(java.lang.String propertyName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -185,6 +208,14 @@ public class Rule extends microsoft.build.framework.xamltypes.RuleSchema  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetSchemaObjects.
+     *
+     * @param type the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.Rule.GetSchemaObjects" target="_top">.NET documentation</a>
+     */
     public IEnumerable_1 GetSchemaObjects(NetType type) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +231,13 @@ public class Rule extends microsoft.build.framework.xamltypes.RuleSchema  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetSchemaObjectTypes.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.Rule.GetSchemaObjectTypes" target="_top">.NET documentation</a>
+     */
     public IEnumerable_1 GetSchemaObjectTypes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +253,24 @@ public class Rule extends microsoft.build.framework.xamltypes.RuleSchema  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetPropertiesInCategory.
+     *
+     * @param categoryName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.Rule.GetPropertiesInCategory" target="_top">.NET documentation</a>
+     */
     public IList_1 GetPropertiesInCategory(java.lang.String categoryName) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -230,6 +286,23 @@ public class Rule extends microsoft.build.framework.xamltypes.RuleSchema  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetPropertiesByCategory.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.Rule.GetPropertiesByCategory" target="_top">.NET documentation</a>
+     */
     public OrderedDictionary GetPropertiesByCategory() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -245,6 +318,12 @@ public class Rule extends microsoft.build.framework.xamltypes.RuleSchema  {
         }
     }
 
+    /**
+     * Invokes the .NET member BeginInit.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.Rule.BeginInit" target="_top">.NET documentation</a>
+     */
     public void BeginInit() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -255,6 +334,13 @@ public class Rule extends microsoft.build.framework.xamltypes.RuleSchema  {
         }
     }
 
+    /**
+     * Invokes the .NET member EndInit.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.Rule.EndInit" target="_top">.NET documentation</a>
+     */
     public void EndInit() throws Throwable, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -269,6 +355,13 @@ public class Rule extends microsoft.build.framework.xamltypes.RuleSchema  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property PropertyPagesHidden.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.Rule.PropertyPagesHidden" target="_top">.NET documentation</a>
+     */
     public boolean getPropertyPagesHidden() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -283,6 +376,13 @@ public class Rule extends microsoft.build.framework.xamltypes.RuleSchema  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PropertyPagesHidden.
+     *
+     * @param PropertyPagesHidden the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.Rule.PropertyPagesHidden" target="_top">.NET documentation</a>
+     */
     public void setPropertyPagesHidden(boolean PropertyPagesHidden) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -293,6 +393,13 @@ public class Rule extends microsoft.build.framework.xamltypes.RuleSchema  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ShowOnlyRuleProperties.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.Rule.ShowOnlyRuleProperties" target="_top">.NET documentation</a>
+     */
     public boolean getShowOnlyRuleProperties() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -307,6 +414,13 @@ public class Rule extends microsoft.build.framework.xamltypes.RuleSchema  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ShowOnlyRuleProperties.
+     *
+     * @param ShowOnlyRuleProperties the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.Rule.ShowOnlyRuleProperties" target="_top">.NET documentation</a>
+     */
     public void setShowOnlyRuleProperties(boolean ShowOnlyRuleProperties) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -317,6 +431,13 @@ public class Rule extends microsoft.build.framework.xamltypes.RuleSchema  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SupportsFileBatching.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.Rule.SupportsFileBatching" target="_top">.NET documentation</a>
+     */
     public boolean getSupportsFileBatching() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -331,6 +452,13 @@ public class Rule extends microsoft.build.framework.xamltypes.RuleSchema  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SupportsFileBatching.
+     *
+     * @param SupportsFileBatching the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.Rule.SupportsFileBatching" target="_top">.NET documentation</a>
+     */
     public void setSupportsFileBatching(boolean SupportsFileBatching) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -341,6 +469,13 @@ public class Rule extends microsoft.build.framework.xamltypes.RuleSchema  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Order.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.Rule.Order" target="_top">.NET documentation</a>
+     */
     public int getOrder() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -381,6 +516,13 @@ public class Rule extends microsoft.build.framework.xamltypes.RuleSchema  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Order.
+     *
+     * @param Order the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.Rule.Order" target="_top">.NET documentation</a>
+     */
     public void setOrder(int Order) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -391,6 +533,13 @@ public class Rule extends microsoft.build.framework.xamltypes.RuleSchema  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DataSource.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.Rule.DataSource" target="_top">.NET documentation</a>
+     */
     public DataSource getDataSource() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -406,6 +555,13 @@ public class Rule extends microsoft.build.framework.xamltypes.RuleSchema  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DataSource.
+     *
+     * @param DataSource the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.Rule.DataSource" target="_top">.NET documentation</a>
+     */
     public void setDataSource(DataSource DataSource) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -416,6 +572,13 @@ public class Rule extends microsoft.build.framework.xamltypes.RuleSchema  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OverrideMode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.Rule.OverrideMode" target="_top">.NET documentation</a>
+     */
     public RuleOverrideMode getOverrideMode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -431,6 +594,13 @@ public class Rule extends microsoft.build.framework.xamltypes.RuleSchema  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property OverrideMode.
+     *
+     * @param OverrideMode the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.Rule.OverrideMode" target="_top">.NET documentation</a>
+     */
     public void setOverrideMode(RuleOverrideMode OverrideMode) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -441,6 +611,13 @@ public class Rule extends microsoft.build.framework.xamltypes.RuleSchema  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Metadata.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.Rule.Metadata" target="_top">.NET documentation</a>
+     */
     public Dictionary_2 getMetadata() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -456,6 +633,13 @@ public class Rule extends microsoft.build.framework.xamltypes.RuleSchema  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Metadata.
+     *
+     * @param Metadata the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.Rule.Metadata" target="_top">.NET documentation</a>
+     */
     public void setMetadata(Dictionary_2 Metadata) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -466,6 +650,13 @@ public class Rule extends microsoft.build.framework.xamltypes.RuleSchema  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Properties.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.Rule.Properties" target="_top">.NET documentation</a>
+     */
     public List_1 getProperties() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -481,6 +672,13 @@ public class Rule extends microsoft.build.framework.xamltypes.RuleSchema  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Properties.
+     *
+     * @param Properties the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.Rule.Properties" target="_top">.NET documentation</a>
+     */
     public void setProperties(List_1 Properties) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -491,6 +689,13 @@ public class Rule extends microsoft.build.framework.xamltypes.RuleSchema  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Categories.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.Rule.Categories" target="_top">.NET documentation</a>
+     */
     public List_1 getCategories() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -506,6 +711,13 @@ public class Rule extends microsoft.build.framework.xamltypes.RuleSchema  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Categories.
+     *
+     * @param Categories the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.Rule.Categories" target="_top">.NET documentation</a>
+     */
     public void setCategories(List_1 Categories) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -516,6 +728,23 @@ public class Rule extends microsoft.build.framework.xamltypes.RuleSchema  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EvaluatedCategories.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.Rule.EvaluatedCategories" target="_top">.NET documentation</a>
+     */
     public List_1 getEvaluatedCategories() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -531,6 +760,13 @@ public class Rule extends microsoft.build.framework.xamltypes.RuleSchema  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AdditionalInputs.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.Rule.AdditionalInputs" target="_top">.NET documentation</a>
+     */
     public java.lang.String getAdditionalInputs() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -545,6 +781,13 @@ public class Rule extends microsoft.build.framework.xamltypes.RuleSchema  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AdditionalInputs.
+     *
+     * @param AdditionalInputs the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.Rule.AdditionalInputs" target="_top">.NET documentation</a>
+     */
     public void setAdditionalInputs(java.lang.String AdditionalInputs) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -555,6 +798,13 @@ public class Rule extends microsoft.build.framework.xamltypes.RuleSchema  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CommandLine.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.Rule.CommandLine" target="_top">.NET documentation</a>
+     */
     public java.lang.String getCommandLine() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -569,6 +819,13 @@ public class Rule extends microsoft.build.framework.xamltypes.RuleSchema  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CommandLine.
+     *
+     * @param CommandLine the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.Rule.CommandLine" target="_top">.NET documentation</a>
+     */
     public void setCommandLine(java.lang.String CommandLine) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -579,6 +836,13 @@ public class Rule extends microsoft.build.framework.xamltypes.RuleSchema  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Description.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.Rule.Description" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDescription() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -593,6 +857,13 @@ public class Rule extends microsoft.build.framework.xamltypes.RuleSchema  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Description.
+     *
+     * @param Description the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.Rule.Description" target="_top">.NET documentation</a>
+     */
     public void setDescription(java.lang.String Description) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -603,6 +874,13 @@ public class Rule extends microsoft.build.framework.xamltypes.RuleSchema  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DisplayName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.Rule.DisplayName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDisplayName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -617,6 +895,13 @@ public class Rule extends microsoft.build.framework.xamltypes.RuleSchema  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DisplayName.
+     *
+     * @param DisplayName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.Rule.DisplayName" target="_top">.NET documentation</a>
+     */
     public void setDisplayName(java.lang.String DisplayName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -627,6 +912,13 @@ public class Rule extends microsoft.build.framework.xamltypes.RuleSchema  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ExecutionDescription.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.Rule.ExecutionDescription" target="_top">.NET documentation</a>
+     */
     public java.lang.String getExecutionDescription() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -641,6 +933,13 @@ public class Rule extends microsoft.build.framework.xamltypes.RuleSchema  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ExecutionDescription.
+     *
+     * @param ExecutionDescription the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.Rule.ExecutionDescription" target="_top">.NET documentation</a>
+     */
     public void setExecutionDescription(java.lang.String ExecutionDescription) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -651,6 +950,13 @@ public class Rule extends microsoft.build.framework.xamltypes.RuleSchema  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FileExtension.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.Rule.FileExtension" target="_top">.NET documentation</a>
+     */
     public java.lang.String getFileExtension() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -665,6 +971,13 @@ public class Rule extends microsoft.build.framework.xamltypes.RuleSchema  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property FileExtension.
+     *
+     * @param FileExtension the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.Rule.FileExtension" target="_top">.NET documentation</a>
+     */
     public void setFileExtension(java.lang.String FileExtension) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -675,6 +988,13 @@ public class Rule extends microsoft.build.framework.xamltypes.RuleSchema  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property HelpString.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.Rule.HelpString" target="_top">.NET documentation</a>
+     */
     public java.lang.String getHelpString() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -689,6 +1009,13 @@ public class Rule extends microsoft.build.framework.xamltypes.RuleSchema  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property HelpString.
+     *
+     * @param HelpString the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.Rule.HelpString" target="_top">.NET documentation</a>
+     */
     public void setHelpString(java.lang.String HelpString) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -699,6 +1026,13 @@ public class Rule extends microsoft.build.framework.xamltypes.RuleSchema  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.Rule.Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -713,6 +1047,13 @@ public class Rule extends microsoft.build.framework.xamltypes.RuleSchema  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Name.
+     *
+     * @param Name the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.Rule.Name" target="_top">.NET documentation</a>
+     */
     public void setName(java.lang.String Name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -723,6 +1064,13 @@ public class Rule extends microsoft.build.framework.xamltypes.RuleSchema  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Outputs.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.Rule.Outputs" target="_top">.NET documentation</a>
+     */
     public java.lang.String getOutputs() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -737,6 +1085,13 @@ public class Rule extends microsoft.build.framework.xamltypes.RuleSchema  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Outputs.
+     *
+     * @param Outputs the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.Rule.Outputs" target="_top">.NET documentation</a>
+     */
     public void setOutputs(java.lang.String Outputs) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -747,6 +1102,13 @@ public class Rule extends microsoft.build.framework.xamltypes.RuleSchema  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PageTemplate.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.Rule.PageTemplate" target="_top">.NET documentation</a>
+     */
     public java.lang.String getPageTemplate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -761,6 +1123,13 @@ public class Rule extends microsoft.build.framework.xamltypes.RuleSchema  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PageTemplate.
+     *
+     * @param PageTemplate the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.Rule.PageTemplate" target="_top">.NET documentation</a>
+     */
     public void setPageTemplate(java.lang.String PageTemplate) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -771,6 +1140,13 @@ public class Rule extends microsoft.build.framework.xamltypes.RuleSchema  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Separator.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.Rule.Separator" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSeparator() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -785,6 +1161,13 @@ public class Rule extends microsoft.build.framework.xamltypes.RuleSchema  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Separator.
+     *
+     * @param Separator the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.Rule.Separator" target="_top">.NET documentation</a>
+     */
     public void setSeparator(java.lang.String Separator) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -795,6 +1178,13 @@ public class Rule extends microsoft.build.framework.xamltypes.RuleSchema  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SwitchPrefix.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.Rule.SwitchPrefix" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSwitchPrefix() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -809,6 +1199,13 @@ public class Rule extends microsoft.build.framework.xamltypes.RuleSchema  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SwitchPrefix.
+     *
+     * @param SwitchPrefix the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.Rule.SwitchPrefix" target="_top">.NET documentation</a>
+     */
     public void setSwitchPrefix(java.lang.String SwitchPrefix) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -819,6 +1216,13 @@ public class Rule extends microsoft.build.framework.xamltypes.RuleSchema  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ToolName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.Rule.ToolName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getToolName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -833,6 +1237,13 @@ public class Rule extends microsoft.build.framework.xamltypes.RuleSchema  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ToolName.
+     *
+     * @param ToolName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.Rule.ToolName" target="_top">.NET documentation</a>
+     */
     public void setToolName(java.lang.String ToolName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -98,7 +98,10 @@ public class MessagePropertyFilter extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public MessagePropertyFilter(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -145,6 +148,12 @@ public class MessagePropertyFilter extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.MessagePropertyFilter.-ctor" target="_top">.NET documentation</a>
+     */
     public MessagePropertyFilter() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -159,6 +168,13 @@ public class MessagePropertyFilter extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Clone.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.MessagePropertyFilter.Clone" target="_top">.NET documentation</a>
+     */
     public NetObject Clone() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -174,6 +190,12 @@ public class MessagePropertyFilter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ClearAll.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.MessagePropertyFilter.ClearAll" target="_top">.NET documentation</a>
+     */
     public void ClearAll() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +206,12 @@ public class MessagePropertyFilter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetAll.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.MessagePropertyFilter.SetAll" target="_top">.NET documentation</a>
+     */
     public void SetAll() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +222,22 @@ public class MessagePropertyFilter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetDefaults.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.MessagePropertyFilter.SetDefaults" target="_top">.NET documentation</a>
+     */
     public void SetDefaults() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +252,13 @@ public class MessagePropertyFilter extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AcknowledgeType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.MessagePropertyFilter.AcknowledgeType" target="_top">.NET documentation</a>
+     */
     public boolean getAcknowledgeType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -222,6 +273,13 @@ public class MessagePropertyFilter extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AcknowledgeType.
+     *
+     * @param AcknowledgeType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.MessagePropertyFilter.AcknowledgeType" target="_top">.NET documentation</a>
+     */
     public void setAcknowledgeType(boolean AcknowledgeType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -232,6 +290,13 @@ public class MessagePropertyFilter extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Acknowledgment.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.MessagePropertyFilter.Acknowledgment" target="_top">.NET documentation</a>
+     */
     public boolean getAcknowledgment() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -246,6 +311,13 @@ public class MessagePropertyFilter extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Acknowledgment.
+     *
+     * @param Acknowledgment the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.MessagePropertyFilter.Acknowledgment" target="_top">.NET documentation</a>
+     */
     public void setAcknowledgment(boolean Acknowledgment) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -256,6 +328,13 @@ public class MessagePropertyFilter extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AdministrationQueue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.MessagePropertyFilter.AdministrationQueue" target="_top">.NET documentation</a>
+     */
     public boolean getAdministrationQueue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -270,6 +349,13 @@ public class MessagePropertyFilter extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AdministrationQueue.
+     *
+     * @param AdministrationQueue the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.MessagePropertyFilter.AdministrationQueue" target="_top">.NET documentation</a>
+     */
     public void setAdministrationQueue(boolean AdministrationQueue) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -280,6 +366,13 @@ public class MessagePropertyFilter extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AppSpecific.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.MessagePropertyFilter.AppSpecific" target="_top">.NET documentation</a>
+     */
     public boolean getAppSpecific() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -294,6 +387,13 @@ public class MessagePropertyFilter extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AppSpecific.
+     *
+     * @param AppSpecific the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.MessagePropertyFilter.AppSpecific" target="_top">.NET documentation</a>
+     */
     public void setAppSpecific(boolean AppSpecific) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -304,6 +404,13 @@ public class MessagePropertyFilter extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ArrivedTime.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.MessagePropertyFilter.ArrivedTime" target="_top">.NET documentation</a>
+     */
     public boolean getArrivedTime() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -318,6 +425,13 @@ public class MessagePropertyFilter extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ArrivedTime.
+     *
+     * @param ArrivedTime the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.MessagePropertyFilter.ArrivedTime" target="_top">.NET documentation</a>
+     */
     public void setArrivedTime(boolean ArrivedTime) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -328,6 +442,13 @@ public class MessagePropertyFilter extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AttachSenderId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.MessagePropertyFilter.AttachSenderId" target="_top">.NET documentation</a>
+     */
     public boolean getAttachSenderId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -342,6 +463,13 @@ public class MessagePropertyFilter extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AttachSenderId.
+     *
+     * @param AttachSenderId the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.MessagePropertyFilter.AttachSenderId" target="_top">.NET documentation</a>
+     */
     public void setAttachSenderId(boolean AttachSenderId) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -352,6 +480,13 @@ public class MessagePropertyFilter extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Authenticated.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.MessagePropertyFilter.Authenticated" target="_top">.NET documentation</a>
+     */
     public boolean getAuthenticated() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -366,6 +501,13 @@ public class MessagePropertyFilter extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Authenticated.
+     *
+     * @param Authenticated the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.MessagePropertyFilter.Authenticated" target="_top">.NET documentation</a>
+     */
     public void setAuthenticated(boolean Authenticated) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -376,6 +518,13 @@ public class MessagePropertyFilter extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AuthenticationProviderName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.MessagePropertyFilter.AuthenticationProviderName" target="_top">.NET documentation</a>
+     */
     public boolean getAuthenticationProviderName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -390,6 +539,13 @@ public class MessagePropertyFilter extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AuthenticationProviderName.
+     *
+     * @param AuthenticationProviderName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.MessagePropertyFilter.AuthenticationProviderName" target="_top">.NET documentation</a>
+     */
     public void setAuthenticationProviderName(boolean AuthenticationProviderName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -400,6 +556,13 @@ public class MessagePropertyFilter extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AuthenticationProviderType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.MessagePropertyFilter.AuthenticationProviderType" target="_top">.NET documentation</a>
+     */
     public boolean getAuthenticationProviderType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -414,6 +577,13 @@ public class MessagePropertyFilter extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AuthenticationProviderType.
+     *
+     * @param AuthenticationProviderType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.MessagePropertyFilter.AuthenticationProviderType" target="_top">.NET documentation</a>
+     */
     public void setAuthenticationProviderType(boolean AuthenticationProviderType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -424,6 +594,13 @@ public class MessagePropertyFilter extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Body.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.MessagePropertyFilter.Body" target="_top">.NET documentation</a>
+     */
     public boolean getBody() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -438,6 +615,13 @@ public class MessagePropertyFilter extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Body.
+     *
+     * @param Body the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.MessagePropertyFilter.Body" target="_top">.NET documentation</a>
+     */
     public void setBody(boolean Body) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -448,6 +632,13 @@ public class MessagePropertyFilter extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ConnectorType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.MessagePropertyFilter.ConnectorType" target="_top">.NET documentation</a>
+     */
     public boolean getConnectorType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -462,6 +653,13 @@ public class MessagePropertyFilter extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ConnectorType.
+     *
+     * @param ConnectorType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.MessagePropertyFilter.ConnectorType" target="_top">.NET documentation</a>
+     */
     public void setConnectorType(boolean ConnectorType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -472,6 +670,13 @@ public class MessagePropertyFilter extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CorrelationId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.MessagePropertyFilter.CorrelationId" target="_top">.NET documentation</a>
+     */
     public boolean getCorrelationId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -486,6 +691,13 @@ public class MessagePropertyFilter extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CorrelationId.
+     *
+     * @param CorrelationId the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.MessagePropertyFilter.CorrelationId" target="_top">.NET documentation</a>
+     */
     public void setCorrelationId(boolean CorrelationId) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -496,6 +708,13 @@ public class MessagePropertyFilter extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DestinationQueue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.MessagePropertyFilter.DestinationQueue" target="_top">.NET documentation</a>
+     */
     public boolean getDestinationQueue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -510,6 +729,13 @@ public class MessagePropertyFilter extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DestinationQueue.
+     *
+     * @param DestinationQueue the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.MessagePropertyFilter.DestinationQueue" target="_top">.NET documentation</a>
+     */
     public void setDestinationQueue(boolean DestinationQueue) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -520,6 +746,13 @@ public class MessagePropertyFilter extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DestinationSymmetricKey.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.MessagePropertyFilter.DestinationSymmetricKey" target="_top">.NET documentation</a>
+     */
     public boolean getDestinationSymmetricKey() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -534,6 +767,13 @@ public class MessagePropertyFilter extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DestinationSymmetricKey.
+     *
+     * @param DestinationSymmetricKey the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.MessagePropertyFilter.DestinationSymmetricKey" target="_top">.NET documentation</a>
+     */
     public void setDestinationSymmetricKey(boolean DestinationSymmetricKey) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -544,6 +784,13 @@ public class MessagePropertyFilter extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DigitalSignature.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.MessagePropertyFilter.DigitalSignature" target="_top">.NET documentation</a>
+     */
     public boolean getDigitalSignature() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -558,6 +805,13 @@ public class MessagePropertyFilter extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DigitalSignature.
+     *
+     * @param DigitalSignature the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.MessagePropertyFilter.DigitalSignature" target="_top">.NET documentation</a>
+     */
     public void setDigitalSignature(boolean DigitalSignature) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -568,6 +822,13 @@ public class MessagePropertyFilter extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EncryptionAlgorithm.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.MessagePropertyFilter.EncryptionAlgorithm" target="_top">.NET documentation</a>
+     */
     public boolean getEncryptionAlgorithm() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -582,6 +843,13 @@ public class MessagePropertyFilter extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property EncryptionAlgorithm.
+     *
+     * @param EncryptionAlgorithm the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.MessagePropertyFilter.EncryptionAlgorithm" target="_top">.NET documentation</a>
+     */
     public void setEncryptionAlgorithm(boolean EncryptionAlgorithm) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -592,6 +860,13 @@ public class MessagePropertyFilter extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Extension.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.MessagePropertyFilter.Extension" target="_top">.NET documentation</a>
+     */
     public boolean getExtension() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -606,6 +881,13 @@ public class MessagePropertyFilter extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Extension.
+     *
+     * @param Extension the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.MessagePropertyFilter.Extension" target="_top">.NET documentation</a>
+     */
     public void setExtension(boolean Extension) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -616,6 +898,13 @@ public class MessagePropertyFilter extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property HashAlgorithm.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.MessagePropertyFilter.HashAlgorithm" target="_top">.NET documentation</a>
+     */
     public boolean getHashAlgorithm() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -630,6 +919,13 @@ public class MessagePropertyFilter extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property HashAlgorithm.
+     *
+     * @param HashAlgorithm the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.MessagePropertyFilter.HashAlgorithm" target="_top">.NET documentation</a>
+     */
     public void setHashAlgorithm(boolean HashAlgorithm) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -640,6 +936,13 @@ public class MessagePropertyFilter extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Id.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.MessagePropertyFilter.Id" target="_top">.NET documentation</a>
+     */
     public boolean getId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -654,6 +957,13 @@ public class MessagePropertyFilter extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Id.
+     *
+     * @param Id the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.MessagePropertyFilter.Id" target="_top">.NET documentation</a>
+     */
     public void setId(boolean Id) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -664,6 +974,13 @@ public class MessagePropertyFilter extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsFirstInTransaction.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.MessagePropertyFilter.IsFirstInTransaction" target="_top">.NET documentation</a>
+     */
     public boolean getIsFirstInTransaction() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -678,6 +995,13 @@ public class MessagePropertyFilter extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsFirstInTransaction.
+     *
+     * @param IsFirstInTransaction the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.MessagePropertyFilter.IsFirstInTransaction" target="_top">.NET documentation</a>
+     */
     public void setIsFirstInTransaction(boolean IsFirstInTransaction) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -688,6 +1012,13 @@ public class MessagePropertyFilter extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsLastInTransaction.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.MessagePropertyFilter.IsLastInTransaction" target="_top">.NET documentation</a>
+     */
     public boolean getIsLastInTransaction() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -702,6 +1033,13 @@ public class MessagePropertyFilter extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsLastInTransaction.
+     *
+     * @param IsLastInTransaction the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.MessagePropertyFilter.IsLastInTransaction" target="_top">.NET documentation</a>
+     */
     public void setIsLastInTransaction(boolean IsLastInTransaction) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -712,6 +1050,13 @@ public class MessagePropertyFilter extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Label.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.MessagePropertyFilter.Label" target="_top">.NET documentation</a>
+     */
     public boolean getLabel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -726,6 +1071,13 @@ public class MessagePropertyFilter extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Label.
+     *
+     * @param Label the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.MessagePropertyFilter.Label" target="_top">.NET documentation</a>
+     */
     public void setLabel(boolean Label) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -736,6 +1088,25 @@ public class MessagePropertyFilter extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LookupId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.MessagePropertyFilter.LookupId" target="_top">.NET documentation</a>
+     */
     public boolean getLookupId() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -750,6 +1121,25 @@ public class MessagePropertyFilter extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property LookupId.
+     *
+     * @param LookupId the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.MessagePropertyFilter.LookupId" target="_top">.NET documentation</a>
+     */
     public void setLookupId(boolean LookupId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -760,6 +1150,13 @@ public class MessagePropertyFilter extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MessageType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.MessagePropertyFilter.MessageType" target="_top">.NET documentation</a>
+     */
     public boolean getMessageType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -774,6 +1171,13 @@ public class MessagePropertyFilter extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MessageType.
+     *
+     * @param MessageType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.MessagePropertyFilter.MessageType" target="_top">.NET documentation</a>
+     */
     public void setMessageType(boolean MessageType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -784,6 +1188,13 @@ public class MessagePropertyFilter extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Priority.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.MessagePropertyFilter.Priority" target="_top">.NET documentation</a>
+     */
     public boolean getPriority() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -798,6 +1209,13 @@ public class MessagePropertyFilter extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Priority.
+     *
+     * @param Priority the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.MessagePropertyFilter.Priority" target="_top">.NET documentation</a>
+     */
     public void setPriority(boolean Priority) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -808,6 +1226,13 @@ public class MessagePropertyFilter extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Recoverable.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.MessagePropertyFilter.Recoverable" target="_top">.NET documentation</a>
+     */
     public boolean getRecoverable() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -822,6 +1247,13 @@ public class MessagePropertyFilter extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Recoverable.
+     *
+     * @param Recoverable the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.MessagePropertyFilter.Recoverable" target="_top">.NET documentation</a>
+     */
     public void setRecoverable(boolean Recoverable) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -832,6 +1264,13 @@ public class MessagePropertyFilter extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ResponseQueue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.MessagePropertyFilter.ResponseQueue" target="_top">.NET documentation</a>
+     */
     public boolean getResponseQueue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -846,6 +1285,13 @@ public class MessagePropertyFilter extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ResponseQueue.
+     *
+     * @param ResponseQueue the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.MessagePropertyFilter.ResponseQueue" target="_top">.NET documentation</a>
+     */
     public void setResponseQueue(boolean ResponseQueue) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -856,6 +1302,13 @@ public class MessagePropertyFilter extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SenderCertificate.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.MessagePropertyFilter.SenderCertificate" target="_top">.NET documentation</a>
+     */
     public boolean getSenderCertificate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -870,6 +1323,13 @@ public class MessagePropertyFilter extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SenderCertificate.
+     *
+     * @param SenderCertificate the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.MessagePropertyFilter.SenderCertificate" target="_top">.NET documentation</a>
+     */
     public void setSenderCertificate(boolean SenderCertificate) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -880,6 +1340,13 @@ public class MessagePropertyFilter extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SenderId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.MessagePropertyFilter.SenderId" target="_top">.NET documentation</a>
+     */
     public boolean getSenderId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -894,6 +1361,13 @@ public class MessagePropertyFilter extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SenderId.
+     *
+     * @param SenderId the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.MessagePropertyFilter.SenderId" target="_top">.NET documentation</a>
+     */
     public void setSenderId(boolean SenderId) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -904,6 +1378,13 @@ public class MessagePropertyFilter extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SenderVersion.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.MessagePropertyFilter.SenderVersion" target="_top">.NET documentation</a>
+     */
     public boolean getSenderVersion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -918,6 +1399,13 @@ public class MessagePropertyFilter extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SenderVersion.
+     *
+     * @param SenderVersion the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.MessagePropertyFilter.SenderVersion" target="_top">.NET documentation</a>
+     */
     public void setSenderVersion(boolean SenderVersion) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -928,6 +1416,13 @@ public class MessagePropertyFilter extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SentTime.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.MessagePropertyFilter.SentTime" target="_top">.NET documentation</a>
+     */
     public boolean getSentTime() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -942,6 +1437,13 @@ public class MessagePropertyFilter extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SentTime.
+     *
+     * @param SentTime the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.MessagePropertyFilter.SentTime" target="_top">.NET documentation</a>
+     */
     public void setSentTime(boolean SentTime) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -952,6 +1454,13 @@ public class MessagePropertyFilter extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SourceMachine.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.MessagePropertyFilter.SourceMachine" target="_top">.NET documentation</a>
+     */
     public boolean getSourceMachine() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -966,6 +1475,13 @@ public class MessagePropertyFilter extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SourceMachine.
+     *
+     * @param SourceMachine the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.MessagePropertyFilter.SourceMachine" target="_top">.NET documentation</a>
+     */
     public void setSourceMachine(boolean SourceMachine) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -976,6 +1492,13 @@ public class MessagePropertyFilter extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TimeToBeReceived.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.MessagePropertyFilter.TimeToBeReceived" target="_top">.NET documentation</a>
+     */
     public boolean getTimeToBeReceived() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -990,6 +1513,13 @@ public class MessagePropertyFilter extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TimeToBeReceived.
+     *
+     * @param TimeToBeReceived the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.MessagePropertyFilter.TimeToBeReceived" target="_top">.NET documentation</a>
+     */
     public void setTimeToBeReceived(boolean TimeToBeReceived) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1000,6 +1530,13 @@ public class MessagePropertyFilter extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TimeToReachQueue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.MessagePropertyFilter.TimeToReachQueue" target="_top">.NET documentation</a>
+     */
     public boolean getTimeToReachQueue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1014,6 +1551,13 @@ public class MessagePropertyFilter extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TimeToReachQueue.
+     *
+     * @param TimeToReachQueue the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.MessagePropertyFilter.TimeToReachQueue" target="_top">.NET documentation</a>
+     */
     public void setTimeToReachQueue(boolean TimeToReachQueue) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1024,6 +1568,13 @@ public class MessagePropertyFilter extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TransactionId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.MessagePropertyFilter.TransactionId" target="_top">.NET documentation</a>
+     */
     public boolean getTransactionId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1038,6 +1589,13 @@ public class MessagePropertyFilter extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TransactionId.
+     *
+     * @param TransactionId the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.MessagePropertyFilter.TransactionId" target="_top">.NET documentation</a>
+     */
     public void setTransactionId(boolean TransactionId) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1048,6 +1606,13 @@ public class MessagePropertyFilter extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TransactionStatusQueue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.MessagePropertyFilter.TransactionStatusQueue" target="_top">.NET documentation</a>
+     */
     public boolean getTransactionStatusQueue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1062,6 +1627,13 @@ public class MessagePropertyFilter extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TransactionStatusQueue.
+     *
+     * @param TransactionStatusQueue the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.MessagePropertyFilter.TransactionStatusQueue" target="_top">.NET documentation</a>
+     */
     public void setTransactionStatusQueue(boolean TransactionStatusQueue) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1072,6 +1644,13 @@ public class MessagePropertyFilter extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UseAuthentication.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.MessagePropertyFilter.UseAuthentication" target="_top">.NET documentation</a>
+     */
     public boolean getUseAuthentication() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1086,6 +1665,13 @@ public class MessagePropertyFilter extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property UseAuthentication.
+     *
+     * @param UseAuthentication the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.MessagePropertyFilter.UseAuthentication" target="_top">.NET documentation</a>
+     */
     public void setUseAuthentication(boolean UseAuthentication) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1096,6 +1682,13 @@ public class MessagePropertyFilter extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UseDeadLetterQueue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.MessagePropertyFilter.UseDeadLetterQueue" target="_top">.NET documentation</a>
+     */
     public boolean getUseDeadLetterQueue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1110,6 +1703,13 @@ public class MessagePropertyFilter extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property UseDeadLetterQueue.
+     *
+     * @param UseDeadLetterQueue the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.MessagePropertyFilter.UseDeadLetterQueue" target="_top">.NET documentation</a>
+     */
     public void setUseDeadLetterQueue(boolean UseDeadLetterQueue) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1120,6 +1720,13 @@ public class MessagePropertyFilter extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UseEncryption.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.MessagePropertyFilter.UseEncryption" target="_top">.NET documentation</a>
+     */
     public boolean getUseEncryption() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1134,6 +1741,13 @@ public class MessagePropertyFilter extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property UseEncryption.
+     *
+     * @param UseEncryption the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.MessagePropertyFilter.UseEncryption" target="_top">.NET documentation</a>
+     */
     public void setUseEncryption(boolean UseEncryption) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1144,6 +1758,13 @@ public class MessagePropertyFilter extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UseJournalQueue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.MessagePropertyFilter.UseJournalQueue" target="_top">.NET documentation</a>
+     */
     public boolean getUseJournalQueue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1158,6 +1779,13 @@ public class MessagePropertyFilter extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property UseJournalQueue.
+     *
+     * @param UseJournalQueue the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.MessagePropertyFilter.UseJournalQueue" target="_top">.NET documentation</a>
+     */
     public void setUseJournalQueue(boolean UseJournalQueue) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1168,6 +1796,13 @@ public class MessagePropertyFilter extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UseTracing.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.MessagePropertyFilter.UseTracing" target="_top">.NET documentation</a>
+     */
     public boolean getUseTracing() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1182,6 +1817,13 @@ public class MessagePropertyFilter extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property UseTracing.
+     *
+     * @param UseTracing the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.MessagePropertyFilter.UseTracing" target="_top">.NET documentation</a>
+     */
     public void setUseTracing(boolean UseTracing) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1192,6 +1834,13 @@ public class MessagePropertyFilter extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DefaultBodySize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.MessagePropertyFilter.DefaultBodySize" target="_top">.NET documentation</a>
+     */
     public int getDefaultBodySize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1232,6 +1881,24 @@ public class MessagePropertyFilter extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DefaultBodySize.
+     *
+     * @param DefaultBodySize the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.MessagePropertyFilter.DefaultBodySize" target="_top">.NET documentation</a>
+     */
     public void setDefaultBodySize(int DefaultBodySize) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1242,6 +1909,13 @@ public class MessagePropertyFilter extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DefaultExtensionSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.MessagePropertyFilter.DefaultExtensionSize" target="_top">.NET documentation</a>
+     */
     public int getDefaultExtensionSize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1282,6 +1956,24 @@ public class MessagePropertyFilter extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DefaultExtensionSize.
+     *
+     * @param DefaultExtensionSize the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.MessagePropertyFilter.DefaultExtensionSize" target="_top">.NET documentation</a>
+     */
     public void setDefaultExtensionSize(int DefaultExtensionSize) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1292,6 +1984,13 @@ public class MessagePropertyFilter extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DefaultLabelSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.MessagePropertyFilter.DefaultLabelSize" target="_top">.NET documentation</a>
+     */
     public int getDefaultLabelSize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1332,6 +2031,24 @@ public class MessagePropertyFilter extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DefaultLabelSize.
+     *
+     * @param DefaultLabelSize the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.MessagePropertyFilter.DefaultLabelSize" target="_top">.NET documentation</a>
+     */
     public void setDefaultLabelSize(int DefaultLabelSize) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

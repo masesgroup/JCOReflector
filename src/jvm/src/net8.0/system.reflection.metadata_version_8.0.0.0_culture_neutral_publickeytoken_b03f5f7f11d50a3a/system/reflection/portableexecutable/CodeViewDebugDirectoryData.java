@@ -100,7 +100,10 @@ public class CodeViewDebugDirectoryData extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CodeViewDebugDirectoryData(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -159,6 +162,13 @@ public class CodeViewDebugDirectoryData extends system.ValueType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Age.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.CodeViewDebugDirectoryData.Age" target="_top">.NET documentation</a>
+     */
     public int getAge() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -199,6 +209,13 @@ public class CodeViewDebugDirectoryData extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Guid.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.CodeViewDebugDirectoryData.Guid" target="_top">.NET documentation</a>
+     */
     public Guid getGuid() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -214,6 +231,13 @@ public class CodeViewDebugDirectoryData extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Path.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.CodeViewDebugDirectoryData.Path" target="_top">.NET documentation</a>
+     */
     public java.lang.String getPath() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

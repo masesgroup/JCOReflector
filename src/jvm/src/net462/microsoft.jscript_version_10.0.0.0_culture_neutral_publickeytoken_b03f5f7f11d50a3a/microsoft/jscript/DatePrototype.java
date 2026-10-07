@@ -100,7 +100,10 @@ public class DatePrototype extends microsoft.jscript.DateObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DatePrototype(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,18 @@ public class DatePrototype extends microsoft.jscript.DateObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member getDate.
+     *
+     * @param thisob the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.DatePrototype.Date" target="_top">.NET documentation</a>
+     */
     public static double getDate(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -195,6 +210,18 @@ public class DatePrototype extends microsoft.jscript.DateObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member getDay.
+     *
+     * @param thisob the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.DatePrototype.Day" target="_top">.NET documentation</a>
+     */
     public static double getDay(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -235,6 +262,18 @@ public class DatePrototype extends microsoft.jscript.DateObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member getFullYear.
+     *
+     * @param thisob the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.DatePrototype.FullYear" target="_top">.NET documentation</a>
+     */
     public static double getFullYear(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -275,6 +314,18 @@ public class DatePrototype extends microsoft.jscript.DateObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member getHours.
+     *
+     * @param thisob the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.DatePrototype.Hours" target="_top">.NET documentation</a>
+     */
     public static double getHours(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -315,6 +366,18 @@ public class DatePrototype extends microsoft.jscript.DateObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member getMilliseconds.
+     *
+     * @param thisob the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.DatePrototype.Milliseconds" target="_top">.NET documentation</a>
+     */
     public static double getMilliseconds(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -355,6 +418,18 @@ public class DatePrototype extends microsoft.jscript.DateObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member getMinutes.
+     *
+     * @param thisob the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.DatePrototype.Minutes" target="_top">.NET documentation</a>
+     */
     public static double getMinutes(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -395,6 +470,18 @@ public class DatePrototype extends microsoft.jscript.DateObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member getMonth.
+     *
+     * @param thisob the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.DatePrototype.Month" target="_top">.NET documentation</a>
+     */
     public static double getMonth(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -435,6 +522,18 @@ public class DatePrototype extends microsoft.jscript.DateObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member getSeconds.
+     *
+     * @param thisob the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.DatePrototype.Seconds" target="_top">.NET documentation</a>
+     */
     public static double getSeconds(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -475,6 +574,15 @@ public class DatePrototype extends microsoft.jscript.DateObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member getTime.
+     *
+     * @param thisob the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.DatePrototype.Time" target="_top">.NET documentation</a>
+     */
     public static double getTime(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -515,6 +623,18 @@ public class DatePrototype extends microsoft.jscript.DateObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member getTimezoneOffset.
+     *
+     * @param thisob the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.DatePrototype.TimezoneOffset" target="_top">.NET documentation</a>
+     */
     public static double getTimezoneOffset(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -555,6 +675,15 @@ public class DatePrototype extends microsoft.jscript.DateObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member getUTCDate.
+     *
+     * @param thisob the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.DatePrototype.UTCDate" target="_top">.NET documentation</a>
+     */
     public static double getUTCDate(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -595,6 +724,15 @@ public class DatePrototype extends microsoft.jscript.DateObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member getUTCDay.
+     *
+     * @param thisob the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.DatePrototype.UTCDay" target="_top">.NET documentation</a>
+     */
     public static double getUTCDay(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -635,6 +773,15 @@ public class DatePrototype extends microsoft.jscript.DateObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member getUTCFullYear.
+     *
+     * @param thisob the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.DatePrototype.UTCFullYear" target="_top">.NET documentation</a>
+     */
     public static double getUTCFullYear(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -675,6 +822,15 @@ public class DatePrototype extends microsoft.jscript.DateObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member getUTCHours.
+     *
+     * @param thisob the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.DatePrototype.UTCHours" target="_top">.NET documentation</a>
+     */
     public static double getUTCHours(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -715,6 +871,15 @@ public class DatePrototype extends microsoft.jscript.DateObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member getUTCMilliseconds.
+     *
+     * @param thisob the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.DatePrototype.UTCMilliseconds" target="_top">.NET documentation</a>
+     */
     public static double getUTCMilliseconds(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -755,6 +920,15 @@ public class DatePrototype extends microsoft.jscript.DateObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member getUTCMinutes.
+     *
+     * @param thisob the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.DatePrototype.UTCMinutes" target="_top">.NET documentation</a>
+     */
     public static double getUTCMinutes(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -795,6 +969,15 @@ public class DatePrototype extends microsoft.jscript.DateObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member getUTCMonth.
+     *
+     * @param thisob the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.DatePrototype.UTCMonth" target="_top">.NET documentation</a>
+     */
     public static double getUTCMonth(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -835,6 +1018,15 @@ public class DatePrototype extends microsoft.jscript.DateObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member getUTCSeconds.
+     *
+     * @param thisob the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.DatePrototype.UTCSeconds" target="_top">.NET documentation</a>
+     */
     public static double getUTCSeconds(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -875,6 +1067,18 @@ public class DatePrototype extends microsoft.jscript.DateObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member getYear.
+     *
+     * @param thisob the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.DatePrototype.Year" target="_top">.NET documentation</a>
+     */
     public static double getYear(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -915,6 +1119,20 @@ public class DatePrototype extends microsoft.jscript.DateObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member setDate.
+     *
+     * @param thisob the argument of type {@code NetObject}
+     * @param ddate the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArithmeticException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.DatePrototype.Date" target="_top">.NET documentation</a>
+     */
     public static double setDate(NetObject thisob, double ddate) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArithmeticException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -955,6 +1173,30 @@ public class DatePrototype extends microsoft.jscript.DateObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member setFullYear.
+     *
+     * @param thisob the argument of type {@code NetObject}
+     * @param dyear the argument of type {@code double}
+     * @param month the argument of type {@code NetObject}
+     * @param date the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.ArithmeticException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.DatePrototype.FullYear" target="_top">.NET documentation</a>
+     */
     public static double setFullYear(NetObject thisob, double dyear, NetObject month, NetObject date) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.MissingMethodException, system.NullReferenceException, system.FormatException, system.OverflowException, system.ArithmeticException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -995,6 +1237,31 @@ public class DatePrototype extends microsoft.jscript.DateObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member setHours.
+     *
+     * @param thisob the argument of type {@code NetObject}
+     * @param dhour the argument of type {@code double}
+     * @param min the argument of type {@code NetObject}
+     * @param sec the argument of type {@code NetObject}
+     * @param msec the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.ArithmeticException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.DatePrototype.Hours" target="_top">.NET documentation</a>
+     */
     public static double setHours(NetObject thisob, double dhour, NetObject min, NetObject sec, NetObject msec) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.MissingMethodException, system.NullReferenceException, system.FormatException, system.OverflowException, system.ArithmeticException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1035,6 +1302,20 @@ public class DatePrototype extends microsoft.jscript.DateObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member setMilliseconds.
+     *
+     * @param thisob the argument of type {@code NetObject}
+     * @param dmsec the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArithmeticException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.DatePrototype.Milliseconds" target="_top">.NET documentation</a>
+     */
     public static double setMilliseconds(NetObject thisob, double dmsec) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArithmeticException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1075,6 +1356,30 @@ public class DatePrototype extends microsoft.jscript.DateObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member setMinutes.
+     *
+     * @param thisob the argument of type {@code NetObject}
+     * @param dmin the argument of type {@code double}
+     * @param sec the argument of type {@code NetObject}
+     * @param msec the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.ArithmeticException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.DatePrototype.Minutes" target="_top">.NET documentation</a>
+     */
     public static double setMinutes(NetObject thisob, double dmin, NetObject sec, NetObject msec) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.MissingMethodException, system.NullReferenceException, system.FormatException, system.OverflowException, system.ArithmeticException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1115,6 +1420,29 @@ public class DatePrototype extends microsoft.jscript.DateObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member setMonth.
+     *
+     * @param thisob the argument of type {@code NetObject}
+     * @param dmonth the argument of type {@code double}
+     * @param date the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.ArithmeticException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.DatePrototype.Month" target="_top">.NET documentation</a>
+     */
     public static double setMonth(NetObject thisob, double dmonth, NetObject date) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.MissingMethodException, system.NullReferenceException, system.FormatException, system.OverflowException, system.ArithmeticException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1155,6 +1483,29 @@ public class DatePrototype extends microsoft.jscript.DateObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member setSeconds.
+     *
+     * @param thisob the argument of type {@code NetObject}
+     * @param dsec the argument of type {@code double}
+     * @param msec the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.ArithmeticException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.DatePrototype.Seconds" target="_top">.NET documentation</a>
+     */
     public static double setSeconds(NetObject thisob, double dsec, NetObject msec) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.MissingMethodException, system.NullReferenceException, system.FormatException, system.OverflowException, system.ArithmeticException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1195,6 +1546,16 @@ public class DatePrototype extends microsoft.jscript.DateObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member setTime.
+     *
+     * @param thisob the argument of type {@code NetObject}
+     * @param time the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.DatePrototype.Time" target="_top">.NET documentation</a>
+     */
     public static double setTime(NetObject thisob, double time) throws Throwable, microsoft.jscript.JScriptException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1235,6 +1596,17 @@ public class DatePrototype extends microsoft.jscript.DateObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member setUTCDate.
+     *
+     * @param thisob the argument of type {@code NetObject}
+     * @param ddate the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @throws system.ArithmeticException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.DatePrototype.UTCDate" target="_top">.NET documentation</a>
+     */
     public static double setUTCDate(NetObject thisob, double ddate) throws Throwable, microsoft.jscript.JScriptException, system.ArithmeticException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1275,6 +1647,30 @@ public class DatePrototype extends microsoft.jscript.DateObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member setUTCFullYear.
+     *
+     * @param thisob the argument of type {@code NetObject}
+     * @param dyear the argument of type {@code double}
+     * @param month the argument of type {@code NetObject}
+     * @param date the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.ArithmeticException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.DatePrototype.UTCFullYear" target="_top">.NET documentation</a>
+     */
     public static double setUTCFullYear(NetObject thisob, double dyear, NetObject month, NetObject date) throws Throwable, microsoft.jscript.JScriptException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.MissingMethodException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.FormatException, system.OverflowException, system.ArithmeticException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1315,6 +1711,31 @@ public class DatePrototype extends microsoft.jscript.DateObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member setUTCHours.
+     *
+     * @param thisob the argument of type {@code NetObject}
+     * @param dhour the argument of type {@code double}
+     * @param min the argument of type {@code NetObject}
+     * @param sec the argument of type {@code NetObject}
+     * @param msec the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.ArithmeticException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.DatePrototype.UTCHours" target="_top">.NET documentation</a>
+     */
     public static double setUTCHours(NetObject thisob, double dhour, NetObject min, NetObject sec, NetObject msec) throws Throwable, microsoft.jscript.JScriptException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.MissingMethodException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.FormatException, system.OverflowException, system.ArithmeticException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1355,6 +1776,17 @@ public class DatePrototype extends microsoft.jscript.DateObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member setUTCMilliseconds.
+     *
+     * @param thisob the argument of type {@code NetObject}
+     * @param dmsec the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @throws system.ArithmeticException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.DatePrototype.UTCMilliseconds" target="_top">.NET documentation</a>
+     */
     public static double setUTCMilliseconds(NetObject thisob, double dmsec) throws Throwable, microsoft.jscript.JScriptException, system.ArithmeticException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1395,6 +1827,30 @@ public class DatePrototype extends microsoft.jscript.DateObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member setUTCMinutes.
+     *
+     * @param thisob the argument of type {@code NetObject}
+     * @param dmin the argument of type {@code double}
+     * @param sec the argument of type {@code NetObject}
+     * @param msec the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.ArithmeticException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.DatePrototype.UTCMinutes" target="_top">.NET documentation</a>
+     */
     public static double setUTCMinutes(NetObject thisob, double dmin, NetObject sec, NetObject msec) throws Throwable, microsoft.jscript.JScriptException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.MissingMethodException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.FormatException, system.OverflowException, system.ArithmeticException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1435,6 +1891,29 @@ public class DatePrototype extends microsoft.jscript.DateObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member setUTCMonth.
+     *
+     * @param thisob the argument of type {@code NetObject}
+     * @param dmonth the argument of type {@code double}
+     * @param date the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.ArithmeticException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.DatePrototype.UTCMonth" target="_top">.NET documentation</a>
+     */
     public static double setUTCMonth(NetObject thisob, double dmonth, NetObject date) throws Throwable, microsoft.jscript.JScriptException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.MissingMethodException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.FormatException, system.OverflowException, system.ArithmeticException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1475,6 +1954,29 @@ public class DatePrototype extends microsoft.jscript.DateObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member setUTCSeconds.
+     *
+     * @param thisob the argument of type {@code NetObject}
+     * @param dsec the argument of type {@code double}
+     * @param msec the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.ArithmeticException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.DatePrototype.UTCSeconds" target="_top">.NET documentation</a>
+     */
     public static double setUTCSeconds(NetObject thisob, double dsec, NetObject msec) throws Throwable, microsoft.jscript.JScriptException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.MissingMethodException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.FormatException, system.OverflowException, system.ArithmeticException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1515,6 +2017,20 @@ public class DatePrototype extends microsoft.jscript.DateObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member setYear.
+     *
+     * @param thisob the argument of type {@code NetObject}
+     * @param dyear the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArithmeticException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.DatePrototype.Year" target="_top">.NET documentation</a>
+     */
     public static double setYear(NetObject thisob, double dyear) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArithmeticException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1555,6 +2071,15 @@ public class DatePrototype extends microsoft.jscript.DateObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member valueOf.
+     *
+     * @param thisob the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.DatePrototype.valueOf" target="_top">.NET documentation</a>
+     */
     public static double valueOf(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1595,6 +2120,18 @@ public class DatePrototype extends microsoft.jscript.DateObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member getVarDate.
+     *
+     * @param thisob the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.DatePrototype.VarDate" target="_top">.NET documentation</a>
+     */
     public static NetObject getVarDate(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1610,6 +2147,21 @@ public class DatePrototype extends microsoft.jscript.DateObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member toDateString.
+     *
+     * @param thisob the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.DatePrototype.toDateString" target="_top">.NET documentation</a>
+     */
     public static java.lang.String toDateString(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1624,6 +2176,20 @@ public class DatePrototype extends microsoft.jscript.DateObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member toGMTString.
+     *
+     * @param thisob the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.DatePrototype.toGMTString" target="_top">.NET documentation</a>
+     */
     public static java.lang.String toGMTString(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1638,6 +2204,26 @@ public class DatePrototype extends microsoft.jscript.DateObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member toLocaleDateString.
+     *
+     * @param thisob the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.TypeInitializationException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.DatePrototype.toLocaleDateString" target="_top">.NET documentation</a>
+     */
     public static java.lang.String toLocaleDateString(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.TypeInitializationException, system.InvalidOperationException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.OverflowException, system.FormatException, system.globalization.CultureNotFoundException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1652,6 +2238,26 @@ public class DatePrototype extends microsoft.jscript.DateObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member toLocaleString.
+     *
+     * @param thisob the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.TypeInitializationException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.DatePrototype.toLocaleString" target="_top">.NET documentation</a>
+     */
     public static java.lang.String toLocaleString(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.TypeInitializationException, system.InvalidOperationException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.OverflowException, system.FormatException, system.globalization.CultureNotFoundException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1666,6 +2272,26 @@ public class DatePrototype extends microsoft.jscript.DateObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member toLocaleTimeString.
+     *
+     * @param thisob the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.TypeInitializationException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.DatePrototype.toLocaleTimeString" target="_top">.NET documentation</a>
+     */
     public static java.lang.String toLocaleTimeString(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.TypeInitializationException, system.InvalidOperationException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.OverflowException, system.FormatException, system.globalization.CultureNotFoundException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1680,6 +2306,21 @@ public class DatePrototype extends microsoft.jscript.DateObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member toString.
+     *
+     * @param thisob the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.DatePrototype.toString" target="_top">.NET documentation</a>
+     */
     public static java.lang.String toString(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1694,6 +2335,20 @@ public class DatePrototype extends microsoft.jscript.DateObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member toTimeString.
+     *
+     * @param thisob the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.DatePrototype.toTimeString" target="_top">.NET documentation</a>
+     */
     public static java.lang.String toTimeString(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1708,6 +2363,20 @@ public class DatePrototype extends microsoft.jscript.DateObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member toUTCString.
+     *
+     * @param thisob the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.DatePrototype.toUTCString" target="_top">.NET documentation</a>
+     */
     public static java.lang.String toUTCString(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1726,6 +2395,13 @@ public class DatePrototype extends microsoft.jscript.DateObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property constructor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.DatePrototype.getconstructor" target="_top">.NET documentation</a>
+     */
     public static DateConstructor getconstructor() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

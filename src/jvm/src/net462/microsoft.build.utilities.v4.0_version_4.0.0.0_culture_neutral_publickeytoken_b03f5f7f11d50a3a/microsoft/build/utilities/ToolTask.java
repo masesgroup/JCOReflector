@@ -99,7 +99,10 @@ public class ToolTask extends microsoft.build.utilities.Task  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ToolTask(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,45 @@ public class ToolTask extends microsoft.build.utilities.Task  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Execute.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @throws system.threading.tasks.TaskCanceledException if the .NET member raises it
+     * @throws system.AggregateException if the .NET member raises it
+     * @throws system.threading.SemaphoreFullException if the .NET member raises it
+     * @throws system.threading.tasks.TaskSchedulerException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.ToolTask.Execute" target="_top">.NET documentation</a>
+     */
     public boolean Execute() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidCastException, system.NotSupportedException, system.NullReferenceException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.threading.WaitHandleCannotBeOpenedException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.MulticastNotSupportedException, system.RankException, system.security.cryptography.CryptographicException, system.threading.tasks.TaskCanceledException, system.AggregateException, system.threading.SemaphoreFullException, system.threading.tasks.TaskSchedulerException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -166,6 +208,24 @@ public class ToolTask extends microsoft.build.utilities.Task  {
         }
     }
 
+    /**
+     * Invokes the .NET member Cancel.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.ToolTask.Cancel" target="_top">.NET documentation</a>
+     */
     public void Cancel() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.OperationCanceledException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +240,13 @@ public class ToolTask extends microsoft.build.utilities.Task  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property EchoOff.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.ToolTask.EchoOff" target="_top">.NET documentation</a>
+     */
     public boolean getEchoOff() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +261,13 @@ public class ToolTask extends microsoft.build.utilities.Task  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property EchoOff.
+     *
+     * @param EchoOff the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.ToolTask.EchoOff" target="_top">.NET documentation</a>
+     */
     public void setEchoOff(boolean EchoOff) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +278,13 @@ public class ToolTask extends microsoft.build.utilities.Task  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LogStandardErrorAsError.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.ToolTask.LogStandardErrorAsError" target="_top">.NET documentation</a>
+     */
     public boolean getLogStandardErrorAsError() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -218,6 +299,13 @@ public class ToolTask extends microsoft.build.utilities.Task  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property LogStandardErrorAsError.
+     *
+     * @param LogStandardErrorAsError the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.ToolTask.LogStandardErrorAsError" target="_top">.NET documentation</a>
+     */
     public void setLogStandardErrorAsError(boolean LogStandardErrorAsError) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -228,6 +316,13 @@ public class ToolTask extends microsoft.build.utilities.Task  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UseCommandProcessor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.ToolTask.UseCommandProcessor" target="_top">.NET documentation</a>
+     */
     public boolean getUseCommandProcessor() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -242,6 +337,13 @@ public class ToolTask extends microsoft.build.utilities.Task  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property UseCommandProcessor.
+     *
+     * @param UseCommandProcessor the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.ToolTask.UseCommandProcessor" target="_top">.NET documentation</a>
+     */
     public void setUseCommandProcessor(boolean UseCommandProcessor) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -252,6 +354,13 @@ public class ToolTask extends microsoft.build.utilities.Task  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property YieldDuringToolExecution.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.ToolTask.YieldDuringToolExecution" target="_top">.NET documentation</a>
+     */
     public boolean getYieldDuringToolExecution() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -266,6 +375,13 @@ public class ToolTask extends microsoft.build.utilities.Task  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property YieldDuringToolExecution.
+     *
+     * @param YieldDuringToolExecution the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.ToolTask.YieldDuringToolExecution" target="_top">.NET documentation</a>
+     */
     public void setYieldDuringToolExecution(boolean YieldDuringToolExecution) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -276,6 +392,13 @@ public class ToolTask extends microsoft.build.utilities.Task  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ExitCode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.ToolTask.ExitCode" target="_top">.NET documentation</a>
+     */
     public int getExitCode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -316,6 +439,13 @@ public class ToolTask extends microsoft.build.utilities.Task  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Timeout.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.ToolTask.Timeout" target="_top">.NET documentation</a>
+     */
     public int getTimeout() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -356,6 +486,13 @@ public class ToolTask extends microsoft.build.utilities.Task  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Timeout.
+     *
+     * @param Timeout the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.ToolTask.Timeout" target="_top">.NET documentation</a>
+     */
     public void setTimeout(int Timeout) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -366,6 +503,13 @@ public class ToolTask extends microsoft.build.utilities.Task  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StandardErrorImportance.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.ToolTask.StandardErrorImportance" target="_top">.NET documentation</a>
+     */
     public java.lang.String getStandardErrorImportance() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -380,6 +524,13 @@ public class ToolTask extends microsoft.build.utilities.Task  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property StandardErrorImportance.
+     *
+     * @param StandardErrorImportance the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.ToolTask.StandardErrorImportance" target="_top">.NET documentation</a>
+     */
     public void setStandardErrorImportance(java.lang.String StandardErrorImportance) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -390,6 +541,13 @@ public class ToolTask extends microsoft.build.utilities.Task  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StandardOutputImportance.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.ToolTask.StandardOutputImportance" target="_top">.NET documentation</a>
+     */
     public java.lang.String getStandardOutputImportance() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -404,6 +562,13 @@ public class ToolTask extends microsoft.build.utilities.Task  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property StandardOutputImportance.
+     *
+     * @param StandardOutputImportance the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.ToolTask.StandardOutputImportance" target="_top">.NET documentation</a>
+     */
     public void setStandardOutputImportance(java.lang.String StandardOutputImportance) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -414,6 +579,13 @@ public class ToolTask extends microsoft.build.utilities.Task  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ToolExe.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.ToolTask.ToolExe" target="_top">.NET documentation</a>
+     */
     public java.lang.String getToolExe() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -428,6 +600,13 @@ public class ToolTask extends microsoft.build.utilities.Task  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ToolExe.
+     *
+     * @param ToolExe the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.ToolTask.ToolExe" target="_top">.NET documentation</a>
+     */
     public void setToolExe(java.lang.String ToolExe) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -438,6 +617,13 @@ public class ToolTask extends microsoft.build.utilities.Task  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ToolPath.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.ToolTask.ToolPath" target="_top">.NET documentation</a>
+     */
     public java.lang.String getToolPath() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -452,6 +638,13 @@ public class ToolTask extends microsoft.build.utilities.Task  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ToolPath.
+     *
+     * @param ToolPath the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.ToolTask.ToolPath" target="_top">.NET documentation</a>
+     */
     public void setToolPath(java.lang.String ToolPath) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -462,6 +655,13 @@ public class ToolTask extends microsoft.build.utilities.Task  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EnvironmentVariables.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.ToolTask.EnvironmentVariables" target="_top">.NET documentation</a>
+     */
     public java.lang.String[] getEnvironmentVariables() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -485,6 +685,13 @@ public class ToolTask extends microsoft.build.utilities.Task  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property EnvironmentVariables.
+     *
+     * @param EnvironmentVariables the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.ToolTask.EnvironmentVariables" target="_top">.NET documentation</a>
+     */
     public void setEnvironmentVariables(java.lang.String[] EnvironmentVariables) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

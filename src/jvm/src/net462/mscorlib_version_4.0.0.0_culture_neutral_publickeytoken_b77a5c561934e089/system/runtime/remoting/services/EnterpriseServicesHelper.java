@@ -104,7 +104,10 @@ public class EnterpriseServicesHelper extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public EnterpriseServicesHelper(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,12 @@ public class EnterpriseServicesHelper extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Services.EnterpriseServicesHelper.-ctor" target="_top">.NET documentation</a>
+     */
     public EnterpriseServicesHelper() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +174,21 @@ public class EnterpriseServicesHelper extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CreateConstructionReturnMessage.
+     *
+     * @param ctorMsg the argument of type {@code IConstructionCallMessage}
+     * @param retObj the argument of type {@code MarshalByRefObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Services.EnterpriseServicesHelper.CreateConstructionReturnMessage" target="_top">.NET documentation</a>
+     */
     public static IConstructionReturnMessage CreateConstructionReturnMessage(IConstructionCallMessage ctorMsg, MarshalByRefObject retObj) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -180,6 +204,17 @@ public class EnterpriseServicesHelper extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SwitchWrappers.
+     *
+     * @param oldcp the argument of type {@code RealProxy}
+     * @param newcp the argument of type {@code RealProxy}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Services.EnterpriseServicesHelper.SwitchWrappers" target="_top">.NET documentation</a>
+     */
     public static void SwitchWrappers(RealProxy oldcp, RealProxy newcp) throws Throwable, system.NullReferenceException, system.ArgumentNullException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

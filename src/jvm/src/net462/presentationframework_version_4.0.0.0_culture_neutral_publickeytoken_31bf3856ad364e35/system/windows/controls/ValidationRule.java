@@ -103,7 +103,10 @@ public class ValidationRule extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ValidationRule(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,15 @@ public class ValidationRule extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Validate.
+     *
+     * @param value the argument of type {@code NetObject}
+     * @param cultureInfo the argument of type {@code CultureInfo}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.ValidationRule.Validate" target="_top">.NET documentation</a>
+     */
     public ValidationResult Validate(NetObject value, CultureInfo cultureInfo) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -171,6 +183,16 @@ public class ValidationRule extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Validate.
+     *
+     * @param value the argument of type {@code NetObject}
+     * @param cultureInfo the argument of type {@code CultureInfo}
+     * @param owner the argument of type {@code BindingExpressionBase}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.ValidationRule.Validate" target="_top">.NET documentation</a>
+     */
     public ValidationResult Validate(NetObject value, CultureInfo cultureInfo, BindingExpressionBase owner) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -186,6 +208,16 @@ public class ValidationRule extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Validate.
+     *
+     * @param value the argument of type {@code NetObject}
+     * @param cultureInfo the argument of type {@code CultureInfo}
+     * @param owner the argument of type {@code BindingGroup}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.ValidationRule.Validate" target="_top">.NET documentation</a>
+     */
     public ValidationResult Validate(NetObject value, CultureInfo cultureInfo, BindingGroup owner) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +237,13 @@ public class ValidationRule extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ValidatesOnTargetUpdated.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.ValidationRule.ValidatesOnTargetUpdated" target="_top">.NET documentation</a>
+     */
     public boolean getValidatesOnTargetUpdated() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -219,6 +258,13 @@ public class ValidationRule extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ValidatesOnTargetUpdated.
+     *
+     * @param ValidatesOnTargetUpdated the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.ValidationRule.ValidatesOnTargetUpdated" target="_top">.NET documentation</a>
+     */
     public void setValidatesOnTargetUpdated(boolean ValidatesOnTargetUpdated) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -229,6 +275,13 @@ public class ValidationRule extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ValidationStep.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.ValidationRule.ValidationStep" target="_top">.NET documentation</a>
+     */
     public ValidationStep getValidationStep() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -244,6 +297,13 @@ public class ValidationRule extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ValidationStep.
+     *
+     * @param ValidationStep the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.ValidationRule.ValidationStep" target="_top">.NET documentation</a>
+     */
     public void setValidationStep(ValidationStep ValidationStep) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

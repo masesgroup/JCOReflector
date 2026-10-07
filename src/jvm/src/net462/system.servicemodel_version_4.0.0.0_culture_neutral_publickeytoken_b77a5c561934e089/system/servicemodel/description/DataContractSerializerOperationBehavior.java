@@ -113,7 +113,10 @@ public class DataContractSerializerOperationBehavior extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DataContractSerializerOperationBehavior(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -163,6 +166,13 @@ public class DataContractSerializerOperationBehavior extends NetObject  {
     public DataContractSerializerOperationBehavior() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param operation the argument of type {@code OperationDescription}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.DataContractSerializerOperationBehavior.-ctor" target="_top">.NET documentation</a>
+     */
     public DataContractSerializerOperationBehavior(OperationDescription operation) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -173,6 +183,14 @@ public class DataContractSerializerOperationBehavior extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param operation the argument of type {@code OperationDescription}
+     * @param dataContractFormatAttribute the argument of type {@code DataContractFormatAttribute}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.DataContractSerializerOperationBehavior.-ctor" target="_top">.NET documentation</a>
+     */
     public DataContractSerializerOperationBehavior(OperationDescription operation, DataContractFormatAttribute dataContractFormatAttribute) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -188,6 +206,26 @@ public class DataContractSerializerOperationBehavior extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CreateSerializer.
+     *
+     * @param type the argument of type {@code NetType}
+     * @param name the argument of type {@code java.lang.String}
+     * @param ns the argument of type {@code java.lang.String}
+     * @param knownTypes the argument of type {@code IList_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.DataContractSerializerOperationBehavior.CreateSerializer" target="_top">.NET documentation</a>
+     */
     public XmlObjectSerializer CreateSerializer(NetType type, java.lang.String name, java.lang.String ns, IList_1 knownTypes) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +241,22 @@ public class DataContractSerializerOperationBehavior extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateSerializer.
+     *
+     * @param type the argument of type {@code NetType}
+     * @param name the argument of type {@code XmlDictionaryString}
+     * @param ns the argument of type {@code XmlDictionaryString}
+     * @param knownTypes the argument of type {@code IList_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.DataContractSerializerOperationBehavior.CreateSerializer" target="_top">.NET documentation</a>
+     */
     public XmlObjectSerializer CreateSerializer(NetType type, XmlDictionaryString name, XmlDictionaryString ns, IList_1 knownTypes) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -221,8 +275,13 @@ public class DataContractSerializerOperationBehavior extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIOperationBehavior method available in IOperationBehavior to obtain an object with an invocable method
+     *
+     * @param operationDescription the argument of type {@code OperationDescription}
+     * @param bindingParameters the argument of type {@code BindingParameterCollection}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.IOperationBehavior.AddBindingParameters" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void AddBindingParameters(OperationDescription operationDescription, BindingParameterCollection bindingParameters) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIOperationBehavior to obtain the full interface.");
     }
@@ -230,8 +289,13 @@ public class DataContractSerializerOperationBehavior extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIOperationBehavior method available in IOperationBehavior to obtain an object with an invocable method
+     *
+     * @param operationDescription the argument of type {@code OperationDescription}
+     * @param clientOperation the argument of type {@code ClientOperation}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.IOperationBehavior.ApplyClientBehavior" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void ApplyClientBehavior(OperationDescription operationDescription, ClientOperation clientOperation) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIOperationBehavior to obtain the full interface.");
     }
@@ -239,8 +303,13 @@ public class DataContractSerializerOperationBehavior extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIOperationBehavior method available in IOperationBehavior to obtain an object with an invocable method
+     *
+     * @param operationDescription the argument of type {@code OperationDescription}
+     * @param dispatchOperation the argument of type {@code DispatchOperation}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.IOperationBehavior.ApplyDispatchBehavior" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void ApplyDispatchBehavior(OperationDescription operationDescription, DispatchOperation dispatchOperation) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIOperationBehavior to obtain the full interface.");
     }
@@ -248,8 +317,12 @@ public class DataContractSerializerOperationBehavior extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIOperationBehavior method available in IOperationBehavior to obtain an object with an invocable method
+     *
+     * @param operationDescription the argument of type {@code OperationDescription}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.IOperationBehavior.Validate" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void Validate(OperationDescription operationDescription) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIOperationBehavior to obtain the full interface.");
     }
@@ -257,8 +330,13 @@ public class DataContractSerializerOperationBehavior extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIWsdlExportExtension method available in IWsdlExportExtension to obtain an object with an invocable method
+     *
+     * @param exporter the argument of type {@code WsdlExporter}
+     * @param context the argument of type {@code WsdlContractConversionContext}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.IWsdlExportExtension.ExportContract" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void ExportContract(WsdlExporter exporter, WsdlContractConversionContext context) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIWsdlExportExtension to obtain the full interface.");
     }
@@ -266,8 +344,13 @@ public class DataContractSerializerOperationBehavior extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIWsdlExportExtension method available in IWsdlExportExtension to obtain an object with an invocable method
+     *
+     * @param exporter the argument of type {@code WsdlExporter}
+     * @param context the argument of type {@code WsdlEndpointConversionContext}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void ExportEndpoint(WsdlExporter exporter, WsdlEndpointConversionContext context) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIWsdlExportExtension to obtain the full interface.");
     }
@@ -276,6 +359,13 @@ public class DataContractSerializerOperationBehavior extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IgnoreExtensionDataObject.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.DataContractSerializerOperationBehavior.IgnoreExtensionDataObject" target="_top">.NET documentation</a>
+     */
     public boolean getIgnoreExtensionDataObject() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -290,6 +380,13 @@ public class DataContractSerializerOperationBehavior extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IgnoreExtensionDataObject.
+     *
+     * @param IgnoreExtensionDataObject the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.DataContractSerializerOperationBehavior.IgnoreExtensionDataObject" target="_top">.NET documentation</a>
+     */
     public void setIgnoreExtensionDataObject(boolean IgnoreExtensionDataObject) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -300,6 +397,13 @@ public class DataContractSerializerOperationBehavior extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MaxItemsInObjectGraph.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.DataContractSerializerOperationBehavior.MaxItemsInObjectGraph" target="_top">.NET documentation</a>
+     */
     public int getMaxItemsInObjectGraph() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -340,6 +444,13 @@ public class DataContractSerializerOperationBehavior extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MaxItemsInObjectGraph.
+     *
+     * @param MaxItemsInObjectGraph the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.DataContractSerializerOperationBehavior.MaxItemsInObjectGraph" target="_top">.NET documentation</a>
+     */
     public void setMaxItemsInObjectGraph(int MaxItemsInObjectGraph) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -350,6 +461,13 @@ public class DataContractSerializerOperationBehavior extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DataContractResolver.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.DataContractSerializerOperationBehavior.DataContractResolver" target="_top">.NET documentation</a>
+     */
     public DataContractResolver getDataContractResolver() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -365,6 +483,13 @@ public class DataContractSerializerOperationBehavior extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DataContractResolver.
+     *
+     * @param DataContractResolver the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.DataContractSerializerOperationBehavior.DataContractResolver" target="_top">.NET documentation</a>
+     */
     public void setDataContractResolver(DataContractResolver DataContractResolver) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -375,6 +500,13 @@ public class DataContractSerializerOperationBehavior extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DataContractSurrogate.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.DataContractSerializerOperationBehavior.DataContractSurrogate" target="_top">.NET documentation</a>
+     */
     public IDataContractSurrogate getDataContractSurrogate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -390,6 +522,13 @@ public class DataContractSerializerOperationBehavior extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DataContractSurrogate.
+     *
+     * @param DataContractSurrogate the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.DataContractSerializerOperationBehavior.DataContractSurrogate" target="_top">.NET documentation</a>
+     */
     public void setDataContractSurrogate(IDataContractSurrogate DataContractSurrogate) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -400,6 +539,13 @@ public class DataContractSerializerOperationBehavior extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DataContractFormatAttribute.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.DataContractSerializerOperationBehavior.DataContractFormatAttribute" target="_top">.NET documentation</a>
+     */
     public DataContractFormatAttribute getDataContractFormatAttribute() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

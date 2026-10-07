@@ -98,7 +98,10 @@ public class WebSocketDeflateOptions extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public WebSocketDeflateOptions(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -145,6 +148,12 @@ public class WebSocketDeflateOptions extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.WebSockets.WebSocketDeflateOptions.-ctor" target="_top">.NET documentation</a>
+     */
     public WebSocketDeflateOptions() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -163,6 +172,13 @@ public class WebSocketDeflateOptions extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ClientContextTakeover.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.WebSockets.WebSocketDeflateOptions.ClientContextTakeover" target="_top">.NET documentation</a>
+     */
     public boolean getClientContextTakeover() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -177,6 +193,13 @@ public class WebSocketDeflateOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ClientContextTakeover.
+     *
+     * @param ClientContextTakeover the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.WebSockets.WebSocketDeflateOptions.ClientContextTakeover" target="_top">.NET documentation</a>
+     */
     public void setClientContextTakeover(boolean ClientContextTakeover) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +210,13 @@ public class WebSocketDeflateOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ServerContextTakeover.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.WebSockets.WebSocketDeflateOptions.ServerContextTakeover" target="_top">.NET documentation</a>
+     */
     public boolean getServerContextTakeover() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +231,13 @@ public class WebSocketDeflateOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ServerContextTakeover.
+     *
+     * @param ServerContextTakeover the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.WebSockets.WebSocketDeflateOptions.ServerContextTakeover" target="_top">.NET documentation</a>
+     */
     public void setServerContextTakeover(boolean ServerContextTakeover) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -211,6 +248,13 @@ public class WebSocketDeflateOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ClientMaxWindowBits.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.WebSockets.WebSocketDeflateOptions.ClientMaxWindowBits" target="_top">.NET documentation</a>
+     */
     public int getClientMaxWindowBits() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -251,6 +295,20 @@ public class WebSocketDeflateOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ClientMaxWindowBits.
+     *
+     * @param ClientMaxWindowBits the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.WebSockets.WebSocketDeflateOptions.ClientMaxWindowBits" target="_top">.NET documentation</a>
+     */
     public void setClientMaxWindowBits(int ClientMaxWindowBits) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -261,6 +319,13 @@ public class WebSocketDeflateOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ServerMaxWindowBits.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.WebSockets.WebSocketDeflateOptions.ServerMaxWindowBits" target="_top">.NET documentation</a>
+     */
     public int getServerMaxWindowBits() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -301,6 +366,20 @@ public class WebSocketDeflateOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ServerMaxWindowBits.
+     *
+     * @param ServerMaxWindowBits the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.WebSockets.WebSocketDeflateOptions.ServerMaxWindowBits" target="_top">.NET documentation</a>
+     */
     public void setServerMaxWindowBits(int ServerMaxWindowBits) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

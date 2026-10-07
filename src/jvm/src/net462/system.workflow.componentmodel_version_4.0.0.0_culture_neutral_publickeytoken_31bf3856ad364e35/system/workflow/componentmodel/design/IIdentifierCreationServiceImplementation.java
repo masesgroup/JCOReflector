@@ -102,7 +102,10 @@ public class IIdentifierCreationServiceImplementation extends NetObject implemen
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IIdentifierCreationServiceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -144,6 +147,14 @@ public class IIdentifierCreationServiceImplementation extends NetObject implemen
 
     // Methods section
     
+    /**
+     * Invokes the .NET member EnsureUniqueIdentifiers.
+     *
+     * @param parentActivity the argument of type {@code CompositeActivity}
+     * @param childActivities the argument of type {@code ICollection}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.IIdentifierCreationService.EnsureUniqueIdentifiers" target="_top">.NET documentation</a>
+     */
     public void EnsureUniqueIdentifiers(CompositeActivity parentActivity, ICollection childActivities) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -154,6 +165,14 @@ public class IIdentifierCreationServiceImplementation extends NetObject implemen
         }
     }
 
+    /**
+     * Invokes the .NET member ValidateIdentifier.
+     *
+     * @param activity the argument of type {@code Activity}
+     * @param identifier the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.IIdentifierCreationService.ValidateIdentifier" target="_top">.NET documentation</a>
+     */
     public void ValidateIdentifier(Activity activity, java.lang.String identifier) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

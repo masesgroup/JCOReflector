@@ -107,7 +107,10 @@ public class DataSetSchemaImporterExtension extends system.xml.serialization.adv
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DataSetSchemaImporterExtension(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,19 @@ public class DataSetSchemaImporterExtension extends system.xml.serialization.adv
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.DataSetSchemaImporterExtension.-ctor" target="_top">.NET documentation</a>
+     */
     public DataSetSchemaImporterExtension() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +184,30 @@ public class DataSetSchemaImporterExtension extends system.xml.serialization.adv
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ImportSchemaType.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param schemaNamespace the argument of type {@code java.lang.String}
+     * @param context the argument of type {@code XmlSchemaObject}
+     * @param schemas the argument of type {@code XmlSchemas}
+     * @param importer the argument of type {@code XmlSchemaImporter}
+     * @param compileUnit the argument of type {@code CodeCompileUnit}
+     * @param mainNamespace the argument of type {@code CodeNamespace}
+     * @param options the argument of type {@code CodeGenerationOptions}
+     * @param codeProvider the argument of type {@code CodeDomProvider}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.xml.schema.XmlSchemaException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.DataSetSchemaImporterExtension.ImportSchemaType" target="_top">.NET documentation</a>
+     */
     public java.lang.String ImportSchemaType(java.lang.String name, java.lang.String schemaNamespace, XmlSchemaObject context, XmlSchemas schemas, XmlSchemaImporter importer, CodeCompileUnit compileUnit, CodeNamespace mainNamespace, CodeGenerationOptions options, CodeDomProvider codeProvider) throws Throwable, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.ArgumentException, system.xml.schema.XmlSchemaException, system.IndexOutOfRangeException, system.xml.XmlException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +222,33 @@ public class DataSetSchemaImporterExtension extends system.xml.serialization.adv
         }
     }
 
+    /**
+     * Invokes the .NET member ImportSchemaType.
+     *
+     * @param type the argument of type {@code XmlSchemaType}
+     * @param context the argument of type {@code XmlSchemaObject}
+     * @param schemas the argument of type {@code XmlSchemas}
+     * @param importer the argument of type {@code XmlSchemaImporter}
+     * @param compileUnit the argument of type {@code CodeCompileUnit}
+     * @param mainNamespace the argument of type {@code CodeNamespace}
+     * @param options the argument of type {@code CodeGenerationOptions}
+     * @param codeProvider the argument of type {@code CodeDomProvider}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.xml.schema.XmlSchemaException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.DataSetSchemaImporterExtension.ImportSchemaType" target="_top">.NET documentation</a>
+     */
     public java.lang.String ImportSchemaType(XmlSchemaType type, XmlSchemaObject context, XmlSchemas schemas, XmlSchemaImporter importer, CodeCompileUnit compileUnit, CodeNamespace mainNamespace, CodeGenerationOptions options, CodeDomProvider codeProvider) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.xml.schema.XmlSchemaException, system.IndexOutOfRangeException, system.xml.XmlException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -101,7 +101,10 @@ public class CULong extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CULong(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,13 @@ public class CULong extends system.ValueType  {
     public CULong() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param value the argument of type {@code UInt32}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.CULong.-ctor" target="_top">.NET documentation</a>
+     */
     public CULong(UInt32 value) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -166,6 +176,14 @@ public class CULong extends system.ValueType  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Equals.
+     *
+     * @param other the argument of type {@code CULong}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.CULong.Equals" target="_top">.NET documentation</a>
+     */
     public boolean Equals(CULong other) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

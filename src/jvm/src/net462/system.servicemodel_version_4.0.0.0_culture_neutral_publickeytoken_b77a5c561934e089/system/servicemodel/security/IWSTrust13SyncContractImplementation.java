@@ -99,7 +99,10 @@ public class IWSTrust13SyncContractImplementation extends NetObject implements I
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IWSTrust13SyncContractImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -141,6 +144,14 @@ public class IWSTrust13SyncContractImplementation extends NetObject implements I
 
     // Methods section
     
+    /**
+     * Invokes the .NET member ProcessTrust13Cancel.
+     *
+     * @param message the argument of type {@code Message}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.IWSTrust13SyncContract.ProcessTrust13Cancel" target="_top">.NET documentation</a>
+     */
     public Message ProcessTrust13Cancel(Message message) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -156,6 +167,14 @@ public class IWSTrust13SyncContractImplementation extends NetObject implements I
         }
     }
 
+    /**
+     * Invokes the .NET member ProcessTrust13CancelResponse.
+     *
+     * @param message the argument of type {@code Message}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.IWSTrust13SyncContract.ProcessTrust13CancelResponse" target="_top">.NET documentation</a>
+     */
     public Message ProcessTrust13CancelResponse(Message message) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -171,6 +190,14 @@ public class IWSTrust13SyncContractImplementation extends NetObject implements I
         }
     }
 
+    /**
+     * Invokes the .NET member ProcessTrust13Issue.
+     *
+     * @param message the argument of type {@code Message}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.IWSTrust13SyncContract.ProcessTrust13Issue" target="_top">.NET documentation</a>
+     */
     public Message ProcessTrust13Issue(Message message) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -186,6 +213,14 @@ public class IWSTrust13SyncContractImplementation extends NetObject implements I
         }
     }
 
+    /**
+     * Invokes the .NET member ProcessTrust13IssueResponse.
+     *
+     * @param message the argument of type {@code Message}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.IWSTrust13SyncContract.ProcessTrust13IssueResponse" target="_top">.NET documentation</a>
+     */
     public Message ProcessTrust13IssueResponse(Message message) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +236,14 @@ public class IWSTrust13SyncContractImplementation extends NetObject implements I
         }
     }
 
+    /**
+     * Invokes the .NET member ProcessTrust13Renew.
+     *
+     * @param message the argument of type {@code Message}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.IWSTrust13SyncContract.ProcessTrust13Renew" target="_top">.NET documentation</a>
+     */
     public Message ProcessTrust13Renew(Message message) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +259,14 @@ public class IWSTrust13SyncContractImplementation extends NetObject implements I
         }
     }
 
+    /**
+     * Invokes the .NET member ProcessTrust13RenewResponse.
+     *
+     * @param message the argument of type {@code Message}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.IWSTrust13SyncContract.ProcessTrust13RenewResponse" target="_top">.NET documentation</a>
+     */
     public Message ProcessTrust13RenewResponse(Message message) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -231,6 +282,14 @@ public class IWSTrust13SyncContractImplementation extends NetObject implements I
         }
     }
 
+    /**
+     * Invokes the .NET member ProcessTrust13Validate.
+     *
+     * @param message the argument of type {@code Message}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.IWSTrust13SyncContract.ProcessTrust13Validate" target="_top">.NET documentation</a>
+     */
     public Message ProcessTrust13Validate(Message message) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -246,6 +305,14 @@ public class IWSTrust13SyncContractImplementation extends NetObject implements I
         }
     }
 
+    /**
+     * Invokes the .NET member ProcessTrust13ValidateResponse.
+     *
+     * @param message the argument of type {@code Message}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.IWSTrust13SyncContract.ProcessTrust13ValidateResponse" target="_top">.NET documentation</a>
+     */
     public Message ProcessTrust13ValidateResponse(Message message) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

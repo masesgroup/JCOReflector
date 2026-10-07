@@ -102,7 +102,10 @@ public class LabelExpression extends system.linq.expressions.Expression  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public LabelExpression(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,20 @@ public class LabelExpression extends system.linq.expressions.Expression  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Update.
+     *
+     * @param target the argument of type {@code LabelTarget}
+     * @param defaultValue the argument of type {@code Expression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.LabelExpression.Update" target="_top">.NET documentation</a>
+     */
     public LabelExpression Update(LabelTarget target, Expression defaultValue) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -176,6 +193,13 @@ public class LabelExpression extends system.linq.expressions.Expression  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property DefaultValue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.LabelExpression.DefaultValue" target="_top">.NET documentation</a>
+     */
     public Expression getDefaultValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -191,6 +215,13 @@ public class LabelExpression extends system.linq.expressions.Expression  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Target.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.LabelExpression.Target" target="_top">.NET documentation</a>
+     */
     public LabelTarget getTarget() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

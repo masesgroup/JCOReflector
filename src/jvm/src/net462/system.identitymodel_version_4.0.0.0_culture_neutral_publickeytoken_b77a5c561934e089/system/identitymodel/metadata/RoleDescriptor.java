@@ -103,7 +103,10 @@ public class RoleDescriptor extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public RoleDescriptor(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -160,6 +163,13 @@ public class RoleDescriptor extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Contacts.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.RoleDescriptor.Contacts" target="_top">.NET documentation</a>
+     */
     public ICollection_1 getContacts() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -175,6 +185,13 @@ public class RoleDescriptor extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Keys.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.RoleDescriptor.Keys" target="_top">.NET documentation</a>
+     */
     public ICollection_1 getKeys() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +207,13 @@ public class RoleDescriptor extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ProtocolsSupported.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.RoleDescriptor.ProtocolsSupported" target="_top">.NET documentation</a>
+     */
     public ICollection_1 getProtocolsSupported() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +229,13 @@ public class RoleDescriptor extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ValidUntil.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.RoleDescriptor.ValidUntil" target="_top">.NET documentation</a>
+     */
     public DateTime getValidUntil() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -220,6 +251,13 @@ public class RoleDescriptor extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ValidUntil.
+     *
+     * @param ValidUntil the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.RoleDescriptor.ValidUntil" target="_top">.NET documentation</a>
+     */
     public void setValidUntil(DateTime ValidUntil) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -230,6 +268,13 @@ public class RoleDescriptor extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Organization.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.RoleDescriptor.Organization" target="_top">.NET documentation</a>
+     */
     public Organization getOrganization() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -245,6 +290,13 @@ public class RoleDescriptor extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Organization.
+     *
+     * @param Organization the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.RoleDescriptor.Organization" target="_top">.NET documentation</a>
+     */
     public void setOrganization(Organization Organization) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -255,6 +307,13 @@ public class RoleDescriptor extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ErrorUrl.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.RoleDescriptor.ErrorUrl" target="_top">.NET documentation</a>
+     */
     public Uri getErrorUrl() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -270,6 +329,13 @@ public class RoleDescriptor extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ErrorUrl.
+     *
+     * @param ErrorUrl the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.RoleDescriptor.ErrorUrl" target="_top">.NET documentation</a>
+     */
     public void setErrorUrl(Uri ErrorUrl) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

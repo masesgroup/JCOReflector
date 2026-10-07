@@ -100,7 +100,10 @@ public class ConfigurationCollectionAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ConfigurationCollectionAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,22 @@ public class ConfigurationCollectionAttribute extends system.Attribute  {
     public ConfigurationCollectionAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param itemType the argument of type {@code NetType}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.ConfigurationCollectionAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public ConfigurationCollectionAttribute(NetType itemType) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +188,13 @@ public class ConfigurationCollectionAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CollectionType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.ConfigurationCollectionAttribute.CollectionType" target="_top">.NET documentation</a>
+     */
     public ConfigurationElementCollectionType getCollectionType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +210,13 @@ public class ConfigurationCollectionAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CollectionType.
+     *
+     * @param CollectionType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.ConfigurationCollectionAttribute.CollectionType" target="_top">.NET documentation</a>
+     */
     public void setCollectionType(ConfigurationElementCollectionType CollectionType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +227,13 @@ public class ConfigurationCollectionAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AddItemName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.ConfigurationCollectionAttribute.AddItemName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getAddItemName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +248,13 @@ public class ConfigurationCollectionAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AddItemName.
+     *
+     * @param AddItemName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.ConfigurationCollectionAttribute.AddItemName" target="_top">.NET documentation</a>
+     */
     public void setAddItemName(java.lang.String AddItemName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -218,6 +265,13 @@ public class ConfigurationCollectionAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ClearItemsName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.ConfigurationCollectionAttribute.ClearItemsName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getClearItemsName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -232,6 +286,13 @@ public class ConfigurationCollectionAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ClearItemsName.
+     *
+     * @param ClearItemsName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.ConfigurationCollectionAttribute.ClearItemsName" target="_top">.NET documentation</a>
+     */
     public void setClearItemsName(java.lang.String ClearItemsName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -242,6 +303,13 @@ public class ConfigurationCollectionAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RemoveItemName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.ConfigurationCollectionAttribute.RemoveItemName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getRemoveItemName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -256,6 +324,13 @@ public class ConfigurationCollectionAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RemoveItemName.
+     *
+     * @param RemoveItemName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.ConfigurationCollectionAttribute.RemoveItemName" target="_top">.NET documentation</a>
+     */
     public void setRemoveItemName(java.lang.String RemoveItemName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -266,6 +341,13 @@ public class ConfigurationCollectionAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ItemType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.ConfigurationCollectionAttribute.ItemType" target="_top">.NET documentation</a>
+     */
     public NetType getItemType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

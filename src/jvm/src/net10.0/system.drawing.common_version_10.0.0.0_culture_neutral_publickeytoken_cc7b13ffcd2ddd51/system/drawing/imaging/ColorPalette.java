@@ -102,7 +102,10 @@ public class ColorPalette extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ColorPalette(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,13 @@ public class ColorPalette extends NetObject  {
     public ColorPalette() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param customColors the argument of type {@code Color...}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.ColorPalette.-ctor" target="_top">.NET documentation</a>
+     */
     public ColorPalette(Color... customColors) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -162,6 +172,22 @@ public class ColorPalette extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param fixedPaletteType the argument of type {@code PaletteType}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.ColorPalette.-ctor" target="_top">.NET documentation</a>
+     */
     public ColorPalette(PaletteType fixedPaletteType) throws Throwable, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
@@ -177,6 +203,25 @@ public class ColorPalette extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CreateOptimalPalette.
+     *
+     * @param colors the argument of type {@code int}
+     * @param useTransparentColor the argument of type {@code boolean}
+     * @param bitmap the argument of type {@code Bitmap}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.ColorPalette.CreateOptimalPalette" target="_top">.NET documentation</a>
+     */
     public static ColorPalette CreateOptimalPalette(int colors, boolean useTransparentColor, Bitmap bitmap) throws Throwable, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -196,6 +241,13 @@ public class ColorPalette extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Flags.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.ColorPalette.Flags" target="_top">.NET documentation</a>
+     */
     public int getFlags() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -236,6 +288,13 @@ public class ColorPalette extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Entries.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.ColorPalette.Entries" target="_top">.NET documentation</a>
+     */
     public final Color[] getEntries() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

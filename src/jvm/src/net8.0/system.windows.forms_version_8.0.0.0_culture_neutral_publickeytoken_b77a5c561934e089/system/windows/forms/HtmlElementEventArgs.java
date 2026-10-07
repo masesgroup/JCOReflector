@@ -102,7 +102,10 @@ public class HtmlElementEventArgs extends system.EventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public HtmlElementEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -161,6 +164,13 @@ public class HtmlElementEventArgs extends system.EventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AltKeyPressed.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.HtmlElementEventArgs.AltKeyPressed" target="_top">.NET documentation</a>
+     */
     public boolean getAltKeyPressed() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -175,6 +185,13 @@ public class HtmlElementEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property BubbleEvent.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.HtmlElementEventArgs.BubbleEvent" target="_top">.NET documentation</a>
+     */
     public boolean getBubbleEvent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +206,13 @@ public class HtmlElementEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property BubbleEvent.
+     *
+     * @param BubbleEvent the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.HtmlElementEventArgs.BubbleEvent" target="_top">.NET documentation</a>
+     */
     public void setBubbleEvent(boolean BubbleEvent) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -199,6 +223,13 @@ public class HtmlElementEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CtrlKeyPressed.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.HtmlElementEventArgs.CtrlKeyPressed" target="_top">.NET documentation</a>
+     */
     public boolean getCtrlKeyPressed() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -213,6 +244,13 @@ public class HtmlElementEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ReturnValue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.HtmlElementEventArgs.ReturnValue" target="_top">.NET documentation</a>
+     */
     public boolean getReturnValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -227,6 +265,13 @@ public class HtmlElementEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ReturnValue.
+     *
+     * @param ReturnValue the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.HtmlElementEventArgs.ReturnValue" target="_top">.NET documentation</a>
+     */
     public void setReturnValue(boolean ReturnValue) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -237,6 +282,13 @@ public class HtmlElementEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ShiftKeyPressed.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.HtmlElementEventArgs.ShiftKeyPressed" target="_top">.NET documentation</a>
+     */
     public boolean getShiftKeyPressed() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -251,6 +303,13 @@ public class HtmlElementEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property KeyPressedCode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.HtmlElementEventArgs.KeyPressedCode" target="_top">.NET documentation</a>
+     */
     public int getKeyPressedCode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -291,6 +350,13 @@ public class HtmlElementEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ClientMousePosition.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.HtmlElementEventArgs.ClientMousePosition" target="_top">.NET documentation</a>
+     */
     public Point getClientMousePosition() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -306,6 +372,13 @@ public class HtmlElementEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MousePosition.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.HtmlElementEventArgs.MousePosition" target="_top">.NET documentation</a>
+     */
     public Point getMousePosition() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -321,6 +394,13 @@ public class HtmlElementEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OffsetMousePosition.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.HtmlElementEventArgs.OffsetMousePosition" target="_top">.NET documentation</a>
+     */
     public Point getOffsetMousePosition() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -336,6 +416,13 @@ public class HtmlElementEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EventType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.HtmlElementEventArgs.EventType" target="_top">.NET documentation</a>
+     */
     public java.lang.String getEventType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -350,6 +437,13 @@ public class HtmlElementEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FromElement.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.HtmlElementEventArgs.FromElement" target="_top">.NET documentation</a>
+     */
     public HtmlElement getFromElement() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -365,6 +459,13 @@ public class HtmlElementEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ToElement.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.HtmlElementEventArgs.ToElement" target="_top">.NET documentation</a>
+     */
     public HtmlElement getToElement() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -380,6 +481,13 @@ public class HtmlElementEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MouseButtonsPressed.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.HtmlElementEventArgs.MouseButtonsPressed" target="_top">.NET documentation</a>
+     */
     public MouseButtons getMouseButtonsPressed() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -98,7 +98,10 @@ public class EncoderFallbackBuffer extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public EncoderFallbackBuffer(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,16 @@ public class EncoderFallbackBuffer extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Fallback.
+     *
+     * @param charUnknownHigh the argument of type {@code char}
+     * @param charUnknownLow the argument of type {@code char}
+     * @param index the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.EncoderFallbackBuffer.Fallback" target="_top">.NET documentation</a>
+     */
     public boolean Fallback(char charUnknownHigh, char charUnknownLow, int index) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -165,6 +178,15 @@ public class EncoderFallbackBuffer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Fallback.
+     *
+     * @param charUnknown the argument of type {@code char}
+     * @param index the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.EncoderFallbackBuffer.Fallback" target="_top">.NET documentation</a>
+     */
     public boolean Fallback(char charUnknown, int index) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -179,6 +201,13 @@ public class EncoderFallbackBuffer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member MovePrevious.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.EncoderFallbackBuffer.MovePrevious" target="_top">.NET documentation</a>
+     */
     public boolean MovePrevious() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +222,13 @@ public class EncoderFallbackBuffer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetNextChar.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.EncoderFallbackBuffer.GetNextChar" target="_top">.NET documentation</a>
+     */
     public char GetNextChar() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +243,12 @@ public class EncoderFallbackBuffer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Reset.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.EncoderFallbackBuffer.Reset" target="_top">.NET documentation</a>
+     */
     public void Reset() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -221,6 +263,13 @@ public class EncoderFallbackBuffer extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Remaining.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.EncoderFallbackBuffer.Remaining" target="_top">.NET documentation</a>
+     */
     public int getRemaining() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

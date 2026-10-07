@@ -99,7 +99,10 @@ public class ValidatePasswordEventArgs extends system.EventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ValidatePasswordEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,15 @@ public class ValidatePasswordEventArgs extends system.EventArgs  {
     public ValidatePasswordEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param userName the argument of type {@code java.lang.String}
+     * @param password the argument of type {@code java.lang.String}
+     * @param isNewUser the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Security.ValidatePasswordEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public ValidatePasswordEventArgs(java.lang.String userName, java.lang.String password, boolean isNewUser) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +180,13 @@ public class ValidatePasswordEventArgs extends system.EventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Cancel.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Security.ValidatePasswordEventArgs.Cancel" target="_top">.NET documentation</a>
+     */
     public boolean getCancel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +201,13 @@ public class ValidatePasswordEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Cancel.
+     *
+     * @param Cancel the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Security.ValidatePasswordEventArgs.Cancel" target="_top">.NET documentation</a>
+     */
     public void setCancel(boolean Cancel) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -192,6 +218,13 @@ public class ValidatePasswordEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsNewUser.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Security.ValidatePasswordEventArgs.IsNewUser" target="_top">.NET documentation</a>
+     */
     public boolean getIsNewUser() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,6 +239,13 @@ public class ValidatePasswordEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FailureInformation.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Security.ValidatePasswordEventArgs.FailureInformation" target="_top">.NET documentation</a>
+     */
     public NetException getFailureInformation() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -221,6 +261,13 @@ public class ValidatePasswordEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property FailureInformation.
+     *
+     * @param FailureInformation the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Security.ValidatePasswordEventArgs.FailureInformation" target="_top">.NET documentation</a>
+     */
     public void setFailureInformation(NetException FailureInformation) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -231,6 +278,13 @@ public class ValidatePasswordEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Password.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Security.ValidatePasswordEventArgs.Password" target="_top">.NET documentation</a>
+     */
     public java.lang.String getPassword() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -245,6 +299,13 @@ public class ValidatePasswordEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UserName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Security.ValidatePasswordEventArgs.UserName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getUserName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

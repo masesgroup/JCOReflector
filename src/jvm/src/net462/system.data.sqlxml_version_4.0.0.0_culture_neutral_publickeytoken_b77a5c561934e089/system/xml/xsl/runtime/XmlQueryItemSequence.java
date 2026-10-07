@@ -101,7 +101,10 @@ public class XmlQueryItemSequence extends system.xml.xsl.runtime.XmlQuerySequenc
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XmlQueryItemSequence(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class XmlQueryItemSequence extends system.xml.xsl.runtime.XmlQuerySequenc
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlQueryItemSequence.-ctor" target="_top">.NET documentation</a>
+     */
     public XmlQueryItemSequence() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -158,6 +167,13 @@ public class XmlQueryItemSequence extends system.xml.xsl.runtime.XmlQuerySequenc
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param capacity the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlQueryItemSequence.-ctor" target="_top">.NET documentation</a>
+     */
     public XmlQueryItemSequence(int capacity) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +184,14 @@ public class XmlQueryItemSequence extends system.xml.xsl.runtime.XmlQuerySequenc
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param item the argument of type {@code XPathItem}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlQueryItemSequence.-ctor" target="_top">.NET documentation</a>
+     */
     public XmlQueryItemSequence(XPathItem item) throws Throwable, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -182,6 +206,14 @@ public class XmlQueryItemSequence extends system.xml.xsl.runtime.XmlQuerySequenc
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CreateOrReuse.
+     *
+     * @param seq the argument of type {@code XmlQueryItemSequence}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlQueryItemSequence.CreateOrReuse" target="_top">.NET documentation</a>
+     */
     public static XmlQueryItemSequence CreateOrReuse(XmlQueryItemSequence seq) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -197,6 +229,16 @@ public class XmlQueryItemSequence extends system.xml.xsl.runtime.XmlQuerySequenc
         }
     }
 
+    /**
+     * Invokes the .NET member CreateOrReuse.
+     *
+     * @param seq the argument of type {@code XmlQueryItemSequence}
+     * @param item the argument of type {@code XPathItem}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlQueryItemSequence.CreateOrReuse" target="_top">.NET documentation</a>
+     */
     public static XmlQueryItemSequence CreateOrReuse(XmlQueryItemSequence seq, XPathItem item) throws Throwable, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -212,6 +254,14 @@ public class XmlQueryItemSequence extends system.xml.xsl.runtime.XmlQuerySequenc
         }
     }
 
+    /**
+     * Invokes the .NET member AddClone.
+     *
+     * @param item the argument of type {@code XPathItem}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlQueryItemSequence.AddClone" target="_top">.NET documentation</a>
+     */
     public void AddClone(XPathItem item) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

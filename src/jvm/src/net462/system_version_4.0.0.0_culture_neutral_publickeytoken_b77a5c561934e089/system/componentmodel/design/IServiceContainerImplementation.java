@@ -101,7 +101,10 @@ public class IServiceContainerImplementation extends NetObject implements IServi
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IServiceContainerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -143,6 +146,14 @@ public class IServiceContainerImplementation extends NetObject implements IServi
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetService.
+     *
+     * @param serviceType the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IServiceContainer.GetService" target="_top">.NET documentation</a>
+     */
     public NetObject GetService(NetType serviceType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -158,6 +169,14 @@ public class IServiceContainerImplementation extends NetObject implements IServi
         }
     }
 
+    /**
+     * Invokes the .NET member AddService.
+     *
+     * @param serviceType the argument of type {@code NetType}
+     * @param callback the argument of type {@code ServiceCreatorCallback}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IServiceContainer.AddService" target="_top">.NET documentation</a>
+     */
     public void AddService(NetType serviceType, ServiceCreatorCallback callback) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -168,6 +187,15 @@ public class IServiceContainerImplementation extends NetObject implements IServi
         }
     }
 
+    /**
+     * Invokes the .NET member AddService.
+     *
+     * @param serviceType the argument of type {@code NetType}
+     * @param callback the argument of type {@code ServiceCreatorCallback}
+     * @param promote the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IServiceContainer.AddService" target="_top">.NET documentation</a>
+     */
     public void AddService(NetType serviceType, ServiceCreatorCallback callback, boolean promote) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,6 +206,14 @@ public class IServiceContainerImplementation extends NetObject implements IServi
         }
     }
 
+    /**
+     * Invokes the .NET member AddService.
+     *
+     * @param serviceType the argument of type {@code NetType}
+     * @param serviceInstance the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IServiceContainer.AddService" target="_top">.NET documentation</a>
+     */
     public void AddService(NetType serviceType, NetObject serviceInstance) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +224,15 @@ public class IServiceContainerImplementation extends NetObject implements IServi
         }
     }
 
+    /**
+     * Invokes the .NET member AddService.
+     *
+     * @param serviceType the argument of type {@code NetType}
+     * @param serviceInstance the argument of type {@code NetObject}
+     * @param promote the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IServiceContainer.AddService" target="_top">.NET documentation</a>
+     */
     public void AddService(NetType serviceType, NetObject serviceInstance, boolean promote) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +243,13 @@ public class IServiceContainerImplementation extends NetObject implements IServi
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveService.
+     *
+     * @param serviceType the argument of type {@code NetType}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IServiceContainer.RemoveService" target="_top">.NET documentation</a>
+     */
     public void RemoveService(NetType serviceType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +260,14 @@ public class IServiceContainerImplementation extends NetObject implements IServi
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveService.
+     *
+     * @param serviceType the argument of type {@code NetType}
+     * @param promote the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IServiceContainer.RemoveService" target="_top">.NET documentation</a>
+     */
     public void RemoveService(NetType serviceType, boolean promote) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

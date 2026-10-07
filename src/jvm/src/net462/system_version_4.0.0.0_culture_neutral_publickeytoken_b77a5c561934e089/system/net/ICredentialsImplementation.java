@@ -100,7 +100,10 @@ public class ICredentialsImplementation extends NetObject implements ICredential
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ICredentialsImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -142,6 +145,15 @@ public class ICredentialsImplementation extends NetObject implements ICredential
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetCredential.
+     *
+     * @param uri the argument of type {@code Uri}
+     * @param authType the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.ICredentials.GetCredential" target="_top">.NET documentation</a>
+     */
     public NetworkCredential GetCredential(Uri uri, java.lang.String authType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

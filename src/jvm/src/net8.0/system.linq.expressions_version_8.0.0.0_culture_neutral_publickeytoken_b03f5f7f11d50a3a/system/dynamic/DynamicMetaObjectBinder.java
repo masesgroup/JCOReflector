@@ -103,7 +103,10 @@ public class DynamicMetaObjectBinder extends system.runtime.compilerservices.Cal
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DynamicMetaObjectBinder(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,15 @@ public class DynamicMetaObjectBinder extends system.runtime.compilerservices.Cal
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Bind.
+     *
+     * @param target the argument of type {@code DynamicMetaObject}
+     * @param args the argument of type {@code DynamicMetaObject[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Dynamic.DynamicMetaObjectBinder.Bind" target="_top">.NET documentation</a>
+     */
     public DynamicMetaObject Bind(DynamicMetaObject target, DynamicMetaObject[] args) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -171,6 +183,26 @@ public class DynamicMetaObjectBinder extends system.runtime.compilerservices.Cal
         }
     }
 
+    /**
+     * Invokes the .NET member Defer.
+     *
+     * @param target the argument of type {@code DynamicMetaObject}
+     * @param args the argument of type {@code DynamicMetaObject...}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Dynamic.DynamicMetaObjectBinder.Defer" target="_top">.NET documentation</a>
+     */
     public DynamicMetaObject Defer(DynamicMetaObject target, DynamicMetaObject... args) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -186,6 +218,24 @@ public class DynamicMetaObjectBinder extends system.runtime.compilerservices.Cal
         }
     }
 
+    /**
+     * Invokes the .NET member Defer.
+     *
+     * @param args the argument of type {@code DynamicMetaObject...}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Dynamic.DynamicMetaObjectBinder.Defer" target="_top">.NET documentation</a>
+     */
     public DynamicMetaObject Defer(DynamicMetaObject... args) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +251,29 @@ public class DynamicMetaObjectBinder extends system.runtime.compilerservices.Cal
         }
     }
 
+    /**
+     * Invokes the .NET member Bind.
+     *
+     * @param args the argument of type {@code NetObject[]}
+     * @param parameters the argument of type {@code ReadOnlyCollection_1}
+     * @param returnLabel the argument of type {@code LabelTarget}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Dynamic.DynamicMetaObjectBinder.Bind" target="_top">.NET documentation</a>
+     */
     public Expression Bind(NetObject[] args, ReadOnlyCollection_1 parameters, LabelTarget returnLabel) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.InvalidCastException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +289,18 @@ public class DynamicMetaObjectBinder extends system.runtime.compilerservices.Cal
         }
     }
 
+    /**
+     * Invokes the .NET member GetUpdateExpression.
+     *
+     * @param type the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Dynamic.DynamicMetaObjectBinder.GetUpdateExpression" target="_top">.NET documentation</a>
+     */
     public Expression GetUpdateExpression(NetType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -235,6 +320,13 @@ public class DynamicMetaObjectBinder extends system.runtime.compilerservices.Cal
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ReturnType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Dynamic.DynamicMetaObjectBinder.ReturnType" target="_top">.NET documentation</a>
+     */
     public NetType getReturnType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -101,7 +101,10 @@ public class IXsltContextFunctionImplementation extends NetObject implements IXs
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IXsltContextFunctionImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -143,6 +146,16 @@ public class IXsltContextFunctionImplementation extends NetObject implements IXs
 
     // Methods section
     
+    /**
+     * Invokes the .NET member Invoke.
+     *
+     * @param xsltContext the argument of type {@code XsltContext}
+     * @param args the argument of type {@code NetObject[]}
+     * @param docContext the argument of type {@code XPathNavigator}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.IXsltContextFunction.Invoke" target="_top">.NET documentation</a>
+     */
     public NetObject Invoke(XsltContext xsltContext, NetObject[] args, XPathNavigator docContext) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -162,6 +175,13 @@ public class IXsltContextFunctionImplementation extends NetObject implements IXs
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Maxargs.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.IXsltContextFunction.Maxargs" target="_top">.NET documentation</a>
+     */
     public int getMaxargs() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +222,13 @@ public class IXsltContextFunctionImplementation extends NetObject implements IXs
         }
     }
 
+    /**
+     * Gets the value of the .NET property Minargs.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.IXsltContextFunction.Minargs" target="_top">.NET documentation</a>
+     */
     public int getMinargs() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -242,6 +269,13 @@ public class IXsltContextFunctionImplementation extends NetObject implements IXs
         }
     }
 
+    /**
+     * Gets the value of the .NET property ReturnType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.IXsltContextFunction.ReturnType" target="_top">.NET documentation</a>
+     */
     public XPathResultType getReturnType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -257,6 +291,13 @@ public class IXsltContextFunctionImplementation extends NetObject implements IXs
         }
     }
 
+    /**
+     * Gets the value of the .NET property ArgTypes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.IXsltContextFunction.ArgTypes" target="_top">.NET documentation</a>
+     */
     public final XPathResultType[] getArgTypes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -109,7 +109,10 @@ public class MutexSecurity extends system.security.accesscontrol.NativeObjectSec
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public MutexSecurity(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,17 @@ public class MutexSecurity extends system.security.accesscontrol.NativeObjectSec
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.MutexSecurity.-ctor" target="_top">.NET documentation</a>
+     */
     public MutexSecurity() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.OverflowException {
         try {
             // add reference to assemblyName.dll file
@@ -166,6 +180,29 @@ public class MutexSecurity extends system.security.accesscontrol.NativeObjectSec
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param includeSections the argument of type {@code AccessControlSections}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.security.accesscontrol.PrivilegeNotHeldException if the .NET member raises it
+     * @throws system.SystemException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.MutexSecurity.-ctor" target="_top">.NET documentation</a>
+     */
     public MutexSecurity(java.lang.String name, AccessControlSections includeSections) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.UnauthorizedAccessException, system.security.accesscontrol.PrivilegeNotHeldException, system.SystemException, system.OverflowException {
         try {
             // add reference to assemblyName.dll file
@@ -180,6 +217,15 @@ public class MutexSecurity extends system.security.accesscontrol.NativeObjectSec
     
     // Methods section
     
+    /**
+     * Invokes the .NET member RemoveAccessRule.
+     *
+     * @param rule the argument of type {@code MutexAccessRule}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.MutexSecurity.RemoveAccessRule" target="_top">.NET documentation</a>
+     */
     public boolean RemoveAccessRule(MutexAccessRule rule) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +240,15 @@ public class MutexSecurity extends system.security.accesscontrol.NativeObjectSec
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveAuditRule.
+     *
+     * @param rule the argument of type {@code MutexAuditRule}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.MutexSecurity.RemoveAuditRule" target="_top">.NET documentation</a>
+     */
     public boolean RemoveAuditRule(MutexAuditRule rule) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +263,23 @@ public class MutexSecurity extends system.security.accesscontrol.NativeObjectSec
         }
     }
 
+    /**
+     * Invokes the .NET member AccessRuleFactory.
+     *
+     * @param identityReference the argument of type {@code IdentityReference}
+     * @param accessMask the argument of type {@code int}
+     * @param isInherited the argument of type {@code boolean}
+     * @param inheritanceFlags the argument of type {@code InheritanceFlags}
+     * @param propagationFlags the argument of type {@code PropagationFlags}
+     * @param type the argument of type {@code AccessControlType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.MutexSecurity.AccessRuleFactory" target="_top">.NET documentation</a>
+     */
     public AccessRule AccessRuleFactory(IdentityReference identityReference, int accessMask, boolean isInherited, InheritanceFlags inheritanceFlags, PropagationFlags propagationFlags, AccessControlType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -223,6 +295,23 @@ public class MutexSecurity extends system.security.accesscontrol.NativeObjectSec
         }
     }
 
+    /**
+     * Invokes the .NET member AuditRuleFactory.
+     *
+     * @param identityReference the argument of type {@code IdentityReference}
+     * @param accessMask the argument of type {@code int}
+     * @param isInherited the argument of type {@code boolean}
+     * @param inheritanceFlags the argument of type {@code InheritanceFlags}
+     * @param propagationFlags the argument of type {@code PropagationFlags}
+     * @param flags the argument of type {@code AuditFlags}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.MutexSecurity.AuditRuleFactory" target="_top">.NET documentation</a>
+     */
     public AuditRule AuditRuleFactory(IdentityReference identityReference, int accessMask, boolean isInherited, InheritanceFlags inheritanceFlags, PropagationFlags propagationFlags, AuditFlags flags) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -238,6 +327,14 @@ public class MutexSecurity extends system.security.accesscontrol.NativeObjectSec
         }
     }
 
+    /**
+     * Invokes the .NET member AddAccessRule.
+     *
+     * @param rule the argument of type {@code MutexAccessRule}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.MutexSecurity.AddAccessRule" target="_top">.NET documentation</a>
+     */
     public void AddAccessRule(MutexAccessRule rule) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -248,6 +345,14 @@ public class MutexSecurity extends system.security.accesscontrol.NativeObjectSec
         }
     }
 
+    /**
+     * Invokes the .NET member AddAuditRule.
+     *
+     * @param rule the argument of type {@code MutexAuditRule}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.MutexSecurity.AddAuditRule" target="_top">.NET documentation</a>
+     */
     public void AddAuditRule(MutexAuditRule rule) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -258,6 +363,14 @@ public class MutexSecurity extends system.security.accesscontrol.NativeObjectSec
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveAccessRuleAll.
+     *
+     * @param rule the argument of type {@code MutexAccessRule}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.MutexSecurity.RemoveAccessRuleAll" target="_top">.NET documentation</a>
+     */
     public void RemoveAccessRuleAll(MutexAccessRule rule) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -268,6 +381,14 @@ public class MutexSecurity extends system.security.accesscontrol.NativeObjectSec
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveAccessRuleSpecific.
+     *
+     * @param rule the argument of type {@code MutexAccessRule}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.MutexSecurity.RemoveAccessRuleSpecific" target="_top">.NET documentation</a>
+     */
     public void RemoveAccessRuleSpecific(MutexAccessRule rule) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -278,6 +399,14 @@ public class MutexSecurity extends system.security.accesscontrol.NativeObjectSec
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveAuditRuleAll.
+     *
+     * @param rule the argument of type {@code MutexAuditRule}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.MutexSecurity.RemoveAuditRuleAll" target="_top">.NET documentation</a>
+     */
     public void RemoveAuditRuleAll(MutexAuditRule rule) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -288,6 +417,14 @@ public class MutexSecurity extends system.security.accesscontrol.NativeObjectSec
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveAuditRuleSpecific.
+     *
+     * @param rule the argument of type {@code MutexAuditRule}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.MutexSecurity.RemoveAuditRuleSpecific" target="_top">.NET documentation</a>
+     */
     public void RemoveAuditRuleSpecific(MutexAuditRule rule) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -298,6 +435,14 @@ public class MutexSecurity extends system.security.accesscontrol.NativeObjectSec
         }
     }
 
+    /**
+     * Invokes the .NET member ResetAccessRule.
+     *
+     * @param rule the argument of type {@code MutexAccessRule}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.MutexSecurity.ResetAccessRule" target="_top">.NET documentation</a>
+     */
     public void ResetAccessRule(MutexAccessRule rule) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -308,6 +453,14 @@ public class MutexSecurity extends system.security.accesscontrol.NativeObjectSec
         }
     }
 
+    /**
+     * Invokes the .NET member SetAccessRule.
+     *
+     * @param rule the argument of type {@code MutexAccessRule}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.MutexSecurity.SetAccessRule" target="_top">.NET documentation</a>
+     */
     public void SetAccessRule(MutexAccessRule rule) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -318,6 +471,14 @@ public class MutexSecurity extends system.security.accesscontrol.NativeObjectSec
         }
     }
 
+    /**
+     * Invokes the .NET member SetAuditRule.
+     *
+     * @param rule the argument of type {@code MutexAuditRule}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.MutexSecurity.SetAuditRule" target="_top">.NET documentation</a>
+     */
     public void SetAuditRule(MutexAuditRule rule) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

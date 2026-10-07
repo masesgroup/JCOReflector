@@ -101,7 +101,10 @@ public class TypeReflector extends microsoft.jscript.ScriptObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TypeReflector(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,23 @@ public class TypeReflector extends microsoft.jscript.ScriptObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetMember.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param bindingAttr the argument of type {@code BindingFlags}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.TypeReflector.GetMember" target="_top">.NET documentation</a>
+     */
     public MemberInfo[] GetMember(java.lang.String name, BindingFlags bindingAttr) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -177,6 +197,15 @@ public class TypeReflector extends microsoft.jscript.ScriptObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetMembers.
+     *
+     * @param bindingAttr the argument of type {@code BindingFlags}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.TypeReflector.GetMembers" target="_top">.NET documentation</a>
+     */
     public MemberInfo[] GetMembers(BindingFlags bindingAttr) throws Throwable, microsoft.jscript.JScriptException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

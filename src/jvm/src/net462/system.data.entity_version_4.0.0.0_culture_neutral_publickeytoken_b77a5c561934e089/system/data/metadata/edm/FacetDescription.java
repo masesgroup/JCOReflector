@@ -100,7 +100,10 @@ public class FacetDescription extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public FacetDescription(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -159,6 +162,13 @@ public class FacetDescription extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsConstant.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.FacetDescription.IsConstant" target="_top">.NET documentation</a>
+     */
     public boolean getIsConstant() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -173,6 +183,13 @@ public class FacetDescription extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsRequired.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.FacetDescription.IsRequired" target="_top">.NET documentation</a>
+     */
     public boolean getIsRequired() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +204,13 @@ public class FacetDescription extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FacetType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.FacetDescription.FacetType" target="_top">.NET documentation</a>
+     */
     public EdmType getFacetType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +226,13 @@ public class FacetDescription extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MaxValue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.FacetDescription.MaxValue" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getMaxValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -217,6 +248,13 @@ public class FacetDescription extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MinValue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.FacetDescription.MinValue" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getMinValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -232,6 +270,13 @@ public class FacetDescription extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DefaultValue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.FacetDescription.DefaultValue" target="_top">.NET documentation</a>
+     */
     public NetObject getDefaultValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -247,6 +292,13 @@ public class FacetDescription extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FacetName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.FacetDescription.FacetName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getFacetName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

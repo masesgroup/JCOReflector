@@ -101,7 +101,10 @@ public class TaskDialogButton extends system.windows.forms.TaskDialogControl  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TaskDialogButton(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class TaskDialogButton extends system.windows.forms.TaskDialogControl  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TaskDialogButton.-ctor" target="_top">.NET documentation</a>
+     */
     public TaskDialogButton() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -158,6 +167,21 @@ public class TaskDialogButton extends system.windows.forms.TaskDialogControl  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param text the argument of type {@code java.lang.String}
+     * @param enabled the argument of type {@code boolean}
+     * @param allowCloseDialog the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TaskDialogButton.-ctor" target="_top">.NET documentation</a>
+     */
     public TaskDialogButton(java.lang.String text, boolean enabled, boolean allowCloseDialog) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
@@ -172,6 +196,20 @@ public class TaskDialogButton extends system.windows.forms.TaskDialogControl  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member PerformClick.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TaskDialogButton.PerformClick" target="_top">.NET documentation</a>
+     */
     public void PerformClick() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -186,6 +224,13 @@ public class TaskDialogButton extends system.windows.forms.TaskDialogControl  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AllowCloseDialog.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TaskDialogButton.AllowCloseDialog" target="_top">.NET documentation</a>
+     */
     public boolean getAllowCloseDialog() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +245,13 @@ public class TaskDialogButton extends system.windows.forms.TaskDialogControl  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AllowCloseDialog.
+     *
+     * @param AllowCloseDialog the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TaskDialogButton.AllowCloseDialog" target="_top">.NET documentation</a>
+     */
     public void setAllowCloseDialog(boolean AllowCloseDialog) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -210,6 +262,13 @@ public class TaskDialogButton extends system.windows.forms.TaskDialogControl  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Enabled.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TaskDialogButton.Enabled" target="_top">.NET documentation</a>
+     */
     public boolean getEnabled() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -224,6 +283,21 @@ public class TaskDialogButton extends system.windows.forms.TaskDialogControl  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Enabled.
+     *
+     * @param Enabled the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TaskDialogButton.Enabled" target="_top">.NET documentation</a>
+     */
     public void setEnabled(boolean Enabled) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -234,6 +308,13 @@ public class TaskDialogButton extends system.windows.forms.TaskDialogControl  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ShowShieldIcon.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TaskDialogButton.ShowShieldIcon" target="_top">.NET documentation</a>
+     */
     public boolean getShowShieldIcon() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -248,6 +329,21 @@ public class TaskDialogButton extends system.windows.forms.TaskDialogControl  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ShowShieldIcon.
+     *
+     * @param ShowShieldIcon the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TaskDialogButton.ShowShieldIcon" target="_top">.NET documentation</a>
+     */
     public void setShowShieldIcon(boolean ShowShieldIcon) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -258,6 +354,13 @@ public class TaskDialogButton extends system.windows.forms.TaskDialogControl  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Visible.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TaskDialogButton.Visible" target="_top">.NET documentation</a>
+     */
     public boolean getVisible() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -272,6 +375,19 @@ public class TaskDialogButton extends system.windows.forms.TaskDialogControl  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Visible.
+     *
+     * @param Visible the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TaskDialogButton.Visible" target="_top">.NET documentation</a>
+     */
     public void setVisible(boolean Visible) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -282,6 +398,13 @@ public class TaskDialogButton extends system.windows.forms.TaskDialogControl  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Text.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TaskDialogButton.Text" target="_top">.NET documentation</a>
+     */
     public java.lang.String getText() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -296,6 +419,21 @@ public class TaskDialogButton extends system.windows.forms.TaskDialogControl  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Text.
+     *
+     * @param Text the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TaskDialogButton.Text" target="_top">.NET documentation</a>
+     */
     public void setText(java.lang.String Text) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -306,6 +444,13 @@ public class TaskDialogButton extends system.windows.forms.TaskDialogControl  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Abort.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TaskDialogButton.Abort" target="_top">.NET documentation</a>
+     */
     public static TaskDialogButton getAbort() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -321,6 +466,13 @@ public class TaskDialogButton extends system.windows.forms.TaskDialogControl  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Cancel.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TaskDialogButton.Cancel" target="_top">.NET documentation</a>
+     */
     public static TaskDialogButton getCancel() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -336,6 +488,13 @@ public class TaskDialogButton extends system.windows.forms.TaskDialogControl  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Close.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TaskDialogButton.Close" target="_top">.NET documentation</a>
+     */
     public static TaskDialogButton getClose() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -351,6 +510,13 @@ public class TaskDialogButton extends system.windows.forms.TaskDialogControl  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Continue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TaskDialogButton.Continue" target="_top">.NET documentation</a>
+     */
     public static TaskDialogButton getContinue() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -366,6 +532,13 @@ public class TaskDialogButton extends system.windows.forms.TaskDialogControl  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Help.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TaskDialogButton.Help" target="_top">.NET documentation</a>
+     */
     public static TaskDialogButton getHelp() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -381,6 +554,13 @@ public class TaskDialogButton extends system.windows.forms.TaskDialogControl  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Ignore.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TaskDialogButton.Ignore" target="_top">.NET documentation</a>
+     */
     public static TaskDialogButton getIgnore() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -396,6 +576,13 @@ public class TaskDialogButton extends system.windows.forms.TaskDialogControl  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property No.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TaskDialogButton.No" target="_top">.NET documentation</a>
+     */
     public static TaskDialogButton getNo() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -411,6 +598,13 @@ public class TaskDialogButton extends system.windows.forms.TaskDialogControl  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OK.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TaskDialogButton.OK" target="_top">.NET documentation</a>
+     */
     public static TaskDialogButton getOK() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -426,6 +620,13 @@ public class TaskDialogButton extends system.windows.forms.TaskDialogControl  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Retry.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TaskDialogButton.Retry" target="_top">.NET documentation</a>
+     */
     public static TaskDialogButton getRetry() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -441,6 +642,13 @@ public class TaskDialogButton extends system.windows.forms.TaskDialogControl  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TryAgain.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TaskDialogButton.TryAgain" target="_top">.NET documentation</a>
+     */
     public static TaskDialogButton getTryAgain() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -456,6 +664,13 @@ public class TaskDialogButton extends system.windows.forms.TaskDialogControl  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Yes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TaskDialogButton.Yes" target="_top">.NET documentation</a>
+     */
     public static TaskDialogButton getYes() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -476,6 +691,13 @@ public class TaskDialogButton extends system.windows.forms.TaskDialogControl  {
     // Instance Events section
     
 
+    /**
+     * Invokes the .NET member addClick.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addClick(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -486,6 +708,13 @@ public class TaskDialogButton extends system.windows.forms.TaskDialogControl  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeClick.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeClick(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -102,7 +102,10 @@ public class TypedDataSetGenerator extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TypedDataSetGenerator(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,12 @@ public class TypedDataSetGenerator extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.TypedDataSetGenerator.-ctor" target="_top">.NET documentation</a>
+     */
     public TypedDataSetGenerator() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -163,6 +172,16 @@ public class TypedDataSetGenerator extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GenerateIdName.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param codeGen the argument of type {@code ICodeGenerator}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.TypedDataSetGenerator.GenerateIdName" target="_top">.NET documentation</a>
+     */
     public static java.lang.String GenerateIdName(java.lang.String name, ICodeGenerator codeGen) throws Throwable, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -177,6 +196,33 @@ public class TypedDataSetGenerator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Generate.
+     *
+     * @param dataSet the argument of type {@code DataSet}
+     * @param codeNamespace the argument of type {@code CodeNamespace}
+     * @param codeGen the argument of type {@code ICodeGenerator}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.data.DataException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.data.sqltypes.SqlNullValueException if the .NET member raises it
+     * @throws system.data.sqltypes.SqlTruncateException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.data.TypedDataSetGeneratorException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.TypedDataSetGenerator.Generate" target="_top">.NET documentation</a>
+     */
     public static void Generate(DataSet dataSet, CodeNamespace codeNamespace, ICodeGenerator codeGen) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.NotSupportedException, system.FormatException, system.data.DataException, system.OutOfMemoryException, system.OverflowException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.InvalidCastException, system.data.TypedDataSetGeneratorException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

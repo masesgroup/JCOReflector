@@ -121,7 +121,10 @@ public class IDuplexSessionChannelImplementation extends NetObject implements ID
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IDuplexSessionChannelImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -163,6 +166,15 @@ public class IDuplexSessionChannelImplementation extends NetObject implements ID
 
     // Methods section
     
+    /**
+     * Invokes the .NET member EndTryReceive.
+     *
+     * @param result the argument of type {@code IAsyncResult}
+     * @param message the argument of type {@code JCORefOut<Message>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.IDuplexSessionChannel.EndTryReceive" target="_top">.NET documentation</a>
+     */
     public boolean EndTryReceive(IAsyncResult result, JCORefOut<Message> message) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -177,6 +189,14 @@ public class IDuplexSessionChannelImplementation extends NetObject implements ID
         }
     }
 
+    /**
+     * Invokes the .NET member EndWaitForMessage.
+     *
+     * @param result the argument of type {@code IAsyncResult}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.IDuplexSessionChannel.EndWaitForMessage" target="_top">.NET documentation</a>
+     */
     public boolean EndWaitForMessage(IAsyncResult result) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -191,6 +211,15 @@ public class IDuplexSessionChannelImplementation extends NetObject implements ID
         }
     }
 
+    /**
+     * Invokes the .NET member TryReceive.
+     *
+     * @param timeout the argument of type {@code TimeSpan}
+     * @param message the argument of type {@code JCORefOut<Message>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.IDuplexSessionChannel.TryReceive" target="_top">.NET documentation</a>
+     */
     public boolean TryReceive(TimeSpan timeout, JCORefOut<Message> message) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +234,14 @@ public class IDuplexSessionChannelImplementation extends NetObject implements ID
         }
     }
 
+    /**
+     * Invokes the .NET member WaitForMessage.
+     *
+     * @param timeout the argument of type {@code TimeSpan}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.IDuplexSessionChannel.WaitForMessage" target="_top">.NET documentation</a>
+     */
     public boolean WaitForMessage(TimeSpan timeout) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -219,6 +256,15 @@ public class IDuplexSessionChannelImplementation extends NetObject implements ID
         }
     }
 
+    /**
+     * Invokes the .NET member BeginClose.
+     *
+     * @param callback the argument of type {@code AsyncCallback}
+     * @param state the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.IDuplexSessionChannel.BeginClose" target="_top">.NET documentation</a>
+     */
     public IAsyncResult BeginClose(AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -234,6 +280,16 @@ public class IDuplexSessionChannelImplementation extends NetObject implements ID
         }
     }
 
+    /**
+     * Invokes the .NET member BeginClose.
+     *
+     * @param timeout the argument of type {@code TimeSpan}
+     * @param callback the argument of type {@code AsyncCallback}
+     * @param state the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.IDuplexSessionChannel.BeginClose" target="_top">.NET documentation</a>
+     */
     public IAsyncResult BeginClose(TimeSpan timeout, AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -249,6 +305,15 @@ public class IDuplexSessionChannelImplementation extends NetObject implements ID
         }
     }
 
+    /**
+     * Invokes the .NET member BeginOpen.
+     *
+     * @param callback the argument of type {@code AsyncCallback}
+     * @param state the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.IDuplexSessionChannel.BeginOpen" target="_top">.NET documentation</a>
+     */
     public IAsyncResult BeginOpen(AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -264,6 +329,16 @@ public class IDuplexSessionChannelImplementation extends NetObject implements ID
         }
     }
 
+    /**
+     * Invokes the .NET member BeginOpen.
+     *
+     * @param timeout the argument of type {@code TimeSpan}
+     * @param callback the argument of type {@code AsyncCallback}
+     * @param state the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.IDuplexSessionChannel.BeginOpen" target="_top">.NET documentation</a>
+     */
     public IAsyncResult BeginOpen(TimeSpan timeout, AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -279,6 +354,15 @@ public class IDuplexSessionChannelImplementation extends NetObject implements ID
         }
     }
 
+    /**
+     * Invokes the .NET member BeginReceive.
+     *
+     * @param callback the argument of type {@code AsyncCallback}
+     * @param state the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.IDuplexSessionChannel.BeginReceive" target="_top">.NET documentation</a>
+     */
     public IAsyncResult BeginReceive(AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -294,6 +378,16 @@ public class IDuplexSessionChannelImplementation extends NetObject implements ID
         }
     }
 
+    /**
+     * Invokes the .NET member BeginReceive.
+     *
+     * @param timeout the argument of type {@code TimeSpan}
+     * @param callback the argument of type {@code AsyncCallback}
+     * @param state the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.IDuplexSessionChannel.BeginReceive" target="_top">.NET documentation</a>
+     */
     public IAsyncResult BeginReceive(TimeSpan timeout, AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -309,6 +403,16 @@ public class IDuplexSessionChannelImplementation extends NetObject implements ID
         }
     }
 
+    /**
+     * Invokes the .NET member BeginSend.
+     *
+     * @param message the argument of type {@code Message}
+     * @param callback the argument of type {@code AsyncCallback}
+     * @param state the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.IDuplexSessionChannel.BeginSend" target="_top">.NET documentation</a>
+     */
     public IAsyncResult BeginSend(Message message, AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -324,6 +428,17 @@ public class IDuplexSessionChannelImplementation extends NetObject implements ID
         }
     }
 
+    /**
+     * Invokes the .NET member BeginSend.
+     *
+     * @param message the argument of type {@code Message}
+     * @param timeout the argument of type {@code TimeSpan}
+     * @param callback the argument of type {@code AsyncCallback}
+     * @param state the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.IDuplexSessionChannel.BeginSend" target="_top">.NET documentation</a>
+     */
     public IAsyncResult BeginSend(Message message, TimeSpan timeout, AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -339,6 +454,16 @@ public class IDuplexSessionChannelImplementation extends NetObject implements ID
         }
     }
 
+    /**
+     * Invokes the .NET member BeginTryReceive.
+     *
+     * @param timeout the argument of type {@code TimeSpan}
+     * @param callback the argument of type {@code AsyncCallback}
+     * @param state the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.IDuplexSessionChannel.BeginTryReceive" target="_top">.NET documentation</a>
+     */
     public IAsyncResult BeginTryReceive(TimeSpan timeout, AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -354,6 +479,16 @@ public class IDuplexSessionChannelImplementation extends NetObject implements ID
         }
     }
 
+    /**
+     * Invokes the .NET member BeginWaitForMessage.
+     *
+     * @param timeout the argument of type {@code TimeSpan}
+     * @param callback the argument of type {@code AsyncCallback}
+     * @param state the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.IDuplexSessionChannel.BeginWaitForMessage" target="_top">.NET documentation</a>
+     */
     public IAsyncResult BeginWaitForMessage(TimeSpan timeout, AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -369,6 +504,14 @@ public class IDuplexSessionChannelImplementation extends NetObject implements ID
         }
     }
 
+    /**
+     * Invokes the .NET member EndReceive.
+     *
+     * @param result the argument of type {@code IAsyncResult}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.IDuplexSessionChannel.EndReceive" target="_top">.NET documentation</a>
+     */
     public Message EndReceive(IAsyncResult result) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -384,6 +527,13 @@ public class IDuplexSessionChannelImplementation extends NetObject implements ID
         }
     }
 
+    /**
+     * Invokes the .NET member Receive.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.IDuplexSessionChannel.Receive" target="_top">.NET documentation</a>
+     */
     public Message Receive() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -399,6 +549,14 @@ public class IDuplexSessionChannelImplementation extends NetObject implements ID
         }
     }
 
+    /**
+     * Invokes the .NET member Receive.
+     *
+     * @param timeout the argument of type {@code TimeSpan}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.IDuplexSessionChannel.Receive" target="_top">.NET documentation</a>
+     */
     public Message Receive(TimeSpan timeout) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -414,6 +572,12 @@ public class IDuplexSessionChannelImplementation extends NetObject implements ID
         }
     }
 
+    /**
+     * Invokes the .NET member Abort.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.IDuplexSessionChannel.Abort" target="_top">.NET documentation</a>
+     */
     public void Abort() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -424,6 +588,12 @@ public class IDuplexSessionChannelImplementation extends NetObject implements ID
         }
     }
 
+    /**
+     * Invokes the .NET member Close.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.IDuplexSessionChannel.Close" target="_top">.NET documentation</a>
+     */
     public void Close() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -434,6 +604,13 @@ public class IDuplexSessionChannelImplementation extends NetObject implements ID
         }
     }
 
+    /**
+     * Invokes the .NET member Close.
+     *
+     * @param timeout the argument of type {@code TimeSpan}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.IDuplexSessionChannel.Close" target="_top">.NET documentation</a>
+     */
     public void Close(TimeSpan timeout) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -444,6 +621,13 @@ public class IDuplexSessionChannelImplementation extends NetObject implements ID
         }
     }
 
+    /**
+     * Invokes the .NET member EndClose.
+     *
+     * @param result the argument of type {@code IAsyncResult}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.IDuplexSessionChannel.EndClose" target="_top">.NET documentation</a>
+     */
     public void EndClose(IAsyncResult result) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -454,6 +638,13 @@ public class IDuplexSessionChannelImplementation extends NetObject implements ID
         }
     }
 
+    /**
+     * Invokes the .NET member EndOpen.
+     *
+     * @param result the argument of type {@code IAsyncResult}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.IDuplexSessionChannel.EndOpen" target="_top">.NET documentation</a>
+     */
     public void EndOpen(IAsyncResult result) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -464,6 +655,13 @@ public class IDuplexSessionChannelImplementation extends NetObject implements ID
         }
     }
 
+    /**
+     * Invokes the .NET member EndSend.
+     *
+     * @param result the argument of type {@code IAsyncResult}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.IDuplexSessionChannel.EndSend" target="_top">.NET documentation</a>
+     */
     public void EndSend(IAsyncResult result) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -474,6 +672,12 @@ public class IDuplexSessionChannelImplementation extends NetObject implements ID
         }
     }
 
+    /**
+     * Invokes the .NET member Open.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.IDuplexSessionChannel.Open" target="_top">.NET documentation</a>
+     */
     public void Open() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -484,6 +688,13 @@ public class IDuplexSessionChannelImplementation extends NetObject implements ID
         }
     }
 
+    /**
+     * Invokes the .NET member Open.
+     *
+     * @param timeout the argument of type {@code TimeSpan}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.IDuplexSessionChannel.Open" target="_top">.NET documentation</a>
+     */
     public void Open(TimeSpan timeout) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -494,6 +705,13 @@ public class IDuplexSessionChannelImplementation extends NetObject implements ID
         }
     }
 
+    /**
+     * Invokes the .NET member Send.
+     *
+     * @param message the argument of type {@code Message}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.IDuplexSessionChannel.Send" target="_top">.NET documentation</a>
+     */
     public void Send(Message message) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -504,6 +722,14 @@ public class IDuplexSessionChannelImplementation extends NetObject implements ID
         }
     }
 
+    /**
+     * Invokes the .NET member Send.
+     *
+     * @param message the argument of type {@code Message}
+     * @param timeout the argument of type {@code TimeSpan}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.IDuplexSessionChannel.Send" target="_top">.NET documentation</a>
+     */
     public void Send(Message message, TimeSpan timeout) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -518,6 +744,13 @@ public class IDuplexSessionChannelImplementation extends NetObject implements ID
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Session.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.IDuplexSessionChannel.Session" target="_top">.NET documentation</a>
+     */
     public IDuplexSession getSession() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -533,6 +766,13 @@ public class IDuplexSessionChannelImplementation extends NetObject implements ID
         }
     }
 
+    /**
+     * Gets the value of the .NET property State.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.IDuplexSessionChannel.State" target="_top">.NET documentation</a>
+     */
     public CommunicationState getState() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -548,6 +788,13 @@ public class IDuplexSessionChannelImplementation extends NetObject implements ID
         }
     }
 
+    /**
+     * Gets the value of the .NET property LocalAddress.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.IDuplexSessionChannel.LocalAddress" target="_top">.NET documentation</a>
+     */
     public EndpointAddress getLocalAddress() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -563,6 +810,13 @@ public class IDuplexSessionChannelImplementation extends NetObject implements ID
         }
     }
 
+    /**
+     * Gets the value of the .NET property RemoteAddress.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.IDuplexSessionChannel.RemoteAddress" target="_top">.NET documentation</a>
+     */
     public EndpointAddress getRemoteAddress() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -578,6 +832,13 @@ public class IDuplexSessionChannelImplementation extends NetObject implements ID
         }
     }
 
+    /**
+     * Gets the value of the .NET property Via.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.IDuplexSessionChannel.Via" target="_top">.NET documentation</a>
+     */
     public Uri getVia() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -598,6 +859,13 @@ public class IDuplexSessionChannelImplementation extends NetObject implements ID
     // Instance Events section
     
 
+    /**
+     * Invokes the .NET member addClosed.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addClosed(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -608,6 +876,13 @@ public class IDuplexSessionChannelImplementation extends NetObject implements ID
         }
     }
 
+    /**
+     * Invokes the .NET member removeClosed.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeClosed(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -618,6 +893,13 @@ public class IDuplexSessionChannelImplementation extends NetObject implements ID
         }
     }
 
+    /**
+     * Invokes the .NET member addClosing.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addClosing(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -628,6 +910,13 @@ public class IDuplexSessionChannelImplementation extends NetObject implements ID
         }
     }
 
+    /**
+     * Invokes the .NET member removeClosing.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeClosing(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -638,6 +927,13 @@ public class IDuplexSessionChannelImplementation extends NetObject implements ID
         }
     }
 
+    /**
+     * Invokes the .NET member addFaulted.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addFaulted(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -648,6 +944,13 @@ public class IDuplexSessionChannelImplementation extends NetObject implements ID
         }
     }
 
+    /**
+     * Invokes the .NET member removeFaulted.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeFaulted(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -658,6 +961,13 @@ public class IDuplexSessionChannelImplementation extends NetObject implements ID
         }
     }
 
+    /**
+     * Invokes the .NET member addOpened.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addOpened(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -668,6 +978,13 @@ public class IDuplexSessionChannelImplementation extends NetObject implements ID
         }
     }
 
+    /**
+     * Invokes the .NET member removeOpened.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeOpened(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -678,6 +995,13 @@ public class IDuplexSessionChannelImplementation extends NetObject implements ID
         }
     }
 
+    /**
+     * Invokes the .NET member addOpening.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addOpening(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -688,6 +1012,13 @@ public class IDuplexSessionChannelImplementation extends NetObject implements ID
         }
     }
 
+    /**
+     * Invokes the .NET member removeOpening.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeOpening(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

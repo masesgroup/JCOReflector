@@ -101,7 +101,10 @@ public class SearchForVirtualItemEventArgs extends system.EventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SearchForVirtualItemEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,19 @@ public class SearchForVirtualItemEventArgs extends system.EventArgs  {
     public SearchForVirtualItemEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param isTextSearch the argument of type {@code boolean}
+     * @param isPrefixSearch the argument of type {@code boolean}
+     * @param includeSubItemsInSearch the argument of type {@code boolean}
+     * @param text the argument of type {@code java.lang.String}
+     * @param startingPoint the argument of type {@code Point}
+     * @param direction the argument of type {@code SearchDirectionHint}
+     * @param startIndex the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SearchForVirtualItemEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public SearchForVirtualItemEventArgs(boolean isTextSearch, boolean isPrefixSearch, boolean includeSubItemsInSearch, java.lang.String text, Point startingPoint, SearchDirectionHint direction, int startIndex) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +186,13 @@ public class SearchForVirtualItemEventArgs extends system.EventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IncludeSubItemsInSearch.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SearchForVirtualItemEventArgs.IncludeSubItemsInSearch" target="_top">.NET documentation</a>
+     */
     public boolean getIncludeSubItemsInSearch() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +207,13 @@ public class SearchForVirtualItemEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsPrefixSearch.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SearchForVirtualItemEventArgs.IsPrefixSearch" target="_top">.NET documentation</a>
+     */
     public boolean getIsPrefixSearch() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +228,13 @@ public class SearchForVirtualItemEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsTextSearch.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SearchForVirtualItemEventArgs.IsTextSearch" target="_top">.NET documentation</a>
+     */
     public boolean getIsTextSearch() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -212,6 +249,13 @@ public class SearchForVirtualItemEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Index.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SearchForVirtualItemEventArgs.Index" target="_top">.NET documentation</a>
+     */
     public int getIndex() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -252,6 +296,13 @@ public class SearchForVirtualItemEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Index.
+     *
+     * @param Index the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SearchForVirtualItemEventArgs.Index" target="_top">.NET documentation</a>
+     */
     public void setIndex(int Index) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -262,6 +313,13 @@ public class SearchForVirtualItemEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StartIndex.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SearchForVirtualItemEventArgs.StartIndex" target="_top">.NET documentation</a>
+     */
     public int getStartIndex() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -302,6 +360,13 @@ public class SearchForVirtualItemEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StartingPoint.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SearchForVirtualItemEventArgs.StartingPoint" target="_top">.NET documentation</a>
+     */
     public Point getStartingPoint() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -317,6 +382,13 @@ public class SearchForVirtualItemEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Text.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SearchForVirtualItemEventArgs.Text" target="_top">.NET documentation</a>
+     */
     public java.lang.String getText() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -331,6 +403,13 @@ public class SearchForVirtualItemEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Direction.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SearchForVirtualItemEventArgs.Direction" target="_top">.NET documentation</a>
+     */
     public SearchDirectionHint getDirection() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

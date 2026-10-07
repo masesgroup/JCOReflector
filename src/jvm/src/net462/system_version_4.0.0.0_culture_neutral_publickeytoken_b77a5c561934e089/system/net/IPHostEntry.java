@@ -99,7 +99,10 @@ public class IPHostEntry extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IPHostEntry(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class IPHostEntry extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.IPHostEntry.-ctor" target="_top">.NET documentation</a>
+     */
     public IPHostEntry() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +173,13 @@ public class IPHostEntry extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AddressList.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.IPHostEntry.AddressList" target="_top">.NET documentation</a>
+     */
     public final IPAddress[] getAddressList() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -185,6 +201,13 @@ public class IPHostEntry extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AddressList.
+     *
+     * @param AddressList the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.IPHostEntry.AddressList" target="_top">.NET documentation</a>
+     */
     public void setAddressList(IPAddress[] AddressList) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -195,6 +218,13 @@ public class IPHostEntry extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property HostName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.IPHostEntry.HostName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getHostName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -209,6 +239,13 @@ public class IPHostEntry extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property HostName.
+     *
+     * @param HostName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.IPHostEntry.HostName" target="_top">.NET documentation</a>
+     */
     public void setHostName(java.lang.String HostName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -219,6 +256,13 @@ public class IPHostEntry extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Aliases.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.IPHostEntry.Aliases" target="_top">.NET documentation</a>
+     */
     public java.lang.String[] getAliases() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -242,6 +286,13 @@ public class IPHostEntry extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Aliases.
+     *
+     * @param Aliases the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.IPHostEntry.Aliases" target="_top">.NET documentation</a>
+     */
     public void setAliases(java.lang.String[] Aliases) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

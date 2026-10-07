@@ -101,7 +101,10 @@ public class NullableBoolConverter extends system.componentmodel.NullableConvert
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public NullableBoolConverter(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,19 @@ public class NullableBoolConverter extends system.componentmodel.NullableConvert
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.NullableBoolConverter.-ctor" target="_top">.NET documentation</a>
+     */
     public NullableBoolConverter() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException {
         try {
             // add reference to assemblyName.dll file
@@ -162,6 +178,14 @@ public class NullableBoolConverter extends system.componentmodel.NullableConvert
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetStandardValuesExclusive.
+     *
+     * @param context the argument of type {@code ITypeDescriptorContext}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.NullableBoolConverter.GetStandardValuesExclusive" target="_top">.NET documentation</a>
+     */
     public boolean GetStandardValuesExclusive(ITypeDescriptorContext context) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -176,6 +200,14 @@ public class NullableBoolConverter extends system.componentmodel.NullableConvert
         }
     }
 
+    /**
+     * Invokes the .NET member GetStandardValuesSupported.
+     *
+     * @param context the argument of type {@code ITypeDescriptorContext}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.NullableBoolConverter.GetStandardValuesSupported" target="_top">.NET documentation</a>
+     */
     public boolean GetStandardValuesSupported(ITypeDescriptorContext context) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

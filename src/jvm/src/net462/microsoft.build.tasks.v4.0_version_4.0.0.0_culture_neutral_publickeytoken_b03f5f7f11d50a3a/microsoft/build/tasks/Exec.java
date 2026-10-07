@@ -101,7 +101,10 @@ public class Exec extends microsoft.build.tasks.ToolTaskExtension  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Exec(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,27 @@ public class Exec extends microsoft.build.tasks.ToolTaskExtension  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Exec.-ctor" target="_top">.NET documentation</a>
+     */
     public Exec() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         try {
             // add reference to assemblyName.dll file
@@ -166,6 +190,13 @@ public class Exec extends microsoft.build.tasks.ToolTaskExtension  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ConsoleToMSBuild.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Exec.ConsoleToMSBuild" target="_top">.NET documentation</a>
+     */
     public boolean getConsoleToMSBuild() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +211,13 @@ public class Exec extends microsoft.build.tasks.ToolTaskExtension  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ConsoleToMSBuild.
+     *
+     * @param ConsoleToMSBuild the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Exec.ConsoleToMSBuild" target="_top">.NET documentation</a>
+     */
     public void setConsoleToMSBuild(boolean ConsoleToMSBuild) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +228,13 @@ public class Exec extends microsoft.build.tasks.ToolTaskExtension  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IgnoreExitCode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Exec.IgnoreExitCode" target="_top">.NET documentation</a>
+     */
     public boolean getIgnoreExitCode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +249,13 @@ public class Exec extends microsoft.build.tasks.ToolTaskExtension  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IgnoreExitCode.
+     *
+     * @param IgnoreExitCode the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Exec.IgnoreExitCode" target="_top">.NET documentation</a>
+     */
     public void setIgnoreExitCode(boolean IgnoreExitCode) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -214,6 +266,13 @@ public class Exec extends microsoft.build.tasks.ToolTaskExtension  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IgnoreStandardErrorWarningFormat.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Exec.IgnoreStandardErrorWarningFormat" target="_top">.NET documentation</a>
+     */
     public boolean getIgnoreStandardErrorWarningFormat() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -228,6 +287,13 @@ public class Exec extends microsoft.build.tasks.ToolTaskExtension  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IgnoreStandardErrorWarningFormat.
+     *
+     * @param IgnoreStandardErrorWarningFormat the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Exec.IgnoreStandardErrorWarningFormat" target="_top">.NET documentation</a>
+     */
     public void setIgnoreStandardErrorWarningFormat(boolean IgnoreStandardErrorWarningFormat) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -238,6 +304,13 @@ public class Exec extends microsoft.build.tasks.ToolTaskExtension  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ConsoleOutput.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Exec.ConsoleOutput" target="_top">.NET documentation</a>
+     */
     public final ITaskItem[] getConsoleOutput() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -259,6 +332,13 @@ public class Exec extends microsoft.build.tasks.ToolTaskExtension  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ConsoleOutput.
+     *
+     * @param ConsoleOutput the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Exec.ConsoleOutput" target="_top">.NET documentation</a>
+     */
     public void setConsoleOutput(ITaskItem[] ConsoleOutput) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -269,6 +349,13 @@ public class Exec extends microsoft.build.tasks.ToolTaskExtension  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Outputs.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Exec.Outputs" target="_top">.NET documentation</a>
+     */
     public final ITaskItem[] getOutputs() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -290,6 +377,13 @@ public class Exec extends microsoft.build.tasks.ToolTaskExtension  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Outputs.
+     *
+     * @param Outputs the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Exec.Outputs" target="_top">.NET documentation</a>
+     */
     public void setOutputs(ITaskItem[] Outputs) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -300,6 +394,13 @@ public class Exec extends microsoft.build.tasks.ToolTaskExtension  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Command.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Exec.Command" target="_top">.NET documentation</a>
+     */
     public java.lang.String getCommand() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -314,6 +415,13 @@ public class Exec extends microsoft.build.tasks.ToolTaskExtension  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Command.
+     *
+     * @param Command the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Exec.Command" target="_top">.NET documentation</a>
+     */
     public void setCommand(java.lang.String Command) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -324,6 +432,13 @@ public class Exec extends microsoft.build.tasks.ToolTaskExtension  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CustomErrorRegularExpression.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Exec.CustomErrorRegularExpression" target="_top">.NET documentation</a>
+     */
     public java.lang.String getCustomErrorRegularExpression() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -338,6 +453,13 @@ public class Exec extends microsoft.build.tasks.ToolTaskExtension  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CustomErrorRegularExpression.
+     *
+     * @param CustomErrorRegularExpression the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Exec.CustomErrorRegularExpression" target="_top">.NET documentation</a>
+     */
     public void setCustomErrorRegularExpression(java.lang.String CustomErrorRegularExpression) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -348,6 +470,13 @@ public class Exec extends microsoft.build.tasks.ToolTaskExtension  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CustomWarningRegularExpression.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Exec.CustomWarningRegularExpression" target="_top">.NET documentation</a>
+     */
     public java.lang.String getCustomWarningRegularExpression() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -362,6 +491,13 @@ public class Exec extends microsoft.build.tasks.ToolTaskExtension  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CustomWarningRegularExpression.
+     *
+     * @param CustomWarningRegularExpression the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Exec.CustomWarningRegularExpression" target="_top">.NET documentation</a>
+     */
     public void setCustomWarningRegularExpression(java.lang.String CustomWarningRegularExpression) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -372,6 +508,24 @@ public class Exec extends microsoft.build.tasks.ToolTaskExtension  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StdErrEncoding.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Exec.StdErrEncoding" target="_top">.NET documentation</a>
+     */
     public java.lang.String getStdErrEncoding() throws Throwable, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -386,6 +540,25 @@ public class Exec extends microsoft.build.tasks.ToolTaskExtension  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property StdErrEncoding.
+     *
+     * @param StdErrEncoding the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Exec.StdErrEncoding" target="_top">.NET documentation</a>
+     */
     public void setStdErrEncoding(java.lang.String StdErrEncoding) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -396,6 +569,24 @@ public class Exec extends microsoft.build.tasks.ToolTaskExtension  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StdOutEncoding.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Exec.StdOutEncoding" target="_top">.NET documentation</a>
+     */
     public java.lang.String getStdOutEncoding() throws Throwable, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -410,6 +601,25 @@ public class Exec extends microsoft.build.tasks.ToolTaskExtension  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property StdOutEncoding.
+     *
+     * @param StdOutEncoding the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Exec.StdOutEncoding" target="_top">.NET documentation</a>
+     */
     public void setStdOutEncoding(java.lang.String StdOutEncoding) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -420,6 +630,13 @@ public class Exec extends microsoft.build.tasks.ToolTaskExtension  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property WorkingDirectory.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Exec.WorkingDirectory" target="_top">.NET documentation</a>
+     */
     public java.lang.String getWorkingDirectory() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -434,6 +651,13 @@ public class Exec extends microsoft.build.tasks.ToolTaskExtension  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property WorkingDirectory.
+     *
+     * @param WorkingDirectory the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Exec.WorkingDirectory" target="_top">.NET documentation</a>
+     */
     public void setWorkingDirectory(java.lang.String WorkingDirectory) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

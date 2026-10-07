@@ -100,7 +100,10 @@ public class CustomAttributeValue_1<TType extends IJCOBridgeReflected> extends s
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CustomAttributeValue_1(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,14 @@ public class CustomAttributeValue_1<TType extends IJCOBridgeReflected> extends s
     public CustomAttributeValue_1() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param fixedArguments the argument of type {@code ImmutableArray_1}
+     * @param namedArguments the argument of type {@code ImmutableArray_1}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.CustomAttributeValue-1.-ctor" target="_top">.NET documentation</a>
+     */
     public CustomAttributeValue_1(ImmutableArray_1 fixedArguments, ImmutableArray_1 namedArguments) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -171,6 +182,13 @@ public class CustomAttributeValue_1<TType extends IJCOBridgeReflected> extends s
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property NamedArguments.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.CustomAttributeValue-1.NamedArguments" target="_top">.NET documentation</a>
+     */
     public ImmutableArray_1 getNamedArguments() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -186,6 +204,13 @@ public class CustomAttributeValue_1<TType extends IJCOBridgeReflected> extends s
         }
     }
 
+    /**
+     * Gets the value of the .NET property FixedArguments.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.CustomAttributeValue-1.FixedArguments" target="_top">.NET documentation</a>
+     */
     public ImmutableArray_1 getFixedArguments() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

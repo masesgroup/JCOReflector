@@ -102,7 +102,10 @@ public class BuffersExtensions extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public BuffersExtensions(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,21 @@ public class BuffersExtensions extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member PositionOf.
+     *
+     * @param <T> the type of the generic argument T
+     * @param source the argument of type {@code JCORefOut<ReadOnlySequence_1>}
+     * @param value the argument of type {@code T}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Buffers.BuffersExtensions.PositionOf" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Nullable_1 PositionOf(JCORefOut<ReadOnlySequence_1> source, T value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

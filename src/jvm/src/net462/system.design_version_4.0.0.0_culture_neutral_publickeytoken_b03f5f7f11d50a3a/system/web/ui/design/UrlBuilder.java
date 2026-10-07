@@ -104,7 +104,10 @@ public class UrlBuilder extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public UrlBuilder(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -159,6 +162,18 @@ public class UrlBuilder extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member BuildUrl.
+     *
+     * @param component the argument of type {@code IComponent}
+     * @param owner the argument of type {@code Control}
+     * @param initialUrl the argument of type {@code java.lang.String}
+     * @param caption the argument of type {@code java.lang.String}
+     * @param filter the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.UrlBuilder.BuildUrl" target="_top">.NET documentation</a>
+     */
     public static java.lang.String BuildUrl(IComponent component, Control owner, java.lang.String initialUrl, java.lang.String caption, java.lang.String filter) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -173,6 +188,19 @@ public class UrlBuilder extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member BuildUrl.
+     *
+     * @param component the argument of type {@code IComponent}
+     * @param owner the argument of type {@code Control}
+     * @param initialUrl the argument of type {@code java.lang.String}
+     * @param caption the argument of type {@code java.lang.String}
+     * @param filter the argument of type {@code java.lang.String}
+     * @param options the argument of type {@code UrlBuilderOptions}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.UrlBuilder.BuildUrl" target="_top">.NET documentation</a>
+     */
     public static java.lang.String BuildUrl(IComponent component, Control owner, java.lang.String initialUrl, java.lang.String caption, java.lang.String filter, UrlBuilderOptions options) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -187,6 +215,19 @@ public class UrlBuilder extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member BuildUrl.
+     *
+     * @param serviceProvider the argument of type {@code IServiceProvider}
+     * @param owner the argument of type {@code Control}
+     * @param initialUrl the argument of type {@code java.lang.String}
+     * @param caption the argument of type {@code java.lang.String}
+     * @param filter the argument of type {@code java.lang.String}
+     * @param options the argument of type {@code UrlBuilderOptions}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.UrlBuilder.BuildUrl" target="_top">.NET documentation</a>
+     */
     public static java.lang.String BuildUrl(IServiceProvider serviceProvider, Control owner, java.lang.String initialUrl, java.lang.String caption, java.lang.String filter, UrlBuilderOptions options) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

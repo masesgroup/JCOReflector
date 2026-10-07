@@ -100,7 +100,10 @@ public class DataContractResolver extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DataContractResolver(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,18 @@ public class DataContractResolver extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member TryResolveType.
+     *
+     * @param type the argument of type {@code NetType}
+     * @param declaredType the argument of type {@code NetType}
+     * @param knownTypeResolver the argument of type {@code DataContractResolver}
+     * @param typeName the argument of type {@code JCORefOut<XmlDictionaryString>}
+     * @param typeNamespace the argument of type {@code JCORefOut<XmlDictionaryString>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.DataContractResolver.TryResolveType" target="_top">.NET documentation</a>
+     */
     public boolean TryResolveType(NetType type, NetType declaredType, DataContractResolver knownTypeResolver, JCORefOut<XmlDictionaryString> typeName, JCORefOut<XmlDictionaryString> typeNamespace) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -167,6 +182,17 @@ public class DataContractResolver extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ResolveName.
+     *
+     * @param typeName the argument of type {@code java.lang.String}
+     * @param typeNamespace the argument of type {@code java.lang.String}
+     * @param declaredType the argument of type {@code NetType}
+     * @param knownTypeResolver the argument of type {@code DataContractResolver}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.DataContractResolver.ResolveName" target="_top">.NET documentation</a>
+     */
     public NetType ResolveName(java.lang.String typeName, java.lang.String typeNamespace, NetType declaredType, DataContractResolver knownTypeResolver) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

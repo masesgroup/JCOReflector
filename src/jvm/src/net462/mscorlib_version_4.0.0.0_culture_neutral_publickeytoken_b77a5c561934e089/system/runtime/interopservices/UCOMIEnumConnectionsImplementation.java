@@ -100,7 +100,10 @@ public class UCOMIEnumConnectionsImplementation extends NetObject implements UCO
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public UCOMIEnumConnectionsImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -142,6 +145,14 @@ public class UCOMIEnumConnectionsImplementation extends NetObject implements UCO
 
     // Methods section
     
+    /**
+     * Invokes the .NET member Skip.
+     *
+     * @param celt the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.UCOMIEnumConnections.Skip" target="_top">.NET documentation</a>
+     */
     public int Skip(int celt) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +193,13 @@ public class UCOMIEnumConnectionsImplementation extends NetObject implements UCO
         }
     }
 
+    /**
+     * Invokes the .NET member Clone.
+     *
+     * @param ppenum the argument of type {@code JCORefOut<UCOMIEnumConnections>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.UCOMIEnumConnections.Clone" target="_top">.NET documentation</a>
+     */
     public void Clone(JCORefOut<UCOMIEnumConnections> ppenum) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -192,6 +210,12 @@ public class UCOMIEnumConnectionsImplementation extends NetObject implements UCO
         }
     }
 
+    /**
+     * Invokes the .NET member Reset.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.UCOMIEnumConnections.Reset" target="_top">.NET documentation</a>
+     */
     public void Reset() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

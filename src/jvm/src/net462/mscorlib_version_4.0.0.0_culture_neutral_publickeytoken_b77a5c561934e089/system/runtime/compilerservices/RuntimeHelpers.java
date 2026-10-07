@@ -103,7 +103,10 @@ public class RuntimeHelpers extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public RuntimeHelpers(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,15 @@ public class RuntimeHelpers extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Equals.
+     *
+     * @param o1 the argument of type {@code NetObject}
+     * @param o2 the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.RuntimeHelpers.Equals" target="_top">.NET documentation</a>
+     */
     public static boolean Equals(NetObject o1, NetObject o2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -170,6 +182,14 @@ public class RuntimeHelpers extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetHashCode.
+     *
+     * @param o the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.RuntimeHelpers.GetHashCode" target="_top">.NET documentation</a>
+     */
     public static int GetHashCode(NetObject o) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -210,6 +230,14 @@ public class RuntimeHelpers extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetObjectValue.
+     *
+     * @param obj the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.RuntimeHelpers.GetObjectValue" target="_top">.NET documentation</a>
+     */
     public static NetObject GetObjectValue(NetObject obj) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -225,6 +253,12 @@ public class RuntimeHelpers extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member EnsureSufficientExecutionStack.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.RuntimeHelpers.EnsureSufficientExecutionStack" target="_top">.NET documentation</a>
+     */
     public static void EnsureSufficientExecutionStack() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -235,6 +269,14 @@ public class RuntimeHelpers extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member InitializeArray.
+     *
+     * @param array the argument of type {@code Array}
+     * @param fldHandle the argument of type {@code RuntimeFieldHandle}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.RuntimeHelpers.InitializeArray" target="_top">.NET documentation</a>
+     */
     public static void InitializeArray(Array array, RuntimeFieldHandle fldHandle) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -245,6 +287,12 @@ public class RuntimeHelpers extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member PrepareConstrainedRegions.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions" target="_top">.NET documentation</a>
+     */
     public static void PrepareConstrainedRegions() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -255,6 +303,12 @@ public class RuntimeHelpers extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member PrepareConstrainedRegionsNoOP.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegionsNoOP" target="_top">.NET documentation</a>
+     */
     public static void PrepareConstrainedRegionsNoOP() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -265,6 +319,13 @@ public class RuntimeHelpers extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member PrepareMethod.
+     *
+     * @param method the argument of type {@code RuntimeMethodHandle}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod" target="_top">.NET documentation</a>
+     */
     public static void PrepareMethod(RuntimeMethodHandle method) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -275,6 +336,14 @@ public class RuntimeHelpers extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member PrepareMethod.
+     *
+     * @param method the argument of type {@code RuntimeMethodHandle}
+     * @param instantiation the argument of type {@code RuntimeTypeHandle[]}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod" target="_top">.NET documentation</a>
+     */
     public static void PrepareMethod(RuntimeMethodHandle method, RuntimeTypeHandle[] instantiation) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -285,6 +354,12 @@ public class RuntimeHelpers extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ProbeForSufficientStack.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.RuntimeHelpers.ProbeForSufficientStack" target="_top">.NET documentation</a>
+     */
     public static void ProbeForSufficientStack() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -295,6 +370,13 @@ public class RuntimeHelpers extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RunClassConstructor.
+     *
+     * @param type the argument of type {@code RuntimeTypeHandle}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor" target="_top">.NET documentation</a>
+     */
     public static void RunClassConstructor(RuntimeTypeHandle type) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -305,6 +387,13 @@ public class RuntimeHelpers extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RunModuleConstructor.
+     *
+     * @param module the argument of type {@code ModuleHandle}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.RuntimeHelpers.RunModuleConstructor" target="_top">.NET documentation</a>
+     */
     public static void RunModuleConstructor(ModuleHandle module) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -319,6 +408,13 @@ public class RuntimeHelpers extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property OffsetToStringData.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.RuntimeHelpers.OffsetToStringData" target="_top">.NET documentation</a>
+     */
     public static int getOffsetToStringData() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

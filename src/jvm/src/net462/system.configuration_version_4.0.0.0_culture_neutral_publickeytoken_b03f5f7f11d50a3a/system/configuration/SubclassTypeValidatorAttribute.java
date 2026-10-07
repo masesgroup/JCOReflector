@@ -100,7 +100,10 @@ public class SubclassTypeValidatorAttribute extends system.configuration.Configu
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SubclassTypeValidatorAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,13 @@ public class SubclassTypeValidatorAttribute extends system.configuration.Configu
     public SubclassTypeValidatorAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param baseClass the argument of type {@code NetType}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.SubclassTypeValidatorAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public SubclassTypeValidatorAttribute(NetType baseClass) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +179,13 @@ public class SubclassTypeValidatorAttribute extends system.configuration.Configu
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property BaseClass.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.SubclassTypeValidatorAttribute.BaseClass" target="_top">.NET documentation</a>
+     */
     public NetType getBaseClass() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

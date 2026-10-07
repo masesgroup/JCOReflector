@@ -101,7 +101,10 @@ public class XmlNodeChangedEventArgs extends system.EventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XmlNodeChangedEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,18 @@ public class XmlNodeChangedEventArgs extends system.EventArgs  {
     public XmlNodeChangedEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param node the argument of type {@code XmlNode}
+     * @param oldParent the argument of type {@code XmlNode}
+     * @param newParent the argument of type {@code XmlNode}
+     * @param oldValue the argument of type {@code java.lang.String}
+     * @param newValue the argument of type {@code java.lang.String}
+     * @param action the argument of type {@code XmlNodeChangedAction}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlNodeChangedEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public XmlNodeChangedEventArgs(XmlNode node, XmlNode oldParent, XmlNode newParent, java.lang.String oldValue, java.lang.String newValue, XmlNodeChangedAction action) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +185,13 @@ public class XmlNodeChangedEventArgs extends system.EventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property NewValue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlNodeChangedEventArgs.NewValue" target="_top">.NET documentation</a>
+     */
     public java.lang.String getNewValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +206,13 @@ public class XmlNodeChangedEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OldValue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlNodeChangedEventArgs.OldValue" target="_top">.NET documentation</a>
+     */
     public java.lang.String getOldValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +227,13 @@ public class XmlNodeChangedEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NewParent.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlNodeChangedEventArgs.NewParent" target="_top">.NET documentation</a>
+     */
     public XmlNode getNewParent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -213,6 +249,13 @@ public class XmlNodeChangedEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Node.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlNodeChangedEventArgs.Node" target="_top">.NET documentation</a>
+     */
     public XmlNode getNode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -228,6 +271,13 @@ public class XmlNodeChangedEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OldParent.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlNodeChangedEventArgs.OldParent" target="_top">.NET documentation</a>
+     */
     public XmlNode getOldParent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -243,6 +293,13 @@ public class XmlNodeChangedEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Action.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlNodeChangedEventArgs.Action" target="_top">.NET documentation</a>
+     */
     public XmlNodeChangedAction getAction() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -100,7 +100,10 @@ public class IUnknownDerivedAttribute_2<T extends IJCOBridgeReflected, TImpl ext
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IUnknownDerivedAttribute_2(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class IUnknownDerivedAttribute_2<T extends IJCOBridgeReflected, TImpl ext
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Marshalling.IUnknownDerivedAttribute-2.-ctor" target="_top">.NET documentation</a>
+     */
     public IUnknownDerivedAttribute_2() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +176,13 @@ public class IUnknownDerivedAttribute_2<T extends IJCOBridgeReflected, TImpl ext
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Iid.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Marshalling.IUnknownDerivedAttribute-2.Iid" target="_top">.NET documentation</a>
+     */
     public Guid getIid() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +198,13 @@ public class IUnknownDerivedAttribute_2<T extends IJCOBridgeReflected, TImpl ext
         }
     }
 
+    /**
+     * Gets the value of the .NET property Implementation.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Marshalling.IUnknownDerivedAttribute-2.Implementation" target="_top">.NET documentation</a>
+     */
     public NetType getImplementation() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

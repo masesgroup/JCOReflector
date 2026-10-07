@@ -101,7 +101,10 @@ public class SoapTypeAttribute extends system.runtime.remoting.metadata.SoapAttr
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SoapTypeAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class SoapTypeAttribute extends system.runtime.remoting.metadata.SoapAttr
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Metadata.SoapTypeAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public SoapTypeAttribute() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -166,6 +175,13 @@ public class SoapTypeAttribute extends system.runtime.remoting.metadata.SoapAttr
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property SoapOptions.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Metadata.SoapTypeAttribute.SoapOptions" target="_top">.NET documentation</a>
+     */
     public SoapOption getSoapOptions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -181,6 +197,13 @@ public class SoapTypeAttribute extends system.runtime.remoting.metadata.SoapAttr
         }
     }
 
+    /**
+     * Sets the value of the .NET property SoapOptions.
+     *
+     * @param SoapOptions the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Metadata.SoapTypeAttribute.SoapOptions" target="_top">.NET documentation</a>
+     */
     public void setSoapOptions(SoapOption SoapOptions) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -191,6 +214,13 @@ public class SoapTypeAttribute extends system.runtime.remoting.metadata.SoapAttr
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlFieldOrder.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Metadata.SoapTypeAttribute.XmlFieldOrder" target="_top">.NET documentation</a>
+     */
     public XmlFieldOrderOption getXmlFieldOrder() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,6 +236,13 @@ public class SoapTypeAttribute extends system.runtime.remoting.metadata.SoapAttr
         }
     }
 
+    /**
+     * Sets the value of the .NET property XmlFieldOrder.
+     *
+     * @param XmlFieldOrder the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Metadata.SoapTypeAttribute.XmlFieldOrder" target="_top">.NET documentation</a>
+     */
     public void setXmlFieldOrder(XmlFieldOrderOption XmlFieldOrder) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +253,14 @@ public class SoapTypeAttribute extends system.runtime.remoting.metadata.SoapAttr
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlElementName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Metadata.SoapTypeAttribute.XmlElementName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getXmlElementName() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -230,6 +275,13 @@ public class SoapTypeAttribute extends system.runtime.remoting.metadata.SoapAttr
         }
     }
 
+    /**
+     * Sets the value of the .NET property XmlElementName.
+     *
+     * @param XmlElementName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Metadata.SoapTypeAttribute.XmlElementName" target="_top">.NET documentation</a>
+     */
     public void setXmlElementName(java.lang.String XmlElementName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -240,6 +292,14 @@ public class SoapTypeAttribute extends system.runtime.remoting.metadata.SoapAttr
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlTypeName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Metadata.SoapTypeAttribute.XmlTypeName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getXmlTypeName() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -254,6 +314,13 @@ public class SoapTypeAttribute extends system.runtime.remoting.metadata.SoapAttr
         }
     }
 
+    /**
+     * Sets the value of the .NET property XmlTypeName.
+     *
+     * @param XmlTypeName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Metadata.SoapTypeAttribute.XmlTypeName" target="_top">.NET documentation</a>
+     */
     public void setXmlTypeName(java.lang.String XmlTypeName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -264,6 +331,18 @@ public class SoapTypeAttribute extends system.runtime.remoting.metadata.SoapAttr
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlTypeNamespace.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Metadata.SoapTypeAttribute.XmlTypeNamespace" target="_top">.NET documentation</a>
+     */
     public java.lang.String getXmlTypeNamespace() throws Throwable, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentNullException, system.FormatException, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -278,6 +357,13 @@ public class SoapTypeAttribute extends system.runtime.remoting.metadata.SoapAttr
         }
     }
 
+    /**
+     * Sets the value of the .NET property XmlTypeNamespace.
+     *
+     * @param XmlTypeNamespace the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Metadata.SoapTypeAttribute.XmlTypeNamespace" target="_top">.NET documentation</a>
+     */
     public void setXmlTypeNamespace(java.lang.String XmlTypeNamespace) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

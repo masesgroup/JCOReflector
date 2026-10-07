@@ -99,7 +99,10 @@ public class EdmFunctionAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public EdmFunctionAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,14 @@ public class EdmFunctionAttribute extends system.Attribute  {
     public EdmFunctionAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param namespaceName the argument of type {@code java.lang.String}
+     * @param functionName the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DataClasses.EdmFunctionAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public EdmFunctionAttribute(java.lang.String namespaceName, java.lang.String functionName) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +179,13 @@ public class EdmFunctionAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property FunctionName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DataClasses.EdmFunctionAttribute.FunctionName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getFunctionName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +200,13 @@ public class EdmFunctionAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NamespaceName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DataClasses.EdmFunctionAttribute.NamespaceName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getNamespaceName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

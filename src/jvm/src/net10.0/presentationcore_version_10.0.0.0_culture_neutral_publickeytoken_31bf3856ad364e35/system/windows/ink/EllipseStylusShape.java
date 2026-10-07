@@ -99,7 +99,10 @@ public class EllipseStylusShape extends system.windows.ink.StylusShape  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public EllipseStylusShape(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,18 @@ public class EllipseStylusShape extends system.windows.ink.StylusShape  {
     public EllipseStylusShape() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param width the argument of type {@code double}
+     * @param height the argument of type {@code double}
+     * @param rotation the argument of type {@code double}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Ink.EllipseStylusShape.-ctor" target="_top">.NET documentation</a>
+     */
     public EllipseStylusShape(double width, double height, double rotation) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -159,6 +174,23 @@ public class EllipseStylusShape extends system.windows.ink.StylusShape  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param width the argument of type {@code double}
+     * @param height the argument of type {@code double}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Ink.EllipseStylusShape.-ctor" target="_top">.NET documentation</a>
+     */
     public EllipseStylusShape(double width, double height) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         try {
             // add reference to assemblyName.dll file

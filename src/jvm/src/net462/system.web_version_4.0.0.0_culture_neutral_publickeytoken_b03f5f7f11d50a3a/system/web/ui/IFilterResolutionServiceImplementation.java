@@ -98,7 +98,10 @@ public class IFilterResolutionServiceImplementation extends NetObject implements
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IFilterResolutionServiceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -140,6 +143,14 @@ public class IFilterResolutionServiceImplementation extends NetObject implements
 
     // Methods section
     
+    /**
+     * Invokes the .NET member EvaluateFilter.
+     *
+     * @param filterName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.IFilterResolutionService.EvaluateFilter" target="_top">.NET documentation</a>
+     */
     public boolean EvaluateFilter(java.lang.String filterName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -154,6 +165,15 @@ public class IFilterResolutionServiceImplementation extends NetObject implements
         }
     }
 
+    /**
+     * Invokes the .NET member CompareFilters.
+     *
+     * @param filter1 the argument of type {@code java.lang.String}
+     * @param filter2 the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.IFilterResolutionService.CompareFilters" target="_top">.NET documentation</a>
+     */
     public int CompareFilters(java.lang.String filter1, java.lang.String filter2) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

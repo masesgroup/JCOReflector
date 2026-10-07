@@ -102,7 +102,10 @@ public class RayHitTestResult extends system.windows.media.HitTestResult  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public RayHitTestResult(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -159,6 +162,13 @@ public class RayHitTestResult extends system.windows.media.HitTestResult  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property DistanceToRayOrigin.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.RayHitTestResult.DistanceToRayOrigin" target="_top">.NET documentation</a>
+     */
     public double getDistanceToRayOrigin() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -199,6 +209,13 @@ public class RayHitTestResult extends system.windows.media.HitTestResult  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ModelHit.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.RayHitTestResult.ModelHit" target="_top">.NET documentation</a>
+     */
     public Model3D getModelHit() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -214,6 +231,13 @@ public class RayHitTestResult extends system.windows.media.HitTestResult  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PointHit.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.RayHitTestResult.PointHit" target="_top">.NET documentation</a>
+     */
     public Point3D getPointHit() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -229,6 +253,13 @@ public class RayHitTestResult extends system.windows.media.HitTestResult  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property VisualHitNewRayHitTestResult.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.RayHitTestResult.VisualHitNewRayHitTestResult" target="_top">.NET documentation</a>
+     */
     public Visual3D getVisualHitNewRayHitTestResult() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

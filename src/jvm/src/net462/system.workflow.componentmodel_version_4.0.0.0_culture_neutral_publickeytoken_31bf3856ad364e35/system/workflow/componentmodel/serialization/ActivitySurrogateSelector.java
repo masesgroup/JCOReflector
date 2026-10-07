@@ -105,7 +105,10 @@ public class ActivitySurrogateSelector extends system.runtime.serialization.Surr
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ActivitySurrogateSelector(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,16 @@ public class ActivitySurrogateSelector extends system.runtime.serialization.Surr
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Serialization.ActivitySurrogateSelector.-ctor" target="_top">.NET documentation</a>
+     */
     public ActivitySurrogateSelector() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
@@ -166,6 +179,22 @@ public class ActivitySurrogateSelector extends system.runtime.serialization.Surr
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetSurrogate.
+     *
+     * @param type the argument of type {@code NetType}
+     * @param context the argument of type {@code StreamingContext}
+     * @param selector the argument of type {@code JCORefOut<ISurrogateSelector>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Serialization.ActivitySurrogateSelector.GetSurrogate" target="_top">.NET documentation</a>
+     */
     public ISerializationSurrogate GetSurrogate(NetType type, StreamingContext context, JCORefOut<ISurrogateSelector> selector) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -185,6 +214,13 @@ public class ActivitySurrogateSelector extends system.runtime.serialization.Surr
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Default.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Serialization.ActivitySurrogateSelector.Default" target="_top">.NET documentation</a>
+     */
     public static ActivitySurrogateSelector getDefault() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

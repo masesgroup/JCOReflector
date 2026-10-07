@@ -102,7 +102,10 @@ public class ValueTypeIndexerReference_2<TOperand extends IJCOBridgeReflected, T
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ValueTypeIndexerReference_2(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,12 @@ public class ValueTypeIndexerReference_2<TOperand extends IJCOBridgeReflected, T
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Expressions.ValueTypeIndexerReference-2.-ctor" target="_top">.NET documentation</a>
+     */
     public ValueTypeIndexerReference_2() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +178,13 @@ public class ValueTypeIndexerReference_2<TOperand extends IJCOBridgeReflected, T
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property OperandLocation.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Expressions.ValueTypeIndexerReference-2.OperandLocation" target="_top">.NET documentation</a>
+     */
     public InOutArgument_1 getOperandLocation() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +200,13 @@ public class ValueTypeIndexerReference_2<TOperand extends IJCOBridgeReflected, T
         }
     }
 
+    /**
+     * Sets the value of the .NET property OperandLocation.
+     *
+     * @param OperandLocation the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Expressions.ValueTypeIndexerReference-2.OperandLocation" target="_top">.NET documentation</a>
+     */
     public void setOperandLocation(InOutArgument_1 OperandLocation) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +217,17 @@ public class ValueTypeIndexerReference_2<TOperand extends IJCOBridgeReflected, T
         }
     }
 
+    /**
+     * Gets the value of the .NET property Indices.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Expressions.ValueTypeIndexerReference-2.Indices" target="_top">.NET documentation</a>
+     */
     public Collection_1 getIndices() throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

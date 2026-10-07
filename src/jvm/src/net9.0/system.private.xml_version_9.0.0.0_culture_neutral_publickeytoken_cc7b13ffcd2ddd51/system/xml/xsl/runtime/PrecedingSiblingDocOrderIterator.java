@@ -101,7 +101,10 @@ public class PrecedingSiblingDocOrderIterator extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PrecedingSiblingDocOrderIterator(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,15 @@ public class PrecedingSiblingDocOrderIterator extends system.ValueType  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member MoveNext.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.PrecedingSiblingDocOrderIterator.MoveNext" target="_top">.NET documentation</a>
+     */
     public boolean MoveNext() throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -170,6 +182,14 @@ public class PrecedingSiblingDocOrderIterator extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param context the argument of type {@code XPathNavigator}
+     * @param filter the argument of type {@code XmlNavigatorFilter}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.PrecedingSiblingDocOrderIterator.Create" target="_top">.NET documentation</a>
+     */
     public void Create(XPathNavigator context, XmlNavigatorFilter filter) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +204,13 @@ public class PrecedingSiblingDocOrderIterator extends system.ValueType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Current.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.PrecedingSiblingDocOrderIterator.Current" target="_top">.NET documentation</a>
+     */
     public XPathNavigator getCurrent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

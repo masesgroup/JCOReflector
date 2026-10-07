@@ -101,7 +101,10 @@ public class NotificationEventArgs extends system.windows.automation.AutomationE
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public NotificationEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,16 @@ public class NotificationEventArgs extends system.windows.automation.AutomationE
     public NotificationEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param notificationKind the argument of type {@code AutomationNotificationKind}
+     * @param notificationProcessing the argument of type {@code AutomationNotificationProcessing}
+     * @param displayString the argument of type {@code java.lang.String}
+     * @param activityId the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.NotificationEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public NotificationEventArgs(AutomationNotificationKind notificationKind, AutomationNotificationProcessing notificationProcessing, java.lang.String displayString, java.lang.String activityId) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +183,13 @@ public class NotificationEventArgs extends system.windows.automation.AutomationE
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ActivityId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.NotificationEventArgs.ActivityId" target="_top">.NET documentation</a>
+     */
     public java.lang.String getActivityId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +204,13 @@ public class NotificationEventArgs extends system.windows.automation.AutomationE
         }
     }
 
+    /**
+     * Sets the value of the .NET property ActivityId.
+     *
+     * @param ActivityId the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.NotificationEventArgs.ActivityId" target="_top">.NET documentation</a>
+     */
     public void setActivityId(java.lang.String ActivityId) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +221,13 @@ public class NotificationEventArgs extends system.windows.automation.AutomationE
         }
     }
 
+    /**
+     * Gets the value of the .NET property DisplayString.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.NotificationEventArgs.DisplayString" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDisplayString() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +242,13 @@ public class NotificationEventArgs extends system.windows.automation.AutomationE
         }
     }
 
+    /**
+     * Sets the value of the .NET property DisplayString.
+     *
+     * @param DisplayString the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.NotificationEventArgs.DisplayString" target="_top">.NET documentation</a>
+     */
     public void setDisplayString(java.lang.String DisplayString) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -218,6 +259,13 @@ public class NotificationEventArgs extends system.windows.automation.AutomationE
         }
     }
 
+    /**
+     * Gets the value of the .NET property NotificationKind.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.NotificationEventArgs.NotificationKind" target="_top">.NET documentation</a>
+     */
     public AutomationNotificationKind getNotificationKind() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -233,6 +281,13 @@ public class NotificationEventArgs extends system.windows.automation.AutomationE
         }
     }
 
+    /**
+     * Sets the value of the .NET property NotificationKind.
+     *
+     * @param NotificationKind the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.NotificationEventArgs.NotificationKind" target="_top">.NET documentation</a>
+     */
     public void setNotificationKind(AutomationNotificationKind NotificationKind) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -243,6 +298,13 @@ public class NotificationEventArgs extends system.windows.automation.AutomationE
         }
     }
 
+    /**
+     * Gets the value of the .NET property NotificationProcessing.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.NotificationEventArgs.NotificationProcessing" target="_top">.NET documentation</a>
+     */
     public AutomationNotificationProcessing getNotificationProcessing() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -258,6 +320,13 @@ public class NotificationEventArgs extends system.windows.automation.AutomationE
         }
     }
 
+    /**
+     * Sets the value of the .NET property NotificationProcessing.
+     *
+     * @param NotificationProcessing the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.NotificationEventArgs.NotificationProcessing" target="_top">.NET documentation</a>
+     */
     public void setNotificationProcessing(AutomationNotificationProcessing NotificationProcessing) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

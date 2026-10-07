@@ -100,7 +100,10 @@ public class ModelBindingExecutionContext extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ModelBindingExecutionContext(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,17 @@ public class ModelBindingExecutionContext extends NetObject  {
     public ModelBindingExecutionContext() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param httpContext the argument of type {@code HttpContextBase}
+     * @param modelState the argument of type {@code ModelStateDictionary}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelBindingExecutionContext.-ctor" target="_top">.NET documentation</a>
+     */
     public ModelBindingExecutionContext(HttpContextBase httpContext, ModelStateDictionary modelState) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +179,17 @@ public class ModelBindingExecutionContext extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member PublishService.
+     *
+     * @param <TService> the type of the generic argument TService
+     * @param service the argument of type {@code TService}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelBindingExecutionContext.PublishService" target="_top">.NET documentation</a>
+     */
     public <TService extends IJCOBridgeReflected> void PublishService(TService service) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -179,6 +204,13 @@ public class ModelBindingExecutionContext extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property HttpContext.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelBindingExecutionContext.HttpContext" target="_top">.NET documentation</a>
+     */
     public HttpContextBase getHttpContext() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +226,13 @@ public class ModelBindingExecutionContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ModelState.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelBindingExecutionContext.ModelState" target="_top">.NET documentation</a>
+     */
     public ModelStateDictionary getModelState() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

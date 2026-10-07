@@ -99,7 +99,10 @@ public class SettingChangingEventArgs extends system.componentmodel.CancelEventA
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SettingChangingEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,17 @@ public class SettingChangingEventArgs extends system.componentmodel.CancelEventA
     public SettingChangingEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param settingName the argument of type {@code java.lang.String}
+     * @param settingClass the argument of type {@code java.lang.String}
+     * @param settingKey the argument of type {@code java.lang.String}
+     * @param newValue the argument of type {@code NetObject}
+     * @param cancel the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.SettingChangingEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public SettingChangingEventArgs(java.lang.String settingName, java.lang.String settingClass, java.lang.String settingKey, NetObject newValue, boolean cancel) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +182,13 @@ public class SettingChangingEventArgs extends system.componentmodel.CancelEventA
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property NewValue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.SettingChangingEventArgs.NewValue" target="_top">.NET documentation</a>
+     */
     public NetObject getNewValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +204,13 @@ public class SettingChangingEventArgs extends system.componentmodel.CancelEventA
         }
     }
 
+    /**
+     * Gets the value of the .NET property SettingClass.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.SettingChangingEventArgs.SettingClass" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSettingClass() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +225,13 @@ public class SettingChangingEventArgs extends system.componentmodel.CancelEventA
         }
     }
 
+    /**
+     * Gets the value of the .NET property SettingKey.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.SettingChangingEventArgs.SettingKey" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSettingKey() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -211,6 +246,13 @@ public class SettingChangingEventArgs extends system.componentmodel.CancelEventA
         }
     }
 
+    /**
+     * Gets the value of the .NET property SettingName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.SettingChangingEventArgs.SettingName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSettingName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

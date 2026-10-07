@@ -52,5 +52,10 @@ import system.web.ui.Control;
  * @version 2.0.0.0
  */
 public interface IBuildTemplateMethod {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param control the .NET argument of type {@code System.Web.UI.Control}
+     */
     public void Invoke(Control control);
 }

@@ -99,7 +99,10 @@ public class SimplePropertyEntry extends system.web.ui.PropertyEntry  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SimplePropertyEntry(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -158,6 +161,13 @@ public class SimplePropertyEntry extends system.web.ui.PropertyEntry  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property UseSetAttribute.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.SimplePropertyEntry.UseSetAttribute" target="_top">.NET documentation</a>
+     */
     public boolean getUseSetAttribute() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -172,6 +182,13 @@ public class SimplePropertyEntry extends system.web.ui.PropertyEntry  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property UseSetAttribute.
+     *
+     * @param UseSetAttribute the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.SimplePropertyEntry.UseSetAttribute" target="_top">.NET documentation</a>
+     */
     public void setUseSetAttribute(boolean UseSetAttribute) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +199,13 @@ public class SimplePropertyEntry extends system.web.ui.PropertyEntry  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Value.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.SimplePropertyEntry.Value" target="_top">.NET documentation</a>
+     */
     public NetObject getValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +221,13 @@ public class SimplePropertyEntry extends system.web.ui.PropertyEntry  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Value.
+     *
+     * @param Value the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.SimplePropertyEntry.Value" target="_top">.NET documentation</a>
+     */
     public void setValue(NetObject Value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +238,13 @@ public class SimplePropertyEntry extends system.web.ui.PropertyEntry  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PersistedValue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.SimplePropertyEntry.PersistedValue" target="_top">.NET documentation</a>
+     */
     public java.lang.String getPersistedValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -221,6 +259,13 @@ public class SimplePropertyEntry extends system.web.ui.PropertyEntry  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PersistedValue.
+     *
+     * @param PersistedValue the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.SimplePropertyEntry.PersistedValue" target="_top">.NET documentation</a>
+     */
     public void setPersistedValue(java.lang.String PersistedValue) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

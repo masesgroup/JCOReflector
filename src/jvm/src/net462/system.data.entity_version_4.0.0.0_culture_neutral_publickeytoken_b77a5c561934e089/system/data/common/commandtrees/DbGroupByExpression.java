@@ -103,7 +103,10 @@ public class DbGroupByExpression extends system.data.common.commandtrees.DbExpre
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DbGroupByExpression(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -158,6 +161,14 @@ public class DbGroupByExpression extends system.data.common.commandtrees.DbExpre
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Accept.
+     *
+     * @param visitor the argument of type {@code DbExpressionVisitor}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbGroupByExpression.Accept" target="_top">.NET documentation</a>
+     */
     public void Accept(DbExpressionVisitor visitor) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -172,6 +183,13 @@ public class DbGroupByExpression extends system.data.common.commandtrees.DbExpre
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Aggregates.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbGroupByExpression.Aggregates" target="_top">.NET documentation</a>
+     */
     public IList_1 getAggregates() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +205,13 @@ public class DbGroupByExpression extends system.data.common.commandtrees.DbExpre
         }
     }
 
+    /**
+     * Gets the value of the .NET property Keys.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbGroupByExpression.Keys" target="_top">.NET documentation</a>
+     */
     public IList_1 getKeys() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +227,13 @@ public class DbGroupByExpression extends system.data.common.commandtrees.DbExpre
         }
     }
 
+    /**
+     * Gets the value of the .NET property Input.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbGroupByExpression.Input" target="_top">.NET documentation</a>
+     */
     public DbGroupExpressionBinding getInput() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -104,7 +104,10 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SymmetricAlgorithm(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,14 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ValidKeySize.
+     *
+     * @param bitLength the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.SymmetricAlgorithm.ValidKeySize" target="_top">.NET documentation</a>
+     */
     public boolean ValidKeySize(int bitLength) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -171,6 +182,13 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateDecryptor.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.SymmetricAlgorithm.CreateDecryptor" target="_top">.NET documentation</a>
+     */
     public ICryptoTransform CreateDecryptor() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -186,6 +204,15 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateDecryptor.
+     *
+     * @param rgbKey the argument of type {@code byte[]}
+     * @param rgbIV the argument of type {@code byte[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.SymmetricAlgorithm.CreateDecryptor" target="_top">.NET documentation</a>
+     */
     public ICryptoTransform CreateDecryptor(byte[] rgbKey, byte[] rgbIV) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +228,15 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateDecryptor.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code JCORefOut}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.SymmetricAlgorithm.CreateDecryptor" target="_top">.NET documentation</a>
+     */
     public ICryptoTransform CreateDecryptor(JCORefOut dupParam0, JCORefOut dupParam1) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +252,13 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateEncryptor.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.SymmetricAlgorithm.CreateEncryptor" target="_top">.NET documentation</a>
+     */
     public ICryptoTransform CreateEncryptor() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -231,6 +274,15 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateEncryptor.
+     *
+     * @param rgbKey the argument of type {@code byte[]}
+     * @param rgbIV the argument of type {@code byte[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.SymmetricAlgorithm.CreateEncryptor" target="_top">.NET documentation</a>
+     */
     public ICryptoTransform CreateEncryptor(byte[] rgbKey, byte[] rgbIV) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -246,6 +298,15 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateEncryptor.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code JCORefOut}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.SymmetricAlgorithm.CreateEncryptor" target="_top">.NET documentation</a>
+     */
     public ICryptoTransform CreateEncryptor(JCORefOut dupParam0, JCORefOut dupParam1) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -261,6 +322,26 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ApplicationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.SymmetricAlgorithm.Create" target="_top">.NET documentation</a>
+     */
     public static SymmetricAlgorithm Create() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.security.SecurityException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ApplicationException, system.globalization.CultureNotFoundException, system.TypeLoadException, system.ObjectDisposedException, system.UnauthorizedAccessException, system.io.IOException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -276,6 +357,27 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param algName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.ApplicationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.SymmetricAlgorithm.Create" target="_top">.NET documentation</a>
+     */
     public static SymmetricAlgorithm Create(java.lang.String algName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.security.SecurityException, system.ApplicationException, system.globalization.CultureNotFoundException, system.TypeLoadException, system.ObjectDisposedException, system.UnauthorizedAccessException, system.io.IOException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -291,6 +393,12 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member Clear.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.SymmetricAlgorithm.Clear" target="_top">.NET documentation</a>
+     */
     public void Clear() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -301,6 +409,13 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member Dispose.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.SymmetricAlgorithm.Dispose" target="_top">.NET documentation</a>
+     */
     public void Dispose() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -311,6 +426,12 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member GenerateIV.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.SymmetricAlgorithm.GenerateIV" target="_top">.NET documentation</a>
+     */
     public void GenerateIV() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -321,6 +442,12 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member GenerateKey.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.SymmetricAlgorithm.GenerateKey" target="_top">.NET documentation</a>
+     */
     public void GenerateKey() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -348,6 +475,13 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IV.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.SymmetricAlgorithm.IV" target="_top">.NET documentation</a>
+     */
     public byte[] getIV() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -371,6 +505,15 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IV.
+     *
+     * @param IV the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.SymmetricAlgorithm.IV" target="_top">.NET documentation</a>
+     */
     public void setIV(byte[] IV) throws Throwable, system.ArgumentNullException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -381,6 +524,13 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Key.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.SymmetricAlgorithm.Key" target="_top">.NET documentation</a>
+     */
     public byte[] getKey() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -404,6 +554,15 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Key.
+     *
+     * @param Key the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.SymmetricAlgorithm.Key" target="_top">.NET documentation</a>
+     */
     public void setKey(byte[] Key) throws Throwable, system.ArgumentNullException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -414,6 +573,13 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Gets the value of the .NET property BlockSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.SymmetricAlgorithm.BlockSize" target="_top">.NET documentation</a>
+     */
     public int getBlockSize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -454,6 +620,14 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Sets the value of the .NET property BlockSize.
+     *
+     * @param BlockSize the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.SymmetricAlgorithm.BlockSize" target="_top">.NET documentation</a>
+     */
     public void setBlockSize(int BlockSize) throws Throwable, system.security.cryptography.CryptographicException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -464,6 +638,13 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FeedbackSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.SymmetricAlgorithm.FeedbackSize" target="_top">.NET documentation</a>
+     */
     public int getFeedbackSize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -504,6 +685,14 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Sets the value of the .NET property FeedbackSize.
+     *
+     * @param FeedbackSize the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.SymmetricAlgorithm.FeedbackSize" target="_top">.NET documentation</a>
+     */
     public void setFeedbackSize(int FeedbackSize) throws Throwable, system.security.cryptography.CryptographicException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -514,6 +703,13 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Gets the value of the .NET property KeySize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.SymmetricAlgorithm.KeySize" target="_top">.NET documentation</a>
+     */
     public int getKeySize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -554,6 +750,14 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Sets the value of the .NET property KeySize.
+     *
+     * @param KeySize the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.SymmetricAlgorithm.KeySize" target="_top">.NET documentation</a>
+     */
     public void setKeySize(int KeySize) throws Throwable, system.security.cryptography.CryptographicException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -564,6 +768,13 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Mode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.SymmetricAlgorithm.Mode" target="_top">.NET documentation</a>
+     */
     public CipherMode getMode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -579,6 +790,14 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Mode.
+     *
+     * @param Mode the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.SymmetricAlgorithm.Mode" target="_top">.NET documentation</a>
+     */
     public void setMode(CipherMode Mode) throws Throwable, system.security.cryptography.CryptographicException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -589,6 +808,13 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LegalBlockSizes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.SymmetricAlgorithm.LegalBlockSizes" target="_top">.NET documentation</a>
+     */
     public final KeySizes[] getLegalBlockSizes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -610,6 +836,13 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LegalKeySizes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.SymmetricAlgorithm.LegalKeySizes" target="_top">.NET documentation</a>
+     */
     public final KeySizes[] getLegalKeySizes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -631,6 +864,13 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Padding.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.SymmetricAlgorithm.Padding" target="_top">.NET documentation</a>
+     */
     public PaddingMode getPadding() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -646,6 +886,14 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Padding.
+     *
+     * @param Padding the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.SymmetricAlgorithm.Padding" target="_top">.NET documentation</a>
+     */
     public void setPadding(PaddingMode Padding) throws Throwable, system.security.cryptography.CryptographicException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

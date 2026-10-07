@@ -108,7 +108,10 @@ public class UCOMIMonikerImplementation extends NetObject implements UCOMIMonike
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public UCOMIMonikerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,13 @@ public class UCOMIMonikerImplementation extends NetObject implements UCOMIMonike
 
     // Methods section
     
+    /**
+     * Invokes the .NET member IsDirty.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.UCOMIMoniker.IsDirty" target="_top">.NET documentation</a>
+     */
     public int IsDirty() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +200,16 @@ public class UCOMIMonikerImplementation extends NetObject implements UCOMIMonike
         }
     }
 
+    /**
+     * Invokes the .NET member BindToObject.
+     *
+     * @param pbc the argument of type {@code UCOMIBindCtx}
+     * @param pmkToLeft the argument of type {@code UCOMIMoniker}
+     * @param riidResult the argument of type {@code JCORefOut<Guid>}
+     * @param ppvResult the argument of type {@code JCORefOut<NetObject>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.UCOMIMoniker.BindToObject" target="_top">.NET documentation</a>
+     */
     public void BindToObject(UCOMIBindCtx pbc, UCOMIMoniker pmkToLeft, JCORefOut<Guid> riidResult, JCORefOut<NetObject> ppvResult) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +220,16 @@ public class UCOMIMonikerImplementation extends NetObject implements UCOMIMonike
         }
     }
 
+    /**
+     * Invokes the .NET member BindToStorage.
+     *
+     * @param pbc the argument of type {@code UCOMIBindCtx}
+     * @param pmkToLeft the argument of type {@code UCOMIMoniker}
+     * @param riid the argument of type {@code JCORefOut<Guid>}
+     * @param ppvObj the argument of type {@code JCORefOut<NetObject>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.UCOMIMoniker.BindToStorage" target="_top">.NET documentation</a>
+     */
     public void BindToStorage(UCOMIBindCtx pbc, UCOMIMoniker pmkToLeft, JCORefOut<Guid> riid, JCORefOut<NetObject> ppvObj) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -210,6 +240,14 @@ public class UCOMIMonikerImplementation extends NetObject implements UCOMIMonike
         }
     }
 
+    /**
+     * Invokes the .NET member CommonPrefixWith.
+     *
+     * @param pmkOther the argument of type {@code UCOMIMoniker}
+     * @param ppmkPrefix the argument of type {@code JCORefOut<UCOMIMoniker>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.UCOMIMoniker.CommonPrefixWith" target="_top">.NET documentation</a>
+     */
     public void CommonPrefixWith(UCOMIMoniker pmkOther, JCORefOut<UCOMIMoniker> ppmkPrefix) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -220,6 +258,15 @@ public class UCOMIMonikerImplementation extends NetObject implements UCOMIMonike
         }
     }
 
+    /**
+     * Invokes the .NET member ComposeWith.
+     *
+     * @param pmkRight the argument of type {@code UCOMIMoniker}
+     * @param fOnlyIfNotGeneric the argument of type {@code boolean}
+     * @param ppmkComposite the argument of type {@code JCORefOut<UCOMIMoniker>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.UCOMIMoniker.ComposeWith" target="_top">.NET documentation</a>
+     */
     public void ComposeWith(UCOMIMoniker pmkRight, boolean fOnlyIfNotGeneric, JCORefOut<UCOMIMoniker> ppmkComposite) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -230,6 +277,14 @@ public class UCOMIMonikerImplementation extends NetObject implements UCOMIMonike
         }
     }
 
+    /**
+     * Invokes the .NET member Enum.
+     *
+     * @param fForward the argument of type {@code boolean}
+     * @param ppenumMoniker the argument of type {@code JCORefOut<UCOMIEnumMoniker>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.UCOMIMoniker.Enum" target="_top">.NET documentation</a>
+     */
     public void Enum(boolean fForward, JCORefOut<UCOMIEnumMoniker> ppenumMoniker) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -240,6 +295,13 @@ public class UCOMIMonikerImplementation extends NetObject implements UCOMIMonike
         }
     }
 
+    /**
+     * Invokes the .NET member GetClassID.
+     *
+     * @param pClassID the argument of type {@code JCORefOut<Guid>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.UCOMIMoniker.GetClassID" target="_top">.NET documentation</a>
+     */
     public void GetClassID(JCORefOut<Guid> pClassID) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -250,6 +312,15 @@ public class UCOMIMonikerImplementation extends NetObject implements UCOMIMonike
         }
     }
 
+    /**
+     * Invokes the .NET member GetDisplayName.
+     *
+     * @param pbc the argument of type {@code UCOMIBindCtx}
+     * @param pmkToLeft the argument of type {@code UCOMIMoniker}
+     * @param ppszDisplayName the argument of type {@code JCORefOut}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.UCOMIMoniker.GetDisplayName" target="_top">.NET documentation</a>
+     */
     public void GetDisplayName(UCOMIBindCtx pbc, UCOMIMoniker pmkToLeft, JCORefOut ppszDisplayName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -260,6 +331,13 @@ public class UCOMIMonikerImplementation extends NetObject implements UCOMIMonike
         }
     }
 
+    /**
+     * Invokes the .NET member GetSizeMax.
+     *
+     * @param pcbSize the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicLong>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.UCOMIMoniker.GetSizeMax" target="_top">.NET documentation</a>
+     */
     public void GetSizeMax(JCORefOut<java.util.concurrent.atomic.AtomicLong> pcbSize) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -270,6 +348,15 @@ public class UCOMIMonikerImplementation extends NetObject implements UCOMIMonike
         }
     }
 
+    /**
+     * Invokes the .NET member GetTimeOfLastChange.
+     *
+     * @param pbc the argument of type {@code UCOMIBindCtx}
+     * @param pmkToLeft the argument of type {@code UCOMIMoniker}
+     * @param pFileTime the argument of type {@code JCORefOut<FILETIME>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.UCOMIMoniker.GetTimeOfLastChange" target="_top">.NET documentation</a>
+     */
     public void GetTimeOfLastChange(UCOMIBindCtx pbc, UCOMIMoniker pmkToLeft, JCORefOut<FILETIME> pFileTime) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -280,6 +367,13 @@ public class UCOMIMonikerImplementation extends NetObject implements UCOMIMonike
         }
     }
 
+    /**
+     * Invokes the .NET member Hash.
+     *
+     * @param pdwHash the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicInteger>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.UCOMIMoniker.Hash" target="_top">.NET documentation</a>
+     */
     public void Hash(JCORefOut<java.util.concurrent.atomic.AtomicInteger> pdwHash) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -290,6 +384,13 @@ public class UCOMIMonikerImplementation extends NetObject implements UCOMIMonike
         }
     }
 
+    /**
+     * Invokes the .NET member Inverse.
+     *
+     * @param ppmk the argument of type {@code JCORefOut<UCOMIMoniker>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.UCOMIMoniker.Inverse" target="_top">.NET documentation</a>
+     */
     public void Inverse(JCORefOut<UCOMIMoniker> ppmk) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -300,6 +401,13 @@ public class UCOMIMonikerImplementation extends NetObject implements UCOMIMonike
         }
     }
 
+    /**
+     * Invokes the .NET member IsEqual.
+     *
+     * @param pmkOtherMoniker the argument of type {@code UCOMIMoniker}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.UCOMIMoniker.IsEqual" target="_top">.NET documentation</a>
+     */
     public void IsEqual(UCOMIMoniker pmkOtherMoniker) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -310,6 +418,15 @@ public class UCOMIMonikerImplementation extends NetObject implements UCOMIMonike
         }
     }
 
+    /**
+     * Invokes the .NET member IsRunning.
+     *
+     * @param pbc the argument of type {@code UCOMIBindCtx}
+     * @param pmkToLeft the argument of type {@code UCOMIMoniker}
+     * @param pmkNewlyRunning the argument of type {@code UCOMIMoniker}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.UCOMIMoniker.IsRunning" target="_top">.NET documentation</a>
+     */
     public void IsRunning(UCOMIBindCtx pbc, UCOMIMoniker pmkToLeft, UCOMIMoniker pmkNewlyRunning) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -320,6 +437,13 @@ public class UCOMIMonikerImplementation extends NetObject implements UCOMIMonike
         }
     }
 
+    /**
+     * Invokes the .NET member IsSystemMoniker.
+     *
+     * @param pdwMksys the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicInteger>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.UCOMIMoniker.IsSystemMoniker" target="_top">.NET documentation</a>
+     */
     public void IsSystemMoniker(JCORefOut<java.util.concurrent.atomic.AtomicInteger> pdwMksys) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -330,6 +454,13 @@ public class UCOMIMonikerImplementation extends NetObject implements UCOMIMonike
         }
     }
 
+    /**
+     * Invokes the .NET member Load.
+     *
+     * @param pStm the argument of type {@code UCOMIStream}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.UCOMIMoniker.Load" target="_top">.NET documentation</a>
+     */
     public void Load(UCOMIStream pStm) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -340,6 +471,17 @@ public class UCOMIMonikerImplementation extends NetObject implements UCOMIMonike
         }
     }
 
+    /**
+     * Invokes the .NET member ParseDisplayName.
+     *
+     * @param pbc the argument of type {@code UCOMIBindCtx}
+     * @param pmkToLeft the argument of type {@code UCOMIMoniker}
+     * @param pszDisplayName the argument of type {@code java.lang.String}
+     * @param pchEaten the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicInteger>}
+     * @param ppmkOut the argument of type {@code JCORefOut<UCOMIMoniker>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.UCOMIMoniker.ParseDisplayName" target="_top">.NET documentation</a>
+     */
     public void ParseDisplayName(UCOMIBindCtx pbc, UCOMIMoniker pmkToLeft, java.lang.String pszDisplayName, JCORefOut<java.util.concurrent.atomic.AtomicInteger> pchEaten, JCORefOut<UCOMIMoniker> ppmkOut) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -350,6 +492,16 @@ public class UCOMIMonikerImplementation extends NetObject implements UCOMIMonike
         }
     }
 
+    /**
+     * Invokes the .NET member Reduce.
+     *
+     * @param pbc the argument of type {@code UCOMIBindCtx}
+     * @param dwReduceHowFar the argument of type {@code int}
+     * @param ppmkToLeft the argument of type {@code JCORefOut<UCOMIMoniker>}
+     * @param ppmkReduced the argument of type {@code JCORefOut<UCOMIMoniker>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.UCOMIMoniker.Reduce" target="_top">.NET documentation</a>
+     */
     public void Reduce(UCOMIBindCtx pbc, int dwReduceHowFar, JCORefOut<UCOMIMoniker> ppmkToLeft, JCORefOut<UCOMIMoniker> ppmkReduced) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -360,6 +512,14 @@ public class UCOMIMonikerImplementation extends NetObject implements UCOMIMonike
         }
     }
 
+    /**
+     * Invokes the .NET member RelativePathTo.
+     *
+     * @param pmkOther the argument of type {@code UCOMIMoniker}
+     * @param ppmkRelPath the argument of type {@code JCORefOut<UCOMIMoniker>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.UCOMIMoniker.RelativePathTo" target="_top">.NET documentation</a>
+     */
     public void RelativePathTo(UCOMIMoniker pmkOther, JCORefOut<UCOMIMoniker> ppmkRelPath) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -370,6 +530,14 @@ public class UCOMIMonikerImplementation extends NetObject implements UCOMIMonike
         }
     }
 
+    /**
+     * Invokes the .NET member Save.
+     *
+     * @param pStm the argument of type {@code UCOMIStream}
+     * @param fClearDirty the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.UCOMIMoniker.Save" target="_top">.NET documentation</a>
+     */
     public void Save(UCOMIStream pStm, boolean fClearDirty) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

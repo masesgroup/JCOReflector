@@ -99,7 +99,10 @@ public class JitInfo extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public JitInfo(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,14 @@ public class JitInfo extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetCompiledILBytes.
+     *
+     * @param currentThread the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.JitInfo.GetCompiledILBytes" target="_top">.NET documentation</a>
+     */
     public static long GetCompiledILBytes(boolean currentThread) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -192,6 +203,14 @@ public class JitInfo extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetCompiledMethodCount.
+     *
+     * @param currentThread the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.JitInfo.GetCompiledMethodCount" target="_top">.NET documentation</a>
+     */
     public static long GetCompiledMethodCount(boolean currentThread) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -232,6 +251,14 @@ public class JitInfo extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetCompilationTime.
+     *
+     * @param currentThread the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.JitInfo.GetCompilationTime" target="_top">.NET documentation</a>
+     */
     public static TimeSpan GetCompilationTime(boolean currentThread) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

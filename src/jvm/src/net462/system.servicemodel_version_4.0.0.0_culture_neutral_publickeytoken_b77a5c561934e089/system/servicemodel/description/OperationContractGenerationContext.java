@@ -103,7 +103,10 @@ public class OperationContractGenerationContext extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public OperationContractGenerationContext(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,31 @@ public class OperationContractGenerationContext extends NetObject  {
     public OperationContractGenerationContext() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param serviceContractGenerator the argument of type {@code ServiceContractGenerator}
+     * @param contract the argument of type {@code ServiceContractGenerationContext}
+     * @param operation the argument of type {@code OperationDescription}
+     * @param declaringType the argument of type {@code CodeTypeDeclaration}
+     * @param method the argument of type {@code CodeMemberMethod}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.OperationContractGenerationContext.-ctor" target="_top">.NET documentation</a>
+     */
     public OperationContractGenerationContext(ServiceContractGenerator serviceContractGenerator, ServiceContractGenerationContext contract, OperationDescription operation, CodeTypeDeclaration declaringType, CodeMemberMethod method) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
@@ -163,6 +191,32 @@ public class OperationContractGenerationContext extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param serviceContractGenerator the argument of type {@code ServiceContractGenerator}
+     * @param contract the argument of type {@code ServiceContractGenerationContext}
+     * @param operation the argument of type {@code OperationDescription}
+     * @param declaringType the argument of type {@code CodeTypeDeclaration}
+     * @param syncMethod the argument of type {@code CodeMemberMethod}
+     * @param taskMethod the argument of type {@code CodeMemberMethod}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.OperationContractGenerationContext.-ctor" target="_top">.NET documentation</a>
+     */
     public OperationContractGenerationContext(ServiceContractGenerator serviceContractGenerator, ServiceContractGenerationContext contract, OperationDescription operation, CodeTypeDeclaration declaringType, CodeMemberMethod syncMethod, CodeMemberMethod taskMethod) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
@@ -173,6 +227,33 @@ public class OperationContractGenerationContext extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param serviceContractGenerator the argument of type {@code ServiceContractGenerator}
+     * @param contract the argument of type {@code ServiceContractGenerationContext}
+     * @param operation the argument of type {@code OperationDescription}
+     * @param declaringType the argument of type {@code CodeTypeDeclaration}
+     * @param syncMethod the argument of type {@code CodeMemberMethod}
+     * @param beginMethod the argument of type {@code CodeMemberMethod}
+     * @param endMethod the argument of type {@code CodeMemberMethod}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.OperationContractGenerationContext.-ctor" target="_top">.NET documentation</a>
+     */
     public OperationContractGenerationContext(ServiceContractGenerator serviceContractGenerator, ServiceContractGenerationContext contract, OperationDescription operation, CodeTypeDeclaration declaringType, CodeMemberMethod syncMethod, CodeMemberMethod beginMethod, CodeMemberMethod endMethod) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
@@ -183,6 +264,34 @@ public class OperationContractGenerationContext extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param serviceContractGenerator the argument of type {@code ServiceContractGenerator}
+     * @param contract the argument of type {@code ServiceContractGenerationContext}
+     * @param operation the argument of type {@code OperationDescription}
+     * @param declaringType the argument of type {@code CodeTypeDeclaration}
+     * @param syncMethod the argument of type {@code CodeMemberMethod}
+     * @param beginMethod the argument of type {@code CodeMemberMethod}
+     * @param endMethod the argument of type {@code CodeMemberMethod}
+     * @param taskMethod the argument of type {@code CodeMemberMethod}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.OperationContractGenerationContext.-ctor" target="_top">.NET documentation</a>
+     */
     public OperationContractGenerationContext(ServiceContractGenerator serviceContractGenerator, ServiceContractGenerationContext contract, OperationDescription operation, CodeTypeDeclaration declaringType, CodeMemberMethod syncMethod, CodeMemberMethod beginMethod, CodeMemberMethod endMethod, CodeMemberMethod taskMethod) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
@@ -202,6 +311,13 @@ public class OperationContractGenerationContext extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsAsync.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.OperationContractGenerationContext.IsAsync" target="_top">.NET documentation</a>
+     */
     public boolean getIsAsync() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +332,13 @@ public class OperationContractGenerationContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsTask.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.OperationContractGenerationContext.IsTask" target="_top">.NET documentation</a>
+     */
     public boolean getIsTask() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -230,6 +353,13 @@ public class OperationContractGenerationContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property BeginMethod.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.OperationContractGenerationContext.BeginMethod" target="_top">.NET documentation</a>
+     */
     public CodeMemberMethod getBeginMethod() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -245,6 +375,13 @@ public class OperationContractGenerationContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EndMethod.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.OperationContractGenerationContext.EndMethod" target="_top">.NET documentation</a>
+     */
     public CodeMemberMethod getEndMethod() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -260,6 +397,13 @@ public class OperationContractGenerationContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SyncMethod.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.OperationContractGenerationContext.SyncMethod" target="_top">.NET documentation</a>
+     */
     public CodeMemberMethod getSyncMethod() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -275,6 +419,13 @@ public class OperationContractGenerationContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TaskMethod.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.OperationContractGenerationContext.TaskMethod" target="_top">.NET documentation</a>
+     */
     public CodeMemberMethod getTaskMethod() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -290,6 +441,13 @@ public class OperationContractGenerationContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DeclaringType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.OperationContractGenerationContext.DeclaringType" target="_top">.NET documentation</a>
+     */
     public CodeTypeDeclaration getDeclaringType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -305,6 +463,13 @@ public class OperationContractGenerationContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Operation.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.OperationContractGenerationContext.Operation" target="_top">.NET documentation</a>
+     */
     public OperationDescription getOperation() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -320,6 +485,13 @@ public class OperationContractGenerationContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Contract.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.OperationContractGenerationContext.Contract" target="_top">.NET documentation</a>
+     */
     public ServiceContractGenerationContext getContract() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -335,6 +507,13 @@ public class OperationContractGenerationContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ServiceContractGenerator.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.OperationContractGenerationContext.ServiceContractGenerator" target="_top">.NET documentation</a>
+     */
     public ServiceContractGenerator getServiceContractGenerator() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

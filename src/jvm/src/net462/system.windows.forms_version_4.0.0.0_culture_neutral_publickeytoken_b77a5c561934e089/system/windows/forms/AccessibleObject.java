@@ -115,7 +115,10 @@ public class AccessibleObject extends system.runtime.interopservices.StandardOle
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public AccessibleObject(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -162,6 +165,12 @@ public class AccessibleObject extends system.runtime.interopservices.StandardOle
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.AccessibleObject.-ctor" target="_top">.NET documentation</a>
+     */
     public AccessibleObject() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -176,6 +185,26 @@ public class AccessibleObject extends system.runtime.interopservices.StandardOle
     
     // Methods section
     
+    /**
+     * Invokes the .NET member RaiseAutomationNotification.
+     *
+     * @param notificationKind the argument of type {@code AutomationNotificationKind}
+     * @param notificationProcessing the argument of type {@code AutomationNotificationProcessing}
+     * @param notificationText the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.AccessibleObject.RaiseAutomationNotification" target="_top">.NET documentation</a>
+     */
     public boolean RaiseAutomationNotification(AutomationNotificationKind notificationKind, AutomationNotificationProcessing notificationProcessing, java.lang.String notificationText) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +219,24 @@ public class AccessibleObject extends system.runtime.interopservices.StandardOle
         }
     }
 
+    /**
+     * Invokes the .NET member RaiseLiveRegionChanged.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.AccessibleObject.RaiseLiveRegionChanged" target="_top">.NET documentation</a>
+     */
     public boolean RaiseLiveRegionChanged() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +251,13 @@ public class AccessibleObject extends system.runtime.interopservices.StandardOle
         }
     }
 
+    /**
+     * Invokes the .NET member GetChildCount.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.AccessibleObject.GetChildCount" target="_top">.NET documentation</a>
+     */
     public int GetChildCount() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -244,6 +298,22 @@ public class AccessibleObject extends system.runtime.interopservices.StandardOle
         }
     }
 
+    /**
+     * Invokes the .NET member GetHelpTopic.
+     *
+     * @param fileName the argument of type {@code JCORefOut}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.AccessibleObject.GetHelpTopic" target="_top">.NET documentation</a>
+     */
     public int GetHelpTopic(JCORefOut fileName) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.security.SecurityException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -284,6 +354,14 @@ public class AccessibleObject extends system.runtime.interopservices.StandardOle
         }
     }
 
+    /**
+     * Invokes the .NET member GetChild.
+     *
+     * @param index the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.AccessibleObject.GetChild" target="_top">.NET documentation</a>
+     */
     public AccessibleObject GetChild(int index) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -299,6 +377,13 @@ public class AccessibleObject extends system.runtime.interopservices.StandardOle
         }
     }
 
+    /**
+     * Invokes the .NET member GetFocused.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.AccessibleObject.GetFocused" target="_top">.NET documentation</a>
+     */
     public AccessibleObject GetFocused() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -314,6 +399,13 @@ public class AccessibleObject extends system.runtime.interopservices.StandardOle
         }
     }
 
+    /**
+     * Invokes the .NET member GetSelected.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.AccessibleObject.GetSelected" target="_top">.NET documentation</a>
+     */
     public AccessibleObject GetSelected() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -329,6 +421,15 @@ public class AccessibleObject extends system.runtime.interopservices.StandardOle
         }
     }
 
+    /**
+     * Invokes the .NET member HitTest.
+     *
+     * @param x the argument of type {@code int}
+     * @param y the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.AccessibleObject.HitTest" target="_top">.NET documentation</a>
+     */
     public AccessibleObject HitTest(int x, int y) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -344,6 +445,16 @@ public class AccessibleObject extends system.runtime.interopservices.StandardOle
         }
     }
 
+    /**
+     * Invokes the .NET member Navigate.
+     *
+     * @param navdir the argument of type {@code AccessibleNavigation}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.AccessibleObject.Navigate" target="_top">.NET documentation</a>
+     */
     public AccessibleObject Navigate(AccessibleNavigation navdir) throws Throwable, system.ArgumentException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -359,6 +470,12 @@ public class AccessibleObject extends system.runtime.interopservices.StandardOle
         }
     }
 
+    /**
+     * Invokes the .NET member DoDefaultAction.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.AccessibleObject.DoDefaultAction" target="_top">.NET documentation</a>
+     */
     public void DoDefaultAction() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -369,6 +486,13 @@ public class AccessibleObject extends system.runtime.interopservices.StandardOle
         }
     }
 
+    /**
+     * Invokes the .NET member Select.
+     *
+     * @param flags the argument of type {@code AccessibleSelection}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.AccessibleObject.Select" target="_top">.NET documentation</a>
+     */
     public void Select(AccessibleSelection flags) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -382,8 +506,20 @@ public class AccessibleObject extends system.runtime.interopservices.StandardOle
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIReflect method available in IReflect to obtain an object with an invocable method
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param invokeAttr the argument of type {@code BindingFlags}
+     * @param binder the argument of type {@code Binder}
+     * @param target the argument of type {@code NetObject}
+     * @param args the argument of type {@code NetObject[]}
+     * @param modifiers the argument of type {@code ParameterModifier[]}
+     * @param culture the argument of type {@code CultureInfo}
+     * @param namedParameters the argument of type {@code java.lang.String[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.IReflect.InvokeMember" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public NetObject InvokeMember(java.lang.String name, BindingFlags invokeAttr, Binder binder, NetObject target, NetObject[] args, ParameterModifier[] modifiers, CultureInfo culture, java.lang.String[] namedParameters) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIReflect to obtain the full interface.");
     }
@@ -391,8 +527,20 @@ public class AccessibleObject extends system.runtime.interopservices.StandardOle
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToMETHOD_INTERFACE_NAME method available in METHOD_INTERFACE_NAME to obtain an object with an invocable method
+     *
+     * @param dupParam0 the argument of type {@code java.lang.String}
+     * @param dupParam1 the argument of type {@code BindingFlags}
+     * @param dupParam2 the argument of type {@code Binder}
+     * @param dupParam3 the argument of type {@code NetObject}
+     * @param dupParam4 the argument of type {@code NetObject[]}
+     * @param dupParam5 the argument of type {@code ParameterModifier[]}
+     * @param dupParam6 the argument of type {@code CultureInfo}
+     * @param dupParam7 the argument of type {@code JCORefOut}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.IReflect.InvokeMember" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public NetObject InvokeMember(java.lang.String dupParam0, BindingFlags dupParam1, Binder dupParam2, NetObject dupParam3, NetObject[] dupParam4, ParameterModifier[] dupParam5, CultureInfo dupParam6, JCORefOut dupParam7) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToMETHOD_INTERFACE_NAME to obtain the full interface.");
     }
@@ -400,8 +548,14 @@ public class AccessibleObject extends system.runtime.interopservices.StandardOle
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIReflect method available in IReflect to obtain an object with an invocable method
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param bindingAttr the argument of type {@code BindingFlags}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.IReflect.GetField" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public FieldInfo GetField(java.lang.String name, BindingFlags bindingAttr) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIReflect to obtain the full interface.");
     }
@@ -409,8 +563,13 @@ public class AccessibleObject extends system.runtime.interopservices.StandardOle
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIReflect method available in IReflect to obtain an object with an invocable method
+     *
+     * @param bindingAttr the argument of type {@code BindingFlags}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.IReflect.GetFields" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public FieldInfo[] GetFields(BindingFlags bindingAttr) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIReflect to obtain the full interface.");
     }
@@ -418,8 +577,14 @@ public class AccessibleObject extends system.runtime.interopservices.StandardOle
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIReflect method available in IReflect to obtain an object with an invocable method
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param bindingAttr the argument of type {@code BindingFlags}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.IReflect.GetMember" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public MemberInfo[] GetMember(java.lang.String name, BindingFlags bindingAttr) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIReflect to obtain the full interface.");
     }
@@ -427,8 +592,13 @@ public class AccessibleObject extends system.runtime.interopservices.StandardOle
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIReflect method available in IReflect to obtain an object with an invocable method
+     *
+     * @param bindingAttr the argument of type {@code BindingFlags}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.IReflect.GetMembers" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public MemberInfo[] GetMembers(BindingFlags bindingAttr) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIReflect to obtain the full interface.");
     }
@@ -436,8 +606,14 @@ public class AccessibleObject extends system.runtime.interopservices.StandardOle
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIReflect method available in IReflect to obtain an object with an invocable method
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param bindingAttr the argument of type {@code BindingFlags}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.IReflect.GetMethod" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public MethodInfo GetMethod(java.lang.String name, BindingFlags bindingAttr) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIReflect to obtain the full interface.");
     }
@@ -445,8 +621,17 @@ public class AccessibleObject extends system.runtime.interopservices.StandardOle
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIReflect method available in IReflect to obtain an object with an invocable method
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param bindingAttr the argument of type {@code BindingFlags}
+     * @param binder the argument of type {@code Binder}
+     * @param types the argument of type {@code NetType[]}
+     * @param modifiers the argument of type {@code ParameterModifier[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.IReflect.GetMethod" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public MethodInfo GetMethod(java.lang.String name, BindingFlags bindingAttr, Binder binder, NetType[] types, ParameterModifier[] modifiers) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIReflect to obtain the full interface.");
     }
@@ -454,8 +639,13 @@ public class AccessibleObject extends system.runtime.interopservices.StandardOle
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIReflect method available in IReflect to obtain an object with an invocable method
+     *
+     * @param bindingAttr the argument of type {@code BindingFlags}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.IReflect.GetMethods" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public MethodInfo[] GetMethods(BindingFlags bindingAttr) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIReflect to obtain the full interface.");
     }
@@ -463,8 +653,14 @@ public class AccessibleObject extends system.runtime.interopservices.StandardOle
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIReflect method available in IReflect to obtain an object with an invocable method
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param bindingAttr the argument of type {@code BindingFlags}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.IReflect.GetProperty" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public PropertyInfo GetProperty(java.lang.String name, BindingFlags bindingAttr) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIReflect to obtain the full interface.");
     }
@@ -472,8 +668,18 @@ public class AccessibleObject extends system.runtime.interopservices.StandardOle
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIReflect method available in IReflect to obtain an object with an invocable method
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param bindingAttr the argument of type {@code BindingFlags}
+     * @param binder the argument of type {@code Binder}
+     * @param returnType the argument of type {@code NetType}
+     * @param types the argument of type {@code NetType[]}
+     * @param modifiers the argument of type {@code ParameterModifier[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.IReflect.GetProperty" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public PropertyInfo GetProperty(java.lang.String name, BindingFlags bindingAttr, Binder binder, NetType returnType, NetType[] types, ParameterModifier[] modifiers) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIReflect to obtain the full interface.");
     }
@@ -481,8 +687,13 @@ public class AccessibleObject extends system.runtime.interopservices.StandardOle
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIReflect method available in IReflect to obtain an object with an invocable method
+     *
+     * @param bindingAttr the argument of type {@code BindingFlags}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.IReflect.GetProperties" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public PropertyInfo[] GetProperties(BindingFlags bindingAttr) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIReflect to obtain the full interface.");
     }
@@ -490,8 +701,14 @@ public class AccessibleObject extends system.runtime.interopservices.StandardOle
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIAccessible method available in IAccessible to obtain an object with an invocable method
+     *
+     * @param xLeft the argument of type {@code int}
+     * @param yTop the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Accessibility.IAccessible.accHitTest" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public NetObject accHitTest(int xLeft, int yTop) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAccessible to obtain the full interface.");
     }
@@ -499,8 +716,14 @@ public class AccessibleObject extends system.runtime.interopservices.StandardOle
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIAccessible method available in IAccessible to obtain an object with an invocable method
+     *
+     * @param navDir the argument of type {@code int}
+     * @param varStart the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Accessibility.IAccessible.accNavigate" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public NetObject accNavigate(int navDir, NetObject varStart) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAccessible to obtain the full interface.");
     }
@@ -508,8 +731,12 @@ public class AccessibleObject extends system.runtime.interopservices.StandardOle
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIAccessible method available in IAccessible to obtain an object with an invocable method
+     *
+     * @param varChild the argument of type {@code NetObject}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Accessibility.IAccessible.accDoDefaultAction" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void accDoDefaultAction(NetObject varChild) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAccessible to obtain the full interface.");
     }
@@ -517,8 +744,16 @@ public class AccessibleObject extends system.runtime.interopservices.StandardOle
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIAccessible method available in IAccessible to obtain an object with an invocable method
+     *
+     * @param pxLeft the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicInteger>}
+     * @param pyTop the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicInteger>}
+     * @param pcxWidth the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicInteger>}
+     * @param pcyHeight the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicInteger>}
+     * @param varChild the argument of type {@code NetObject}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Accessibility.IAccessible.accLocation" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void accLocation(JCORefOut<java.util.concurrent.atomic.AtomicInteger> pxLeft, JCORefOut<java.util.concurrent.atomic.AtomicInteger> pyTop, JCORefOut<java.util.concurrent.atomic.AtomicInteger> pcxWidth, JCORefOut<java.util.concurrent.atomic.AtomicInteger> pcyHeight, NetObject varChild) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAccessible to obtain the full interface.");
     }
@@ -526,8 +761,13 @@ public class AccessibleObject extends system.runtime.interopservices.StandardOle
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIAccessible method available in IAccessible to obtain an object with an invocable method
+     *
+     * @param flagsSelect the argument of type {@code int}
+     * @param varChild the argument of type {@code NetObject}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Accessibility.IAccessible.accSelect" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void accSelect(int flagsSelect, NetObject varChild) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAccessible to obtain the full interface.");
     }
@@ -536,6 +776,13 @@ public class AccessibleObject extends system.runtime.interopservices.StandardOle
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Bounds.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.AccessibleObject.Bounds" target="_top">.NET documentation</a>
+     */
     public Rectangle getBounds() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -551,6 +798,13 @@ public class AccessibleObject extends system.runtime.interopservices.StandardOle
         }
     }
 
+    /**
+     * Gets the value of the .NET property DefaultAction.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.AccessibleObject.DefaultAction" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDefaultAction() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -565,6 +819,13 @@ public class AccessibleObject extends system.runtime.interopservices.StandardOle
         }
     }
 
+    /**
+     * Gets the value of the .NET property Description.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.AccessibleObject.Description" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDescription() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -579,6 +840,13 @@ public class AccessibleObject extends system.runtime.interopservices.StandardOle
         }
     }
 
+    /**
+     * Gets the value of the .NET property Help.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.AccessibleObject.Help" target="_top">.NET documentation</a>
+     */
     public java.lang.String getHelp() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -593,6 +861,13 @@ public class AccessibleObject extends system.runtime.interopservices.StandardOle
         }
     }
 
+    /**
+     * Gets the value of the .NET property KeyboardShortcut.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.AccessibleObject.KeyboardShortcut" target="_top">.NET documentation</a>
+     */
     public java.lang.String getKeyboardShortcut() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -607,6 +882,13 @@ public class AccessibleObject extends system.runtime.interopservices.StandardOle
         }
     }
 
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.AccessibleObject.Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -621,6 +903,13 @@ public class AccessibleObject extends system.runtime.interopservices.StandardOle
         }
     }
 
+    /**
+     * Sets the value of the .NET property Name.
+     *
+     * @param Name the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.AccessibleObject.Name" target="_top">.NET documentation</a>
+     */
     public void setName(java.lang.String Name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -631,6 +920,13 @@ public class AccessibleObject extends system.runtime.interopservices.StandardOle
         }
     }
 
+    /**
+     * Gets the value of the .NET property Value.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.AccessibleObject.Value" target="_top">.NET documentation</a>
+     */
     public java.lang.String getValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -645,6 +941,13 @@ public class AccessibleObject extends system.runtime.interopservices.StandardOle
         }
     }
 
+    /**
+     * Sets the value of the .NET property Value.
+     *
+     * @param Value the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.AccessibleObject.Value" target="_top">.NET documentation</a>
+     */
     public void setValue(java.lang.String Value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -655,6 +958,13 @@ public class AccessibleObject extends system.runtime.interopservices.StandardOle
         }
     }
 
+    /**
+     * Gets the value of the .NET property Parent.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.AccessibleObject.Parent" target="_top">.NET documentation</a>
+     */
     public AccessibleObject getParent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -670,6 +980,13 @@ public class AccessibleObject extends system.runtime.interopservices.StandardOle
         }
     }
 
+    /**
+     * Gets the value of the .NET property Role.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.AccessibleObject.Role" target="_top">.NET documentation</a>
+     */
     public AccessibleRole getRole() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -685,6 +1002,13 @@ public class AccessibleObject extends system.runtime.interopservices.StandardOle
         }
     }
 
+    /**
+     * Gets the value of the .NET property State.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.AccessibleObject.State" target="_top">.NET documentation</a>
+     */
     public AccessibleStates getState() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

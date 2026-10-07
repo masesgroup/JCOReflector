@@ -99,7 +99,10 @@ public class AssociatedControlConverter extends system.web.ui.webcontrols.Contro
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public AssociatedControlConverter(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class AssociatedControlConverter extends system.web.ui.webcontrols.Contro
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.AssociatedControlConverter.-ctor" target="_top">.NET documentation</a>
+     */
     public AssociatedControlConverter() throws Throwable {
         try {
             // add reference to assemblyName.dll file

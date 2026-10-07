@@ -119,7 +119,10 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public _AppDomainImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -161,6 +164,14 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
 
     // Methods section
     
+    /**
+     * Invokes the .NET member ExecuteAssembly.
+     *
+     * @param assemblyFile the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System._AppDomain.ExecuteAssembly" target="_top">.NET documentation</a>
+     */
     public int ExecuteAssembly(java.lang.String assemblyFile) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +212,15 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
         }
     }
 
+    /**
+     * Invokes the .NET member ExecuteAssembly.
+     *
+     * @param assemblyFile the argument of type {@code java.lang.String}
+     * @param assemblySecurity the argument of type {@code Evidence}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System._AppDomain.ExecuteAssembly" target="_top">.NET documentation</a>
+     */
     public int ExecuteAssembly(java.lang.String assemblyFile, Evidence assemblySecurity) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -241,6 +261,16 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
         }
     }
 
+    /**
+     * Invokes the .NET member ExecuteAssembly.
+     *
+     * @param assemblyFile the argument of type {@code java.lang.String}
+     * @param assemblySecurity the argument of type {@code Evidence}
+     * @param args the argument of type {@code java.lang.String[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System._AppDomain.ExecuteAssembly" target="_top">.NET documentation</a>
+     */
     public int ExecuteAssembly(java.lang.String assemblyFile, Evidence assemblySecurity, java.lang.String[] args) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -281,6 +311,16 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
         }
     }
 
+    /**
+     * Invokes the .NET member ExecuteAssembly.
+     *
+     * @param dupParam0 the argument of type {@code java.lang.String}
+     * @param dupParam1 the argument of type {@code Evidence}
+     * @param dupParam2 the argument of type {@code JCORefOut}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System._AppDomain.ExecuteAssembly" target="_top">.NET documentation</a>
+     */
     public int ExecuteAssembly(java.lang.String dupParam0, Evidence dupParam1, JCORefOut dupParam2) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -321,6 +361,14 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
         }
     }
 
+    /**
+     * Invokes the .NET member GetData.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System._AppDomain.GetData" target="_top">.NET documentation</a>
+     */
     public NetObject GetData(java.lang.String name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -336,6 +384,13 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
         }
     }
 
+    /**
+     * Invokes the .NET member GetLifetimeService.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System._AppDomain.GetLifetimeService" target="_top">.NET documentation</a>
+     */
     public NetObject GetLifetimeService() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -351,6 +406,13 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
         }
     }
 
+    /**
+     * Invokes the .NET member InitializeLifetimeService.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System._AppDomain.InitializeLifetimeService" target="_top">.NET documentation</a>
+     */
     public NetObject InitializeLifetimeService() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -366,6 +428,14 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
         }
     }
 
+    /**
+     * Invokes the .NET member Load.
+     *
+     * @param rawAssembly the argument of type {@code byte[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System._AppDomain.Load" target="_top">.NET documentation</a>
+     */
     public Assembly Load(byte[] rawAssembly) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -381,6 +451,14 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
         }
     }
 
+    /**
+     * Invokes the .NET member Load.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System._AppDomain.Load" target="_top">.NET documentation</a>
+     */
     public Assembly Load(JCORefOut dupParam0) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -396,6 +474,15 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
         }
     }
 
+    /**
+     * Invokes the .NET member Load.
+     *
+     * @param rawAssembly the argument of type {@code byte[]}
+     * @param rawSymbolStore the argument of type {@code byte[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System._AppDomain.Load" target="_top">.NET documentation</a>
+     */
     public Assembly Load(byte[] rawAssembly, byte[] rawSymbolStore) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -411,6 +498,15 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
         }
     }
 
+    /**
+     * Invokes the .NET member Load.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code JCORefOut}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System._AppDomain.Load" target="_top">.NET documentation</a>
+     */
     public Assembly Load(JCORefOut dupParam0, JCORefOut dupParam1) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -426,6 +522,16 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
         }
     }
 
+    /**
+     * Invokes the .NET member Load.
+     *
+     * @param rawAssembly the argument of type {@code byte[]}
+     * @param rawSymbolStore the argument of type {@code byte[]}
+     * @param securityEvidence the argument of type {@code Evidence}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System._AppDomain.Load" target="_top">.NET documentation</a>
+     */
     public Assembly Load(byte[] rawAssembly, byte[] rawSymbolStore, Evidence securityEvidence) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -441,6 +547,16 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
         }
     }
 
+    /**
+     * Invokes the .NET member Load.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code JCORefOut}
+     * @param dupParam2 the argument of type {@code Evidence}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System._AppDomain.Load" target="_top">.NET documentation</a>
+     */
     public Assembly Load(JCORefOut dupParam0, JCORefOut dupParam1, Evidence dupParam2) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -456,6 +572,14 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
         }
     }
 
+    /**
+     * Invokes the .NET member Load.
+     *
+     * @param assemblyRef the argument of type {@code AssemblyName}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System._AppDomain.Load" target="_top">.NET documentation</a>
+     */
     public Assembly Load(AssemblyName assemblyRef) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -471,6 +595,15 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
         }
     }
 
+    /**
+     * Invokes the .NET member Load.
+     *
+     * @param assemblyRef the argument of type {@code AssemblyName}
+     * @param assemblySecurity the argument of type {@code Evidence}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System._AppDomain.Load" target="_top">.NET documentation</a>
+     */
     public Assembly Load(AssemblyName assemblyRef, Evidence assemblySecurity) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -486,6 +619,14 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
         }
     }
 
+    /**
+     * Invokes the .NET member Load.
+     *
+     * @param assemblyString the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System._AppDomain.Load" target="_top">.NET documentation</a>
+     */
     public Assembly Load(java.lang.String assemblyString) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -501,6 +642,15 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
         }
     }
 
+    /**
+     * Invokes the .NET member Load.
+     *
+     * @param assemblyString the argument of type {@code java.lang.String}
+     * @param assemblySecurity the argument of type {@code Evidence}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System._AppDomain.Load" target="_top">.NET documentation</a>
+     */
     public Assembly Load(java.lang.String assemblyString, Evidence assemblySecurity) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -516,6 +666,13 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
         }
     }
 
+    /**
+     * Invokes the .NET member GetAssemblies.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System._AppDomain.GetAssemblies" target="_top">.NET documentation</a>
+     */
     public Assembly[] GetAssemblies() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -537,6 +694,15 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
         }
     }
 
+    /**
+     * Invokes the .NET member DefineDynamicAssembly.
+     *
+     * @param name the argument of type {@code AssemblyName}
+     * @param access the argument of type {@code AssemblyBuilderAccess}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System._AppDomain.DefineDynamicAssembly" target="_top">.NET documentation</a>
+     */
     public AssemblyBuilder DefineDynamicAssembly(AssemblyName name, AssemblyBuilderAccess access) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -552,6 +718,18 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
         }
     }
 
+    /**
+     * Invokes the .NET member DefineDynamicAssembly.
+     *
+     * @param name the argument of type {@code AssemblyName}
+     * @param access the argument of type {@code AssemblyBuilderAccess}
+     * @param requiredPermissions the argument of type {@code PermissionSet}
+     * @param optionalPermissions the argument of type {@code PermissionSet}
+     * @param refusedPermissions the argument of type {@code PermissionSet}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System._AppDomain.DefineDynamicAssembly" target="_top">.NET documentation</a>
+     */
     public AssemblyBuilder DefineDynamicAssembly(AssemblyName name, AssemblyBuilderAccess access, PermissionSet requiredPermissions, PermissionSet optionalPermissions, PermissionSet refusedPermissions) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -567,6 +745,16 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
         }
     }
 
+    /**
+     * Invokes the .NET member DefineDynamicAssembly.
+     *
+     * @param name the argument of type {@code AssemblyName}
+     * @param access the argument of type {@code AssemblyBuilderAccess}
+     * @param evidence the argument of type {@code Evidence}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System._AppDomain.DefineDynamicAssembly" target="_top">.NET documentation</a>
+     */
     public AssemblyBuilder DefineDynamicAssembly(AssemblyName name, AssemblyBuilderAccess access, Evidence evidence) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -582,6 +770,19 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
         }
     }
 
+    /**
+     * Invokes the .NET member DefineDynamicAssembly.
+     *
+     * @param name the argument of type {@code AssemblyName}
+     * @param access the argument of type {@code AssemblyBuilderAccess}
+     * @param evidence the argument of type {@code Evidence}
+     * @param requiredPermissions the argument of type {@code PermissionSet}
+     * @param optionalPermissions the argument of type {@code PermissionSet}
+     * @param refusedPermissions the argument of type {@code PermissionSet}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System._AppDomain.DefineDynamicAssembly" target="_top">.NET documentation</a>
+     */
     public AssemblyBuilder DefineDynamicAssembly(AssemblyName name, AssemblyBuilderAccess access, Evidence evidence, PermissionSet requiredPermissions, PermissionSet optionalPermissions, PermissionSet refusedPermissions) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -597,6 +798,16 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
         }
     }
 
+    /**
+     * Invokes the .NET member DefineDynamicAssembly.
+     *
+     * @param name the argument of type {@code AssemblyName}
+     * @param access the argument of type {@code AssemblyBuilderAccess}
+     * @param dir the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System._AppDomain.DefineDynamicAssembly" target="_top">.NET documentation</a>
+     */
     public AssemblyBuilder DefineDynamicAssembly(AssemblyName name, AssemblyBuilderAccess access, java.lang.String dir) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -612,6 +823,19 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
         }
     }
 
+    /**
+     * Invokes the .NET member DefineDynamicAssembly.
+     *
+     * @param name the argument of type {@code AssemblyName}
+     * @param access the argument of type {@code AssemblyBuilderAccess}
+     * @param dir the argument of type {@code java.lang.String}
+     * @param requiredPermissions the argument of type {@code PermissionSet}
+     * @param optionalPermissions the argument of type {@code PermissionSet}
+     * @param refusedPermissions the argument of type {@code PermissionSet}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System._AppDomain.DefineDynamicAssembly" target="_top">.NET documentation</a>
+     */
     public AssemblyBuilder DefineDynamicAssembly(AssemblyName name, AssemblyBuilderAccess access, java.lang.String dir, PermissionSet requiredPermissions, PermissionSet optionalPermissions, PermissionSet refusedPermissions) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -627,6 +851,17 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
         }
     }
 
+    /**
+     * Invokes the .NET member DefineDynamicAssembly.
+     *
+     * @param name the argument of type {@code AssemblyName}
+     * @param access the argument of type {@code AssemblyBuilderAccess}
+     * @param dir the argument of type {@code java.lang.String}
+     * @param evidence the argument of type {@code Evidence}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System._AppDomain.DefineDynamicAssembly" target="_top">.NET documentation</a>
+     */
     public AssemblyBuilder DefineDynamicAssembly(AssemblyName name, AssemblyBuilderAccess access, java.lang.String dir, Evidence evidence) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -642,6 +877,20 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
         }
     }
 
+    /**
+     * Invokes the .NET member DefineDynamicAssembly.
+     *
+     * @param name the argument of type {@code AssemblyName}
+     * @param access the argument of type {@code AssemblyBuilderAccess}
+     * @param dir the argument of type {@code java.lang.String}
+     * @param evidence the argument of type {@code Evidence}
+     * @param requiredPermissions the argument of type {@code PermissionSet}
+     * @param optionalPermissions the argument of type {@code PermissionSet}
+     * @param refusedPermissions the argument of type {@code PermissionSet}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System._AppDomain.DefineDynamicAssembly" target="_top">.NET documentation</a>
+     */
     public AssemblyBuilder DefineDynamicAssembly(AssemblyName name, AssemblyBuilderAccess access, java.lang.String dir, Evidence evidence, PermissionSet requiredPermissions, PermissionSet optionalPermissions, PermissionSet refusedPermissions) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -657,6 +906,21 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
         }
     }
 
+    /**
+     * Invokes the .NET member DefineDynamicAssembly.
+     *
+     * @param name the argument of type {@code AssemblyName}
+     * @param access the argument of type {@code AssemblyBuilderAccess}
+     * @param dir the argument of type {@code java.lang.String}
+     * @param evidence the argument of type {@code Evidence}
+     * @param requiredPermissions the argument of type {@code PermissionSet}
+     * @param optionalPermissions the argument of type {@code PermissionSet}
+     * @param refusedPermissions the argument of type {@code PermissionSet}
+     * @param isSynchronized the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System._AppDomain.DefineDynamicAssembly" target="_top">.NET documentation</a>
+     */
     public AssemblyBuilder DefineDynamicAssembly(AssemblyName name, AssemblyBuilderAccess access, java.lang.String dir, Evidence evidence, PermissionSet requiredPermissions, PermissionSet optionalPermissions, PermissionSet refusedPermissions, boolean isSynchronized) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -672,6 +936,15 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateInstance.
+     *
+     * @param assemblyName the argument of type {@code java.lang.String}
+     * @param typeName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System._AppDomain.CreateInstance" target="_top">.NET documentation</a>
+     */
     public ObjectHandle CreateInstance(java.lang.String assemblyName, java.lang.String typeName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -687,6 +960,22 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateInstance.
+     *
+     * @param assemblyName the argument of type {@code java.lang.String}
+     * @param typeName the argument of type {@code java.lang.String}
+     * @param ignoreCase the argument of type {@code boolean}
+     * @param bindingAttr the argument of type {@code BindingFlags}
+     * @param binder the argument of type {@code Binder}
+     * @param args the argument of type {@code NetObject[]}
+     * @param culture the argument of type {@code CultureInfo}
+     * @param activationAttributes the argument of type {@code NetObject[]}
+     * @param securityAttributes the argument of type {@code Evidence}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System._AppDomain.CreateInstance" target="_top">.NET documentation</a>
+     */
     public ObjectHandle CreateInstance(java.lang.String assemblyName, java.lang.String typeName, boolean ignoreCase, BindingFlags bindingAttr, Binder binder, NetObject[] args, CultureInfo culture, NetObject[] activationAttributes, Evidence securityAttributes) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -702,6 +991,16 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateInstance.
+     *
+     * @param assemblyName the argument of type {@code java.lang.String}
+     * @param typeName the argument of type {@code java.lang.String}
+     * @param activationAttributes the argument of type {@code NetObject[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System._AppDomain.CreateInstance" target="_top">.NET documentation</a>
+     */
     public ObjectHandle CreateInstance(java.lang.String assemblyName, java.lang.String typeName, NetObject[] activationAttributes) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -717,6 +1016,15 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateInstanceFrom.
+     *
+     * @param assemblyFile the argument of type {@code java.lang.String}
+     * @param typeName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System._AppDomain.CreateInstanceFrom" target="_top">.NET documentation</a>
+     */
     public ObjectHandle CreateInstanceFrom(java.lang.String assemblyFile, java.lang.String typeName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -732,6 +1040,22 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateInstanceFrom.
+     *
+     * @param assemblyFile the argument of type {@code java.lang.String}
+     * @param typeName the argument of type {@code java.lang.String}
+     * @param ignoreCase the argument of type {@code boolean}
+     * @param bindingAttr the argument of type {@code BindingFlags}
+     * @param binder the argument of type {@code Binder}
+     * @param args the argument of type {@code NetObject[]}
+     * @param culture the argument of type {@code CultureInfo}
+     * @param activationAttributes the argument of type {@code NetObject[]}
+     * @param securityAttributes the argument of type {@code Evidence}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System._AppDomain.CreateInstanceFrom" target="_top">.NET documentation</a>
+     */
     public ObjectHandle CreateInstanceFrom(java.lang.String assemblyFile, java.lang.String typeName, boolean ignoreCase, BindingFlags bindingAttr, Binder binder, NetObject[] args, CultureInfo culture, NetObject[] activationAttributes, Evidence securityAttributes) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -747,6 +1071,16 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateInstanceFrom.
+     *
+     * @param assemblyFile the argument of type {@code java.lang.String}
+     * @param typeName the argument of type {@code java.lang.String}
+     * @param activationAttributes the argument of type {@code NetObject[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System._AppDomain.CreateInstanceFrom" target="_top">.NET documentation</a>
+     */
     public ObjectHandle CreateInstanceFrom(java.lang.String assemblyFile, java.lang.String typeName, NetObject[] activationAttributes) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -762,6 +1096,13 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
         }
     }
 
+    /**
+     * Invokes the .NET member AppendPrivatePath.
+     *
+     * @param path the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System._AppDomain.AppendPrivatePath" target="_top">.NET documentation</a>
+     */
     public void AppendPrivatePath(java.lang.String path) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -772,6 +1113,12 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
         }
     }
 
+    /**
+     * Invokes the .NET member ClearPrivatePath.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System._AppDomain.ClearPrivatePath" target="_top">.NET documentation</a>
+     */
     public void ClearPrivatePath() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -782,6 +1129,12 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
         }
     }
 
+    /**
+     * Invokes the .NET member ClearShadowCopyPath.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System._AppDomain.ClearShadowCopyPath" target="_top">.NET documentation</a>
+     */
     public void ClearShadowCopyPath() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -792,6 +1145,13 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
         }
     }
 
+    /**
+     * Invokes the .NET member DoCallBack.
+     *
+     * @param theDelegate the argument of type {@code CrossAppDomainDelegate}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System._AppDomain.DoCallBack" target="_top">.NET documentation</a>
+     */
     public void DoCallBack(CrossAppDomainDelegate theDelegate) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -802,6 +1162,13 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
         }
     }
 
+    /**
+     * Invokes the .NET member GetTypeInfoCount.
+     *
+     * @param pcTInfo the argument of type {@code JCORefOut<UInt32>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System._AppDomain.GetTypeInfoCount" target="_top">.NET documentation</a>
+     */
     public void GetTypeInfoCount(JCORefOut<UInt32> pcTInfo) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -812,6 +1179,13 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
         }
     }
 
+    /**
+     * Invokes the .NET member SetAppDomainPolicy.
+     *
+     * @param domainPolicy the argument of type {@code PolicyLevel}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System._AppDomain.SetAppDomainPolicy" target="_top">.NET documentation</a>
+     */
     public void SetAppDomainPolicy(PolicyLevel domainPolicy) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -822,6 +1196,13 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
         }
     }
 
+    /**
+     * Invokes the .NET member SetCachePath.
+     *
+     * @param s the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System._AppDomain.SetCachePath" target="_top">.NET documentation</a>
+     */
     public void SetCachePath(java.lang.String s) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -832,6 +1213,14 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
         }
     }
 
+    /**
+     * Invokes the .NET member SetData.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param data the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System._AppDomain.SetData" target="_top">.NET documentation</a>
+     */
     public void SetData(java.lang.String name, NetObject data) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -842,6 +1231,13 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
         }
     }
 
+    /**
+     * Invokes the .NET member SetPrincipalPolicy.
+     *
+     * @param policy the argument of type {@code PrincipalPolicy}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System._AppDomain.SetPrincipalPolicy" target="_top">.NET documentation</a>
+     */
     public void SetPrincipalPolicy(PrincipalPolicy policy) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -852,6 +1248,13 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
         }
     }
 
+    /**
+     * Invokes the .NET member SetShadowCopyPath.
+     *
+     * @param s the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System._AppDomain.SetShadowCopyPath" target="_top">.NET documentation</a>
+     */
     public void SetShadowCopyPath(java.lang.String s) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -862,6 +1265,13 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
         }
     }
 
+    /**
+     * Invokes the .NET member SetThreadPrincipal.
+     *
+     * @param principal the argument of type {@code IPrincipal}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System._AppDomain.SetThreadPrincipal" target="_top">.NET documentation</a>
+     */
     public void SetThreadPrincipal(IPrincipal principal) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -876,6 +1286,13 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ShadowCopyFiles.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System._AppDomain.ShadowCopyFiles" target="_top">.NET documentation</a>
+     */
     public boolean getShadowCopyFiles() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -890,6 +1307,13 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Evidence.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System._AppDomain.Evidence" target="_top">.NET documentation</a>
+     */
     public Evidence getEvidence() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -905,6 +1329,13 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
         }
     }
 
+    /**
+     * Gets the value of the .NET property BaseDirectory.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System._AppDomain.BaseDirectory" target="_top">.NET documentation</a>
+     */
     public java.lang.String getBaseDirectory() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -919,6 +1350,13 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DynamicDirectory.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System._AppDomain.DynamicDirectory" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDynamicDirectory() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -933,6 +1371,13 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FriendlyName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System._AppDomain.FriendlyName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getFriendlyName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -947,6 +1392,13 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RelativeSearchPath.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System._AppDomain.RelativeSearchPath" target="_top">.NET documentation</a>
+     */
     public java.lang.String getRelativeSearchPath() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -966,6 +1418,13 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
     // Instance Events section
     
 
+    /**
+     * Invokes the .NET member addAssemblyLoad.
+     *
+     * @param handler the argument of type {@code AssemblyLoadEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addAssemblyLoad(AssemblyLoadEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -976,6 +1435,13 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
         }
     }
 
+    /**
+     * Invokes the .NET member removeAssemblyLoad.
+     *
+     * @param handler the argument of type {@code AssemblyLoadEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeAssemblyLoad(AssemblyLoadEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -986,6 +1452,13 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
         }
     }
 
+    /**
+     * Invokes the .NET member addDomainUnload.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addDomainUnload(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -996,6 +1469,13 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
         }
     }
 
+    /**
+     * Invokes the .NET member removeDomainUnload.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeDomainUnload(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1006,6 +1486,13 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
         }
     }
 
+    /**
+     * Invokes the .NET member addProcessExit.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addProcessExit(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1016,6 +1503,13 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
         }
     }
 
+    /**
+     * Invokes the .NET member removeProcessExit.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeProcessExit(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1026,6 +1520,13 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
         }
     }
 
+    /**
+     * Invokes the .NET member addAssemblyResolve.
+     *
+     * @param handler the argument of type {@code ResolveEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addAssemblyResolve(ResolveEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1036,6 +1537,13 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
         }
     }
 
+    /**
+     * Invokes the .NET member removeAssemblyResolve.
+     *
+     * @param handler the argument of type {@code ResolveEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeAssemblyResolve(ResolveEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1046,6 +1554,13 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
         }
     }
 
+    /**
+     * Invokes the .NET member addResourceResolve.
+     *
+     * @param handler the argument of type {@code ResolveEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addResourceResolve(ResolveEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1056,6 +1571,13 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
         }
     }
 
+    /**
+     * Invokes the .NET member removeResourceResolve.
+     *
+     * @param handler the argument of type {@code ResolveEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeResourceResolve(ResolveEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1066,6 +1588,13 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
         }
     }
 
+    /**
+     * Invokes the .NET member addTypeResolve.
+     *
+     * @param handler the argument of type {@code ResolveEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addTypeResolve(ResolveEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1076,6 +1605,13 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
         }
     }
 
+    /**
+     * Invokes the .NET member removeTypeResolve.
+     *
+     * @param handler the argument of type {@code ResolveEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeTypeResolve(ResolveEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1086,6 +1622,13 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
         }
     }
 
+    /**
+     * Invokes the .NET member addUnhandledException.
+     *
+     * @param handler the argument of type {@code UnhandledExceptionEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addUnhandledException(UnhandledExceptionEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1096,6 +1639,13 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
         }
     }
 
+    /**
+     * Invokes the .NET member removeUnhandledException.
+     *
+     * @param handler the argument of type {@code UnhandledExceptionEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeUnhandledException(UnhandledExceptionEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

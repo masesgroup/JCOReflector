@@ -111,7 +111,10 @@ public class CmsSigner extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CmsSigner(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -158,6 +161,17 @@ public class CmsSigner extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Pkcs.CmsSigner.-ctor" target="_top">.NET documentation</a>
+     */
     public CmsSigner() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +182,22 @@ public class CmsSigner extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param parameters the argument of type {@code CspParameters}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Pkcs.CmsSigner.-ctor" target="_top">.NET documentation</a>
+     */
     public CmsSigner(CspParameters parameters) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
@@ -178,6 +208,23 @@ public class CmsSigner extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param signerIdentifierType the argument of type {@code SubjectIdentifierType}
+     * @param certificate the argument of type {@code X509Certificate2}
+     * @param privateKey the argument of type {@code AsymmetricAlgorithm}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Pkcs.CmsSigner.-ctor" target="_top">.NET documentation</a>
+     */
     public CmsSigner(SubjectIdentifierType signerIdentifierType, X509Certificate2 certificate, AsymmetricAlgorithm privateKey) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
@@ -188,6 +235,23 @@ public class CmsSigner extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param signerIdentifierType the argument of type {@code SubjectIdentifierType}
+     * @param certificate the argument of type {@code X509Certificate2}
+     * @param privateKey the argument of type {@code CompositeMLDsa}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Pkcs.CmsSigner.-ctor" target="_top">.NET documentation</a>
+     */
     public CmsSigner(SubjectIdentifierType signerIdentifierType, X509Certificate2 certificate, CompositeMLDsa privateKey) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
@@ -198,6 +262,23 @@ public class CmsSigner extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param signerIdentifierType the argument of type {@code SubjectIdentifierType}
+     * @param certificate the argument of type {@code X509Certificate2}
+     * @param privateKey the argument of type {@code MLDsa}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Pkcs.CmsSigner.-ctor" target="_top">.NET documentation</a>
+     */
     public CmsSigner(SubjectIdentifierType signerIdentifierType, X509Certificate2 certificate, MLDsa privateKey) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
@@ -208,6 +289,24 @@ public class CmsSigner extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param signerIdentifierType the argument of type {@code SubjectIdentifierType}
+     * @param certificate the argument of type {@code X509Certificate2}
+     * @param privateKey the argument of type {@code RSA}
+     * @param signaturePadding the argument of type {@code RSASignaturePadding}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Pkcs.CmsSigner.-ctor" target="_top">.NET documentation</a>
+     */
     public CmsSigner(SubjectIdentifierType signerIdentifierType, X509Certificate2 certificate, RSA privateKey, RSASignaturePadding signaturePadding) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
@@ -218,6 +317,23 @@ public class CmsSigner extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param signerIdentifierType the argument of type {@code SubjectIdentifierType}
+     * @param certificate the argument of type {@code X509Certificate2}
+     * @param privateKey the argument of type {@code SlhDsa}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Pkcs.CmsSigner.-ctor" target="_top">.NET documentation</a>
+     */
     public CmsSigner(SubjectIdentifierType signerIdentifierType, X509Certificate2 certificate, SlhDsa privateKey) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
@@ -228,6 +344,19 @@ public class CmsSigner extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param signerIdentifierType the argument of type {@code SubjectIdentifierType}
+     * @param certificate the argument of type {@code X509Certificate2}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Pkcs.CmsSigner.-ctor" target="_top">.NET documentation</a>
+     */
     public CmsSigner(SubjectIdentifierType signerIdentifierType, X509Certificate2 certificate) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         try {
             // add reference to assemblyName.dll file
@@ -238,6 +367,18 @@ public class CmsSigner extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param signerIdentifierType the argument of type {@code SubjectIdentifierType}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Pkcs.CmsSigner.-ctor" target="_top">.NET documentation</a>
+     */
     public CmsSigner(SubjectIdentifierType signerIdentifierType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
@@ -248,6 +389,18 @@ public class CmsSigner extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param certificate the argument of type {@code X509Certificate2}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Pkcs.CmsSigner.-ctor" target="_top">.NET documentation</a>
+     */
     public CmsSigner(X509Certificate2 certificate) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
@@ -266,6 +419,13 @@ public class CmsSigner extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property PrivateKey.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Pkcs.CmsSigner.PrivateKey" target="_top">.NET documentation</a>
+     */
     public AsymmetricAlgorithm getPrivateKey() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -281,6 +441,13 @@ public class CmsSigner extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PrivateKey.
+     *
+     * @param PrivateKey the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Pkcs.CmsSigner.PrivateKey" target="_top">.NET documentation</a>
+     */
     public void setPrivateKey(AsymmetricAlgorithm PrivateKey) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -291,6 +458,13 @@ public class CmsSigner extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SignedAttributes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Pkcs.CmsSigner.SignedAttributes" target="_top">.NET documentation</a>
+     */
     public CryptographicAttributeObjectCollection getSignedAttributes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -306,6 +480,13 @@ public class CmsSigner extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UnsignedAttributes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Pkcs.CmsSigner.UnsignedAttributes" target="_top">.NET documentation</a>
+     */
     public CryptographicAttributeObjectCollection getUnsignedAttributes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -321,6 +502,13 @@ public class CmsSigner extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DigestAlgorithm.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Pkcs.CmsSigner.DigestAlgorithm" target="_top">.NET documentation</a>
+     */
     public Oid getDigestAlgorithm() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -336,6 +524,13 @@ public class CmsSigner extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DigestAlgorithm.
+     *
+     * @param DigestAlgorithm the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Pkcs.CmsSigner.DigestAlgorithm" target="_top">.NET documentation</a>
+     */
     public void setDigestAlgorithm(Oid DigestAlgorithm) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -346,6 +541,13 @@ public class CmsSigner extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SignerIdentifierType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Pkcs.CmsSigner.SignerIdentifierType" target="_top">.NET documentation</a>
+     */
     public SubjectIdentifierType getSignerIdentifierType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -361,6 +563,21 @@ public class CmsSigner extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SignerIdentifierType.
+     *
+     * @param SignerIdentifierType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Pkcs.CmsSigner.SignerIdentifierType" target="_top">.NET documentation</a>
+     */
     public void setSignerIdentifierType(SubjectIdentifierType SignerIdentifierType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -371,6 +588,13 @@ public class CmsSigner extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SignaturePadding.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Pkcs.CmsSigner.SignaturePadding" target="_top">.NET documentation</a>
+     */
     public RSASignaturePadding getSignaturePadding() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -386,6 +610,21 @@ public class CmsSigner extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SignaturePadding.
+     *
+     * @param SignaturePadding the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Pkcs.CmsSigner.SignaturePadding" target="_top">.NET documentation</a>
+     */
     public void setSignaturePadding(RSASignaturePadding SignaturePadding) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -396,6 +635,13 @@ public class CmsSigner extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Certificate.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Pkcs.CmsSigner.Certificate" target="_top">.NET documentation</a>
+     */
     public X509Certificate2 getCertificate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -411,6 +657,13 @@ public class CmsSigner extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Certificate.
+     *
+     * @param Certificate the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Pkcs.CmsSigner.Certificate" target="_top">.NET documentation</a>
+     */
     public void setCertificate(X509Certificate2 Certificate) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -421,6 +674,13 @@ public class CmsSigner extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Certificates.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Pkcs.CmsSigner.Certificates" target="_top">.NET documentation</a>
+     */
     public X509Certificate2Collection getCertificates() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -436,6 +696,13 @@ public class CmsSigner extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IncludeOption.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Pkcs.CmsSigner.IncludeOption" target="_top">.NET documentation</a>
+     */
     public X509IncludeOption getIncludeOption() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -451,6 +718,13 @@ public class CmsSigner extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IncludeOption.
+     *
+     * @param IncludeOption the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Pkcs.CmsSigner.IncludeOption" target="_top">.NET documentation</a>
+     */
     public void setIncludeOption(X509IncludeOption IncludeOption) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

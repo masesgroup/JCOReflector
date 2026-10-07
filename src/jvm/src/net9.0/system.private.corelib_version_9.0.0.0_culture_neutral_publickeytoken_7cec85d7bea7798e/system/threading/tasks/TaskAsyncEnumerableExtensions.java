@@ -107,7 +107,10 @@ public class TaskAsyncEnumerableExtensions extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TaskAsyncEnumerableExtensions(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -160,6 +163,16 @@ public class TaskAsyncEnumerableExtensions extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ToBlockingEnumerable.
+     *
+     * @param <T> the type of the generic argument T
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.TaskAsyncEnumerableExtensions.ToBlockingEnumerable" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> IEnumerable_1 ToBlockingEnumerable(IAsyncEnumerable_1 source, CancellationToken cancellationToken) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -175,6 +188,15 @@ public class TaskAsyncEnumerableExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ConfigureAwait.
+     *
+     * @param source the argument of type {@code IAsyncDisposable}
+     * @param continueOnCapturedContext the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.TaskAsyncEnumerableExtensions.ConfigureAwait" target="_top">.NET documentation</a>
+     */
     public static ConfiguredAsyncDisposable ConfigureAwait(IAsyncDisposable source, boolean continueOnCapturedContext) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -190,6 +212,16 @@ public class TaskAsyncEnumerableExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ConfigureAwait.
+     *
+     * @param <T> the type of the generic argument T
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param continueOnCapturedContext the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.TaskAsyncEnumerableExtensions.ConfigureAwait" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> ConfiguredCancelableAsyncEnumerable_1 ConfigureAwait(IAsyncEnumerable_1 source, boolean continueOnCapturedContext) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -205,6 +237,16 @@ public class TaskAsyncEnumerableExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member WithCancellation.
+     *
+     * @param <T> the type of the generic argument T
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.TaskAsyncEnumerableExtensions.WithCancellation" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> ConfiguredCancelableAsyncEnumerable_1 WithCancellation(IAsyncEnumerable_1 source, CancellationToken cancellationToken) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

@@ -108,7 +108,10 @@ public class OleDbCommand extends system.data.common.DbCommand  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public OleDbCommand(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,13 @@ public class OleDbCommand extends system.data.common.DbCommand  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.OleDb.OleDbCommand.-ctor" target="_top">.NET documentation</a>
+     */
     public OleDbCommand() throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +175,14 @@ public class OleDbCommand extends system.data.common.DbCommand  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param cmdText the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.OleDb.OleDbCommand.-ctor" target="_top">.NET documentation</a>
+     */
     public OleDbCommand(java.lang.String cmdText) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -175,6 +193,17 @@ public class OleDbCommand extends system.data.common.DbCommand  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param cmdText the argument of type {@code java.lang.String}
+     * @param connection the argument of type {@code OleDbConnection}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.AccessViolationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.OleDb.OleDbCommand.-ctor" target="_top">.NET documentation</a>
+     */
     public OleDbCommand(java.lang.String cmdText, OleDbConnection connection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.AccessViolationException {
         try {
             // add reference to assemblyName.dll file
@@ -185,6 +214,18 @@ public class OleDbCommand extends system.data.common.DbCommand  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param cmdText the argument of type {@code java.lang.String}
+     * @param connection the argument of type {@code OleDbConnection}
+     * @param transaction the argument of type {@code OleDbTransaction}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.AccessViolationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.OleDb.OleDbCommand.-ctor" target="_top">.NET documentation</a>
+     */
     public OleDbCommand(java.lang.String cmdText, OleDbConnection connection, OleDbTransaction transaction) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.AccessViolationException {
         try {
             // add reference to assemblyName.dll file
@@ -199,6 +240,33 @@ public class OleDbCommand extends system.data.common.DbCommand  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ExecuteNonQuery.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.AccessViolationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.data.sqltypes.SqlNullValueException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.data.oledb.OleDbException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.OleDb.OleDbCommand.ExecuteNonQuery" target="_top">.NET documentation</a>
+     */
     public int ExecuteNonQuery() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.AccessViolationException, system.OutOfMemoryException, system.FormatException, system.OverflowException, system.InvalidCastException, system.data.sqltypes.SqlNullValueException, system.NullReferenceException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.security.SecurityException, system.data.oledb.OleDbException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -239,6 +307,15 @@ public class OleDbCommand extends system.data.common.DbCommand  {
         }
     }
 
+    /**
+     * Invokes the .NET member Clone.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.OleDb.OleDbCommand.Clone" target="_top">.NET documentation</a>
+     */
     public OleDbCommand Clone() throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -254,6 +331,30 @@ public class OleDbCommand extends system.data.common.DbCommand  {
         }
     }
 
+    /**
+     * Invokes the .NET member ExecuteReaderNewOleDbCommand.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.AccessViolationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.data.oledb.OleDbException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.OleDb.OleDbCommand.ExecuteReaderNewOleDbCommand" target="_top">.NET documentation</a>
+     */
     public OleDbDataReader ExecuteReaderNewOleDbCommand() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.OverflowException, system.InvalidCastException, system.AccessViolationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.NotSupportedException, system.NotImplementedException, system.data.oledb.OleDbException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -269,6 +370,34 @@ public class OleDbCommand extends system.data.common.DbCommand  {
         }
     }
 
+    /**
+     * Invokes the .NET member ExecuteReaderNewOleDbCommand.
+     *
+     * @param behavior the argument of type {@code CommandBehavior}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.AccessViolationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.data.sqltypes.SqlNullValueException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.data.oledb.OleDbException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.OleDb.OleDbCommand.ExecuteReaderNewOleDbCommand" target="_top">.NET documentation</a>
+     */
     public OleDbDataReader ExecuteReaderNewOleDbCommand(CommandBehavior behavior) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.AccessViolationException, system.OutOfMemoryException, system.FormatException, system.OverflowException, system.InvalidCastException, system.data.sqltypes.SqlNullValueException, system.NullReferenceException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.security.SecurityException, system.data.oledb.OleDbException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -284,6 +413,13 @@ public class OleDbCommand extends system.data.common.DbCommand  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateParameterNewOleDbCommand.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.OleDb.OleDbCommand.CreateParameterNewOleDbCommand" target="_top">.NET documentation</a>
+     */
     public OleDbParameter CreateParameterNewOleDbCommand() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -299,6 +435,33 @@ public class OleDbCommand extends system.data.common.DbCommand  {
         }
     }
 
+    /**
+     * Invokes the .NET member ExecuteScalar.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.AccessViolationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.data.sqltypes.SqlNullValueException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.data.oledb.OleDbException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.OleDb.OleDbCommand.ExecuteScalar" target="_top">.NET documentation</a>
+     */
     public NetObject ExecuteScalar() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.AccessViolationException, system.OutOfMemoryException, system.FormatException, system.OverflowException, system.InvalidCastException, system.data.sqltypes.SqlNullValueException, system.NullReferenceException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.security.SecurityException, system.data.oledb.OleDbException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -314,6 +477,22 @@ public class OleDbCommand extends system.data.common.DbCommand  {
         }
     }
 
+    /**
+     * Invokes the .NET member Cancel.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.AccessViolationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.OleDb.OleDbCommand.Cancel" target="_top">.NET documentation</a>
+     */
     public void Cancel() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.AccessViolationException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -324,6 +503,25 @@ public class OleDbCommand extends system.data.common.DbCommand  {
         }
     }
 
+    /**
+     * Invokes the .NET member Prepare.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.AccessViolationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.data.sqltypes.SqlNullValueException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.OleDb.OleDbCommand.Prepare" target="_top">.NET documentation</a>
+     */
     public void Prepare() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.AccessViolationException, system.OutOfMemoryException, system.OverflowException, system.InvalidCastException, system.data.sqltypes.SqlNullValueException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -334,6 +532,12 @@ public class OleDbCommand extends system.data.common.DbCommand  {
         }
     }
 
+    /**
+     * Invokes the .NET member ResetCommandTimeout.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.OleDb.OleDbCommand.ResetCommandTimeout" target="_top">.NET documentation</a>
+     */
     public void ResetCommandTimeout() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -348,6 +552,13 @@ public class OleDbCommand extends system.data.common.DbCommand  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ConnectionNewOleDbCommand.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.OleDb.OleDbCommand.ConnectionNewOleDbCommand" target="_top">.NET documentation</a>
+     */
     public OleDbConnection getConnectionNewOleDbCommand() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -363,6 +574,15 @@ public class OleDbCommand extends system.data.common.DbCommand  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Connection.
+     *
+     * @param Connection the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.AccessViolationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.OleDb.OleDbCommand.Connection" target="_top">.NET documentation</a>
+     */
     public void setConnection(OleDbConnection Connection) throws Throwable, system.ArgumentException, system.AccessViolationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -373,6 +593,13 @@ public class OleDbCommand extends system.data.common.DbCommand  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ParametersNewOleDbCommand.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.OleDb.OleDbCommand.ParametersNewOleDbCommand" target="_top">.NET documentation</a>
+     */
     public OleDbParameterCollection getParametersNewOleDbCommand() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -388,6 +615,13 @@ public class OleDbCommand extends system.data.common.DbCommand  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TransactionNewOleDbCommand.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.OleDb.OleDbCommand.TransactionNewOleDbCommand" target="_top">.NET documentation</a>
+     */
     public OleDbTransaction getTransactionNewOleDbCommand() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -403,6 +637,13 @@ public class OleDbCommand extends system.data.common.DbCommand  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Transaction.
+     *
+     * @param Transaction the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.OleDb.OleDbCommand.Transaction" target="_top">.NET documentation</a>
+     */
     public void setTransaction(OleDbTransaction Transaction) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

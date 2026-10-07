@@ -100,7 +100,10 @@ public class BooleanConstructor extends microsoft.jscript.ScriptFunction  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public BooleanConstructor(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,16 @@ public class BooleanConstructor extends microsoft.jscript.ScriptFunction  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Invoke.
+     *
+     * @param arg the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.BooleanConstructor.Invoke" target="_top">.NET documentation</a>
+     */
     public boolean Invoke(NetObject arg) throws Throwable, system.ArgumentNullException, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -169,6 +182,22 @@ public class BooleanConstructor extends microsoft.jscript.ScriptFunction  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateInstanceNewBooleanConstructor.
+     *
+     * @param args the argument of type {@code NetObject...}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.BooleanConstructor.CreateInstanceNewBooleanConstructor" target="_top">.NET documentation</a>
+     */
     public BooleanObject CreateInstanceNewBooleanConstructor(NetObject... args) throws Throwable, system.ArgumentNullException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

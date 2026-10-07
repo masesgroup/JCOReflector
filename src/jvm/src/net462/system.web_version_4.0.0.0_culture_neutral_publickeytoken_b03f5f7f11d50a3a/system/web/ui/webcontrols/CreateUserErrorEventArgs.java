@@ -100,7 +100,10 @@ public class CreateUserErrorEventArgs extends system.EventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CreateUserErrorEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,13 @@ public class CreateUserErrorEventArgs extends system.EventArgs  {
     public CreateUserErrorEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param s the argument of type {@code MembershipCreateStatus}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.CreateUserErrorEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public CreateUserErrorEventArgs(MembershipCreateStatus s) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +179,13 @@ public class CreateUserErrorEventArgs extends system.EventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CreateUserError.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.CreateUserErrorEventArgs.CreateUserError" target="_top">.NET documentation</a>
+     */
     public MembershipCreateStatus getCreateUserError() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +201,13 @@ public class CreateUserErrorEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CreateUserError.
+     *
+     * @param CreateUserError the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.CreateUserErrorEventArgs.CreateUserError" target="_top">.NET documentation</a>
+     */
     public void setCreateUserError(MembershipCreateStatus CreateUserError) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -102,7 +102,10 @@ public class StructuralComparisons extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public StructuralComparisons(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -159,6 +162,13 @@ public class StructuralComparisons extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property StructuralComparer.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.StructuralComparisons.StructuralComparer" target="_top">.NET documentation</a>
+     */
     public static IComparer getStructuralComparer() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -174,6 +184,13 @@ public class StructuralComparisons extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StructuralEqualityComparer.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.StructuralComparisons.StructuralEqualityComparer" target="_top">.NET documentation</a>
+     */
     public static IEqualityComparer getStructuralEqualityComparer() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

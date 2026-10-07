@@ -101,7 +101,10 @@ public class ActivityChangedEventArgs extends system.EventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ActivityChangedEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,16 @@ public class ActivityChangedEventArgs extends system.EventArgs  {
     public ActivityChangedEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param activity the argument of type {@code Activity}
+     * @param member the argument of type {@code MemberDescriptor}
+     * @param oldValue the argument of type {@code NetObject}
+     * @param newValue the argument of type {@code NetObject}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.ActivityChangedEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public ActivityChangedEventArgs(Activity activity, MemberDescriptor member, NetObject oldValue, NetObject newValue) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +183,13 @@ public class ActivityChangedEventArgs extends system.EventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Member.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.ActivityChangedEventArgs.Member" target="_top">.NET documentation</a>
+     */
     public MemberDescriptor getMember() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -185,6 +205,13 @@ public class ActivityChangedEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NewValue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.ActivityChangedEventArgs.NewValue" target="_top">.NET documentation</a>
+     */
     public NetObject getNewValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +227,13 @@ public class ActivityChangedEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OldValue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.ActivityChangedEventArgs.OldValue" target="_top">.NET documentation</a>
+     */
     public NetObject getOldValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +249,13 @@ public class ActivityChangedEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Activity.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.ActivityChangedEventArgs.Activity" target="_top">.NET documentation</a>
+     */
     public Activity getActivity() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

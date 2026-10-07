@@ -100,7 +100,10 @@ public class CleanUpVirtualizedItemEventArgs extends system.windows.RoutedEventA
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CleanUpVirtualizedItemEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,14 @@ public class CleanUpVirtualizedItemEventArgs extends system.windows.RoutedEventA
     public CleanUpVirtualizedItemEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param value the argument of type {@code NetObject}
+     * @param element the argument of type {@code UIElement}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.CleanUpVirtualizedItemEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public CleanUpVirtualizedItemEventArgs(NetObject value, UIElement element) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +180,13 @@ public class CleanUpVirtualizedItemEventArgs extends system.windows.RoutedEventA
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Cancel.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.CleanUpVirtualizedItemEventArgs.Cancel" target="_top">.NET documentation</a>
+     */
     public boolean getCancel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +201,13 @@ public class CleanUpVirtualizedItemEventArgs extends system.windows.RoutedEventA
         }
     }
 
+    /**
+     * Sets the value of the .NET property Cancel.
+     *
+     * @param Cancel the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.CleanUpVirtualizedItemEventArgs.Cancel" target="_top">.NET documentation</a>
+     */
     public void setCancel(boolean Cancel) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +218,13 @@ public class CleanUpVirtualizedItemEventArgs extends system.windows.RoutedEventA
         }
     }
 
+    /**
+     * Gets the value of the .NET property Value.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.CleanUpVirtualizedItemEventArgs.Value" target="_top">.NET documentation</a>
+     */
     public NetObject getValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +240,13 @@ public class CleanUpVirtualizedItemEventArgs extends system.windows.RoutedEventA
         }
     }
 
+    /**
+     * Gets the value of the .NET property UIElement.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.CleanUpVirtualizedItemEventArgs.UIElement" target="_top">.NET documentation</a>
+     */
     public UIElement getUIElement() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

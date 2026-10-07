@@ -103,7 +103,10 @@ public class XmlSecureResolver extends system.xml.XmlResolver  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XmlSecureResolver(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,14 @@ public class XmlSecureResolver extends system.xml.XmlResolver  {
     public XmlSecureResolver() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param resolver the argument of type {@code XmlResolver}
+     * @param securityUrl the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlSecureResolver.-ctor" target="_top">.NET documentation</a>
+     */
     public XmlSecureResolver(XmlResolver resolver, java.lang.String securityUrl) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +179,16 @@ public class XmlSecureResolver extends system.xml.XmlResolver  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetEntity.
+     *
+     * @param absoluteUri the argument of type {@code Uri}
+     * @param role the argument of type {@code java.lang.String}
+     * @param ofObjectToReturn the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlSecureResolver.GetEntity" target="_top">.NET documentation</a>
+     */
     public NetObject GetEntity(Uri absoluteUri, java.lang.String role, NetType ofObjectToReturn) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +204,27 @@ public class XmlSecureResolver extends system.xml.XmlResolver  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetEntityAsync.
+     *
+     * @param absoluteUri the argument of type {@code Uri}
+     * @param role the argument of type {@code java.lang.String}
+     * @param ofObjectToReturn the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlSecureResolver.GetEntityAsync" target="_top">.NET documentation</a>
+     */
     public Task_1 GetEntityAsync(Uri absoluteUri, java.lang.String role, NetType ofObjectToReturn) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +240,27 @@ public class XmlSecureResolver extends system.xml.XmlResolver  {
         }
     }
 
+    /**
+     * Invokes the .NET member ResolveUri.
+     *
+     * @param baseUri the argument of type {@code Uri}
+     * @param relativeUri the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlSecureResolver.ResolveUri" target="_top">.NET documentation</a>
+     */
     public Uri ResolveUri(Uri baseUri, java.lang.String relativeUri) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.UriFormatException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

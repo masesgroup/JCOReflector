@@ -107,7 +107,10 @@ public class WsdlEndpointConversionContext extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public WsdlEndpointConversionContext(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -162,6 +165,16 @@ public class WsdlEndpointConversionContext extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetFaultDescription.
+     *
+     * @param faultBinding the argument of type {@code FaultBinding}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.WsdlEndpointConversionContext.GetFaultDescription" target="_top">.NET documentation</a>
+     */
     public FaultDescription GetFaultDescription(FaultBinding faultBinding) throws Throwable, system.ArgumentNullException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -177,6 +190,16 @@ public class WsdlEndpointConversionContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetMessageDescription.
+     *
+     * @param messageBinding the argument of type {@code MessageBinding}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.WsdlEndpointConversionContext.GetMessageDescription" target="_top">.NET documentation</a>
+     */
     public MessageDescription GetMessageDescription(MessageBinding messageBinding) throws Throwable, system.ArgumentNullException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -192,6 +215,16 @@ public class WsdlEndpointConversionContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetOperationDescription.
+     *
+     * @param operationBinding the argument of type {@code OperationBinding}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.WsdlEndpointConversionContext.GetOperationDescription" target="_top">.NET documentation</a>
+     */
     public OperationDescription GetOperationDescription(OperationBinding operationBinding) throws Throwable, system.ArgumentNullException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +240,16 @@ public class WsdlEndpointConversionContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetFaultBinding.
+     *
+     * @param fault the argument of type {@code FaultDescription}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.WsdlEndpointConversionContext.GetFaultBinding" target="_top">.NET documentation</a>
+     */
     public FaultBinding GetFaultBinding(FaultDescription fault) throws Throwable, system.ArgumentNullException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -222,6 +265,16 @@ public class WsdlEndpointConversionContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetMessageBinding.
+     *
+     * @param message the argument of type {@code MessageDescription}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.WsdlEndpointConversionContext.GetMessageBinding" target="_top">.NET documentation</a>
+     */
     public MessageBinding GetMessageBinding(MessageDescription message) throws Throwable, system.ArgumentNullException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -237,6 +290,16 @@ public class WsdlEndpointConversionContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetOperationBinding.
+     *
+     * @param operation the argument of type {@code OperationDescription}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.WsdlEndpointConversionContext.GetOperationBinding" target="_top">.NET documentation</a>
+     */
     public OperationBinding GetOperationBinding(OperationDescription operation) throws Throwable, system.ArgumentNullException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -256,6 +319,13 @@ public class WsdlEndpointConversionContext extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Endpoint.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.WsdlEndpointConversionContext.Endpoint" target="_top">.NET documentation</a>
+     */
     public ServiceEndpoint getEndpoint() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -271,6 +341,13 @@ public class WsdlEndpointConversionContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ContractConversionContext.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.WsdlEndpointConversionContext.ContractConversionContext" target="_top">.NET documentation</a>
+     */
     public WsdlContractConversionContext getContractConversionContext() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -286,6 +363,13 @@ public class WsdlEndpointConversionContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property WsdlBinding.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.WsdlEndpointConversionContext.WsdlBinding" target="_top">.NET documentation</a>
+     */
     public system.web.services.description.Binding getWsdlBinding() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -301,6 +385,13 @@ public class WsdlEndpointConversionContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property WsdlPort.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.WsdlEndpointConversionContext.WsdlPort" target="_top">.NET documentation</a>
+     */
     public Port getWsdlPort() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

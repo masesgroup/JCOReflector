@@ -101,7 +101,10 @@ public class ScrollEventArgs extends system.EventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ScrollEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,16 @@ public class ScrollEventArgs extends system.EventArgs  {
     public ScrollEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param type the argument of type {@code ScrollEventType}
+     * @param oldValue the argument of type {@code int}
+     * @param newValue the argument of type {@code int}
+     * @param scroll the argument of type {@code ScrollOrientation}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ScrollEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public ScrollEventArgs(ScrollEventType type, int oldValue, int newValue, ScrollOrientation scroll) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -161,6 +174,15 @@ public class ScrollEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param type the argument of type {@code ScrollEventType}
+     * @param oldValue the argument of type {@code int}
+     * @param newValue the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ScrollEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public ScrollEventArgs(ScrollEventType type, int oldValue, int newValue) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -171,6 +193,15 @@ public class ScrollEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param type the argument of type {@code ScrollEventType}
+     * @param newValue the argument of type {@code int}
+     * @param scroll the argument of type {@code ScrollOrientation}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ScrollEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public ScrollEventArgs(ScrollEventType type, int newValue, ScrollOrientation scroll) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -181,6 +212,14 @@ public class ScrollEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param type the argument of type {@code ScrollEventType}
+     * @param newValue the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ScrollEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public ScrollEventArgs(ScrollEventType type, int newValue) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -200,6 +239,13 @@ public class ScrollEventArgs extends system.EventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property NewValue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ScrollEventArgs.NewValue" target="_top">.NET documentation</a>
+     */
     public int getNewValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -240,6 +286,13 @@ public class ScrollEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property NewValue.
+     *
+     * @param NewValue the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ScrollEventArgs.NewValue" target="_top">.NET documentation</a>
+     */
     public void setNewValue(int NewValue) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -250,6 +303,13 @@ public class ScrollEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OldValue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ScrollEventArgs.OldValue" target="_top">.NET documentation</a>
+     */
     public int getOldValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -290,6 +350,13 @@ public class ScrollEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Type.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ScrollEventArgs.Type" target="_top">.NET documentation</a>
+     */
     public ScrollEventType getType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -305,6 +372,13 @@ public class ScrollEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ScrollOrientation.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ScrollEventArgs.ScrollOrientation" target="_top">.NET documentation</a>
+     */
     public ScrollOrientation getScrollOrientation() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

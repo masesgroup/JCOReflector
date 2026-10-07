@@ -99,7 +99,10 @@ public class SystemColors extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SystemColors(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,13 @@ public class SystemColors extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property UseAlternativeColorSet.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.SystemColors.UseAlternativeColorSet" target="_top">.NET documentation</a>
+     */
     public static boolean getUseAlternativeColorSet() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -170,6 +180,13 @@ public class SystemColors extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property UseAlternativeColorSet.
+     *
+     * @param UseAlternativeColorSet the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.SystemColors.UseAlternativeColorSet" target="_top">.NET documentation</a>
+     */
     public static void setUseAlternativeColorSet(boolean UseAlternativeColorSet) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -180,6 +197,19 @@ public class SystemColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ActiveBorder.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.SystemColors.ActiveBorder" target="_top">.NET documentation</a>
+     */
     public static Color getActiveBorder() throws Throwable, system.MissingMemberException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -195,6 +225,19 @@ public class SystemColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ActiveCaption.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.SystemColors.ActiveCaption" target="_top">.NET documentation</a>
+     */
     public static Color getActiveCaption() throws Throwable, system.MissingMemberException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -210,6 +253,19 @@ public class SystemColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ActiveCaptionText.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.SystemColors.ActiveCaptionText" target="_top">.NET documentation</a>
+     */
     public static Color getActiveCaptionText() throws Throwable, system.MissingMemberException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -225,6 +281,19 @@ public class SystemColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AppWorkspace.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.SystemColors.AppWorkspace" target="_top">.NET documentation</a>
+     */
     public static Color getAppWorkspace() throws Throwable, system.MissingMemberException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -240,6 +309,19 @@ public class SystemColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ButtonFace.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.SystemColors.ButtonFace" target="_top">.NET documentation</a>
+     */
     public static Color getButtonFace() throws Throwable, system.MissingMemberException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -255,6 +337,19 @@ public class SystemColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ButtonHighlight.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.SystemColors.ButtonHighlight" target="_top">.NET documentation</a>
+     */
     public static Color getButtonHighlight() throws Throwable, system.MissingMemberException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -270,6 +365,19 @@ public class SystemColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ButtonShadow.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.SystemColors.ButtonShadow" target="_top">.NET documentation</a>
+     */
     public static Color getButtonShadow() throws Throwable, system.MissingMemberException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -285,6 +393,19 @@ public class SystemColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Control.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.SystemColors.Control" target="_top">.NET documentation</a>
+     */
     public static Color getControl() throws Throwable, system.MissingMemberException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -300,6 +421,19 @@ public class SystemColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ControlDark.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.SystemColors.ControlDark" target="_top">.NET documentation</a>
+     */
     public static Color getControlDark() throws Throwable, system.MissingMemberException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -315,6 +449,19 @@ public class SystemColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ControlDarkDark.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.SystemColors.ControlDarkDark" target="_top">.NET documentation</a>
+     */
     public static Color getControlDarkDark() throws Throwable, system.MissingMemberException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -330,6 +477,19 @@ public class SystemColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ControlLight.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.SystemColors.ControlLight" target="_top">.NET documentation</a>
+     */
     public static Color getControlLight() throws Throwable, system.MissingMemberException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -345,6 +505,19 @@ public class SystemColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ControlLightLight.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.SystemColors.ControlLightLight" target="_top">.NET documentation</a>
+     */
     public static Color getControlLightLight() throws Throwable, system.MissingMemberException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -360,6 +533,19 @@ public class SystemColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ControlText.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.SystemColors.ControlText" target="_top">.NET documentation</a>
+     */
     public static Color getControlText() throws Throwable, system.MissingMemberException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -375,6 +561,19 @@ public class SystemColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Desktop.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.SystemColors.Desktop" target="_top">.NET documentation</a>
+     */
     public static Color getDesktop() throws Throwable, system.MissingMemberException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -390,6 +589,19 @@ public class SystemColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property GradientActiveCaption.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.SystemColors.GradientActiveCaption" target="_top">.NET documentation</a>
+     */
     public static Color getGradientActiveCaption() throws Throwable, system.MissingMemberException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -405,6 +617,19 @@ public class SystemColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property GradientInactiveCaption.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.SystemColors.GradientInactiveCaption" target="_top">.NET documentation</a>
+     */
     public static Color getGradientInactiveCaption() throws Throwable, system.MissingMemberException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -420,6 +645,19 @@ public class SystemColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property GrayText.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.SystemColors.GrayText" target="_top">.NET documentation</a>
+     */
     public static Color getGrayText() throws Throwable, system.MissingMemberException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -435,6 +673,19 @@ public class SystemColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Highlight.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.SystemColors.Highlight" target="_top">.NET documentation</a>
+     */
     public static Color getHighlight() throws Throwable, system.MissingMemberException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -450,6 +701,19 @@ public class SystemColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property HighlightText.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.SystemColors.HighlightText" target="_top">.NET documentation</a>
+     */
     public static Color getHighlightText() throws Throwable, system.MissingMemberException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -465,6 +729,19 @@ public class SystemColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property HotTrack.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.SystemColors.HotTrack" target="_top">.NET documentation</a>
+     */
     public static Color getHotTrack() throws Throwable, system.MissingMemberException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -480,6 +757,19 @@ public class SystemColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property InactiveBorder.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.SystemColors.InactiveBorder" target="_top">.NET documentation</a>
+     */
     public static Color getInactiveBorder() throws Throwable, system.MissingMemberException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -495,6 +785,19 @@ public class SystemColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property InactiveCaption.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.SystemColors.InactiveCaption" target="_top">.NET documentation</a>
+     */
     public static Color getInactiveCaption() throws Throwable, system.MissingMemberException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -510,6 +813,19 @@ public class SystemColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property InactiveCaptionText.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.SystemColors.InactiveCaptionText" target="_top">.NET documentation</a>
+     */
     public static Color getInactiveCaptionText() throws Throwable, system.MissingMemberException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -525,6 +841,19 @@ public class SystemColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Info.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.SystemColors.Info" target="_top">.NET documentation</a>
+     */
     public static Color getInfo() throws Throwable, system.MissingMemberException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -540,6 +869,19 @@ public class SystemColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property InfoText.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.SystemColors.InfoText" target="_top">.NET documentation</a>
+     */
     public static Color getInfoText() throws Throwable, system.MissingMemberException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -555,6 +897,19 @@ public class SystemColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Menu.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.SystemColors.Menu" target="_top">.NET documentation</a>
+     */
     public static Color getMenu() throws Throwable, system.MissingMemberException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -570,6 +925,19 @@ public class SystemColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MenuBar.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.SystemColors.MenuBar" target="_top">.NET documentation</a>
+     */
     public static Color getMenuBar() throws Throwable, system.MissingMemberException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -585,6 +953,19 @@ public class SystemColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MenuHighlight.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.SystemColors.MenuHighlight" target="_top">.NET documentation</a>
+     */
     public static Color getMenuHighlight() throws Throwable, system.MissingMemberException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -600,6 +981,19 @@ public class SystemColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MenuText.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.SystemColors.MenuText" target="_top">.NET documentation</a>
+     */
     public static Color getMenuText() throws Throwable, system.MissingMemberException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -615,6 +1009,19 @@ public class SystemColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ScrollBar.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.SystemColors.ScrollBar" target="_top">.NET documentation</a>
+     */
     public static Color getScrollBar() throws Throwable, system.MissingMemberException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -630,6 +1037,19 @@ public class SystemColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Window.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.SystemColors.Window" target="_top">.NET documentation</a>
+     */
     public static Color getWindow() throws Throwable, system.MissingMemberException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -645,6 +1065,19 @@ public class SystemColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property WindowFrame.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.SystemColors.WindowFrame" target="_top">.NET documentation</a>
+     */
     public static Color getWindowFrame() throws Throwable, system.MissingMemberException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -660,6 +1093,19 @@ public class SystemColors extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property WindowText.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.SystemColors.WindowText" target="_top">.NET documentation</a>
+     */
     public static Color getWindowText() throws Throwable, system.MissingMemberException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

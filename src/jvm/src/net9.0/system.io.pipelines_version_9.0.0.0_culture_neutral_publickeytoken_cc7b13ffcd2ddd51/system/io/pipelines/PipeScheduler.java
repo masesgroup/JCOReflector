@@ -100,7 +100,10 @@ public class PipeScheduler extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PipeScheduler(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,14 @@ public class PipeScheduler extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Schedule.
+     *
+     * @param action the argument of type {@code Action_1}
+     * @param state the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Pipelines.PipeScheduler.Schedule" target="_top">.NET documentation</a>
+     */
     public void Schedule(Action_1 action, NetObject state) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -167,6 +178,13 @@ public class PipeScheduler extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Inline.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Pipelines.PipeScheduler.Inline" target="_top">.NET documentation</a>
+     */
     public static PipeScheduler getInline() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -182,6 +200,13 @@ public class PipeScheduler extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ThreadPool.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Pipelines.PipeScheduler.ThreadPool" target="_top">.NET documentation</a>
+     */
     public static PipeScheduler getThreadPool() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

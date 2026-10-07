@@ -51,5 +51,12 @@ import org.mases.jcobridge.netreflection.*;
  * @version 2.0.0.0
  */
 public interface IPropertyTranslator {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param host the .NET argument of type {@code System.Object}
+     * @param propertyName the .NET argument of type {@code System.String}
+     * @param value the .NET argument of type {@code System.Object}
+     */
     public void Invoke(NetObject host, java.lang.String propertyName, NetObject value);
 }

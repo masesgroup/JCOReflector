@@ -104,7 +104,10 @@ public class PublisherMembershipCondition extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PublisherMembershipCondition(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,13 @@ public class PublisherMembershipCondition extends NetObject  {
     public PublisherMembershipCondition() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param certificate the argument of type {@code X509Certificate}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.PublisherMembershipCondition.-ctor" target="_top">.NET documentation</a>
+     */
     public PublisherMembershipCondition(X509Certificate certificate) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +179,14 @@ public class PublisherMembershipCondition extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Check.
+     *
+     * @param evidence the argument of type {@code Evidence}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.PublisherMembershipCondition.Check" target="_top">.NET documentation</a>
+     */
     public boolean Check(Evidence evidence) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +201,13 @@ public class PublisherMembershipCondition extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Copy.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.PublisherMembershipCondition.Copy" target="_top">.NET documentation</a>
+     */
     public IMembershipCondition Copy() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +223,13 @@ public class PublisherMembershipCondition extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToXml.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.PublisherMembershipCondition.ToXml" target="_top">.NET documentation</a>
+     */
     public SecurityElement ToXml() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -213,6 +245,14 @@ public class PublisherMembershipCondition extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToXml.
+     *
+     * @param level the argument of type {@code PolicyLevel}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.PublisherMembershipCondition.ToXml" target="_top">.NET documentation</a>
+     */
     public SecurityElement ToXml(PolicyLevel level) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -228,6 +268,14 @@ public class PublisherMembershipCondition extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member FromXml.
+     *
+     * @param e the argument of type {@code SecurityElement}
+     * @param level the argument of type {@code PolicyLevel}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.PublisherMembershipCondition.FromXml" target="_top">.NET documentation</a>
+     */
     public void FromXml(SecurityElement e, PolicyLevel level) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -238,6 +286,13 @@ public class PublisherMembershipCondition extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member FromXml.
+     *
+     * @param e the argument of type {@code SecurityElement}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.PublisherMembershipCondition.FromXml" target="_top">.NET documentation</a>
+     */
     public void FromXml(SecurityElement e) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -252,6 +307,13 @@ public class PublisherMembershipCondition extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Certificate.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.PublisherMembershipCondition.Certificate" target="_top">.NET documentation</a>
+     */
     public X509Certificate getCertificate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -267,6 +329,13 @@ public class PublisherMembershipCondition extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Certificate.
+     *
+     * @param Certificate the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.PublisherMembershipCondition.Certificate" target="_top">.NET documentation</a>
+     */
     public void setCertificate(X509Certificate Certificate) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

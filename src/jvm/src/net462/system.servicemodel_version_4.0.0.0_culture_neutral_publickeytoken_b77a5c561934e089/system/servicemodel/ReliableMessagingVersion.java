@@ -99,7 +99,10 @@ public class ReliableMessagingVersion extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ReliableMessagingVersion(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,13 @@ public class ReliableMessagingVersion extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Default.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.ReliableMessagingVersion.Default" target="_top">.NET documentation</a>
+     */
     public static ReliableMessagingVersion getDefault() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -171,6 +181,13 @@ public class ReliableMessagingVersion extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property WSReliableMessaging11.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.ReliableMessagingVersion.WSReliableMessaging11" target="_top">.NET documentation</a>
+     */
     public static ReliableMessagingVersion getWSReliableMessaging11() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -186,6 +203,13 @@ public class ReliableMessagingVersion extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property WSReliableMessagingFebruary2005.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.ReliableMessagingVersion.WSReliableMessagingFebruary2005" target="_top">.NET documentation</a>
+     */
     public static ReliableMessagingVersion getWSReliableMessagingFebruary2005() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

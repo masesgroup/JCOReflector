@@ -107,7 +107,10 @@ public class IClientChannelSinkStackImplementation extends NetObject implements 
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IClientChannelSinkStackImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,14 @@ public class IClientChannelSinkStackImplementation extends NetObject implements 
 
     // Methods section
     
+    /**
+     * Invokes the .NET member Pop.
+     *
+     * @param sink the argument of type {@code IClientChannelSink}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Channels.IClientChannelSinkStack.Pop" target="_top">.NET documentation</a>
+     */
     public NetObject Pop(IClientChannelSink sink) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -164,6 +175,14 @@ public class IClientChannelSinkStackImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member AsyncProcessResponse.
+     *
+     * @param headers the argument of type {@code ITransportHeaders}
+     * @param stream the argument of type {@code Stream}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Channels.IClientChannelSinkStack.AsyncProcessResponse" target="_top">.NET documentation</a>
+     */
     public void AsyncProcessResponse(ITransportHeaders headers, Stream stream) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -174,6 +193,13 @@ public class IClientChannelSinkStackImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member DispatchException.
+     *
+     * @param e the argument of type {@code NetException}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Channels.IClientChannelSinkStack.DispatchException" target="_top">.NET documentation</a>
+     */
     public void DispatchException(NetException e) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +210,13 @@ public class IClientChannelSinkStackImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member DispatchReplyMessage.
+     *
+     * @param msg the argument of type {@code IMessage}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Channels.IClientChannelSinkStack.DispatchReplyMessage" target="_top">.NET documentation</a>
+     */
     public void DispatchReplyMessage(IMessage msg) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +227,14 @@ public class IClientChannelSinkStackImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member Push.
+     *
+     * @param sink the argument of type {@code IClientChannelSink}
+     * @param state the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Channels.IClientChannelSinkStack.Push" target="_top">.NET documentation</a>
+     */
     public void Push(IClientChannelSink sink, NetObject state) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

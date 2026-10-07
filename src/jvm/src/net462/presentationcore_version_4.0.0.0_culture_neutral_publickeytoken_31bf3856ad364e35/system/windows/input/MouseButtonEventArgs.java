@@ -103,7 +103,10 @@ public class MouseButtonEventArgs extends system.windows.input.MouseEventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public MouseButtonEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,28 @@ public class MouseButtonEventArgs extends system.windows.input.MouseEventArgs  {
     public MouseButtonEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param mouse the argument of type {@code MouseDevice}
+     * @param timestamp the argument of type {@code int}
+     * @param button the argument of type {@code MouseButton}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.MouseButtonEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public MouseButtonEventArgs(MouseDevice mouse, int timestamp, MouseButton button) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         try {
             // add reference to assemblyName.dll file
@@ -163,6 +188,29 @@ public class MouseButtonEventArgs extends system.windows.input.MouseEventArgs  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param mouse the argument of type {@code MouseDevice}
+     * @param timestamp the argument of type {@code int}
+     * @param button the argument of type {@code MouseButton}
+     * @param stylusDevice the argument of type {@code StylusDevice}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.MouseButtonEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public MouseButtonEventArgs(MouseDevice mouse, int timestamp, MouseButton button, StylusDevice stylusDevice) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         try {
             // add reference to assemblyName.dll file
@@ -182,6 +230,13 @@ public class MouseButtonEventArgs extends system.windows.input.MouseEventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ClickCount.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.MouseButtonEventArgs.ClickCount" target="_top">.NET documentation</a>
+     */
     public int getClickCount() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -222,6 +277,13 @@ public class MouseButtonEventArgs extends system.windows.input.MouseEventArgs  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ClickCount.
+     *
+     * @param ClickCount the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.MouseButtonEventArgs.ClickCount" target="_top">.NET documentation</a>
+     */
     public void setClickCount(int ClickCount) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -232,6 +294,13 @@ public class MouseButtonEventArgs extends system.windows.input.MouseEventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ChangedButton.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.MouseButtonEventArgs.ChangedButton" target="_top">.NET documentation</a>
+     */
     public MouseButton getChangedButton() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -247,6 +316,13 @@ public class MouseButtonEventArgs extends system.windows.input.MouseEventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ButtonState.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.MouseButtonEventArgs.ButtonState" target="_top">.NET documentation</a>
+     */
     public MouseButtonState getButtonState() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -102,7 +102,10 @@ public class FileReference extends microsoft.build.tasks.deployment.manifestutil
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public FileReference(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,12 @@ public class FileReference extends microsoft.build.tasks.deployment.manifestutil
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileReference.-ctor" target="_top">.NET documentation</a>
+     */
     public FileReference() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -159,6 +168,19 @@ public class FileReference extends microsoft.build.tasks.deployment.manifestutil
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param path the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileReference.-ctor" target="_top">.NET documentation</a>
+     */
     public FileReference(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -177,6 +199,21 @@ public class FileReference extends microsoft.build.tasks.deployment.manifestutil
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsDataFile.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileReference.IsDataFile" target="_top">.NET documentation</a>
+     */
     public boolean getIsDataFile() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -191,6 +228,13 @@ public class FileReference extends microsoft.build.tasks.deployment.manifestutil
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsDataFile.
+     *
+     * @param IsDataFile the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileReference.IsDataFile" target="_top">.NET documentation</a>
+     */
     public void setIsDataFile(boolean IsDataFile) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +245,13 @@ public class FileReference extends microsoft.build.tasks.deployment.manifestutil
         }
     }
 
+    /**
+     * Gets the value of the .NET property ComClasses.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileReference.ComClasses" target="_top">.NET documentation</a>
+     */
     public final ComClass[] getComClasses() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -222,6 +273,13 @@ public class FileReference extends microsoft.build.tasks.deployment.manifestutil
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlComClasses.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileReference.XmlComClasses" target="_top">.NET documentation</a>
+     */
     public final ComClass[] getXmlComClasses() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -243,6 +301,13 @@ public class FileReference extends microsoft.build.tasks.deployment.manifestutil
         }
     }
 
+    /**
+     * Sets the value of the .NET property XmlComClasses.
+     *
+     * @param XmlComClasses the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileReference.XmlComClasses" target="_top">.NET documentation</a>
+     */
     public void setXmlComClasses(ComClass[] XmlComClasses) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -253,6 +318,13 @@ public class FileReference extends microsoft.build.tasks.deployment.manifestutil
         }
     }
 
+    /**
+     * Gets the value of the .NET property ProxyStubs.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileReference.ProxyStubs" target="_top">.NET documentation</a>
+     */
     public final ProxyStub[] getProxyStubs() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -274,6 +346,13 @@ public class FileReference extends microsoft.build.tasks.deployment.manifestutil
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlProxyStubs.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileReference.XmlProxyStubs" target="_top">.NET documentation</a>
+     */
     public final ProxyStub[] getXmlProxyStubs() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -295,6 +374,13 @@ public class FileReference extends microsoft.build.tasks.deployment.manifestutil
         }
     }
 
+    /**
+     * Sets the value of the .NET property XmlProxyStubs.
+     *
+     * @param XmlProxyStubs the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileReference.XmlProxyStubs" target="_top">.NET documentation</a>
+     */
     public void setXmlProxyStubs(ProxyStub[] XmlProxyStubs) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -305,6 +391,13 @@ public class FileReference extends microsoft.build.tasks.deployment.manifestutil
         }
     }
 
+    /**
+     * Gets the value of the .NET property TypeLibs.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileReference.TypeLibs" target="_top">.NET documentation</a>
+     */
     public final TypeLib[] getTypeLibs() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -326,6 +419,13 @@ public class FileReference extends microsoft.build.tasks.deployment.manifestutil
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlTypeLibs.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileReference.XmlTypeLibs" target="_top">.NET documentation</a>
+     */
     public final TypeLib[] getXmlTypeLibs() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -347,6 +447,13 @@ public class FileReference extends microsoft.build.tasks.deployment.manifestutil
         }
     }
 
+    /**
+     * Sets the value of the .NET property XmlTypeLibs.
+     *
+     * @param XmlTypeLibs the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileReference.XmlTypeLibs" target="_top">.NET documentation</a>
+     */
     public void setXmlTypeLibs(TypeLib[] XmlTypeLibs) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -357,6 +464,13 @@ public class FileReference extends microsoft.build.tasks.deployment.manifestutil
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlWriteableType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileReference.XmlWriteableType" target="_top">.NET documentation</a>
+     */
     public java.lang.String getXmlWriteableType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -371,6 +485,13 @@ public class FileReference extends microsoft.build.tasks.deployment.manifestutil
         }
     }
 
+    /**
+     * Sets the value of the .NET property XmlWriteableType.
+     *
+     * @param XmlWriteableType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileReference.XmlWriteableType" target="_top">.NET documentation</a>
+     */
     public void setXmlWriteableType(java.lang.String XmlWriteableType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

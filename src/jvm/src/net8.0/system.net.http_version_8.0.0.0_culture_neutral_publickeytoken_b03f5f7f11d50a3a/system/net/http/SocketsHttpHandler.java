@@ -115,7 +115,10 @@ public class SocketsHttpHandler extends system.net.http.HttpMessageHandler  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SocketsHttpHandler(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -162,6 +165,22 @@ public class SocketsHttpHandler extends system.net.http.HttpMessageHandler  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.SocketsHttpHandler.-ctor" target="_top">.NET documentation</a>
+     */
     public SocketsHttpHandler() throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException, system.ArgumentException, system.FormatException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.diagnostics.tracing.EventSourceException {
         try {
             // add reference to assemblyName.dll file
@@ -180,6 +199,13 @@ public class SocketsHttpHandler extends system.net.http.HttpMessageHandler  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AllowAutoRedirect.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.SocketsHttpHandler.AllowAutoRedirect" target="_top">.NET documentation</a>
+     */
     public boolean getAllowAutoRedirect() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +220,18 @@ public class SocketsHttpHandler extends system.net.http.HttpMessageHandler  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AllowAutoRedirect.
+     *
+     * @param AllowAutoRedirect the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.SocketsHttpHandler.AllowAutoRedirect" target="_top">.NET documentation</a>
+     */
     public void setAllowAutoRedirect(boolean AllowAutoRedirect) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +242,13 @@ public class SocketsHttpHandler extends system.net.http.HttpMessageHandler  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EnableMultipleHttp2Connections.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.SocketsHttpHandler.EnableMultipleHttp2Connections" target="_top">.NET documentation</a>
+     */
     public boolean getEnableMultipleHttp2Connections() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -218,6 +263,18 @@ public class SocketsHttpHandler extends system.net.http.HttpMessageHandler  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property EnableMultipleHttp2Connections.
+     *
+     * @param EnableMultipleHttp2Connections the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.SocketsHttpHandler.EnableMultipleHttp2Connections" target="_top">.NET documentation</a>
+     */
     public void setEnableMultipleHttp2Connections(boolean EnableMultipleHttp2Connections) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -228,6 +285,13 @@ public class SocketsHttpHandler extends system.net.http.HttpMessageHandler  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsSupported.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.SocketsHttpHandler.IsSupported" target="_top">.NET documentation</a>
+     */
     public static boolean getIsSupported() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -242,6 +306,13 @@ public class SocketsHttpHandler extends system.net.http.HttpMessageHandler  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PreAuthenticate.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.SocketsHttpHandler.PreAuthenticate" target="_top">.NET documentation</a>
+     */
     public boolean getPreAuthenticate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -256,6 +327,18 @@ public class SocketsHttpHandler extends system.net.http.HttpMessageHandler  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PreAuthenticate.
+     *
+     * @param PreAuthenticate the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.SocketsHttpHandler.PreAuthenticate" target="_top">.NET documentation</a>
+     */
     public void setPreAuthenticate(boolean PreAuthenticate) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -266,6 +349,13 @@ public class SocketsHttpHandler extends system.net.http.HttpMessageHandler  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UseCookies.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.SocketsHttpHandler.UseCookies" target="_top">.NET documentation</a>
+     */
     public boolean getUseCookies() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -280,6 +370,18 @@ public class SocketsHttpHandler extends system.net.http.HttpMessageHandler  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property UseCookies.
+     *
+     * @param UseCookies the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.SocketsHttpHandler.UseCookies" target="_top">.NET documentation</a>
+     */
     public void setUseCookies(boolean UseCookies) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -290,6 +392,13 @@ public class SocketsHttpHandler extends system.net.http.HttpMessageHandler  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UseProxy.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.SocketsHttpHandler.UseProxy" target="_top">.NET documentation</a>
+     */
     public boolean getUseProxy() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -304,6 +413,18 @@ public class SocketsHttpHandler extends system.net.http.HttpMessageHandler  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property UseProxy.
+     *
+     * @param UseProxy the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.SocketsHttpHandler.UseProxy" target="_top">.NET documentation</a>
+     */
     public void setUseProxy(boolean UseProxy) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -314,6 +435,13 @@ public class SocketsHttpHandler extends system.net.http.HttpMessageHandler  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property InitialHttp2StreamWindowSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.SocketsHttpHandler.InitialHttp2StreamWindowSize" target="_top">.NET documentation</a>
+     */
     public int getInitialHttp2StreamWindowSize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -354,6 +482,20 @@ public class SocketsHttpHandler extends system.net.http.HttpMessageHandler  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property InitialHttp2StreamWindowSize.
+     *
+     * @param InitialHttp2StreamWindowSize the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.SocketsHttpHandler.InitialHttp2StreamWindowSize" target="_top">.NET documentation</a>
+     */
     public void setInitialHttp2StreamWindowSize(int InitialHttp2StreamWindowSize) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -364,6 +506,13 @@ public class SocketsHttpHandler extends system.net.http.HttpMessageHandler  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MaxAutomaticRedirections.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.SocketsHttpHandler.MaxAutomaticRedirections" target="_top">.NET documentation</a>
+     */
     public int getMaxAutomaticRedirections() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -404,6 +553,23 @@ public class SocketsHttpHandler extends system.net.http.HttpMessageHandler  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MaxAutomaticRedirections.
+     *
+     * @param MaxAutomaticRedirections the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.SocketsHttpHandler.MaxAutomaticRedirections" target="_top">.NET documentation</a>
+     */
     public void setMaxAutomaticRedirections(int MaxAutomaticRedirections) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -414,6 +580,13 @@ public class SocketsHttpHandler extends system.net.http.HttpMessageHandler  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MaxConnectionsPerServer.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.SocketsHttpHandler.MaxConnectionsPerServer" target="_top">.NET documentation</a>
+     */
     public int getMaxConnectionsPerServer() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -454,6 +627,23 @@ public class SocketsHttpHandler extends system.net.http.HttpMessageHandler  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MaxConnectionsPerServer.
+     *
+     * @param MaxConnectionsPerServer the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.SocketsHttpHandler.MaxConnectionsPerServer" target="_top">.NET documentation</a>
+     */
     public void setMaxConnectionsPerServer(int MaxConnectionsPerServer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -464,6 +654,13 @@ public class SocketsHttpHandler extends system.net.http.HttpMessageHandler  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MaxResponseDrainSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.SocketsHttpHandler.MaxResponseDrainSize" target="_top">.NET documentation</a>
+     */
     public int getMaxResponseDrainSize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -504,6 +701,23 @@ public class SocketsHttpHandler extends system.net.http.HttpMessageHandler  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MaxResponseDrainSize.
+     *
+     * @param MaxResponseDrainSize the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.SocketsHttpHandler.MaxResponseDrainSize" target="_top">.NET documentation</a>
+     */
     public void setMaxResponseDrainSize(int MaxResponseDrainSize) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -514,6 +728,13 @@ public class SocketsHttpHandler extends system.net.http.HttpMessageHandler  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MaxResponseHeadersLength.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.SocketsHttpHandler.MaxResponseHeadersLength" target="_top">.NET documentation</a>
+     */
     public int getMaxResponseHeadersLength() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -554,6 +775,23 @@ public class SocketsHttpHandler extends system.net.http.HttpMessageHandler  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MaxResponseHeadersLength.
+     *
+     * @param MaxResponseHeadersLength the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.SocketsHttpHandler.MaxResponseHeadersLength" target="_top">.NET documentation</a>
+     */
     public void setMaxResponseHeadersLength(int MaxResponseHeadersLength) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -564,6 +802,19 @@ public class SocketsHttpHandler extends system.net.http.HttpMessageHandler  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Properties.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.SocketsHttpHandler.Properties" target="_top">.NET documentation</a>
+     */
     public IDictionary_2 getProperties() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -579,6 +830,13 @@ public class SocketsHttpHandler extends system.net.http.HttpMessageHandler  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ActivityHeadersPropagator.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.SocketsHttpHandler.ActivityHeadersPropagator" target="_top">.NET documentation</a>
+     */
     public DistributedContextPropagator getActivityHeadersPropagator() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -594,6 +852,18 @@ public class SocketsHttpHandler extends system.net.http.HttpMessageHandler  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ActivityHeadersPropagator.
+     *
+     * @param ActivityHeadersPropagator the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.SocketsHttpHandler.ActivityHeadersPropagator" target="_top">.NET documentation</a>
+     */
     public void setActivityHeadersPropagator(DistributedContextPropagator ActivityHeadersPropagator) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -604,6 +874,13 @@ public class SocketsHttpHandler extends system.net.http.HttpMessageHandler  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MeterFactory.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.SocketsHttpHandler.MeterFactory" target="_top">.NET documentation</a>
+     */
     public IMeterFactory getMeterFactory() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -619,6 +896,18 @@ public class SocketsHttpHandler extends system.net.http.HttpMessageHandler  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MeterFactory.
+     *
+     * @param MeterFactory the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.SocketsHttpHandler.MeterFactory" target="_top">.NET documentation</a>
+     */
     public void setMeterFactory(IMeterFactory MeterFactory) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -629,6 +918,13 @@ public class SocketsHttpHandler extends system.net.http.HttpMessageHandler  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ConnectCallback.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.SocketsHttpHandler.ConnectCallback" target="_top">.NET documentation</a>
+     */
     public Func_3 getConnectCallback() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -643,6 +939,18 @@ public class SocketsHttpHandler extends system.net.http.HttpMessageHandler  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ConnectCallback.
+     *
+     * @param ConnectCallback the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.SocketsHttpHandler.ConnectCallback" target="_top">.NET documentation</a>
+     */
     public void setConnectCallback(Func_3 ConnectCallback) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -653,6 +961,13 @@ public class SocketsHttpHandler extends system.net.http.HttpMessageHandler  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PlaintextStreamFilter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.SocketsHttpHandler.PlaintextStreamFilter" target="_top">.NET documentation</a>
+     */
     public Func_3 getPlaintextStreamFilter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -667,6 +982,18 @@ public class SocketsHttpHandler extends system.net.http.HttpMessageHandler  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PlaintextStreamFilter.
+     *
+     * @param PlaintextStreamFilter the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.SocketsHttpHandler.PlaintextStreamFilter" target="_top">.NET documentation</a>
+     */
     public void setPlaintextStreamFilter(Func_3 PlaintextStreamFilter) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -677,6 +1004,20 @@ public class SocketsHttpHandler extends system.net.http.HttpMessageHandler  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CookieContainer.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.SocketsHttpHandler.CookieContainer" target="_top">.NET documentation</a>
+     */
     public CookieContainer getCookieContainer() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -692,6 +1033,18 @@ public class SocketsHttpHandler extends system.net.http.HttpMessageHandler  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CookieContainer.
+     *
+     * @param CookieContainer the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.SocketsHttpHandler.CookieContainer" target="_top">.NET documentation</a>
+     */
     public void setCookieContainer(CookieContainer CookieContainer) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -702,6 +1055,13 @@ public class SocketsHttpHandler extends system.net.http.HttpMessageHandler  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AutomaticDecompression.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.SocketsHttpHandler.AutomaticDecompression" target="_top">.NET documentation</a>
+     */
     public DecompressionMethods getAutomaticDecompression() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -717,6 +1077,19 @@ public class SocketsHttpHandler extends system.net.http.HttpMessageHandler  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AutomaticDecompression.
+     *
+     * @param AutomaticDecompression the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.SocketsHttpHandler.AutomaticDecompression" target="_top">.NET documentation</a>
+     */
     public void setAutomaticDecompression(DecompressionMethods AutomaticDecompression) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -727,6 +1100,13 @@ public class SocketsHttpHandler extends system.net.http.HttpMessageHandler  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RequestHeaderEncodingSelector.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.SocketsHttpHandler.RequestHeaderEncodingSelector" target="_top">.NET documentation</a>
+     */
     public HeaderEncodingSelector_1 getRequestHeaderEncodingSelector() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -741,6 +1121,18 @@ public class SocketsHttpHandler extends system.net.http.HttpMessageHandler  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RequestHeaderEncodingSelector.
+     *
+     * @param RequestHeaderEncodingSelector the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.SocketsHttpHandler.RequestHeaderEncodingSelector" target="_top">.NET documentation</a>
+     */
     public void setRequestHeaderEncodingSelector(HeaderEncodingSelector_1 RequestHeaderEncodingSelector) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -751,6 +1143,13 @@ public class SocketsHttpHandler extends system.net.http.HttpMessageHandler  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ResponseHeaderEncodingSelector.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.SocketsHttpHandler.ResponseHeaderEncodingSelector" target="_top">.NET documentation</a>
+     */
     public HeaderEncodingSelector_1 getResponseHeaderEncodingSelector() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -765,6 +1164,18 @@ public class SocketsHttpHandler extends system.net.http.HttpMessageHandler  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ResponseHeaderEncodingSelector.
+     *
+     * @param ResponseHeaderEncodingSelector the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.SocketsHttpHandler.ResponseHeaderEncodingSelector" target="_top">.NET documentation</a>
+     */
     public void setResponseHeaderEncodingSelector(HeaderEncodingSelector_1 ResponseHeaderEncodingSelector) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -775,6 +1186,13 @@ public class SocketsHttpHandler extends system.net.http.HttpMessageHandler  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property KeepAlivePingPolicy.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.SocketsHttpHandler.KeepAlivePingPolicy" target="_top">.NET documentation</a>
+     */
     public HttpKeepAlivePingPolicy getKeepAlivePingPolicy() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -790,6 +1208,18 @@ public class SocketsHttpHandler extends system.net.http.HttpMessageHandler  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property KeepAlivePingPolicy.
+     *
+     * @param KeepAlivePingPolicy the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.SocketsHttpHandler.KeepAlivePingPolicy" target="_top">.NET documentation</a>
+     */
     public void setKeepAlivePingPolicy(HttpKeepAlivePingPolicy KeepAlivePingPolicy) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -800,6 +1230,13 @@ public class SocketsHttpHandler extends system.net.http.HttpMessageHandler  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Credentials.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.SocketsHttpHandler.Credentials" target="_top">.NET documentation</a>
+     */
     public ICredentials getCredentials() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -815,6 +1252,18 @@ public class SocketsHttpHandler extends system.net.http.HttpMessageHandler  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Credentials.
+     *
+     * @param Credentials the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.SocketsHttpHandler.Credentials" target="_top">.NET documentation</a>
+     */
     public void setCredentials(ICredentials Credentials) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -825,6 +1274,13 @@ public class SocketsHttpHandler extends system.net.http.HttpMessageHandler  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DefaultProxyCredentials.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.SocketsHttpHandler.DefaultProxyCredentials" target="_top">.NET documentation</a>
+     */
     public ICredentials getDefaultProxyCredentials() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -840,6 +1296,18 @@ public class SocketsHttpHandler extends system.net.http.HttpMessageHandler  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DefaultProxyCredentials.
+     *
+     * @param DefaultProxyCredentials the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.SocketsHttpHandler.DefaultProxyCredentials" target="_top">.NET documentation</a>
+     */
     public void setDefaultProxyCredentials(ICredentials DefaultProxyCredentials) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -850,6 +1318,13 @@ public class SocketsHttpHandler extends system.net.http.HttpMessageHandler  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Proxy.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.SocketsHttpHandler.Proxy" target="_top">.NET documentation</a>
+     */
     public IWebProxy getProxy() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -865,6 +1340,18 @@ public class SocketsHttpHandler extends system.net.http.HttpMessageHandler  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Proxy.
+     *
+     * @param Proxy the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.SocketsHttpHandler.Proxy" target="_top">.NET documentation</a>
+     */
     public void setProxy(IWebProxy Proxy) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -875,6 +1362,13 @@ public class SocketsHttpHandler extends system.net.http.HttpMessageHandler  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SslOptions.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.SocketsHttpHandler.SslOptions" target="_top">.NET documentation</a>
+     */
     public SslClientAuthenticationOptions getSslOptions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -890,6 +1384,18 @@ public class SocketsHttpHandler extends system.net.http.HttpMessageHandler  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SslOptions.
+     *
+     * @param SslOptions the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.SocketsHttpHandler.SslOptions" target="_top">.NET documentation</a>
+     */
     public void setSslOptions(SslClientAuthenticationOptions SslOptions) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -900,6 +1406,13 @@ public class SocketsHttpHandler extends system.net.http.HttpMessageHandler  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ConnectTimeout.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.SocketsHttpHandler.ConnectTimeout" target="_top">.NET documentation</a>
+     */
     public TimeSpan getConnectTimeout() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -915,6 +1428,22 @@ public class SocketsHttpHandler extends system.net.http.HttpMessageHandler  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ConnectTimeout.
+     *
+     * @param ConnectTimeout the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.SocketsHttpHandler.ConnectTimeout" target="_top">.NET documentation</a>
+     */
     public void setConnectTimeout(TimeSpan ConnectTimeout) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -925,6 +1454,13 @@ public class SocketsHttpHandler extends system.net.http.HttpMessageHandler  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Expect100ContinueTimeout.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.SocketsHttpHandler.Expect100ContinueTimeout" target="_top">.NET documentation</a>
+     */
     public TimeSpan getExpect100ContinueTimeout() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -940,6 +1476,22 @@ public class SocketsHttpHandler extends system.net.http.HttpMessageHandler  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Expect100ContinueTimeout.
+     *
+     * @param Expect100ContinueTimeout the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.SocketsHttpHandler.Expect100ContinueTimeout" target="_top">.NET documentation</a>
+     */
     public void setExpect100ContinueTimeout(TimeSpan Expect100ContinueTimeout) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -950,6 +1502,13 @@ public class SocketsHttpHandler extends system.net.http.HttpMessageHandler  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property KeepAlivePingDelay.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.SocketsHttpHandler.KeepAlivePingDelay" target="_top">.NET documentation</a>
+     */
     public TimeSpan getKeepAlivePingDelay() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -965,6 +1524,21 @@ public class SocketsHttpHandler extends system.net.http.HttpMessageHandler  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property KeepAlivePingDelay.
+     *
+     * @param KeepAlivePingDelay the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.SocketsHttpHandler.KeepAlivePingDelay" target="_top">.NET documentation</a>
+     */
     public void setKeepAlivePingDelay(TimeSpan KeepAlivePingDelay) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -975,6 +1549,13 @@ public class SocketsHttpHandler extends system.net.http.HttpMessageHandler  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property KeepAlivePingTimeout.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.SocketsHttpHandler.KeepAlivePingTimeout" target="_top">.NET documentation</a>
+     */
     public TimeSpan getKeepAlivePingTimeout() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -990,6 +1571,21 @@ public class SocketsHttpHandler extends system.net.http.HttpMessageHandler  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property KeepAlivePingTimeout.
+     *
+     * @param KeepAlivePingTimeout the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.SocketsHttpHandler.KeepAlivePingTimeout" target="_top">.NET documentation</a>
+     */
     public void setKeepAlivePingTimeout(TimeSpan KeepAlivePingTimeout) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1000,6 +1596,13 @@ public class SocketsHttpHandler extends system.net.http.HttpMessageHandler  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PooledConnectionIdleTimeout.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.SocketsHttpHandler.PooledConnectionIdleTimeout" target="_top">.NET documentation</a>
+     */
     public TimeSpan getPooledConnectionIdleTimeout() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1015,6 +1618,22 @@ public class SocketsHttpHandler extends system.net.http.HttpMessageHandler  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PooledConnectionIdleTimeout.
+     *
+     * @param PooledConnectionIdleTimeout the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.SocketsHttpHandler.PooledConnectionIdleTimeout" target="_top">.NET documentation</a>
+     */
     public void setPooledConnectionIdleTimeout(TimeSpan PooledConnectionIdleTimeout) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1025,6 +1644,13 @@ public class SocketsHttpHandler extends system.net.http.HttpMessageHandler  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PooledConnectionLifetime.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.SocketsHttpHandler.PooledConnectionLifetime" target="_top">.NET documentation</a>
+     */
     public TimeSpan getPooledConnectionLifetime() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1040,6 +1666,22 @@ public class SocketsHttpHandler extends system.net.http.HttpMessageHandler  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PooledConnectionLifetime.
+     *
+     * @param PooledConnectionLifetime the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.SocketsHttpHandler.PooledConnectionLifetime" target="_top">.NET documentation</a>
+     */
     public void setPooledConnectionLifetime(TimeSpan PooledConnectionLifetime) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1050,6 +1692,13 @@ public class SocketsHttpHandler extends system.net.http.HttpMessageHandler  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ResponseDrainTimeout.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.SocketsHttpHandler.ResponseDrainTimeout" target="_top">.NET documentation</a>
+     */
     public TimeSpan getResponseDrainTimeout() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1065,6 +1714,22 @@ public class SocketsHttpHandler extends system.net.http.HttpMessageHandler  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ResponseDrainTimeout.
+     *
+     * @param ResponseDrainTimeout the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.SocketsHttpHandler.ResponseDrainTimeout" target="_top">.NET documentation</a>
+     */
     public void setResponseDrainTimeout(TimeSpan ResponseDrainTimeout) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

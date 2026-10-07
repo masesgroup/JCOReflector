@@ -99,7 +99,10 @@ public class InstancePersistenceEvent_1<T extends IJCOBridgeReflected> extends s
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public InstancePersistenceEvent_1(java.lang.Object instance) throws Throwable {
         super(instance);

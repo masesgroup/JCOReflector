@@ -99,7 +99,10 @@ public class CacheVirtualItemsEventArgs extends system.EventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CacheVirtualItemsEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,14 @@ public class CacheVirtualItemsEventArgs extends system.EventArgs  {
     public CacheVirtualItemsEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param startIndex the argument of type {@code int}
+     * @param endIndex the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.CacheVirtualItemsEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public CacheVirtualItemsEventArgs(int startIndex, int endIndex) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +179,13 @@ public class CacheVirtualItemsEventArgs extends system.EventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property EndIndex.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.CacheVirtualItemsEventArgs.EndIndex" target="_top">.NET documentation</a>
+     */
     public int getEndIndex() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +226,13 @@ public class CacheVirtualItemsEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StartIndex.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.CacheVirtualItemsEventArgs.StartIndex" target="_top">.NET documentation</a>
+     */
     public int getStartIndex() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

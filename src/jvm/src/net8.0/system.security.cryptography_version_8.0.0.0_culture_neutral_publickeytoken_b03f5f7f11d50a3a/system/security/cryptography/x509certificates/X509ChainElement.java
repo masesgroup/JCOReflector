@@ -100,7 +100,10 @@ public class X509ChainElement extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public X509ChainElement(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -159,6 +162,13 @@ public class X509ChainElement extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Certificate.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.X509Certificates.X509ChainElement.Certificate" target="_top">.NET documentation</a>
+     */
     public X509Certificate2 getCertificate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -174,6 +184,13 @@ public class X509ChainElement extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Certificate.
+     *
+     * @param Certificate the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.X509Certificates.X509ChainElement.Certificate" target="_top">.NET documentation</a>
+     */
     public void setCertificate(X509Certificate2 Certificate) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +201,13 @@ public class X509ChainElement extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ChainElementStatus.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.X509Certificates.X509ChainElement.ChainElementStatus" target="_top">.NET documentation</a>
+     */
     public final X509ChainStatus[] getChainElementStatus() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +229,13 @@ public class X509ChainElement extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ChainElementStatus.
+     *
+     * @param ChainElementStatus the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.X509Certificates.X509ChainElement.ChainElementStatus" target="_top">.NET documentation</a>
+     */
     public void setChainElementStatus(X509ChainStatus[] ChainElementStatus) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +246,13 @@ public class X509ChainElement extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Information.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.X509Certificates.X509ChainElement.Information" target="_top">.NET documentation</a>
+     */
     public java.lang.String getInformation() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -229,6 +267,13 @@ public class X509ChainElement extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Information.
+     *
+     * @param Information the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.X509Certificates.X509ChainElement.Information" target="_top">.NET documentation</a>
+     */
     public void setInformation(java.lang.String Information) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

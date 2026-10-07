@@ -99,7 +99,10 @@ public class ObjectEqualityComparer_1<T extends IJCOBridgeReflected> extends sys
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ObjectEqualityComparer_1(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class ObjectEqualityComparer_1<T extends IJCOBridgeReflected> extends sys
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.ObjectEqualityComparer-1.-ctor" target="_top">.NET documentation</a>
+     */
     public ObjectEqualityComparer_1() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -162,6 +171,15 @@ public class ObjectEqualityComparer_1<T extends IJCOBridgeReflected> extends sys
     
     // Methods section
     
+    /**
+     * Invokes the .NET member EqualsByKey.
+     *
+     * @param x the argument of type {@code T}
+     * @param y the argument of type {@code T}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.ObjectEqualityComparer-1.EqualsByKey" target="_top">.NET documentation</a>
+     */
     public boolean EqualsByKey(T x, T y) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -176,6 +194,14 @@ public class ObjectEqualityComparer_1<T extends IJCOBridgeReflected> extends sys
         }
     }
 
+    /**
+     * Invokes the .NET member GetHashCodeByKey.
+     *
+     * @param obj the argument of type {@code T}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.ObjectEqualityComparer-1.GetHashCodeByKey" target="_top">.NET documentation</a>
+     */
     public int GetHashCodeByKey(T obj) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

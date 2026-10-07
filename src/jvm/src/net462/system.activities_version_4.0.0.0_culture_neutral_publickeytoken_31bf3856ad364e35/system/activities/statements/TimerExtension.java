@@ -100,7 +100,10 @@ public class TimerExtension extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TimerExtension(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,13 @@ public class TimerExtension extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CancelTimer.
+     *
+     * @param bookmark the argument of type {@code Bookmark}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.TimerExtension.CancelTimer" target="_top">.NET documentation</a>
+     */
     public void CancelTimer(Bookmark bookmark) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -163,6 +173,14 @@ public class TimerExtension extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RegisterTimer.
+     *
+     * @param timeout the argument of type {@code TimeSpan}
+     * @param bookmark the argument of type {@code Bookmark}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.TimerExtension.RegisterTimer" target="_top">.NET documentation</a>
+     */
     public void RegisterTimer(TimeSpan timeout, Bookmark bookmark) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

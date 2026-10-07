@@ -53,5 +53,12 @@ import system.diagnostics.TagList;
  * @version 2.0.0.0
  */
 public interface IExceptionRecorder {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param activity the .NET argument of type {@code System.Diagnostics.Activity}
+     * @param exception the .NET argument of type {@code System.Exception}
+     * @param tags the .NET argument of type {@code System.Diagnostics.TagList&}
+     */
     public void Invoke(Activity activity, NetException exception, TagList tags);
 }

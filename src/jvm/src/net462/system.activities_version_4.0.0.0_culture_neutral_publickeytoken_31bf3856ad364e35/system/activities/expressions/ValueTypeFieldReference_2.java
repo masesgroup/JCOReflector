@@ -101,7 +101,10 @@ public class ValueTypeFieldReference_2<TOperand extends IJCOBridgeReflected, TRe
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ValueTypeFieldReference_2(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class ValueTypeFieldReference_2<TOperand extends IJCOBridgeReflected, TRe
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Expressions.ValueTypeFieldReference-2.-ctor" target="_top">.NET documentation</a>
+     */
     public ValueTypeFieldReference_2() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +177,13 @@ public class ValueTypeFieldReference_2<TOperand extends IJCOBridgeReflected, TRe
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property OperandLocation.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Expressions.ValueTypeFieldReference-2.OperandLocation" target="_top">.NET documentation</a>
+     */
     public InOutArgument_1 getOperandLocation() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +199,13 @@ public class ValueTypeFieldReference_2<TOperand extends IJCOBridgeReflected, TRe
         }
     }
 
+    /**
+     * Sets the value of the .NET property OperandLocation.
+     *
+     * @param OperandLocation the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Expressions.ValueTypeFieldReference-2.OperandLocation" target="_top">.NET documentation</a>
+     */
     public void setOperandLocation(InOutArgument_1 OperandLocation) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +216,13 @@ public class ValueTypeFieldReference_2<TOperand extends IJCOBridgeReflected, TRe
         }
     }
 
+    /**
+     * Gets the value of the .NET property FieldName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Expressions.ValueTypeFieldReference-2.FieldName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getFieldName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +237,13 @@ public class ValueTypeFieldReference_2<TOperand extends IJCOBridgeReflected, TRe
         }
     }
 
+    /**
+     * Sets the value of the .NET property FieldName.
+     *
+     * @param FieldName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Expressions.ValueTypeFieldReference-2.FieldName" target="_top">.NET documentation</a>
+     */
     public void setFieldName(java.lang.String FieldName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

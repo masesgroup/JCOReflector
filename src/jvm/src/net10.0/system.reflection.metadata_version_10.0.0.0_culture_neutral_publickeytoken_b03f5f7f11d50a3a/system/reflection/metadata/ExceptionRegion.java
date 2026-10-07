@@ -101,7 +101,10 @@ public class ExceptionRegion extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ExceptionRegion(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -160,6 +163,13 @@ public class ExceptionRegion extends system.ValueType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property FilterOffset.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.ExceptionRegion.FilterOffset" target="_top">.NET documentation</a>
+     */
     public int getFilterOffset() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +210,13 @@ public class ExceptionRegion extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property HandlerLength.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.ExceptionRegion.HandlerLength" target="_top">.NET documentation</a>
+     */
     public int getHandlerLength() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -240,6 +257,13 @@ public class ExceptionRegion extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property HandlerOffset.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.ExceptionRegion.HandlerOffset" target="_top">.NET documentation</a>
+     */
     public int getHandlerOffset() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -280,6 +304,13 @@ public class ExceptionRegion extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TryLength.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.ExceptionRegion.TryLength" target="_top">.NET documentation</a>
+     */
     public int getTryLength() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -320,6 +351,13 @@ public class ExceptionRegion extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TryOffset.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.ExceptionRegion.TryOffset" target="_top">.NET documentation</a>
+     */
     public int getTryOffset() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -360,6 +398,13 @@ public class ExceptionRegion extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CatchType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.ExceptionRegion.CatchType" target="_top">.NET documentation</a>
+     */
     public EntityHandle getCatchType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -375,6 +420,13 @@ public class ExceptionRegion extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Kind.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.ExceptionRegion.Kind" target="_top">.NET documentation</a>
+     */
     public ExceptionRegionKind getKind() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -103,7 +103,10 @@ public class DataGridPreparingCellForEditEventArgs extends system.EventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DataGridPreparingCellForEditEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,16 @@ public class DataGridPreparingCellForEditEventArgs extends system.EventArgs  {
     public DataGridPreparingCellForEditEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param column the argument of type {@code DataGridColumn}
+     * @param row the argument of type {@code DataGridRow}
+     * @param editingEventArgs the argument of type {@code RoutedEventArgs}
+     * @param editingElement the argument of type {@code FrameworkElement}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.DataGridPreparingCellForEditEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public DataGridPreparingCellForEditEventArgs(DataGridColumn column, DataGridRow row, RoutedEventArgs editingEventArgs, FrameworkElement editingElement) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -172,6 +185,13 @@ public class DataGridPreparingCellForEditEventArgs extends system.EventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Column.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.DataGridPreparingCellForEditEventArgs.Column" target="_top">.NET documentation</a>
+     */
     public DataGridColumn getColumn() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +207,13 @@ public class DataGridPreparingCellForEditEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Row.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.DataGridPreparingCellForEditEventArgs.Row" target="_top">.NET documentation</a>
+     */
     public DataGridRow getRow() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +229,13 @@ public class DataGridPreparingCellForEditEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EditingElement.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.DataGridPreparingCellForEditEventArgs.EditingElement" target="_top">.NET documentation</a>
+     */
     public FrameworkElement getEditingElement() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -217,6 +251,13 @@ public class DataGridPreparingCellForEditEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EditingEventArgs.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.DataGridPreparingCellForEditEventArgs.EditingEventArgs" target="_top">.NET documentation</a>
+     */
     public RoutedEventArgs getEditingEventArgs() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

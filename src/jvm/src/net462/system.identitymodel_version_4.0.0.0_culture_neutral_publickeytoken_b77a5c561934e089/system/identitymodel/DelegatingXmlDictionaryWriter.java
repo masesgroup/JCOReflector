@@ -101,7 +101,10 @@ public class DelegatingXmlDictionaryWriter extends system.xml.XmlDictionaryWrite
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DelegatingXmlDictionaryWriter(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,14 @@ public class DelegatingXmlDictionaryWriter extends system.xml.XmlDictionaryWrite
     
     // Methods section
     
+    /**
+     * Invokes the .NET member LookupPrefix.
+     *
+     * @param ns the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.DelegatingXmlDictionaryWriter.LookupPrefix" target="_top">.NET documentation</a>
+     */
     public java.lang.String LookupPrefix(java.lang.String ns) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -170,6 +181,12 @@ public class DelegatingXmlDictionaryWriter extends system.xml.XmlDictionaryWrite
         }
     }
 
+    /**
+     * Invokes the .NET member Close.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.DelegatingXmlDictionaryWriter.Close" target="_top">.NET documentation</a>
+     */
     public void Close() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +197,26 @@ public class DelegatingXmlDictionaryWriter extends system.xml.XmlDictionaryWrite
         }
     }
 
+    /**
+     * Invokes the .NET member EndCanonicalization.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.DelegatingXmlDictionaryWriter.EndCanonicalization" target="_top">.NET documentation</a>
+     */
     public void EndCanonicalization() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +227,12 @@ public class DelegatingXmlDictionaryWriter extends system.xml.XmlDictionaryWrite
         }
     }
 
+    /**
+     * Invokes the .NET member Flush.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.DelegatingXmlDictionaryWriter.Flush" target="_top">.NET documentation</a>
+     */
     public void Flush() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +243,29 @@ public class DelegatingXmlDictionaryWriter extends system.xml.XmlDictionaryWrite
         }
     }
 
+    /**
+     * Invokes the .NET member StartCanonicalization.
+     *
+     * @param stream the argument of type {@code Stream}
+     * @param includeComments the argument of type {@code boolean}
+     * @param inclusivePrefixes the argument of type {@code java.lang.String[]}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.DelegatingXmlDictionaryWriter.StartCanonicalization" target="_top">.NET documentation</a>
+     */
     public void StartCanonicalization(Stream stream, boolean includeComments, java.lang.String[] inclusivePrefixes) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -210,6 +276,29 @@ public class DelegatingXmlDictionaryWriter extends system.xml.XmlDictionaryWrite
         }
     }
 
+    /**
+     * Invokes the .NET member StartCanonicalization.
+     *
+     * @param dupParam0 the argument of type {@code Stream}
+     * @param dupParam1 the argument of type {@code boolean}
+     * @param dupParam2 the argument of type {@code JCORefOut}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.DelegatingXmlDictionaryWriter.StartCanonicalization" target="_top">.NET documentation</a>
+     */
     public void StartCanonicalization(Stream dupParam0, boolean dupParam1, JCORefOut dupParam2) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -220,6 +309,15 @@ public class DelegatingXmlDictionaryWriter extends system.xml.XmlDictionaryWrite
         }
     }
 
+    /**
+     * Invokes the .NET member WriteBase64.
+     *
+     * @param buffer the argument of type {@code byte[]}
+     * @param index the argument of type {@code int}
+     * @param count the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.DelegatingXmlDictionaryWriter.WriteBase64" target="_top">.NET documentation</a>
+     */
     public void WriteBase64(byte[] buffer, int index, int count) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -230,6 +328,15 @@ public class DelegatingXmlDictionaryWriter extends system.xml.XmlDictionaryWrite
         }
     }
 
+    /**
+     * Invokes the .NET member WriteBase64.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code int}
+     * @param dupParam2 the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.DelegatingXmlDictionaryWriter.WriteBase64" target="_top">.NET documentation</a>
+     */
     public void WriteBase64(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -240,6 +347,13 @@ public class DelegatingXmlDictionaryWriter extends system.xml.XmlDictionaryWrite
         }
     }
 
+    /**
+     * Invokes the .NET member WriteCData.
+     *
+     * @param text the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.DelegatingXmlDictionaryWriter.WriteCData" target="_top">.NET documentation</a>
+     */
     public void WriteCData(java.lang.String text) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -250,6 +364,13 @@ public class DelegatingXmlDictionaryWriter extends system.xml.XmlDictionaryWrite
         }
     }
 
+    /**
+     * Invokes the .NET member WriteCharEntity.
+     *
+     * @param ch the argument of type {@code char}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.DelegatingXmlDictionaryWriter.WriteCharEntity" target="_top">.NET documentation</a>
+     */
     public void WriteCharEntity(char ch) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -260,6 +381,15 @@ public class DelegatingXmlDictionaryWriter extends system.xml.XmlDictionaryWrite
         }
     }
 
+    /**
+     * Invokes the .NET member WriteChars.
+     *
+     * @param buffer the argument of type {@code char[]}
+     * @param index the argument of type {@code int}
+     * @param count the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.DelegatingXmlDictionaryWriter.WriteChars" target="_top">.NET documentation</a>
+     */
     public void WriteChars(char[] buffer, int index, int count) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -270,6 +400,15 @@ public class DelegatingXmlDictionaryWriter extends system.xml.XmlDictionaryWrite
         }
     }
 
+    /**
+     * Invokes the .NET member WriteChars.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code int}
+     * @param dupParam2 the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.DelegatingXmlDictionaryWriter.WriteChars" target="_top">.NET documentation</a>
+     */
     public void WriteChars(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -280,6 +419,13 @@ public class DelegatingXmlDictionaryWriter extends system.xml.XmlDictionaryWrite
         }
     }
 
+    /**
+     * Invokes the .NET member WriteComment.
+     *
+     * @param text the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.DelegatingXmlDictionaryWriter.WriteComment" target="_top">.NET documentation</a>
+     */
     public void WriteComment(java.lang.String text) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -290,6 +436,16 @@ public class DelegatingXmlDictionaryWriter extends system.xml.XmlDictionaryWrite
         }
     }
 
+    /**
+     * Invokes the .NET member WriteDocType.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param pubid the argument of type {@code java.lang.String}
+     * @param sysid the argument of type {@code java.lang.String}
+     * @param subset the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.DelegatingXmlDictionaryWriter.WriteDocType" target="_top">.NET documentation</a>
+     */
     public void WriteDocType(java.lang.String name, java.lang.String pubid, java.lang.String sysid, java.lang.String subset) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -300,6 +456,12 @@ public class DelegatingXmlDictionaryWriter extends system.xml.XmlDictionaryWrite
         }
     }
 
+    /**
+     * Invokes the .NET member WriteEndAttribute.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.DelegatingXmlDictionaryWriter.WriteEndAttribute" target="_top">.NET documentation</a>
+     */
     public void WriteEndAttribute() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -310,6 +472,12 @@ public class DelegatingXmlDictionaryWriter extends system.xml.XmlDictionaryWrite
         }
     }
 
+    /**
+     * Invokes the .NET member WriteEndDocument.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.DelegatingXmlDictionaryWriter.WriteEndDocument" target="_top">.NET documentation</a>
+     */
     public void WriteEndDocument() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -320,6 +488,12 @@ public class DelegatingXmlDictionaryWriter extends system.xml.XmlDictionaryWrite
         }
     }
 
+    /**
+     * Invokes the .NET member WriteEndElement.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.DelegatingXmlDictionaryWriter.WriteEndElement" target="_top">.NET documentation</a>
+     */
     public void WriteEndElement() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -330,6 +504,13 @@ public class DelegatingXmlDictionaryWriter extends system.xml.XmlDictionaryWrite
         }
     }
 
+    /**
+     * Invokes the .NET member WriteEntityRef.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.DelegatingXmlDictionaryWriter.WriteEntityRef" target="_top">.NET documentation</a>
+     */
     public void WriteEntityRef(java.lang.String name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -340,6 +521,12 @@ public class DelegatingXmlDictionaryWriter extends system.xml.XmlDictionaryWrite
         }
     }
 
+    /**
+     * Invokes the .NET member WriteFullEndElement.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.DelegatingXmlDictionaryWriter.WriteFullEndElement" target="_top">.NET documentation</a>
+     */
     public void WriteFullEndElement() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -350,6 +537,14 @@ public class DelegatingXmlDictionaryWriter extends system.xml.XmlDictionaryWrite
         }
     }
 
+    /**
+     * Invokes the .NET member WriteProcessingInstruction.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param text the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.DelegatingXmlDictionaryWriter.WriteProcessingInstruction" target="_top">.NET documentation</a>
+     */
     public void WriteProcessingInstruction(java.lang.String name, java.lang.String text) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -360,6 +555,15 @@ public class DelegatingXmlDictionaryWriter extends system.xml.XmlDictionaryWrite
         }
     }
 
+    /**
+     * Invokes the .NET member WriteRaw.
+     *
+     * @param buffer the argument of type {@code char[]}
+     * @param index the argument of type {@code int}
+     * @param count the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.DelegatingXmlDictionaryWriter.WriteRaw" target="_top">.NET documentation</a>
+     */
     public void WriteRaw(char[] buffer, int index, int count) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -370,6 +574,15 @@ public class DelegatingXmlDictionaryWriter extends system.xml.XmlDictionaryWrite
         }
     }
 
+    /**
+     * Invokes the .NET member WriteRaw.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code int}
+     * @param dupParam2 the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.DelegatingXmlDictionaryWriter.WriteRaw" target="_top">.NET documentation</a>
+     */
     public void WriteRaw(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -380,6 +593,13 @@ public class DelegatingXmlDictionaryWriter extends system.xml.XmlDictionaryWrite
         }
     }
 
+    /**
+     * Invokes the .NET member WriteRaw.
+     *
+     * @param data the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.DelegatingXmlDictionaryWriter.WriteRaw" target="_top">.NET documentation</a>
+     */
     public void WriteRaw(java.lang.String data) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -390,6 +610,15 @@ public class DelegatingXmlDictionaryWriter extends system.xml.XmlDictionaryWrite
         }
     }
 
+    /**
+     * Invokes the .NET member WriteStartAttribute.
+     *
+     * @param prefix the argument of type {@code java.lang.String}
+     * @param localName the argument of type {@code java.lang.String}
+     * @param ns the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.DelegatingXmlDictionaryWriter.WriteStartAttribute" target="_top">.NET documentation</a>
+     */
     public void WriteStartAttribute(java.lang.String prefix, java.lang.String localName, java.lang.String ns) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -400,6 +629,12 @@ public class DelegatingXmlDictionaryWriter extends system.xml.XmlDictionaryWrite
         }
     }
 
+    /**
+     * Invokes the .NET member WriteStartDocument.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.DelegatingXmlDictionaryWriter.WriteStartDocument" target="_top">.NET documentation</a>
+     */
     public void WriteStartDocument() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -410,6 +645,13 @@ public class DelegatingXmlDictionaryWriter extends system.xml.XmlDictionaryWrite
         }
     }
 
+    /**
+     * Invokes the .NET member WriteStartDocument.
+     *
+     * @param standalone the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.DelegatingXmlDictionaryWriter.WriteStartDocument" target="_top">.NET documentation</a>
+     */
     public void WriteStartDocument(boolean standalone) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -420,6 +662,15 @@ public class DelegatingXmlDictionaryWriter extends system.xml.XmlDictionaryWrite
         }
     }
 
+    /**
+     * Invokes the .NET member WriteStartElement.
+     *
+     * @param prefix the argument of type {@code java.lang.String}
+     * @param localName the argument of type {@code java.lang.String}
+     * @param ns the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.DelegatingXmlDictionaryWriter.WriteStartElement" target="_top">.NET documentation</a>
+     */
     public void WriteStartElement(java.lang.String prefix, java.lang.String localName, java.lang.String ns) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -430,6 +681,13 @@ public class DelegatingXmlDictionaryWriter extends system.xml.XmlDictionaryWrite
         }
     }
 
+    /**
+     * Invokes the .NET member WriteString.
+     *
+     * @param text the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.DelegatingXmlDictionaryWriter.WriteString" target="_top">.NET documentation</a>
+     */
     public void WriteString(java.lang.String text) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -440,6 +698,14 @@ public class DelegatingXmlDictionaryWriter extends system.xml.XmlDictionaryWrite
         }
     }
 
+    /**
+     * Invokes the .NET member WriteSurrogateCharEntity.
+     *
+     * @param lowChar the argument of type {@code char}
+     * @param highChar the argument of type {@code char}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.DelegatingXmlDictionaryWriter.WriteSurrogateCharEntity" target="_top">.NET documentation</a>
+     */
     public void WriteSurrogateCharEntity(char lowChar, char highChar) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -450,6 +716,13 @@ public class DelegatingXmlDictionaryWriter extends system.xml.XmlDictionaryWrite
         }
     }
 
+    /**
+     * Invokes the .NET member WriteWhitespace.
+     *
+     * @param ws the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.DelegatingXmlDictionaryWriter.WriteWhitespace" target="_top">.NET documentation</a>
+     */
     public void WriteWhitespace(java.lang.String ws) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -460,6 +733,14 @@ public class DelegatingXmlDictionaryWriter extends system.xml.XmlDictionaryWrite
         }
     }
 
+    /**
+     * Invokes the .NET member WriteXmlAttribute.
+     *
+     * @param localName the argument of type {@code java.lang.String}
+     * @param value the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.DelegatingXmlDictionaryWriter.WriteXmlAttribute" target="_top">.NET documentation</a>
+     */
     public void WriteXmlAttribute(java.lang.String localName, java.lang.String value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -470,6 +751,26 @@ public class DelegatingXmlDictionaryWriter extends system.xml.XmlDictionaryWrite
         }
     }
 
+    /**
+     * Invokes the .NET member WriteXmlnsAttribute.
+     *
+     * @param prefix the argument of type {@code java.lang.String}
+     * @param namespaceUri the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.DelegatingXmlDictionaryWriter.WriteXmlnsAttribute" target="_top">.NET documentation</a>
+     */
     public void WriteXmlnsAttribute(java.lang.String prefix, java.lang.String namespaceUri) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

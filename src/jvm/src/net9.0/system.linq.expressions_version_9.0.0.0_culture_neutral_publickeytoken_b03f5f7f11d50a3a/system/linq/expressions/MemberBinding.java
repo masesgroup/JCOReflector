@@ -100,7 +100,10 @@ public class MemberBinding extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public MemberBinding(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,13 @@ public class MemberBinding extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property BindingType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.MemberBinding.BindingType" target="_top">.NET documentation</a>
+     */
     public MemberBindingType getBindingType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -172,6 +182,13 @@ public class MemberBinding extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Member.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.MemberBinding.Member" target="_top">.NET documentation</a>
+     */
     public MemberInfo getMember() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -99,7 +99,10 @@ public class AmbientPropertyValue extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public AmbientPropertyValue(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,14 @@ public class AmbientPropertyValue extends NetObject  {
     public AmbientPropertyValue() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param property the argument of type {@code XamlMember}
+     * @param value the argument of type {@code NetObject}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.AmbientPropertyValue.-ctor" target="_top">.NET documentation</a>
+     */
     public AmbientPropertyValue(XamlMember property, NetObject value) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +179,13 @@ public class AmbientPropertyValue extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Value.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.AmbientPropertyValue.Value" target="_top">.NET documentation</a>
+     */
     public NetObject getValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +201,13 @@ public class AmbientPropertyValue extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RetrievedProperty.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.AmbientPropertyValue.RetrievedProperty" target="_top">.NET documentation</a>
+     */
     public XamlMember getRetrievedProperty() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

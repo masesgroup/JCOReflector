@@ -100,7 +100,10 @@ public class ExportFactory_1<T extends IJCOBridgeReflected> extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ExportFactory_1(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,14 @@ public class ExportFactory_1<T extends IJCOBridgeReflected> extends NetObject  {
     public ExportFactory_1() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param exportLifetimeContextCreator the argument of type {@code Func_1}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.ExportFactory-1.-ctor" target="_top">.NET documentation</a>
+     */
     public ExportFactory_1(Func_1 exportLifetimeContextCreator) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +178,13 @@ public class ExportFactory_1<T extends IJCOBridgeReflected> extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CreateExport.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.ExportFactory-1.CreateExport" target="_top">.NET documentation</a>
+     */
     public ExportLifetimeContext_1 CreateExport() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

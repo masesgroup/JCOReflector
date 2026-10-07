@@ -103,7 +103,9 @@ public class PipeException extends system.io.IOException {
         super();
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
      */
     public PipeException(java.lang.Object instance) {
         super(instance);
@@ -164,6 +166,14 @@ public class PipeException extends system.io.IOException {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param message the argument of type {@code java.lang.String}
+     * @param errorCode the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.PipeException.-ctor" target="_top">.NET documentation</a>
+     */
     public PipeException(java.lang.String message, int errorCode) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -182,6 +192,13 @@ public class PipeException extends system.io.IOException {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ErrorCode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.PipeException.ErrorCode" target="_top">.NET documentation</a>
+     */
     public int getErrorCode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

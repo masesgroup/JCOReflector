@@ -103,7 +103,10 @@ public class GridViewRow extends system.web.ui.webcontrols.TableRow implements s
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public GridViewRow(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,16 @@ public class GridViewRow extends system.web.ui.webcontrols.TableRow implements s
     public GridViewRow() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param rowIndex the argument of type {@code int}
+     * @param dataItemIndex the argument of type {@code int}
+     * @param rowType the argument of type {@code DataControlRowType}
+     * @param rowState the argument of type {@code DataControlRowState}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridViewRow.-ctor" target="_top">.NET documentation</a>
+     */
     public GridViewRow(int rowIndex, int dataItemIndex, DataControlRowType rowType, DataControlRowState rowState) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -172,6 +185,13 @@ public class GridViewRow extends system.web.ui.webcontrols.TableRow implements s
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property DataItemIndex.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridViewRow.DataItemIndex" target="_top">.NET documentation</a>
+     */
     public int getDataItemIndex() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -212,6 +232,13 @@ public class GridViewRow extends system.web.ui.webcontrols.TableRow implements s
         }
     }
 
+    /**
+     * Gets the value of the .NET property RowIndex.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridViewRow.RowIndex" target="_top">.NET documentation</a>
+     */
     public int getRowIndex() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -252,6 +279,13 @@ public class GridViewRow extends system.web.ui.webcontrols.TableRow implements s
         }
     }
 
+    /**
+     * Gets the value of the .NET property DataItem.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridViewRow.DataItem" target="_top">.NET documentation</a>
+     */
     public NetObject getDataItem() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -267,6 +301,13 @@ public class GridViewRow extends system.web.ui.webcontrols.TableRow implements s
         }
     }
 
+    /**
+     * Sets the value of the .NET property DataItem.
+     *
+     * @param DataItem the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridViewRow.DataItem" target="_top">.NET documentation</a>
+     */
     public void setDataItem(NetObject DataItem) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -277,6 +318,13 @@ public class GridViewRow extends system.web.ui.webcontrols.TableRow implements s
         }
     }
 
+    /**
+     * Gets the value of the .NET property RowState.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridViewRow.RowState" target="_top">.NET documentation</a>
+     */
     public DataControlRowState getRowState() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -292,6 +340,13 @@ public class GridViewRow extends system.web.ui.webcontrols.TableRow implements s
         }
     }
 
+    /**
+     * Sets the value of the .NET property RowState.
+     *
+     * @param RowState the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridViewRow.RowState" target="_top">.NET documentation</a>
+     */
     public void setRowState(DataControlRowState RowState) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -302,6 +357,13 @@ public class GridViewRow extends system.web.ui.webcontrols.TableRow implements s
         }
     }
 
+    /**
+     * Gets the value of the .NET property RowType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridViewRow.RowType" target="_top">.NET documentation</a>
+     */
     public DataControlRowType getRowType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -317,6 +379,13 @@ public class GridViewRow extends system.web.ui.webcontrols.TableRow implements s
         }
     }
 
+    /**
+     * Sets the value of the .NET property RowType.
+     *
+     * @param RowType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridViewRow.RowType" target="_top">.NET documentation</a>
+     */
     public void setRowType(DataControlRowType RowType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

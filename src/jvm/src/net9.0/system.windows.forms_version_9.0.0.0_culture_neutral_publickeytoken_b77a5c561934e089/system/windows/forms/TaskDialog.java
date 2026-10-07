@@ -104,7 +104,10 @@ public class TaskDialog extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TaskDialog(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -159,6 +162,19 @@ public class TaskDialog extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ShowDialogAsync.
+     *
+     * @param owner the argument of type {@code IWin32Window}
+     * @param page the argument of type {@code TaskDialogPage}
+     * @param startupLocation the argument of type {@code TaskDialogStartupLocation}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TaskDialog.ShowDialogAsync" target="_top">.NET documentation</a>
+     */
     public static Task_1 ShowDialogAsync(IWin32Window owner, TaskDialogPage page, TaskDialogStartupLocation startupLocation) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -174,6 +190,20 @@ public class TaskDialog extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ShowDialogAsync.
+     *
+     * @param page the argument of type {@code TaskDialogPage}
+     * @param startupLocation the argument of type {@code TaskDialogStartupLocation}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TaskDialog.ShowDialogAsync" target="_top">.NET documentation</a>
+     */
     public static Task_1 ShowDialogAsync(TaskDialogPage page, TaskDialogStartupLocation startupLocation) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -189,6 +219,27 @@ public class TaskDialog extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ShowDialog.
+     *
+     * @param owner the argument of type {@code IWin32Window}
+     * @param page the argument of type {@code TaskDialogPage}
+     * @param startupLocation the argument of type {@code TaskDialogStartupLocation}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TaskDialog.ShowDialog" target="_top">.NET documentation</a>
+     */
     public static TaskDialogButton ShowDialog(IWin32Window owner, TaskDialogPage page, TaskDialogStartupLocation startupLocation) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.ObjectDisposedException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -204,6 +255,26 @@ public class TaskDialog extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ShowDialog.
+     *
+     * @param page the argument of type {@code TaskDialogPage}
+     * @param startupLocation the argument of type {@code TaskDialogStartupLocation}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TaskDialog.ShowDialog" target="_top">.NET documentation</a>
+     */
     public static TaskDialogButton ShowDialog(TaskDialogPage page, TaskDialogStartupLocation startupLocation) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.ObjectDisposedException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -219,6 +290,15 @@ public class TaskDialog extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Close.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TaskDialog.Close" target="_top">.NET documentation</a>
+     */
     public void Close() throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

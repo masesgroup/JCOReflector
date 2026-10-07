@@ -102,7 +102,10 @@ public class PackageRelationshipSelector extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PackageRelationshipSelector(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,33 @@ public class PackageRelationshipSelector extends NetObject  {
     public PackageRelationshipSelector() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param sourceUri the argument of type {@code Uri}
+     * @param selectorType the argument of type {@code PackageRelationshipSelectorType}
+     * @param selectionCriteria the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Packaging.PackageRelationshipSelector.-ctor" target="_top">.NET documentation</a>
+     */
     public PackageRelationshipSelector(Uri sourceUri, PackageRelationshipSelectorType selectorType, java.lang.String selectionCriteria) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.UriFormatException, system.OutOfMemoryException, system.security.SecurityException, system.IndexOutOfRangeException, system.UnauthorizedAccessException, system.io.IOException, system.xml.XmlException {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +197,28 @@ public class PackageRelationshipSelector extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Select.
+     *
+     * @param _package the argument of type {@code Package}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.io.FileFormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Packaging.PackageRelationshipSelector.Select" target="_top">.NET documentation</a>
+     */
     public List_1 Select(Package _package) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.io.IOException, system.security.SecurityException, system.UnauthorizedAccessException, system.xml.XmlException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.io.FileFormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -186,6 +238,13 @@ public class PackageRelationshipSelector extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property SelectorType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Packaging.PackageRelationshipSelector.SelectorType" target="_top">.NET documentation</a>
+     */
     public PackageRelationshipSelectorType getSelectorType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +260,13 @@ public class PackageRelationshipSelector extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SelectionCriteria.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Packaging.PackageRelationshipSelector.SelectionCriteria" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSelectionCriteria() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +281,13 @@ public class PackageRelationshipSelector extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SourceUri.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Packaging.PackageRelationshipSelector.SourceUri" target="_top">.NET documentation</a>
+     */
     public Uri getSourceUri() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

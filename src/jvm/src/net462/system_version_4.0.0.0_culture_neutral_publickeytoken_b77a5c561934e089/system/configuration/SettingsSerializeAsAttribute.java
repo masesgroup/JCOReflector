@@ -100,7 +100,10 @@ public class SettingsSerializeAsAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SettingsSerializeAsAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,13 @@ public class SettingsSerializeAsAttribute extends system.Attribute  {
     public SettingsSerializeAsAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param serializeAs the argument of type {@code SettingsSerializeAs}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.SettingsSerializeAsAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public SettingsSerializeAsAttribute(SettingsSerializeAs serializeAs) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +179,13 @@ public class SettingsSerializeAsAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property SerializeAs.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.SettingsSerializeAsAttribute.SerializeAs" target="_top">.NET documentation</a>
+     */
     public SettingsSerializeAs getSerializeAs() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

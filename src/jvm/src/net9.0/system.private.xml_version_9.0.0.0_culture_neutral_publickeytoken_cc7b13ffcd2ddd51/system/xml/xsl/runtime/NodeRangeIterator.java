@@ -101,7 +101,10 @@ public class NodeRangeIterator extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public NodeRangeIterator(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,13 @@ public class NodeRangeIterator extends system.ValueType  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member MoveNext.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.NodeRangeIterator.MoveNext" target="_top">.NET documentation</a>
+     */
     public boolean MoveNext() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -170,6 +180,15 @@ public class NodeRangeIterator extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param start the argument of type {@code XPathNavigator}
+     * @param filter the argument of type {@code XmlNavigatorFilter}
+     * @param end the argument of type {@code XPathNavigator}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.NodeRangeIterator.Create" target="_top">.NET documentation</a>
+     */
     public void Create(XPathNavigator start, XmlNavigatorFilter filter, XPathNavigator end) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +203,13 @@ public class NodeRangeIterator extends system.ValueType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Current.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.NodeRangeIterator.Current" target="_top">.NET documentation</a>
+     */
     public XPathNavigator getCurrent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

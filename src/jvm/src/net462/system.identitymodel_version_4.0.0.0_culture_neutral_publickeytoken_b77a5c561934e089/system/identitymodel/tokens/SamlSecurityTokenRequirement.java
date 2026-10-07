@@ -104,7 +104,10 @@ public class SamlSecurityTokenRequirement extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SamlSecurityTokenRequirement(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,12 @@ public class SamlSecurityTokenRequirement extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SamlSecurityTokenRequirement.-ctor" target="_top">.NET documentation</a>
+     */
     public SamlSecurityTokenRequirement() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -161,6 +170,33 @@ public class SamlSecurityTokenRequirement extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param element the argument of type {@code XmlElement}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.reflection.AmbiguousMatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SamlSecurityTokenRequirement.-ctor" target="_top">.NET documentation</a>
+     */
     public SamlSecurityTokenRequirement(XmlElement element) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.reflection.AmbiguousMatchException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.NullReferenceException, system.configuration.ConfigurationException, system.MissingMethodException, system.reflection.TargetInvocationException {
         try {
             // add reference to assemblyName.dll file
@@ -175,6 +211,26 @@ public class SamlSecurityTokenRequirement extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ShouldEnforceAudienceRestriction.
+     *
+     * @param audienceUriMode the argument of type {@code AudienceUriMode}
+     * @param token the argument of type {@code SecurityToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SamlSecurityTokenRequirement.ShouldEnforceAudienceRestriction" target="_top">.NET documentation</a>
+     */
     public boolean ShouldEnforceAudienceRestriction(AudienceUriMode audienceUriMode, SecurityToken token) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +245,27 @@ public class SamlSecurityTokenRequirement extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ValidateAudienceRestriction.
+     *
+     * @param allowedAudienceUris the argument of type {@code IList_1}
+     * @param tokenAudiences the argument of type {@code IList_1}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SamlSecurityTokenRequirement.ValidateAudienceRestriction" target="_top">.NET documentation</a>
+     */
     public void ValidateAudienceRestriction(IList_1 allowedAudienceUris, IList_1 tokenAudiences) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.UriFormatException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +280,13 @@ public class SamlSecurityTokenRequirement extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property MapToWindows.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SamlSecurityTokenRequirement.MapToWindows" target="_top">.NET documentation</a>
+     */
     public boolean getMapToWindows() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -217,6 +301,13 @@ public class SamlSecurityTokenRequirement extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MapToWindows.
+     *
+     * @param MapToWindows the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SamlSecurityTokenRequirement.MapToWindows" target="_top">.NET documentation</a>
+     */
     public void setMapToWindows(boolean MapToWindows) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -227,6 +318,13 @@ public class SamlSecurityTokenRequirement extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CertificateValidator.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SamlSecurityTokenRequirement.CertificateValidator" target="_top">.NET documentation</a>
+     */
     public X509CertificateValidator getCertificateValidator() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -242,6 +340,24 @@ public class SamlSecurityTokenRequirement extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CertificateValidator.
+     *
+     * @param CertificateValidator the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SamlSecurityTokenRequirement.CertificateValidator" target="_top">.NET documentation</a>
+     */
     public void setCertificateValidator(X509CertificateValidator CertificateValidator) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -252,6 +368,13 @@ public class SamlSecurityTokenRequirement extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NameClaimType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SamlSecurityTokenRequirement.NameClaimType" target="_top">.NET documentation</a>
+     */
     public java.lang.String getNameClaimType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -266,6 +389,13 @@ public class SamlSecurityTokenRequirement extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property NameClaimType.
+     *
+     * @param NameClaimType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SamlSecurityTokenRequirement.NameClaimType" target="_top">.NET documentation</a>
+     */
     public void setNameClaimType(java.lang.String NameClaimType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -276,6 +406,13 @@ public class SamlSecurityTokenRequirement extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RoleClaimType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SamlSecurityTokenRequirement.RoleClaimType" target="_top">.NET documentation</a>
+     */
     public java.lang.String getRoleClaimType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -290,6 +427,13 @@ public class SamlSecurityTokenRequirement extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RoleClaimType.
+     *
+     * @param RoleClaimType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SamlSecurityTokenRequirement.RoleClaimType" target="_top">.NET documentation</a>
+     */
     public void setRoleClaimType(java.lang.String RoleClaimType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

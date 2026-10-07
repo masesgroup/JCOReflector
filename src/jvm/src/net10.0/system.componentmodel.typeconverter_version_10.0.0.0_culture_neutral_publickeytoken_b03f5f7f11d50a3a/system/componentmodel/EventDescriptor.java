@@ -99,7 +99,10 @@ public class EventDescriptor extends system.componentmodel.MemberDescriptor  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public EventDescriptor(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,13 @@ public class EventDescriptor extends system.componentmodel.MemberDescriptor  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsMulticast.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.EventDescriptor.IsMulticast" target="_top">.NET documentation</a>
+     */
     public boolean getIsMulticast() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -170,6 +180,13 @@ public class EventDescriptor extends system.componentmodel.MemberDescriptor  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ComponentType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.EventDescriptor.ComponentType" target="_top">.NET documentation</a>
+     */
     public NetType getComponentType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -185,6 +202,13 @@ public class EventDescriptor extends system.componentmodel.MemberDescriptor  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EventType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.EventDescriptor.EventType" target="_top">.NET documentation</a>
+     */
     public NetType getEventType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

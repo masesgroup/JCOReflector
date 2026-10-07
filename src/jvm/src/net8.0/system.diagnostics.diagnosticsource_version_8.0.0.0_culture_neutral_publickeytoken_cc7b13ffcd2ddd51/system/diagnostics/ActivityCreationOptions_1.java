@@ -105,7 +105,10 @@ public class ActivityCreationOptions_1<T extends IJCOBridgeReflected> extends sy
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ActivityCreationOptions_1(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -164,6 +167,13 @@ public class ActivityCreationOptions_1<T extends IJCOBridgeReflected> extends sy
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Tags.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.ActivityCreationOptions-1.Tags" target="_top">.NET documentation</a>
+     */
     public IEnumerable_1 getTags() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -179,6 +189,13 @@ public class ActivityCreationOptions_1<T extends IJCOBridgeReflected> extends sy
         }
     }
 
+    /**
+     * Gets the value of the .NET property Links.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.ActivityCreationOptions-1.Links" target="_top">.NET documentation</a>
+     */
     public IEnumerable_1 getLinks() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +211,13 @@ public class ActivityCreationOptions_1<T extends IJCOBridgeReflected> extends sy
         }
     }
 
+    /**
+     * Gets the value of the .NET property Kind.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.ActivityCreationOptions-1.Kind" target="_top">.NET documentation</a>
+     */
     public ActivityKind getKind() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -209,6 +233,13 @@ public class ActivityCreationOptions_1<T extends IJCOBridgeReflected> extends sy
         }
     }
 
+    /**
+     * Gets the value of the .NET property Source.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.ActivityCreationOptions-1.Source" target="_top">.NET documentation</a>
+     */
     public ActivitySource getSource() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -224,6 +255,23 @@ public class ActivityCreationOptions_1<T extends IJCOBridgeReflected> extends sy
         }
     }
 
+    /**
+     * Gets the value of the .NET property SamplingTags.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.ActivityCreationOptions-1.SamplingTags" target="_top">.NET documentation</a>
+     */
     public ActivityTagsCollection getSamplingTags() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -239,6 +287,20 @@ public class ActivityCreationOptions_1<T extends IJCOBridgeReflected> extends sy
         }
     }
 
+    /**
+     * Gets the value of the .NET property TraceId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.ActivityCreationOptions-1.TraceId" target="_top">.NET documentation</a>
+     */
     public ActivityTraceId getTraceId() throws Throwable, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -254,6 +316,13 @@ public class ActivityCreationOptions_1<T extends IJCOBridgeReflected> extends sy
         }
     }
 
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.ActivityCreationOptions-1.Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -268,6 +337,13 @@ public class ActivityCreationOptions_1<T extends IJCOBridgeReflected> extends sy
         }
     }
 
+    /**
+     * Gets the value of the .NET property TraceState.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.ActivityCreationOptions-1.TraceState" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTraceState() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -282,6 +358,13 @@ public class ActivityCreationOptions_1<T extends IJCOBridgeReflected> extends sy
         }
     }
 
+    /**
+     * Sets the value of the .NET property TraceState.
+     *
+     * @param TraceState the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.ActivityCreationOptions-1.TraceState" target="_top">.NET documentation</a>
+     */
     public void setTraceState(java.lang.String TraceState) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -292,6 +375,13 @@ public class ActivityCreationOptions_1<T extends IJCOBridgeReflected> extends sy
         }
     }
 
+    /**
+     * Gets the value of the .NET property Parent.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.ActivityCreationOptions-1.Parent" target="_top">.NET documentation</a>
+     */
     public T getParent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

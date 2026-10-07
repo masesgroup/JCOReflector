@@ -102,7 +102,10 @@ public class ComposablePartCatalogChangeEventArgs extends system.EventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ComposablePartCatalogChangeEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,16 @@ public class ComposablePartCatalogChangeEventArgs extends system.EventArgs  {
     public ComposablePartCatalogChangeEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param addedDefinitions the argument of type {@code IEnumerable_1}
+     * @param removedDefinitions the argument of type {@code IEnumerable_1}
+     * @param atomicComposition the argument of type {@code AtomicComposition}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.Hosting.ComposablePartCatalogChangeEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public ComposablePartCatalogChangeEventArgs(IEnumerable_1 addedDefinitions, IEnumerable_1 removedDefinitions, AtomicComposition atomicComposition) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -171,6 +184,13 @@ public class ComposablePartCatalogChangeEventArgs extends system.EventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AddedDefinitions.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.Hosting.ComposablePartCatalogChangeEventArgs.AddedDefinitions" target="_top">.NET documentation</a>
+     */
     public IEnumerable_1 getAddedDefinitions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -186,6 +206,13 @@ public class ComposablePartCatalogChangeEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RemovedDefinitions.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.Hosting.ComposablePartCatalogChangeEventArgs.RemovedDefinitions" target="_top">.NET documentation</a>
+     */
     public IEnumerable_1 getRemovedDefinitions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +228,13 @@ public class ComposablePartCatalogChangeEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AtomicComposition.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.Hosting.ComposablePartCatalogChangeEventArgs.AtomicComposition" target="_top">.NET documentation</a>
+     */
     public AtomicComposition getAtomicComposition() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +250,13 @@ public class ComposablePartCatalogChangeEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AtomicComposition.
+     *
+     * @param AtomicComposition the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.Hosting.ComposablePartCatalogChangeEventArgs.AtomicComposition" target="_top">.NET documentation</a>
+     */
     public void setAtomicComposition(AtomicComposition AtomicComposition) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

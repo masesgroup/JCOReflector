@@ -103,7 +103,10 @@ public class PrintControllerWithStatusDialog extends system.drawing.printing.Pri
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PrintControllerWithStatusDialog(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,14 @@ public class PrintControllerWithStatusDialog extends system.drawing.printing.Pri
     public PrintControllerWithStatusDialog() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param underlyingController the argument of type {@code PrintController}
+     * @param dialogTitle the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.PrintControllerWithStatusDialog.-ctor" target="_top">.NET documentation</a>
+     */
     public PrintControllerWithStatusDialog(PrintController underlyingController, java.lang.String dialogTitle) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -163,6 +174,21 @@ public class PrintControllerWithStatusDialog extends system.drawing.printing.Pri
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param underlyingController the argument of type {@code PrintController}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.PrintControllerWithStatusDialog.-ctor" target="_top">.NET documentation</a>
+     */
     public PrintControllerWithStatusDialog(PrintController underlyingController) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
@@ -178,6 +204,27 @@ public class PrintControllerWithStatusDialog extends system.drawing.printing.Pri
     
     // Methods section
     
+    /**
+     * Invokes the .NET member OnStartPage.
+     *
+     * @param document the argument of type {@code PrintDocument}
+     * @param e the argument of type {@code PrintPageEventArgs}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.componentmodel.InvalidAsynchronousStateException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.PrintControllerWithStatusDialog.OnStartPage" target="_top">.NET documentation</a>
+     */
     public Graphics OnStartPage(PrintDocument document, PrintPageEventArgs e) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.OutOfMemoryException, system.RankException, system.ArrayTypeMismatchException, system.threading.WaitHandleCannotBeOpenedException, system.threading.AbandonedMutexException, system.componentmodel.InvalidAsynchronousStateException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +240,14 @@ public class PrintControllerWithStatusDialog extends system.drawing.printing.Pri
         }
     }
 
+    /**
+     * Invokes the .NET member OnEndPage.
+     *
+     * @param document the argument of type {@code PrintDocument}
+     * @param e the argument of type {@code PrintPageEventArgs}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.PrintControllerWithStatusDialog.OnEndPage" target="_top">.NET documentation</a>
+     */
     public void OnEndPage(PrintDocument document, PrintPageEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +258,28 @@ public class PrintControllerWithStatusDialog extends system.drawing.printing.Pri
         }
     }
 
+    /**
+     * Invokes the .NET member OnEndPrint.
+     *
+     * @param document the argument of type {@code PrintDocument}
+     * @param e the argument of type {@code PrintEventArgs}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.componentmodel.InvalidAsynchronousStateException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.PrintControllerWithStatusDialog.OnEndPrint" target="_top">.NET documentation</a>
+     */
     public void OnEndPrint(PrintDocument document, PrintEventArgs e) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.RankException, system.ArrayTypeMismatchException, system.threading.WaitHandleCannotBeOpenedException, system.threading.AbandonedMutexException, system.componentmodel.InvalidAsynchronousStateException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -213,6 +290,30 @@ public class PrintControllerWithStatusDialog extends system.drawing.printing.Pri
         }
     }
 
+    /**
+     * Invokes the .NET member OnStartPrint.
+     *
+     * @param document the argument of type {@code PrintDocument}
+     * @param e the argument of type {@code PrintEventArgs}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.drawing.printing.InvalidPrinterException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.PrintControllerWithStatusDialog.OnStartPrint" target="_top">.NET documentation</a>
+     */
     public void OnStartPrint(PrintDocument document, PrintEventArgs e) throws Throwable, system.componentmodel.Win32Exception, system.InvalidOperationException, system.PlatformNotSupportedException, system.drawing.printing.InvalidPrinterException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.ArgumentException, system.NotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.OverflowException, system.NullReferenceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

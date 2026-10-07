@@ -106,7 +106,10 @@ public class DataSourceProviderService extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DataSourceProviderService(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -159,6 +162,16 @@ public class DataSourceProviderService extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member InvokeConfigureDataSource.
+     *
+     * @param parentWindow the argument of type {@code IWin32Window}
+     * @param startPosition the argument of type {@code FormStartPosition}
+     * @param dataSourceDescriptor the argument of type {@code DataSourceDescriptor}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.DataSourceProviderService.InvokeConfigureDataSource" target="_top">.NET documentation</a>
+     */
     public boolean InvokeConfigureDataSource(IWin32Window parentWindow, FormStartPosition startPosition, DataSourceDescriptor dataSourceDescriptor) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -173,6 +186,15 @@ public class DataSourceProviderService extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member InvokeAddNewDataSource.
+     *
+     * @param parentWindow the argument of type {@code IWin32Window}
+     * @param startPosition the argument of type {@code FormStartPosition}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.DataSourceProviderService.InvokeAddNewDataSource" target="_top">.NET documentation</a>
+     */
     public DataSourceGroup InvokeAddNewDataSource(IWin32Window parentWindow, FormStartPosition startPosition) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +210,13 @@ public class DataSourceProviderService extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetDataSources.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.DataSourceProviderService.GetDataSources" target="_top">.NET documentation</a>
+     */
     public DataSourceGroupCollection GetDataSources() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +232,15 @@ public class DataSourceProviderService extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddDataSourceInstance.
+     *
+     * @param host the argument of type {@code IDesignerHost}
+     * @param dataSourceDescriptor the argument of type {@code DataSourceDescriptor}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.DataSourceProviderService.AddDataSourceInstance" target="_top">.NET documentation</a>
+     */
     public NetObject AddDataSourceInstance(IDesignerHost host, DataSourceDescriptor dataSourceDescriptor) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -218,6 +256,13 @@ public class DataSourceProviderService extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member NotifyDataSourceComponentAdded.
+     *
+     * @param dsc the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.DataSourceProviderService.NotifyDataSourceComponentAdded" target="_top">.NET documentation</a>
+     */
     public void NotifyDataSourceComponentAdded(NetObject dsc) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -232,6 +277,13 @@ public class DataSourceProviderService extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property SupportsAddNewDataSource.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.DataSourceProviderService.SupportsAddNewDataSource" target="_top">.NET documentation</a>
+     */
     public boolean getSupportsAddNewDataSource() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -246,6 +298,13 @@ public class DataSourceProviderService extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SupportsConfigureDataSource.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.DataSourceProviderService.SupportsConfigureDataSource" target="_top">.NET documentation</a>
+     */
     public boolean getSupportsConfigureDataSource() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

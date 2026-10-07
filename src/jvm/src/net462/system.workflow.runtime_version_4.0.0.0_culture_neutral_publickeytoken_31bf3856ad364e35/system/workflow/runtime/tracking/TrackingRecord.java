@@ -101,7 +101,10 @@ public class TrackingRecord extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TrackingRecord(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -158,6 +161,13 @@ public class TrackingRecord extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property EventOrder.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.TrackingRecord.EventOrder" target="_top">.NET documentation</a>
+     */
     public int getEventOrder() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +208,13 @@ public class TrackingRecord extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property EventOrder.
+     *
+     * @param EventOrder the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.TrackingRecord.EventOrder" target="_top">.NET documentation</a>
+     */
     public void setEventOrder(int EventOrder) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +225,13 @@ public class TrackingRecord extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EventDateTime.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.TrackingRecord.EventDateTime" target="_top">.NET documentation</a>
+     */
     public DateTime getEventDateTime() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -223,6 +247,13 @@ public class TrackingRecord extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property EventDateTime.
+     *
+     * @param EventDateTime the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.TrackingRecord.EventDateTime" target="_top">.NET documentation</a>
+     */
     public void setEventDateTime(DateTime EventDateTime) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -233,6 +264,13 @@ public class TrackingRecord extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EventArgs.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.TrackingRecord.EventArgs" target="_top">.NET documentation</a>
+     */
     public EventArgs getEventArgs() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -248,6 +286,13 @@ public class TrackingRecord extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property EventArgs.
+     *
+     * @param EventArgs the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.TrackingRecord.EventArgs" target="_top">.NET documentation</a>
+     */
     public void setEventArgs(EventArgs EventArgs) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -258,6 +303,13 @@ public class TrackingRecord extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Annotations.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.TrackingRecord.Annotations" target="_top">.NET documentation</a>
+     */
     public TrackingAnnotationCollection getAnnotations() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

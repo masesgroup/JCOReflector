@@ -101,7 +101,10 @@ public class IdentityProviderSingleSignOnDescriptor extends system.identitymodel
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IdentityProviderSingleSignOnDescriptor(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class IdentityProviderSingleSignOnDescriptor extends system.identitymodel
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.IdentityProviderSingleSignOnDescriptor.-ctor" target="_top">.NET documentation</a>
+     */
     public IdentityProviderSingleSignOnDescriptor() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -166,6 +175,13 @@ public class IdentityProviderSingleSignOnDescriptor extends system.identitymodel
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property WantAuthenticationRequestsSigned.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.IdentityProviderSingleSignOnDescriptor.WantAuthenticationRequestsSigned" target="_top">.NET documentation</a>
+     */
     public boolean getWantAuthenticationRequestsSigned() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +196,13 @@ public class IdentityProviderSingleSignOnDescriptor extends system.identitymodel
         }
     }
 
+    /**
+     * Sets the value of the .NET property WantAuthenticationRequestsSigned.
+     *
+     * @param WantAuthenticationRequestsSigned the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.IdentityProviderSingleSignOnDescriptor.WantAuthenticationRequestsSigned" target="_top">.NET documentation</a>
+     */
     public void setWantAuthenticationRequestsSigned(boolean WantAuthenticationRequestsSigned) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +213,13 @@ public class IdentityProviderSingleSignOnDescriptor extends system.identitymodel
         }
     }
 
+    /**
+     * Gets the value of the .NET property SingleSignOnServices.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.IdentityProviderSingleSignOnDescriptor.SingleSignOnServices" target="_top">.NET documentation</a>
+     */
     public ICollection_1 getSingleSignOnServices() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +235,13 @@ public class IdentityProviderSingleSignOnDescriptor extends system.identitymodel
         }
     }
 
+    /**
+     * Gets the value of the .NET property SupportedAttributes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.IdentityProviderSingleSignOnDescriptor.SupportedAttributes" target="_top">.NET documentation</a>
+     */
     public ICollection_1 getSupportedAttributes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

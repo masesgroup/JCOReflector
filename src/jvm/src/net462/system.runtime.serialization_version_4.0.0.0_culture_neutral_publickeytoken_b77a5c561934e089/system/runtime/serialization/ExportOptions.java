@@ -101,7 +101,10 @@ public class ExportOptions extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ExportOptions(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class ExportOptions extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.ExportOptions.-ctor" target="_top">.NET documentation</a>
+     */
     public ExportOptions() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -166,6 +175,13 @@ public class ExportOptions extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property KnownTypes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.ExportOptions.KnownTypes" target="_top">.NET documentation</a>
+     */
     public Collection_1 getKnownTypes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -181,6 +197,13 @@ public class ExportOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DataContractSurrogate.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.ExportOptions.DataContractSurrogate" target="_top">.NET documentation</a>
+     */
     public IDataContractSurrogate getDataContractSurrogate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -196,6 +219,13 @@ public class ExportOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DataContractSurrogate.
+     *
+     * @param DataContractSurrogate the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.ExportOptions.DataContractSurrogate" target="_top">.NET documentation</a>
+     */
     public void setDataContractSurrogate(IDataContractSurrogate DataContractSurrogate) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

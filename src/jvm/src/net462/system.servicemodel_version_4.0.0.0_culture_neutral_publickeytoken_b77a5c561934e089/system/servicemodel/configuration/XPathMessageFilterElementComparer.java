@@ -98,7 +98,10 @@ public class XPathMessageFilterElementComparer extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XPathMessageFilterElementComparer(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -145,6 +148,12 @@ public class XPathMessageFilterElementComparer extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Configuration.XPathMessageFilterElementComparer.-ctor" target="_top">.NET documentation</a>
+     */
     public XPathMessageFilterElementComparer() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -162,8 +171,14 @@ public class XPathMessageFilterElementComparer extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIComparer method available in IComparer to obtain an object with an invocable method
+     *
+     * @param x the argument of type {@code NetObject}
+     * @param y the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.IComparer.Compare" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public int Compare(NetObject x, NetObject y) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIComparer to obtain the full interface.");
     }

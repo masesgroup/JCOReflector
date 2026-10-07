@@ -108,7 +108,10 @@ public class XPathExpression extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XPathExpression(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -161,6 +164,13 @@ public class XPathExpression extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Clone.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XPath.XPathExpression.Clone" target="_top">.NET documentation</a>
+     */
     public XPathExpression Clone() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -176,6 +186,20 @@ public class XPathExpression extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Compile.
+     *
+     * @param xpath the argument of type {@code java.lang.String}
+     * @param nsResolver the argument of type {@code IXmlNamespaceResolver}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.xml.xpath.XPathException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XPath.XPathExpression.Compile" target="_top">.NET documentation</a>
+     */
     public static XPathExpression Compile(java.lang.String xpath, IXmlNamespaceResolver nsResolver) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.xml.xpath.XPathException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -191,6 +215,18 @@ public class XPathExpression extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Compile.
+     *
+     * @param xpath the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.xml.xpath.XPathException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XPath.XPathExpression.Compile" target="_top">.NET documentation</a>
+     */
     public static XPathExpression Compile(java.lang.String xpath) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.xml.xpath.XPathException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -206,6 +242,14 @@ public class XPathExpression extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddSort.
+     *
+     * @param expr the argument of type {@code NetObject}
+     * @param comparer the argument of type {@code IComparer}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XPath.XPathExpression.AddSort" target="_top">.NET documentation</a>
+     */
     public void AddSort(NetObject expr, IComparer comparer) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +260,17 @@ public class XPathExpression extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddSort.
+     *
+     * @param expr the argument of type {@code NetObject}
+     * @param order the argument of type {@code XmlSortOrder}
+     * @param caseOrder the argument of type {@code XmlCaseOrder}
+     * @param lang the argument of type {@code java.lang.String}
+     * @param dataType the argument of type {@code XmlDataType}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XPath.XPathExpression.AddSort" target="_top">.NET documentation</a>
+     */
     public void AddSort(NetObject expr, XmlSortOrder order, XmlCaseOrder caseOrder, java.lang.String lang, XmlDataType dataType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -226,6 +281,13 @@ public class XPathExpression extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetContext.
+     *
+     * @param nsResolver the argument of type {@code IXmlNamespaceResolver}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XPath.XPathExpression.SetContext" target="_top">.NET documentation</a>
+     */
     public void SetContext(IXmlNamespaceResolver nsResolver) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -236,6 +298,13 @@ public class XPathExpression extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetContext.
+     *
+     * @param nsManager the argument of type {@code XmlNamespaceManager}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XPath.XPathExpression.SetContext" target="_top">.NET documentation</a>
+     */
     public void SetContext(XmlNamespaceManager nsManager) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -250,6 +319,13 @@ public class XPathExpression extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Expression.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XPath.XPathExpression.Expression" target="_top">.NET documentation</a>
+     */
     public java.lang.String getExpression() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -264,6 +340,13 @@ public class XPathExpression extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ReturnType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XPath.XPathExpression.ReturnType" target="_top">.NET documentation</a>
+     */
     public XPathResultType getReturnType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

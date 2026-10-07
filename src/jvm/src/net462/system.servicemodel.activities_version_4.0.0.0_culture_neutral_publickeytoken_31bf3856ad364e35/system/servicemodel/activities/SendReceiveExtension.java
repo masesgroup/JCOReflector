@@ -104,7 +104,10 @@ public class SendReceiveExtension extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SendReceiveExtension(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,13 @@ public class SendReceiveExtension extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Cancel.
+     *
+     * @param bookmark the argument of type {@code Bookmark}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.SendReceiveExtension.Cancel" target="_top">.NET documentation</a>
+     */
     public void Cancel(Bookmark bookmark) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -167,6 +177,13 @@ public class SendReceiveExtension extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member OnUninitializeCorrelation.
+     *
+     * @param correlationKey the argument of type {@code InstanceKey}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.SendReceiveExtension.OnUninitializeCorrelation" target="_top">.NET documentation</a>
+     */
     public void OnUninitializeCorrelation(InstanceKey correlationKey) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -177,6 +194,15 @@ public class SendReceiveExtension extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RegisterReceive.
+     *
+     * @param settings the argument of type {@code ReceiveSettings}
+     * @param correlatesWith the argument of type {@code InstanceKey}
+     * @param receiveBookmark the argument of type {@code Bookmark}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.SendReceiveExtension.RegisterReceive" target="_top">.NET documentation</a>
+     */
     public void RegisterReceive(ReceiveSettings settings, InstanceKey correlatesWith, Bookmark receiveBookmark) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +213,16 @@ public class SendReceiveExtension extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Send.
+     *
+     * @param message the argument of type {@code MessageContext}
+     * @param settings the argument of type {@code SendSettings}
+     * @param correlatesWith the argument of type {@code InstanceKey}
+     * @param sendCompleteBookmark the argument of type {@code Bookmark}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.SendReceiveExtension.Send" target="_top">.NET documentation</a>
+     */
     public void Send(MessageContext message, SendSettings settings, InstanceKey correlatesWith, Bookmark sendCompleteBookmark) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +237,13 @@ public class SendReceiveExtension extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property HostSettings.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.SendReceiveExtension.HostSettings" target="_top">.NET documentation</a>
+     */
     public HostSettings getHostSettings() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

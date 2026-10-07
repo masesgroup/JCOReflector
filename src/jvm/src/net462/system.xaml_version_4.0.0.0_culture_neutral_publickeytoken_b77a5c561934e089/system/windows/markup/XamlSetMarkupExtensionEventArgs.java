@@ -103,7 +103,10 @@ public class XamlSetMarkupExtensionEventArgs extends system.windows.markup.XamlS
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XamlSetMarkupExtensionEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,15 @@ public class XamlSetMarkupExtensionEventArgs extends system.windows.markup.XamlS
     public XamlSetMarkupExtensionEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param member the argument of type {@code XamlMember}
+     * @param value the argument of type {@code MarkupExtension}
+     * @param serviceProvider the argument of type {@code IServiceProvider}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.XamlSetMarkupExtensionEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public XamlSetMarkupExtensionEventArgs(XamlMember member, MarkupExtension value, IServiceProvider serviceProvider) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +180,23 @@ public class XamlSetMarkupExtensionEventArgs extends system.windows.markup.XamlS
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CallBase.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.xaml.XamlSchemaException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.XamlSetMarkupExtensionEventArgs.CallBase" target="_top">.NET documentation</a>
+     */
     public void CallBase() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.NotImplementedException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.xaml.XamlSchemaException, system.security.SecurityException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +211,13 @@ public class XamlSetMarkupExtensionEventArgs extends system.windows.markup.XamlS
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ServiceProvider.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.XamlSetMarkupExtensionEventArgs.ServiceProvider" target="_top">.NET documentation</a>
+     */
     public IServiceProvider getServiceProvider() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +233,13 @@ public class XamlSetMarkupExtensionEventArgs extends system.windows.markup.XamlS
         }
     }
 
+    /**
+     * Sets the value of the .NET property ServiceProvider.
+     *
+     * @param ServiceProvider the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.XamlSetMarkupExtensionEventArgs.ServiceProvider" target="_top">.NET documentation</a>
+     */
     public void setServiceProvider(IServiceProvider ServiceProvider) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +250,13 @@ public class XamlSetMarkupExtensionEventArgs extends system.windows.markup.XamlS
         }
     }
 
+    /**
+     * Gets the value of the .NET property MarkupExtension.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.XamlSetMarkupExtensionEventArgs.MarkupExtension" target="_top">.NET documentation</a>
+     */
     public MarkupExtension getMarkupExtension() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

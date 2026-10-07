@@ -103,7 +103,10 @@ public class ICompositeViewImplementation extends NetObject implements IComposit
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ICompositeViewImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -145,6 +148,14 @@ public class ICompositeViewImplementation extends NetObject implements IComposit
 
     // Methods section
     
+    /**
+     * Invokes the .NET member CanPasteItems.
+     *
+     * @param itemsToPaste the argument of type {@code List_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.ICompositeView.CanPasteItems" target="_top">.NET documentation</a>
+     */
     public boolean CanPasteItems(List_1 itemsToPaste) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -159,6 +170,14 @@ public class ICompositeViewImplementation extends NetObject implements IComposit
         }
     }
 
+    /**
+     * Invokes the .NET member OnItemsCopied.
+     *
+     * @param itemsToCopy the argument of type {@code List_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.ICompositeView.OnItemsCopied" target="_top">.NET documentation</a>
+     */
     public NetObject OnItemsCopied(List_1 itemsToCopy) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -174,6 +193,14 @@ public class ICompositeViewImplementation extends NetObject implements IComposit
         }
     }
 
+    /**
+     * Invokes the .NET member OnItemsCut.
+     *
+     * @param itemsToCut the argument of type {@code List_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.ICompositeView.OnItemsCut" target="_top">.NET documentation</a>
+     */
     public NetObject OnItemsCut(List_1 itemsToCut) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +216,13 @@ public class ICompositeViewImplementation extends NetObject implements IComposit
         }
     }
 
+    /**
+     * Invokes the .NET member OnItemMoved.
+     *
+     * @param modelItem the argument of type {@code ModelItem}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.ICompositeView.OnItemMoved" target="_top">.NET documentation</a>
+     */
     public void OnItemMoved(ModelItem modelItem) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -199,6 +233,13 @@ public class ICompositeViewImplementation extends NetObject implements IComposit
         }
     }
 
+    /**
+     * Invokes the .NET member OnItemsDelete.
+     *
+     * @param itemsToDelete the argument of type {@code List_1}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.ICompositeView.OnItemsDelete" target="_top">.NET documentation</a>
+     */
     public void OnItemsDelete(List_1 itemsToDelete) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -209,6 +250,16 @@ public class ICompositeViewImplementation extends NetObject implements IComposit
         }
     }
 
+    /**
+     * Invokes the .NET member OnItemsPasted.
+     *
+     * @param itemsToPaste the argument of type {@code List_1}
+     * @param metadata the argument of type {@code List_1}
+     * @param pastePoint the argument of type {@code Point}
+     * @param pastePointReference the argument of type {@code WorkflowViewElement}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.ICompositeView.OnItemsPasted" target="_top">.NET documentation</a>
+     */
     public void OnItemsPasted(List_1 itemsToPaste, List_1 metadata, Point pastePoint, WorkflowViewElement pastePointReference) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -223,6 +274,13 @@ public class ICompositeViewImplementation extends NetObject implements IComposit
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsDefaultContainer.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.ICompositeView.IsDefaultContainer" target="_top">.NET documentation</a>
+     */
     public boolean getIsDefaultContainer() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -237,6 +295,13 @@ public class ICompositeViewImplementation extends NetObject implements IComposit
         }
     }
 
+    /**
+     * Gets the value of the .NET property DroppingTypeResolvingOptions.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.ICompositeView.DroppingTypeResolvingOptions" target="_top">.NET documentation</a>
+     */
     public TypeResolvingOptions getDroppingTypeResolvingOptions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

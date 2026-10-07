@@ -105,7 +105,10 @@ public class UserTrackingRecord extends system.workflow.runtime.tracking.Trackin
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public UserTrackingRecord(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,12 @@ public class UserTrackingRecord extends system.workflow.runtime.tracking.Trackin
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.UserTrackingRecord.-ctor" target="_top">.NET documentation</a>
+     */
     public UserTrackingRecord() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -162,6 +171,20 @@ public class UserTrackingRecord extends system.workflow.runtime.tracking.Trackin
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param activityType the argument of type {@code NetType}
+     * @param qualifiedName the argument of type {@code java.lang.String}
+     * @param contextGuid the argument of type {@code Guid}
+     * @param parentContextGuid the argument of type {@code Guid}
+     * @param eventDateTime the argument of type {@code DateTime}
+     * @param eventOrder the argument of type {@code int}
+     * @param userDataKey the argument of type {@code java.lang.String}
+     * @param userData the argument of type {@code NetObject}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.UserTrackingRecord.-ctor" target="_top">.NET documentation</a>
+     */
     public UserTrackingRecord(NetType activityType, java.lang.String qualifiedName, Guid contextGuid, Guid parentContextGuid, DateTime eventDateTime, int eventOrder, java.lang.String userDataKey, NetObject userData) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -180,6 +203,13 @@ public class UserTrackingRecord extends system.workflow.runtime.tracking.Trackin
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Body.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.UserTrackingRecord.Body" target="_top">.NET documentation</a>
+     */
     public IList_1 getBody() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -195,6 +225,13 @@ public class UserTrackingRecord extends system.workflow.runtime.tracking.Trackin
         }
     }
 
+    /**
+     * Gets the value of the .NET property ContextGuid.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.UserTrackingRecord.ContextGuid" target="_top">.NET documentation</a>
+     */
     public Guid getContextGuid() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -210,6 +247,13 @@ public class UserTrackingRecord extends system.workflow.runtime.tracking.Trackin
         }
     }
 
+    /**
+     * Sets the value of the .NET property ContextGuid.
+     *
+     * @param ContextGuid the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.UserTrackingRecord.ContextGuid" target="_top">.NET documentation</a>
+     */
     public void setContextGuid(Guid ContextGuid) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -220,6 +264,13 @@ public class UserTrackingRecord extends system.workflow.runtime.tracking.Trackin
         }
     }
 
+    /**
+     * Gets the value of the .NET property ParentContextGuid.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.UserTrackingRecord.ParentContextGuid" target="_top">.NET documentation</a>
+     */
     public Guid getParentContextGuid() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -235,6 +286,13 @@ public class UserTrackingRecord extends system.workflow.runtime.tracking.Trackin
         }
     }
 
+    /**
+     * Sets the value of the .NET property ParentContextGuid.
+     *
+     * @param ParentContextGuid the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.UserTrackingRecord.ParentContextGuid" target="_top">.NET documentation</a>
+     */
     public void setParentContextGuid(Guid ParentContextGuid) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -245,6 +303,13 @@ public class UserTrackingRecord extends system.workflow.runtime.tracking.Trackin
         }
     }
 
+    /**
+     * Gets the value of the .NET property UserData.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.UserTrackingRecord.UserData" target="_top">.NET documentation</a>
+     */
     public NetObject getUserData() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -260,6 +325,13 @@ public class UserTrackingRecord extends system.workflow.runtime.tracking.Trackin
         }
     }
 
+    /**
+     * Sets the value of the .NET property UserData.
+     *
+     * @param UserData the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.UserTrackingRecord.UserData" target="_top">.NET documentation</a>
+     */
     public void setUserData(NetObject UserData) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -270,6 +342,13 @@ public class UserTrackingRecord extends system.workflow.runtime.tracking.Trackin
         }
     }
 
+    /**
+     * Gets the value of the .NET property QualifiedName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.UserTrackingRecord.QualifiedName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getQualifiedName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -284,6 +363,13 @@ public class UserTrackingRecord extends system.workflow.runtime.tracking.Trackin
         }
     }
 
+    /**
+     * Sets the value of the .NET property QualifiedName.
+     *
+     * @param QualifiedName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.UserTrackingRecord.QualifiedName" target="_top">.NET documentation</a>
+     */
     public void setQualifiedName(java.lang.String QualifiedName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -294,6 +380,13 @@ public class UserTrackingRecord extends system.workflow.runtime.tracking.Trackin
         }
     }
 
+    /**
+     * Gets the value of the .NET property UserDataKey.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.UserTrackingRecord.UserDataKey" target="_top">.NET documentation</a>
+     */
     public java.lang.String getUserDataKey() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -308,6 +401,13 @@ public class UserTrackingRecord extends system.workflow.runtime.tracking.Trackin
         }
     }
 
+    /**
+     * Sets the value of the .NET property UserDataKey.
+     *
+     * @param UserDataKey the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.UserTrackingRecord.UserDataKey" target="_top">.NET documentation</a>
+     */
     public void setUserDataKey(java.lang.String UserDataKey) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -318,6 +418,13 @@ public class UserTrackingRecord extends system.workflow.runtime.tracking.Trackin
         }
     }
 
+    /**
+     * Gets the value of the .NET property ActivityType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.UserTrackingRecord.ActivityType" target="_top">.NET documentation</a>
+     */
     public NetType getActivityType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -333,6 +440,13 @@ public class UserTrackingRecord extends system.workflow.runtime.tracking.Trackin
         }
     }
 
+    /**
+     * Sets the value of the .NET property ActivityType.
+     *
+     * @param ActivityType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.UserTrackingRecord.ActivityType" target="_top">.NET documentation</a>
+     */
     public void setActivityType(NetType ActivityType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

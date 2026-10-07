@@ -101,7 +101,10 @@ public class DataObjectPastingEventArgs extends system.windows.DataObjectEventAr
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DataObjectPastingEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,26 @@ public class DataObjectPastingEventArgs extends system.windows.DataObjectEventAr
     public DataObjectPastingEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param dataObject the argument of type {@code IDataObject}
+     * @param isDragDrop the argument of type {@code boolean}
+     * @param formatToApply the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.DataObjectPastingEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public DataObjectPastingEventArgs(IDataObject dataObject, boolean isDragDrop, java.lang.String formatToApply) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +193,13 @@ public class DataObjectPastingEventArgs extends system.windows.DataObjectEventAr
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property FormatToApply.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.DataObjectPastingEventArgs.FormatToApply" target="_top">.NET documentation</a>
+     */
     public java.lang.String getFormatToApply() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +214,22 @@ public class DataObjectPastingEventArgs extends system.windows.DataObjectEventAr
         }
     }
 
+    /**
+     * Sets the value of the .NET property FormatToApply.
+     *
+     * @param FormatToApply the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.DataObjectPastingEventArgs.FormatToApply" target="_top">.NET documentation</a>
+     */
     public void setFormatToApply(java.lang.String FormatToApply) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +240,13 @@ public class DataObjectPastingEventArgs extends system.windows.DataObjectEventAr
         }
     }
 
+    /**
+     * Gets the value of the .NET property DataObject.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.DataObjectPastingEventArgs.DataObject" target="_top">.NET documentation</a>
+     */
     public IDataObject getDataObject() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -209,6 +262,22 @@ public class DataObjectPastingEventArgs extends system.windows.DataObjectEventAr
         }
     }
 
+    /**
+     * Sets the value of the .NET property DataObject.
+     *
+     * @param DataObject the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.DataObjectPastingEventArgs.DataObject" target="_top">.NET documentation</a>
+     */
     public void setDataObject(IDataObject DataObject) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -219,6 +288,13 @@ public class DataObjectPastingEventArgs extends system.windows.DataObjectEventAr
         }
     }
 
+    /**
+     * Gets the value of the .NET property SourceDataObject.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.DataObjectPastingEventArgs.SourceDataObject" target="_top">.NET documentation</a>
+     */
     public IDataObject getSourceDataObject() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

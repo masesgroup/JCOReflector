@@ -101,7 +101,10 @@ public class DataControlFieldCell extends system.web.ui.webcontrols.TableCell  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DataControlFieldCell(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,13 @@ public class DataControlFieldCell extends system.web.ui.webcontrols.TableCell  {
     public DataControlFieldCell() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param containingField the argument of type {@code DataControlField}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.DataControlFieldCell.-ctor" target="_top">.NET documentation</a>
+     */
     public DataControlFieldCell(DataControlField containingField) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +180,13 @@ public class DataControlFieldCell extends system.web.ui.webcontrols.TableCell  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ContainingField.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.DataControlFieldCell.ContainingField" target="_top">.NET documentation</a>
+     */
     public DataControlField getContainingField() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

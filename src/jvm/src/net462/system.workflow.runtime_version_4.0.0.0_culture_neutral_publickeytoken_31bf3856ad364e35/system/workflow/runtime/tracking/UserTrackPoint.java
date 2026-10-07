@@ -101,7 +101,10 @@ public class UserTrackPoint extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public UserTrackPoint(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class UserTrackPoint extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.UserTrackPoint.-ctor" target="_top">.NET documentation</a>
+     */
     public UserTrackPoint() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -166,6 +175,13 @@ public class UserTrackPoint extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Extracts.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.UserTrackPoint.Extracts" target="_top">.NET documentation</a>
+     */
     public ExtractCollection getExtracts() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -181,6 +197,13 @@ public class UserTrackPoint extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Annotations.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.UserTrackPoint.Annotations" target="_top">.NET documentation</a>
+     */
     public TrackingAnnotationCollection getAnnotations() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -196,6 +219,13 @@ public class UserTrackPoint extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ExcludedLocations.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.UserTrackPoint.ExcludedLocations" target="_top">.NET documentation</a>
+     */
     public UserTrackingLocationCollection getExcludedLocations() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -211,6 +241,13 @@ public class UserTrackPoint extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MatchingLocations.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.UserTrackPoint.MatchingLocations" target="_top">.NET documentation</a>
+     */
     public UserTrackingLocationCollection getMatchingLocations() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -104,7 +104,9 @@ public class SocketException extends system.componentmodel.Win32Exception {
         super();
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
      */
     public SocketException(java.lang.Object instance) {
         super(instance);
@@ -165,6 +167,18 @@ public class SocketException extends system.componentmodel.Win32Exception {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param errorCode the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.SocketException.-ctor" target="_top">.NET documentation</a>
+     */
     public SocketException(int errorCode) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
@@ -183,6 +197,13 @@ public class SocketException extends system.componentmodel.Win32Exception {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property SocketErrorCode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.SocketException.SocketErrorCode" target="_top">.NET documentation</a>
+     */
     public SocketError getSocketErrorCode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

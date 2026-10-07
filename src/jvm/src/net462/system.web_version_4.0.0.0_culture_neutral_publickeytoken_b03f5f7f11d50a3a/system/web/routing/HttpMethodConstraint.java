@@ -104,7 +104,10 @@ public class HttpMethodConstraint extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public HttpMethodConstraint(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,15 @@ public class HttpMethodConstraint extends NetObject  {
     public HttpMethodConstraint() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param allowedMethods the argument of type {@code java.lang.String...}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Routing.HttpMethodConstraint.-ctor" target="_top">.NET documentation</a>
+     */
     public HttpMethodConstraint(java.lang.String... allowedMethods) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -172,8 +184,17 @@ public class HttpMethodConstraint extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIRouteConstraint method available in IRouteConstraint to obtain an object with an invocable method
+     *
+     * @param httpContext the argument of type {@code HttpContextBase}
+     * @param route the argument of type {@code Route}
+     * @param parameterName the argument of type {@code java.lang.String}
+     * @param values the argument of type {@code RouteValueDictionary}
+     * @param routeDirection the argument of type {@code RouteDirection}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Routing.IRouteConstraint.Match" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public boolean Match(HttpContextBase httpContext, Route route, java.lang.String parameterName, RouteValueDictionary values, RouteDirection routeDirection) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIRouteConstraint to obtain the full interface.");
     }
@@ -182,6 +203,13 @@ public class HttpMethodConstraint extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AllowedMethods.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Routing.HttpMethodConstraint.AllowedMethods" target="_top">.NET documentation</a>
+     */
     public ICollection_1 getAllowedMethods() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +225,13 @@ public class HttpMethodConstraint extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AllowedMethods.
+     *
+     * @param AllowedMethods the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Routing.HttpMethodConstraint.AllowedMethods" target="_top">.NET documentation</a>
+     */
     public void setAllowedMethods(ICollection_1 AllowedMethods) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

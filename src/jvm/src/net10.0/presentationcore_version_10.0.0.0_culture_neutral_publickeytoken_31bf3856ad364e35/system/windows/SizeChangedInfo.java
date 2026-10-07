@@ -100,7 +100,10 @@ public class SizeChangedInfo extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SizeChangedInfo(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,16 @@ public class SizeChangedInfo extends NetObject  {
     public SizeChangedInfo() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param element the argument of type {@code UIElement}
+     * @param previousSize the argument of type {@code Size}
+     * @param widthChanged the argument of type {@code boolean}
+     * @param heightChanged the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.SizeChangedInfo.-ctor" target="_top">.NET documentation</a>
+     */
     public SizeChangedInfo(UIElement element, Size previousSize, boolean widthChanged, boolean heightChanged) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +182,13 @@ public class SizeChangedInfo extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property HeightChanged.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.SizeChangedInfo.HeightChanged" target="_top">.NET documentation</a>
+     */
     public boolean getHeightChanged() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +203,13 @@ public class SizeChangedInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property WidthChanged.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.SizeChangedInfo.WidthChanged" target="_top">.NET documentation</a>
+     */
     public boolean getWidthChanged() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +224,13 @@ public class SizeChangedInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NewSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.SizeChangedInfo.NewSize" target="_top">.NET documentation</a>
+     */
     public Size getNewSize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -212,6 +246,13 @@ public class SizeChangedInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PreviousSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.SizeChangedInfo.PreviousSize" target="_top">.NET documentation</a>
+     */
     public Size getPreviousSize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

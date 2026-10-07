@@ -104,7 +104,10 @@ public class ApplicationManifest extends microsoft.build.tasks.deployment.manife
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ApplicationManifest(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,12 @@ public class ApplicationManifest extends microsoft.build.tasks.deployment.manife
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.-ctor" target="_top">.NET documentation</a>
+     */
     public ApplicationManifest() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -161,6 +170,13 @@ public class ApplicationManifest extends microsoft.build.tasks.deployment.manife
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param targetFrameworkVersion the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.-ctor" target="_top">.NET documentation</a>
+     */
     public ApplicationManifest(java.lang.String targetFrameworkVersion) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -175,6 +191,37 @@ public class ApplicationManifest extends microsoft.build.tasks.deployment.manife
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Validate.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.xml.xpath.XPathException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.xml.schema.XmlSchemaException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.BadImageFormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.Validate" target="_top">.NET documentation</a>
+     */
     public void Validate() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.NullReferenceException, system.xml.XmlException, system.xml.xpath.XPathException, system.FormatException, system.IndexOutOfRangeException, system.NotSupportedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.xml.schema.XmlSchemaException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.BadImageFormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +236,13 @@ public class ApplicationManifest extends microsoft.build.tasks.deployment.manife
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property HostInBrowser.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.HostInBrowser" target="_top">.NET documentation</a>
+     */
     public boolean getHostInBrowser() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +257,13 @@ public class ApplicationManifest extends microsoft.build.tasks.deployment.manife
         }
     }
 
+    /**
+     * Sets the value of the .NET property HostInBrowser.
+     *
+     * @param HostInBrowser the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.HostInBrowser" target="_top">.NET documentation</a>
+     */
     public void setHostInBrowser(boolean HostInBrowser) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -213,6 +274,13 @@ public class ApplicationManifest extends microsoft.build.tasks.deployment.manife
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsClickOnceManifest.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.IsClickOnceManifest" target="_top">.NET documentation</a>
+     */
     public boolean getIsClickOnceManifest() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -227,6 +295,13 @@ public class ApplicationManifest extends microsoft.build.tasks.deployment.manife
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsClickOnceManifest.
+     *
+     * @param IsClickOnceManifest the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.IsClickOnceManifest" target="_top">.NET documentation</a>
+     */
     public void setIsClickOnceManifest(boolean IsClickOnceManifest) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -237,6 +312,13 @@ public class ApplicationManifest extends microsoft.build.tasks.deployment.manife
         }
     }
 
+    /**
+     * Gets the value of the .NET property UseApplicationTrust.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.UseApplicationTrust" target="_top">.NET documentation</a>
+     */
     public boolean getUseApplicationTrust() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -251,6 +333,13 @@ public class ApplicationManifest extends microsoft.build.tasks.deployment.manife
         }
     }
 
+    /**
+     * Sets the value of the .NET property UseApplicationTrust.
+     *
+     * @param UseApplicationTrust the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.UseApplicationTrust" target="_top">.NET documentation</a>
+     */
     public void setUseApplicationTrust(boolean UseApplicationTrust) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -261,6 +350,13 @@ public class ApplicationManifest extends microsoft.build.tasks.deployment.manife
         }
     }
 
+    /**
+     * Gets the value of the .NET property MaxTargetPath.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.MaxTargetPath" target="_top">.NET documentation</a>
+     */
     public int getMaxTargetPath() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -301,6 +397,13 @@ public class ApplicationManifest extends microsoft.build.tasks.deployment.manife
         }
     }
 
+    /**
+     * Sets the value of the .NET property MaxTargetPath.
+     *
+     * @param MaxTargetPath the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.MaxTargetPath" target="_top">.NET documentation</a>
+     */
     public void setMaxTargetPath(int MaxTargetPath) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -311,6 +414,13 @@ public class ApplicationManifest extends microsoft.build.tasks.deployment.manife
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlEntryPointIdentity.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlEntryPointIdentity" target="_top">.NET documentation</a>
+     */
     public AssemblyIdentity getXmlEntryPointIdentity() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -326,6 +436,13 @@ public class ApplicationManifest extends microsoft.build.tasks.deployment.manife
         }
     }
 
+    /**
+     * Sets the value of the .NET property XmlEntryPointIdentity.
+     *
+     * @param XmlEntryPointIdentity the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlEntryPointIdentity" target="_top">.NET documentation</a>
+     */
     public void setXmlEntryPointIdentity(AssemblyIdentity XmlEntryPointIdentity) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -336,6 +453,13 @@ public class ApplicationManifest extends microsoft.build.tasks.deployment.manife
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlFileAssociations.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlFileAssociations" target="_top">.NET documentation</a>
+     */
     public final FileAssociation[] getXmlFileAssociations() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -357,6 +481,13 @@ public class ApplicationManifest extends microsoft.build.tasks.deployment.manife
         }
     }
 
+    /**
+     * Sets the value of the .NET property XmlFileAssociations.
+     *
+     * @param XmlFileAssociations the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlFileAssociations" target="_top">.NET documentation</a>
+     */
     public void setXmlFileAssociations(FileAssociation[] XmlFileAssociations) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -367,6 +498,16 @@ public class ApplicationManifest extends microsoft.build.tasks.deployment.manife
         }
     }
 
+    /**
+     * Gets the value of the .NET property FileAssociations.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.FileAssociations" target="_top">.NET documentation</a>
+     */
     public FileAssociationCollection getFileAssociations() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -382,6 +523,13 @@ public class ApplicationManifest extends microsoft.build.tasks.deployment.manife
         }
     }
 
+    /**
+     * Gets the value of the .NET property TrustInfo.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.TrustInfo" target="_top">.NET documentation</a>
+     */
     public TrustInfo getTrustInfo() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -397,6 +545,13 @@ public class ApplicationManifest extends microsoft.build.tasks.deployment.manife
         }
     }
 
+    /**
+     * Sets the value of the .NET property TrustInfo.
+     *
+     * @param TrustInfo the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.TrustInfo" target="_top">.NET documentation</a>
+     */
     public void setTrustInfo(TrustInfo TrustInfo) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -407,6 +562,13 @@ public class ApplicationManifest extends microsoft.build.tasks.deployment.manife
         }
     }
 
+    /**
+     * Gets the value of the .NET property ConfigFile.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.ConfigFile" target="_top">.NET documentation</a>
+     */
     public java.lang.String getConfigFile() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -421,6 +583,13 @@ public class ApplicationManifest extends microsoft.build.tasks.deployment.manife
         }
     }
 
+    /**
+     * Sets the value of the .NET property ConfigFile.
+     *
+     * @param ConfigFile the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.ConfigFile" target="_top">.NET documentation</a>
+     */
     public void setConfigFile(java.lang.String ConfigFile) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -431,6 +600,13 @@ public class ApplicationManifest extends microsoft.build.tasks.deployment.manife
         }
     }
 
+    /**
+     * Gets the value of the .NET property ErrorReportUrl.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.ErrorReportUrl" target="_top">.NET documentation</a>
+     */
     public java.lang.String getErrorReportUrl() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -445,6 +621,13 @@ public class ApplicationManifest extends microsoft.build.tasks.deployment.manife
         }
     }
 
+    /**
+     * Sets the value of the .NET property ErrorReportUrl.
+     *
+     * @param ErrorReportUrl the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.ErrorReportUrl" target="_top">.NET documentation</a>
+     */
     public void setErrorReportUrl(java.lang.String ErrorReportUrl) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -455,6 +638,13 @@ public class ApplicationManifest extends microsoft.build.tasks.deployment.manife
         }
     }
 
+    /**
+     * Gets the value of the .NET property IconFile.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.IconFile" target="_top">.NET documentation</a>
+     */
     public java.lang.String getIconFile() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -469,6 +659,13 @@ public class ApplicationManifest extends microsoft.build.tasks.deployment.manife
         }
     }
 
+    /**
+     * Sets the value of the .NET property IconFile.
+     *
+     * @param IconFile the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.IconFile" target="_top">.NET documentation</a>
+     */
     public void setIconFile(java.lang.String IconFile) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -479,6 +676,13 @@ public class ApplicationManifest extends microsoft.build.tasks.deployment.manife
         }
     }
 
+    /**
+     * Gets the value of the .NET property OSDescription.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.OSDescription" target="_top">.NET documentation</a>
+     */
     public java.lang.String getOSDescription() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -493,6 +697,13 @@ public class ApplicationManifest extends microsoft.build.tasks.deployment.manife
         }
     }
 
+    /**
+     * Sets the value of the .NET property OSDescription.
+     *
+     * @param OSDescription the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.OSDescription" target="_top">.NET documentation</a>
+     */
     public void setOSDescription(java.lang.String OSDescription) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -503,6 +714,13 @@ public class ApplicationManifest extends microsoft.build.tasks.deployment.manife
         }
     }
 
+    /**
+     * Gets the value of the .NET property OSSupportUrl.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.OSSupportUrl" target="_top">.NET documentation</a>
+     */
     public java.lang.String getOSSupportUrl() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -517,6 +735,13 @@ public class ApplicationManifest extends microsoft.build.tasks.deployment.manife
         }
     }
 
+    /**
+     * Sets the value of the .NET property OSSupportUrl.
+     *
+     * @param OSSupportUrl the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.OSSupportUrl" target="_top">.NET documentation</a>
+     */
     public void setOSSupportUrl(java.lang.String OSSupportUrl) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -527,6 +752,19 @@ public class ApplicationManifest extends microsoft.build.tasks.deployment.manife
         }
     }
 
+    /**
+     * Gets the value of the .NET property OSVersion.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.OSVersion" target="_top">.NET documentation</a>
+     */
     public java.lang.String getOSVersion() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.OverflowException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -541,6 +779,18 @@ public class ApplicationManifest extends microsoft.build.tasks.deployment.manife
         }
     }
 
+    /**
+     * Sets the value of the .NET property OSVersion.
+     *
+     * @param OSVersion the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.OSVersion" target="_top">.NET documentation</a>
+     */
     public void setOSVersion(java.lang.String OSVersion) throws Throwable, system.ArgumentNullException, system.FormatException, system.OverflowException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -551,6 +801,13 @@ public class ApplicationManifest extends microsoft.build.tasks.deployment.manife
         }
     }
 
+    /**
+     * Gets the value of the .NET property Product.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.Product" target="_top">.NET documentation</a>
+     */
     public java.lang.String getProduct() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -565,6 +822,13 @@ public class ApplicationManifest extends microsoft.build.tasks.deployment.manife
         }
     }
 
+    /**
+     * Sets the value of the .NET property Product.
+     *
+     * @param Product the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.Product" target="_top">.NET documentation</a>
+     */
     public void setProduct(java.lang.String Product) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -575,6 +839,13 @@ public class ApplicationManifest extends microsoft.build.tasks.deployment.manife
         }
     }
 
+    /**
+     * Gets the value of the .NET property Publisher.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.Publisher" target="_top">.NET documentation</a>
+     */
     public java.lang.String getPublisher() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -589,6 +860,13 @@ public class ApplicationManifest extends microsoft.build.tasks.deployment.manife
         }
     }
 
+    /**
+     * Sets the value of the .NET property Publisher.
+     *
+     * @param Publisher the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.Publisher" target="_top">.NET documentation</a>
+     */
     public void setPublisher(java.lang.String Publisher) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -599,6 +877,13 @@ public class ApplicationManifest extends microsoft.build.tasks.deployment.manife
         }
     }
 
+    /**
+     * Gets the value of the .NET property SuiteName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.SuiteName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSuiteName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -613,6 +898,13 @@ public class ApplicationManifest extends microsoft.build.tasks.deployment.manife
         }
     }
 
+    /**
+     * Sets the value of the .NET property SuiteName.
+     *
+     * @param SuiteName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.SuiteName" target="_top">.NET documentation</a>
+     */
     public void setSuiteName(java.lang.String SuiteName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -623,6 +915,13 @@ public class ApplicationManifest extends microsoft.build.tasks.deployment.manife
         }
     }
 
+    /**
+     * Gets the value of the .NET property SupportUrl.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.SupportUrl" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSupportUrl() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -637,6 +936,13 @@ public class ApplicationManifest extends microsoft.build.tasks.deployment.manife
         }
     }
 
+    /**
+     * Sets the value of the .NET property SupportUrl.
+     *
+     * @param SupportUrl the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.SupportUrl" target="_top">.NET documentation</a>
+     */
     public void setSupportUrl(java.lang.String SupportUrl) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -647,6 +953,13 @@ public class ApplicationManifest extends microsoft.build.tasks.deployment.manife
         }
     }
 
+    /**
+     * Gets the value of the .NET property TargetFrameworkVersion.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.TargetFrameworkVersion" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTargetFrameworkVersion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -661,6 +974,13 @@ public class ApplicationManifest extends microsoft.build.tasks.deployment.manife
         }
     }
 
+    /**
+     * Sets the value of the .NET property TargetFrameworkVersion.
+     *
+     * @param TargetFrameworkVersion the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.TargetFrameworkVersion" target="_top">.NET documentation</a>
+     */
     public void setTargetFrameworkVersion(java.lang.String TargetFrameworkVersion) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -671,6 +991,13 @@ public class ApplicationManifest extends microsoft.build.tasks.deployment.manife
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlConfigFile.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlConfigFile" target="_top">.NET documentation</a>
+     */
     public java.lang.String getXmlConfigFile() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -685,6 +1012,13 @@ public class ApplicationManifest extends microsoft.build.tasks.deployment.manife
         }
     }
 
+    /**
+     * Sets the value of the .NET property XmlConfigFile.
+     *
+     * @param XmlConfigFile the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlConfigFile" target="_top">.NET documentation</a>
+     */
     public void setXmlConfigFile(java.lang.String XmlConfigFile) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -695,6 +1029,13 @@ public class ApplicationManifest extends microsoft.build.tasks.deployment.manife
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlEntryPointParameters.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlEntryPointParameters" target="_top">.NET documentation</a>
+     */
     public java.lang.String getXmlEntryPointParameters() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -709,6 +1050,13 @@ public class ApplicationManifest extends microsoft.build.tasks.deployment.manife
         }
     }
 
+    /**
+     * Sets the value of the .NET property XmlEntryPointParameters.
+     *
+     * @param XmlEntryPointParameters the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlEntryPointParameters" target="_top">.NET documentation</a>
+     */
     public void setXmlEntryPointParameters(java.lang.String XmlEntryPointParameters) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -719,6 +1067,13 @@ public class ApplicationManifest extends microsoft.build.tasks.deployment.manife
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlEntryPointPath.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlEntryPointPath" target="_top">.NET documentation</a>
+     */
     public java.lang.String getXmlEntryPointPath() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -733,6 +1088,13 @@ public class ApplicationManifest extends microsoft.build.tasks.deployment.manife
         }
     }
 
+    /**
+     * Sets the value of the .NET property XmlEntryPointPath.
+     *
+     * @param XmlEntryPointPath the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlEntryPointPath" target="_top">.NET documentation</a>
+     */
     public void setXmlEntryPointPath(java.lang.String XmlEntryPointPath) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -743,6 +1105,13 @@ public class ApplicationManifest extends microsoft.build.tasks.deployment.manife
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlErrorReportUrl.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlErrorReportUrl" target="_top">.NET documentation</a>
+     */
     public java.lang.String getXmlErrorReportUrl() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -757,6 +1126,13 @@ public class ApplicationManifest extends microsoft.build.tasks.deployment.manife
         }
     }
 
+    /**
+     * Sets the value of the .NET property XmlErrorReportUrl.
+     *
+     * @param XmlErrorReportUrl the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlErrorReportUrl" target="_top">.NET documentation</a>
+     */
     public void setXmlErrorReportUrl(java.lang.String XmlErrorReportUrl) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -767,6 +1143,19 @@ public class ApplicationManifest extends microsoft.build.tasks.deployment.manife
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlHostInBrowser.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlHostInBrowser" target="_top">.NET documentation</a>
+     */
     public java.lang.String getXmlHostInBrowser() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -781,6 +1170,19 @@ public class ApplicationManifest extends microsoft.build.tasks.deployment.manife
         }
     }
 
+    /**
+     * Sets the value of the .NET property XmlHostInBrowser.
+     *
+     * @param XmlHostInBrowser the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlHostInBrowser" target="_top">.NET documentation</a>
+     */
     public void setXmlHostInBrowser(java.lang.String XmlHostInBrowser) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -791,6 +1193,13 @@ public class ApplicationManifest extends microsoft.build.tasks.deployment.manife
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlIconFile.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlIconFile" target="_top">.NET documentation</a>
+     */
     public java.lang.String getXmlIconFile() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -805,6 +1214,13 @@ public class ApplicationManifest extends microsoft.build.tasks.deployment.manife
         }
     }
 
+    /**
+     * Sets the value of the .NET property XmlIconFile.
+     *
+     * @param XmlIconFile the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlIconFile" target="_top">.NET documentation</a>
+     */
     public void setXmlIconFile(java.lang.String XmlIconFile) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -815,6 +1231,19 @@ public class ApplicationManifest extends microsoft.build.tasks.deployment.manife
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlIsClickOnceManifest.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlIsClickOnceManifest" target="_top">.NET documentation</a>
+     */
     public java.lang.String getXmlIsClickOnceManifest() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -829,6 +1258,19 @@ public class ApplicationManifest extends microsoft.build.tasks.deployment.manife
         }
     }
 
+    /**
+     * Sets the value of the .NET property XmlIsClickOnceManifest.
+     *
+     * @param XmlIsClickOnceManifest the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlIsClickOnceManifest" target="_top">.NET documentation</a>
+     */
     public void setXmlIsClickOnceManifest(java.lang.String XmlIsClickOnceManifest) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -839,6 +1281,13 @@ public class ApplicationManifest extends microsoft.build.tasks.deployment.manife
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlOSBuild.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlOSBuild" target="_top">.NET documentation</a>
+     */
     public java.lang.String getXmlOSBuild() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -853,6 +1302,13 @@ public class ApplicationManifest extends microsoft.build.tasks.deployment.manife
         }
     }
 
+    /**
+     * Sets the value of the .NET property XmlOSBuild.
+     *
+     * @param XmlOSBuild the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlOSBuild" target="_top">.NET documentation</a>
+     */
     public void setXmlOSBuild(java.lang.String XmlOSBuild) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -863,6 +1319,13 @@ public class ApplicationManifest extends microsoft.build.tasks.deployment.manife
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlOSDescription.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlOSDescription" target="_top">.NET documentation</a>
+     */
     public java.lang.String getXmlOSDescription() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -877,6 +1340,13 @@ public class ApplicationManifest extends microsoft.build.tasks.deployment.manife
         }
     }
 
+    /**
+     * Sets the value of the .NET property XmlOSDescription.
+     *
+     * @param XmlOSDescription the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlOSDescription" target="_top">.NET documentation</a>
+     */
     public void setXmlOSDescription(java.lang.String XmlOSDescription) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -887,6 +1357,13 @@ public class ApplicationManifest extends microsoft.build.tasks.deployment.manife
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlOSMajor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlOSMajor" target="_top">.NET documentation</a>
+     */
     public java.lang.String getXmlOSMajor() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -901,6 +1378,13 @@ public class ApplicationManifest extends microsoft.build.tasks.deployment.manife
         }
     }
 
+    /**
+     * Sets the value of the .NET property XmlOSMajor.
+     *
+     * @param XmlOSMajor the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlOSMajor" target="_top">.NET documentation</a>
+     */
     public void setXmlOSMajor(java.lang.String XmlOSMajor) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -911,6 +1395,13 @@ public class ApplicationManifest extends microsoft.build.tasks.deployment.manife
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlOSMinor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlOSMinor" target="_top">.NET documentation</a>
+     */
     public java.lang.String getXmlOSMinor() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -925,6 +1416,13 @@ public class ApplicationManifest extends microsoft.build.tasks.deployment.manife
         }
     }
 
+    /**
+     * Sets the value of the .NET property XmlOSMinor.
+     *
+     * @param XmlOSMinor the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlOSMinor" target="_top">.NET documentation</a>
+     */
     public void setXmlOSMinor(java.lang.String XmlOSMinor) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -935,6 +1433,13 @@ public class ApplicationManifest extends microsoft.build.tasks.deployment.manife
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlOSRevision.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlOSRevision" target="_top">.NET documentation</a>
+     */
     public java.lang.String getXmlOSRevision() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -949,6 +1454,13 @@ public class ApplicationManifest extends microsoft.build.tasks.deployment.manife
         }
     }
 
+    /**
+     * Sets the value of the .NET property XmlOSRevision.
+     *
+     * @param XmlOSRevision the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlOSRevision" target="_top">.NET documentation</a>
+     */
     public void setXmlOSRevision(java.lang.String XmlOSRevision) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -959,6 +1471,13 @@ public class ApplicationManifest extends microsoft.build.tasks.deployment.manife
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlOSSupportUrl.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlOSSupportUrl" target="_top">.NET documentation</a>
+     */
     public java.lang.String getXmlOSSupportUrl() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -973,6 +1492,13 @@ public class ApplicationManifest extends microsoft.build.tasks.deployment.manife
         }
     }
 
+    /**
+     * Sets the value of the .NET property XmlOSSupportUrl.
+     *
+     * @param XmlOSSupportUrl the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlOSSupportUrl" target="_top">.NET documentation</a>
+     */
     public void setXmlOSSupportUrl(java.lang.String XmlOSSupportUrl) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -983,6 +1509,13 @@ public class ApplicationManifest extends microsoft.build.tasks.deployment.manife
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlProduct.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlProduct" target="_top">.NET documentation</a>
+     */
     public java.lang.String getXmlProduct() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -997,6 +1530,13 @@ public class ApplicationManifest extends microsoft.build.tasks.deployment.manife
         }
     }
 
+    /**
+     * Sets the value of the .NET property XmlProduct.
+     *
+     * @param XmlProduct the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlProduct" target="_top">.NET documentation</a>
+     */
     public void setXmlProduct(java.lang.String XmlProduct) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1007,6 +1547,13 @@ public class ApplicationManifest extends microsoft.build.tasks.deployment.manife
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlPublisher.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlPublisher" target="_top">.NET documentation</a>
+     */
     public java.lang.String getXmlPublisher() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1021,6 +1568,13 @@ public class ApplicationManifest extends microsoft.build.tasks.deployment.manife
         }
     }
 
+    /**
+     * Sets the value of the .NET property XmlPublisher.
+     *
+     * @param XmlPublisher the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlPublisher" target="_top">.NET documentation</a>
+     */
     public void setXmlPublisher(java.lang.String XmlPublisher) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1031,6 +1585,13 @@ public class ApplicationManifest extends microsoft.build.tasks.deployment.manife
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlSuiteName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlSuiteName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getXmlSuiteName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1045,6 +1606,13 @@ public class ApplicationManifest extends microsoft.build.tasks.deployment.manife
         }
     }
 
+    /**
+     * Sets the value of the .NET property XmlSuiteName.
+     *
+     * @param XmlSuiteName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlSuiteName" target="_top">.NET documentation</a>
+     */
     public void setXmlSuiteName(java.lang.String XmlSuiteName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1055,6 +1623,13 @@ public class ApplicationManifest extends microsoft.build.tasks.deployment.manife
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlSupportUrl.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlSupportUrl" target="_top">.NET documentation</a>
+     */
     public java.lang.String getXmlSupportUrl() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1069,6 +1644,13 @@ public class ApplicationManifest extends microsoft.build.tasks.deployment.manife
         }
     }
 
+    /**
+     * Sets the value of the .NET property XmlSupportUrl.
+     *
+     * @param XmlSupportUrl the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlSupportUrl" target="_top">.NET documentation</a>
+     */
     public void setXmlSupportUrl(java.lang.String XmlSupportUrl) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1079,6 +1661,19 @@ public class ApplicationManifest extends microsoft.build.tasks.deployment.manife
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlUseApplicationTrust.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlUseApplicationTrust" target="_top">.NET documentation</a>
+     */
     public java.lang.String getXmlUseApplicationTrust() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1093,6 +1688,19 @@ public class ApplicationManifest extends microsoft.build.tasks.deployment.manife
         }
     }
 
+    /**
+     * Sets the value of the .NET property XmlUseApplicationTrust.
+     *
+     * @param XmlUseApplicationTrust the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest.XmlUseApplicationTrust" target="_top">.NET documentation</a>
+     */
     public void setXmlUseApplicationTrust(java.lang.String XmlUseApplicationTrust) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

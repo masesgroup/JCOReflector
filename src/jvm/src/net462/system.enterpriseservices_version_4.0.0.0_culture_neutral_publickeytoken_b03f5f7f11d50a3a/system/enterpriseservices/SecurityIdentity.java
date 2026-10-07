@@ -100,7 +100,10 @@ public class SecurityIdentity extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SecurityIdentity(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -159,6 +162,13 @@ public class SecurityIdentity extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AuthenticationService.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.SecurityIdentity.AuthenticationService" target="_top">.NET documentation</a>
+     */
     public int getAuthenticationService() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -199,6 +209,13 @@ public class SecurityIdentity extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AuthenticationLevel.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.SecurityIdentity.AuthenticationLevel" target="_top">.NET documentation</a>
+     */
     public AuthenticationOption getAuthenticationLevel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -214,6 +231,13 @@ public class SecurityIdentity extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ImpersonationLevel.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.SecurityIdentity.ImpersonationLevel" target="_top">.NET documentation</a>
+     */
     public ImpersonationLevelOption getImpersonationLevel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -229,6 +253,13 @@ public class SecurityIdentity extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AccountName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.SecurityIdentity.AccountName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getAccountName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

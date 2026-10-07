@@ -100,7 +100,10 @@ public class AssemblyNameProxy extends system.MarshalByRefObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public AssemblyNameProxy(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class AssemblyNameProxy extends system.MarshalByRefObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.AssemblyNameProxy.-ctor" target="_top">.NET documentation</a>
+     */
     public AssemblyNameProxy() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -161,6 +170,25 @@ public class AssemblyNameProxy extends system.MarshalByRefObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetAssemblyName.
+     *
+     * @param assemblyFile the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.io.FileLoadException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.AssemblyNameProxy.GetAssemblyName" target="_top">.NET documentation</a>
+     */
     public AssemblyName GetAssemblyName(java.lang.String assemblyFile) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.TypeLoadException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.io.FileLoadException, system.io.FileNotFoundException, system.NotSupportedException, system.MissingMethodException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

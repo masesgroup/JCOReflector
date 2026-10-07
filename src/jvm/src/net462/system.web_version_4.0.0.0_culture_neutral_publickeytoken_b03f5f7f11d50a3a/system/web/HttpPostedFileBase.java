@@ -99,7 +99,10 @@ public class HttpPostedFileBase extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public HttpPostedFileBase(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,14 @@ public class HttpPostedFileBase extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member SaveAs.
+     *
+     * @param filename the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpPostedFileBase.SaveAs" target="_top">.NET documentation</a>
+     */
     public void SaveAs(java.lang.String filename) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -166,6 +177,14 @@ public class HttpPostedFileBase extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ContentLength.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpPostedFileBase.ContentLength" target="_top">.NET documentation</a>
+     */
     public int getContentLength() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,6 +225,14 @@ public class HttpPostedFileBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property InputStream.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpPostedFileBase.InputStream" target="_top">.NET documentation</a>
+     */
     public Stream getInputStream() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -221,6 +248,14 @@ public class HttpPostedFileBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ContentType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpPostedFileBase.ContentType" target="_top">.NET documentation</a>
+     */
     public java.lang.String getContentType() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -235,6 +270,14 @@ public class HttpPostedFileBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FileName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpPostedFileBase.FileName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getFileName() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

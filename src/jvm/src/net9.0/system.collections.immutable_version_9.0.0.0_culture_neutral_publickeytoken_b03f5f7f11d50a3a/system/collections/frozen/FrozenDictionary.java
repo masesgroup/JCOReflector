@@ -104,7 +104,10 @@ public class FrozenDictionary extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public FrozenDictionary(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,32 @@ public class FrozenDictionary extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ToFrozenDictionary.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param <TElement> the type of the generic argument TElement
+     * @param source the argument of type {@code IEnumerable_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @param elementSelector the argument of type {@code Func_2}
+     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.diagnostics.UnreachableException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Frozen.FrozenDictionary.ToFrozenDictionary" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TElement extends IJCOBridgeReflected> FrozenDictionary_2 ToFrozenDictionary(IEnumerable_1 source, Func_2 keySelector, Func_2 elementSelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.diagnostics.UnreachableException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -172,6 +201,30 @@ public class FrozenDictionary extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToFrozenDictionary.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param source the argument of type {@code IEnumerable_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.diagnostics.UnreachableException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Frozen.FrozenDictionary.ToFrozenDictionary" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> FrozenDictionary_2 ToFrozenDictionary(IEnumerable_1 source, Func_2 keySelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.diagnostics.UnreachableException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -187,6 +240,27 @@ public class FrozenDictionary extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToFrozenDictionary.
+     *
+     * @param <TKey> the type of the generic argument TKey
+     * @param <TValue> the type of the generic argument TValue
+     * @param source the argument of type {@code IEnumerable_1}
+     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.diagnostics.UnreachableException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Frozen.FrozenDictionary.ToFrozenDictionary" target="_top">.NET documentation</a>
+     */
     public static <TKey extends IJCOBridgeReflected, TValue extends IJCOBridgeReflected> FrozenDictionary_2 ToFrozenDictionary(IEnumerable_1 source, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.diagnostics.UnreachableException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

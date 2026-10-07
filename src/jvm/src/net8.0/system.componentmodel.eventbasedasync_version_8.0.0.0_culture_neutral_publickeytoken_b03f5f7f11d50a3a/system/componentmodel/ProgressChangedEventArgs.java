@@ -99,7 +99,10 @@ public class ProgressChangedEventArgs extends system.EventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ProgressChangedEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,14 @@ public class ProgressChangedEventArgs extends system.EventArgs  {
     public ProgressChangedEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param progressPercentage the argument of type {@code int}
+     * @param userState the argument of type {@code NetObject}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ProgressChangedEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public ProgressChangedEventArgs(int progressPercentage, NetObject userState) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +179,13 @@ public class ProgressChangedEventArgs extends system.EventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ProgressPercentage.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ProgressChangedEventArgs.ProgressPercentage" target="_top">.NET documentation</a>
+     */
     public int getProgressPercentage() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +226,13 @@ public class ProgressChangedEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UserState.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ProgressChangedEventArgs.UserState" target="_top">.NET documentation</a>
+     */
     public NetObject getUserState() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -100,7 +100,10 @@ public class IComPropertyBrowserImplementation extends NetObject implements ICom
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IComPropertyBrowserImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -142,6 +145,13 @@ public class IComPropertyBrowserImplementation extends NetObject implements ICom
 
     // Methods section
     
+    /**
+     * Invokes the .NET member EnsurePendingChangesCommitted.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ComponentModel.Com2Interop.IComPropertyBrowser.EnsurePendingChangesCommitted" target="_top">.NET documentation</a>
+     */
     public boolean EnsurePendingChangesCommitted() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -156,6 +166,12 @@ public class IComPropertyBrowserImplementation extends NetObject implements ICom
         }
     }
 
+    /**
+     * Invokes the .NET member DropDownDone.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ComponentModel.Com2Interop.IComPropertyBrowser.DropDownDone" target="_top">.NET documentation</a>
+     */
     public void DropDownDone() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -166,6 +182,12 @@ public class IComPropertyBrowserImplementation extends NetObject implements ICom
         }
     }
 
+    /**
+     * Invokes the .NET member HandleF4.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ComponentModel.Com2Interop.IComPropertyBrowser.HandleF4" target="_top">.NET documentation</a>
+     */
     public void HandleF4() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -176,6 +198,13 @@ public class IComPropertyBrowserImplementation extends NetObject implements ICom
         }
     }
 
+    /**
+     * Invokes the .NET member LoadState.
+     *
+     * @param key the argument of type {@code RegistryKey}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ComponentModel.Com2Interop.IComPropertyBrowser.LoadState" target="_top">.NET documentation</a>
+     */
     public void LoadState(RegistryKey key) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -186,6 +215,13 @@ public class IComPropertyBrowserImplementation extends NetObject implements ICom
         }
     }
 
+    /**
+     * Invokes the .NET member SaveState.
+     *
+     * @param key the argument of type {@code RegistryKey}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ComponentModel.Com2Interop.IComPropertyBrowser.SaveState" target="_top">.NET documentation</a>
+     */
     public void SaveState(RegistryKey key) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +236,13 @@ public class IComPropertyBrowserImplementation extends NetObject implements ICom
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property InPropertySet.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ComponentModel.Com2Interop.IComPropertyBrowser.InPropertySet" target="_top">.NET documentation</a>
+     */
     public boolean getInPropertySet() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -219,6 +262,13 @@ public class IComPropertyBrowserImplementation extends NetObject implements ICom
     // Instance Events section
     
 
+    /**
+     * Invokes the .NET member addComComponentNameChanged.
+     *
+     * @param handler the argument of type {@code ComponentRenameEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addComComponentNameChanged(ComponentRenameEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -229,6 +279,13 @@ public class IComPropertyBrowserImplementation extends NetObject implements ICom
         }
     }
 
+    /**
+     * Invokes the .NET member removeComComponentNameChanged.
+     *
+     * @param handler the argument of type {@code ComponentRenameEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeComComponentNameChanged(ComponentRenameEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -100,7 +100,10 @@ public class ToolboxItemFilterAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ToolboxItemFilterAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,14 @@ public class ToolboxItemFilterAttribute extends system.Attribute  {
     public ToolboxItemFilterAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param filterString the argument of type {@code java.lang.String}
+     * @param filterType the argument of type {@code ToolboxItemFilterType}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ToolboxItemFilterAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public ToolboxItemFilterAttribute(java.lang.String filterString, ToolboxItemFilterType filterType) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -160,6 +171,13 @@ public class ToolboxItemFilterAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param filterString the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ToolboxItemFilterAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public ToolboxItemFilterAttribute(java.lang.String filterString) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -175,6 +193,19 @@ public class ToolboxItemFilterAttribute extends system.Attribute  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Match.
+     *
+     * @param obj the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ToolboxItemFilterAttribute.Match" target="_top">.NET documentation</a>
+     */
     public boolean Match(NetObject obj) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +224,13 @@ public class ToolboxItemFilterAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property FilterType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ToolboxItemFilterAttribute.FilterType" target="_top">.NET documentation</a>
+     */
     public ToolboxItemFilterType getFilterType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +246,13 @@ public class ToolboxItemFilterAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FilterString.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ToolboxItemFilterAttribute.FilterString" target="_top">.NET documentation</a>
+     */
     public java.lang.String getFilterString() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

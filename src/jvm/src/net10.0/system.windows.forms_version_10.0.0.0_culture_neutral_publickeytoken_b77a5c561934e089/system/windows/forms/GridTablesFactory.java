@@ -100,7 +100,10 @@ public class GridTablesFactory extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public GridTablesFactory(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,26 @@ public class GridTablesFactory extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CreateGridTables.
+     *
+     * @param gridTable the argument of type {@code DataGridTableStyle}
+     * @param dataSource the argument of type {@code NetObject}
+     * @param dataMember the argument of type {@code java.lang.String}
+     * @param bindingManager the argument of type {@code BindingContext}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.GridTablesFactory.CreateGridTables" target="_top">.NET documentation</a>
+     */
     public static DataGridTableStyle[] CreateGridTables(DataGridTableStyle gridTable, NetObject dataSource, java.lang.String dataMember, BindingContext bindingManager) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

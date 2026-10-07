@@ -52,5 +52,11 @@ import system.componentmodel.DoWorkEventArgs;
  * @version 2.0.0.0
  */
 public interface IDoWorkEventHandler {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param sender the .NET argument of type {@code System.Object}
+     * @param e the .NET argument of type {@code System.ComponentModel.DoWorkEventArgs}
+     */
     public void Invoke(NetObject sender, DoWorkEventArgs e);
 }

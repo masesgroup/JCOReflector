@@ -100,7 +100,10 @@ public class XmlSchemaSearchPattern extends system.web.services.discovery.Discov
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XmlSchemaSearchPattern(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class XmlSchemaSearchPattern extends system.web.services.discovery.Discov
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Discovery.XmlSchemaSearchPattern.-ctor" target="_top">.NET documentation</a>
+     */
     public XmlSchemaSearchPattern() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -161,6 +170,14 @@ public class XmlSchemaSearchPattern extends system.web.services.discovery.Discov
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetDiscoveryReference.
+     *
+     * @param filename the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Discovery.XmlSchemaSearchPattern.GetDiscoveryReference" target="_top">.NET documentation</a>
+     */
     public DiscoveryReference GetDiscoveryReference(java.lang.String filename) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

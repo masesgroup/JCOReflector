@@ -100,7 +100,10 @@ public class Participants extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Participants(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class Participants extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.Participants.-ctor" target="_top">.NET documentation</a>
+     */
     public Participants() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +174,13 @@ public class Participants extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Participant.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.Participants.Participant" target="_top">.NET documentation</a>
+     */
     public List_1 getParticipant() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +196,13 @@ public class Participants extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Primary.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.Participants.Primary" target="_top">.NET documentation</a>
+     */
     public EndpointReference getPrimary() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -195,6 +218,13 @@ public class Participants extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Primary.
+     *
+     * @param Primary the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.Participants.Primary" target="_top">.NET documentation</a>
+     */
     public void setPrimary(EndpointReference Primary) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

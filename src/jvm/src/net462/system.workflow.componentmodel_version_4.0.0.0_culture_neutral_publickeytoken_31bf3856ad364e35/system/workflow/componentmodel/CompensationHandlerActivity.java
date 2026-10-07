@@ -100,7 +100,10 @@ public class CompensationHandlerActivity extends system.workflow.componentmodel.
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CompensationHandlerActivity(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,22 @@ public class CompensationHandlerActivity extends system.workflow.componentmodel.
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.CompensationHandlerActivity.-ctor" target="_top">.NET documentation</a>
+     */
     public CompensationHandlerActivity() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.OutOfMemoryException, system.NotImplementedException, system.RankException {
         try {
             // add reference to assemblyName.dll file
@@ -157,6 +176,23 @@ public class CompensationHandlerActivity extends system.workflow.componentmodel.
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.CompensationHandlerActivity.-ctor" target="_top">.NET documentation</a>
+     */
     public CompensationHandlerActivity(java.lang.String name) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.OutOfMemoryException, system.NotImplementedException, system.RankException {
         try {
             // add reference to assemblyName.dll file
@@ -174,8 +210,13 @@ public class CompensationHandlerActivity extends system.workflow.componentmodel.
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIActivityEventListener_1 method available in IActivityEventListener_1 to obtain an object with an invocable method
+     *
+     * @param sender the argument of type {@code NetObject}
+     * @param e the argument of type {@code ActivityExecutionStatusChangedEventArgs}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.IActivityEventListener-1.OnEvent" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void OnEvent(NetObject sender, ActivityExecutionStatusChangedEventArgs e) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIActivityEventListener_1 to obtain the full interface.");
     }

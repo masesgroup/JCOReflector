@@ -100,7 +100,10 @@ public class CodeBinaryOperatorExpression extends system.codedom.CodeExpression 
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CodeBinaryOperatorExpression(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class CodeBinaryOperatorExpression extends system.codedom.CodeExpression 
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeBinaryOperatorExpression.-ctor" target="_top">.NET documentation</a>
+     */
     public CodeBinaryOperatorExpression() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -157,6 +166,15 @@ public class CodeBinaryOperatorExpression extends system.codedom.CodeExpression 
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param left the argument of type {@code CodeExpression}
+     * @param op the argument of type {@code CodeBinaryOperatorType}
+     * @param right the argument of type {@code CodeExpression}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeBinaryOperatorExpression.-ctor" target="_top">.NET documentation</a>
+     */
     public CodeBinaryOperatorExpression(CodeExpression left, CodeBinaryOperatorType op, CodeExpression right) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -175,6 +193,13 @@ public class CodeBinaryOperatorExpression extends system.codedom.CodeExpression 
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Operator.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeBinaryOperatorExpression.Operator" target="_top">.NET documentation</a>
+     */
     public CodeBinaryOperatorType getOperator() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +215,13 @@ public class CodeBinaryOperatorExpression extends system.codedom.CodeExpression 
         }
     }
 
+    /**
+     * Sets the value of the .NET property Operator.
+     *
+     * @param Operator the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeBinaryOperatorExpression.Operator" target="_top">.NET documentation</a>
+     */
     public void setOperator(CodeBinaryOperatorType Operator) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +232,13 @@ public class CodeBinaryOperatorExpression extends system.codedom.CodeExpression 
         }
     }
 
+    /**
+     * Gets the value of the .NET property Left.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeBinaryOperatorExpression.Left" target="_top">.NET documentation</a>
+     */
     public CodeExpression getLeft() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +254,13 @@ public class CodeBinaryOperatorExpression extends system.codedom.CodeExpression 
         }
     }
 
+    /**
+     * Sets the value of the .NET property Left.
+     *
+     * @param Left the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeBinaryOperatorExpression.Left" target="_top">.NET documentation</a>
+     */
     public void setLeft(CodeExpression Left) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -225,6 +271,13 @@ public class CodeBinaryOperatorExpression extends system.codedom.CodeExpression 
         }
     }
 
+    /**
+     * Gets the value of the .NET property Right.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeBinaryOperatorExpression.Right" target="_top">.NET documentation</a>
+     */
     public CodeExpression getRight() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -240,6 +293,13 @@ public class CodeBinaryOperatorExpression extends system.codedom.CodeExpression 
         }
     }
 
+    /**
+     * Sets the value of the .NET property Right.
+     *
+     * @param Right the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeBinaryOperatorExpression.Right" target="_top">.NET documentation</a>
+     */
     public void setRight(CodeExpression Right) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

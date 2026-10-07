@@ -102,7 +102,10 @@ public class PoolingAsyncValueTaskMethodBuilder_1<TResult extends IJCOBridgeRefl
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PoolingAsyncValueTaskMethodBuilder_1(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,22 @@ public class PoolingAsyncValueTaskMethodBuilder_1<TResult extends IJCOBridgeRefl
     
     // Methods section
     
+    /**
+     * Invokes the .NET member AwaitOnCompleted.
+     *
+     * @param <TAwaiter> the type of the generic argument TAwaiter
+     * @param <TStateMachine> the type of the generic argument TStateMachine
+     * @param awaiter the argument of type {@code JCORefOut<TAwaiter>}
+     * @param stateMachine the argument of type {@code JCORefOut<TStateMachine>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder-1.AwaitOnCompleted" target="_top">.NET documentation</a>
+     */
     public <TAwaiter extends IJCOBridgeReflected, TStateMachine extends IJCOBridgeReflected> void AwaitOnCompleted(JCORefOut<TAwaiter> awaiter, JCORefOut<TStateMachine> stateMachine) throws Throwable, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentNullException, system.OutOfMemoryException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -167,6 +186,25 @@ public class PoolingAsyncValueTaskMethodBuilder_1<TResult extends IJCOBridgeRefl
         }
     }
 
+    /**
+     * Invokes the .NET member AwaitUnsafeOnCompleted.
+     *
+     * @param <TAwaiter> the type of the generic argument TAwaiter
+     * @param <TStateMachine> the type of the generic argument TStateMachine
+     * @param awaiter the argument of type {@code JCORefOut<TAwaiter>}
+     * @param stateMachine the argument of type {@code JCORefOut<TStateMachine>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder-1.AwaitUnsafeOnCompleted" target="_top">.NET documentation</a>
+     */
     public <TAwaiter extends IJCOBridgeReflected, TStateMachine extends IJCOBridgeReflected> void AwaitUnsafeOnCompleted(JCORefOut<TAwaiter> awaiter, JCORefOut<TStateMachine> stateMachine) throws Throwable, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.diagnostics.tracing.EventSourceException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -177,6 +215,23 @@ public class PoolingAsyncValueTaskMethodBuilder_1<TResult extends IJCOBridgeRefl
         }
     }
 
+    /**
+     * Invokes the .NET member SetException.
+     *
+     * @param exception the argument of type {@code NetException}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder-1.SetException" target="_top">.NET documentation</a>
+     */
     public void SetException(NetException exception) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.NullReferenceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +242,22 @@ public class PoolingAsyncValueTaskMethodBuilder_1<TResult extends IJCOBridgeRefl
         }
     }
 
+    /**
+     * Invokes the .NET member SetResult.
+     *
+     * @param result the argument of type {@code TResult}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.threading.tasks.TaskSchedulerException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder-1.SetResult" target="_top">.NET documentation</a>
+     */
     public void SetResult(TResult result) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NullReferenceException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.threading.tasks.TaskSchedulerException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +268,22 @@ public class PoolingAsyncValueTaskMethodBuilder_1<TResult extends IJCOBridgeRefl
         }
     }
 
+    /**
+     * Invokes the .NET member SetStateMachine.
+     *
+     * @param stateMachine the argument of type {@code IAsyncStateMachine}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder-1.SetStateMachine" target="_top">.NET documentation</a>
+     */
     public void SetStateMachine(IAsyncStateMachine stateMachine) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +294,23 @@ public class PoolingAsyncValueTaskMethodBuilder_1<TResult extends IJCOBridgeRefl
         }
     }
 
+    /**
+     * Invokes the .NET member Start.
+     *
+     * @param <TStateMachine> the type of the generic argument TStateMachine
+     * @param stateMachine the argument of type {@code JCORefOut<TStateMachine>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder-1.Start" target="_top">.NET documentation</a>
+     */
     public <TStateMachine extends IJCOBridgeReflected> void Start(JCORefOut<TStateMachine> stateMachine) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -221,6 +325,22 @@ public class PoolingAsyncValueTaskMethodBuilder_1<TResult extends IJCOBridgeRefl
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Task.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder-1.Task" target="_top">.NET documentation</a>
+     */
     public ValueTask_1 getTask() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

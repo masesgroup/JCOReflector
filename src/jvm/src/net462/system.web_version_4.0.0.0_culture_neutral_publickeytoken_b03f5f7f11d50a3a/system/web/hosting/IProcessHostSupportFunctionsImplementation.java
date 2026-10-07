@@ -98,7 +98,10 @@ public class IProcessHostSupportFunctionsImplementation extends NetObject implem
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IProcessHostSupportFunctionsImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -140,6 +143,13 @@ public class IProcessHostSupportFunctionsImplementation extends NetObject implem
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetAppHostConfigFilename.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.IProcessHostSupportFunctions.GetAppHostConfigFilename" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetAppHostConfigFilename() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -154,6 +164,13 @@ public class IProcessHostSupportFunctionsImplementation extends NetObject implem
         }
     }
 
+    /**
+     * Invokes the .NET member GetRootWebConfigFilename.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.IProcessHostSupportFunctions.GetRootWebConfigFilename" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetRootWebConfigFilename() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -168,6 +185,17 @@ public class IProcessHostSupportFunctionsImplementation extends NetObject implem
         }
     }
 
+    /**
+     * Invokes the .NET member GetApplicationProperties.
+     *
+     * @param appId the argument of type {@code java.lang.String}
+     * @param virtualPath the argument of type {@code JCORefOut}
+     * @param physicalPath the argument of type {@code JCORefOut}
+     * @param siteName the argument of type {@code JCORefOut}
+     * @param siteId the argument of type {@code JCORefOut}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.IProcessHostSupportFunctions.GetApplicationProperties" target="_top">.NET documentation</a>
+     */
     public void GetApplicationProperties(java.lang.String appId, JCORefOut virtualPath, JCORefOut physicalPath, JCORefOut siteName, JCORefOut siteId) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,6 +206,15 @@ public class IProcessHostSupportFunctionsImplementation extends NetObject implem
         }
     }
 
+    /**
+     * Invokes the .NET member MapPath.
+     *
+     * @param appId the argument of type {@code java.lang.String}
+     * @param virtualPath the argument of type {@code java.lang.String}
+     * @param physicalPath the argument of type {@code JCORefOut}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.IProcessHostSupportFunctions.MapPath" target="_top">.NET documentation</a>
+     */
     public void MapPath(java.lang.String appId, java.lang.String virtualPath, JCORefOut physicalPath) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

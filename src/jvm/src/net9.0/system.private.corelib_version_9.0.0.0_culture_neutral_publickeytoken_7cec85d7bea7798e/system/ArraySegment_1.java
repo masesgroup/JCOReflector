@@ -100,7 +100,10 @@ public class ArraySegment_1<T extends IJCOBridgeReflected> extends system.ValueT
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ArraySegment_1(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,23 @@ public class ArraySegment_1<T extends IJCOBridgeReflected> extends system.ValueT
     public ArraySegment_1() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param array the argument of type {@code T[]}
+     * @param offset the argument of type {@code int}
+     * @param count the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ArraySegment-1.-ctor" target="_top">.NET documentation</a>
+     */
     public ArraySegment_1(T[] array, int offset, int count) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         try {
             // add reference to assemblyName.dll file
@@ -162,6 +182,23 @@ public class ArraySegment_1<T extends IJCOBridgeReflected> extends system.ValueT
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param array the argument of type {@code T[]}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ArraySegment-1.-ctor" target="_top">.NET documentation</a>
+     */
     public ArraySegment_1(T[] array) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -179,6 +216,14 @@ public class ArraySegment_1<T extends IJCOBridgeReflected> extends system.ValueT
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Equals.
+     *
+     * @param obj the argument of type {@code ArraySegment_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ArraySegment-1.Equals" target="_top">.NET documentation</a>
+     */
     public boolean Equals(ArraySegment_1 obj) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +238,19 @@ public class ArraySegment_1<T extends IJCOBridgeReflected> extends system.ValueT
         }
     }
 
+    /**
+     * Invokes the .NET member Slice.
+     *
+     * @param index the argument of type {@code int}
+     * @param count the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ArraySegment-1.Slice" target="_top">.NET documentation</a>
+     */
     public ArraySegment_1 Slice(int index, int count) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +266,18 @@ public class ArraySegment_1<T extends IJCOBridgeReflected> extends system.ValueT
         }
     }
 
+    /**
+     * Invokes the .NET member Slice.
+     *
+     * @param index the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ArraySegment-1.Slice" target="_top">.NET documentation</a>
+     */
     public ArraySegment_1 Slice(int index) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -223,6 +293,17 @@ public class ArraySegment_1<T extends IJCOBridgeReflected> extends system.ValueT
         }
     }
 
+/**
+ * Invokes the .NET member ToArray.
+ *
+ * @return the value returned by the .NET member
+ * @throws Throwable if the call fails in the bridge or in the CLR
+ * @throws system.ArgumentException if the .NET member raises it
+ * @throws system.NotSupportedException if the .NET member raises it
+ * @throws system.InvalidOperationException if the .NET member raises it
+ * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+ * @see <a href="https://learn.microsoft.com/dotnet/api/System.ArraySegment-1.ToArray" target="_top">.NET documentation</a>
+ */
 public T[] ToArray() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -246,6 +327,17 @@ public T[] ToArray() throws Throwable, system.ArgumentException, system.NotSuppo
             throw translateException(jcne);
         }
     }
+    /**
+     * Invokes the .NET member CopyTo.
+     *
+     * @param destination the argument of type {@code ArraySegment_1}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ArraySegment-1.CopyTo" target="_top">.NET documentation</a>
+     */
     public void CopyTo(ArraySegment_1 destination) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -256,6 +348,18 @@ public T[] ToArray() throws Throwable, system.ArgumentException, system.NotSuppo
         }
     }
 
+    /**
+     * Invokes the .NET member CopyTo.
+     *
+     * @param destination the argument of type {@code T[]}
+     * @param destinationIndex the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ArraySegment-1.CopyTo" target="_top">.NET documentation</a>
+     */
     public void CopyTo(T[] destination, int destinationIndex) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -266,6 +370,16 @@ public T[] ToArray() throws Throwable, system.ArgumentException, system.NotSuppo
         }
     }
 
+    /**
+     * Invokes the .NET member CopyTo.
+     *
+     * @param destination the argument of type {@code T[]}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ArraySegment-1.CopyTo" target="_top">.NET documentation</a>
+     */
     public void CopyTo(T[] destination) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -280,6 +394,13 @@ public T[] ToArray() throws Throwable, system.ArgumentException, system.NotSuppo
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Count.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ArraySegment-1.Count" target="_top">.NET documentation</a>
+     */
     public int getCount() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -320,6 +441,13 @@ public T[] ToArray() throws Throwable, system.ArgumentException, system.NotSuppo
         }
     }
 
+    /**
+     * Gets the value of the .NET property Offset.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ArraySegment-1.Offset" target="_top">.NET documentation</a>
+     */
     public int getOffset() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -360,6 +488,13 @@ public T[] ToArray() throws Throwable, system.ArgumentException, system.NotSuppo
         }
     }
 
+    /**
+     * Gets the value of the .NET property Array.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ArraySegment-1.Array" target="_top">.NET documentation</a>
+     */
     public final T[] getArray() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

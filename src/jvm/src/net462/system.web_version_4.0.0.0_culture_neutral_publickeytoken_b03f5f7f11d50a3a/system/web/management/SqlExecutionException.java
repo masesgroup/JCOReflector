@@ -106,7 +106,9 @@ public class SqlExecutionException extends system.SystemException {
         super();
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
      */
     public SqlExecutionException(java.lang.Object instance) {
         super(instance);
@@ -167,6 +169,18 @@ public class SqlExecutionException extends system.SystemException {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param message the argument of type {@code java.lang.String}
+     * @param server the argument of type {@code java.lang.String}
+     * @param database the argument of type {@code java.lang.String}
+     * @param sqlFile the argument of type {@code java.lang.String}
+     * @param commands the argument of type {@code java.lang.String}
+     * @param sqlException the argument of type {@code SqlException}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Management.SqlExecutionException.-ctor" target="_top">.NET documentation</a>
+     */
     public SqlExecutionException(java.lang.String message, java.lang.String server, java.lang.String database, java.lang.String sqlFile, java.lang.String commands, SqlException sqlException) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -181,6 +195,29 @@ public class SqlExecutionException extends system.SystemException {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetObjectData.
+     *
+     * @param info the argument of type {@code SerializationInfo}
+     * @param context the argument of type {@code StreamingContext}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.runtime.serialization.SerializationException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Management.SqlExecutionException.GetObjectData" target="_top">.NET documentation</a>
+     */
     public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.TypeLoadException, system.NotSupportedException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.NotImplementedException, system.runtime.serialization.SerializationException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -195,6 +232,13 @@ public class SqlExecutionException extends system.SystemException {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Exception.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Management.SqlExecutionException.Exception" target="_top">.NET documentation</a>
+     */
     public SqlException getException() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -210,6 +254,13 @@ public class SqlExecutionException extends system.SystemException {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Commands.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Management.SqlExecutionException.Commands" target="_top">.NET documentation</a>
+     */
     public java.lang.String getCommands() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -224,6 +275,13 @@ public class SqlExecutionException extends system.SystemException {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Database.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Management.SqlExecutionException.Database" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDatabase() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -238,6 +296,13 @@ public class SqlExecutionException extends system.SystemException {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Server.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Management.SqlExecutionException.Server" target="_top">.NET documentation</a>
+     */
     public java.lang.String getServer() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -252,6 +317,13 @@ public class SqlExecutionException extends system.SystemException {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SqlFile.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Management.SqlExecutionException.SqlFile" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSqlFile() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

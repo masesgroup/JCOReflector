@@ -101,7 +101,10 @@ public class SoapServerType extends system.web.services.protocols.ServerType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SoapServerType(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,46 @@ public class SoapServerType extends system.web.services.protocols.ServerType  {
     public SoapServerType() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param type the argument of type {@code NetType}
+     * @param protocolsSupported the argument of type {@code WebServiceProtocols}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.MemberAccessException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.web.HttpRequestValidationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.web.services.protocols.SoapException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapServerType.-ctor" target="_top">.NET documentation</a>
+     */
     public SoapServerType(NetType type, WebServiceProtocols protocolsSupported) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotSupportedException, system.RankException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.NullReferenceException, system.io.PathTooLongException, system.MemberAccessException, system.security.SecurityException, system.web.HttpException, system.web.HttpRequestValidationException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.threading.ThreadAbortException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.io.FileNotFoundException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.UnauthorizedAccessException, system.web.services.protocols.SoapException {
         try {
             // add reference to assemblyName.dll file
@@ -166,6 +209,17 @@ public class SoapServerType extends system.web.services.protocols.ServerType  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetDuplicateMethod.
+     *
+     * @param key the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapServerType.GetDuplicateMethod" target="_top">.NET documentation</a>
+     */
     public SoapServerMethod GetDuplicateMethod(NetObject key) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -181,6 +235,17 @@ public class SoapServerType extends system.web.services.protocols.ServerType  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetMethod.
+     *
+     * @param key the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapServerType.GetMethod" target="_top">.NET documentation</a>
+     */
     public SoapServerMethod GetMethod(NetObject key) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +265,13 @@ public class SoapServerType extends system.web.services.protocols.ServerType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ServiceDefaultIsEncoded.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapServerType.ServiceDefaultIsEncoded" target="_top">.NET documentation</a>
+     */
     public boolean getServiceDefaultIsEncoded() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -214,6 +286,13 @@ public class SoapServerType extends system.web.services.protocols.ServerType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ServiceRoutingOnSoapAction.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapServerType.ServiceRoutingOnSoapAction" target="_top">.NET documentation</a>
+     */
     public boolean getServiceRoutingOnSoapAction() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -228,6 +307,13 @@ public class SoapServerType extends system.web.services.protocols.ServerType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ServiceNamespace.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapServerType.ServiceNamespace" target="_top">.NET documentation</a>
+     */
     public java.lang.String getServiceNamespace() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

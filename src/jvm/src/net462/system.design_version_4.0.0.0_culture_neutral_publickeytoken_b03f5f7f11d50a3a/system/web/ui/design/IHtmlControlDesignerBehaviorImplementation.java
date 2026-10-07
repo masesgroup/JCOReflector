@@ -99,7 +99,10 @@ public class IHtmlControlDesignerBehaviorImplementation extends NetObject implem
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IHtmlControlDesignerBehaviorImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -141,6 +144,15 @@ public class IHtmlControlDesignerBehaviorImplementation extends NetObject implem
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetAttribute.
+     *
+     * @param attribute the argument of type {@code java.lang.String}
+     * @param ignoreCase the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.IHtmlControlDesignerBehavior.GetAttribute" target="_top">.NET documentation</a>
+     */
     public NetObject GetAttribute(java.lang.String attribute, boolean ignoreCase) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -156,6 +168,16 @@ public class IHtmlControlDesignerBehaviorImplementation extends NetObject implem
         }
     }
 
+    /**
+     * Invokes the .NET member GetStyleAttribute.
+     *
+     * @param attribute the argument of type {@code java.lang.String}
+     * @param designTimeOnly the argument of type {@code boolean}
+     * @param ignoreCase the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.IHtmlControlDesignerBehavior.GetStyleAttribute" target="_top">.NET documentation</a>
+     */
     public NetObject GetStyleAttribute(java.lang.String attribute, boolean designTimeOnly, boolean ignoreCase) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -171,6 +193,14 @@ public class IHtmlControlDesignerBehaviorImplementation extends NetObject implem
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveAttribute.
+     *
+     * @param attribute the argument of type {@code java.lang.String}
+     * @param ignoreCase the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.IHtmlControlDesignerBehavior.RemoveAttribute" target="_top">.NET documentation</a>
+     */
     public void RemoveAttribute(java.lang.String attribute, boolean ignoreCase) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -181,6 +211,15 @@ public class IHtmlControlDesignerBehaviorImplementation extends NetObject implem
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveStyleAttribute.
+     *
+     * @param attribute the argument of type {@code java.lang.String}
+     * @param designTimeOnly the argument of type {@code boolean}
+     * @param ignoreCase the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.IHtmlControlDesignerBehavior.RemoveStyleAttribute" target="_top">.NET documentation</a>
+     */
     public void RemoveStyleAttribute(java.lang.String attribute, boolean designTimeOnly, boolean ignoreCase) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -191,6 +230,15 @@ public class IHtmlControlDesignerBehaviorImplementation extends NetObject implem
         }
     }
 
+    /**
+     * Invokes the .NET member SetAttribute.
+     *
+     * @param attribute the argument of type {@code java.lang.String}
+     * @param value the argument of type {@code NetObject}
+     * @param ignoreCase the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.IHtmlControlDesignerBehavior.SetAttribute" target="_top">.NET documentation</a>
+     */
     public void SetAttribute(java.lang.String attribute, NetObject value, boolean ignoreCase) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +249,16 @@ public class IHtmlControlDesignerBehaviorImplementation extends NetObject implem
         }
     }
 
+    /**
+     * Invokes the .NET member SetStyleAttribute.
+     *
+     * @param attribute the argument of type {@code java.lang.String}
+     * @param designTimeOnly the argument of type {@code boolean}
+     * @param value the argument of type {@code NetObject}
+     * @param ignoreCase the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.IHtmlControlDesignerBehavior.SetStyleAttribute" target="_top">.NET documentation</a>
+     */
     public void SetStyleAttribute(java.lang.String attribute, boolean designTimeOnly, NetObject value, boolean ignoreCase) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +273,13 @@ public class IHtmlControlDesignerBehaviorImplementation extends NetObject implem
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property DesignTimeElement.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.IHtmlControlDesignerBehavior.DesignTimeElement" target="_top">.NET documentation</a>
+     */
     public NetObject getDesignTimeElement() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -230,6 +295,13 @@ public class IHtmlControlDesignerBehaviorImplementation extends NetObject implem
         }
     }
 
+    /**
+     * Gets the value of the .NET property Designer.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.IHtmlControlDesignerBehavior.Designer" target="_top">.NET documentation</a>
+     */
     public HtmlControlDesigner getDesigner() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -245,6 +317,13 @@ public class IHtmlControlDesignerBehaviorImplementation extends NetObject implem
         }
     }
 
+    /**
+     * Sets the value of the .NET property Designer.
+     *
+     * @param Designer the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.IHtmlControlDesignerBehavior.Designer" target="_top">.NET documentation</a>
+     */
     public void setDesigner(HtmlControlDesigner Designer) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

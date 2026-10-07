@@ -100,7 +100,10 @@ public class SessionEndingCancelEventArgs extends system.componentmodel.CancelEv
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SessionEndingCancelEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -159,6 +162,13 @@ public class SessionEndingCancelEventArgs extends system.componentmodel.CancelEv
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ReasonSessionEnding.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.SessionEndingCancelEventArgs.ReasonSessionEnding" target="_top">.NET documentation</a>
+     */
     public ReasonSessionEnding getReasonSessionEnding() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

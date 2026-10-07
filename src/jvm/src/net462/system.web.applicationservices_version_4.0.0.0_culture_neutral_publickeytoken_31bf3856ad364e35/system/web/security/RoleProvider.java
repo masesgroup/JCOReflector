@@ -99,7 +99,10 @@ public class RoleProvider extends system.configuration.provider.ProviderBase  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public RoleProvider(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,15 @@ public class RoleProvider extends system.configuration.provider.ProviderBase  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member DeleteRole.
+     *
+     * @param roleName the argument of type {@code java.lang.String}
+     * @param throwOnPopulatedRole the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Security.RoleProvider.DeleteRole" target="_top">.NET documentation</a>
+     */
     public boolean DeleteRole(java.lang.String roleName, boolean throwOnPopulatedRole) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -166,6 +178,15 @@ public class RoleProvider extends system.configuration.provider.ProviderBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsUserInRole.
+     *
+     * @param username the argument of type {@code java.lang.String}
+     * @param roleName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Security.RoleProvider.IsUserInRole" target="_top">.NET documentation</a>
+     */
     public boolean IsUserInRole(java.lang.String username, java.lang.String roleName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +201,14 @@ public class RoleProvider extends system.configuration.provider.ProviderBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member RoleExists.
+     *
+     * @param roleName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Security.RoleProvider.RoleExists" target="_top">.NET documentation</a>
+     */
     public boolean RoleExists(java.lang.String roleName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +223,15 @@ public class RoleProvider extends system.configuration.provider.ProviderBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member FindUsersInRole.
+     *
+     * @param roleName the argument of type {@code java.lang.String}
+     * @param usernameToMatch the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Security.RoleProvider.FindUsersInRole" target="_top">.NET documentation</a>
+     */
     public java.lang.String[] FindUsersInRole(java.lang.String roleName, java.lang.String usernameToMatch) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -217,6 +255,13 @@ public class RoleProvider extends system.configuration.provider.ProviderBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetAllRoles.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Security.RoleProvider.GetAllRoles" target="_top">.NET documentation</a>
+     */
     public java.lang.String[] GetAllRoles() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -240,6 +285,14 @@ public class RoleProvider extends system.configuration.provider.ProviderBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetRolesForUser.
+     *
+     * @param username the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Security.RoleProvider.GetRolesForUser" target="_top">.NET documentation</a>
+     */
     public java.lang.String[] GetRolesForUser(java.lang.String username) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -263,6 +316,14 @@ public class RoleProvider extends system.configuration.provider.ProviderBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetUsersInRole.
+     *
+     * @param roleName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Security.RoleProvider.GetUsersInRole" target="_top">.NET documentation</a>
+     */
     public java.lang.String[] GetUsersInRole(java.lang.String roleName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -286,6 +347,14 @@ public class RoleProvider extends system.configuration.provider.ProviderBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddUsersToRoles.
+     *
+     * @param usernames the argument of type {@code java.lang.String[]}
+     * @param roleNames the argument of type {@code java.lang.String[]}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Security.RoleProvider.AddUsersToRoles" target="_top">.NET documentation</a>
+     */
     public void AddUsersToRoles(java.lang.String[] usernames, java.lang.String[] roleNames) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -296,6 +365,14 @@ public class RoleProvider extends system.configuration.provider.ProviderBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddUsersToRoles.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code JCORefOut}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Security.RoleProvider.AddUsersToRoles" target="_top">.NET documentation</a>
+     */
     public void AddUsersToRoles(JCORefOut dupParam0, JCORefOut dupParam1) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -306,6 +383,13 @@ public class RoleProvider extends system.configuration.provider.ProviderBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateRole.
+     *
+     * @param roleName the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Security.RoleProvider.CreateRole" target="_top">.NET documentation</a>
+     */
     public void CreateRole(java.lang.String roleName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -316,6 +400,14 @@ public class RoleProvider extends system.configuration.provider.ProviderBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveUsersFromRoles.
+     *
+     * @param usernames the argument of type {@code java.lang.String[]}
+     * @param roleNames the argument of type {@code java.lang.String[]}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Security.RoleProvider.RemoveUsersFromRoles" target="_top">.NET documentation</a>
+     */
     public void RemoveUsersFromRoles(java.lang.String[] usernames, java.lang.String[] roleNames) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -326,6 +418,14 @@ public class RoleProvider extends system.configuration.provider.ProviderBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveUsersFromRoles.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code JCORefOut}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Security.RoleProvider.RemoveUsersFromRoles" target="_top">.NET documentation</a>
+     */
     public void RemoveUsersFromRoles(JCORefOut dupParam0, JCORefOut dupParam1) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -340,6 +440,13 @@ public class RoleProvider extends system.configuration.provider.ProviderBase  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ApplicationName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Security.RoleProvider.ApplicationName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getApplicationName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -354,6 +461,13 @@ public class RoleProvider extends system.configuration.provider.ProviderBase  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ApplicationName.
+     *
+     * @param ApplicationName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Security.RoleProvider.ApplicationName" target="_top">.NET documentation</a>
+     */
     public void setApplicationName(java.lang.String ApplicationName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -98,7 +98,10 @@ public class ITypeFilterProviderImplementation extends NetObject implements ITyp
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ITypeFilterProviderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -140,6 +143,15 @@ public class ITypeFilterProviderImplementation extends NetObject implements ITyp
 
     // Methods section
     
+    /**
+     * Invokes the .NET member CanFilterType.
+     *
+     * @param type the argument of type {@code NetType}
+     * @param throwOnError the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.ITypeFilterProvider.CanFilterType" target="_top">.NET documentation</a>
+     */
     public boolean CanFilterType(NetType type, boolean throwOnError) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -158,6 +170,13 @@ public class ITypeFilterProviderImplementation extends NetObject implements ITyp
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property FilterDescription.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.ITypeFilterProvider.FilterDescription" target="_top">.NET documentation</a>
+     */
     public java.lang.String getFilterDescription() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

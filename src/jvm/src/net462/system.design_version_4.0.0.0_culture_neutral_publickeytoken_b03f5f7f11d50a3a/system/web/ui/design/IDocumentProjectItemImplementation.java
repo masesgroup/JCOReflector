@@ -99,7 +99,10 @@ public class IDocumentProjectItemImplementation extends NetObject implements IDo
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IDocumentProjectItemImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -141,6 +144,13 @@ public class IDocumentProjectItemImplementation extends NetObject implements IDo
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetContents.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.IDocumentProjectItem.GetContents" target="_top">.NET documentation</a>
+     */
     public Stream GetContents() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -156,6 +166,12 @@ public class IDocumentProjectItemImplementation extends NetObject implements IDo
         }
     }
 
+    /**
+     * Invokes the .NET member Open.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.IDocumentProjectItem.Open" target="_top">.NET documentation</a>
+     */
     public void Open() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

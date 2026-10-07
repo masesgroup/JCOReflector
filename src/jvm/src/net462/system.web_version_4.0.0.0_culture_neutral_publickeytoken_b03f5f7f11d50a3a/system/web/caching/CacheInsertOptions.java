@@ -103,7 +103,10 @@ public class CacheInsertOptions extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CacheInsertOptions(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,12 @@ public class CacheInsertOptions extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Caching.CacheInsertOptions.-ctor" target="_top">.NET documentation</a>
+     */
     public CacheInsertOptions() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +177,13 @@ public class CacheInsertOptions extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AbsoluteExpiration.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Caching.CacheInsertOptions.AbsoluteExpiration" target="_top">.NET documentation</a>
+     */
     public DateTime getAbsoluteExpiration() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +199,13 @@ public class CacheInsertOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AbsoluteExpiration.
+     *
+     * @param AbsoluteExpiration the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Caching.CacheInsertOptions.AbsoluteExpiration" target="_top">.NET documentation</a>
+     */
     public void setAbsoluteExpiration(DateTime AbsoluteExpiration) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +216,13 @@ public class CacheInsertOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SlidingExpiration.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Caching.CacheInsertOptions.SlidingExpiration" target="_top">.NET documentation</a>
+     */
     public TimeSpan getSlidingExpiration() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +238,13 @@ public class CacheInsertOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SlidingExpiration.
+     *
+     * @param SlidingExpiration the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Caching.CacheInsertOptions.SlidingExpiration" target="_top">.NET documentation</a>
+     */
     public void setSlidingExpiration(TimeSpan SlidingExpiration) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -218,6 +255,13 @@ public class CacheInsertOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Dependencies.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Caching.CacheInsertOptions.Dependencies" target="_top">.NET documentation</a>
+     */
     public CacheDependency getDependencies() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -233,6 +277,13 @@ public class CacheInsertOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Dependencies.
+     *
+     * @param Dependencies the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Caching.CacheInsertOptions.Dependencies" target="_top">.NET documentation</a>
+     */
     public void setDependencies(CacheDependency Dependencies) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -243,6 +294,13 @@ public class CacheInsertOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Priority.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Caching.CacheInsertOptions.Priority" target="_top">.NET documentation</a>
+     */
     public CacheItemPriority getPriority() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -258,6 +316,13 @@ public class CacheInsertOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Priority.
+     *
+     * @param Priority the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Caching.CacheInsertOptions.Priority" target="_top">.NET documentation</a>
+     */
     public void setPriority(CacheItemPriority Priority) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -268,6 +333,13 @@ public class CacheInsertOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OnRemovedCallback.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Caching.CacheInsertOptions.OnRemovedCallback" target="_top">.NET documentation</a>
+     */
     public CacheItemRemovedCallback getOnRemovedCallback() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -282,6 +354,13 @@ public class CacheInsertOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property OnRemovedCallback.
+     *
+     * @param OnRemovedCallback the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Caching.CacheInsertOptions.OnRemovedCallback" target="_top">.NET documentation</a>
+     */
     public void setOnRemovedCallback(CacheItemRemovedCallback OnRemovedCallback) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

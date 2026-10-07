@@ -101,7 +101,10 @@ public class ServiceAuthenticationManager extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ServiceAuthenticationManager(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class ServiceAuthenticationManager extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.ServiceAuthenticationManager.-ctor" target="_top">.NET documentation</a>
+     */
     public ServiceAuthenticationManager() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -162,6 +171,16 @@ public class ServiceAuthenticationManager extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Authenticate.
+     *
+     * @param authPolicy the argument of type {@code ReadOnlyCollection_1}
+     * @param listenUri the argument of type {@code Uri}
+     * @param message the argument of type {@code JCORefOut<Message>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.ServiceAuthenticationManager.Authenticate" target="_top">.NET documentation</a>
+     */
     public ReadOnlyCollection_1 Authenticate(ReadOnlyCollection_1 authPolicy, Uri listenUri, JCORefOut<Message> message) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

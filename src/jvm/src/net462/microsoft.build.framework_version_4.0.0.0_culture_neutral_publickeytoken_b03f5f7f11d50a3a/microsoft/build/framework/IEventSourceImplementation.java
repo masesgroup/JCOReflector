@@ -112,7 +112,10 @@ public class IEventSourceImplementation extends NetObject implements IEventSourc
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IEventSourceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -163,6 +166,13 @@ public class IEventSourceImplementation extends NetObject implements IEventSourc
     // Instance Events section
     
 
+    /**
+     * Invokes the .NET member addAnyEventRaised.
+     *
+     * @param handler the argument of type {@code AnyEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addAnyEventRaised(AnyEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -173,6 +183,13 @@ public class IEventSourceImplementation extends NetObject implements IEventSourc
         }
     }
 
+    /**
+     * Invokes the .NET member removeAnyEventRaised.
+     *
+     * @param handler the argument of type {@code AnyEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeAnyEventRaised(AnyEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +200,13 @@ public class IEventSourceImplementation extends NetObject implements IEventSourc
         }
     }
 
+    /**
+     * Invokes the .NET member addErrorRaised.
+     *
+     * @param handler the argument of type {@code BuildErrorEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addErrorRaised(BuildErrorEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +217,13 @@ public class IEventSourceImplementation extends NetObject implements IEventSourc
         }
     }
 
+    /**
+     * Invokes the .NET member removeErrorRaised.
+     *
+     * @param handler the argument of type {@code BuildErrorEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeErrorRaised(BuildErrorEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +234,13 @@ public class IEventSourceImplementation extends NetObject implements IEventSourc
         }
     }
 
+    /**
+     * Invokes the .NET member addBuildFinished.
+     *
+     * @param handler the argument of type {@code BuildFinishedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addBuildFinished(BuildFinishedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -213,6 +251,13 @@ public class IEventSourceImplementation extends NetObject implements IEventSourc
         }
     }
 
+    /**
+     * Invokes the .NET member removeBuildFinished.
+     *
+     * @param handler the argument of type {@code BuildFinishedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeBuildFinished(BuildFinishedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -223,6 +268,13 @@ public class IEventSourceImplementation extends NetObject implements IEventSourc
         }
     }
 
+    /**
+     * Invokes the .NET member addMessageRaised.
+     *
+     * @param handler the argument of type {@code BuildMessageEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addMessageRaised(BuildMessageEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -233,6 +285,13 @@ public class IEventSourceImplementation extends NetObject implements IEventSourc
         }
     }
 
+    /**
+     * Invokes the .NET member removeMessageRaised.
+     *
+     * @param handler the argument of type {@code BuildMessageEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeMessageRaised(BuildMessageEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -243,6 +302,13 @@ public class IEventSourceImplementation extends NetObject implements IEventSourc
         }
     }
 
+    /**
+     * Invokes the .NET member addBuildStarted.
+     *
+     * @param handler the argument of type {@code BuildStartedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addBuildStarted(BuildStartedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -253,6 +319,13 @@ public class IEventSourceImplementation extends NetObject implements IEventSourc
         }
     }
 
+    /**
+     * Invokes the .NET member removeBuildStarted.
+     *
+     * @param handler the argument of type {@code BuildStartedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeBuildStarted(BuildStartedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -263,6 +336,13 @@ public class IEventSourceImplementation extends NetObject implements IEventSourc
         }
     }
 
+    /**
+     * Invokes the .NET member addStatusEventRaised.
+     *
+     * @param handler the argument of type {@code BuildStatusEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addStatusEventRaised(BuildStatusEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -273,6 +353,13 @@ public class IEventSourceImplementation extends NetObject implements IEventSourc
         }
     }
 
+    /**
+     * Invokes the .NET member removeStatusEventRaised.
+     *
+     * @param handler the argument of type {@code BuildStatusEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeStatusEventRaised(BuildStatusEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -283,6 +370,13 @@ public class IEventSourceImplementation extends NetObject implements IEventSourc
         }
     }
 
+    /**
+     * Invokes the .NET member addWarningRaised.
+     *
+     * @param handler the argument of type {@code BuildWarningEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addWarningRaised(BuildWarningEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -293,6 +387,13 @@ public class IEventSourceImplementation extends NetObject implements IEventSourc
         }
     }
 
+    /**
+     * Invokes the .NET member removeWarningRaised.
+     *
+     * @param handler the argument of type {@code BuildWarningEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeWarningRaised(BuildWarningEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -303,6 +404,13 @@ public class IEventSourceImplementation extends NetObject implements IEventSourc
         }
     }
 
+    /**
+     * Invokes the .NET member addCustomEventRaised.
+     *
+     * @param handler the argument of type {@code CustomBuildEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addCustomEventRaised(CustomBuildEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -313,6 +421,13 @@ public class IEventSourceImplementation extends NetObject implements IEventSourc
         }
     }
 
+    /**
+     * Invokes the .NET member removeCustomEventRaised.
+     *
+     * @param handler the argument of type {@code CustomBuildEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeCustomEventRaised(CustomBuildEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -323,6 +438,13 @@ public class IEventSourceImplementation extends NetObject implements IEventSourc
         }
     }
 
+    /**
+     * Invokes the .NET member addProjectFinished.
+     *
+     * @param handler the argument of type {@code ProjectFinishedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addProjectFinished(ProjectFinishedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -333,6 +455,13 @@ public class IEventSourceImplementation extends NetObject implements IEventSourc
         }
     }
 
+    /**
+     * Invokes the .NET member removeProjectFinished.
+     *
+     * @param handler the argument of type {@code ProjectFinishedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeProjectFinished(ProjectFinishedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -343,6 +472,13 @@ public class IEventSourceImplementation extends NetObject implements IEventSourc
         }
     }
 
+    /**
+     * Invokes the .NET member addProjectStarted.
+     *
+     * @param handler the argument of type {@code ProjectStartedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addProjectStarted(ProjectStartedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -353,6 +489,13 @@ public class IEventSourceImplementation extends NetObject implements IEventSourc
         }
     }
 
+    /**
+     * Invokes the .NET member removeProjectStarted.
+     *
+     * @param handler the argument of type {@code ProjectStartedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeProjectStarted(ProjectStartedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -363,6 +506,13 @@ public class IEventSourceImplementation extends NetObject implements IEventSourc
         }
     }
 
+    /**
+     * Invokes the .NET member addTargetFinished.
+     *
+     * @param handler the argument of type {@code TargetFinishedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addTargetFinished(TargetFinishedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -373,6 +523,13 @@ public class IEventSourceImplementation extends NetObject implements IEventSourc
         }
     }
 
+    /**
+     * Invokes the .NET member removeTargetFinished.
+     *
+     * @param handler the argument of type {@code TargetFinishedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeTargetFinished(TargetFinishedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -383,6 +540,13 @@ public class IEventSourceImplementation extends NetObject implements IEventSourc
         }
     }
 
+    /**
+     * Invokes the .NET member addTargetStarted.
+     *
+     * @param handler the argument of type {@code TargetStartedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addTargetStarted(TargetStartedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -393,6 +557,13 @@ public class IEventSourceImplementation extends NetObject implements IEventSourc
         }
     }
 
+    /**
+     * Invokes the .NET member removeTargetStarted.
+     *
+     * @param handler the argument of type {@code TargetStartedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeTargetStarted(TargetStartedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -403,6 +574,13 @@ public class IEventSourceImplementation extends NetObject implements IEventSourc
         }
     }
 
+    /**
+     * Invokes the .NET member addTaskFinished.
+     *
+     * @param handler the argument of type {@code TaskFinishedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addTaskFinished(TaskFinishedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -413,6 +591,13 @@ public class IEventSourceImplementation extends NetObject implements IEventSourc
         }
     }
 
+    /**
+     * Invokes the .NET member removeTaskFinished.
+     *
+     * @param handler the argument of type {@code TaskFinishedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeTaskFinished(TaskFinishedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -423,6 +608,13 @@ public class IEventSourceImplementation extends NetObject implements IEventSourc
         }
     }
 
+    /**
+     * Invokes the .NET member addTaskStarted.
+     *
+     * @param handler the argument of type {@code TaskStartedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addTaskStarted(TaskStartedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -433,6 +625,13 @@ public class IEventSourceImplementation extends NetObject implements IEventSourc
         }
     }
 
+    /**
+     * Invokes the .NET member removeTaskStarted.
+     *
+     * @param handler the argument of type {@code TaskStartedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeTaskStarted(TaskStartedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

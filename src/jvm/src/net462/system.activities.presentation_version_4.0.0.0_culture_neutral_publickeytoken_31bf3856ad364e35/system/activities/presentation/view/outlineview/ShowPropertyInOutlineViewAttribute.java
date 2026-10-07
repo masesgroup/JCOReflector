@@ -99,7 +99,10 @@ public class ShowPropertyInOutlineViewAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ShowPropertyInOutlineViewAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class ShowPropertyInOutlineViewAttribute extends system.Attribute  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.OutlineView.ShowPropertyInOutlineViewAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public ShowPropertyInOutlineViewAttribute() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +173,13 @@ public class ShowPropertyInOutlineViewAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CurrentPropertyVisible.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.OutlineView.ShowPropertyInOutlineViewAttribute.CurrentPropertyVisible" target="_top">.NET documentation</a>
+     */
     public boolean getCurrentPropertyVisible() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,6 +194,13 @@ public class ShowPropertyInOutlineViewAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CurrentPropertyVisible.
+     *
+     * @param CurrentPropertyVisible the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.OutlineView.ShowPropertyInOutlineViewAttribute.CurrentPropertyVisible" target="_top">.NET documentation</a>
+     */
     public void setCurrentPropertyVisible(boolean CurrentPropertyVisible) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +211,13 @@ public class ShowPropertyInOutlineViewAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DuplicatedChildNodesVisible.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.OutlineView.ShowPropertyInOutlineViewAttribute.DuplicatedChildNodesVisible" target="_top">.NET documentation</a>
+     */
     public boolean getDuplicatedChildNodesVisible() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +232,13 @@ public class ShowPropertyInOutlineViewAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DuplicatedChildNodesVisible.
+     *
+     * @param DuplicatedChildNodesVisible the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.OutlineView.ShowPropertyInOutlineViewAttribute.DuplicatedChildNodesVisible" target="_top">.NET documentation</a>
+     */
     public void setDuplicatedChildNodesVisible(boolean DuplicatedChildNodesVisible) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -212,6 +249,13 @@ public class ShowPropertyInOutlineViewAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ChildNodePrefix.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.OutlineView.ShowPropertyInOutlineViewAttribute.ChildNodePrefix" target="_top">.NET documentation</a>
+     */
     public java.lang.String getChildNodePrefix() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -226,6 +270,13 @@ public class ShowPropertyInOutlineViewAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ChildNodePrefix.
+     *
+     * @param ChildNodePrefix the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.OutlineView.ShowPropertyInOutlineViewAttribute.ChildNodePrefix" target="_top">.NET documentation</a>
+     */
     public void setChildNodePrefix(java.lang.String ChildNodePrefix) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

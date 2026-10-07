@@ -100,7 +100,10 @@ public class IPphManagerImplementation extends NetObject implements IPphManager 
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IPphManagerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -142,6 +145,14 @@ public class IPphManagerImplementation extends NetObject implements IPphManager 
 
     // Methods section
     
+    /**
+     * Invokes the .NET member StartProcessProtocolListenerChannel.
+     *
+     * @param protocolId the argument of type {@code java.lang.String}
+     * @param listenerChannelCallback the argument of type {@code IListenerChannelCallback}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.IPphManager.StartProcessProtocolListenerChannel" target="_top">.NET documentation</a>
+     */
     public void StartProcessProtocolListenerChannel(java.lang.String protocolId, IListenerChannelCallback listenerChannelCallback) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -152,6 +163,14 @@ public class IPphManagerImplementation extends NetObject implements IPphManager 
         }
     }
 
+    /**
+     * Invokes the .NET member StopProcessProtocol.
+     *
+     * @param protocolId the argument of type {@code java.lang.String}
+     * @param immediate the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.IPphManager.StopProcessProtocol" target="_top">.NET documentation</a>
+     */
     public void StopProcessProtocol(java.lang.String protocolId, boolean immediate) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -162,6 +181,15 @@ public class IPphManagerImplementation extends NetObject implements IPphManager 
         }
     }
 
+    /**
+     * Invokes the .NET member StopProcessProtocolListenerChannel.
+     *
+     * @param protocolId the argument of type {@code java.lang.String}
+     * @param listenerChannelId the argument of type {@code int}
+     * @param immediate the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.IPphManager.StopProcessProtocolListenerChannel" target="_top">.NET documentation</a>
+     */
     public void StopProcessProtocolListenerChannel(java.lang.String protocolId, int listenerChannelId, boolean immediate) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

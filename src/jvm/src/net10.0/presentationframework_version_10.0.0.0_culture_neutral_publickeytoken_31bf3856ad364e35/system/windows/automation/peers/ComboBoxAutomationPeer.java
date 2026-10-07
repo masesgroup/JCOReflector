@@ -101,7 +101,10 @@ public class ComboBoxAutomationPeer extends system.windows.automation.peers.Sele
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ComboBoxAutomationPeer(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,14 @@ public class ComboBoxAutomationPeer extends system.windows.automation.peers.Sele
     public ComboBoxAutomationPeer() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param owner the argument of type {@code ComboBox}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Peers.ComboBoxAutomationPeer.-ctor" target="_top">.NET documentation</a>
+     */
     public ComboBoxAutomationPeer(ComboBox owner) throws Throwable, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
@@ -166,6 +177,22 @@ public class ComboBoxAutomationPeer extends system.windows.automation.peers.Sele
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetPattern.
+     *
+     * @param pattern the argument of type {@code PatternInterface}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Peers.ComboBoxAutomationPeer.GetPattern" target="_top">.NET documentation</a>
+     */
     public NetObject GetPattern(PatternInterface pattern) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,8 +211,12 @@ public class ComboBoxAutomationPeer extends system.windows.automation.peers.Sele
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIValueProvider method available in IValueProvider to obtain an object with an invocable method
+     *
+     * @param value the argument of type {@code java.lang.String}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.IValueProvider.SetValue" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void SetValue(java.lang.String value) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIValueProvider to obtain the full interface.");
     }
@@ -193,8 +224,11 @@ public class ComboBoxAutomationPeer extends system.windows.automation.peers.Sele
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIExpandCollapseProvider method available in IExpandCollapseProvider to obtain an object with an invocable method
+     *
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.IExpandCollapseProvider.Collapse" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void Collapse() throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIExpandCollapseProvider to obtain the full interface.");
     }
@@ -202,8 +236,11 @@ public class ComboBoxAutomationPeer extends system.windows.automation.peers.Sele
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIExpandCollapseProvider method available in IExpandCollapseProvider to obtain an object with an invocable method
+     *
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.IExpandCollapseProvider.Expand" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void Expand() throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIExpandCollapseProvider to obtain the full interface.");
     }

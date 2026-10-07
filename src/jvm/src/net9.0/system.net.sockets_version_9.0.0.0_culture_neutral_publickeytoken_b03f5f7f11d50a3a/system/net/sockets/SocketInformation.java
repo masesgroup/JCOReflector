@@ -100,7 +100,10 @@ public class SocketInformation extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SocketInformation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -159,6 +162,13 @@ public class SocketInformation extends system.ValueType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ProtocolInformation.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.SocketInformation.ProtocolInformation" target="_top">.NET documentation</a>
+     */
     public byte[] getProtocolInformation() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +192,13 @@ public class SocketInformation extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ProtocolInformation.
+     *
+     * @param ProtocolInformation the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.SocketInformation.ProtocolInformation" target="_top">.NET documentation</a>
+     */
     public void setProtocolInformation(byte[] ProtocolInformation) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -192,6 +209,13 @@ public class SocketInformation extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Options.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.SocketInformation.Options" target="_top">.NET documentation</a>
+     */
     public SocketInformationOptions getOptions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +231,13 @@ public class SocketInformation extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Options.
+     *
+     * @param Options the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.SocketInformation.Options" target="_top">.NET documentation</a>
+     */
     public void setOptions(SocketInformationOptions Options) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

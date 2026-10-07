@@ -99,7 +99,10 @@ public class EventLogInformation extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public EventLogInformation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -158,6 +161,13 @@ public class EventLogInformation extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsLogFull.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Eventing.Reader.EventLogInformation.IsLogFull" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getIsLogFull() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -173,6 +183,13 @@ public class EventLogInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CreationTime.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Eventing.Reader.EventLogInformation.CreationTime" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getCreationTime() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +205,13 @@ public class EventLogInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LastAccessTime.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Eventing.Reader.EventLogInformation.LastAccessTime" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getLastAccessTime() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +227,13 @@ public class EventLogInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LastWriteTime.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Eventing.Reader.EventLogInformation.LastWriteTime" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getLastWriteTime() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -218,6 +249,13 @@ public class EventLogInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Attributes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Eventing.Reader.EventLogInformation.Attributes" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getAttributes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -233,6 +271,13 @@ public class EventLogInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FileSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Eventing.Reader.EventLogInformation.FileSize" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getFileSize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -248,6 +293,13 @@ public class EventLogInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OldestRecordNumber.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Eventing.Reader.EventLogInformation.OldestRecordNumber" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getOldestRecordNumber() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -263,6 +315,13 @@ public class EventLogInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RecordCount.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Eventing.Reader.EventLogInformation.RecordCount" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getRecordCount() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

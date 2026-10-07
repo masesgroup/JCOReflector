@@ -100,7 +100,10 @@ public class ImmutableCollectionsMarshal extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ImmutableCollectionsMarshal(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,15 @@ public class ImmutableCollectionsMarshal extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member AsImmutableArray.
+     *
+     * @param <T> the type of the generic argument T
+     * @param array the argument of type {@code T[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ImmutableCollectionsMarshal.AsImmutableArray" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> ImmutableArray_1 AsImmutableArray(T[] array) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

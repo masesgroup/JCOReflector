@@ -101,7 +101,10 @@ public class EventHandlerTaskAsyncHelper extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public EventHandlerTaskAsyncHelper(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,30 @@ public class EventHandlerTaskAsyncHelper extends NetObject  {
     public EventHandlerTaskAsyncHelper() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param handler the argument of type {@code TaskEventHandler}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.threading.tasks.TaskSchedulerException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.threading.tasks.TaskCanceledException if the .NET member raises it
+     * @throws system.AggregateException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.EventHandlerTaskAsyncHelper.-ctor" target="_top">.NET documentation</a>
+     */
     public EventHandlerTaskAsyncHelper(TaskEventHandler handler) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.threading.tasks.TaskSchedulerException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.ThreadAbortException, system.OperationCanceledException, system.threading.tasks.TaskCanceledException, system.AggregateException {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +197,13 @@ public class EventHandlerTaskAsyncHelper extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property BeginEventHandler.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.EventHandlerTaskAsyncHelper.BeginEventHandler" target="_top">.NET documentation</a>
+     */
     public BeginEventHandler getBeginEventHandler() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +218,13 @@ public class EventHandlerTaskAsyncHelper extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property BeginEventHandler.
+     *
+     * @param BeginEventHandler the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.EventHandlerTaskAsyncHelper.BeginEventHandler" target="_top">.NET documentation</a>
+     */
     public void setBeginEventHandler(BeginEventHandler BeginEventHandler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +235,13 @@ public class EventHandlerTaskAsyncHelper extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EndEventHandler.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.EventHandlerTaskAsyncHelper.EndEventHandler" target="_top">.NET documentation</a>
+     */
     public EndEventHandler getEndEventHandler() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +256,13 @@ public class EventHandlerTaskAsyncHelper extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property EndEventHandler.
+     *
+     * @param EndEventHandler the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.EventHandlerTaskAsyncHelper.EndEventHandler" target="_top">.NET documentation</a>
+     */
     public void setEndEventHandler(EndEventHandler EndEventHandler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

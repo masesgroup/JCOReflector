@@ -99,7 +99,10 @@ public class StackFrameExtensions extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public StackFrameExtensions(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,14 @@ public class StackFrameExtensions extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member HasILOffset.
+     *
+     * @param stackFrame the argument of type {@code StackFrame}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.StackFrameExtensions.HasILOffset" target="_top">.NET documentation</a>
+     */
     public static boolean HasILOffset(StackFrame stackFrame) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -166,6 +177,14 @@ public class StackFrameExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member HasMethod.
+     *
+     * @param stackFrame the argument of type {@code StackFrame}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.StackFrameExtensions.HasMethod" target="_top">.NET documentation</a>
+     */
     public static boolean HasMethod(StackFrame stackFrame) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -180,6 +199,14 @@ public class StackFrameExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member HasNativeImage.
+     *
+     * @param stackFrame the argument of type {@code StackFrame}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.StackFrameExtensions.HasNativeImage" target="_top">.NET documentation</a>
+     */
     public static boolean HasNativeImage(StackFrame stackFrame) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -194,6 +221,14 @@ public class StackFrameExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member HasSource.
+     *
+     * @param stackFrame the argument of type {@code StackFrame}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.StackFrameExtensions.HasSource" target="_top">.NET documentation</a>
+     */
     public static boolean HasSource(StackFrame stackFrame) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

@@ -101,7 +101,10 @@ public class ProjectSchemaDefinitions extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ProjectSchemaDefinitions(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class ProjectSchemaDefinitions extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.ProjectSchemaDefinitions.-ctor" target="_top">.NET documentation</a>
+     */
     public ProjectSchemaDefinitions() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -162,6 +171,14 @@ public class ProjectSchemaDefinitions extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetSchemaObjects.
+     *
+     * @param type the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.ProjectSchemaDefinitions.GetSchemaObjects" target="_top">.NET documentation</a>
+     */
     public IEnumerable_1 GetSchemaObjects(NetType type) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -177,6 +194,17 @@ public class ProjectSchemaDefinitions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetSchemaObjectTypes.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.ProjectSchemaDefinitions.GetSchemaObjectTypes" target="_top">.NET documentation</a>
+     */
     public IEnumerable_1 GetSchemaObjectTypes() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -196,6 +224,13 @@ public class ProjectSchemaDefinitions extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Nodes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.ProjectSchemaDefinitions.Nodes" target="_top">.NET documentation</a>
+     */
     public List_1 getNodes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -211,6 +246,13 @@ public class ProjectSchemaDefinitions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Nodes.
+     *
+     * @param Nodes the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.ProjectSchemaDefinitions.Nodes" target="_top">.NET documentation</a>
+     */
     public void setNodes(List_1 Nodes) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

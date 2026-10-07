@@ -103,7 +103,10 @@ public class Complex extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Complex(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,14 @@ public class Complex extends system.ValueType  {
     public Complex() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param real the argument of type {@code double}
+     * @param imaginary the argument of type {@code double}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Complex.-ctor" target="_top">.NET documentation</a>
+     */
     public Complex(double real, double imaginary) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +179,14 @@ public class Complex extends system.ValueType  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Equals.
+     *
+     * @param value the argument of type {@code Complex}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Complex.Equals" target="_top">.NET documentation</a>
+     */
     public boolean Equals(Complex value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +201,14 @@ public class Complex extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsComplexNumber.
+     *
+     * @param value the argument of type {@code Complex}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Complex.IsComplexNumber" target="_top">.NET documentation</a>
+     */
     public static boolean IsComplexNumber(Complex value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -196,6 +223,16 @@ public class Complex extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsEvenInteger.
+     *
+     * @param value the argument of type {@code Complex}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Complex.IsEvenInteger" target="_top">.NET documentation</a>
+     */
     public static boolean IsEvenInteger(Complex value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -210,6 +247,17 @@ public class Complex extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsFinite.
+     *
+     * @param value the argument of type {@code Complex}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Complex.IsFinite" target="_top">.NET documentation</a>
+     */
     public static boolean IsFinite(Complex value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -224,6 +272,14 @@ public class Complex extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsImaginaryNumber.
+     *
+     * @param value the argument of type {@code Complex}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Complex.IsImaginaryNumber" target="_top">.NET documentation</a>
+     */
     public static boolean IsImaginaryNumber(Complex value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -238,6 +294,16 @@ public class Complex extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsInfinity.
+     *
+     * @param value the argument of type {@code Complex}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Complex.IsInfinity" target="_top">.NET documentation</a>
+     */
     public static boolean IsInfinity(Complex value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -252,6 +318,16 @@ public class Complex extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsInteger.
+     *
+     * @param value the argument of type {@code Complex}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Complex.IsInteger" target="_top">.NET documentation</a>
+     */
     public static boolean IsInteger(Complex value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -266,6 +342,16 @@ public class Complex extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsNaN.
+     *
+     * @param value the argument of type {@code Complex}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Complex.IsNaN" target="_top">.NET documentation</a>
+     */
     public static boolean IsNaN(Complex value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -280,6 +366,17 @@ public class Complex extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsNegative.
+     *
+     * @param value the argument of type {@code Complex}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Complex.IsNegative" target="_top">.NET documentation</a>
+     */
     public static boolean IsNegative(Complex value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -294,6 +391,14 @@ public class Complex extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsNegativeInfinity.
+     *
+     * @param value the argument of type {@code Complex}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Complex.IsNegativeInfinity" target="_top">.NET documentation</a>
+     */
     public static boolean IsNegativeInfinity(Complex value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -308,6 +413,16 @@ public class Complex extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsNormal.
+     *
+     * @param value the argument of type {@code Complex}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Complex.IsNormal" target="_top">.NET documentation</a>
+     */
     public static boolean IsNormal(Complex value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -322,6 +437,16 @@ public class Complex extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsOddInteger.
+     *
+     * @param value the argument of type {@code Complex}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Complex.IsOddInteger" target="_top">.NET documentation</a>
+     */
     public static boolean IsOddInteger(Complex value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -336,6 +461,17 @@ public class Complex extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsPositive.
+     *
+     * @param value the argument of type {@code Complex}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Complex.IsPositive" target="_top">.NET documentation</a>
+     */
     public static boolean IsPositive(Complex value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -350,6 +486,14 @@ public class Complex extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsPositiveInfinity.
+     *
+     * @param value the argument of type {@code Complex}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Complex.IsPositiveInfinity" target="_top">.NET documentation</a>
+     */
     public static boolean IsPositiveInfinity(Complex value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -364,6 +508,14 @@ public class Complex extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsRealNumber.
+     *
+     * @param value the argument of type {@code Complex}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Complex.IsRealNumber" target="_top">.NET documentation</a>
+     */
     public static boolean IsRealNumber(Complex value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -378,6 +530,16 @@ public class Complex extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsSubnormal.
+     *
+     * @param value the argument of type {@code Complex}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Complex.IsSubnormal" target="_top">.NET documentation</a>
+     */
     public static boolean IsSubnormal(Complex value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -392,6 +554,25 @@ public class Complex extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member TryParse.
+     *
+     * @param s the argument of type {@code java.lang.String}
+     * @param style the argument of type {@code NumberStyles}
+     * @param provider the argument of type {@code IFormatProvider}
+     * @param result the argument of type {@code JCORefOut<Complex>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Complex.TryParse" target="_top">.NET documentation</a>
+     */
     public static boolean TryParse(java.lang.String s, NumberStyles style, IFormatProvider provider, JCORefOut<Complex> result) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -406,6 +587,24 @@ public class Complex extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member TryParse.
+     *
+     * @param s the argument of type {@code java.lang.String}
+     * @param provider the argument of type {@code IFormatProvider}
+     * @param result the argument of type {@code JCORefOut<Complex>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Complex.TryParse" target="_top">.NET documentation</a>
+     */
     public static boolean TryParse(java.lang.String s, IFormatProvider provider, JCORefOut<Complex> result) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -420,6 +619,16 @@ public class Complex extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Abs.
+     *
+     * @param value the argument of type {@code Complex}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Complex.Abs" target="_top">.NET documentation</a>
+     */
     public static double Abs(Complex value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -460,6 +669,17 @@ public class Complex extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Acos.
+     *
+     * @param value the argument of type {@code Complex}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Complex.Acos" target="_top">.NET documentation</a>
+     */
     public static Complex Acos(Complex value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -475,6 +695,15 @@ public class Complex extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param left the argument of type {@code double}
+     * @param right the argument of type {@code Complex}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Complex.Add" target="_top">.NET documentation</a>
+     */
     public static Complex Add(double left, Complex right) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -490,6 +719,15 @@ public class Complex extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param left the argument of type {@code Complex}
+     * @param right the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Complex.Add" target="_top">.NET documentation</a>
+     */
     public static Complex Add(Complex left, double right) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -505,6 +743,15 @@ public class Complex extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param left the argument of type {@code Complex}
+     * @param right the argument of type {@code Complex}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Complex.Add" target="_top">.NET documentation</a>
+     */
     public static Complex Add(Complex left, Complex right) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -520,6 +767,17 @@ public class Complex extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Asin.
+     *
+     * @param value the argument of type {@code Complex}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Complex.Asin" target="_top">.NET documentation</a>
+     */
     public static Complex Asin(Complex value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -535,6 +793,16 @@ public class Complex extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Atan.
+     *
+     * @param value the argument of type {@code Complex}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Complex.Atan" target="_top">.NET documentation</a>
+     */
     public static Complex Atan(Complex value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -550,6 +818,14 @@ public class Complex extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Conjugate.
+     *
+     * @param value the argument of type {@code Complex}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Complex.Conjugate" target="_top">.NET documentation</a>
+     */
     public static Complex Conjugate(Complex value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -565,6 +841,14 @@ public class Complex extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Cos.
+     *
+     * @param value the argument of type {@code Complex}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Complex.Cos" target="_top">.NET documentation</a>
+     */
     public static Complex Cos(Complex value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -580,6 +864,14 @@ public class Complex extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Cosh.
+     *
+     * @param value the argument of type {@code Complex}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Complex.Cosh" target="_top">.NET documentation</a>
+     */
     public static Complex Cosh(Complex value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -595,6 +887,20 @@ public class Complex extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateChecked.
+     *
+     * @param <TOther> the type of the generic argument TOther
+     * @param value the argument of type {@code TOther}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Complex.CreateChecked" target="_top">.NET documentation</a>
+     */
     public static <TOther extends IJCOBridgeReflected> Complex CreateChecked(TOther value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -610,6 +916,20 @@ public class Complex extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateSaturating.
+     *
+     * @param <TOther> the type of the generic argument TOther
+     * @param value the argument of type {@code TOther}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Complex.CreateSaturating" target="_top">.NET documentation</a>
+     */
     public static <TOther extends IJCOBridgeReflected> Complex CreateSaturating(TOther value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -625,6 +945,20 @@ public class Complex extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateTruncating.
+     *
+     * @param <TOther> the type of the generic argument TOther
+     * @param value the argument of type {@code TOther}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Complex.CreateTruncating" target="_top">.NET documentation</a>
+     */
     public static <TOther extends IJCOBridgeReflected> Complex CreateTruncating(TOther value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -640,6 +974,17 @@ public class Complex extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Divide.
+     *
+     * @param dividend the argument of type {@code double}
+     * @param divisor the argument of type {@code Complex}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Complex.Divide" target="_top">.NET documentation</a>
+     */
     public static Complex Divide(double dividend, Complex divisor) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -655,6 +1000,17 @@ public class Complex extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Divide.
+     *
+     * @param dividend the argument of type {@code Complex}
+     * @param divisor the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Complex.Divide" target="_top">.NET documentation</a>
+     */
     public static Complex Divide(Complex dividend, double divisor) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -670,6 +1026,17 @@ public class Complex extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Divide.
+     *
+     * @param dividend the argument of type {@code Complex}
+     * @param divisor the argument of type {@code Complex}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Complex.Divide" target="_top">.NET documentation</a>
+     */
     public static Complex Divide(Complex dividend, Complex divisor) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -685,6 +1052,14 @@ public class Complex extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Exp.
+     *
+     * @param value the argument of type {@code Complex}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Complex.Exp" target="_top">.NET documentation</a>
+     */
     public static Complex Exp(Complex value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -700,6 +1075,15 @@ public class Complex extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member FromPolarCoordinates.
+     *
+     * @param magnitude the argument of type {@code double}
+     * @param phase the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Complex.FromPolarCoordinates" target="_top">.NET documentation</a>
+     */
     public static Complex FromPolarCoordinates(double magnitude, double phase) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -715,6 +1099,17 @@ public class Complex extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Log.
+     *
+     * @param value the argument of type {@code Complex}
+     * @param baseValue the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Complex.Log" target="_top">.NET documentation</a>
+     */
     public static Complex Log(Complex value, double baseValue) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -730,6 +1125,16 @@ public class Complex extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Log.
+     *
+     * @param value the argument of type {@code Complex}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Complex.Log" target="_top">.NET documentation</a>
+     */
     public static Complex Log(Complex value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -745,6 +1150,16 @@ public class Complex extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Log10.
+     *
+     * @param value the argument of type {@code Complex}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Complex.Log10" target="_top">.NET documentation</a>
+     */
     public static Complex Log10(Complex value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -760,6 +1175,17 @@ public class Complex extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member MaxMagnitude.
+     *
+     * @param x the argument of type {@code Complex}
+     * @param y the argument of type {@code Complex}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Complex.MaxMagnitude" target="_top">.NET documentation</a>
+     */
     public static Complex MaxMagnitude(Complex x, Complex y) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -775,6 +1201,17 @@ public class Complex extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member MinMagnitude.
+     *
+     * @param x the argument of type {@code Complex}
+     * @param y the argument of type {@code Complex}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Complex.MinMagnitude" target="_top">.NET documentation</a>
+     */
     public static Complex MinMagnitude(Complex x, Complex y) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -790,6 +1227,17 @@ public class Complex extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Multiply.
+     *
+     * @param left the argument of type {@code double}
+     * @param right the argument of type {@code Complex}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Complex.Multiply" target="_top">.NET documentation</a>
+     */
     public static Complex Multiply(double left, Complex right) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -805,6 +1253,17 @@ public class Complex extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Multiply.
+     *
+     * @param left the argument of type {@code Complex}
+     * @param right the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Complex.Multiply" target="_top">.NET documentation</a>
+     */
     public static Complex Multiply(Complex left, double right) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -820,6 +1279,15 @@ public class Complex extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Multiply.
+     *
+     * @param left the argument of type {@code Complex}
+     * @param right the argument of type {@code Complex}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Complex.Multiply" target="_top">.NET documentation</a>
+     */
     public static Complex Multiply(Complex left, Complex right) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -835,6 +1303,14 @@ public class Complex extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Negate.
+     *
+     * @param value the argument of type {@code Complex}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Complex.Negate" target="_top">.NET documentation</a>
+     */
     public static Complex Negate(Complex value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -850,6 +1326,28 @@ public class Complex extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Parse.
+     *
+     * @param s the argument of type {@code java.lang.String}
+     * @param style the argument of type {@code NumberStyles}
+     * @param provider the argument of type {@code IFormatProvider}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Complex.Parse" target="_top">.NET documentation</a>
+     */
     public static Complex Parse(java.lang.String s, NumberStyles style, IFormatProvider provider) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -865,6 +1363,24 @@ public class Complex extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Parse.
+     *
+     * @param s the argument of type {@code java.lang.String}
+     * @param provider the argument of type {@code IFormatProvider}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Complex.Parse" target="_top">.NET documentation</a>
+     */
     public static Complex Parse(java.lang.String s, IFormatProvider provider) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -880,6 +1396,17 @@ public class Complex extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Pow.
+     *
+     * @param value the argument of type {@code Complex}
+     * @param power the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Complex.Pow" target="_top">.NET documentation</a>
+     */
     public static Complex Pow(Complex value, double power) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -895,6 +1422,17 @@ public class Complex extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Pow.
+     *
+     * @param value the argument of type {@code Complex}
+     * @param power the argument of type {@code Complex}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Complex.Pow" target="_top">.NET documentation</a>
+     */
     public static Complex Pow(Complex value, Complex power) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -910,6 +1448,16 @@ public class Complex extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Reciprocal.
+     *
+     * @param value the argument of type {@code Complex}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Complex.Reciprocal" target="_top">.NET documentation</a>
+     */
     public static Complex Reciprocal(Complex value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -925,6 +1473,14 @@ public class Complex extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Sin.
+     *
+     * @param value the argument of type {@code Complex}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Complex.Sin" target="_top">.NET documentation</a>
+     */
     public static Complex Sin(Complex value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -940,6 +1496,14 @@ public class Complex extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Sinh.
+     *
+     * @param value the argument of type {@code Complex}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Complex.Sinh" target="_top">.NET documentation</a>
+     */
     public static Complex Sinh(Complex value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -955,6 +1519,16 @@ public class Complex extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Sqrt.
+     *
+     * @param value the argument of type {@code Complex}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Complex.Sqrt" target="_top">.NET documentation</a>
+     */
     public static Complex Sqrt(Complex value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -970,6 +1544,15 @@ public class Complex extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Subtract.
+     *
+     * @param left the argument of type {@code double}
+     * @param right the argument of type {@code Complex}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Complex.Subtract" target="_top">.NET documentation</a>
+     */
     public static Complex Subtract(double left, Complex right) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -985,6 +1568,15 @@ public class Complex extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Subtract.
+     *
+     * @param left the argument of type {@code Complex}
+     * @param right the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Complex.Subtract" target="_top">.NET documentation</a>
+     */
     public static Complex Subtract(Complex left, double right) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1000,6 +1592,15 @@ public class Complex extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Subtract.
+     *
+     * @param left the argument of type {@code Complex}
+     * @param right the argument of type {@code Complex}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Complex.Subtract" target="_top">.NET documentation</a>
+     */
     public static Complex Subtract(Complex left, Complex right) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1015,6 +1616,17 @@ public class Complex extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Tan.
+     *
+     * @param value the argument of type {@code Complex}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Complex.Tan" target="_top">.NET documentation</a>
+     */
     public static Complex Tan(Complex value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1030,6 +1642,16 @@ public class Complex extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Tanh.
+     *
+     * @param value the argument of type {@code Complex}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Complex.Tanh" target="_top">.NET documentation</a>
+     */
     public static Complex Tanh(Complex value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1045,6 +1667,26 @@ public class Complex extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToString.
+     *
+     * @param provider the argument of type {@code IFormatProvider}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Complex.ToString" target="_top">.NET documentation</a>
+     */
     public java.lang.String ToString(IFormatProvider provider) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.OverflowException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1059,6 +1701,27 @@ public class Complex extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToString.
+     *
+     * @param format the argument of type {@code java.lang.String}
+     * @param provider the argument of type {@code IFormatProvider}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Complex.ToString" target="_top">.NET documentation</a>
+     */
     public java.lang.String ToString(java.lang.String format, IFormatProvider provider) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OverflowException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1073,6 +1736,26 @@ public class Complex extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToString.
+     *
+     * @param format the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Complex.ToString" target="_top">.NET documentation</a>
+     */
     public java.lang.String ToString(java.lang.String format) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.OverflowException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1090,8 +1773,13 @@ public class Complex extends system.ValueType  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToINumberBase_1 method available in INumberBase_1 to obtain an object with an invocable method
+     *
+     * @param value the argument of type {@code Complex}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.INumberBase-1.IsCanonical" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public static boolean IsCanonical(Complex value) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToINumberBase_1 to obtain the full interface.");
     }
@@ -1099,8 +1787,13 @@ public class Complex extends system.ValueType  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToINumberBase_1 method available in INumberBase_1 to obtain an object with an invocable method
+     *
+     * @param value the argument of type {@code Complex}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.INumberBase-1.IsZero" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public static boolean IsZero(Complex value) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToINumberBase_1 to obtain the full interface.");
     }
@@ -1108,8 +1801,14 @@ public class Complex extends system.ValueType  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToINumberBase_1 method available in INumberBase_1 to obtain an object with an invocable method
+     *
+     * @param x the argument of type {@code Complex}
+     * @param y the argument of type {@code Complex}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.INumberBase-1.MaxMagnitudeNumber" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public static Complex MaxMagnitudeNumber(Complex x, Complex y) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToINumberBase_1 to obtain the full interface.");
     }
@@ -1117,8 +1816,14 @@ public class Complex extends system.ValueType  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToINumberBase_1 method available in INumberBase_1 to obtain an object with an invocable method
+     *
+     * @param x the argument of type {@code Complex}
+     * @param y the argument of type {@code Complex}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.INumberBase-1.MinMagnitudeNumber" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public static Complex MinMagnitudeNumber(Complex x, Complex y) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToINumberBase_1 to obtain the full interface.");
     }
@@ -1126,8 +1831,15 @@ public class Complex extends system.ValueType  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToINumberBase_1 method available in INumberBase_1 to obtain an object with an invocable method
+     *
+     * @param left the argument of type {@code Complex}
+     * @param right the argument of type {@code Complex}
+     * @param addend the argument of type {@code Complex}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.INumberBase-1.MultiplyAddEstimate" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public static Complex MultiplyAddEstimate(Complex left, Complex right, Complex addend) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToINumberBase_1 to obtain the full interface.");
     }
@@ -1136,6 +1848,13 @@ public class Complex extends system.ValueType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Imaginary.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Complex.Imaginary" target="_top">.NET documentation</a>
+     */
     public double getImaginary() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1176,6 +1895,15 @@ public class Complex extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Magnitude.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Complex.Magnitude" target="_top">.NET documentation</a>
+     */
     public double getMagnitude() throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1216,6 +1944,13 @@ public class Complex extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Phase.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Complex.Phase" target="_top">.NET documentation</a>
+     */
     public double getPhase() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1256,6 +1991,13 @@ public class Complex extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Real.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Complex.Real" target="_top">.NET documentation</a>
+     */
     public double getReal() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

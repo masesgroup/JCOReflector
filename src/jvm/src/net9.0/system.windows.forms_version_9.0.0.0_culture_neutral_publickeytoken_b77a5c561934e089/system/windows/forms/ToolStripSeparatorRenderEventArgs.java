@@ -101,7 +101,10 @@ public class ToolStripSeparatorRenderEventArgs extends system.windows.forms.Tool
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ToolStripSeparatorRenderEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,18 @@ public class ToolStripSeparatorRenderEventArgs extends system.windows.forms.Tool
     public ToolStripSeparatorRenderEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param g the argument of type {@code Graphics}
+     * @param separator the argument of type {@code ToolStripSeparator}
+     * @param vertical the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripSeparatorRenderEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public ToolStripSeparatorRenderEventArgs(Graphics g, ToolStripSeparator separator, boolean vertical) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +185,13 @@ public class ToolStripSeparatorRenderEventArgs extends system.windows.forms.Tool
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Vertical.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripSeparatorRenderEventArgs.Vertical" target="_top">.NET documentation</a>
+     */
     public boolean getVertical() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

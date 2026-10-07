@@ -106,7 +106,10 @@ public class CacheStoreProvider extends system.configuration.provider.ProviderBa
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CacheStoreProvider(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -159,6 +162,16 @@ public class CacheStoreProvider extends system.configuration.provider.ProviderBa
     
     // Methods section
     
+    /**
+     * Invokes the .NET member AddDependent.
+     *
+     * @param key the argument of type {@code java.lang.String}
+     * @param dependency the argument of type {@code CacheDependency}
+     * @param utcLastUpdated the argument of type {@code JCORefOut<DateTime>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Caching.CacheStoreProvider.AddDependent" target="_top">.NET documentation</a>
+     */
     public boolean AddDependent(java.lang.String key, CacheDependency dependency, JCORefOut<DateTime> utcLastUpdated) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -173,6 +186,14 @@ public class CacheStoreProvider extends system.configuration.provider.ProviderBa
         }
     }
 
+    /**
+     * Invokes the .NET member Trim.
+     *
+     * @param percent the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Caching.CacheStoreProvider.Trim" target="_top">.NET documentation</a>
+     */
     public long Trim(int percent) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -213,6 +234,13 @@ public class CacheStoreProvider extends system.configuration.provider.ProviderBa
         }
     }
 
+    /**
+     * Invokes the .NET member GetEnumerator.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Caching.CacheStoreProvider.GetEnumerator" target="_top">.NET documentation</a>
+     */
     public IDictionaryEnumerator GetEnumerator() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -228,6 +256,16 @@ public class CacheStoreProvider extends system.configuration.provider.ProviderBa
         }
     }
 
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param key the argument of type {@code java.lang.String}
+     * @param item the argument of type {@code NetObject}
+     * @param options the argument of type {@code CacheInsertOptions}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Caching.CacheStoreProvider.Add" target="_top">.NET documentation</a>
+     */
     public NetObject Add(java.lang.String key, NetObject item, CacheInsertOptions options) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -243,6 +281,14 @@ public class CacheStoreProvider extends system.configuration.provider.ProviderBa
         }
     }
 
+    /**
+     * Invokes the .NET member Get.
+     *
+     * @param key the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Caching.CacheStoreProvider.Get" target="_top">.NET documentation</a>
+     */
     public NetObject Get(java.lang.String key) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -258,6 +304,14 @@ public class CacheStoreProvider extends system.configuration.provider.ProviderBa
         }
     }
 
+    /**
+     * Invokes the .NET member Remove.
+     *
+     * @param key the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Caching.CacheStoreProvider.Remove" target="_top">.NET documentation</a>
+     */
     public NetObject Remove(java.lang.String key) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -273,6 +327,15 @@ public class CacheStoreProvider extends system.configuration.provider.ProviderBa
         }
     }
 
+    /**
+     * Invokes the .NET member Remove.
+     *
+     * @param key the argument of type {@code java.lang.String}
+     * @param reason the argument of type {@code CacheItemRemovedReason}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Caching.CacheStoreProvider.Remove" target="_top">.NET documentation</a>
+     */
     public NetObject Remove(java.lang.String key, CacheItemRemovedReason reason) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -288,6 +351,12 @@ public class CacheStoreProvider extends system.configuration.provider.ProviderBa
         }
     }
 
+    /**
+     * Invokes the .NET member Dispose.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Caching.CacheStoreProvider.Dispose" target="_top">.NET documentation</a>
+     */
     public void Dispose() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -298,6 +367,14 @@ public class CacheStoreProvider extends system.configuration.provider.ProviderBa
         }
     }
 
+    /**
+     * Invokes the .NET member InitializeNewCacheStoreProvider.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param config the argument of type {@code NameValueCollection}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Caching.CacheStoreProvider.InitializeNewCacheStoreProvider" target="_top">.NET documentation</a>
+     */
     public void InitializeNewCacheStoreProvider(java.lang.String name, NameValueCollection config) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -308,6 +385,15 @@ public class CacheStoreProvider extends system.configuration.provider.ProviderBa
         }
     }
 
+    /**
+     * Invokes the .NET member Insert.
+     *
+     * @param key the argument of type {@code java.lang.String}
+     * @param item the argument of type {@code NetObject}
+     * @param options the argument of type {@code CacheInsertOptions}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Caching.CacheStoreProvider.Insert" target="_top">.NET documentation</a>
+     */
     public void Insert(java.lang.String key, NetObject item, CacheInsertOptions options) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -318,6 +404,14 @@ public class CacheStoreProvider extends system.configuration.provider.ProviderBa
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveDependent.
+     *
+     * @param key the argument of type {@code java.lang.String}
+     * @param dependency the argument of type {@code CacheDependency}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Caching.CacheStoreProvider.RemoveDependent" target="_top">.NET documentation</a>
+     */
     public void RemoveDependent(java.lang.String key, CacheDependency dependency) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -345,6 +439,13 @@ public class CacheStoreProvider extends system.configuration.provider.ProviderBa
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ItemCount.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Caching.CacheStoreProvider.ItemCount" target="_top">.NET documentation</a>
+     */
     public long getItemCount() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -385,6 +486,13 @@ public class CacheStoreProvider extends system.configuration.provider.ProviderBa
         }
     }
 
+    /**
+     * Gets the value of the .NET property SizeInBytes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Caching.CacheStoreProvider.SizeInBytes" target="_top">.NET documentation</a>
+     */
     public long getSizeInBytes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

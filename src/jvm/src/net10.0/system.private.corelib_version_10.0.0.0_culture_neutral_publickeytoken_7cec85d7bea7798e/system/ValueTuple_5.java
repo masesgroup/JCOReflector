@@ -104,7 +104,10 @@ public class ValueTuple_5<T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeR
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ValueTuple_5(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,17 @@ public class ValueTuple_5<T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeR
     public ValueTuple_5() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param item1 the argument of type {@code T1}
+     * @param item2 the argument of type {@code T2}
+     * @param item3 the argument of type {@code T3}
+     * @param item4 the argument of type {@code T4}
+     * @param item5 the argument of type {@code T5}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ValueTuple-5.-ctor" target="_top">.NET documentation</a>
+     */
     public ValueTuple_5(T1 item1, T2 item2, T3 item3, T4 item4, T5 item5) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -171,6 +185,14 @@ public class ValueTuple_5<T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeR
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Equals.
+     *
+     * @param other the argument of type {@code ValueTuple_5}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ValueTuple-5.Equals" target="_top">.NET documentation</a>
+     */
     public boolean Equals(ValueTuple_5 other) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -185,6 +207,14 @@ public class ValueTuple_5<T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeR
         }
     }
 
+    /**
+     * Invokes the .NET member CompareTo.
+     *
+     * @param other the argument of type {@code ValueTuple_5}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ValueTuple-5.CompareTo" target="_top">.NET documentation</a>
+     */
     public int CompareTo(ValueTuple_5 other) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -228,8 +258,14 @@ public class ValueTuple_5<T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeR
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIStructuralEquatable method available in IStructuralEquatable to obtain an object with an invocable method
+     *
+     * @param other the argument of type {@code NetObject}
+     * @param comparer the argument of type {@code IEqualityComparer}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.IStructuralEquatable.Equals" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public boolean Equals(NetObject other, IEqualityComparer comparer) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIStructuralEquatable to obtain the full interface.");
     }
@@ -237,8 +273,13 @@ public class ValueTuple_5<T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeR
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIStructuralEquatable method available in IStructuralEquatable to obtain an object with an invocable method
+     *
+     * @param comparer the argument of type {@code IEqualityComparer}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.IStructuralEquatable.GetHashCode" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public int GetHashCode(IEqualityComparer comparer) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIStructuralEquatable to obtain the full interface.");
     }
@@ -246,8 +287,14 @@ public class ValueTuple_5<T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeR
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIStructuralComparable method available in IStructuralComparable to obtain an object with an invocable method
+     *
+     * @param other the argument of type {@code NetObject}
+     * @param comparer the argument of type {@code IComparer}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.IStructuralComparable.CompareTo" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public int CompareTo(NetObject other, IComparer comparer) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIStructuralComparable to obtain the full interface.");
     }
@@ -255,8 +302,13 @@ public class ValueTuple_5<T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeR
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIComparable method available in IComparable to obtain an object with an invocable method
+     *
+     * @param obj the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IComparable.CompareTo" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public int CompareTo(NetObject obj) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIComparable to obtain the full interface.");
     }

@@ -104,7 +104,10 @@ public class IHttpAsyncHandlerImplementation extends NetObject implements IHttpA
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IHttpAsyncHandlerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,16 @@ public class IHttpAsyncHandlerImplementation extends NetObject implements IHttpA
 
     // Methods section
     
+    /**
+     * Invokes the .NET member BeginProcessRequest.
+     *
+     * @param context the argument of type {@code HttpContext}
+     * @param cb the argument of type {@code AsyncCallback}
+     * @param extraData the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.IHttpAsyncHandler.BeginProcessRequest" target="_top">.NET documentation</a>
+     */
     public IAsyncResult BeginProcessRequest(HttpContext context, AsyncCallback cb, NetObject extraData) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -161,6 +174,13 @@ public class IHttpAsyncHandlerImplementation extends NetObject implements IHttpA
         }
     }
 
+    /**
+     * Invokes the .NET member EndProcessRequest.
+     *
+     * @param result the argument of type {@code IAsyncResult}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.IHttpAsyncHandler.EndProcessRequest" target="_top">.NET documentation</a>
+     */
     public void EndProcessRequest(IAsyncResult result) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -171,6 +191,13 @@ public class IHttpAsyncHandlerImplementation extends NetObject implements IHttpA
         }
     }
 
+    /**
+     * Invokes the .NET member ProcessRequest.
+     *
+     * @param context the argument of type {@code HttpContext}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.IHttpAsyncHandler.ProcessRequest" target="_top">.NET documentation</a>
+     */
     public void ProcessRequest(HttpContext context) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -185,6 +212,13 @@ public class IHttpAsyncHandlerImplementation extends NetObject implements IHttpA
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsReusable.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.IHttpAsyncHandler.IsReusable" target="_top">.NET documentation</a>
+     */
     public boolean getIsReusable() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

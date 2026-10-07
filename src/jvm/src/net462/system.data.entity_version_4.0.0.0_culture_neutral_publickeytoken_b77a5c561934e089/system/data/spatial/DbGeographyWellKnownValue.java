@@ -98,7 +98,10 @@ public class DbGeographyWellKnownValue extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DbGeographyWellKnownValue(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -145,6 +148,12 @@ public class DbGeographyWellKnownValue extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeographyWellKnownValue.-ctor" target="_top">.NET documentation</a>
+     */
     public DbGeographyWellKnownValue() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -163,6 +172,13 @@ public class DbGeographyWellKnownValue extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property WellKnownBinary.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeographyWellKnownValue.WellKnownBinary" target="_top">.NET documentation</a>
+     */
     public byte[] getWellKnownBinary() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -186,6 +202,13 @@ public class DbGeographyWellKnownValue extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property WellKnownBinary.
+     *
+     * @param WellKnownBinary the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeographyWellKnownValue.WellKnownBinary" target="_top">.NET documentation</a>
+     */
     public void setWellKnownBinary(byte[] WellKnownBinary) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -196,6 +219,13 @@ public class DbGeographyWellKnownValue extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CoordinateSystemId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeographyWellKnownValue.CoordinateSystemId" target="_top">.NET documentation</a>
+     */
     public int getCoordinateSystemId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -236,6 +266,13 @@ public class DbGeographyWellKnownValue extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CoordinateSystemId.
+     *
+     * @param CoordinateSystemId the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeographyWellKnownValue.CoordinateSystemId" target="_top">.NET documentation</a>
+     */
     public void setCoordinateSystemId(int CoordinateSystemId) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -246,6 +283,13 @@ public class DbGeographyWellKnownValue extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property WellKnownText.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeographyWellKnownValue.WellKnownText" target="_top">.NET documentation</a>
+     */
     public java.lang.String getWellKnownText() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -260,6 +304,13 @@ public class DbGeographyWellKnownValue extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property WellKnownText.
+     *
+     * @param WellKnownText the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeographyWellKnownValue.WellKnownText" target="_top">.NET documentation</a>
+     */
     public void setWellKnownText(java.lang.String WellKnownText) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

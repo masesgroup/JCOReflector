@@ -100,7 +100,10 @@ public class XmlSchemaContentModel extends system.xml.schema.XmlSchemaAnnotated 
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XmlSchemaContentModel(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,13 @@ public class XmlSchemaContentModel extends system.xml.schema.XmlSchemaAnnotated 
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Content.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaContentModel.Content" target="_top">.NET documentation</a>
+     */
     public XmlSchemaContent getContent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -172,6 +182,13 @@ public class XmlSchemaContentModel extends system.xml.schema.XmlSchemaAnnotated 
         }
     }
 
+    /**
+     * Sets the value of the .NET property Content.
+     *
+     * @param Content the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaContentModel.Content" target="_top">.NET documentation</a>
+     */
     public void setContent(XmlSchemaContent Content) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -99,7 +99,10 @@ public class PerformanceCounterPermissionEntry extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PerformanceCounterPermissionEntry(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,28 @@ public class PerformanceCounterPermissionEntry extends NetObject  {
     public PerformanceCounterPermissionEntry() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param permissionAccess the argument of type {@code PerformanceCounterPermissionAccess}
+     * @param machineName the argument of type {@code java.lang.String}
+     * @param categoryName the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.PerformanceCounterPermissionEntry.-ctor" target="_top">.NET documentation</a>
+     */
     public PerformanceCounterPermissionEntry(PerformanceCounterPermissionAccess permissionAccess, java.lang.String machineName, java.lang.String categoryName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.NullReferenceException {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +193,13 @@ public class PerformanceCounterPermissionEntry extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property PermissionAccess.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.PerformanceCounterPermissionEntry.PermissionAccess" target="_top">.NET documentation</a>
+     */
     public PerformanceCounterPermissionAccess getPermissionAccess() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +215,13 @@ public class PerformanceCounterPermissionEntry extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CategoryName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.PerformanceCounterPermissionEntry.CategoryName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getCategoryName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +236,13 @@ public class PerformanceCounterPermissionEntry extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MachineName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.PerformanceCounterPermissionEntry.MachineName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getMachineName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

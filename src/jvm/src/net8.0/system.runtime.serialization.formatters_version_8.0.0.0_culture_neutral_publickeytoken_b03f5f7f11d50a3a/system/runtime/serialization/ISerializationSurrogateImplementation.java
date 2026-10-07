@@ -102,7 +102,10 @@ public class ISerializationSurrogateImplementation extends NetObject implements 
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ISerializationSurrogateImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -144,6 +147,17 @@ public class ISerializationSurrogateImplementation extends NetObject implements 
 
     // Methods section
     
+    /**
+     * Invokes the .NET member SetObjectData.
+     *
+     * @param obj the argument of type {@code NetObject}
+     * @param info the argument of type {@code SerializationInfo}
+     * @param context the argument of type {@code StreamingContext}
+     * @param selector the argument of type {@code ISurrogateSelector}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.ISerializationSurrogate.SetObjectData" target="_top">.NET documentation</a>
+     */
     public NetObject SetObjectData(NetObject obj, SerializationInfo info, StreamingContext context, ISurrogateSelector selector) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -159,6 +173,15 @@ public class ISerializationSurrogateImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member GetObjectData.
+     *
+     * @param obj the argument of type {@code NetObject}
+     * @param info the argument of type {@code SerializationInfo}
+     * @param context the argument of type {@code StreamingContext}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.ISerializationSurrogate.GetObjectData" target="_top">.NET documentation</a>
+     */
     public void GetObjectData(NetObject obj, SerializationInfo info, StreamingContext context) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

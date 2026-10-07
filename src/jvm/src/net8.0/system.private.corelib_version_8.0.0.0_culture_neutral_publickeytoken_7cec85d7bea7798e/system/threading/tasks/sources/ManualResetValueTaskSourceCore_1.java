@@ -102,7 +102,10 @@ public class ManualResetValueTaskSourceCore_1<TResult extends IJCOBridgeReflecte
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ManualResetValueTaskSourceCore_1(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,22 @@ public class ManualResetValueTaskSourceCore_1<TResult extends IJCOBridgeReflecte
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetStatus.
+     *
+     * @param token the argument of type {@code short}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Sources.ManualResetValueTaskSourceCore-1.GetStatus" target="_top">.NET documentation</a>
+     */
     public ValueTaskSourceStatus GetStatus(short token) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -172,6 +191,24 @@ public class ManualResetValueTaskSourceCore_1<TResult extends IJCOBridgeReflecte
         }
     }
 
+    /**
+     * Invokes the .NET member GetResult.
+     *
+     * @param token the argument of type {@code short}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Sources.ManualResetValueTaskSourceCore-1.GetResult" target="_top">.NET documentation</a>
+     */
     public TResult GetResult(short token) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -186,6 +223,30 @@ public class ManualResetValueTaskSourceCore_1<TResult extends IJCOBridgeReflecte
         }
     }
 
+    /**
+     * Invokes the .NET member OnCompleted.
+     *
+     * @param continuation the argument of type {@code Action_1}
+     * @param state the argument of type {@code NetObject}
+     * @param token the argument of type {@code short}
+     * @param flags the argument of type {@code ValueTaskSourceOnCompletedFlags}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Sources.ManualResetValueTaskSourceCore-1.OnCompleted" target="_top">.NET documentation</a>
+     */
     public void OnCompleted(Action_1 continuation, NetObject state, short token, ValueTaskSourceOnCompletedFlags flags) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -196,6 +257,12 @@ public class ManualResetValueTaskSourceCore_1<TResult extends IJCOBridgeReflecte
         }
     }
 
+    /**
+     * Invokes the .NET member Reset.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Sources.ManualResetValueTaskSourceCore-1.Reset" target="_top">.NET documentation</a>
+     */
     public void Reset() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,6 +273,21 @@ public class ManualResetValueTaskSourceCore_1<TResult extends IJCOBridgeReflecte
         }
     }
 
+    /**
+     * Invokes the .NET member SetException.
+     *
+     * @param error the argument of type {@code NetException}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Sources.ManualResetValueTaskSourceCore-1.SetException" target="_top">.NET documentation</a>
+     */
     public void SetException(NetException error) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.threading.SynchronizationLockException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +298,23 @@ public class ManualResetValueTaskSourceCore_1<TResult extends IJCOBridgeReflecte
         }
     }
 
+    /**
+     * Invokes the .NET member SetResult.
+     *
+     * @param result the argument of type {@code TResult}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Sources.ManualResetValueTaskSourceCore-1.SetResult" target="_top">.NET documentation</a>
+     */
     public void SetResult(TResult result) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.threading.SynchronizationLockException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -230,6 +329,13 @@ public class ManualResetValueTaskSourceCore_1<TResult extends IJCOBridgeReflecte
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property RunContinuationsAsynchronously.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Sources.ManualResetValueTaskSourceCore-1.RunContinuationsAsynchronously" target="_top">.NET documentation</a>
+     */
     public boolean getRunContinuationsAsynchronously() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -244,6 +350,13 @@ public class ManualResetValueTaskSourceCore_1<TResult extends IJCOBridgeReflecte
         }
     }
 
+    /**
+     * Sets the value of the .NET property RunContinuationsAsynchronously.
+     *
+     * @param RunContinuationsAsynchronously the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Sources.ManualResetValueTaskSourceCore-1.RunContinuationsAsynchronously" target="_top">.NET documentation</a>
+     */
     public void setRunContinuationsAsynchronously(boolean RunContinuationsAsynchronously) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -254,6 +367,13 @@ public class ManualResetValueTaskSourceCore_1<TResult extends IJCOBridgeReflecte
         }
     }
 
+    /**
+     * Gets the value of the .NET property Version.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Sources.ManualResetValueTaskSourceCore-1.Version" target="_top">.NET documentation</a>
+     */
     public short getVersion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

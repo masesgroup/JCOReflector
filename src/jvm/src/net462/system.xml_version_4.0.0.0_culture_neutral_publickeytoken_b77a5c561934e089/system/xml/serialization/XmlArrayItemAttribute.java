@@ -100,7 +100,10 @@ public class XmlArrayItemAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XmlArrayItemAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class XmlArrayItemAttribute extends system.Attribute  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlArrayItemAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public XmlArrayItemAttribute() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -157,6 +166,13 @@ public class XmlArrayItemAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param elementName the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlArrayItemAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public XmlArrayItemAttribute(java.lang.String elementName) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +183,14 @@ public class XmlArrayItemAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param elementName the argument of type {@code java.lang.String}
+     * @param type the argument of type {@code NetType}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlArrayItemAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public XmlArrayItemAttribute(java.lang.String elementName, NetType type) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -177,6 +201,13 @@ public class XmlArrayItemAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param type the argument of type {@code NetType}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlArrayItemAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public XmlArrayItemAttribute(NetType type) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -195,6 +226,13 @@ public class XmlArrayItemAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsNullable.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlArrayItemAttribute.IsNullable" target="_top">.NET documentation</a>
+     */
     public boolean getIsNullable() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -209,6 +247,13 @@ public class XmlArrayItemAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsNullable.
+     *
+     * @param IsNullable the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlArrayItemAttribute.IsNullable" target="_top">.NET documentation</a>
+     */
     public void setIsNullable(boolean IsNullable) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -219,6 +264,13 @@ public class XmlArrayItemAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NestingLevel.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlArrayItemAttribute.NestingLevel" target="_top">.NET documentation</a>
+     */
     public int getNestingLevel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -259,6 +311,13 @@ public class XmlArrayItemAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property NestingLevel.
+     *
+     * @param NestingLevel the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlArrayItemAttribute.NestingLevel" target="_top">.NET documentation</a>
+     */
     public void setNestingLevel(int NestingLevel) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -269,6 +328,13 @@ public class XmlArrayItemAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DataType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlArrayItemAttribute.DataType" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDataType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -283,6 +349,13 @@ public class XmlArrayItemAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DataType.
+     *
+     * @param DataType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlArrayItemAttribute.DataType" target="_top">.NET documentation</a>
+     */
     public void setDataType(java.lang.String DataType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -293,6 +366,13 @@ public class XmlArrayItemAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ElementName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlArrayItemAttribute.ElementName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getElementName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -307,6 +387,13 @@ public class XmlArrayItemAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ElementName.
+     *
+     * @param ElementName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlArrayItemAttribute.ElementName" target="_top">.NET documentation</a>
+     */
     public void setElementName(java.lang.String ElementName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -317,6 +404,13 @@ public class XmlArrayItemAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Namespace.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlArrayItemAttribute.Namespace" target="_top">.NET documentation</a>
+     */
     public java.lang.String getNamespace() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -331,6 +425,13 @@ public class XmlArrayItemAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Namespace.
+     *
+     * @param Namespace the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlArrayItemAttribute.Namespace" target="_top">.NET documentation</a>
+     */
     public void setNamespace(java.lang.String Namespace) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -341,6 +442,13 @@ public class XmlArrayItemAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Type.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlArrayItemAttribute.Type" target="_top">.NET documentation</a>
+     */
     public NetType getType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -356,6 +464,13 @@ public class XmlArrayItemAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Type.
+     *
+     * @param Type the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlArrayItemAttribute.Type" target="_top">.NET documentation</a>
+     */
     public void setType(NetType Type) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -366,6 +481,13 @@ public class XmlArrayItemAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Form.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlArrayItemAttribute.Form" target="_top">.NET documentation</a>
+     */
     public XmlSchemaForm getForm() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -381,6 +503,13 @@ public class XmlArrayItemAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Form.
+     *
+     * @param Form the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlArrayItemAttribute.Form" target="_top">.NET documentation</a>
+     */
     public void setForm(XmlSchemaForm Form) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

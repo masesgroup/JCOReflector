@@ -99,7 +99,10 @@ public class SoapBase64Binary extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SoapBase64Binary(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class SoapBase64Binary extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapBase64Binary.-ctor" target="_top">.NET documentation</a>
+     */
     public SoapBase64Binary() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -156,6 +165,13 @@ public class SoapBase64Binary extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param value the argument of type {@code byte[]}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapBase64Binary.-ctor" target="_top">.NET documentation</a>
+     */
     public SoapBase64Binary(byte[] value) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +186,18 @@ public class SoapBase64Binary extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Parse.
+     *
+     * @param value the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.runtime.remoting.RemotingException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapBase64Binary.Parse" target="_top">.NET documentation</a>
+     */
     public static SoapBase64Binary Parse(java.lang.String value) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.runtime.remoting.RemotingException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -185,6 +213,13 @@ public class SoapBase64Binary extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetXsdType.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapBase64Binary.GetXsdType" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetXsdType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +238,13 @@ public class SoapBase64Binary extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Value.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapBase64Binary.Value" target="_top">.NET documentation</a>
+     */
     public byte[] getValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -226,6 +268,13 @@ public class SoapBase64Binary extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Value.
+     *
+     * @param Value the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapBase64Binary.Value" target="_top">.NET documentation</a>
+     */
     public void setValue(byte[] Value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -236,6 +285,13 @@ public class SoapBase64Binary extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property XsdType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapBase64Binary.XsdType" target="_top">.NET documentation</a>
+     */
     public static java.lang.String getXsdType() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

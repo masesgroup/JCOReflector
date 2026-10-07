@@ -100,7 +100,10 @@ public class BuildWarningEventArgs extends microsoft.build.framework.LazyFormatt
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public BuildWarningEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,28 @@ public class BuildWarningEventArgs extends microsoft.build.framework.LazyFormatt
     public BuildWarningEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param subcategory the argument of type {@code java.lang.String}
+     * @param code the argument of type {@code java.lang.String}
+     * @param file the argument of type {@code java.lang.String}
+     * @param lineNumber the argument of type {@code int}
+     * @param columnNumber the argument of type {@code int}
+     * @param endLineNumber the argument of type {@code int}
+     * @param endColumnNumber the argument of type {@code int}
+     * @param message the argument of type {@code java.lang.String}
+     * @param helpKeyword the argument of type {@code java.lang.String}
+     * @param senderName the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.BuildWarningEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public BuildWarningEventArgs(java.lang.String subcategory, java.lang.String code, java.lang.String file, int lineNumber, int columnNumber, int endLineNumber, int endColumnNumber, java.lang.String message, java.lang.String helpKeyword, java.lang.String senderName) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException {
         try {
             // add reference to assemblyName.dll file
@@ -160,6 +185,29 @@ public class BuildWarningEventArgs extends microsoft.build.framework.LazyFormatt
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param subcategory the argument of type {@code java.lang.String}
+     * @param code the argument of type {@code java.lang.String}
+     * @param file the argument of type {@code java.lang.String}
+     * @param lineNumber the argument of type {@code int}
+     * @param columnNumber the argument of type {@code int}
+     * @param endLineNumber the argument of type {@code int}
+     * @param endColumnNumber the argument of type {@code int}
+     * @param message the argument of type {@code java.lang.String}
+     * @param helpKeyword the argument of type {@code java.lang.String}
+     * @param senderName the argument of type {@code java.lang.String}
+     * @param eventTimestamp the argument of type {@code DateTime}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.BuildWarningEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public BuildWarningEventArgs(java.lang.String subcategory, java.lang.String code, java.lang.String file, int lineNumber, int columnNumber, int endLineNumber, int endColumnNumber, java.lang.String message, java.lang.String helpKeyword, java.lang.String senderName, DateTime eventTimestamp) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +218,32 @@ public class BuildWarningEventArgs extends microsoft.build.framework.LazyFormatt
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param subcategory the argument of type {@code java.lang.String}
+     * @param code the argument of type {@code java.lang.String}
+     * @param file the argument of type {@code java.lang.String}
+     * @param lineNumber the argument of type {@code int}
+     * @param columnNumber the argument of type {@code int}
+     * @param endLineNumber the argument of type {@code int}
+     * @param endColumnNumber the argument of type {@code int}
+     * @param message the argument of type {@code java.lang.String}
+     * @param helpKeyword the argument of type {@code java.lang.String}
+     * @param senderName the argument of type {@code java.lang.String}
+     * @param eventTimestamp the argument of type {@code DateTime}
+     * @param messageArgs the argument of type {@code NetObject...}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.BuildWarningEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public BuildWarningEventArgs(java.lang.String subcategory, java.lang.String code, java.lang.String file, int lineNumber, int columnNumber, int endLineNumber, int endColumnNumber, java.lang.String message, java.lang.String helpKeyword, java.lang.String senderName, DateTime eventTimestamp, NetObject... messageArgs) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException {
         try {
             // add reference to assemblyName.dll file
@@ -189,6 +263,13 @@ public class BuildWarningEventArgs extends microsoft.build.framework.LazyFormatt
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ColumnNumber.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.BuildWarningEventArgs.ColumnNumber" target="_top">.NET documentation</a>
+     */
     public int getColumnNumber() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -229,6 +310,13 @@ public class BuildWarningEventArgs extends microsoft.build.framework.LazyFormatt
         }
     }
 
+    /**
+     * Gets the value of the .NET property EndColumnNumber.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.BuildWarningEventArgs.EndColumnNumber" target="_top">.NET documentation</a>
+     */
     public int getEndColumnNumber() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -269,6 +357,13 @@ public class BuildWarningEventArgs extends microsoft.build.framework.LazyFormatt
         }
     }
 
+    /**
+     * Gets the value of the .NET property EndLineNumber.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.BuildWarningEventArgs.EndLineNumber" target="_top">.NET documentation</a>
+     */
     public int getEndLineNumber() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -309,6 +404,13 @@ public class BuildWarningEventArgs extends microsoft.build.framework.LazyFormatt
         }
     }
 
+    /**
+     * Gets the value of the .NET property LineNumber.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.BuildWarningEventArgs.LineNumber" target="_top">.NET documentation</a>
+     */
     public int getLineNumber() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -349,6 +451,13 @@ public class BuildWarningEventArgs extends microsoft.build.framework.LazyFormatt
         }
     }
 
+    /**
+     * Gets the value of the .NET property Code.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.BuildWarningEventArgs.Code" target="_top">.NET documentation</a>
+     */
     public java.lang.String getCode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -363,6 +472,13 @@ public class BuildWarningEventArgs extends microsoft.build.framework.LazyFormatt
         }
     }
 
+    /**
+     * Gets the value of the .NET property File.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.BuildWarningEventArgs.File" target="_top">.NET documentation</a>
+     */
     public java.lang.String getFile() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -377,6 +493,13 @@ public class BuildWarningEventArgs extends microsoft.build.framework.LazyFormatt
         }
     }
 
+    /**
+     * Gets the value of the .NET property ProjectFile.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.BuildWarningEventArgs.ProjectFile" target="_top">.NET documentation</a>
+     */
     public java.lang.String getProjectFile() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -391,6 +514,13 @@ public class BuildWarningEventArgs extends microsoft.build.framework.LazyFormatt
         }
     }
 
+    /**
+     * Sets the value of the .NET property ProjectFile.
+     *
+     * @param ProjectFile the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.BuildWarningEventArgs.ProjectFile" target="_top">.NET documentation</a>
+     */
     public void setProjectFile(java.lang.String ProjectFile) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -401,6 +531,13 @@ public class BuildWarningEventArgs extends microsoft.build.framework.LazyFormatt
         }
     }
 
+    /**
+     * Gets the value of the .NET property Subcategory.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.BuildWarningEventArgs.Subcategory" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSubcategory() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

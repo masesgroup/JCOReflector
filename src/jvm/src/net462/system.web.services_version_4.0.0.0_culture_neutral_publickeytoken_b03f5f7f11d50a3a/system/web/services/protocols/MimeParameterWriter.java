@@ -102,7 +102,10 @@ public class MimeParameterWriter extends system.web.services.protocols.MimeForma
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public MimeParameterWriter(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,15 @@ public class MimeParameterWriter extends system.web.services.protocols.MimeForma
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetRequestUrl.
+     *
+     * @param url the argument of type {@code java.lang.String}
+     * @param parameters the argument of type {@code NetObject[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.MimeParameterWriter.GetRequestUrl" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetRequestUrl(java.lang.String url, NetObject[] parameters) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -169,6 +181,14 @@ public class MimeParameterWriter extends system.web.services.protocols.MimeForma
         }
     }
 
+    /**
+     * Invokes the .NET member InitializeRequest.
+     *
+     * @param request the argument of type {@code WebRequest}
+     * @param values the argument of type {@code NetObject[]}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.MimeParameterWriter.InitializeRequest" target="_top">.NET documentation</a>
+     */
     public void InitializeRequest(WebRequest request, NetObject[] values) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -179,6 +199,14 @@ public class MimeParameterWriter extends system.web.services.protocols.MimeForma
         }
     }
 
+    /**
+     * Invokes the .NET member WriteRequest.
+     *
+     * @param requestStream the argument of type {@code Stream}
+     * @param values the argument of type {@code NetObject[]}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.MimeParameterWriter.WriteRequest" target="_top">.NET documentation</a>
+     */
     public void WriteRequest(Stream requestStream, NetObject[] values) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +221,13 @@ public class MimeParameterWriter extends system.web.services.protocols.MimeForma
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property UsesWriteRequest.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.MimeParameterWriter.UsesWriteRequest" target="_top">.NET documentation</a>
+     */
     public boolean getUsesWriteRequest() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +242,13 @@ public class MimeParameterWriter extends system.web.services.protocols.MimeForma
         }
     }
 
+    /**
+     * Gets the value of the .NET property RequestEncoding.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.MimeParameterWriter.RequestEncoding" target="_top">.NET documentation</a>
+     */
     public Encoding getRequestEncoding() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -222,6 +264,13 @@ public class MimeParameterWriter extends system.web.services.protocols.MimeForma
         }
     }
 
+    /**
+     * Sets the value of the .NET property RequestEncoding.
+     *
+     * @param RequestEncoding the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.MimeParameterWriter.RequestEncoding" target="_top">.NET documentation</a>
+     */
     public void setRequestEncoding(Encoding RequestEncoding) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -104,7 +104,10 @@ public class Matrix extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Matrix(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,18 @@ public class Matrix extends system.ValueType  {
     public Matrix() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param m11 the argument of type {@code double}
+     * @param m12 the argument of type {@code double}
+     * @param m21 the argument of type {@code double}
+     * @param m22 the argument of type {@code double}
+     * @param offsetX the argument of type {@code double}
+     * @param offsetY the argument of type {@code double}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Matrix.-ctor" target="_top">.NET documentation</a>
+     */
     public Matrix(double m11, double m12, double m21, double m22, double offsetX, double offsetY) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +184,14 @@ public class Matrix extends system.ValueType  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Equals.
+     *
+     * @param value the argument of type {@code Matrix}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Matrix.Equals" target="_top">.NET documentation</a>
+     */
     public boolean Equals(Matrix value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +206,15 @@ public class Matrix extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Equals.
+     *
+     * @param matrix1 the argument of type {@code Matrix}
+     * @param matrix2 the argument of type {@code Matrix}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Matrix.Equals" target="_top">.NET documentation</a>
+     */
     public static boolean Equals(Matrix matrix1, Matrix matrix2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -197,6 +229,23 @@ public class Matrix extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToString.
+     *
+     * @param provider the argument of type {@code IFormatProvider}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Matrix.ToString" target="_top">.NET documentation</a>
+     */
     public java.lang.String ToString(IFormatProvider provider) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -211,6 +260,15 @@ public class Matrix extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Multiply.
+     *
+     * @param trans1 the argument of type {@code Matrix}
+     * @param trans2 the argument of type {@code Matrix}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Matrix.Multiply" target="_top">.NET documentation</a>
+     */
     public static Matrix Multiply(Matrix trans1, Matrix trans2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -226,6 +284,26 @@ public class Matrix extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Parse.
+     *
+     * @param source the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Matrix.Parse" target="_top">.NET documentation</a>
+     */
     public static Matrix Parse(java.lang.String source) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.NullReferenceException, system.FormatException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -241,6 +319,14 @@ public class Matrix extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Transform.
+     *
+     * @param point the argument of type {@code Point}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Matrix.Transform" target="_top">.NET documentation</a>
+     */
     public Point Transform(Point point) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -256,6 +342,14 @@ public class Matrix extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Transform.
+     *
+     * @param vector the argument of type {@code Vector}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Matrix.Transform" target="_top">.NET documentation</a>
+     */
     public Vector Transform(Vector vector) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -271,6 +365,13 @@ public class Matrix extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Append.
+     *
+     * @param matrix the argument of type {@code Matrix}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Matrix.Append" target="_top">.NET documentation</a>
+     */
     public void Append(Matrix matrix) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -281,6 +382,23 @@ public class Matrix extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Invert.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Matrix.Invert" target="_top">.NET documentation</a>
+     */
     public void Invert() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -291,6 +409,13 @@ public class Matrix extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Prepend.
+     *
+     * @param matrix the argument of type {@code Matrix}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Matrix.Prepend" target="_top">.NET documentation</a>
+     */
     public void Prepend(Matrix matrix) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -301,6 +426,13 @@ public class Matrix extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Rotate.
+     *
+     * @param angle the argument of type {@code double}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Matrix.Rotate" target="_top">.NET documentation</a>
+     */
     public void Rotate(double angle) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -311,6 +443,15 @@ public class Matrix extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member RotateAt.
+     *
+     * @param angle the argument of type {@code double}
+     * @param centerX the argument of type {@code double}
+     * @param centerY the argument of type {@code double}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Matrix.RotateAt" target="_top">.NET documentation</a>
+     */
     public void RotateAt(double angle, double centerX, double centerY) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -321,6 +462,15 @@ public class Matrix extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member RotateAtPrepend.
+     *
+     * @param angle the argument of type {@code double}
+     * @param centerX the argument of type {@code double}
+     * @param centerY the argument of type {@code double}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Matrix.RotateAtPrepend" target="_top">.NET documentation</a>
+     */
     public void RotateAtPrepend(double angle, double centerX, double centerY) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -331,6 +481,13 @@ public class Matrix extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member RotatePrepend.
+     *
+     * @param angle the argument of type {@code double}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Matrix.RotatePrepend" target="_top">.NET documentation</a>
+     */
     public void RotatePrepend(double angle) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -341,6 +498,14 @@ public class Matrix extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Scale.
+     *
+     * @param scaleX the argument of type {@code double}
+     * @param scaleY the argument of type {@code double}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Matrix.Scale" target="_top">.NET documentation</a>
+     */
     public void Scale(double scaleX, double scaleY) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -351,6 +516,16 @@ public class Matrix extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member ScaleAt.
+     *
+     * @param scaleX the argument of type {@code double}
+     * @param scaleY the argument of type {@code double}
+     * @param centerX the argument of type {@code double}
+     * @param centerY the argument of type {@code double}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Matrix.ScaleAt" target="_top">.NET documentation</a>
+     */
     public void ScaleAt(double scaleX, double scaleY, double centerX, double centerY) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -361,6 +536,16 @@ public class Matrix extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member ScaleAtPrepend.
+     *
+     * @param scaleX the argument of type {@code double}
+     * @param scaleY the argument of type {@code double}
+     * @param centerX the argument of type {@code double}
+     * @param centerY the argument of type {@code double}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Matrix.ScaleAtPrepend" target="_top">.NET documentation</a>
+     */
     public void ScaleAtPrepend(double scaleX, double scaleY, double centerX, double centerY) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -371,6 +556,14 @@ public class Matrix extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member ScalePrepend.
+     *
+     * @param scaleX the argument of type {@code double}
+     * @param scaleY the argument of type {@code double}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Matrix.ScalePrepend" target="_top">.NET documentation</a>
+     */
     public void ScalePrepend(double scaleX, double scaleY) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -381,6 +574,12 @@ public class Matrix extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetIdentity.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Matrix.SetIdentity" target="_top">.NET documentation</a>
+     */
     public void SetIdentity() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -391,6 +590,14 @@ public class Matrix extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Skew.
+     *
+     * @param skewX the argument of type {@code double}
+     * @param skewY the argument of type {@code double}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Matrix.Skew" target="_top">.NET documentation</a>
+     */
     public void Skew(double skewX, double skewY) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -401,6 +608,14 @@ public class Matrix extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member SkewPrepend.
+     *
+     * @param skewX the argument of type {@code double}
+     * @param skewY the argument of type {@code double}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Matrix.SkewPrepend" target="_top">.NET documentation</a>
+     */
     public void SkewPrepend(double skewX, double skewY) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -411,6 +626,13 @@ public class Matrix extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Transform.
+     *
+     * @param points the argument of type {@code Point[]}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Matrix.Transform" target="_top">.NET documentation</a>
+     */
     public void Transform(Point[] points) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -421,6 +643,13 @@ public class Matrix extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Transform.
+     *
+     * @param vectors the argument of type {@code Vector[]}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Matrix.Transform" target="_top">.NET documentation</a>
+     */
     public void Transform(Vector[] vectors) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -431,6 +660,14 @@ public class Matrix extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Translate.
+     *
+     * @param offsetX the argument of type {@code double}
+     * @param offsetY the argument of type {@code double}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Matrix.Translate" target="_top">.NET documentation</a>
+     */
     public void Translate(double offsetX, double offsetY) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -441,6 +678,14 @@ public class Matrix extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member TranslatePrepend.
+     *
+     * @param offsetX the argument of type {@code double}
+     * @param offsetY the argument of type {@code double}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Matrix.TranslatePrepend" target="_top">.NET documentation</a>
+     */
     public void TranslatePrepend(double offsetX, double offsetY) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -454,8 +699,14 @@ public class Matrix extends system.ValueType  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIFormattable method available in IFormattable to obtain an object with an invocable method
+     *
+     * @param format the argument of type {@code java.lang.String}
+     * @param formatProvider the argument of type {@code IFormatProvider}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IFormattable.ToString" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public java.lang.String ToString(java.lang.String format, IFormatProvider formatProvider) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIFormattable to obtain the full interface.");
     }
@@ -464,6 +715,13 @@ public class Matrix extends system.ValueType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property HasInverse.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Matrix.HasInverse" target="_top">.NET documentation</a>
+     */
     public boolean getHasInverse() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -478,6 +736,13 @@ public class Matrix extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsIdentity.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Matrix.IsIdentity" target="_top">.NET documentation</a>
+     */
     public boolean getIsIdentity() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -492,6 +757,13 @@ public class Matrix extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Determinant.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Matrix.Determinant" target="_top">.NET documentation</a>
+     */
     public double getDeterminant() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -532,6 +804,13 @@ public class Matrix extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property M11.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Matrix.M11" target="_top">.NET documentation</a>
+     */
     public double getM11() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -572,6 +851,13 @@ public class Matrix extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property M11.
+     *
+     * @param M11 the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Matrix.M11" target="_top">.NET documentation</a>
+     */
     public void setM11(double M11) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -582,6 +868,13 @@ public class Matrix extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property M12.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Matrix.M12" target="_top">.NET documentation</a>
+     */
     public double getM12() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -622,6 +915,13 @@ public class Matrix extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property M12.
+     *
+     * @param M12 the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Matrix.M12" target="_top">.NET documentation</a>
+     */
     public void setM12(double M12) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -632,6 +932,13 @@ public class Matrix extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property M21.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Matrix.M21" target="_top">.NET documentation</a>
+     */
     public double getM21() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -672,6 +979,13 @@ public class Matrix extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property M21.
+     *
+     * @param M21 the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Matrix.M21" target="_top">.NET documentation</a>
+     */
     public void setM21(double M21) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -682,6 +996,13 @@ public class Matrix extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property M22.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Matrix.M22" target="_top">.NET documentation</a>
+     */
     public double getM22() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -722,6 +1043,13 @@ public class Matrix extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property M22.
+     *
+     * @param M22 the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Matrix.M22" target="_top">.NET documentation</a>
+     */
     public void setM22(double M22) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -732,6 +1060,13 @@ public class Matrix extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OffsetX.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Matrix.OffsetX" target="_top">.NET documentation</a>
+     */
     public double getOffsetX() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -772,6 +1107,13 @@ public class Matrix extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property OffsetX.
+     *
+     * @param OffsetX the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Matrix.OffsetX" target="_top">.NET documentation</a>
+     */
     public void setOffsetX(double OffsetX) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -782,6 +1124,13 @@ public class Matrix extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OffsetY.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Matrix.OffsetY" target="_top">.NET documentation</a>
+     */
     public double getOffsetY() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -822,6 +1171,13 @@ public class Matrix extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property OffsetY.
+     *
+     * @param OffsetY the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Matrix.OffsetY" target="_top">.NET documentation</a>
+     */
     public void setOffsetY(double OffsetY) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -832,6 +1188,13 @@ public class Matrix extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Identity.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Matrix.Identity" target="_top">.NET documentation</a>
+     */
     public static Matrix getIdentity() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

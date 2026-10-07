@@ -100,7 +100,10 @@ public class CLong extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CLong(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,13 @@ public class CLong extends system.ValueType  {
     public CLong() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param value the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.CLong.-ctor" target="_top">.NET documentation</a>
+     */
     public CLong(int value) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +175,14 @@ public class CLong extends system.ValueType  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Equals.
+     *
+     * @param other the argument of type {@code CLong}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.CLong.Equals" target="_top">.NET documentation</a>
+     */
     public boolean Equals(CLong other) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

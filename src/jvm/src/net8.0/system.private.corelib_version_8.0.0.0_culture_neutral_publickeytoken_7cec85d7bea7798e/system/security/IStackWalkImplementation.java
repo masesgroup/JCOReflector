@@ -98,7 +98,10 @@ public class IStackWalkImplementation extends NetObject implements IStackWalk {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IStackWalkImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -140,6 +143,12 @@ public class IStackWalkImplementation extends NetObject implements IStackWalk {
 
     // Methods section
     
+    /**
+     * Invokes the .NET member Assert.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.IStackWalk.Assert" target="_top">.NET documentation</a>
+     */
     public void Assert() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -150,6 +159,12 @@ public class IStackWalkImplementation extends NetObject implements IStackWalk {
         }
     }
 
+    /**
+     * Invokes the .NET member Demand.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.IStackWalk.Demand" target="_top">.NET documentation</a>
+     */
     public void Demand() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -160,6 +175,12 @@ public class IStackWalkImplementation extends NetObject implements IStackWalk {
         }
     }
 
+    /**
+     * Invokes the .NET member Deny.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.IStackWalk.Deny" target="_top">.NET documentation</a>
+     */
     public void Deny() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -170,6 +191,12 @@ public class IStackWalkImplementation extends NetObject implements IStackWalk {
         }
     }
 
+    /**
+     * Invokes the .NET member PermitOnly.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.IStackWalk.PermitOnly" target="_top">.NET documentation</a>
+     */
     public void PermitOnly() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

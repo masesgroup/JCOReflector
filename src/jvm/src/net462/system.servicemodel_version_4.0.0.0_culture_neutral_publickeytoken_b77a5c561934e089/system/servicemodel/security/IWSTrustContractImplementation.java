@@ -102,7 +102,10 @@ public class IWSTrustContractImplementation extends NetObject implements IWSTrus
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IWSTrustContractImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -144,6 +147,16 @@ public class IWSTrustContractImplementation extends NetObject implements IWSTrus
 
     // Methods section
     
+    /**
+     * Invokes the .NET member BeginCancel.
+     *
+     * @param message the argument of type {@code Message}
+     * @param callback the argument of type {@code AsyncCallback}
+     * @param asyncState the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.IWSTrustContract.BeginCancel" target="_top">.NET documentation</a>
+     */
     public IAsyncResult BeginCancel(Message message, AsyncCallback callback, NetObject asyncState) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -159,6 +172,16 @@ public class IWSTrustContractImplementation extends NetObject implements IWSTrus
         }
     }
 
+    /**
+     * Invokes the .NET member BeginIssue.
+     *
+     * @param message the argument of type {@code Message}
+     * @param callback the argument of type {@code AsyncCallback}
+     * @param asyncState the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.IWSTrustContract.BeginIssue" target="_top">.NET documentation</a>
+     */
     public IAsyncResult BeginIssue(Message message, AsyncCallback callback, NetObject asyncState) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -174,6 +197,16 @@ public class IWSTrustContractImplementation extends NetObject implements IWSTrus
         }
     }
 
+    /**
+     * Invokes the .NET member BeginRenew.
+     *
+     * @param message the argument of type {@code Message}
+     * @param callback the argument of type {@code AsyncCallback}
+     * @param asyncState the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.IWSTrustContract.BeginRenew" target="_top">.NET documentation</a>
+     */
     public IAsyncResult BeginRenew(Message message, AsyncCallback callback, NetObject asyncState) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +222,16 @@ public class IWSTrustContractImplementation extends NetObject implements IWSTrus
         }
     }
 
+    /**
+     * Invokes the .NET member BeginValidate.
+     *
+     * @param message the argument of type {@code Message}
+     * @param callback the argument of type {@code AsyncCallback}
+     * @param asyncState the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.IWSTrustContract.BeginValidate" target="_top">.NET documentation</a>
+     */
     public IAsyncResult BeginValidate(Message message, AsyncCallback callback, NetObject asyncState) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +247,14 @@ public class IWSTrustContractImplementation extends NetObject implements IWSTrus
         }
     }
 
+    /**
+     * Invokes the .NET member Cancel.
+     *
+     * @param message the argument of type {@code Message}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.IWSTrustContract.Cancel" target="_top">.NET documentation</a>
+     */
     public Message Cancel(Message message) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -219,6 +270,14 @@ public class IWSTrustContractImplementation extends NetObject implements IWSTrus
         }
     }
 
+    /**
+     * Invokes the .NET member EndCancel.
+     *
+     * @param asyncResult the argument of type {@code IAsyncResult}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.IWSTrustContract.EndCancel" target="_top">.NET documentation</a>
+     */
     public Message EndCancel(IAsyncResult asyncResult) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -234,6 +293,14 @@ public class IWSTrustContractImplementation extends NetObject implements IWSTrus
         }
     }
 
+    /**
+     * Invokes the .NET member EndIssue.
+     *
+     * @param asyncResult the argument of type {@code IAsyncResult}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.IWSTrustContract.EndIssue" target="_top">.NET documentation</a>
+     */
     public Message EndIssue(IAsyncResult asyncResult) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -249,6 +316,14 @@ public class IWSTrustContractImplementation extends NetObject implements IWSTrus
         }
     }
 
+    /**
+     * Invokes the .NET member EndRenew.
+     *
+     * @param asyncResult the argument of type {@code IAsyncResult}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.IWSTrustContract.EndRenew" target="_top">.NET documentation</a>
+     */
     public Message EndRenew(IAsyncResult asyncResult) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -264,6 +339,14 @@ public class IWSTrustContractImplementation extends NetObject implements IWSTrus
         }
     }
 
+    /**
+     * Invokes the .NET member EndValidate.
+     *
+     * @param asyncResult the argument of type {@code IAsyncResult}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.IWSTrustContract.EndValidate" target="_top">.NET documentation</a>
+     */
     public Message EndValidate(IAsyncResult asyncResult) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -279,6 +362,14 @@ public class IWSTrustContractImplementation extends NetObject implements IWSTrus
         }
     }
 
+    /**
+     * Invokes the .NET member Issue.
+     *
+     * @param message the argument of type {@code Message}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.IWSTrustContract.Issue" target="_top">.NET documentation</a>
+     */
     public Message Issue(Message message) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -294,6 +385,14 @@ public class IWSTrustContractImplementation extends NetObject implements IWSTrus
         }
     }
 
+    /**
+     * Invokes the .NET member Renew.
+     *
+     * @param message the argument of type {@code Message}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.IWSTrustContract.Renew" target="_top">.NET documentation</a>
+     */
     public Message Renew(Message message) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -309,6 +408,14 @@ public class IWSTrustContractImplementation extends NetObject implements IWSTrus
         }
     }
 
+    /**
+     * Invokes the .NET member Validate.
+     *
+     * @param message the argument of type {@code Message}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.IWSTrustContract.Validate" target="_top">.NET documentation</a>
+     */
     public Message Validate(Message message) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -100,7 +100,10 @@ public class IWorkflowChangeDiffImplementation extends NetObject implements IWor
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IWorkflowChangeDiffImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -142,6 +145,15 @@ public class IWorkflowChangeDiffImplementation extends NetObject implements IWor
 
     // Methods section
     
+    /**
+     * Invokes the .NET member Diff.
+     *
+     * @param originalDefinition the argument of type {@code NetObject}
+     * @param changedDefinition the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.IWorkflowChangeDiff.Diff" target="_top">.NET documentation</a>
+     */
     public IList_1 Diff(NetObject originalDefinition, NetObject changedDefinition) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

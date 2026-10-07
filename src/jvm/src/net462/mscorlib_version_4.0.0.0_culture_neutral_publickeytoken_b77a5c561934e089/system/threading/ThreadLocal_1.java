@@ -101,7 +101,10 @@ public class ThreadLocal_1<T extends IJCOBridgeReflected> extends NetObject impl
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ThreadLocal_1(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,14 @@ public class ThreadLocal_1<T extends IJCOBridgeReflected> extends NetObject impl
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.ThreadLocal-1.-ctor" target="_top">.NET documentation</a>
+     */
     public ThreadLocal_1() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -160,6 +171,15 @@ public class ThreadLocal_1<T extends IJCOBridgeReflected> extends NetObject impl
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param trackAllValues the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.ThreadLocal-1.-ctor" target="_top">.NET documentation</a>
+     */
     public ThreadLocal_1(boolean trackAllValues) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -172,6 +192,16 @@ public class ThreadLocal_1<T extends IJCOBridgeReflected> extends NetObject impl
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param valueFactory the argument of type {@code Func_1}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.ThreadLocal-1.-ctor" target="_top">.NET documentation</a>
+     */
     public ThreadLocal_1(Func_1 valueFactory) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -184,6 +214,17 @@ public class ThreadLocal_1<T extends IJCOBridgeReflected> extends NetObject impl
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param valueFactory the argument of type {@code Func_1}
+     * @param trackAllValues the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.ThreadLocal-1.-ctor" target="_top">.NET documentation</a>
+     */
     public ThreadLocal_1(Func_1 valueFactory, boolean trackAllValues) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -200,6 +241,15 @@ public class ThreadLocal_1<T extends IJCOBridgeReflected> extends NetObject impl
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Dispose.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.ThreadLocal-1.Dispose" target="_top">.NET documentation</a>
+     */
     public void Dispose() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -227,6 +277,14 @@ public class ThreadLocal_1<T extends IJCOBridgeReflected> extends NetObject impl
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsValueCreated.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.ThreadLocal-1.IsValueCreated" target="_top">.NET documentation</a>
+     */
     public boolean getIsValueCreated() throws Throwable, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -241,6 +299,16 @@ public class ThreadLocal_1<T extends IJCOBridgeReflected> extends NetObject impl
         }
     }
 
+    /**
+     * Gets the value of the .NET property Values.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.ThreadLocal-1.Values" target="_top">.NET documentation</a>
+     */
     public IList_1 getValues() throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -256,6 +324,17 @@ public class ThreadLocal_1<T extends IJCOBridgeReflected> extends NetObject impl
         }
     }
 
+    /**
+     * Gets the value of the .NET property Value.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.ThreadLocal-1.Value" target="_top">.NET documentation</a>
+     */
     public T getValue() throws Throwable, system.ObjectDisposedException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -270,6 +349,15 @@ public class ThreadLocal_1<T extends IJCOBridgeReflected> extends NetObject impl
         }
     }
 
+    /**
+     * Sets the value of the .NET property Value.
+     *
+     * @param Value the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.ThreadLocal-1.Value" target="_top">.NET documentation</a>
+     */
     public void setValue(T Value) throws Throwable, system.ObjectDisposedException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

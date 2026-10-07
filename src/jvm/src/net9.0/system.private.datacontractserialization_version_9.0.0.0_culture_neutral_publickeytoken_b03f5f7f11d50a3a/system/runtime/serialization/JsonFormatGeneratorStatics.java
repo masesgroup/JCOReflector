@@ -101,7 +101,10 @@ public class JsonFormatGeneratorStatics extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public JsonFormatGeneratorStatics(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -158,6 +161,14 @@ public class JsonFormatGeneratorStatics extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ExtensionDataObjectCtor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.JsonFormatGeneratorStatics.ExtensionDataObjectCtor" target="_top">.NET documentation</a>
+     */
     public static ConstructorInfo getExtensionDataObjectCtor() throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -173,6 +184,14 @@ public class JsonFormatGeneratorStatics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SerializationExceptionCtor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.JsonFormatGeneratorStatics.SerializationExceptionCtor" target="_top">.NET documentation</a>
+     */
     public static ConstructorInfo getSerializationExceptionCtor() throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -188,6 +207,16 @@ public class JsonFormatGeneratorStatics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property BoxPointer.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.JsonFormatGeneratorStatics.BoxPointer" target="_top">.NET documentation</a>
+     */
     public static MethodInfo getBoxPointer() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -203,6 +232,16 @@ public class JsonFormatGeneratorStatics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property GetCurrentMethod.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.JsonFormatGeneratorStatics.GetCurrentMethod" target="_top">.NET documentation</a>
+     */
     public static MethodInfo getGetCurrentMethod() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -218,6 +257,18 @@ public class JsonFormatGeneratorStatics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property GetItemContractMethod.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.JsonFormatGeneratorStatics.GetItemContractMethod" target="_top">.NET documentation</a>
+     */
     public static MethodInfo getGetItemContractMethod() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -233,6 +284,18 @@ public class JsonFormatGeneratorStatics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property GetJsonDataContractMethod.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.JsonFormatGeneratorStatics.GetJsonDataContractMethod" target="_top">.NET documentation</a>
+     */
     public static MethodInfo getGetJsonDataContractMethod() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -248,6 +311,18 @@ public class JsonFormatGeneratorStatics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property GetJsonMemberIndexMethod.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.JsonFormatGeneratorStatics.GetJsonMemberIndexMethod" target="_top">.NET documentation</a>
+     */
     public static MethodInfo getGetJsonMemberIndexMethod() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -263,6 +338,14 @@ public class JsonFormatGeneratorStatics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property GetJsonMemberNameMethod.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.JsonFormatGeneratorStatics.GetJsonMemberNameMethod" target="_top">.NET documentation</a>
+     */
     public static MethodInfo getGetJsonMemberNameMethod() throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -278,6 +361,18 @@ public class JsonFormatGeneratorStatics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property GetRevisedItemContractMethod.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.JsonFormatGeneratorStatics.GetRevisedItemContractMethod" target="_top">.NET documentation</a>
+     */
     public static MethodInfo getGetRevisedItemContractMethod() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -293,6 +388,14 @@ public class JsonFormatGeneratorStatics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property GetUninitializedObjectMethod.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.JsonFormatGeneratorStatics.GetUninitializedObjectMethod" target="_top">.NET documentation</a>
+     */
     public static MethodInfo getGetUninitializedObjectMethod() throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -308,6 +411,14 @@ public class JsonFormatGeneratorStatics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsStartElementMethod0.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.JsonFormatGeneratorStatics.IsStartElementMethod0" target="_top">.NET documentation</a>
+     */
     public static MethodInfo getIsStartElementMethod0() throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -323,6 +434,14 @@ public class JsonFormatGeneratorStatics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsStartElementMethod2.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.JsonFormatGeneratorStatics.IsStartElementMethod2" target="_top">.NET documentation</a>
+     */
     public static MethodInfo getIsStartElementMethod2() throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -338,6 +457,16 @@ public class JsonFormatGeneratorStatics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MoveNextMethod.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.JsonFormatGeneratorStatics.MoveNextMethod" target="_top">.NET documentation</a>
+     */
     public static MethodInfo getMoveNextMethod() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -353,6 +482,18 @@ public class JsonFormatGeneratorStatics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MoveToContentMethod.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.JsonFormatGeneratorStatics.MoveToContentMethod" target="_top">.NET documentation</a>
+     */
     public static MethodInfo getMoveToContentMethod() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -368,6 +509,16 @@ public class JsonFormatGeneratorStatics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OnDeserializationMethod.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.JsonFormatGeneratorStatics.OnDeserializationMethod" target="_top">.NET documentation</a>
+     */
     public static MethodInfo getOnDeserializationMethod() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -383,6 +534,14 @@ public class JsonFormatGeneratorStatics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ParseEnumMethod.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.JsonFormatGeneratorStatics.ParseEnumMethod" target="_top">.NET documentation</a>
+     */
     public static MethodInfo getParseEnumMethod() throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -398,6 +557,18 @@ public class JsonFormatGeneratorStatics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ReadJsonValueMethod.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.JsonFormatGeneratorStatics.ReadJsonValueMethod" target="_top">.NET documentation</a>
+     */
     public static MethodInfo getReadJsonValueMethod() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -413,6 +584,18 @@ public class JsonFormatGeneratorStatics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ThrowDuplicateMemberExceptionMethod.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.JsonFormatGeneratorStatics.ThrowDuplicateMemberExceptionMethod" target="_top">.NET documentation</a>
+     */
     public static MethodInfo getThrowDuplicateMemberExceptionMethod() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -428,6 +611,18 @@ public class JsonFormatGeneratorStatics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ThrowMissingRequiredMembersMethod.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.JsonFormatGeneratorStatics.ThrowMissingRequiredMembersMethod" target="_top">.NET documentation</a>
+     */
     public static MethodInfo getThrowMissingRequiredMembersMethod() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -443,6 +638,16 @@ public class JsonFormatGeneratorStatics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UnboxPointer.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.JsonFormatGeneratorStatics.UnboxPointer" target="_top">.NET documentation</a>
+     */
     public static MethodInfo getUnboxPointer() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -458,6 +663,14 @@ public class JsonFormatGeneratorStatics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property WriteAttributeStringMethod.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.JsonFormatGeneratorStatics.WriteAttributeStringMethod" target="_top">.NET documentation</a>
+     */
     public static MethodInfo getWriteAttributeStringMethod() throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -473,6 +686,14 @@ public class JsonFormatGeneratorStatics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property WriteEndElementMethod.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.JsonFormatGeneratorStatics.WriteEndElementMethod" target="_top">.NET documentation</a>
+     */
     public static MethodInfo getWriteEndElementMethod() throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -488,6 +709,18 @@ public class JsonFormatGeneratorStatics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property WriteJsonISerializableMethod.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.JsonFormatGeneratorStatics.WriteJsonISerializableMethod" target="_top">.NET documentation</a>
+     */
     public static MethodInfo getWriteJsonISerializableMethod() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -503,6 +736,18 @@ public class JsonFormatGeneratorStatics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property WriteJsonNameWithMappingMethod.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.JsonFormatGeneratorStatics.WriteJsonNameWithMappingMethod" target="_top">.NET documentation</a>
+     */
     public static MethodInfo getWriteJsonNameWithMappingMethod() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -518,6 +763,18 @@ public class JsonFormatGeneratorStatics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property WriteJsonValueMethod.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.JsonFormatGeneratorStatics.WriteJsonValueMethod" target="_top">.NET documentation</a>
+     */
     public static MethodInfo getWriteJsonValueMethod() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -533,6 +790,14 @@ public class JsonFormatGeneratorStatics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property WriteStartElementMethod.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.JsonFormatGeneratorStatics.WriteStartElementMethod" target="_top">.NET documentation</a>
+     */
     public static MethodInfo getWriteStartElementMethod() throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -548,6 +813,14 @@ public class JsonFormatGeneratorStatics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property WriteStartElementStringMethod.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.JsonFormatGeneratorStatics.WriteStartElementStringMethod" target="_top">.NET documentation</a>
+     */
     public static MethodInfo getWriteStartElementStringMethod() throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -563,6 +836,18 @@ public class JsonFormatGeneratorStatics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CollectionItemNameProperty.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.JsonFormatGeneratorStatics.CollectionItemNameProperty" target="_top">.NET documentation</a>
+     */
     public static PropertyInfo getCollectionItemNameProperty() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -578,6 +863,16 @@ public class JsonFormatGeneratorStatics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ExtensionDataProperty.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.JsonFormatGeneratorStatics.ExtensionDataProperty" target="_top">.NET documentation</a>
+     */
     public static PropertyInfo getExtensionDataProperty() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -593,6 +888,18 @@ public class JsonFormatGeneratorStatics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LocalNameProperty.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.JsonFormatGeneratorStatics.LocalNameProperty" target="_top">.NET documentation</a>
+     */
     public static PropertyInfo getLocalNameProperty() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -608,6 +915,18 @@ public class JsonFormatGeneratorStatics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NamespaceProperty.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.JsonFormatGeneratorStatics.NamespaceProperty" target="_top">.NET documentation</a>
+     */
     public static PropertyInfo getNamespaceProperty() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -623,6 +942,18 @@ public class JsonFormatGeneratorStatics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NodeTypeProperty.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.JsonFormatGeneratorStatics.NodeTypeProperty" target="_top">.NET documentation</a>
+     */
     public static PropertyInfo getNodeTypeProperty() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -638,6 +969,16 @@ public class JsonFormatGeneratorStatics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TypeHandleProperty.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.JsonFormatGeneratorStatics.TypeHandleProperty" target="_top">.NET documentation</a>
+     */
     public static PropertyInfo getTypeHandleProperty() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -653,6 +994,18 @@ public class JsonFormatGeneratorStatics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UseSimpleDictionaryFormatReadProperty.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.JsonFormatGeneratorStatics.UseSimpleDictionaryFormatReadProperty" target="_top">.NET documentation</a>
+     */
     public static PropertyInfo getUseSimpleDictionaryFormatReadProperty() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -668,6 +1021,18 @@ public class JsonFormatGeneratorStatics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UseSimpleDictionaryFormatWriteProperty.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.JsonFormatGeneratorStatics.UseSimpleDictionaryFormatWriteProperty" target="_top">.NET documentation</a>
+     */
     public static PropertyInfo getUseSimpleDictionaryFormatWriteProperty() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -683,6 +1048,13 @@ public class JsonFormatGeneratorStatics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SerInfoCtorArgs.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.JsonFormatGeneratorStatics.SerInfoCtorArgs" target="_top">.NET documentation</a>
+     */
     public final static NetType[] getSerInfoCtorArgs() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

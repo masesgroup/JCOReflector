@@ -104,7 +104,10 @@ public class SecurityManager extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SecurityManager(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,13 @@ public class SecurityManager extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CurrentThreadRequiresSecurityContextCapture.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.SecurityManager.CurrentThreadRequiresSecurityContextCapture" target="_top">.NET documentation</a>
+     */
     public static boolean CurrentThreadRequiresSecurityContextCapture() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -171,6 +181,14 @@ public class SecurityManager extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsGranted.
+     *
+     * @param perm the argument of type {@code IPermission}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.SecurityManager.IsGranted" target="_top">.NET documentation</a>
+     */
     public static boolean IsGranted(IPermission perm) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -185,6 +203,13 @@ public class SecurityManager extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member PolicyHierarchy.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.SecurityManager.PolicyHierarchy" target="_top">.NET documentation</a>
+     */
     public static IEnumerator PolicyHierarchy() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -200,6 +225,14 @@ public class SecurityManager extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ResolvePolicyGroups.
+     *
+     * @param evidence the argument of type {@code Evidence}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.SecurityManager.ResolvePolicyGroups" target="_top">.NET documentation</a>
+     */
     public static IEnumerator ResolvePolicyGroups(Evidence evidence) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -215,6 +248,14 @@ public class SecurityManager extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetStandardSandbox.
+     *
+     * @param evidence the argument of type {@code Evidence}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.SecurityManager.GetStandardSandbox" target="_top">.NET documentation</a>
+     */
     public static PermissionSet GetStandardSandbox(Evidence evidence) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -230,6 +271,18 @@ public class SecurityManager extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ResolvePolicy.
+     *
+     * @param evidence the argument of type {@code Evidence}
+     * @param reqdPset the argument of type {@code PermissionSet}
+     * @param optPset the argument of type {@code PermissionSet}
+     * @param denyPset the argument of type {@code PermissionSet}
+     * @param denied the argument of type {@code JCORefOut<PermissionSet>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.SecurityManager.ResolvePolicy" target="_top">.NET documentation</a>
+     */
     public static PermissionSet ResolvePolicy(Evidence evidence, PermissionSet reqdPset, PermissionSet optPset, PermissionSet denyPset, JCORefOut<PermissionSet> denied) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -245,6 +298,14 @@ public class SecurityManager extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ResolvePolicy.
+     *
+     * @param evidence the argument of type {@code Evidence}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.SecurityManager.ResolvePolicy" target="_top">.NET documentation</a>
+     */
     public static PermissionSet ResolvePolicy(Evidence evidence) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -260,6 +321,14 @@ public class SecurityManager extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ResolvePolicy.
+     *
+     * @param evidences the argument of type {@code Evidence[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.SecurityManager.ResolvePolicy" target="_top">.NET documentation</a>
+     */
     public static PermissionSet ResolvePolicy(Evidence[] evidences) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -275,6 +344,14 @@ public class SecurityManager extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ResolveSystemPolicy.
+     *
+     * @param evidence the argument of type {@code Evidence}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.SecurityManager.ResolveSystemPolicy" target="_top">.NET documentation</a>
+     */
     public static PermissionSet ResolveSystemPolicy(Evidence evidence) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -290,6 +367,15 @@ public class SecurityManager extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LoadPolicyLevelFromFile.
+     *
+     * @param path the argument of type {@code java.lang.String}
+     * @param type the argument of type {@code PolicyLevelType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.SecurityManager.LoadPolicyLevelFromFile" target="_top">.NET documentation</a>
+     */
     public static PolicyLevel LoadPolicyLevelFromFile(java.lang.String path, PolicyLevelType type) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -305,6 +391,15 @@ public class SecurityManager extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LoadPolicyLevelFromString.
+     *
+     * @param str the argument of type {@code java.lang.String}
+     * @param type the argument of type {@code PolicyLevelType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.SecurityManager.LoadPolicyLevelFromString" target="_top">.NET documentation</a>
+     */
     public static PolicyLevel LoadPolicyLevelFromString(java.lang.String str, PolicyLevelType type) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -320,6 +415,14 @@ public class SecurityManager extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetZoneAndOrigin.
+     *
+     * @param zone the argument of type {@code JCORefOut<NetArrayList>}
+     * @param origin the argument of type {@code JCORefOut<NetArrayList>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.SecurityManager.GetZoneAndOrigin" target="_top">.NET documentation</a>
+     */
     public static void GetZoneAndOrigin(JCORefOut<NetArrayList> zone, JCORefOut<NetArrayList> origin) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -330,6 +433,12 @@ public class SecurityManager extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SavePolicy.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.SecurityManager.SavePolicy" target="_top">.NET documentation</a>
+     */
     public static void SavePolicy() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -340,6 +449,13 @@ public class SecurityManager extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SavePolicyLevel.
+     *
+     * @param level the argument of type {@code PolicyLevel}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.SecurityManager.SavePolicyLevel" target="_top">.NET documentation</a>
+     */
     public static void SavePolicyLevel(PolicyLevel level) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -354,6 +470,13 @@ public class SecurityManager extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CheckExecutionRights.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.SecurityManager.CheckExecutionRights" target="_top">.NET documentation</a>
+     */
     public static boolean getCheckExecutionRights() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -368,6 +491,13 @@ public class SecurityManager extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CheckExecutionRights.
+     *
+     * @param CheckExecutionRights the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.SecurityManager.CheckExecutionRights" target="_top">.NET documentation</a>
+     */
     public static void setCheckExecutionRights(boolean CheckExecutionRights) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -378,6 +508,13 @@ public class SecurityManager extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SecurityEnabled.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.SecurityManager.SecurityEnabled" target="_top">.NET documentation</a>
+     */
     public static boolean getSecurityEnabled() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -392,6 +529,13 @@ public class SecurityManager extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SecurityEnabled.
+     *
+     * @param SecurityEnabled the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.SecurityManager.SecurityEnabled" target="_top">.NET documentation</a>
+     */
     public static void setSecurityEnabled(boolean SecurityEnabled) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

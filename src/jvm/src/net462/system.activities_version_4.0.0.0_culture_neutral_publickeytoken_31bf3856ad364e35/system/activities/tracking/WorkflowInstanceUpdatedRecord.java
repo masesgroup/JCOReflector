@@ -103,7 +103,10 @@ public class WorkflowInstanceUpdatedRecord extends system.activities.tracking.Wo
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public WorkflowInstanceUpdatedRecord(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,26 @@ public class WorkflowInstanceUpdatedRecord extends system.activities.tracking.Wo
     public WorkflowInstanceUpdatedRecord() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param instanceId the argument of type {@code Guid}
+     * @param recordNumber the argument of type {@code long}
+     * @param activityDefinitionId the argument of type {@code java.lang.String}
+     * @param originalDefinitionIdentity the argument of type {@code WorkflowIdentity}
+     * @param updatedDefinitionIdentity the argument of type {@code WorkflowIdentity}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.WorkflowInstanceUpdatedRecord.-ctor" target="_top">.NET documentation</a>
+     */
     public WorkflowInstanceUpdatedRecord(Guid instanceId, long recordNumber, java.lang.String activityDefinitionId, WorkflowIdentity originalDefinitionIdentity, WorkflowIdentity updatedDefinitionIdentity) throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
@@ -163,6 +186,27 @@ public class WorkflowInstanceUpdatedRecord extends system.activities.tracking.Wo
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param instanceId the argument of type {@code Guid}
+     * @param recordNumber the argument of type {@code long}
+     * @param activityDefinitionId the argument of type {@code java.lang.String}
+     * @param originalDefinitionIdentity the argument of type {@code WorkflowIdentity}
+     * @param updatedDefinitionIdentity the argument of type {@code WorkflowIdentity}
+     * @param blockingActivities the argument of type {@code IList_1}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.WorkflowInstanceUpdatedRecord.-ctor" target="_top">.NET documentation</a>
+     */
     public WorkflowInstanceUpdatedRecord(Guid instanceId, long recordNumber, java.lang.String activityDefinitionId, WorkflowIdentity originalDefinitionIdentity, WorkflowIdentity updatedDefinitionIdentity, IList_1 blockingActivities) throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
@@ -173,6 +217,26 @@ public class WorkflowInstanceUpdatedRecord extends system.activities.tracking.Wo
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param instanceId the argument of type {@code Guid}
+     * @param activityDefinitionId the argument of type {@code java.lang.String}
+     * @param originalDefinitionIdentity the argument of type {@code WorkflowIdentity}
+     * @param updatedDefinitionIdentity the argument of type {@code WorkflowIdentity}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.WorkflowInstanceUpdatedRecord.-ctor" target="_top">.NET documentation</a>
+     */
     public WorkflowInstanceUpdatedRecord(Guid instanceId, java.lang.String activityDefinitionId, WorkflowIdentity originalDefinitionIdentity, WorkflowIdentity updatedDefinitionIdentity) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NullReferenceException, system.IndexOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
@@ -183,6 +247,27 @@ public class WorkflowInstanceUpdatedRecord extends system.activities.tracking.Wo
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param instanceId the argument of type {@code Guid}
+     * @param activityDefinitionId the argument of type {@code java.lang.String}
+     * @param originalDefinitionIdentity the argument of type {@code WorkflowIdentity}
+     * @param updatedDefinitionIdentity the argument of type {@code WorkflowIdentity}
+     * @param blockingActivities the argument of type {@code IList_1}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.WorkflowInstanceUpdatedRecord.-ctor" target="_top">.NET documentation</a>
+     */
     public WorkflowInstanceUpdatedRecord(Guid instanceId, java.lang.String activityDefinitionId, WorkflowIdentity originalDefinitionIdentity, WorkflowIdentity updatedDefinitionIdentity, IList_1 blockingActivities) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NullReferenceException, system.IndexOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
@@ -202,6 +287,13 @@ public class WorkflowInstanceUpdatedRecord extends system.activities.tracking.Wo
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsSuccessful.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.WorkflowInstanceUpdatedRecord.IsSuccessful" target="_top">.NET documentation</a>
+     */
     public boolean getIsSuccessful() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +308,13 @@ public class WorkflowInstanceUpdatedRecord extends system.activities.tracking.Wo
         }
     }
 
+    /**
+     * Gets the value of the .NET property OriginalDefinitionIdentity.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.WorkflowInstanceUpdatedRecord.OriginalDefinitionIdentity" target="_top">.NET documentation</a>
+     */
     public WorkflowIdentity getOriginalDefinitionIdentity() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -231,6 +330,13 @@ public class WorkflowInstanceUpdatedRecord extends system.activities.tracking.Wo
         }
     }
 
+    /**
+     * Sets the value of the .NET property OriginalDefinitionIdentity.
+     *
+     * @param OriginalDefinitionIdentity the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.WorkflowInstanceUpdatedRecord.OriginalDefinitionIdentity" target="_top">.NET documentation</a>
+     */
     public void setOriginalDefinitionIdentity(WorkflowIdentity OriginalDefinitionIdentity) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -241,6 +347,13 @@ public class WorkflowInstanceUpdatedRecord extends system.activities.tracking.Wo
         }
     }
 
+    /**
+     * Gets the value of the .NET property BlockingActivities.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.WorkflowInstanceUpdatedRecord.BlockingActivities" target="_top">.NET documentation</a>
+     */
     public IList_1 getBlockingActivities() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -256,6 +369,13 @@ public class WorkflowInstanceUpdatedRecord extends system.activities.tracking.Wo
         }
     }
 
+    /**
+     * Sets the value of the .NET property BlockingActivities.
+     *
+     * @param BlockingActivities the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.WorkflowInstanceUpdatedRecord.BlockingActivities" target="_top">.NET documentation</a>
+     */
     public void setBlockingActivities(IList_1 BlockingActivities) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -101,7 +101,10 @@ public class InvokeFunc_2<T extends IJCOBridgeReflected, TResult extends IJCOBri
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public InvokeFunc_2(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class InvokeFunc_2<T extends IJCOBridgeReflected, TResult extends IJCOBri
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Expressions.InvokeFunc-2.-ctor" target="_top">.NET documentation</a>
+     */
     public InvokeFunc_2() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +177,13 @@ public class InvokeFunc_2<T extends IJCOBridgeReflected, TResult extends IJCOBri
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Func.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Expressions.InvokeFunc-2.Func" target="_top">.NET documentation</a>
+     */
     public ActivityFunc_2 getFunc() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +199,13 @@ public class InvokeFunc_2<T extends IJCOBridgeReflected, TResult extends IJCOBri
         }
     }
 
+    /**
+     * Sets the value of the .NET property Func.
+     *
+     * @param Func the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Expressions.InvokeFunc-2.Func" target="_top">.NET documentation</a>
+     */
     public void setFunc(ActivityFunc_2 Func) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +216,13 @@ public class InvokeFunc_2<T extends IJCOBridgeReflected, TResult extends IJCOBri
         }
     }
 
+    /**
+     * Gets the value of the .NET property Argument.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Expressions.InvokeFunc-2.Argument" target="_top">.NET documentation</a>
+     */
     public InArgument_1 getArgument() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +238,13 @@ public class InvokeFunc_2<T extends IJCOBridgeReflected, TResult extends IJCOBri
         }
     }
 
+    /**
+     * Sets the value of the .NET property Argument.
+     *
+     * @param Argument the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Expressions.InvokeFunc-2.Argument" target="_top">.NET documentation</a>
+     */
     public void setArgument(InArgument_1 Argument) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

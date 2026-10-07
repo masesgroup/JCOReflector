@@ -100,7 +100,10 @@ public class OutputCacheProvider extends system.configuration.provider.ProviderB
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public OutputCacheProvider(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,16 @@ public class OutputCacheProvider extends system.configuration.provider.ProviderB
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param key the argument of type {@code java.lang.String}
+     * @param entry the argument of type {@code NetObject}
+     * @param utcExpiry the argument of type {@code DateTime}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Caching.OutputCacheProvider.Add" target="_top">.NET documentation</a>
+     */
     public NetObject Add(java.lang.String key, NetObject entry, DateTime utcExpiry) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -168,6 +181,14 @@ public class OutputCacheProvider extends system.configuration.provider.ProviderB
         }
     }
 
+    /**
+     * Invokes the .NET member Get.
+     *
+     * @param key the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Caching.OutputCacheProvider.Get" target="_top">.NET documentation</a>
+     */
     public NetObject Get(java.lang.String key) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +204,13 @@ public class OutputCacheProvider extends system.configuration.provider.ProviderB
         }
     }
 
+    /**
+     * Invokes the .NET member Remove.
+     *
+     * @param key the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Caching.OutputCacheProvider.Remove" target="_top">.NET documentation</a>
+     */
     public void Remove(java.lang.String key) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +221,15 @@ public class OutputCacheProvider extends system.configuration.provider.ProviderB
         }
     }
 
+    /**
+     * Invokes the .NET member Set.
+     *
+     * @param key the argument of type {@code java.lang.String}
+     * @param entry the argument of type {@code NetObject}
+     * @param utcExpiry the argument of type {@code DateTime}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Caching.OutputCacheProvider.Set" target="_top">.NET documentation</a>
+     */
     public void Set(java.lang.String key, NetObject entry, DateTime utcExpiry) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

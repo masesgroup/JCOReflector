@@ -99,7 +99,10 @@ public class SecurityPolicyVersion extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SecurityPolicyVersion(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,13 @@ public class SecurityPolicyVersion extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property WSSecurityPolicy11.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.SecurityPolicyVersion.WSSecurityPolicy11" target="_top">.NET documentation</a>
+     */
     public static SecurityPolicyVersion getWSSecurityPolicy11() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -171,6 +181,13 @@ public class SecurityPolicyVersion extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property WSSecurityPolicy12.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.SecurityPolicyVersion.WSSecurityPolicy12" target="_top">.NET documentation</a>
+     */
     public static SecurityPolicyVersion getWSSecurityPolicy12() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -186,6 +203,13 @@ public class SecurityPolicyVersion extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Namespace.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.SecurityPolicyVersion.Namespace" target="_top">.NET documentation</a>
+     */
     public java.lang.String getNamespace() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +224,13 @@ public class SecurityPolicyVersion extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Prefix.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.SecurityPolicyVersion.Prefix" target="_top">.NET documentation</a>
+     */
     public java.lang.String getPrefix() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -107,7 +107,10 @@ public class OracleClientFactory extends system.data.common.DbProviderFactory  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public OracleClientFactory(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -162,6 +165,14 @@ public class OracleClientFactory extends system.data.common.DbProviderFactory  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CreateCommand.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.OracleClient.OracleClientFactory.CreateCommand" target="_top">.NET documentation</a>
+     */
     public DbCommand CreateCommand() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -177,6 +188,14 @@ public class OracleClientFactory extends system.data.common.DbProviderFactory  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateCommandBuilder.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.OracleClient.OracleClientFactory.CreateCommandBuilder" target="_top">.NET documentation</a>
+     */
     public DbCommandBuilder CreateCommandBuilder() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -192,6 +211,14 @@ public class OracleClientFactory extends system.data.common.DbProviderFactory  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateConnection.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.OracleClient.OracleClientFactory.CreateConnection" target="_top">.NET documentation</a>
+     */
     public DbConnection CreateConnection() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +234,24 @@ public class OracleClientFactory extends system.data.common.DbProviderFactory  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateConnectionStringBuilder.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.OracleClient.OracleClientFactory.CreateConnectionStringBuilder" target="_top">.NET documentation</a>
+     */
     public DbConnectionStringBuilder CreateConnectionStringBuilder() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -222,6 +267,14 @@ public class OracleClientFactory extends system.data.common.DbProviderFactory  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateDataAdapter.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.OracleClient.OracleClientFactory.CreateDataAdapter" target="_top">.NET documentation</a>
+     */
     public DbDataAdapter CreateDataAdapter() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -237,6 +290,13 @@ public class OracleClientFactory extends system.data.common.DbProviderFactory  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateParameter.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.OracleClient.OracleClientFactory.CreateParameter" target="_top">.NET documentation</a>
+     */
     public DbParameter CreateParameter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -252,6 +312,22 @@ public class OracleClientFactory extends system.data.common.DbProviderFactory  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreatePermission.
+     *
+     * @param state the argument of type {@code PermissionState}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.OracleClient.OracleClientFactory.CreatePermission" target="_top">.NET documentation</a>
+     */
     public CodeAccessPermission CreatePermission(PermissionState state) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

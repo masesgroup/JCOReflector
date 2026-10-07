@@ -104,7 +104,10 @@ public class SizeF extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SizeF(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,14 @@ public class SizeF extends system.ValueType  {
     public SizeF() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param width the argument of type {@code Single}
+     * @param height the argument of type {@code Single}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.SizeF.-ctor" target="_top">.NET documentation</a>
+     */
     public SizeF(Single width, Single height) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +175,13 @@ public class SizeF extends system.ValueType  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param pt the argument of type {@code PointF}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.SizeF.-ctor" target="_top">.NET documentation</a>
+     */
     public SizeF(PointF pt) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -174,6 +192,13 @@ public class SizeF extends system.ValueType  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param size the argument of type {@code SizeF}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.SizeF.-ctor" target="_top">.NET documentation</a>
+     */
     public SizeF(SizeF size) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -184,6 +209,13 @@ public class SizeF extends system.ValueType  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param vector the argument of type {@code Vector2}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.SizeF.-ctor" target="_top">.NET documentation</a>
+     */
     public SizeF(Vector2 vector) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -199,6 +231,14 @@ public class SizeF extends system.ValueType  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Equals.
+     *
+     * @param other the argument of type {@code SizeF}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.SizeF.Equals" target="_top">.NET documentation</a>
+     */
     public boolean Equals(SizeF other) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -213,6 +253,13 @@ public class SizeF extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToPointF.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.SizeF.ToPointF" target="_top">.NET documentation</a>
+     */
     public PointF ToPointF() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -228,6 +275,13 @@ public class SizeF extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToSize.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.SizeF.ToSize" target="_top">.NET documentation</a>
+     */
     public Size ToSize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -243,6 +297,15 @@ public class SizeF extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param sz1 the argument of type {@code SizeF}
+     * @param sz2 the argument of type {@code SizeF}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.SizeF.Add" target="_top">.NET documentation</a>
+     */
     public static SizeF Add(SizeF sz1, SizeF sz2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -258,6 +321,15 @@ public class SizeF extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Subtract.
+     *
+     * @param sz1 the argument of type {@code SizeF}
+     * @param sz2 the argument of type {@code SizeF}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.SizeF.Subtract" target="_top">.NET documentation</a>
+     */
     public static SizeF Subtract(SizeF sz1, SizeF sz2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -273,6 +345,13 @@ public class SizeF extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToVector2.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.SizeF.ToVector2" target="_top">.NET documentation</a>
+     */
     public Vector2 ToVector2() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -292,6 +371,13 @@ public class SizeF extends system.ValueType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsEmpty.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.SizeF.IsEmpty" target="_top">.NET documentation</a>
+     */
     public boolean getIsEmpty() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -306,6 +392,13 @@ public class SizeF extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Height.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.SizeF.Height" target="_top">.NET documentation</a>
+     */
     public Single getHeight() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -321,6 +414,13 @@ public class SizeF extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Height.
+     *
+     * @param Height the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.SizeF.Height" target="_top">.NET documentation</a>
+     */
     public void setHeight(Single Height) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -331,6 +431,13 @@ public class SizeF extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Width.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.SizeF.Width" target="_top">.NET documentation</a>
+     */
     public Single getWidth() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -346,6 +453,13 @@ public class SizeF extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Width.
+     *
+     * @param Width the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.SizeF.Width" target="_top">.NET documentation</a>
+     */
     public void setWidth(Single Width) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

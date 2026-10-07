@@ -101,7 +101,10 @@ public class FaultPropagationRecord extends system.activities.tracking.TrackingR
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public FaultPropagationRecord(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,25 @@ public class FaultPropagationRecord extends system.activities.tracking.TrackingR
     public FaultPropagationRecord() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param instanceId the argument of type {@code Guid}
+     * @param recordNumber the argument of type {@code long}
+     * @param faultSource the argument of type {@code ActivityInfo}
+     * @param faultHandler the argument of type {@code ActivityInfo}
+     * @param isFaultSource the argument of type {@code boolean}
+     * @param fault the argument of type {@code NetException}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.FaultPropagationRecord.-ctor" target="_top">.NET documentation</a>
+     */
     public FaultPropagationRecord(Guid instanceId, long recordNumber, ActivityInfo faultSource, ActivityInfo faultHandler, boolean isFaultSource, NetException fault) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +192,13 @@ public class FaultPropagationRecord extends system.activities.tracking.TrackingR
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsFaultSource.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.FaultPropagationRecord.IsFaultSource" target="_top">.NET documentation</a>
+     */
     public boolean getIsFaultSource() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +213,13 @@ public class FaultPropagationRecord extends system.activities.tracking.TrackingR
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsFaultSource.
+     *
+     * @param IsFaultSource the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.FaultPropagationRecord.IsFaultSource" target="_top">.NET documentation</a>
+     */
     public void setIsFaultSource(boolean IsFaultSource) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +230,13 @@ public class FaultPropagationRecord extends system.activities.tracking.TrackingR
         }
     }
 
+    /**
+     * Gets the value of the .NET property FaultHandler.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.FaultPropagationRecord.FaultHandler" target="_top">.NET documentation</a>
+     */
     public ActivityInfo getFaultHandler() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -209,6 +252,13 @@ public class FaultPropagationRecord extends system.activities.tracking.TrackingR
         }
     }
 
+    /**
+     * Sets the value of the .NET property FaultHandler.
+     *
+     * @param FaultHandler the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.FaultPropagationRecord.FaultHandler" target="_top">.NET documentation</a>
+     */
     public void setFaultHandler(ActivityInfo FaultHandler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -219,6 +269,13 @@ public class FaultPropagationRecord extends system.activities.tracking.TrackingR
         }
     }
 
+    /**
+     * Gets the value of the .NET property FaultSource.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.FaultPropagationRecord.FaultSource" target="_top">.NET documentation</a>
+     */
     public ActivityInfo getFaultSource() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -234,6 +291,13 @@ public class FaultPropagationRecord extends system.activities.tracking.TrackingR
         }
     }
 
+    /**
+     * Sets the value of the .NET property FaultSource.
+     *
+     * @param FaultSource the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.FaultPropagationRecord.FaultSource" target="_top">.NET documentation</a>
+     */
     public void setFaultSource(ActivityInfo FaultSource) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -244,6 +308,13 @@ public class FaultPropagationRecord extends system.activities.tracking.TrackingR
         }
     }
 
+    /**
+     * Gets the value of the .NET property Fault.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.FaultPropagationRecord.Fault" target="_top">.NET documentation</a>
+     */
     public NetException getFault() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -259,6 +330,13 @@ public class FaultPropagationRecord extends system.activities.tracking.TrackingR
         }
     }
 
+    /**
+     * Sets the value of the .NET property Fault.
+     *
+     * @param Fault the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.FaultPropagationRecord.Fault" target="_top">.NET documentation</a>
+     */
     public void setFault(NetException Fault) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

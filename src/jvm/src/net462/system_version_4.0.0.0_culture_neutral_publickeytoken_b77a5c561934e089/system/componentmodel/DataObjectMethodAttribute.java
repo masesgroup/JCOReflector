@@ -100,7 +100,10 @@ public class DataObjectMethodAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DataObjectMethodAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,13 @@ public class DataObjectMethodAttribute extends system.Attribute  {
     public DataObjectMethodAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param methodType the argument of type {@code DataObjectMethodType}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.DataObjectMethodAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public DataObjectMethodAttribute(DataObjectMethodType methodType) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -160,6 +170,14 @@ public class DataObjectMethodAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param methodType the argument of type {@code DataObjectMethodType}
+     * @param isDefault the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.DataObjectMethodAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public DataObjectMethodAttribute(DataObjectMethodType methodType, boolean isDefault) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -175,6 +193,14 @@ public class DataObjectMethodAttribute extends system.Attribute  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Match.
+     *
+     * @param obj the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.DataObjectMethodAttribute.Match" target="_top">.NET documentation</a>
+     */
     public boolean Match(NetObject obj) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +219,13 @@ public class DataObjectMethodAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsDefault.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.DataObjectMethodAttribute.IsDefault" target="_top">.NET documentation</a>
+     */
     public boolean getIsDefault() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +240,13 @@ public class DataObjectMethodAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MethodType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.DataObjectMethodAttribute.MethodType" target="_top">.NET documentation</a>
+     */
     public DataObjectMethodType getMethodType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

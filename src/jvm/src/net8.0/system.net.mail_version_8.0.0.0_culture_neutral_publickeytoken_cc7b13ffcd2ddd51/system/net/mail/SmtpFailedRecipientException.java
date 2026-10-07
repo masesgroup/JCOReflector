@@ -106,7 +106,9 @@ public class SmtpFailedRecipientException extends system.net.mail.SmtpException 
         super();
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
      */
     public SmtpFailedRecipientException(java.lang.Object instance) {
         super(instance);
@@ -167,6 +169,24 @@ public class SmtpFailedRecipientException extends system.net.mail.SmtpException 
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param statusCode the argument of type {@code SmtpStatusCode}
+     * @param failedRecipient the argument of type {@code java.lang.String}
+     * @param serverResponse the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Mail.SmtpFailedRecipientException.-ctor" target="_top">.NET documentation</a>
+     */
     public SmtpFailedRecipientException(SmtpStatusCode statusCode, java.lang.String failedRecipient, java.lang.String serverResponse) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
@@ -177,6 +197,19 @@ public class SmtpFailedRecipientException extends system.net.mail.SmtpException 
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param statusCode the argument of type {@code SmtpStatusCode}
+     * @param failedRecipient the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Mail.SmtpFailedRecipientException.-ctor" target="_top">.NET documentation</a>
+     */
     public SmtpFailedRecipientException(SmtpStatusCode statusCode, java.lang.String failedRecipient) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         try {
             // add reference to assemblyName.dll file
@@ -187,6 +220,15 @@ public class SmtpFailedRecipientException extends system.net.mail.SmtpException 
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param message the argument of type {@code java.lang.String}
+     * @param failedRecipient the argument of type {@code java.lang.String}
+     * @param innerException the argument of type {@code NetException}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Mail.SmtpFailedRecipientException.-ctor" target="_top">.NET documentation</a>
+     */
     public SmtpFailedRecipientException(java.lang.String message, java.lang.String failedRecipient, NetException innerException) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -201,6 +243,23 @@ public class SmtpFailedRecipientException extends system.net.mail.SmtpException 
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetObjectData.
+     *
+     * @param serializationInfo the argument of type {@code SerializationInfo}
+     * @param streamingContext the argument of type {@code StreamingContext}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.runtime.serialization.SerializationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Mail.SmtpFailedRecipientException.GetObjectData" target="_top">.NET documentation</a>
+     */
     public void GetObjectData(SerializationInfo serializationInfo, StreamingContext streamingContext) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.runtime.serialization.SerializationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +274,13 @@ public class SmtpFailedRecipientException extends system.net.mail.SmtpException 
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property FailedRecipient.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Mail.SmtpFailedRecipientException.FailedRecipient" target="_top">.NET documentation</a>
+     */
     public java.lang.String getFailedRecipient() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

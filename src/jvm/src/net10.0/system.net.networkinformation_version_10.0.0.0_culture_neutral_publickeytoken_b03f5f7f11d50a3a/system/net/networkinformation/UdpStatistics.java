@@ -98,7 +98,10 @@ public class UdpStatistics extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public UdpStatistics(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,13 @@ public class UdpStatistics extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property UdpListeners.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.UdpStatistics.UdpListeners" target="_top">.NET documentation</a>
+     */
     public int getUdpListeners() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -195,6 +205,13 @@ public class UdpStatistics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DatagramsReceived.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.UdpStatistics.DatagramsReceived" target="_top">.NET documentation</a>
+     */
     public long getDatagramsReceived() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -235,6 +252,13 @@ public class UdpStatistics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DatagramsSent.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.UdpStatistics.DatagramsSent" target="_top">.NET documentation</a>
+     */
     public long getDatagramsSent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -275,6 +299,13 @@ public class UdpStatistics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IncomingDatagramsDiscarded.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.UdpStatistics.IncomingDatagramsDiscarded" target="_top">.NET documentation</a>
+     */
     public long getIncomingDatagramsDiscarded() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -315,6 +346,13 @@ public class UdpStatistics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IncomingDatagramsWithErrors.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.UdpStatistics.IncomingDatagramsWithErrors" target="_top">.NET documentation</a>
+     */
     public long getIncomingDatagramsWithErrors() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

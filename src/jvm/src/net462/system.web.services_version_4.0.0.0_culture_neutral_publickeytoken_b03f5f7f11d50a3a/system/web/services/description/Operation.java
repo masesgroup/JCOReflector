@@ -104,7 +104,10 @@ public class Operation extends system.web.services.description.NamedItem  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Operation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,12 @@ public class Operation extends system.web.services.description.NamedItem  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.Operation.-ctor" target="_top">.NET documentation</a>
+     */
     public Operation() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +174,15 @@ public class Operation extends system.web.services.description.NamedItem  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member IsBoundBy.
+     *
+     * @param operationBinding the argument of type {@code OperationBinding}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.Operation.IsBoundBy" target="_top">.NET documentation</a>
+     */
     public boolean IsBoundBy(OperationBinding operationBinding) throws Throwable, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +201,16 @@ public class Operation extends system.web.services.description.NamedItem  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ParameterOrderString.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.Operation.ParameterOrderString" target="_top">.NET documentation</a>
+     */
     public java.lang.String getParameterOrderString() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +225,20 @@ public class Operation extends system.web.services.description.NamedItem  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ParameterOrderString.
+     *
+     * @param ParameterOrderString the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.Operation.ParameterOrderString" target="_top">.NET documentation</a>
+     */
     public void setParameterOrderString(java.lang.String ParameterOrderString) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +249,13 @@ public class Operation extends system.web.services.description.NamedItem  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ParameterOrder.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.Operation.ParameterOrder" target="_top">.NET documentation</a>
+     */
     public java.lang.String[] getParameterOrder() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -230,6 +279,13 @@ public class Operation extends system.web.services.description.NamedItem  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ParameterOrder.
+     *
+     * @param ParameterOrder the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.Operation.ParameterOrder" target="_top">.NET documentation</a>
+     */
     public void setParameterOrder(java.lang.String[] ParameterOrder) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -240,6 +296,13 @@ public class Operation extends system.web.services.description.NamedItem  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Faults.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.Operation.Faults" target="_top">.NET documentation</a>
+     */
     public OperationFaultCollection getFaults() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -255,6 +318,13 @@ public class Operation extends system.web.services.description.NamedItem  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Messages.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.Operation.Messages" target="_top">.NET documentation</a>
+     */
     public OperationMessageCollection getMessages() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -270,6 +340,13 @@ public class Operation extends system.web.services.description.NamedItem  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PortType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.Operation.PortType" target="_top">.NET documentation</a>
+     */
     public PortType getPortType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

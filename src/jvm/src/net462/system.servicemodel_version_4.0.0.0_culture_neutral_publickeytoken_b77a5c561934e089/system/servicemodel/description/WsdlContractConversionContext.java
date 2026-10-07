@@ -106,7 +106,10 @@ public class WsdlContractConversionContext extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public WsdlContractConversionContext(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -161,6 +164,16 @@ public class WsdlContractConversionContext extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetFaultDescription.
+     *
+     * @param operationFault the argument of type {@code OperationFault}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.WsdlContractConversionContext.GetFaultDescription" target="_top">.NET documentation</a>
+     */
     public FaultDescription GetFaultDescription(OperationFault operationFault) throws Throwable, system.ArgumentNullException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -176,6 +189,16 @@ public class WsdlContractConversionContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetMessageDescription.
+     *
+     * @param operationMessage the argument of type {@code OperationMessage}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.WsdlContractConversionContext.GetMessageDescription" target="_top">.NET documentation</a>
+     */
     public MessageDescription GetMessageDescription(OperationMessage operationMessage) throws Throwable, system.ArgumentNullException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -191,6 +214,16 @@ public class WsdlContractConversionContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetOperationDescription.
+     *
+     * @param operation the argument of type {@code Operation}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.WsdlContractConversionContext.GetOperationDescription" target="_top">.NET documentation</a>
+     */
     public OperationDescription GetOperationDescription(Operation operation) throws Throwable, system.ArgumentNullException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,6 +239,16 @@ public class WsdlContractConversionContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetOperation.
+     *
+     * @param operation the argument of type {@code OperationDescription}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.WsdlContractConversionContext.GetOperation" target="_top">.NET documentation</a>
+     */
     public Operation GetOperation(OperationDescription operation) throws Throwable, system.ArgumentNullException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -221,6 +264,16 @@ public class WsdlContractConversionContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetOperationFault.
+     *
+     * @param fault the argument of type {@code FaultDescription}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.WsdlContractConversionContext.GetOperationFault" target="_top">.NET documentation</a>
+     */
     public OperationFault GetOperationFault(FaultDescription fault) throws Throwable, system.ArgumentNullException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -236,6 +289,16 @@ public class WsdlContractConversionContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetOperationMessage.
+     *
+     * @param message the argument of type {@code MessageDescription}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.WsdlContractConversionContext.GetOperationMessage" target="_top">.NET documentation</a>
+     */
     public OperationMessage GetOperationMessage(MessageDescription message) throws Throwable, system.ArgumentNullException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -255,6 +318,13 @@ public class WsdlContractConversionContext extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Contract.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.WsdlContractConversionContext.Contract" target="_top">.NET documentation</a>
+     */
     public ContractDescription getContract() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -270,6 +340,13 @@ public class WsdlContractConversionContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property WsdlPortType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.WsdlContractConversionContext.WsdlPortType" target="_top">.NET documentation</a>
+     */
     public PortType getWsdlPortType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

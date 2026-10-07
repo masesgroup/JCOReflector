@@ -102,7 +102,10 @@ public class PropertyMetadata extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PropertyMetadata(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,12 @@ public class PropertyMetadata extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.PropertyMetadata.-ctor" target="_top">.NET documentation</a>
+     */
     public PropertyMetadata() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -159,6 +168,13 @@ public class PropertyMetadata extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param attributes the argument of type {@code Attribute...}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.PropertyMetadata.-ctor" target="_top">.NET documentation</a>
+     */
     public PropertyMetadata(Attribute... attributes) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +185,13 @@ public class PropertyMetadata extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param defaultValue the argument of type {@code NetObject}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.PropertyMetadata.-ctor" target="_top">.NET documentation</a>
+     */
     public PropertyMetadata(NetObject defaultValue) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -179,6 +202,14 @@ public class PropertyMetadata extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param defaultValue the argument of type {@code NetObject}
+     * @param attributes the argument of type {@code Attribute...}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.PropertyMetadata.-ctor" target="_top">.NET documentation</a>
+     */
     public PropertyMetadata(NetObject defaultValue, Attribute... attributes) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -189,6 +220,14 @@ public class PropertyMetadata extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param defaultValue the argument of type {@code NetObject}
+     * @param options the argument of type {@code DependencyPropertyOptions}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.PropertyMetadata.-ctor" target="_top">.NET documentation</a>
+     */
     public PropertyMetadata(NetObject defaultValue, DependencyPropertyOptions options) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -199,6 +238,15 @@ public class PropertyMetadata extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param defaultValue the argument of type {@code NetObject}
+     * @param options the argument of type {@code DependencyPropertyOptions}
+     * @param attributes the argument of type {@code Attribute...}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.PropertyMetadata.-ctor" target="_top">.NET documentation</a>
+     */
     public PropertyMetadata(NetObject defaultValue, DependencyPropertyOptions options, Attribute... attributes) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -209,6 +257,16 @@ public class PropertyMetadata extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param defaultValue the argument of type {@code NetObject}
+     * @param options the argument of type {@code DependencyPropertyOptions}
+     * @param getValueOverride the argument of type {@code GetValueOverride}
+     * @param setValueOverride the argument of type {@code SetValueOverride}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.PropertyMetadata.-ctor" target="_top">.NET documentation</a>
+     */
     public PropertyMetadata(NetObject defaultValue, DependencyPropertyOptions options, GetValueOverride getValueOverride, SetValueOverride setValueOverride) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -219,6 +277,17 @@ public class PropertyMetadata extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param defaultValue the argument of type {@code NetObject}
+     * @param options the argument of type {@code DependencyPropertyOptions}
+     * @param getValueOverride the argument of type {@code GetValueOverride}
+     * @param setValueOverride the argument of type {@code SetValueOverride}
+     * @param attributes the argument of type {@code Attribute...}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.PropertyMetadata.-ctor" target="_top">.NET documentation</a>
+     */
     public PropertyMetadata(NetObject defaultValue, DependencyPropertyOptions options, GetValueOverride getValueOverride, SetValueOverride setValueOverride, Attribute... attributes) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -229,6 +298,13 @@ public class PropertyMetadata extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param options the argument of type {@code DependencyPropertyOptions}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.PropertyMetadata.-ctor" target="_top">.NET documentation</a>
+     */
     public PropertyMetadata(DependencyPropertyOptions options) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -239,6 +315,14 @@ public class PropertyMetadata extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param options the argument of type {@code DependencyPropertyOptions}
+     * @param attributes the argument of type {@code Attribute...}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.PropertyMetadata.-ctor" target="_top">.NET documentation</a>
+     */
     public PropertyMetadata(DependencyPropertyOptions options, Attribute... attributes) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -253,6 +337,14 @@ public class PropertyMetadata extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetAttributes.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.PropertyMetadata.GetAttributes" target="_top">.NET documentation</a>
+     */
     public Attribute[] GetAttributes() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -274,6 +366,15 @@ public class PropertyMetadata extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetAttributes.
+     *
+     * @param attributeType the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.PropertyMetadata.GetAttributes" target="_top">.NET documentation</a>
+     */
     public Attribute[] GetAttributes(NetType attributeType) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -299,6 +400,13 @@ public class PropertyMetadata extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsMetaProperty.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.PropertyMetadata.IsMetaProperty" target="_top">.NET documentation</a>
+     */
     public boolean getIsMetaProperty() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -313,6 +421,13 @@ public class PropertyMetadata extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsNonSerialized.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.PropertyMetadata.IsNonSerialized" target="_top">.NET documentation</a>
+     */
     public boolean getIsNonSerialized() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -327,6 +442,13 @@ public class PropertyMetadata extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsReadOnly.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.PropertyMetadata.IsReadOnly" target="_top">.NET documentation</a>
+     */
     public boolean getIsReadOnly() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -341,6 +463,13 @@ public class PropertyMetadata extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DefaultValue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.PropertyMetadata.DefaultValue" target="_top">.NET documentation</a>
+     */
     public NetObject getDefaultValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -356,6 +485,23 @@ public class PropertyMetadata extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DefaultValue.
+     *
+     * @param DefaultValue the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.PropertyMetadata.DefaultValue" target="_top">.NET documentation</a>
+     */
     public void setDefaultValue(NetObject DefaultValue) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -366,6 +512,13 @@ public class PropertyMetadata extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Options.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.PropertyMetadata.Options" target="_top">.NET documentation</a>
+     */
     public DependencyPropertyOptions getOptions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -381,6 +534,23 @@ public class PropertyMetadata extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Options.
+     *
+     * @param Options the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.PropertyMetadata.Options" target="_top">.NET documentation</a>
+     */
     public void setOptions(DependencyPropertyOptions Options) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -391,6 +561,13 @@ public class PropertyMetadata extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property GetValueOverride.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.PropertyMetadata.GetValueOverride" target="_top">.NET documentation</a>
+     */
     public GetValueOverride getGetValueOverride() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -405,6 +582,23 @@ public class PropertyMetadata extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property GetValueOverride.
+     *
+     * @param GetValueOverride the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.PropertyMetadata.GetValueOverride" target="_top">.NET documentation</a>
+     */
     public void setGetValueOverride(GetValueOverride GetValueOverride) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -415,6 +609,13 @@ public class PropertyMetadata extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SetValueOverride.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.PropertyMetadata.SetValueOverride" target="_top">.NET documentation</a>
+     */
     public SetValueOverride getSetValueOverride() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -429,6 +630,23 @@ public class PropertyMetadata extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SetValueOverride.
+     *
+     * @param SetValueOverride the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.PropertyMetadata.SetValueOverride" target="_top">.NET documentation</a>
+     */
     public void setSetValueOverride(SetValueOverride SetValueOverride) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

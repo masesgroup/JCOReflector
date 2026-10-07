@@ -98,7 +98,10 @@ public class StrongBox_1<T extends IJCOBridgeReflected> extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public StrongBox_1(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -145,6 +148,12 @@ public class StrongBox_1<T extends IJCOBridgeReflected> extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.StrongBox-1.-ctor" target="_top">.NET documentation</a>
+     */
     public StrongBox_1() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -157,6 +166,13 @@ public class StrongBox_1<T extends IJCOBridgeReflected> extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param value the argument of type {@code T}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.StrongBox-1.-ctor" target="_top">.NET documentation</a>
+     */
     public StrongBox_1(T value) throws Throwable {
         try {
             // add reference to assemblyName.dll file

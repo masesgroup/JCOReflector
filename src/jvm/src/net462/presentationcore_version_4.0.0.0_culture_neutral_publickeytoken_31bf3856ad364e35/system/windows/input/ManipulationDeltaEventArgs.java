@@ -106,7 +106,10 @@ public class ManipulationDeltaEventArgs extends system.windows.input.InputEventA
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ManipulationDeltaEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -161,6 +164,13 @@ public class ManipulationDeltaEventArgs extends system.windows.input.InputEventA
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Cancel.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.ManipulationDeltaEventArgs.Cancel" target="_top">.NET documentation</a>
+     */
     public boolean Cancel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -175,6 +185,12 @@ public class ManipulationDeltaEventArgs extends system.windows.input.InputEventA
         }
     }
 
+    /**
+     * Invokes the .NET member Complete.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.ManipulationDeltaEventArgs.Complete" target="_top">.NET documentation</a>
+     */
     public void Complete() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -185,6 +201,14 @@ public class ManipulationDeltaEventArgs extends system.windows.input.InputEventA
         }
     }
 
+    /**
+     * Invokes the .NET member ReportBoundaryFeedback.
+     *
+     * @param unusedManipulation the argument of type {@code ManipulationDelta}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.ManipulationDeltaEventArgs.ReportBoundaryFeedback" target="_top">.NET documentation</a>
+     */
     public void ReportBoundaryFeedback(ManipulationDelta unusedManipulation) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -195,6 +219,12 @@ public class ManipulationDeltaEventArgs extends system.windows.input.InputEventA
         }
     }
 
+    /**
+     * Invokes the .NET member StartInertia.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.ManipulationDeltaEventArgs.StartInertia" target="_top">.NET documentation</a>
+     */
     public void StartInertia() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -209,6 +239,13 @@ public class ManipulationDeltaEventArgs extends system.windows.input.InputEventA
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsInertial.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.ManipulationDeltaEventArgs.IsInertial" target="_top">.NET documentation</a>
+     */
     public boolean getIsInertial() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -223,6 +260,13 @@ public class ManipulationDeltaEventArgs extends system.windows.input.InputEventA
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsInertial.
+     *
+     * @param IsInertial the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.ManipulationDeltaEventArgs.IsInertial" target="_top">.NET documentation</a>
+     */
     public void setIsInertial(boolean IsInertial) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -233,6 +277,15 @@ public class ManipulationDeltaEventArgs extends system.windows.input.InputEventA
         }
     }
 
+    /**
+     * Gets the value of the .NET property Manipulators.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.ManipulationDeltaEventArgs.Manipulators" target="_top">.NET documentation</a>
+     */
     public IEnumerable_1 getManipulators() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -248,6 +301,13 @@ public class ManipulationDeltaEventArgs extends system.windows.input.InputEventA
         }
     }
 
+    /**
+     * Gets the value of the .NET property ManipulationContainer.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.ManipulationDeltaEventArgs.ManipulationContainer" target="_top">.NET documentation</a>
+     */
     public IInputElement getManipulationContainer() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -263,6 +323,13 @@ public class ManipulationDeltaEventArgs extends system.windows.input.InputEventA
         }
     }
 
+    /**
+     * Sets the value of the .NET property ManipulationContainer.
+     *
+     * @param ManipulationContainer the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.ManipulationDeltaEventArgs.ManipulationContainer" target="_top">.NET documentation</a>
+     */
     public void setManipulationContainer(IInputElement ManipulationContainer) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -273,6 +340,13 @@ public class ManipulationDeltaEventArgs extends system.windows.input.InputEventA
         }
     }
 
+    /**
+     * Gets the value of the .NET property CumulativeManipulation.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.ManipulationDeltaEventArgs.CumulativeManipulation" target="_top">.NET documentation</a>
+     */
     public ManipulationDelta getCumulativeManipulation() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -288,6 +362,13 @@ public class ManipulationDeltaEventArgs extends system.windows.input.InputEventA
         }
     }
 
+    /**
+     * Sets the value of the .NET property CumulativeManipulation.
+     *
+     * @param CumulativeManipulation the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.ManipulationDeltaEventArgs.CumulativeManipulation" target="_top">.NET documentation</a>
+     */
     public void setCumulativeManipulation(ManipulationDelta CumulativeManipulation) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -298,6 +379,13 @@ public class ManipulationDeltaEventArgs extends system.windows.input.InputEventA
         }
     }
 
+    /**
+     * Gets the value of the .NET property DeltaManipulation.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.ManipulationDeltaEventArgs.DeltaManipulation" target="_top">.NET documentation</a>
+     */
     public ManipulationDelta getDeltaManipulation() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -313,6 +401,13 @@ public class ManipulationDeltaEventArgs extends system.windows.input.InputEventA
         }
     }
 
+    /**
+     * Sets the value of the .NET property DeltaManipulation.
+     *
+     * @param DeltaManipulation the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.ManipulationDeltaEventArgs.DeltaManipulation" target="_top">.NET documentation</a>
+     */
     public void setDeltaManipulation(ManipulationDelta DeltaManipulation) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -323,6 +418,13 @@ public class ManipulationDeltaEventArgs extends system.windows.input.InputEventA
         }
     }
 
+    /**
+     * Gets the value of the .NET property Velocities.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.ManipulationDeltaEventArgs.Velocities" target="_top">.NET documentation</a>
+     */
     public ManipulationVelocities getVelocities() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -338,6 +440,13 @@ public class ManipulationDeltaEventArgs extends system.windows.input.InputEventA
         }
     }
 
+    /**
+     * Sets the value of the .NET property Velocities.
+     *
+     * @param Velocities the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.ManipulationDeltaEventArgs.Velocities" target="_top">.NET documentation</a>
+     */
     public void setVelocities(ManipulationVelocities Velocities) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -348,6 +457,13 @@ public class ManipulationDeltaEventArgs extends system.windows.input.InputEventA
         }
     }
 
+    /**
+     * Gets the value of the .NET property ManipulationOrigin.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.ManipulationDeltaEventArgs.ManipulationOrigin" target="_top">.NET documentation</a>
+     */
     public Point getManipulationOrigin() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -363,6 +479,13 @@ public class ManipulationDeltaEventArgs extends system.windows.input.InputEventA
         }
     }
 
+    /**
+     * Sets the value of the .NET property ManipulationOrigin.
+     *
+     * @param ManipulationOrigin the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.ManipulationDeltaEventArgs.ManipulationOrigin" target="_top">.NET documentation</a>
+     */
     public void setManipulationOrigin(Point ManipulationOrigin) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

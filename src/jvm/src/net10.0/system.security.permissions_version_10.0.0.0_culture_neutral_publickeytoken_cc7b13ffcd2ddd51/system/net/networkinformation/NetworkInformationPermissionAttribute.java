@@ -102,7 +102,10 @@ public class NetworkInformationPermissionAttribute extends system.security.permi
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public NetworkInformationPermissionAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,13 @@ public class NetworkInformationPermissionAttribute extends system.security.permi
     public NetworkInformationPermissionAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param action the argument of type {@code SecurityAction}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.NetworkInformationPermissionAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public NetworkInformationPermissionAttribute(SecurityAction action) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +177,13 @@ public class NetworkInformationPermissionAttribute extends system.security.permi
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CreatePermission.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.NetworkInformationPermissionAttribute.CreatePermission" target="_top">.NET documentation</a>
+     */
     public IPermission CreatePermission() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -186,6 +203,13 @@ public class NetworkInformationPermissionAttribute extends system.security.permi
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Access.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.NetworkInformationPermissionAttribute.Access" target="_top">.NET documentation</a>
+     */
     public java.lang.String getAccess() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +224,13 @@ public class NetworkInformationPermissionAttribute extends system.security.permi
         }
     }
 
+    /**
+     * Sets the value of the .NET property Access.
+     *
+     * @param Access the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.NetworkInformationPermissionAttribute.Access" target="_top">.NET documentation</a>
+     */
     public void setAccess(java.lang.String Access) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

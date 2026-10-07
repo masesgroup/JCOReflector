@@ -103,7 +103,10 @@ public class FormViewPagerRow extends system.web.ui.webcontrols.FormViewRow impl
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public FormViewPagerRow(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,15 @@ public class FormViewPagerRow extends system.web.ui.webcontrols.FormViewRow impl
     public FormViewPagerRow() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param rowIndex the argument of type {@code int}
+     * @param rowType the argument of type {@code DataControlRowType}
+     * @param rowState the argument of type {@code DataControlRowState}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.FormViewPagerRow.-ctor" target="_top">.NET documentation</a>
+     */
     public FormViewPagerRow(int rowIndex, DataControlRowType rowType, DataControlRowState rowState) throws Throwable {
         try {
             // add reference to assemblyName.dll file

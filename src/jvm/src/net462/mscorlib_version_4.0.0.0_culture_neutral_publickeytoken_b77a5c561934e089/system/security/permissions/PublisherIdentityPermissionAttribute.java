@@ -102,7 +102,10 @@ public class PublisherIdentityPermissionAttribute extends system.security.permis
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PublisherIdentityPermissionAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,13 @@ public class PublisherIdentityPermissionAttribute extends system.security.permis
     public PublisherIdentityPermissionAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param action the argument of type {@code SecurityAction}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.PublisherIdentityPermissionAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public PublisherIdentityPermissionAttribute(SecurityAction action) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +177,30 @@ public class PublisherIdentityPermissionAttribute extends system.security.permis
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CreatePermission.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.AccessViolationException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.PublisherIdentityPermissionAttribute.CreatePermission" target="_top">.NET documentation</a>
+     */
     public IPermission CreatePermission() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.security.cryptography.CryptographicException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ObjectDisposedException, system.AccessViolationException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -186,6 +220,13 @@ public class PublisherIdentityPermissionAttribute extends system.security.permis
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CertFile.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.PublisherIdentityPermissionAttribute.CertFile" target="_top">.NET documentation</a>
+     */
     public java.lang.String getCertFile() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +241,13 @@ public class PublisherIdentityPermissionAttribute extends system.security.permis
         }
     }
 
+    /**
+     * Sets the value of the .NET property CertFile.
+     *
+     * @param CertFile the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.PublisherIdentityPermissionAttribute.CertFile" target="_top">.NET documentation</a>
+     */
     public void setCertFile(java.lang.String CertFile) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -210,6 +258,13 @@ public class PublisherIdentityPermissionAttribute extends system.security.permis
         }
     }
 
+    /**
+     * Gets the value of the .NET property SignedFile.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.PublisherIdentityPermissionAttribute.SignedFile" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSignedFile() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -224,6 +279,13 @@ public class PublisherIdentityPermissionAttribute extends system.security.permis
         }
     }
 
+    /**
+     * Sets the value of the .NET property SignedFile.
+     *
+     * @param SignedFile the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.PublisherIdentityPermissionAttribute.SignedFile" target="_top">.NET documentation</a>
+     */
     public void setSignedFile(java.lang.String SignedFile) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -234,6 +296,13 @@ public class PublisherIdentityPermissionAttribute extends system.security.permis
         }
     }
 
+    /**
+     * Gets the value of the .NET property X509Certificate.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.PublisherIdentityPermissionAttribute.X509Certificate" target="_top">.NET documentation</a>
+     */
     public java.lang.String getX509Certificate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -248,6 +317,13 @@ public class PublisherIdentityPermissionAttribute extends system.security.permis
         }
     }
 
+    /**
+     * Sets the value of the .NET property X509Certificate.
+     *
+     * @param X509Certificate the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.PublisherIdentityPermissionAttribute.X509Certificate" target="_top">.NET documentation</a>
+     */
     public void setX509Certificate(java.lang.String X509Certificate) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

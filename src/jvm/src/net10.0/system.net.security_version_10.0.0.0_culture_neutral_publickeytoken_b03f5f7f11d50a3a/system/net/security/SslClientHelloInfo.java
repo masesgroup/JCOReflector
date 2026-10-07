@@ -100,7 +100,10 @@ public class SslClientHelloInfo extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SslClientHelloInfo(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,14 @@ public class SslClientHelloInfo extends system.ValueType  {
     public SslClientHelloInfo() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param serverName the argument of type {@code java.lang.String}
+     * @param sslProtocols the argument of type {@code SslProtocols}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Security.SslClientHelloInfo.-ctor" target="_top">.NET documentation</a>
+     */
     public SslClientHelloInfo(java.lang.String serverName, SslProtocols sslProtocols) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +180,13 @@ public class SslClientHelloInfo extends system.ValueType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property SslProtocols.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Security.SslClientHelloInfo.SslProtocols" target="_top">.NET documentation</a>
+     */
     public SslProtocols getSslProtocols() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +202,13 @@ public class SslClientHelloInfo extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ServerName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Security.SslClientHelloInfo.ServerName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getServerName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

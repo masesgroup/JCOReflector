@@ -98,7 +98,10 @@ public class SoapHeader extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SoapHeader(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,13 @@ public class SoapHeader extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property DidUnderstand.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapHeader.DidUnderstand" target="_top">.NET documentation</a>
+     */
     public boolean getDidUnderstand() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -169,6 +179,13 @@ public class SoapHeader extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DidUnderstand.
+     *
+     * @param DidUnderstand the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapHeader.DidUnderstand" target="_top">.NET documentation</a>
+     */
     public void setDidUnderstand(boolean DidUnderstand) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -179,6 +196,13 @@ public class SoapHeader extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MustUnderstand.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapHeader.MustUnderstand" target="_top">.NET documentation</a>
+     */
     public boolean getMustUnderstand() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +217,13 @@ public class SoapHeader extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MustUnderstand.
+     *
+     * @param MustUnderstand the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapHeader.MustUnderstand" target="_top">.NET documentation</a>
+     */
     public void setMustUnderstand(boolean MustUnderstand) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +234,13 @@ public class SoapHeader extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Relay.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapHeader.Relay" target="_top">.NET documentation</a>
+     */
     public boolean getRelay() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -217,6 +255,13 @@ public class SoapHeader extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Relay.
+     *
+     * @param Relay the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapHeader.Relay" target="_top">.NET documentation</a>
+     */
     public void setRelay(boolean Relay) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -227,6 +272,13 @@ public class SoapHeader extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Actor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapHeader.Actor" target="_top">.NET documentation</a>
+     */
     public java.lang.String getActor() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -241,6 +293,13 @@ public class SoapHeader extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Actor.
+     *
+     * @param Actor the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapHeader.Actor" target="_top">.NET documentation</a>
+     */
     public void setActor(java.lang.String Actor) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -251,6 +310,13 @@ public class SoapHeader extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EncodedMustUnderstand.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapHeader.EncodedMustUnderstand" target="_top">.NET documentation</a>
+     */
     public java.lang.String getEncodedMustUnderstand() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -265,6 +331,25 @@ public class SoapHeader extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property EncodedMustUnderstand.
+     *
+     * @param EncodedMustUnderstand the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapHeader.EncodedMustUnderstand" target="_top">.NET documentation</a>
+     */
     public void setEncodedMustUnderstand(java.lang.String EncodedMustUnderstand) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -275,6 +360,13 @@ public class SoapHeader extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EncodedMustUnderstand12.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapHeader.EncodedMustUnderstand12" target="_top">.NET documentation</a>
+     */
     public java.lang.String getEncodedMustUnderstand12() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -289,6 +381,24 @@ public class SoapHeader extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property EncodedMustUnderstand12.
+     *
+     * @param EncodedMustUnderstand12 the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapHeader.EncodedMustUnderstand12" target="_top">.NET documentation</a>
+     */
     public void setEncodedMustUnderstand12(java.lang.String EncodedMustUnderstand12) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -299,6 +409,13 @@ public class SoapHeader extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EncodedRelay.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapHeader.EncodedRelay" target="_top">.NET documentation</a>
+     */
     public java.lang.String getEncodedRelay() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -313,6 +430,25 @@ public class SoapHeader extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property EncodedRelay.
+     *
+     * @param EncodedRelay the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapHeader.EncodedRelay" target="_top">.NET documentation</a>
+     */
     public void setEncodedRelay(java.lang.String EncodedRelay) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -323,6 +459,13 @@ public class SoapHeader extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Role.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapHeader.Role" target="_top">.NET documentation</a>
+     */
     public java.lang.String getRole() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -337,6 +480,13 @@ public class SoapHeader extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Role.
+     *
+     * @param Role the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapHeader.Role" target="_top">.NET documentation</a>
+     */
     public void setRole(java.lang.String Role) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

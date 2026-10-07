@@ -98,7 +98,10 @@ public class ExpressionBinding extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ExpressionBinding(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,16 @@ public class ExpressionBinding extends NetObject  {
     public ExpressionBinding() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param propertyName the argument of type {@code java.lang.String}
+     * @param propertyType the argument of type {@code NetType}
+     * @param expressionPrefix the argument of type {@code java.lang.String}
+     * @param expression the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.ExpressionBinding.-ctor" target="_top">.NET documentation</a>
+     */
     public ExpressionBinding(java.lang.String propertyName, NetType propertyType, java.lang.String expressionPrefix, java.lang.String expression) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +180,13 @@ public class ExpressionBinding extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Generated.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.ExpressionBinding.Generated" target="_top">.NET documentation</a>
+     */
     public boolean getGenerated() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -181,6 +201,13 @@ public class ExpressionBinding extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ParsedExpressionData.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.ExpressionBinding.ParsedExpressionData" target="_top">.NET documentation</a>
+     */
     public NetObject getParsedExpressionData() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -196,6 +223,13 @@ public class ExpressionBinding extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Expression.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.ExpressionBinding.Expression" target="_top">.NET documentation</a>
+     */
     public java.lang.String getExpression() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -210,6 +244,13 @@ public class ExpressionBinding extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Expression.
+     *
+     * @param Expression the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.ExpressionBinding.Expression" target="_top">.NET documentation</a>
+     */
     public void setExpression(java.lang.String Expression) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -220,6 +261,13 @@ public class ExpressionBinding extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ExpressionPrefix.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.ExpressionBinding.ExpressionPrefix" target="_top">.NET documentation</a>
+     */
     public java.lang.String getExpressionPrefix() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -234,6 +282,13 @@ public class ExpressionBinding extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ExpressionPrefix.
+     *
+     * @param ExpressionPrefix the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.ExpressionBinding.ExpressionPrefix" target="_top">.NET documentation</a>
+     */
     public void setExpressionPrefix(java.lang.String ExpressionPrefix) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -244,6 +299,13 @@ public class ExpressionBinding extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PropertyName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.ExpressionBinding.PropertyName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getPropertyName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -258,6 +320,13 @@ public class ExpressionBinding extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PropertyType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.ExpressionBinding.PropertyType" target="_top">.NET documentation</a>
+     */
     public NetType getPropertyType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

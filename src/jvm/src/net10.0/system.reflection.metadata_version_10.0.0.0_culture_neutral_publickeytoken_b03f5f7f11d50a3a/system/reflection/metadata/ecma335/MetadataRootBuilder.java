@@ -101,7 +101,10 @@ public class MetadataRootBuilder extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public MetadataRootBuilder(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,28 @@ public class MetadataRootBuilder extends NetObject  {
     public MetadataRootBuilder() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param tablesAndHeaps the argument of type {@code MetadataBuilder}
+     * @param metadataVersion the argument of type {@code java.lang.String}
+     * @param suppressValidation the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.MetadataRootBuilder.-ctor" target="_top">.NET documentation</a>
+     */
     public MetadataRootBuilder(MetadataBuilder tablesAndHeaps, java.lang.String metadataVersion, boolean suppressValidation) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException {
         try {
             // add reference to assemblyName.dll file
@@ -166,6 +191,27 @@ public class MetadataRootBuilder extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Serialize.
+     *
+     * @param builder the argument of type {@code BlobBuilder}
+     * @param methodBodyStreamRva the argument of type {@code int}
+     * @param mappedFieldDataStreamRva the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.BadImageFormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.MetadataRootBuilder.Serialize" target="_top">.NET documentation</a>
+     */
     public void Serialize(BlobBuilder builder, int methodBodyStreamRva, int mappedFieldDataStreamRva) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.BadImageFormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +226,13 @@ public class MetadataRootBuilder extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property SuppressValidation.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.MetadataRootBuilder.SuppressValidation" target="_top">.NET documentation</a>
+     */
     public boolean getSuppressValidation() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +247,13 @@ public class MetadataRootBuilder extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Sizes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.MetadataRootBuilder.Sizes" target="_top">.NET documentation</a>
+     */
     public MetadataSizes getSizes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -209,6 +269,13 @@ public class MetadataRootBuilder extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MetadataVersion.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.MetadataRootBuilder.MetadataVersion" target="_top">.NET documentation</a>
+     */
     public java.lang.String getMetadataVersion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

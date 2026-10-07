@@ -102,7 +102,10 @@ public class NamedArgumentTypeEncoder extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public NamedArgumentTypeEncoder(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,13 @@ public class NamedArgumentTypeEncoder extends system.ValueType  {
     public NamedArgumentTypeEncoder() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param builder the argument of type {@code BlobBuilder}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.NamedArgumentTypeEncoder.-ctor" target="_top">.NET documentation</a>
+     */
     public NamedArgumentTypeEncoder(BlobBuilder builder) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +177,13 @@ public class NamedArgumentTypeEncoder extends system.ValueType  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member SZArray.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.NamedArgumentTypeEncoder.SZArray" target="_top">.NET documentation</a>
+     */
     public CustomAttributeArrayTypeEncoder SZArray() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +199,13 @@ public class NamedArgumentTypeEncoder extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member ScalarType.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.NamedArgumentTypeEncoder.ScalarType" target="_top">.NET documentation</a>
+     */
     public CustomAttributeElementTypeEncoder ScalarType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +221,18 @@ public class NamedArgumentTypeEncoder extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Object.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.NamedArgumentTypeEncoder.Object" target="_top">.NET documentation</a>
+     */
     public void Object() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -211,6 +247,13 @@ public class NamedArgumentTypeEncoder extends system.ValueType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Builder.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.NamedArgumentTypeEncoder.Builder" target="_top">.NET documentation</a>
+     */
     public BlobBuilder getBuilder() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

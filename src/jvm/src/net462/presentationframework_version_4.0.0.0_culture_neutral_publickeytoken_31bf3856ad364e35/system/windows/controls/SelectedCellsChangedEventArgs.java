@@ -103,7 +103,10 @@ public class SelectedCellsChangedEventArgs extends system.EventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SelectedCellsChangedEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,15 @@ public class SelectedCellsChangedEventArgs extends system.EventArgs  {
     public SelectedCellsChangedEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param addedCells the argument of type {@code List_1}
+     * @param removedCells the argument of type {@code List_1}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.SelectedCellsChangedEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public SelectedCellsChangedEventArgs(List_1 addedCells, List_1 removedCells) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -163,6 +175,15 @@ public class SelectedCellsChangedEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param addedCells the argument of type {@code ReadOnlyCollection_1}
+     * @param removedCells the argument of type {@code ReadOnlyCollection_1}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.SelectedCellsChangedEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public SelectedCellsChangedEventArgs(ReadOnlyCollection_1 addedCells, ReadOnlyCollection_1 removedCells) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -182,6 +203,13 @@ public class SelectedCellsChangedEventArgs extends system.EventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AddedCells.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.SelectedCellsChangedEventArgs.AddedCells" target="_top">.NET documentation</a>
+     */
     public IList_1 getAddedCells() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +225,13 @@ public class SelectedCellsChangedEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RemovedCells.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.SelectedCellsChangedEventArgs.RemovedCells" target="_top">.NET documentation</a>
+     */
     public IList_1 getRemovedCells() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

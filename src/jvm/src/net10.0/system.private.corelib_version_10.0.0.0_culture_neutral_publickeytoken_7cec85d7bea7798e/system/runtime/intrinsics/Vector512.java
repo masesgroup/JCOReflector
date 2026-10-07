@@ -110,7 +110,10 @@ public class Vector512 extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Vector512(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -163,6 +166,18 @@ public class Vector512 extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member All.
+     *
+     * @param <T> the type of the generic argument T
+     * @param vector the argument of type {@code Vector512_1}
+     * @param value the argument of type {@code T}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.All" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> boolean All(Vector512_1 vector, T value) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -177,6 +192,18 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AllWhereAllBitsSet.
+     *
+     * @param <T> the type of the generic argument T
+     * @param vector the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.AllWhereAllBitsSet" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> boolean AllWhereAllBitsSet(Vector512_1 vector) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -191,6 +218,18 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Any.
+     *
+     * @param <T> the type of the generic argument T
+     * @param vector the argument of type {@code Vector512_1}
+     * @param value the argument of type {@code T}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.Any" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> boolean Any(Vector512_1 vector, T value) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -205,6 +244,18 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AnyWhereAllBitsSet.
+     *
+     * @param <T> the type of the generic argument T
+     * @param vector the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.AnyWhereAllBitsSet" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> boolean AnyWhereAllBitsSet(Vector512_1 vector) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -219,6 +270,18 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member EqualsAll.
+     *
+     * @param <T> the type of the generic argument T
+     * @param left the argument of type {@code Vector512_1}
+     * @param right the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.EqualsAll" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> boolean EqualsAll(Vector512_1 left, Vector512_1 right) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -233,6 +296,18 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member EqualsAny.
+     *
+     * @param <T> the type of the generic argument T
+     * @param left the argument of type {@code Vector512_1}
+     * @param right the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.EqualsAny" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> boolean EqualsAny(Vector512_1 left, Vector512_1 right) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -247,6 +322,18 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GreaterThanAll.
+     *
+     * @param <T> the type of the generic argument T
+     * @param left the argument of type {@code Vector512_1}
+     * @param right the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.GreaterThanAll" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> boolean GreaterThanAll(Vector512_1 left, Vector512_1 right) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -261,6 +348,18 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GreaterThanAny.
+     *
+     * @param <T> the type of the generic argument T
+     * @param left the argument of type {@code Vector512_1}
+     * @param right the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.GreaterThanAny" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> boolean GreaterThanAny(Vector512_1 left, Vector512_1 right) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -275,6 +374,18 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GreaterThanOrEqualAll.
+     *
+     * @param <T> the type of the generic argument T
+     * @param left the argument of type {@code Vector512_1}
+     * @param right the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.GreaterThanOrEqualAll" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> boolean GreaterThanOrEqualAll(Vector512_1 left, Vector512_1 right) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -289,6 +400,18 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GreaterThanOrEqualAny.
+     *
+     * @param <T> the type of the generic argument T
+     * @param left the argument of type {@code Vector512_1}
+     * @param right the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.GreaterThanOrEqualAny" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> boolean GreaterThanOrEqualAny(Vector512_1 left, Vector512_1 right) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -303,6 +426,18 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LessThanAll.
+     *
+     * @param <T> the type of the generic argument T
+     * @param left the argument of type {@code Vector512_1}
+     * @param right the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.LessThanAll" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> boolean LessThanAll(Vector512_1 left, Vector512_1 right) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -317,6 +452,18 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LessThanAny.
+     *
+     * @param <T> the type of the generic argument T
+     * @param left the argument of type {@code Vector512_1}
+     * @param right the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.LessThanAny" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> boolean LessThanAny(Vector512_1 left, Vector512_1 right) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -331,6 +478,18 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LessThanOrEqualAll.
+     *
+     * @param <T> the type of the generic argument T
+     * @param left the argument of type {@code Vector512_1}
+     * @param right the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.LessThanOrEqualAll" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> boolean LessThanOrEqualAll(Vector512_1 left, Vector512_1 right) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -345,6 +504,18 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LessThanOrEqualAny.
+     *
+     * @param <T> the type of the generic argument T
+     * @param left the argument of type {@code Vector512_1}
+     * @param right the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.LessThanOrEqualAny" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> boolean LessThanOrEqualAny(Vector512_1 left, Vector512_1 right) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -359,6 +530,18 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member None.
+     *
+     * @param <T> the type of the generic argument T
+     * @param vector the argument of type {@code Vector512_1}
+     * @param value the argument of type {@code T}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.None" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> boolean None(Vector512_1 vector, T value) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -373,6 +556,18 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member NoneWhereAllBitsSet.
+     *
+     * @param <T> the type of the generic argument T
+     * @param vector the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.NoneWhereAllBitsSet" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> boolean NoneWhereAllBitsSet(Vector512_1 vector) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -387,6 +582,18 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Count.
+     *
+     * @param <T> the type of the generic argument T
+     * @param vector the argument of type {@code Vector512_1}
+     * @param value the argument of type {@code T}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.Count" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> int Count(Vector512_1 vector, T value) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -427,6 +634,18 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CountWhereAllBitsSet.
+     *
+     * @param <T> the type of the generic argument T
+     * @param vector the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.CountWhereAllBitsSet" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> int CountWhereAllBitsSet(Vector512_1 vector) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -467,6 +686,19 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IndexOf.
+     *
+     * @param <T> the type of the generic argument T
+     * @param vector the argument of type {@code Vector512_1}
+     * @param value the argument of type {@code T}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.IndexOf" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> int IndexOf(Vector512_1 vector, T value) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -507,6 +739,19 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IndexOfWhereAllBitsSet.
+     *
+     * @param <T> the type of the generic argument T
+     * @param vector the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.IndexOfWhereAllBitsSet" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> int IndexOfWhereAllBitsSet(Vector512_1 vector) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -547,6 +792,21 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LastIndexOf.
+     *
+     * @param <T> the type of the generic argument T
+     * @param vector the argument of type {@code Vector512_1}
+     * @param value the argument of type {@code T}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.LastIndexOf" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> int LastIndexOf(Vector512_1 vector, T value) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -587,6 +847,20 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LastIndexOfWhereAllBitsSet.
+     *
+     * @param <T> the type of the generic argument T
+     * @param vector the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.LastIndexOfWhereAllBitsSet" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> int LastIndexOfWhereAllBitsSet(Vector512_1 vector) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -627,6 +901,24 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AsVector.
+     *
+     * @param <T> the type of the generic argument T
+     * @param value the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.AsVector" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector_1 AsVector(Vector512_1 value) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -642,6 +934,24 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetLower.
+     *
+     * @param <T> the type of the generic argument T
+     * @param vector the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.GetLower" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector256_1 GetLower(Vector512_1 vector) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -657,6 +967,24 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetUpper.
+     *
+     * @param <T> the type of the generic argument T
+     * @param vector the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.GetUpper" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector256_1 GetUpper(Vector512_1 vector) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -672,6 +1000,20 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AsByte.
+     *
+     * @param <T> the type of the generic argument T
+     * @param vector the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.AsByte" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector512_1 AsByte(Vector512_1 vector) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -687,6 +1029,80 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param e0 the argument of type {@code byte}
+     * @param e1 the argument of type {@code byte}
+     * @param e2 the argument of type {@code byte}
+     * @param e3 the argument of type {@code byte}
+     * @param e4 the argument of type {@code byte}
+     * @param e5 the argument of type {@code byte}
+     * @param e6 the argument of type {@code byte}
+     * @param e7 the argument of type {@code byte}
+     * @param e8 the argument of type {@code byte}
+     * @param e9 the argument of type {@code byte}
+     * @param e10 the argument of type {@code byte}
+     * @param e11 the argument of type {@code byte}
+     * @param e12 the argument of type {@code byte}
+     * @param e13 the argument of type {@code byte}
+     * @param e14 the argument of type {@code byte}
+     * @param e15 the argument of type {@code byte}
+     * @param e16 the argument of type {@code byte}
+     * @param e17 the argument of type {@code byte}
+     * @param e18 the argument of type {@code byte}
+     * @param e19 the argument of type {@code byte}
+     * @param e20 the argument of type {@code byte}
+     * @param e21 the argument of type {@code byte}
+     * @param e22 the argument of type {@code byte}
+     * @param e23 the argument of type {@code byte}
+     * @param e24 the argument of type {@code byte}
+     * @param e25 the argument of type {@code byte}
+     * @param e26 the argument of type {@code byte}
+     * @param e27 the argument of type {@code byte}
+     * @param e28 the argument of type {@code byte}
+     * @param e29 the argument of type {@code byte}
+     * @param e30 the argument of type {@code byte}
+     * @param e31 the argument of type {@code byte}
+     * @param e32 the argument of type {@code byte}
+     * @param e33 the argument of type {@code byte}
+     * @param e34 the argument of type {@code byte}
+     * @param e35 the argument of type {@code byte}
+     * @param e36 the argument of type {@code byte}
+     * @param e37 the argument of type {@code byte}
+     * @param e38 the argument of type {@code byte}
+     * @param e39 the argument of type {@code byte}
+     * @param e40 the argument of type {@code byte}
+     * @param e41 the argument of type {@code byte}
+     * @param e42 the argument of type {@code byte}
+     * @param e43 the argument of type {@code byte}
+     * @param e44 the argument of type {@code byte}
+     * @param e45 the argument of type {@code byte}
+     * @param e46 the argument of type {@code byte}
+     * @param e47 the argument of type {@code byte}
+     * @param e48 the argument of type {@code byte}
+     * @param e49 the argument of type {@code byte}
+     * @param e50 the argument of type {@code byte}
+     * @param e51 the argument of type {@code byte}
+     * @param e52 the argument of type {@code byte}
+     * @param e53 the argument of type {@code byte}
+     * @param e54 the argument of type {@code byte}
+     * @param e55 the argument of type {@code byte}
+     * @param e56 the argument of type {@code byte}
+     * @param e57 the argument of type {@code byte}
+     * @param e58 the argument of type {@code byte}
+     * @param e59 the argument of type {@code byte}
+     * @param e60 the argument of type {@code byte}
+     * @param e61 the argument of type {@code byte}
+     * @param e62 the argument of type {@code byte}
+     * @param e63 the argument of type {@code byte}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.Create" target="_top">.NET documentation</a>
+     */
     public static Vector512_1 Create(byte e0, byte e1, byte e2, byte e3, byte e4, byte e5, byte e6, byte e7, byte e8, byte e9, byte e10, byte e11, byte e12, byte e13, byte e14, byte e15, byte e16, byte e17, byte e18, byte e19, byte e20, byte e21, byte e22, byte e23, byte e24, byte e25, byte e26, byte e27, byte e28, byte e29, byte e30, byte e31, byte e32, byte e33, byte e34, byte e35, byte e36, byte e37, byte e38, byte e39, byte e40, byte e41, byte e42, byte e43, byte e44, byte e45, byte e46, byte e47, byte e48, byte e49, byte e50, byte e51, byte e52, byte e53, byte e54, byte e55, byte e56, byte e57, byte e58, byte e59, byte e60, byte e61, byte e62, byte e63) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -702,6 +1118,16 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param value the argument of type {@code byte}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.Create" target="_top">.NET documentation</a>
+     */
     public static Vector512_1 Create(byte value) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -717,6 +1143,20 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param lower the argument of type {@code Vector256_1}
+     * @param upper the argument of type {@code Vector256_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.Create" target="_top">.NET documentation</a>
+     */
     public static Vector512_1 Create(Vector256_1 lower, Vector256_1 upper) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -732,6 +1172,16 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateScalar.
+     *
+     * @param value the argument of type {@code byte}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.CreateScalar" target="_top">.NET documentation</a>
+     */
     public static Vector512_1 CreateScalar(byte value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -747,6 +1197,19 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateScalarUnsafe.
+     *
+     * @param value the argument of type {@code byte}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.CreateScalarUnsafe" target="_top">.NET documentation</a>
+     */
     public static Vector512_1 CreateScalarUnsafe(byte value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -762,6 +1225,24 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Narrow.
+     *
+     * @param lower the argument of type {@code Vector512_1}
+     * @param upper the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.Narrow" target="_top">.NET documentation</a>
+     */
     public static Vector512_1 Narrow(Vector512_1 lower, Vector512_1 upper) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -777,6 +1258,24 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member NarrowWithSaturation.
+     *
+     * @param lower the argument of type {@code Vector512_1}
+     * @param upper the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.NarrowWithSaturation" target="_top">.NET documentation</a>
+     */
     public static Vector512_1 NarrowWithSaturation(Vector512_1 lower, Vector512_1 upper) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -792,6 +1291,17 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ShiftLeft.
+     *
+     * @param vector the argument of type {@code Vector512_1}
+     * @param shiftCount the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.ShiftLeft" target="_top">.NET documentation</a>
+     */
     public static Vector512_1 ShiftLeft(Vector512_1 vector, int shiftCount) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -807,6 +1317,17 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ShiftRightLogical.
+     *
+     * @param vector the argument of type {@code Vector512_1}
+     * @param shiftCount the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.ShiftRightLogical" target="_top">.NET documentation</a>
+     */
     public static Vector512_1 ShiftRightLogical(Vector512_1 vector, int shiftCount) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -822,6 +1343,25 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Shuffle.
+     *
+     * @param vector the argument of type {@code Vector512_1}
+     * @param indices the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.Shuffle" target="_top">.NET documentation</a>
+     */
     public static Vector512_1 Shuffle(Vector512_1 vector, Vector512_1 indices) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -837,6 +1377,20 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ShuffleNative.
+     *
+     * @param vector the argument of type {@code Vector512_1}
+     * @param indices the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.ShuffleNative" target="_top">.NET documentation</a>
+     */
     public static Vector512_1 ShuffleNative(Vector512_1 vector, Vector512_1 indices) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -852,6 +1406,20 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AsDouble.
+     *
+     * @param <T> the type of the generic argument T
+     * @param vector the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.AsDouble" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector512_1 AsDouble(Vector512_1 vector) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -867,6 +1435,16 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Ceiling.
+     *
+     * @param vector the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.Ceiling" target="_top">.NET documentation</a>
+     */
     public static Vector512_1 Ceiling(Vector512_1 vector) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -882,6 +1460,16 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ConvertToDouble.
+     *
+     * @param vector the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.ConvertToDouble" target="_top">.NET documentation</a>
+     */
     public static Vector512_1 ConvertToDouble(Vector512_1 vector) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -897,6 +1485,19 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Cos.
+     *
+     * @param vector the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.Cos" target="_top">.NET documentation</a>
+     */
     public static Vector512_1 Cos(Vector512_1 vector) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -912,6 +1513,23 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param e0 the argument of type {@code double}
+     * @param e1 the argument of type {@code double}
+     * @param e2 the argument of type {@code double}
+     * @param e3 the argument of type {@code double}
+     * @param e4 the argument of type {@code double}
+     * @param e5 the argument of type {@code double}
+     * @param e6 the argument of type {@code double}
+     * @param e7 the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.Create" target="_top">.NET documentation</a>
+     */
     public static Vector512_1 Create(double e0, double e1, double e2, double e3, double e4, double e5, double e6, double e7) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -927,6 +1545,16 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param value the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.Create" target="_top">.NET documentation</a>
+     */
     public static Vector512_1 Create(double value) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -942,6 +1570,16 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateScalar.
+     *
+     * @param value the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.CreateScalar" target="_top">.NET documentation</a>
+     */
     public static Vector512_1 CreateScalar(double value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -957,6 +1595,19 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateScalarUnsafe.
+     *
+     * @param value the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.CreateScalarUnsafe" target="_top">.NET documentation</a>
+     */
     public static Vector512_1 CreateScalarUnsafe(double value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -972,6 +1623,19 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DegreesToRadians.
+     *
+     * @param degrees the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.DegreesToRadians" target="_top">.NET documentation</a>
+     */
     public static Vector512_1 DegreesToRadians(Vector512_1 degrees) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -987,6 +1651,19 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Exp.
+     *
+     * @param vector the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.Exp" target="_top">.NET documentation</a>
+     */
     public static Vector512_1 Exp(Vector512_1 vector) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1002,6 +1679,16 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Floor.
+     *
+     * @param vector the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.Floor" target="_top">.NET documentation</a>
+     */
     public static Vector512_1 Floor(Vector512_1 vector) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1017,6 +1704,19 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member FusedMultiplyAdd.
+     *
+     * @param left the argument of type {@code Vector512_1}
+     * @param right the argument of type {@code Vector512_1}
+     * @param addend the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.FusedMultiplyAdd" target="_top">.NET documentation</a>
+     */
     public static Vector512_1 FusedMultiplyAdd(Vector512_1 left, Vector512_1 right, Vector512_1 addend) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1032,6 +1732,20 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Hypot.
+     *
+     * @param x the argument of type {@code Vector512_1}
+     * @param y the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.Hypot" target="_top">.NET documentation</a>
+     */
     public static Vector512_1 Hypot(Vector512_1 x, Vector512_1 y) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1047,6 +1761,18 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Lerp.
+     *
+     * @param x the argument of type {@code Vector512_1}
+     * @param y the argument of type {@code Vector512_1}
+     * @param amount the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.Lerp" target="_top">.NET documentation</a>
+     */
     public static Vector512_1 Lerp(Vector512_1 x, Vector512_1 y, Vector512_1 amount) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1062,6 +1788,19 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Log.
+     *
+     * @param vector the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.Log" target="_top">.NET documentation</a>
+     */
     public static Vector512_1 Log(Vector512_1 vector) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1077,6 +1816,19 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Log2.
+     *
+     * @param vector the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.Log2" target="_top">.NET documentation</a>
+     */
     public static Vector512_1 Log2(Vector512_1 vector) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1092,6 +1844,19 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member MultiplyAddEstimate.
+     *
+     * @param left the argument of type {@code Vector512_1}
+     * @param right the argument of type {@code Vector512_1}
+     * @param addend the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.MultiplyAddEstimate" target="_top">.NET documentation</a>
+     */
     public static Vector512_1 MultiplyAddEstimate(Vector512_1 left, Vector512_1 right, Vector512_1 addend) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1107,6 +1872,19 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RadiansToDegrees.
+     *
+     * @param radians the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.RadiansToDegrees" target="_top">.NET documentation</a>
+     */
     public static Vector512_1 RadiansToDegrees(Vector512_1 radians) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1122,6 +1900,20 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Round.
+     *
+     * @param vector the argument of type {@code Vector512_1}
+     * @param mode the argument of type {@code MidpointRounding}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.Round" target="_top">.NET documentation</a>
+     */
     public static Vector512_1 Round(Vector512_1 vector, MidpointRounding mode) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1137,6 +1929,16 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Round.
+     *
+     * @param vector the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.Round" target="_top">.NET documentation</a>
+     */
     public static Vector512_1 Round(Vector512_1 vector) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1152,6 +1954,19 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Sin.
+     *
+     * @param vector the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.Sin" target="_top">.NET documentation</a>
+     */
     public static Vector512_1 Sin(Vector512_1 vector) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1167,6 +1982,16 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Truncate.
+     *
+     * @param vector the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.Truncate" target="_top">.NET documentation</a>
+     */
     public static Vector512_1 Truncate(Vector512_1 vector) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1182,6 +2007,17 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member WidenLower.
+     *
+     * @param source the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.WidenLower" target="_top">.NET documentation</a>
+     */
     public static Vector512_1 WidenLower(Vector512_1 source) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1197,6 +2033,17 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member WidenUpper.
+     *
+     * @param source the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.WidenUpper" target="_top">.NET documentation</a>
+     */
     public static Vector512_1 WidenUpper(Vector512_1 source) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1212,6 +2059,20 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AsInt16.
+     *
+     * @param <T> the type of the generic argument T
+     * @param vector the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.AsInt16" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector512_1 AsInt16(Vector512_1 vector) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1227,6 +2088,48 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param e0 the argument of type {@code short}
+     * @param e1 the argument of type {@code short}
+     * @param e2 the argument of type {@code short}
+     * @param e3 the argument of type {@code short}
+     * @param e4 the argument of type {@code short}
+     * @param e5 the argument of type {@code short}
+     * @param e6 the argument of type {@code short}
+     * @param e7 the argument of type {@code short}
+     * @param e8 the argument of type {@code short}
+     * @param e9 the argument of type {@code short}
+     * @param e10 the argument of type {@code short}
+     * @param e11 the argument of type {@code short}
+     * @param e12 the argument of type {@code short}
+     * @param e13 the argument of type {@code short}
+     * @param e14 the argument of type {@code short}
+     * @param e15 the argument of type {@code short}
+     * @param e16 the argument of type {@code short}
+     * @param e17 the argument of type {@code short}
+     * @param e18 the argument of type {@code short}
+     * @param e19 the argument of type {@code short}
+     * @param e20 the argument of type {@code short}
+     * @param e21 the argument of type {@code short}
+     * @param e22 the argument of type {@code short}
+     * @param e23 the argument of type {@code short}
+     * @param e24 the argument of type {@code short}
+     * @param e25 the argument of type {@code short}
+     * @param e26 the argument of type {@code short}
+     * @param e27 the argument of type {@code short}
+     * @param e28 the argument of type {@code short}
+     * @param e29 the argument of type {@code short}
+     * @param e30 the argument of type {@code short}
+     * @param e31 the argument of type {@code short}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.Create" target="_top">.NET documentation</a>
+     */
     public static Vector512_1 Create(short e0, short e1, short e2, short e3, short e4, short e5, short e6, short e7, short e8, short e9, short e10, short e11, short e12, short e13, short e14, short e15, short e16, short e17, short e18, short e19, short e20, short e21, short e22, short e23, short e24, short e25, short e26, short e27, short e28, short e29, short e30, short e31) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1242,6 +2145,16 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param value the argument of type {@code short}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.Create" target="_top">.NET documentation</a>
+     */
     public static Vector512_1 Create(short value) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1257,6 +2170,16 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateScalar.
+     *
+     * @param value the argument of type {@code short}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.CreateScalar" target="_top">.NET documentation</a>
+     */
     public static Vector512_1 CreateScalar(short value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1272,6 +2195,19 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateScalarUnsafe.
+     *
+     * @param value the argument of type {@code short}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.CreateScalarUnsafe" target="_top">.NET documentation</a>
+     */
     public static Vector512_1 CreateScalarUnsafe(short value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1287,6 +2223,17 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ShiftRightArithmetic.
+     *
+     * @param vector the argument of type {@code Vector512_1}
+     * @param shiftCount the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.ShiftRightArithmetic" target="_top">.NET documentation</a>
+     */
     public static Vector512_1 ShiftRightArithmetic(Vector512_1 vector, int shiftCount) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1302,6 +2249,20 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AsInt32.
+     *
+     * @param <T> the type of the generic argument T
+     * @param vector the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.AsInt32" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector512_1 AsInt32(Vector512_1 vector) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1317,6 +2278,17 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ConvertToInt32.
+     *
+     * @param vector the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.ConvertToInt32" target="_top">.NET documentation</a>
+     */
     public static Vector512_1 ConvertToInt32(Vector512_1 vector) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1332,6 +2304,17 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ConvertToInt32Native.
+     *
+     * @param vector the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.ConvertToInt32Native" target="_top">.NET documentation</a>
+     */
     public static Vector512_1 ConvertToInt32Native(Vector512_1 vector) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1347,6 +2330,32 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param e0 the argument of type {@code int}
+     * @param e1 the argument of type {@code int}
+     * @param e2 the argument of type {@code int}
+     * @param e3 the argument of type {@code int}
+     * @param e4 the argument of type {@code int}
+     * @param e5 the argument of type {@code int}
+     * @param e6 the argument of type {@code int}
+     * @param e7 the argument of type {@code int}
+     * @param e8 the argument of type {@code int}
+     * @param e9 the argument of type {@code int}
+     * @param e10 the argument of type {@code int}
+     * @param e11 the argument of type {@code int}
+     * @param e12 the argument of type {@code int}
+     * @param e13 the argument of type {@code int}
+     * @param e14 the argument of type {@code int}
+     * @param e15 the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.Create" target="_top">.NET documentation</a>
+     */
     public static Vector512_1 Create(int e0, int e1, int e2, int e3, int e4, int e5, int e6, int e7, int e8, int e9, int e10, int e11, int e12, int e13, int e14, int e15) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1362,6 +2371,16 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param value the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.Create" target="_top">.NET documentation</a>
+     */
     public static Vector512_1 Create(int value) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1377,6 +2396,16 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateScalar.
+     *
+     * @param value the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.CreateScalar" target="_top">.NET documentation</a>
+     */
     public static Vector512_1 CreateScalar(int value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1392,6 +2421,19 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateScalarUnsafe.
+     *
+     * @param value the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.CreateScalarUnsafe" target="_top">.NET documentation</a>
+     */
     public static Vector512_1 CreateScalarUnsafe(int value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1407,6 +2449,20 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AsInt64.
+     *
+     * @param <T> the type of the generic argument T
+     * @param vector the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.AsInt64" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector512_1 AsInt64(Vector512_1 vector) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1422,6 +2478,17 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ConvertToInt64.
+     *
+     * @param vector the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.ConvertToInt64" target="_top">.NET documentation</a>
+     */
     public static Vector512_1 ConvertToInt64(Vector512_1 vector) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1437,6 +2504,17 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ConvertToInt64Native.
+     *
+     * @param vector the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.ConvertToInt64Native" target="_top">.NET documentation</a>
+     */
     public static Vector512_1 ConvertToInt64Native(Vector512_1 vector) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1452,6 +2530,23 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param e0 the argument of type {@code long}
+     * @param e1 the argument of type {@code long}
+     * @param e2 the argument of type {@code long}
+     * @param e3 the argument of type {@code long}
+     * @param e4 the argument of type {@code long}
+     * @param e5 the argument of type {@code long}
+     * @param e6 the argument of type {@code long}
+     * @param e7 the argument of type {@code long}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.Create" target="_top">.NET documentation</a>
+     */
     public static Vector512_1 Create(long e0, long e1, long e2, long e3, long e4, long e5, long e6, long e7) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1467,6 +2562,16 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param value the argument of type {@code long}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.Create" target="_top">.NET documentation</a>
+     */
     public static Vector512_1 Create(long value) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1482,6 +2587,16 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateScalar.
+     *
+     * @param value the argument of type {@code long}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.CreateScalar" target="_top">.NET documentation</a>
+     */
     public static Vector512_1 CreateScalar(long value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1497,6 +2612,19 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateScalarUnsafe.
+     *
+     * @param value the argument of type {@code long}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.CreateScalarUnsafe" target="_top">.NET documentation</a>
+     */
     public static Vector512_1 CreateScalarUnsafe(long value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1512,6 +2640,20 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AsNInt.
+     *
+     * @param <T> the type of the generic argument T
+     * @param vector the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.AsNInt" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector512_1 AsNInt(Vector512_1 vector) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1527,6 +2669,20 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AsSByte.
+     *
+     * @param <T> the type of the generic argument T
+     * @param vector the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.AsSByte" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector512_1 AsSByte(Vector512_1 vector) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1542,6 +2698,80 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param e0 the argument of type {@code SByte}
+     * @param e1 the argument of type {@code SByte}
+     * @param e2 the argument of type {@code SByte}
+     * @param e3 the argument of type {@code SByte}
+     * @param e4 the argument of type {@code SByte}
+     * @param e5 the argument of type {@code SByte}
+     * @param e6 the argument of type {@code SByte}
+     * @param e7 the argument of type {@code SByte}
+     * @param e8 the argument of type {@code SByte}
+     * @param e9 the argument of type {@code SByte}
+     * @param e10 the argument of type {@code SByte}
+     * @param e11 the argument of type {@code SByte}
+     * @param e12 the argument of type {@code SByte}
+     * @param e13 the argument of type {@code SByte}
+     * @param e14 the argument of type {@code SByte}
+     * @param e15 the argument of type {@code SByte}
+     * @param e16 the argument of type {@code SByte}
+     * @param e17 the argument of type {@code SByte}
+     * @param e18 the argument of type {@code SByte}
+     * @param e19 the argument of type {@code SByte}
+     * @param e20 the argument of type {@code SByte}
+     * @param e21 the argument of type {@code SByte}
+     * @param e22 the argument of type {@code SByte}
+     * @param e23 the argument of type {@code SByte}
+     * @param e24 the argument of type {@code SByte}
+     * @param e25 the argument of type {@code SByte}
+     * @param e26 the argument of type {@code SByte}
+     * @param e27 the argument of type {@code SByte}
+     * @param e28 the argument of type {@code SByte}
+     * @param e29 the argument of type {@code SByte}
+     * @param e30 the argument of type {@code SByte}
+     * @param e31 the argument of type {@code SByte}
+     * @param e32 the argument of type {@code SByte}
+     * @param e33 the argument of type {@code SByte}
+     * @param e34 the argument of type {@code SByte}
+     * @param e35 the argument of type {@code SByte}
+     * @param e36 the argument of type {@code SByte}
+     * @param e37 the argument of type {@code SByte}
+     * @param e38 the argument of type {@code SByte}
+     * @param e39 the argument of type {@code SByte}
+     * @param e40 the argument of type {@code SByte}
+     * @param e41 the argument of type {@code SByte}
+     * @param e42 the argument of type {@code SByte}
+     * @param e43 the argument of type {@code SByte}
+     * @param e44 the argument of type {@code SByte}
+     * @param e45 the argument of type {@code SByte}
+     * @param e46 the argument of type {@code SByte}
+     * @param e47 the argument of type {@code SByte}
+     * @param e48 the argument of type {@code SByte}
+     * @param e49 the argument of type {@code SByte}
+     * @param e50 the argument of type {@code SByte}
+     * @param e51 the argument of type {@code SByte}
+     * @param e52 the argument of type {@code SByte}
+     * @param e53 the argument of type {@code SByte}
+     * @param e54 the argument of type {@code SByte}
+     * @param e55 the argument of type {@code SByte}
+     * @param e56 the argument of type {@code SByte}
+     * @param e57 the argument of type {@code SByte}
+     * @param e58 the argument of type {@code SByte}
+     * @param e59 the argument of type {@code SByte}
+     * @param e60 the argument of type {@code SByte}
+     * @param e61 the argument of type {@code SByte}
+     * @param e62 the argument of type {@code SByte}
+     * @param e63 the argument of type {@code SByte}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.Create" target="_top">.NET documentation</a>
+     */
     public static Vector512_1 Create(SByte e0, SByte e1, SByte e2, SByte e3, SByte e4, SByte e5, SByte e6, SByte e7, SByte e8, SByte e9, SByte e10, SByte e11, SByte e12, SByte e13, SByte e14, SByte e15, SByte e16, SByte e17, SByte e18, SByte e19, SByte e20, SByte e21, SByte e22, SByte e23, SByte e24, SByte e25, SByte e26, SByte e27, SByte e28, SByte e29, SByte e30, SByte e31, SByte e32, SByte e33, SByte e34, SByte e35, SByte e36, SByte e37, SByte e38, SByte e39, SByte e40, SByte e41, SByte e42, SByte e43, SByte e44, SByte e45, SByte e46, SByte e47, SByte e48, SByte e49, SByte e50, SByte e51, SByte e52, SByte e53, SByte e54, SByte e55, SByte e56, SByte e57, SByte e58, SByte e59, SByte e60, SByte e61, SByte e62, SByte e63) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1557,6 +2787,16 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param value the argument of type {@code SByte}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.Create" target="_top">.NET documentation</a>
+     */
     public static Vector512_1 Create(SByte value) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1572,6 +2812,16 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateScalar.
+     *
+     * @param value the argument of type {@code SByte}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.CreateScalar" target="_top">.NET documentation</a>
+     */
     public static Vector512_1 CreateScalar(SByte value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1587,6 +2837,19 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateScalarUnsafe.
+     *
+     * @param value the argument of type {@code SByte}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.CreateScalarUnsafe" target="_top">.NET documentation</a>
+     */
     public static Vector512_1 CreateScalarUnsafe(SByte value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1602,6 +2865,20 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AsSingle.
+     *
+     * @param <T> the type of the generic argument T
+     * @param vector the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.AsSingle" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector512_1 AsSingle(Vector512_1 vector) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1617,6 +2894,17 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ConvertToSingle.
+     *
+     * @param vector the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.ConvertToSingle" target="_top">.NET documentation</a>
+     */
     public static Vector512_1 ConvertToSingle(Vector512_1 vector) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1632,6 +2920,32 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param e0 the argument of type {@code Single}
+     * @param e1 the argument of type {@code Single}
+     * @param e2 the argument of type {@code Single}
+     * @param e3 the argument of type {@code Single}
+     * @param e4 the argument of type {@code Single}
+     * @param e5 the argument of type {@code Single}
+     * @param e6 the argument of type {@code Single}
+     * @param e7 the argument of type {@code Single}
+     * @param e8 the argument of type {@code Single}
+     * @param e9 the argument of type {@code Single}
+     * @param e10 the argument of type {@code Single}
+     * @param e11 the argument of type {@code Single}
+     * @param e12 the argument of type {@code Single}
+     * @param e13 the argument of type {@code Single}
+     * @param e14 the argument of type {@code Single}
+     * @param e15 the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.Create" target="_top">.NET documentation</a>
+     */
     public static Vector512_1 Create(Single e0, Single e1, Single e2, Single e3, Single e4, Single e5, Single e6, Single e7, Single e8, Single e9, Single e10, Single e11, Single e12, Single e13, Single e14, Single e15) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1647,6 +2961,16 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param value the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.Create" target="_top">.NET documentation</a>
+     */
     public static Vector512_1 Create(Single value) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1662,6 +2986,16 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateScalar.
+     *
+     * @param value the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.CreateScalar" target="_top">.NET documentation</a>
+     */
     public static Vector512_1 CreateScalar(Single value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1677,6 +3011,19 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateScalarUnsafe.
+     *
+     * @param value the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.CreateScalarUnsafe" target="_top">.NET documentation</a>
+     */
     public static Vector512_1 CreateScalarUnsafe(Single value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1692,6 +3039,20 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AsUInt16.
+     *
+     * @param <T> the type of the generic argument T
+     * @param vector the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.AsUInt16" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector512_1 AsUInt16(Vector512_1 vector) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1707,6 +3068,48 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param e0 the argument of type {@code UInt16}
+     * @param e1 the argument of type {@code UInt16}
+     * @param e2 the argument of type {@code UInt16}
+     * @param e3 the argument of type {@code UInt16}
+     * @param e4 the argument of type {@code UInt16}
+     * @param e5 the argument of type {@code UInt16}
+     * @param e6 the argument of type {@code UInt16}
+     * @param e7 the argument of type {@code UInt16}
+     * @param e8 the argument of type {@code UInt16}
+     * @param e9 the argument of type {@code UInt16}
+     * @param e10 the argument of type {@code UInt16}
+     * @param e11 the argument of type {@code UInt16}
+     * @param e12 the argument of type {@code UInt16}
+     * @param e13 the argument of type {@code UInt16}
+     * @param e14 the argument of type {@code UInt16}
+     * @param e15 the argument of type {@code UInt16}
+     * @param e16 the argument of type {@code UInt16}
+     * @param e17 the argument of type {@code UInt16}
+     * @param e18 the argument of type {@code UInt16}
+     * @param e19 the argument of type {@code UInt16}
+     * @param e20 the argument of type {@code UInt16}
+     * @param e21 the argument of type {@code UInt16}
+     * @param e22 the argument of type {@code UInt16}
+     * @param e23 the argument of type {@code UInt16}
+     * @param e24 the argument of type {@code UInt16}
+     * @param e25 the argument of type {@code UInt16}
+     * @param e26 the argument of type {@code UInt16}
+     * @param e27 the argument of type {@code UInt16}
+     * @param e28 the argument of type {@code UInt16}
+     * @param e29 the argument of type {@code UInt16}
+     * @param e30 the argument of type {@code UInt16}
+     * @param e31 the argument of type {@code UInt16}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.Create" target="_top">.NET documentation</a>
+     */
     public static Vector512_1 Create(UInt16 e0, UInt16 e1, UInt16 e2, UInt16 e3, UInt16 e4, UInt16 e5, UInt16 e6, UInt16 e7, UInt16 e8, UInt16 e9, UInt16 e10, UInt16 e11, UInt16 e12, UInt16 e13, UInt16 e14, UInt16 e15, UInt16 e16, UInt16 e17, UInt16 e18, UInt16 e19, UInt16 e20, UInt16 e21, UInt16 e22, UInt16 e23, UInt16 e24, UInt16 e25, UInt16 e26, UInt16 e27, UInt16 e28, UInt16 e29, UInt16 e30, UInt16 e31) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1722,6 +3125,16 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param value the argument of type {@code UInt16}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.Create" target="_top">.NET documentation</a>
+     */
     public static Vector512_1 Create(UInt16 value) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1737,6 +3150,16 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateScalar.
+     *
+     * @param value the argument of type {@code UInt16}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.CreateScalar" target="_top">.NET documentation</a>
+     */
     public static Vector512_1 CreateScalar(UInt16 value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1752,6 +3175,19 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateScalarUnsafe.
+     *
+     * @param value the argument of type {@code UInt16}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.CreateScalarUnsafe" target="_top">.NET documentation</a>
+     */
     public static Vector512_1 CreateScalarUnsafe(UInt16 value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1767,6 +3203,20 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AsUInt32.
+     *
+     * @param <T> the type of the generic argument T
+     * @param vector the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.AsUInt32" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector512_1 AsUInt32(Vector512_1 vector) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1782,6 +3232,17 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ConvertToUInt32.
+     *
+     * @param vector the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.ConvertToUInt32" target="_top">.NET documentation</a>
+     */
     public static Vector512_1 ConvertToUInt32(Vector512_1 vector) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1797,6 +3258,17 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ConvertToUInt32Native.
+     *
+     * @param vector the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.ConvertToUInt32Native" target="_top">.NET documentation</a>
+     */
     public static Vector512_1 ConvertToUInt32Native(Vector512_1 vector) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1812,6 +3284,32 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param e0 the argument of type {@code UInt32}
+     * @param e1 the argument of type {@code UInt32}
+     * @param e2 the argument of type {@code UInt32}
+     * @param e3 the argument of type {@code UInt32}
+     * @param e4 the argument of type {@code UInt32}
+     * @param e5 the argument of type {@code UInt32}
+     * @param e6 the argument of type {@code UInt32}
+     * @param e7 the argument of type {@code UInt32}
+     * @param e8 the argument of type {@code UInt32}
+     * @param e9 the argument of type {@code UInt32}
+     * @param e10 the argument of type {@code UInt32}
+     * @param e11 the argument of type {@code UInt32}
+     * @param e12 the argument of type {@code UInt32}
+     * @param e13 the argument of type {@code UInt32}
+     * @param e14 the argument of type {@code UInt32}
+     * @param e15 the argument of type {@code UInt32}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.Create" target="_top">.NET documentation</a>
+     */
     public static Vector512_1 Create(UInt32 e0, UInt32 e1, UInt32 e2, UInt32 e3, UInt32 e4, UInt32 e5, UInt32 e6, UInt32 e7, UInt32 e8, UInt32 e9, UInt32 e10, UInt32 e11, UInt32 e12, UInt32 e13, UInt32 e14, UInt32 e15) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1827,6 +3325,16 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param value the argument of type {@code UInt32}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.Create" target="_top">.NET documentation</a>
+     */
     public static Vector512_1 Create(UInt32 value) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1842,6 +3350,16 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateScalar.
+     *
+     * @param value the argument of type {@code UInt32}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.CreateScalar" target="_top">.NET documentation</a>
+     */
     public static Vector512_1 CreateScalar(UInt32 value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1857,6 +3375,19 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateScalarUnsafe.
+     *
+     * @param value the argument of type {@code UInt32}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.CreateScalarUnsafe" target="_top">.NET documentation</a>
+     */
     public static Vector512_1 CreateScalarUnsafe(UInt32 value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1872,6 +3403,20 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AsUInt64.
+     *
+     * @param <T> the type of the generic argument T
+     * @param vector the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.AsUInt64" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector512_1 AsUInt64(Vector512_1 vector) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1887,6 +3432,17 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ConvertToUInt64.
+     *
+     * @param vector the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.ConvertToUInt64" target="_top">.NET documentation</a>
+     */
     public static Vector512_1 ConvertToUInt64(Vector512_1 vector) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1902,6 +3458,17 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ConvertToUInt64Native.
+     *
+     * @param vector the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.ConvertToUInt64Native" target="_top">.NET documentation</a>
+     */
     public static Vector512_1 ConvertToUInt64Native(Vector512_1 vector) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1917,6 +3484,23 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param e0 the argument of type {@code UInt64}
+     * @param e1 the argument of type {@code UInt64}
+     * @param e2 the argument of type {@code UInt64}
+     * @param e3 the argument of type {@code UInt64}
+     * @param e4 the argument of type {@code UInt64}
+     * @param e5 the argument of type {@code UInt64}
+     * @param e6 the argument of type {@code UInt64}
+     * @param e7 the argument of type {@code UInt64}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.Create" target="_top">.NET documentation</a>
+     */
     public static Vector512_1 Create(UInt64 e0, UInt64 e1, UInt64 e2, UInt64 e3, UInt64 e4, UInt64 e5, UInt64 e6, UInt64 e7) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1932,6 +3516,16 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param value the argument of type {@code UInt64}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.Create" target="_top">.NET documentation</a>
+     */
     public static Vector512_1 Create(UInt64 value) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1947,6 +3541,16 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateScalar.
+     *
+     * @param value the argument of type {@code UInt64}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.CreateScalar" target="_top">.NET documentation</a>
+     */
     public static Vector512_1 CreateScalar(UInt64 value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1962,6 +3566,19 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateScalarUnsafe.
+     *
+     * @param value the argument of type {@code UInt64}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.CreateScalarUnsafe" target="_top">.NET documentation</a>
+     */
     public static Vector512_1 CreateScalarUnsafe(UInt64 value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1977,6 +3594,20 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AsNUInt.
+     *
+     * @param <T> the type of the generic argument T
+     * @param vector the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.AsNUInt" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector512_1 AsNUInt(Vector512_1 vector) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1992,6 +3623,18 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Abs.
+     *
+     * @param <T> the type of the generic argument T
+     * @param vector the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.Abs" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector512_1 Abs(Vector512_1 vector) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2007,6 +3650,18 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param <T> the type of the generic argument T
+     * @param left the argument of type {@code Vector512_1}
+     * @param right the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.Add" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector512_1 Add(Vector512_1 left, Vector512_1 right) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2022,6 +3677,18 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddSaturate.
+     *
+     * @param <T> the type of the generic argument T
+     * @param left the argument of type {@code Vector512_1}
+     * @param right the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.AddSaturate" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector512_1 AddSaturate(Vector512_1 left, Vector512_1 right) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2037,6 +3704,18 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AndNot.
+     *
+     * @param <T> the type of the generic argument T
+     * @param left the argument of type {@code Vector512_1}
+     * @param right the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.AndNot" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector512_1 AndNot(Vector512_1 left, Vector512_1 right) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2052,6 +3731,24 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AsVector512.
+     *
+     * @param <T> the type of the generic argument T
+     * @param value the argument of type {@code Vector_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.AsVector512" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector512_1 AsVector512(Vector_1 value) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2067,6 +3764,18 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member BitwiseAnd.
+     *
+     * @param <T> the type of the generic argument T
+     * @param left the argument of type {@code Vector512_1}
+     * @param right the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.BitwiseAnd" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector512_1 BitwiseAnd(Vector512_1 left, Vector512_1 right) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2082,6 +3791,18 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member BitwiseOr.
+     *
+     * @param <T> the type of the generic argument T
+     * @param left the argument of type {@code Vector512_1}
+     * @param right the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.BitwiseOr" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector512_1 BitwiseOr(Vector512_1 left, Vector512_1 right) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2097,6 +3818,19 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Clamp.
+     *
+     * @param <T> the type of the generic argument T
+     * @param value the argument of type {@code Vector512_1}
+     * @param min the argument of type {@code Vector512_1}
+     * @param max the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.Clamp" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector512_1 Clamp(Vector512_1 value, Vector512_1 min, Vector512_1 max) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2112,6 +3846,19 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ClampNative.
+     *
+     * @param <T> the type of the generic argument T
+     * @param value the argument of type {@code Vector512_1}
+     * @param min the argument of type {@code Vector512_1}
+     * @param max the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.ClampNative" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector512_1 ClampNative(Vector512_1 value, Vector512_1 min, Vector512_1 max) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2127,6 +3874,19 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ConditionalSelect.
+     *
+     * @param <T> the type of the generic argument T
+     * @param condition the argument of type {@code Vector512_1}
+     * @param left the argument of type {@code Vector512_1}
+     * @param right the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.ConditionalSelect" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector512_1 ConditionalSelect(Vector512_1 condition, Vector512_1 left, Vector512_1 right) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2142,6 +3902,22 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CopySign.
+     *
+     * @param <T> the type of the generic argument T
+     * @param value the argument of type {@code Vector512_1}
+     * @param sign the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.CopySign" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector512_1 CopySign(Vector512_1 value, Vector512_1 sign) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2157,6 +3933,18 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param <T> the type of the generic argument T
+     * @param value the argument of type {@code Vector128_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.Create" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector512_1 Create(Vector128_1 value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2172,6 +3960,20 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param <T> the type of the generic argument T
+     * @param value the argument of type {@code Vector256_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.Create" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector512_1 Create(Vector256_1 value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2187,6 +3989,20 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param <T> the type of the generic argument T
+     * @param value the argument of type {@code Vector64_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.Create" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector512_1 Create(Vector64_1 value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2202,6 +4018,18 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param <T> the type of the generic argument T
+     * @param value the argument of type {@code T}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.Create" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector512_1 Create(T value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2217,6 +4045,21 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param <T> the type of the generic argument T
+     * @param values the argument of type {@code T[]}
+     * @param index the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.Create" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector512_1 Create(T[] values, int index) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2232,6 +4075,20 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param <T> the type of the generic argument T
+     * @param values the argument of type {@code T[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.Create" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector512_1 Create(T[] values) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2247,6 +4104,17 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateScalar.
+     *
+     * @param <T> the type of the generic argument T
+     * @param value the argument of type {@code T}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.CreateScalar" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector512_1 CreateScalar(T value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2262,6 +4130,24 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateScalarUnsafe.
+     *
+     * @param <T> the type of the generic argument T
+     * @param value the argument of type {@code T}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.CreateScalarUnsafe" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector512_1 CreateScalarUnsafe(T value) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2277,6 +4163,21 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateSequence.
+     *
+     * @param <T> the type of the generic argument T
+     * @param start the argument of type {@code T}
+     * @param step the argument of type {@code T}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.CreateSequence" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector512_1 CreateSequence(T start, T step) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2292,6 +4193,18 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Divide.
+     *
+     * @param <T> the type of the generic argument T
+     * @param left the argument of type {@code Vector512_1}
+     * @param right the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.Divide" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector512_1 Divide(Vector512_1 left, Vector512_1 right) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2307,6 +4220,18 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Divide.
+     *
+     * @param <T> the type of the generic argument T
+     * @param left the argument of type {@code Vector512_1}
+     * @param right the argument of type {@code T}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.Divide" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector512_1 Divide(Vector512_1 left, T right) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2322,6 +4247,19 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Equals.
+     *
+     * @param <T> the type of the generic argument T
+     * @param left the argument of type {@code Vector512_1}
+     * @param right the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.Equals" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector512_1 Equals(Vector512_1 left, Vector512_1 right) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2337,6 +4275,19 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GreaterThan.
+     *
+     * @param <T> the type of the generic argument T
+     * @param left the argument of type {@code Vector512_1}
+     * @param right the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.GreaterThan" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector512_1 GreaterThan(Vector512_1 left, Vector512_1 right) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2352,6 +4303,19 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GreaterThanOrEqual.
+     *
+     * @param <T> the type of the generic argument T
+     * @param left the argument of type {@code Vector512_1}
+     * @param right the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.GreaterThanOrEqual" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector512_1 GreaterThanOrEqual(Vector512_1 left, Vector512_1 right) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2367,6 +4331,18 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsEvenInteger.
+     *
+     * @param <T> the type of the generic argument T
+     * @param vector the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.IsEvenInteger" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector512_1 IsEvenInteger(Vector512_1 vector) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2382,6 +4358,17 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsFinite.
+     *
+     * @param <T> the type of the generic argument T
+     * @param vector the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.IsFinite" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector512_1 IsFinite(Vector512_1 vector) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2397,6 +4384,17 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsInfinity.
+     *
+     * @param <T> the type of the generic argument T
+     * @param vector the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.IsInfinity" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector512_1 IsInfinity(Vector512_1 vector) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2412,6 +4410,17 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsInteger.
+     *
+     * @param <T> the type of the generic argument T
+     * @param vector the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.IsInteger" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector512_1 IsInteger(Vector512_1 vector) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2427,6 +4436,17 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsNaN.
+     *
+     * @param <T> the type of the generic argument T
+     * @param vector the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.IsNaN" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector512_1 IsNaN(Vector512_1 vector) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2442,6 +4462,20 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsNegative.
+     *
+     * @param <T> the type of the generic argument T
+     * @param vector the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.IsNegative" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector512_1 IsNegative(Vector512_1 vector) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2457,6 +4491,17 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsNegativeInfinity.
+     *
+     * @param <T> the type of the generic argument T
+     * @param vector the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.IsNegativeInfinity" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector512_1 IsNegativeInfinity(Vector512_1 vector) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2472,6 +4517,17 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsNormal.
+     *
+     * @param <T> the type of the generic argument T
+     * @param vector the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.IsNormal" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector512_1 IsNormal(Vector512_1 vector) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2487,6 +4543,18 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsOddInteger.
+     *
+     * @param <T> the type of the generic argument T
+     * @param vector the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.IsOddInteger" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector512_1 IsOddInteger(Vector512_1 vector) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2502,6 +4570,17 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsPositive.
+     *
+     * @param <T> the type of the generic argument T
+     * @param vector the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.IsPositive" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector512_1 IsPositive(Vector512_1 vector) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2517,6 +4596,17 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsPositiveInfinity.
+     *
+     * @param <T> the type of the generic argument T
+     * @param vector the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.IsPositiveInfinity" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector512_1 IsPositiveInfinity(Vector512_1 vector) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2532,6 +4622,17 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsSubnormal.
+     *
+     * @param <T> the type of the generic argument T
+     * @param vector the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.IsSubnormal" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector512_1 IsSubnormal(Vector512_1 vector) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2547,6 +4648,20 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsZero.
+     *
+     * @param <T> the type of the generic argument T
+     * @param vector the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.IsZero" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector512_1 IsZero(Vector512_1 vector) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2562,6 +4677,19 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LessThan.
+     *
+     * @param <T> the type of the generic argument T
+     * @param left the argument of type {@code Vector512_1}
+     * @param right the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.LessThan" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector512_1 LessThan(Vector512_1 left, Vector512_1 right) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2577,6 +4705,19 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LessThanOrEqual.
+     *
+     * @param <T> the type of the generic argument T
+     * @param left the argument of type {@code Vector512_1}
+     * @param right the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.LessThanOrEqual" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector512_1 LessThanOrEqual(Vector512_1 left, Vector512_1 right) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2592,6 +4733,24 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LoadUnsafe.
+     *
+     * @param <T> the type of the generic argument T
+     * @param source the argument of type {@code JCORefOut<T>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.LoadUnsafe" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector512_1 LoadUnsafe(JCORefOut<T> source) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2607,6 +4766,19 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Max.
+     *
+     * @param <T> the type of the generic argument T
+     * @param left the argument of type {@code Vector512_1}
+     * @param right the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.Max" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector512_1 Max(Vector512_1 left, Vector512_1 right) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2622,6 +4794,19 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member MaxMagnitude.
+     *
+     * @param <T> the type of the generic argument T
+     * @param left the argument of type {@code Vector512_1}
+     * @param right the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.MaxMagnitude" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector512_1 MaxMagnitude(Vector512_1 left, Vector512_1 right) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2637,6 +4822,19 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member MaxMagnitudeNumber.
+     *
+     * @param <T> the type of the generic argument T
+     * @param left the argument of type {@code Vector512_1}
+     * @param right the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.MaxMagnitudeNumber" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector512_1 MaxMagnitudeNumber(Vector512_1 left, Vector512_1 right) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2652,6 +4850,18 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member MaxNative.
+     *
+     * @param <T> the type of the generic argument T
+     * @param left the argument of type {@code Vector512_1}
+     * @param right the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.MaxNative" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector512_1 MaxNative(Vector512_1 left, Vector512_1 right) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2667,6 +4877,19 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member MaxNumber.
+     *
+     * @param <T> the type of the generic argument T
+     * @param left the argument of type {@code Vector512_1}
+     * @param right the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.MaxNumber" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector512_1 MaxNumber(Vector512_1 left, Vector512_1 right) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2682,6 +4905,19 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Min.
+     *
+     * @param <T> the type of the generic argument T
+     * @param left the argument of type {@code Vector512_1}
+     * @param right the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.Min" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector512_1 Min(Vector512_1 left, Vector512_1 right) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2697,6 +4933,19 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member MinMagnitude.
+     *
+     * @param <T> the type of the generic argument T
+     * @param left the argument of type {@code Vector512_1}
+     * @param right the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.MinMagnitude" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector512_1 MinMagnitude(Vector512_1 left, Vector512_1 right) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2712,6 +4961,19 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member MinMagnitudeNumber.
+     *
+     * @param <T> the type of the generic argument T
+     * @param left the argument of type {@code Vector512_1}
+     * @param right the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.MinMagnitudeNumber" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector512_1 MinMagnitudeNumber(Vector512_1 left, Vector512_1 right) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2727,6 +4989,18 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member MinNative.
+     *
+     * @param <T> the type of the generic argument T
+     * @param left the argument of type {@code Vector512_1}
+     * @param right the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.MinNative" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector512_1 MinNative(Vector512_1 left, Vector512_1 right) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2742,6 +5016,19 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member MinNumber.
+     *
+     * @param <T> the type of the generic argument T
+     * @param left the argument of type {@code Vector512_1}
+     * @param right the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.MinNumber" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector512_1 MinNumber(Vector512_1 left, Vector512_1 right) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2757,6 +5044,18 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Multiply.
+     *
+     * @param <T> the type of the generic argument T
+     * @param left the argument of type {@code Vector512_1}
+     * @param right the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.Multiply" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector512_1 Multiply(Vector512_1 left, Vector512_1 right) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2772,6 +5071,18 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Multiply.
+     *
+     * @param <T> the type of the generic argument T
+     * @param left the argument of type {@code Vector512_1}
+     * @param right the argument of type {@code T}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.Multiply" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector512_1 Multiply(Vector512_1 left, T right) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2787,6 +5098,18 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Multiply.
+     *
+     * @param <T> the type of the generic argument T
+     * @param left the argument of type {@code T}
+     * @param right the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.Multiply" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector512_1 Multiply(T left, Vector512_1 right) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2802,6 +5125,17 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Negate.
+     *
+     * @param <T> the type of the generic argument T
+     * @param vector the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.Negate" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector512_1 Negate(Vector512_1 vector) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2817,6 +5151,17 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member OnesComplement.
+     *
+     * @param <T> the type of the generic argument T
+     * @param vector the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.OnesComplement" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector512_1 OnesComplement(Vector512_1 vector) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2832,6 +5177,18 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Sqrt.
+     *
+     * @param <T> the type of the generic argument T
+     * @param vector the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.Sqrt" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector512_1 Sqrt(Vector512_1 vector) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2847,6 +5204,18 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Subtract.
+     *
+     * @param <T> the type of the generic argument T
+     * @param left the argument of type {@code Vector512_1}
+     * @param right the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.Subtract" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector512_1 Subtract(Vector512_1 left, Vector512_1 right) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2862,6 +5231,18 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SubtractSaturate.
+     *
+     * @param <T> the type of the generic argument T
+     * @param left the argument of type {@code Vector512_1}
+     * @param right the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.SubtractSaturate" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector512_1 SubtractSaturate(Vector512_1 left, Vector512_1 right) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2877,6 +5258,22 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member WithElement.
+     *
+     * @param <T> the type of the generic argument T
+     * @param vector the argument of type {@code Vector512_1}
+     * @param index the argument of type {@code int}
+     * @param value the argument of type {@code T}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.WithElement" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector512_1 WithElement(Vector512_1 vector, int index, T value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2892,6 +5289,25 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member WithLower.
+     *
+     * @param <T> the type of the generic argument T
+     * @param vector the argument of type {@code Vector512_1}
+     * @param value the argument of type {@code Vector256_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.WithLower" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector512_1 WithLower(Vector512_1 vector, Vector256_1 value) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2907,6 +5323,25 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member WithUpper.
+     *
+     * @param <T> the type of the generic argument T
+     * @param vector the argument of type {@code Vector512_1}
+     * @param value the argument of type {@code Vector256_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.WithUpper" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector512_1 WithUpper(Vector512_1 vector, Vector256_1 value) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2922,6 +5357,18 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Xor.
+     *
+     * @param <T> the type of the generic argument T
+     * @param left the argument of type {@code Vector512_1}
+     * @param right the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.Xor" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector512_1 Xor(Vector512_1 left, Vector512_1 right) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2937,6 +5384,25 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member As.
+     *
+     * @param <TFrom> the type of the generic argument TFrom
+     * @param <TTo> the type of the generic argument TTo
+     * @param vector the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.As" target="_top">.NET documentation</a>
+     */
     public static <TFrom extends IJCOBridgeReflected, TTo extends IJCOBridgeReflected> Vector512_1 As(Vector512_1 vector) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2952,6 +5418,19 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SinCos.
+     *
+     * @param vector the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.SinCos" target="_top">.NET documentation</a>
+     */
     public static ValueTuple_2 SinCos(Vector512_1 vector) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2967,6 +5446,16 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Widen.
+     *
+     * @param source the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.Widen" target="_top">.NET documentation</a>
+     */
     public static ValueTuple_2 Widen(Vector512_1 source) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2982,6 +5471,17 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ExtractMostSignificantBits.
+     *
+     * @param <T> the type of the generic argument T
+     * @param vector the argument of type {@code Vector512_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.ExtractMostSignificantBits" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> UInt64 ExtractMostSignificantBits(Vector512_1 vector) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2997,6 +5497,25 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CopyTo.
+     *
+     * @param <T> the type of the generic argument T
+     * @param vector the argument of type {@code Vector512_1}
+     * @param destination the argument of type {@code T[]}
+     * @param startIndex the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.CopyTo" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> void CopyTo(Vector512_1 vector, T[] destination, int startIndex) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -3007,6 +5526,20 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CopyTo.
+     *
+     * @param <T> the type of the generic argument T
+     * @param vector the argument of type {@code Vector512_1}
+     * @param destination the argument of type {@code T[]}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.CopyTo" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> void CopyTo(Vector512_1 vector, T[] destination) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -3017,6 +5550,24 @@ public class Vector512 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member StoreUnsafe.
+     *
+     * @param <T> the type of the generic argument T
+     * @param source the argument of type {@code Vector512_1}
+     * @param destination the argument of type {@code JCORefOut<T>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.StoreUnsafe" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> void StoreUnsafe(Vector512_1 source, JCORefOut<T> destination) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -3031,6 +5582,13 @@ public class Vector512 extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsHardwareAccelerated.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector512.IsHardwareAccelerated" target="_top">.NET documentation</a>
+     */
     public static boolean getIsHardwareAccelerated() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

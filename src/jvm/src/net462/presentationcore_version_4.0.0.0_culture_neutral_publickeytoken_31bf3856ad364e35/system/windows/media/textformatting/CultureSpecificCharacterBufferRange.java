@@ -100,7 +100,10 @@ public class CultureSpecificCharacterBufferRange extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CultureSpecificCharacterBufferRange(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,14 @@ public class CultureSpecificCharacterBufferRange extends NetObject  {
     public CultureSpecificCharacterBufferRange() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param culture the argument of type {@code CultureInfo}
+     * @param characterBufferRange the argument of type {@code CharacterBufferRange}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.CultureSpecificCharacterBufferRange.-ctor" target="_top">.NET documentation</a>
+     */
     public CultureSpecificCharacterBufferRange(CultureInfo culture, CharacterBufferRange characterBufferRange) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +180,13 @@ public class CultureSpecificCharacterBufferRange extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CultureInfo.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.CultureSpecificCharacterBufferRange.CultureInfo" target="_top">.NET documentation</a>
+     */
     public CultureInfo getCultureInfo() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +202,13 @@ public class CultureSpecificCharacterBufferRange extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CharacterBufferRange.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.CultureSpecificCharacterBufferRange.CharacterBufferRange" target="_top">.NET documentation</a>
+     */
     public CharacterBufferRange getCharacterBufferRange() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

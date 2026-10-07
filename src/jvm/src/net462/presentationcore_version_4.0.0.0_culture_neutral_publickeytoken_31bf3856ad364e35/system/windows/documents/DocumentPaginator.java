@@ -105,7 +105,10 @@ public class DocumentPaginator extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DocumentPaginator(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -158,6 +161,14 @@ public class DocumentPaginator extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetPage.
+     *
+     * @param pageNumber the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Documents.DocumentPaginator.GetPage" target="_top">.NET documentation</a>
+     */
     public DocumentPage GetPage(int pageNumber) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -173,6 +184,13 @@ public class DocumentPaginator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CancelAsync.
+     *
+     * @param userState the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Documents.DocumentPaginator.CancelAsync" target="_top">.NET documentation</a>
+     */
     public void CancelAsync(NetObject userState) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +201,12 @@ public class DocumentPaginator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ComputePageCount.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Documents.DocumentPaginator.ComputePageCount" target="_top">.NET documentation</a>
+     */
     public void ComputePageCount() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +217,12 @@ public class DocumentPaginator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ComputePageCountAsync.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Documents.DocumentPaginator.ComputePageCountAsync" target="_top">.NET documentation</a>
+     */
     public void ComputePageCountAsync() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +233,13 @@ public class DocumentPaginator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ComputePageCountAsync.
+     *
+     * @param userState the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Documents.DocumentPaginator.ComputePageCountAsync" target="_top">.NET documentation</a>
+     */
     public void ComputePageCountAsync(NetObject userState) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -213,6 +250,21 @@ public class DocumentPaginator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetPageAsync.
+     *
+     * @param pageNumber the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Documents.DocumentPaginator.GetPageAsync" target="_top">.NET documentation</a>
+     */
     public void GetPageAsync(int pageNumber) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -223,6 +275,25 @@ public class DocumentPaginator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetPageAsync.
+     *
+     * @param pageNumber the argument of type {@code int}
+     * @param userState the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Documents.DocumentPaginator.GetPageAsync" target="_top">.NET documentation</a>
+     */
     public void GetPageAsync(int pageNumber, NetObject userState) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -237,6 +308,13 @@ public class DocumentPaginator extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsPageCountValid.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Documents.DocumentPaginator.IsPageCountValid" target="_top">.NET documentation</a>
+     */
     public boolean getIsPageCountValid() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -251,6 +329,13 @@ public class DocumentPaginator extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PageCount.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Documents.DocumentPaginator.PageCount" target="_top">.NET documentation</a>
+     */
     public int getPageCount() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -291,6 +376,13 @@ public class DocumentPaginator extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Source.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Documents.DocumentPaginator.Source" target="_top">.NET documentation</a>
+     */
     public IDocumentPaginatorSource getSource() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -306,6 +398,13 @@ public class DocumentPaginator extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PageSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Documents.DocumentPaginator.PageSize" target="_top">.NET documentation</a>
+     */
     public Size getPageSize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -321,6 +420,13 @@ public class DocumentPaginator extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PageSize.
+     *
+     * @param PageSize the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Documents.DocumentPaginator.PageSize" target="_top">.NET documentation</a>
+     */
     public void setPageSize(Size PageSize) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -336,6 +442,13 @@ public class DocumentPaginator extends NetObject  {
     // Instance Events section
     
 
+    /**
+     * Invokes the .NET member addComputePageCountCompleted.
+     *
+     * @param handler the argument of type {@code AsyncCompletedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addComputePageCountCompleted(AsyncCompletedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -346,6 +459,13 @@ public class DocumentPaginator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeComputePageCountCompleted.
+     *
+     * @param handler the argument of type {@code AsyncCompletedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeComputePageCountCompleted(AsyncCompletedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -356,6 +476,13 @@ public class DocumentPaginator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addGetPageCompleted.
+     *
+     * @param handler the argument of type {@code GetPageCompletedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addGetPageCompleted(GetPageCompletedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -366,6 +493,13 @@ public class DocumentPaginator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeGetPageCompleted.
+     *
+     * @param handler the argument of type {@code GetPageCompletedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeGetPageCompleted(GetPageCompletedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -376,6 +510,13 @@ public class DocumentPaginator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addPagesChanged.
+     *
+     * @param handler the argument of type {@code PagesChangedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addPagesChanged(PagesChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -386,6 +527,13 @@ public class DocumentPaginator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removePagesChanged.
+     *
+     * @param handler the argument of type {@code PagesChangedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removePagesChanged(PagesChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -107,7 +107,10 @@ public class SystemInformation extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SystemInformation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -162,6 +165,25 @@ public class SystemInformation extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetHorizontalScrollBarArrowWidthForDpi.
+     *
+     * @param dpi the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.GetHorizontalScrollBarArrowWidthForDpi" target="_top">.NET documentation</a>
+     */
     public static int GetHorizontalScrollBarArrowWidthForDpi(int dpi) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -202,6 +224,25 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetHorizontalScrollBarHeightForDpi.
+     *
+     * @param dpi the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.GetHorizontalScrollBarHeightForDpi" target="_top">.NET documentation</a>
+     */
     public static int GetHorizontalScrollBarHeightForDpi(int dpi) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -242,6 +283,25 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetVerticalScrollBarWidthForDpi.
+     *
+     * @param dpi the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.GetVerticalScrollBarWidthForDpi" target="_top">.NET documentation</a>
+     */
     public static int GetVerticalScrollBarWidthForDpi(int dpi) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -282,6 +342,17 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member VerticalScrollBarArrowHeightForDpi.
+     *
+     * @param dpi the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.VerticalScrollBarArrowHeightForDpi" target="_top">.NET documentation</a>
+     */
     public static int VerticalScrollBarArrowHeightForDpi(int dpi) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -322,6 +393,26 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetMenuFontForDpi.
+     *
+     * @param dpi the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.GetMenuFontForDpi" target="_top">.NET documentation</a>
+     */
     public static Font GetMenuFontForDpi(int dpi) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.security.SecurityException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -337,6 +428,25 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetBorderSizeForDpi.
+     *
+     * @param dpi the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.GetBorderSizeForDpi" target="_top">.NET documentation</a>
+     */
     public static Size GetBorderSizeForDpi(int dpi) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -356,6 +466,13 @@ public class SystemInformation extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property DbcsEnabled.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.DbcsEnabled" target="_top">.NET documentation</a>
+     */
     public static boolean getDbcsEnabled() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -370,6 +487,14 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DebugOS.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.DebugOS" target="_top">.NET documentation</a>
+     */
     public static boolean getDebugOS() throws Throwable, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -384,6 +509,13 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DragFullWindows.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.DragFullWindows" target="_top">.NET documentation</a>
+     */
     public static boolean getDragFullWindows() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -398,6 +530,32 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property HighContrast.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.MemberAccessException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.HighContrast" target="_top">.NET documentation</a>
+     */
     public static boolean getHighContrast() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NullReferenceException, system.MemberAccessException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.MulticastNotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.runtime.interopservices.ExternalException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -412,6 +570,13 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsActiveWindowTrackingEnabled.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.IsActiveWindowTrackingEnabled" target="_top">.NET documentation</a>
+     */
     public static boolean getIsActiveWindowTrackingEnabled() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -426,6 +591,13 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsComboBoxAnimationEnabled.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.IsComboBoxAnimationEnabled" target="_top">.NET documentation</a>
+     */
     public static boolean getIsComboBoxAnimationEnabled() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -440,6 +612,18 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsDropShadowEnabled.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.IsDropShadowEnabled" target="_top">.NET documentation</a>
+     */
     public static boolean getIsDropShadowEnabled() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -454,6 +638,18 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsFlatMenuEnabled.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.IsFlatMenuEnabled" target="_top">.NET documentation</a>
+     */
     public static boolean getIsFlatMenuEnabled() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -468,6 +664,13 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsFontSmoothingEnabled.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.IsFontSmoothingEnabled" target="_top">.NET documentation</a>
+     */
     public static boolean getIsFontSmoothingEnabled() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -482,6 +685,13 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsHotTrackingEnabled.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.IsHotTrackingEnabled" target="_top">.NET documentation</a>
+     */
     public static boolean getIsHotTrackingEnabled() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -496,6 +706,13 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsIconTitleWrappingEnabled.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.IsIconTitleWrappingEnabled" target="_top">.NET documentation</a>
+     */
     public static boolean getIsIconTitleWrappingEnabled() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -510,6 +727,13 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsKeyboardPreferred.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.IsKeyboardPreferred" target="_top">.NET documentation</a>
+     */
     public static boolean getIsKeyboardPreferred() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -524,6 +748,13 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsListBoxSmoothScrollingEnabled.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.IsListBoxSmoothScrollingEnabled" target="_top">.NET documentation</a>
+     */
     public static boolean getIsListBoxSmoothScrollingEnabled() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -538,6 +769,13 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsMenuAnimationEnabled.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.IsMenuAnimationEnabled" target="_top">.NET documentation</a>
+     */
     public static boolean getIsMenuAnimationEnabled() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -552,6 +790,18 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsMenuFadeEnabled.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.IsMenuFadeEnabled" target="_top">.NET documentation</a>
+     */
     public static boolean getIsMenuFadeEnabled() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -566,6 +816,13 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsMinimizeRestoreAnimationEnabled.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.IsMinimizeRestoreAnimationEnabled" target="_top">.NET documentation</a>
+     */
     public static boolean getIsMinimizeRestoreAnimationEnabled() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -580,6 +837,18 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsSelectionFadeEnabled.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.IsSelectionFadeEnabled" target="_top">.NET documentation</a>
+     */
     public static boolean getIsSelectionFadeEnabled() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -594,6 +863,13 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsSnapToDefaultEnabled.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.IsSnapToDefaultEnabled" target="_top">.NET documentation</a>
+     */
     public static boolean getIsSnapToDefaultEnabled() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -608,6 +884,13 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsTitleBarGradientEnabled.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.IsTitleBarGradientEnabled" target="_top">.NET documentation</a>
+     */
     public static boolean getIsTitleBarGradientEnabled() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -622,6 +905,18 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsToolTipAnimationEnabled.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.IsToolTipAnimationEnabled" target="_top">.NET documentation</a>
+     */
     public static boolean getIsToolTipAnimationEnabled() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -636,6 +931,13 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MenuAccessKeysUnderlined.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.MenuAccessKeysUnderlined" target="_top">.NET documentation</a>
+     */
     public static boolean getMenuAccessKeysUnderlined() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -650,6 +952,13 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MidEastEnabled.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.MidEastEnabled" target="_top">.NET documentation</a>
+     */
     public static boolean getMidEastEnabled() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -664,6 +973,13 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MonitorsSameDisplayFormat.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.MonitorsSameDisplayFormat" target="_top">.NET documentation</a>
+     */
     public static boolean getMonitorsSameDisplayFormat() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -678,6 +994,13 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MouseButtonsSwapped.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.MouseButtonsSwapped" target="_top">.NET documentation</a>
+     */
     public static boolean getMouseButtonsSwapped() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -692,6 +1015,13 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MousePresent.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.MousePresent" target="_top">.NET documentation</a>
+     */
     public static boolean getMousePresent() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -706,6 +1036,13 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MouseWheelPresent.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.MouseWheelPresent" target="_top">.NET documentation</a>
+     */
     public static boolean getMouseWheelPresent() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -720,6 +1057,13 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NativeMouseWheelSupport.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.NativeMouseWheelSupport" target="_top">.NET documentation</a>
+     */
     public static boolean getNativeMouseWheelSupport() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -734,6 +1078,13 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Network.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.Network" target="_top">.NET documentation</a>
+     */
     public static boolean getNetwork() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -748,6 +1099,13 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PenWindows.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.PenWindows" target="_top">.NET documentation</a>
+     */
     public static boolean getPenWindows() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -762,6 +1120,13 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RightAlignedMenus.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.RightAlignedMenus" target="_top">.NET documentation</a>
+     */
     public static boolean getRightAlignedMenus() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -776,6 +1141,14 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Secure.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.Secure" target="_top">.NET documentation</a>
+     */
     public static boolean getSecure() throws Throwable, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -790,6 +1163,13 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ShowSounds.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.ShowSounds" target="_top">.NET documentation</a>
+     */
     public static boolean getShowSounds() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -804,6 +1184,13 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TerminalServerSession.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.TerminalServerSession" target="_top">.NET documentation</a>
+     */
     public static boolean getTerminalServerSession() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -818,6 +1205,18 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UIEffectsEnabled.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.UIEffectsEnabled" target="_top">.NET documentation</a>
+     */
     public static boolean getUIEffectsEnabled() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -832,6 +1231,20 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UserInteractive.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.UserInteractive" target="_top">.NET documentation</a>
+     */
     public static boolean getUserInteractive() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -846,6 +1259,13 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ActiveWindowTrackingDelay.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.ActiveWindowTrackingDelay" target="_top">.NET documentation</a>
+     */
     public static int getActiveWindowTrackingDelay() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -886,6 +1306,13 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property BorderMultiplierFactor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.BorderMultiplierFactor" target="_top">.NET documentation</a>
+     */
     public static int getBorderMultiplierFactor() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -926,6 +1353,13 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CaptionHeight.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.CaptionHeight" target="_top">.NET documentation</a>
+     */
     public static int getCaptionHeight() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -966,6 +1400,13 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CaretBlinkTime.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.CaretBlinkTime" target="_top">.NET documentation</a>
+     */
     public static int getCaretBlinkTime() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1006,6 +1447,23 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CaretWidth.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.CaretWidth" target="_top">.NET documentation</a>
+     */
     public static int getCaretWidth() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.NotImplementedException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1046,6 +1504,13 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DoubleClickTime.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.DoubleClickTime" target="_top">.NET documentation</a>
+     */
     public static int getDoubleClickTime() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1086,6 +1551,23 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FontSmoothingContrast.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.FontSmoothingContrast" target="_top">.NET documentation</a>
+     */
     public static int getFontSmoothingContrast() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.NotImplementedException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1126,6 +1608,23 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FontSmoothingType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.FontSmoothingType" target="_top">.NET documentation</a>
+     */
     public static int getFontSmoothingType() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.NotImplementedException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1166,6 +1665,23 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property HorizontalFocusThickness.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.HorizontalFocusThickness" target="_top">.NET documentation</a>
+     */
     public static int getHorizontalFocusThickness() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.NotImplementedException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1206,6 +1722,13 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property HorizontalResizeBorderThickness.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.HorizontalResizeBorderThickness" target="_top">.NET documentation</a>
+     */
     public static int getHorizontalResizeBorderThickness() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1246,6 +1769,13 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property HorizontalScrollBarArrowWidth.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.HorizontalScrollBarArrowWidth" target="_top">.NET documentation</a>
+     */
     public static int getHorizontalScrollBarArrowWidth() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1286,6 +1816,13 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property HorizontalScrollBarHeight.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.HorizontalScrollBarHeight" target="_top">.NET documentation</a>
+     */
     public static int getHorizontalScrollBarHeight() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1326,6 +1863,13 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property HorizontalScrollBarThumbWidth.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.HorizontalScrollBarThumbWidth" target="_top">.NET documentation</a>
+     */
     public static int getHorizontalScrollBarThumbWidth() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1366,6 +1910,13 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IconHorizontalSpacing.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.IconHorizontalSpacing" target="_top">.NET documentation</a>
+     */
     public static int getIconHorizontalSpacing() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1406,6 +1957,13 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IconVerticalSpacing.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.IconVerticalSpacing" target="_top">.NET documentation</a>
+     */
     public static int getIconVerticalSpacing() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1446,6 +2004,13 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property KanjiWindowHeight.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.KanjiWindowHeight" target="_top">.NET documentation</a>
+     */
     public static int getKanjiWindowHeight() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1486,6 +2051,13 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property KeyboardDelay.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.KeyboardDelay" target="_top">.NET documentation</a>
+     */
     public static int getKeyboardDelay() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1526,6 +2098,13 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property KeyboardSpeed.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.KeyboardSpeed" target="_top">.NET documentation</a>
+     */
     public static int getKeyboardSpeed() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1566,6 +2145,13 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MenuHeight.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.MenuHeight" target="_top">.NET documentation</a>
+     */
     public static int getMenuHeight() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1606,6 +2192,13 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MenuShowDelay.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.MenuShowDelay" target="_top">.NET documentation</a>
+     */
     public static int getMenuShowDelay() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1646,6 +2239,13 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MonitorCount.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.MonitorCount" target="_top">.NET documentation</a>
+     */
     public static int getMonitorCount() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1686,6 +2286,13 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MouseButtons.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.MouseButtons" target="_top">.NET documentation</a>
+     */
     public static int getMouseButtons() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1726,6 +2333,13 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MouseHoverTime.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.MouseHoverTime" target="_top">.NET documentation</a>
+     */
     public static int getMouseHoverTime() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1766,6 +2380,13 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MouseSpeed.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.MouseSpeed" target="_top">.NET documentation</a>
+     */
     public static int getMouseSpeed() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1806,6 +2427,13 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MouseWheelScrollDelta.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.MouseWheelScrollDelta" target="_top">.NET documentation</a>
+     */
     public static int getMouseWheelScrollDelta() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1846,6 +2474,13 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MouseWheelScrollLines.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.MouseWheelScrollLines" target="_top">.NET documentation</a>
+     */
     public static int getMouseWheelScrollLines() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1886,6 +2521,15 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SizingBorderWidth.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.SizingBorderWidth" target="_top">.NET documentation</a>
+     */
     public static int getSizingBorderWidth() throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1926,6 +2570,13 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ToolWindowCaptionHeight.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.ToolWindowCaptionHeight" target="_top">.NET documentation</a>
+     */
     public static int getToolWindowCaptionHeight() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1966,6 +2617,23 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property VerticalFocusThickness.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.VerticalFocusThickness" target="_top">.NET documentation</a>
+     */
     public static int getVerticalFocusThickness() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.NotImplementedException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2006,6 +2674,13 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property VerticalResizeBorderThickness.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.VerticalResizeBorderThickness" target="_top">.NET documentation</a>
+     */
     public static int getVerticalResizeBorderThickness() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2046,6 +2721,13 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property VerticalScrollBarArrowHeight.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.VerticalScrollBarArrowHeight" target="_top">.NET documentation</a>
+     */
     public static int getVerticalScrollBarArrowHeight() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2086,6 +2768,13 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property VerticalScrollBarThumbHeight.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.VerticalScrollBarThumbHeight" target="_top">.NET documentation</a>
+     */
     public static int getVerticalScrollBarThumbHeight() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2126,6 +2815,13 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property VerticalScrollBarWidth.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.VerticalScrollBarWidth" target="_top">.NET documentation</a>
+     */
     public static int getVerticalScrollBarWidth() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2166,6 +2862,24 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MenuFont.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.MenuFont" target="_top">.NET documentation</a>
+     */
     public static Font getMenuFont() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.security.SecurityException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2181,6 +2895,13 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property VirtualScreen.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.VirtualScreen" target="_top">.NET documentation</a>
+     */
     public static Rectangle getVirtualScreen() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2196,6 +2917,13 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property WorkingArea.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.WorkingArea" target="_top">.NET documentation</a>
+     */
     public static Rectangle getWorkingArea() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2211,6 +2939,13 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Border3DSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.Border3DSize" target="_top">.NET documentation</a>
+     */
     public static Size getBorder3DSize() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2226,6 +2961,13 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property BorderSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.BorderSize" target="_top">.NET documentation</a>
+     */
     public static Size getBorderSize() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2241,6 +2983,13 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CaptionButtonSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.CaptionButtonSize" target="_top">.NET documentation</a>
+     */
     public static Size getCaptionButtonSize() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2256,6 +3005,13 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CursorSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.CursorSize" target="_top">.NET documentation</a>
+     */
     public static Size getCursorSize() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2271,6 +3027,13 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DoubleClickSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.DoubleClickSize" target="_top">.NET documentation</a>
+     */
     public static Size getDoubleClickSize() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2286,6 +3049,13 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DragSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.DragSize" target="_top">.NET documentation</a>
+     */
     public static Size getDragSize() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2301,6 +3071,13 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FixedFrameBorderSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.FixedFrameBorderSize" target="_top">.NET documentation</a>
+     */
     public static Size getFixedFrameBorderSize() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2316,6 +3093,13 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FrameBorderSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.FrameBorderSize" target="_top">.NET documentation</a>
+     */
     public static Size getFrameBorderSize() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2331,6 +3115,13 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IconSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.IconSize" target="_top">.NET documentation</a>
+     */
     public static Size getIconSize() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2346,6 +3137,13 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IconSpacingSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.IconSpacingSize" target="_top">.NET documentation</a>
+     */
     public static Size getIconSpacingSize() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2361,6 +3159,13 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MaxWindowTrackSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.MaxWindowTrackSize" target="_top">.NET documentation</a>
+     */
     public static Size getMaxWindowTrackSize() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2376,6 +3181,15 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MenuBarButtonSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.MenuBarButtonSize" target="_top">.NET documentation</a>
+     */
     public static Size getMenuBarButtonSize() throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2391,6 +3205,13 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MenuButtonSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.MenuButtonSize" target="_top">.NET documentation</a>
+     */
     public static Size getMenuButtonSize() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2406,6 +3227,13 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MenuCheckSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.MenuCheckSize" target="_top">.NET documentation</a>
+     */
     public static Size getMenuCheckSize() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2421,6 +3249,13 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MinimizedWindowSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.MinimizedWindowSize" target="_top">.NET documentation</a>
+     */
     public static Size getMinimizedWindowSize() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2436,6 +3271,13 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MinimizedWindowSpacingSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.MinimizedWindowSpacingSize" target="_top">.NET documentation</a>
+     */
     public static Size getMinimizedWindowSpacingSize() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2451,6 +3293,13 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MinimumWindowSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.MinimumWindowSize" target="_top">.NET documentation</a>
+     */
     public static Size getMinimumWindowSize() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2466,6 +3315,13 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MinWindowTrackSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.MinWindowTrackSize" target="_top">.NET documentation</a>
+     */
     public static Size getMinWindowTrackSize() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2481,6 +3337,13 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MouseHoverSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.MouseHoverSize" target="_top">.NET documentation</a>
+     */
     public static Size getMouseHoverSize() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2496,6 +3359,13 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PrimaryMonitorMaximizedWindowSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.PrimaryMonitorMaximizedWindowSize" target="_top">.NET documentation</a>
+     */
     public static Size getPrimaryMonitorMaximizedWindowSize() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2511,6 +3381,13 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PrimaryMonitorSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.PrimaryMonitorSize" target="_top">.NET documentation</a>
+     */
     public static Size getPrimaryMonitorSize() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2526,6 +3403,15 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SmallCaptionButtonSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.SmallCaptionButtonSize" target="_top">.NET documentation</a>
+     */
     public static Size getSmallCaptionButtonSize() throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2541,6 +3427,13 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SmallIconSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.SmallIconSize" target="_top">.NET documentation</a>
+     */
     public static Size getSmallIconSize() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2556,6 +3449,13 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ToolWindowCaptionButtonSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.ToolWindowCaptionButtonSize" target="_top">.NET documentation</a>
+     */
     public static Size getToolWindowCaptionButtonSize() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2571,6 +3471,17 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ComputerName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.ComputerName" target="_top">.NET documentation</a>
+     */
     public static java.lang.String getComputerName() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2585,6 +3496,21 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UserDomainName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.UserDomainName" target="_top">.NET documentation</a>
+     */
     public static java.lang.String getUserDomainName() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.IndexOutOfRangeException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2599,6 +3525,17 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UserName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.UserName" target="_top">.NET documentation</a>
+     */
     public static java.lang.String getUserName() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2613,6 +3550,13 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ArrangeDirection.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.ArrangeDirection" target="_top">.NET documentation</a>
+     */
     public static ArrangeDirection getArrangeDirection() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2628,6 +3572,13 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ArrangeStartingPosition.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.ArrangeStartingPosition" target="_top">.NET documentation</a>
+     */
     public static ArrangeStartingPosition getArrangeStartingPosition() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2643,6 +3594,14 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property BootMode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.BootMode" target="_top">.NET documentation</a>
+     */
     public static BootMode getBootMode() throws Throwable, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2658,6 +3617,13 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PopupMenuAlignment.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.PopupMenuAlignment" target="_top">.NET documentation</a>
+     */
     public static LeftRightAlignment getPopupMenuAlignment() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2673,6 +3639,13 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PowerStatus.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.PowerStatus" target="_top">.NET documentation</a>
+     */
     public static PowerStatus getPowerStatus() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2688,6 +3661,15 @@ public class SystemInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ScreenOrientation.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SystemInformation.ScreenOrientation" target="_top">.NET documentation</a>
+     */
     public static ScreenOrientation getScreenOrientation() throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

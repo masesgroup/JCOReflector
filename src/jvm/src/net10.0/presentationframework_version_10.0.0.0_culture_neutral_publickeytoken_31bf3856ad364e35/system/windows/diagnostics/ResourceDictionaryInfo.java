@@ -101,7 +101,10 @@ public class ResourceDictionaryInfo extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ResourceDictionaryInfo(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -160,6 +163,13 @@ public class ResourceDictionaryInfo extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Assembly.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Diagnostics.ResourceDictionaryInfo.Assembly" target="_top">.NET documentation</a>
+     */
     public Assembly getAssembly() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -175,6 +185,13 @@ public class ResourceDictionaryInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Assembly.
+     *
+     * @param Assembly the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Diagnostics.ResourceDictionaryInfo.Assembly" target="_top">.NET documentation</a>
+     */
     public void setAssembly(Assembly Assembly) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -185,6 +202,13 @@ public class ResourceDictionaryInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ResourceDictionaryAssembly.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Diagnostics.ResourceDictionaryInfo.ResourceDictionaryAssembly" target="_top">.NET documentation</a>
+     */
     public Assembly getResourceDictionaryAssembly() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +224,13 @@ public class ResourceDictionaryInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ResourceDictionaryAssembly.
+     *
+     * @param ResourceDictionaryAssembly the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Diagnostics.ResourceDictionaryInfo.ResourceDictionaryAssembly" target="_top">.NET documentation</a>
+     */
     public void setResourceDictionaryAssembly(Assembly ResourceDictionaryAssembly) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -210,6 +241,13 @@ public class ResourceDictionaryInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SourceUri.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Diagnostics.ResourceDictionaryInfo.SourceUri" target="_top">.NET documentation</a>
+     */
     public Uri getSourceUri() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -225,6 +263,13 @@ public class ResourceDictionaryInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SourceUri.
+     *
+     * @param SourceUri the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Diagnostics.ResourceDictionaryInfo.SourceUri" target="_top">.NET documentation</a>
+     */
     public void setSourceUri(Uri SourceUri) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -235,6 +280,13 @@ public class ResourceDictionaryInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ResourceDictionary.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Diagnostics.ResourceDictionaryInfo.ResourceDictionary" target="_top">.NET documentation</a>
+     */
     public ResourceDictionary getResourceDictionary() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -250,6 +302,13 @@ public class ResourceDictionaryInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ResourceDictionary.
+     *
+     * @param ResourceDictionary the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Diagnostics.ResourceDictionaryInfo.ResourceDictionary" target="_top">.NET documentation</a>
+     */
     public void setResourceDictionary(ResourceDictionary ResourceDictionary) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

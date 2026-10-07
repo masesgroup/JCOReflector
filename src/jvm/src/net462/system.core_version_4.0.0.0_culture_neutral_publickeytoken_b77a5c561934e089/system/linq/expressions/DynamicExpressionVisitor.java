@@ -99,7 +99,10 @@ public class DynamicExpressionVisitor extends system.linq.expressions.Expression
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DynamicExpressionVisitor(java.lang.Object instance) throws Throwable {
         super(instance);

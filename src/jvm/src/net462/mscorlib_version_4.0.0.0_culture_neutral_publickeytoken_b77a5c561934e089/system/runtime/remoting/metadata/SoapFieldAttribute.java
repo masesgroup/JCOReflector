@@ -99,7 +99,10 @@ public class SoapFieldAttribute extends system.runtime.remoting.metadata.SoapAtt
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SoapFieldAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class SoapFieldAttribute extends system.runtime.remoting.metadata.SoapAtt
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Metadata.SoapFieldAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public SoapFieldAttribute() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -160,6 +169,13 @@ public class SoapFieldAttribute extends system.runtime.remoting.metadata.SoapAtt
     
     // Methods section
     
+    /**
+     * Invokes the .NET member IsInteropXmlElement.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Metadata.SoapFieldAttribute.IsInteropXmlElement" target="_top">.NET documentation</a>
+     */
     public boolean IsInteropXmlElement() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,6 +194,13 @@ public class SoapFieldAttribute extends system.runtime.remoting.metadata.SoapAtt
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Order.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Metadata.SoapFieldAttribute.Order" target="_top">.NET documentation</a>
+     */
     public int getOrder() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -218,6 +241,13 @@ public class SoapFieldAttribute extends system.runtime.remoting.metadata.SoapAtt
         }
     }
 
+    /**
+     * Sets the value of the .NET property Order.
+     *
+     * @param Order the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Metadata.SoapFieldAttribute.Order" target="_top">.NET documentation</a>
+     */
     public void setOrder(int Order) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -228,6 +258,13 @@ public class SoapFieldAttribute extends system.runtime.remoting.metadata.SoapAtt
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlElementName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Metadata.SoapFieldAttribute.XmlElementName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getXmlElementName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -242,6 +279,13 @@ public class SoapFieldAttribute extends system.runtime.remoting.metadata.SoapAtt
         }
     }
 
+    /**
+     * Sets the value of the .NET property XmlElementName.
+     *
+     * @param XmlElementName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Metadata.SoapFieldAttribute.XmlElementName" target="_top">.NET documentation</a>
+     */
     public void setXmlElementName(java.lang.String XmlElementName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

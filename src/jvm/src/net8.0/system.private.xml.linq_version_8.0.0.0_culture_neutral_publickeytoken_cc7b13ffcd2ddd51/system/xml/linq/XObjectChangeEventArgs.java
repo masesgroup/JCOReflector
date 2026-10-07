@@ -100,7 +100,10 @@ public class XObjectChangeEventArgs extends system.EventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XObjectChangeEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,13 @@ public class XObjectChangeEventArgs extends system.EventArgs  {
     public XObjectChangeEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param objectChange the argument of type {@code XObjectChange}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Linq.XObjectChangeEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public XObjectChangeEventArgs(XObjectChange objectChange) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +179,13 @@ public class XObjectChangeEventArgs extends system.EventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ObjectChange.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Linq.XObjectChangeEventArgs.ObjectChange" target="_top">.NET documentation</a>
+     */
     public XObjectChange getObjectChange() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

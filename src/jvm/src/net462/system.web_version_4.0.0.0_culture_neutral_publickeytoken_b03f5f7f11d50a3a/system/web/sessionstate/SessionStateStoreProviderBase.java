@@ -104,7 +104,10 @@ public class SessionStateStoreProviderBase extends system.configuration.provider
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SessionStateStoreProviderBase(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,14 @@ public class SessionStateStoreProviderBase extends system.configuration.provider
     
     // Methods section
     
+    /**
+     * Invokes the .NET member SetItemExpireCallback.
+     *
+     * @param expireCallback the argument of type {@code SessionStateItemExpireCallback}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.SessionState.SessionStateStoreProviderBase.SetItemExpireCallback" target="_top">.NET documentation</a>
+     */
     public boolean SetItemExpireCallback(SessionStateItemExpireCallback expireCallback) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -171,6 +182,15 @@ public class SessionStateStoreProviderBase extends system.configuration.provider
         }
     }
 
+    /**
+     * Invokes the .NET member CreateNewStoreData.
+     *
+     * @param context the argument of type {@code HttpContext}
+     * @param timeout the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.SessionState.SessionStateStoreProviderBase.CreateNewStoreData" target="_top">.NET documentation</a>
+     */
     public SessionStateStoreData CreateNewStoreData(HttpContext context, int timeout) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -186,6 +206,19 @@ public class SessionStateStoreProviderBase extends system.configuration.provider
         }
     }
 
+    /**
+     * Invokes the .NET member GetItem.
+     *
+     * @param context the argument of type {@code HttpContext}
+     * @param id the argument of type {@code java.lang.String}
+     * @param locked the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicBoolean>}
+     * @param lockAge the argument of type {@code JCORefOut<TimeSpan>}
+     * @param lockId the argument of type {@code JCORefOut<NetObject>}
+     * @param actions the argument of type {@code JCORefOut<SessionStateActions>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.SessionState.SessionStateStoreProviderBase.GetItem" target="_top">.NET documentation</a>
+     */
     public SessionStateStoreData GetItem(HttpContext context, java.lang.String id, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> locked, JCORefOut<TimeSpan> lockAge, JCORefOut<NetObject> lockId, JCORefOut<SessionStateActions> actions) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +234,19 @@ public class SessionStateStoreProviderBase extends system.configuration.provider
         }
     }
 
+    /**
+     * Invokes the .NET member GetItemExclusive.
+     *
+     * @param context the argument of type {@code HttpContext}
+     * @param id the argument of type {@code java.lang.String}
+     * @param locked the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicBoolean>}
+     * @param lockAge the argument of type {@code JCORefOut<TimeSpan>}
+     * @param lockId the argument of type {@code JCORefOut<NetObject>}
+     * @param actions the argument of type {@code JCORefOut<SessionStateActions>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.SessionState.SessionStateStoreProviderBase.GetItemExclusive" target="_top">.NET documentation</a>
+     */
     public SessionStateStoreData GetItemExclusive(HttpContext context, java.lang.String id, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> locked, JCORefOut<TimeSpan> lockAge, JCORefOut<NetObject> lockId, JCORefOut<SessionStateActions> actions) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +262,15 @@ public class SessionStateStoreProviderBase extends system.configuration.provider
         }
     }
 
+    /**
+     * Invokes the .NET member CreateUninitializedItem.
+     *
+     * @param context the argument of type {@code HttpContext}
+     * @param id the argument of type {@code java.lang.String}
+     * @param timeout the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.SessionState.SessionStateStoreProviderBase.CreateUninitializedItem" target="_top">.NET documentation</a>
+     */
     public void CreateUninitializedItem(HttpContext context, java.lang.String id, int timeout) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -226,6 +281,12 @@ public class SessionStateStoreProviderBase extends system.configuration.provider
         }
     }
 
+    /**
+     * Invokes the .NET member Dispose.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.SessionState.SessionStateStoreProviderBase.Dispose" target="_top">.NET documentation</a>
+     */
     public void Dispose() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -236,6 +297,13 @@ public class SessionStateStoreProviderBase extends system.configuration.provider
         }
     }
 
+    /**
+     * Invokes the .NET member EndRequest.
+     *
+     * @param context the argument of type {@code HttpContext}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.SessionState.SessionStateStoreProviderBase.EndRequest" target="_top">.NET documentation</a>
+     */
     public void EndRequest(HttpContext context) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -246,6 +314,13 @@ public class SessionStateStoreProviderBase extends system.configuration.provider
         }
     }
 
+    /**
+     * Invokes the .NET member InitializeRequest.
+     *
+     * @param context the argument of type {@code HttpContext}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.SessionState.SessionStateStoreProviderBase.InitializeRequest" target="_top">.NET documentation</a>
+     */
     public void InitializeRequest(HttpContext context) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -256,6 +331,15 @@ public class SessionStateStoreProviderBase extends system.configuration.provider
         }
     }
 
+    /**
+     * Invokes the .NET member ReleaseItemExclusive.
+     *
+     * @param context the argument of type {@code HttpContext}
+     * @param id the argument of type {@code java.lang.String}
+     * @param lockId the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.SessionState.SessionStateStoreProviderBase.ReleaseItemExclusive" target="_top">.NET documentation</a>
+     */
     public void ReleaseItemExclusive(HttpContext context, java.lang.String id, NetObject lockId) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -266,6 +350,16 @@ public class SessionStateStoreProviderBase extends system.configuration.provider
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveItem.
+     *
+     * @param context the argument of type {@code HttpContext}
+     * @param id the argument of type {@code java.lang.String}
+     * @param lockId the argument of type {@code NetObject}
+     * @param item the argument of type {@code SessionStateStoreData}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.SessionState.SessionStateStoreProviderBase.RemoveItem" target="_top">.NET documentation</a>
+     */
     public void RemoveItem(HttpContext context, java.lang.String id, NetObject lockId, SessionStateStoreData item) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -276,6 +370,14 @@ public class SessionStateStoreProviderBase extends system.configuration.provider
         }
     }
 
+    /**
+     * Invokes the .NET member ResetItemTimeout.
+     *
+     * @param context the argument of type {@code HttpContext}
+     * @param id the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.SessionState.SessionStateStoreProviderBase.ResetItemTimeout" target="_top">.NET documentation</a>
+     */
     public void ResetItemTimeout(HttpContext context, java.lang.String id) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -286,6 +388,17 @@ public class SessionStateStoreProviderBase extends system.configuration.provider
         }
     }
 
+    /**
+     * Invokes the .NET member SetAndReleaseItemExclusive.
+     *
+     * @param context the argument of type {@code HttpContext}
+     * @param id the argument of type {@code java.lang.String}
+     * @param item the argument of type {@code SessionStateStoreData}
+     * @param lockId the argument of type {@code NetObject}
+     * @param newItem the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.SessionState.SessionStateStoreProviderBase.SetAndReleaseItemExclusive" target="_top">.NET documentation</a>
+     */
     public void SetAndReleaseItemExclusive(HttpContext context, java.lang.String id, SessionStateStoreData item, NetObject lockId, boolean newItem) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

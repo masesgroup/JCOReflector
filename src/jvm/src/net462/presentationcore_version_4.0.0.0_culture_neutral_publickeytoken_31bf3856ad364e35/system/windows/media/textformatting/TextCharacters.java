@@ -101,7 +101,10 @@ public class TextCharacters extends system.windows.media.textformatting.TextRun 
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TextCharacters(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,24 @@ public class TextCharacters extends system.windows.media.textformatting.TextRun 
     public TextCharacters() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param characterArray the argument of type {@code char[]}
+     * @param offsetToFirstChar the argument of type {@code int}
+     * @param length the argument of type {@code int}
+     * @param textRunProperties the argument of type {@code TextRunProperties}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextCharacters.-ctor" target="_top">.NET documentation</a>
+     */
     public TextCharacters(char[] characterArray, int offsetToFirstChar, int length, TextRunProperties textRunProperties) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -161,6 +182,24 @@ public class TextCharacters extends system.windows.media.textformatting.TextRun 
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param characterString the argument of type {@code java.lang.String}
+     * @param offsetToFirstChar the argument of type {@code int}
+     * @param length the argument of type {@code int}
+     * @param textRunProperties the argument of type {@code TextRunProperties}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextCharacters.-ctor" target="_top">.NET documentation</a>
+     */
     public TextCharacters(java.lang.String characterString, int offsetToFirstChar, int length, TextRunProperties textRunProperties) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -171,6 +210,21 @@ public class TextCharacters extends system.windows.media.textformatting.TextRun 
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param characterString the argument of type {@code java.lang.String}
+     * @param textRunProperties the argument of type {@code TextRunProperties}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextCharacters.-ctor" target="_top">.NET documentation</a>
+     */
     public TextCharacters(java.lang.String characterString, TextRunProperties textRunProperties) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file

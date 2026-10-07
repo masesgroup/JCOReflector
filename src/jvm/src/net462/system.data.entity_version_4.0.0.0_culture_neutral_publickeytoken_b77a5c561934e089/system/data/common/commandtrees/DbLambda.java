@@ -122,7 +122,10 @@ public class DbLambda extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DbLambda(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -177,6 +180,22 @@ public class DbLambda extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param body the argument of type {@code DbExpression}
+     * @param variables the argument of type {@code IEnumerable_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbLambda.Create" target="_top">.NET documentation</a>
+     */
     public static DbLambda Create(DbExpression body, IEnumerable_1 variables) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -192,6 +211,22 @@ public class DbLambda extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param body the argument of type {@code DbExpression}
+     * @param variables the argument of type {@code DbVariableReferenceExpression...}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbLambda.Create" target="_top">.NET documentation</a>
+     */
     public static DbLambda Create(DbExpression body, DbVariableReferenceExpression... variables) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -207,6 +242,39 @@ public class DbLambda extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param argument1Type the argument of type {@code TypeUsage}
+     * @param argument2Type the argument of type {@code TypeUsage}
+     * @param argument3Type the argument of type {@code TypeUsage}
+     * @param argument4Type the argument of type {@code TypeUsage}
+     * @param argument5Type the argument of type {@code TypeUsage}
+     * @param argument6Type the argument of type {@code TypeUsage}
+     * @param argument7Type the argument of type {@code TypeUsage}
+     * @param argument8Type the argument of type {@code TypeUsage}
+     * @param argument9Type the argument of type {@code TypeUsage}
+     * @param argument10Type the argument of type {@code TypeUsage}
+     * @param argument11Type the argument of type {@code TypeUsage}
+     * @param argument12Type the argument of type {@code TypeUsage}
+     * @param argument13Type the argument of type {@code TypeUsage}
+     * @param argument14Type the argument of type {@code TypeUsage}
+     * @param argument15Type the argument of type {@code TypeUsage}
+     * @param argument16Type the argument of type {@code TypeUsage}
+     * @param lambdaFunction the argument of type {@code Func_17}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbLambda.Create" target="_top">.NET documentation</a>
+     */
     public static DbLambda Create(TypeUsage argument1Type, TypeUsage argument2Type, TypeUsage argument3Type, TypeUsage argument4Type, TypeUsage argument5Type, TypeUsage argument6Type, TypeUsage argument7Type, TypeUsage argument8Type, TypeUsage argument9Type, TypeUsage argument10Type, TypeUsage argument11Type, TypeUsage argument12Type, TypeUsage argument13Type, TypeUsage argument14Type, TypeUsage argument15Type, TypeUsage argument16Type, Func_17 lambdaFunction) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -222,6 +290,38 @@ public class DbLambda extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param argument1Type the argument of type {@code TypeUsage}
+     * @param argument2Type the argument of type {@code TypeUsage}
+     * @param argument3Type the argument of type {@code TypeUsage}
+     * @param argument4Type the argument of type {@code TypeUsage}
+     * @param argument5Type the argument of type {@code TypeUsage}
+     * @param argument6Type the argument of type {@code TypeUsage}
+     * @param argument7Type the argument of type {@code TypeUsage}
+     * @param argument8Type the argument of type {@code TypeUsage}
+     * @param argument9Type the argument of type {@code TypeUsage}
+     * @param argument10Type the argument of type {@code TypeUsage}
+     * @param argument11Type the argument of type {@code TypeUsage}
+     * @param argument12Type the argument of type {@code TypeUsage}
+     * @param argument13Type the argument of type {@code TypeUsage}
+     * @param argument14Type the argument of type {@code TypeUsage}
+     * @param argument15Type the argument of type {@code TypeUsage}
+     * @param lambdaFunction the argument of type {@code Func_16}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbLambda.Create" target="_top">.NET documentation</a>
+     */
     public static DbLambda Create(TypeUsage argument1Type, TypeUsage argument2Type, TypeUsage argument3Type, TypeUsage argument4Type, TypeUsage argument5Type, TypeUsage argument6Type, TypeUsage argument7Type, TypeUsage argument8Type, TypeUsage argument9Type, TypeUsage argument10Type, TypeUsage argument11Type, TypeUsage argument12Type, TypeUsage argument13Type, TypeUsage argument14Type, TypeUsage argument15Type, Func_16 lambdaFunction) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -237,6 +337,37 @@ public class DbLambda extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param argument1Type the argument of type {@code TypeUsage}
+     * @param argument2Type the argument of type {@code TypeUsage}
+     * @param argument3Type the argument of type {@code TypeUsage}
+     * @param argument4Type the argument of type {@code TypeUsage}
+     * @param argument5Type the argument of type {@code TypeUsage}
+     * @param argument6Type the argument of type {@code TypeUsage}
+     * @param argument7Type the argument of type {@code TypeUsage}
+     * @param argument8Type the argument of type {@code TypeUsage}
+     * @param argument9Type the argument of type {@code TypeUsage}
+     * @param argument10Type the argument of type {@code TypeUsage}
+     * @param argument11Type the argument of type {@code TypeUsage}
+     * @param argument12Type the argument of type {@code TypeUsage}
+     * @param argument13Type the argument of type {@code TypeUsage}
+     * @param argument14Type the argument of type {@code TypeUsage}
+     * @param lambdaFunction the argument of type {@code Func_15}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbLambda.Create" target="_top">.NET documentation</a>
+     */
     public static DbLambda Create(TypeUsage argument1Type, TypeUsage argument2Type, TypeUsage argument3Type, TypeUsage argument4Type, TypeUsage argument5Type, TypeUsage argument6Type, TypeUsage argument7Type, TypeUsage argument8Type, TypeUsage argument9Type, TypeUsage argument10Type, TypeUsage argument11Type, TypeUsage argument12Type, TypeUsage argument13Type, TypeUsage argument14Type, Func_15 lambdaFunction) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -252,6 +383,36 @@ public class DbLambda extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param argument1Type the argument of type {@code TypeUsage}
+     * @param argument2Type the argument of type {@code TypeUsage}
+     * @param argument3Type the argument of type {@code TypeUsage}
+     * @param argument4Type the argument of type {@code TypeUsage}
+     * @param argument5Type the argument of type {@code TypeUsage}
+     * @param argument6Type the argument of type {@code TypeUsage}
+     * @param argument7Type the argument of type {@code TypeUsage}
+     * @param argument8Type the argument of type {@code TypeUsage}
+     * @param argument9Type the argument of type {@code TypeUsage}
+     * @param argument10Type the argument of type {@code TypeUsage}
+     * @param argument11Type the argument of type {@code TypeUsage}
+     * @param argument12Type the argument of type {@code TypeUsage}
+     * @param argument13Type the argument of type {@code TypeUsage}
+     * @param lambdaFunction the argument of type {@code Func_14}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbLambda.Create" target="_top">.NET documentation</a>
+     */
     public static DbLambda Create(TypeUsage argument1Type, TypeUsage argument2Type, TypeUsage argument3Type, TypeUsage argument4Type, TypeUsage argument5Type, TypeUsage argument6Type, TypeUsage argument7Type, TypeUsage argument8Type, TypeUsage argument9Type, TypeUsage argument10Type, TypeUsage argument11Type, TypeUsage argument12Type, TypeUsage argument13Type, Func_14 lambdaFunction) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -267,6 +428,35 @@ public class DbLambda extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param argument1Type the argument of type {@code TypeUsage}
+     * @param argument2Type the argument of type {@code TypeUsage}
+     * @param argument3Type the argument of type {@code TypeUsage}
+     * @param argument4Type the argument of type {@code TypeUsage}
+     * @param argument5Type the argument of type {@code TypeUsage}
+     * @param argument6Type the argument of type {@code TypeUsage}
+     * @param argument7Type the argument of type {@code TypeUsage}
+     * @param argument8Type the argument of type {@code TypeUsage}
+     * @param argument9Type the argument of type {@code TypeUsage}
+     * @param argument10Type the argument of type {@code TypeUsage}
+     * @param argument11Type the argument of type {@code TypeUsage}
+     * @param argument12Type the argument of type {@code TypeUsage}
+     * @param lambdaFunction the argument of type {@code Func_13}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbLambda.Create" target="_top">.NET documentation</a>
+     */
     public static DbLambda Create(TypeUsage argument1Type, TypeUsage argument2Type, TypeUsage argument3Type, TypeUsage argument4Type, TypeUsage argument5Type, TypeUsage argument6Type, TypeUsage argument7Type, TypeUsage argument8Type, TypeUsage argument9Type, TypeUsage argument10Type, TypeUsage argument11Type, TypeUsage argument12Type, Func_13 lambdaFunction) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -282,6 +472,34 @@ public class DbLambda extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param argument1Type the argument of type {@code TypeUsage}
+     * @param argument2Type the argument of type {@code TypeUsage}
+     * @param argument3Type the argument of type {@code TypeUsage}
+     * @param argument4Type the argument of type {@code TypeUsage}
+     * @param argument5Type the argument of type {@code TypeUsage}
+     * @param argument6Type the argument of type {@code TypeUsage}
+     * @param argument7Type the argument of type {@code TypeUsage}
+     * @param argument8Type the argument of type {@code TypeUsage}
+     * @param argument9Type the argument of type {@code TypeUsage}
+     * @param argument10Type the argument of type {@code TypeUsage}
+     * @param argument11Type the argument of type {@code TypeUsage}
+     * @param lambdaFunction the argument of type {@code Func_12}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbLambda.Create" target="_top">.NET documentation</a>
+     */
     public static DbLambda Create(TypeUsage argument1Type, TypeUsage argument2Type, TypeUsage argument3Type, TypeUsage argument4Type, TypeUsage argument5Type, TypeUsage argument6Type, TypeUsage argument7Type, TypeUsage argument8Type, TypeUsage argument9Type, TypeUsage argument10Type, TypeUsage argument11Type, Func_12 lambdaFunction) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -297,6 +515,33 @@ public class DbLambda extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param argument1Type the argument of type {@code TypeUsage}
+     * @param argument2Type the argument of type {@code TypeUsage}
+     * @param argument3Type the argument of type {@code TypeUsage}
+     * @param argument4Type the argument of type {@code TypeUsage}
+     * @param argument5Type the argument of type {@code TypeUsage}
+     * @param argument6Type the argument of type {@code TypeUsage}
+     * @param argument7Type the argument of type {@code TypeUsage}
+     * @param argument8Type the argument of type {@code TypeUsage}
+     * @param argument9Type the argument of type {@code TypeUsage}
+     * @param argument10Type the argument of type {@code TypeUsage}
+     * @param lambdaFunction the argument of type {@code Func_11}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbLambda.Create" target="_top">.NET documentation</a>
+     */
     public static DbLambda Create(TypeUsage argument1Type, TypeUsage argument2Type, TypeUsage argument3Type, TypeUsage argument4Type, TypeUsage argument5Type, TypeUsage argument6Type, TypeUsage argument7Type, TypeUsage argument8Type, TypeUsage argument9Type, TypeUsage argument10Type, Func_11 lambdaFunction) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -312,6 +557,32 @@ public class DbLambda extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param argument1Type the argument of type {@code TypeUsage}
+     * @param argument2Type the argument of type {@code TypeUsage}
+     * @param argument3Type the argument of type {@code TypeUsage}
+     * @param argument4Type the argument of type {@code TypeUsage}
+     * @param argument5Type the argument of type {@code TypeUsage}
+     * @param argument6Type the argument of type {@code TypeUsage}
+     * @param argument7Type the argument of type {@code TypeUsage}
+     * @param argument8Type the argument of type {@code TypeUsage}
+     * @param argument9Type the argument of type {@code TypeUsage}
+     * @param lambdaFunction the argument of type {@code Func_10}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbLambda.Create" target="_top">.NET documentation</a>
+     */
     public static DbLambda Create(TypeUsage argument1Type, TypeUsage argument2Type, TypeUsage argument3Type, TypeUsage argument4Type, TypeUsage argument5Type, TypeUsage argument6Type, TypeUsage argument7Type, TypeUsage argument8Type, TypeUsage argument9Type, Func_10 lambdaFunction) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -327,6 +598,31 @@ public class DbLambda extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param argument1Type the argument of type {@code TypeUsage}
+     * @param argument2Type the argument of type {@code TypeUsage}
+     * @param argument3Type the argument of type {@code TypeUsage}
+     * @param argument4Type the argument of type {@code TypeUsage}
+     * @param argument5Type the argument of type {@code TypeUsage}
+     * @param argument6Type the argument of type {@code TypeUsage}
+     * @param argument7Type the argument of type {@code TypeUsage}
+     * @param argument8Type the argument of type {@code TypeUsage}
+     * @param lambdaFunction the argument of type {@code Func_9}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbLambda.Create" target="_top">.NET documentation</a>
+     */
     public static DbLambda Create(TypeUsage argument1Type, TypeUsage argument2Type, TypeUsage argument3Type, TypeUsage argument4Type, TypeUsage argument5Type, TypeUsage argument6Type, TypeUsage argument7Type, TypeUsage argument8Type, Func_9 lambdaFunction) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -342,6 +638,30 @@ public class DbLambda extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param argument1Type the argument of type {@code TypeUsage}
+     * @param argument2Type the argument of type {@code TypeUsage}
+     * @param argument3Type the argument of type {@code TypeUsage}
+     * @param argument4Type the argument of type {@code TypeUsage}
+     * @param argument5Type the argument of type {@code TypeUsage}
+     * @param argument6Type the argument of type {@code TypeUsage}
+     * @param argument7Type the argument of type {@code TypeUsage}
+     * @param lambdaFunction the argument of type {@code Func_8}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbLambda.Create" target="_top">.NET documentation</a>
+     */
     public static DbLambda Create(TypeUsage argument1Type, TypeUsage argument2Type, TypeUsage argument3Type, TypeUsage argument4Type, TypeUsage argument5Type, TypeUsage argument6Type, TypeUsage argument7Type, Func_8 lambdaFunction) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -357,6 +677,29 @@ public class DbLambda extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param argument1Type the argument of type {@code TypeUsage}
+     * @param argument2Type the argument of type {@code TypeUsage}
+     * @param argument3Type the argument of type {@code TypeUsage}
+     * @param argument4Type the argument of type {@code TypeUsage}
+     * @param argument5Type the argument of type {@code TypeUsage}
+     * @param argument6Type the argument of type {@code TypeUsage}
+     * @param lambdaFunction the argument of type {@code Func_7}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbLambda.Create" target="_top">.NET documentation</a>
+     */
     public static DbLambda Create(TypeUsage argument1Type, TypeUsage argument2Type, TypeUsage argument3Type, TypeUsage argument4Type, TypeUsage argument5Type, TypeUsage argument6Type, Func_7 lambdaFunction) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -372,6 +715,28 @@ public class DbLambda extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param argument1Type the argument of type {@code TypeUsage}
+     * @param argument2Type the argument of type {@code TypeUsage}
+     * @param argument3Type the argument of type {@code TypeUsage}
+     * @param argument4Type the argument of type {@code TypeUsage}
+     * @param argument5Type the argument of type {@code TypeUsage}
+     * @param lambdaFunction the argument of type {@code Func_6}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbLambda.Create" target="_top">.NET documentation</a>
+     */
     public static DbLambda Create(TypeUsage argument1Type, TypeUsage argument2Type, TypeUsage argument3Type, TypeUsage argument4Type, TypeUsage argument5Type, Func_6 lambdaFunction) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -387,6 +752,27 @@ public class DbLambda extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param argument1Type the argument of type {@code TypeUsage}
+     * @param argument2Type the argument of type {@code TypeUsage}
+     * @param argument3Type the argument of type {@code TypeUsage}
+     * @param argument4Type the argument of type {@code TypeUsage}
+     * @param lambdaFunction the argument of type {@code Func_5}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbLambda.Create" target="_top">.NET documentation</a>
+     */
     public static DbLambda Create(TypeUsage argument1Type, TypeUsage argument2Type, TypeUsage argument3Type, TypeUsage argument4Type, Func_5 lambdaFunction) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -402,6 +788,26 @@ public class DbLambda extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param argument1Type the argument of type {@code TypeUsage}
+     * @param argument2Type the argument of type {@code TypeUsage}
+     * @param argument3Type the argument of type {@code TypeUsage}
+     * @param lambdaFunction the argument of type {@code Func_4}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbLambda.Create" target="_top">.NET documentation</a>
+     */
     public static DbLambda Create(TypeUsage argument1Type, TypeUsage argument2Type, TypeUsage argument3Type, Func_4 lambdaFunction) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -417,6 +823,25 @@ public class DbLambda extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param argument1Type the argument of type {@code TypeUsage}
+     * @param argument2Type the argument of type {@code TypeUsage}
+     * @param lambdaFunction the argument of type {@code Func_3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbLambda.Create" target="_top">.NET documentation</a>
+     */
     public static DbLambda Create(TypeUsage argument1Type, TypeUsage argument2Type, Func_3 lambdaFunction) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -432,6 +857,24 @@ public class DbLambda extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param argument1Type the argument of type {@code TypeUsage}
+     * @param lambdaFunction the argument of type {@code Func_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbLambda.Create" target="_top">.NET documentation</a>
+     */
     public static DbLambda Create(TypeUsage argument1Type, Func_2 lambdaFunction) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -451,6 +894,13 @@ public class DbLambda extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Variables.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbLambda.Variables" target="_top">.NET documentation</a>
+     */
     public IList_1 getVariables() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -466,6 +916,13 @@ public class DbLambda extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Body.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbLambda.Body" target="_top">.NET documentation</a>
+     */
     public DbExpression getBody() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -104,7 +104,10 @@ public class PreviewPrintController extends system.drawing.printing.PrintControl
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PreviewPrintController(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,12 @@ public class PreviewPrintController extends system.drawing.printing.PrintControl
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Printing.PreviewPrintController.-ctor" target="_top">.NET documentation</a>
+     */
     public PreviewPrintController() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +174,34 @@ public class PreviewPrintController extends system.drawing.printing.PrintControl
     
     // Methods section
     
+    /**
+     * Invokes the .NET member OnStartPage.
+     *
+     * @param document the argument of type {@code PrintDocument}
+     * @param e the argument of type {@code PrintPageEventArgs}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MethodAccessException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.MemberAccessException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.drawing.printing.InvalidPrinterException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Printing.PreviewPrintController.OnStartPage" target="_top">.NET documentation</a>
+     */
     public Graphics OnStartPage(PrintDocument document, PrintPageEventArgs e) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.InvalidCastException, system.componentmodel.Win32Exception, system.drawing.printing.InvalidPrinterException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +217,20 @@ public class PreviewPrintController extends system.drawing.printing.PrintControl
         }
     }
 
+    /**
+     * Invokes the .NET member GetPreviewPageInfo.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Printing.PreviewPrintController.GetPreviewPageInfo" target="_top">.NET documentation</a>
+     */
     public PreviewPageInfo[] GetPreviewPageInfo() throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +252,20 @@ public class PreviewPrintController extends system.drawing.printing.PrintControl
         }
     }
 
+    /**
+     * Invokes the .NET member OnEndPage.
+     *
+     * @param document the argument of type {@code PrintDocument}
+     * @param e the argument of type {@code PrintPageEventArgs}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Printing.PreviewPrintController.OnEndPage" target="_top">.NET documentation</a>
+     */
     public void OnEndPage(PrintDocument document, PrintPageEventArgs e) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.FormatException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -211,6 +276,18 @@ public class PreviewPrintController extends system.drawing.printing.PrintControl
         }
     }
 
+    /**
+     * Invokes the .NET member OnEndPrint.
+     *
+     * @param document the argument of type {@code PrintDocument}
+     * @param e the argument of type {@code PrintEventArgs}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Printing.PreviewPrintController.OnEndPrint" target="_top">.NET documentation</a>
+     */
     public void OnEndPrint(PrintDocument document, PrintEventArgs e) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -221,6 +298,29 @@ public class PreviewPrintController extends system.drawing.printing.PrintControl
         }
     }
 
+    /**
+     * Invokes the .NET member OnStartPrint.
+     *
+     * @param document the argument of type {@code PrintDocument}
+     * @param e the argument of type {@code PrintEventArgs}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.drawing.printing.InvalidPrinterException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.MethodAccessException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.MemberAccessException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Printing.PreviewPrintController.OnStartPrint" target="_top">.NET documentation</a>
+     */
     public void OnStartPrint(PrintDocument document, PrintEventArgs e) throws Throwable, system.ArgumentException, system.componentmodel.Win32Exception, system.drawing.printing.InvalidPrinterException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.InvalidOperationException, system.NotSupportedException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.InvalidCastException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -235,6 +335,13 @@ public class PreviewPrintController extends system.drawing.printing.PrintControl
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property UseAntiAlias.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Printing.PreviewPrintController.UseAntiAlias" target="_top">.NET documentation</a>
+     */
     public boolean getUseAntiAlias() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -249,6 +356,13 @@ public class PreviewPrintController extends system.drawing.printing.PrintControl
         }
     }
 
+    /**
+     * Sets the value of the .NET property UseAntiAlias.
+     *
+     * @param UseAntiAlias the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Printing.PreviewPrintController.UseAntiAlias" target="_top">.NET documentation</a>
+     */
     public void setUseAntiAlias(boolean UseAntiAlias) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

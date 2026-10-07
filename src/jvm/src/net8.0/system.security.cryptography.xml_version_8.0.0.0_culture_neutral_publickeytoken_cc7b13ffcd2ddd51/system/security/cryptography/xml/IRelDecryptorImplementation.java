@@ -101,7 +101,10 @@ public class IRelDecryptorImplementation extends NetObject implements IRelDecryp
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IRelDecryptorImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -143,6 +146,16 @@ public class IRelDecryptorImplementation extends NetObject implements IRelDecryp
 
     // Methods section
     
+    /**
+     * Invokes the .NET member Decrypt.
+     *
+     * @param encryptionMethod the argument of type {@code EncryptionMethod}
+     * @param keyInfo the argument of type {@code KeyInfo}
+     * @param toDecrypt the argument of type {@code Stream}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Xml.IRelDecryptor.Decrypt" target="_top">.NET documentation</a>
+     */
     public Stream Decrypt(EncryptionMethod encryptionMethod, KeyInfo keyInfo, Stream toDecrypt) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -104,7 +104,10 @@ public class TypeDescriptionProvider extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TypeDescriptionProvider(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,15 @@ public class TypeDescriptionProvider extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member IsSupportedType.
+     *
+     * @param type the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.TypeDescriptionProvider.IsSupportedType" target="_top">.NET documentation</a>
+     */
     public boolean IsSupportedType(NetType type) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -171,6 +183,14 @@ public class TypeDescriptionProvider extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetCache.
+     *
+     * @param instance the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.TypeDescriptionProvider.GetCache" target="_top">.NET documentation</a>
+     */
     public IDictionary GetCache(NetObject instance) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -186,6 +206,14 @@ public class TypeDescriptionProvider extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetExtendedTypeDescriptor.
+     *
+     * @param instance the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.TypeDescriptionProvider.GetExtendedTypeDescriptor" target="_top">.NET documentation</a>
+     */
     public ICustomTypeDescriptor GetExtendedTypeDescriptor(NetObject instance) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +229,15 @@ public class TypeDescriptionProvider extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetTypeDescriptor.
+     *
+     * @param instance the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.TypeDescriptionProvider.GetTypeDescriptor" target="_top">.NET documentation</a>
+     */
     public ICustomTypeDescriptor GetTypeDescriptor(NetObject instance) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +253,14 @@ public class TypeDescriptionProvider extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetTypeDescriptor.
+     *
+     * @param objectType the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.TypeDescriptionProvider.GetTypeDescriptor" target="_top">.NET documentation</a>
+     */
     public ICustomTypeDescriptor GetTypeDescriptor(NetType objectType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -231,6 +276,15 @@ public class TypeDescriptionProvider extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetTypeDescriptor.
+     *
+     * @param objectType the argument of type {@code NetType}
+     * @param instance the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.TypeDescriptionProvider.GetTypeDescriptor" target="_top">.NET documentation</a>
+     */
     public ICustomTypeDescriptor GetTypeDescriptor(NetType objectType, NetObject instance) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -246,6 +300,21 @@ public class TypeDescriptionProvider extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateInstance.
+     *
+     * @param provider the argument of type {@code IServiceProvider}
+     * @param objectType the argument of type {@code NetType}
+     * @param argTypes the argument of type {@code NetType[]}
+     * @param args the argument of type {@code NetObject[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.TypeDescriptionProvider.CreateInstance" target="_top">.NET documentation</a>
+     */
     public NetObject CreateInstance(IServiceProvider provider, NetType objectType, NetType[] argTypes, NetObject[] args) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentException, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -261,6 +330,15 @@ public class TypeDescriptionProvider extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetFullComponentName.
+     *
+     * @param component the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.TypeDescriptionProvider.GetFullComponentName" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetFullComponentName(NetObject component) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -275,6 +353,15 @@ public class TypeDescriptionProvider extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetReflectionType.
+     *
+     * @param instance the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.TypeDescriptionProvider.GetReflectionType" target="_top">.NET documentation</a>
+     */
     public NetType GetReflectionType(NetObject instance) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -290,6 +377,14 @@ public class TypeDescriptionProvider extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetReflectionType.
+     *
+     * @param objectType the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.TypeDescriptionProvider.GetReflectionType" target="_top">.NET documentation</a>
+     */
     public NetType GetReflectionType(NetType objectType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -305,6 +400,15 @@ public class TypeDescriptionProvider extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetReflectionType.
+     *
+     * @param objectType the argument of type {@code NetType}
+     * @param instance the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.TypeDescriptionProvider.GetReflectionType" target="_top">.NET documentation</a>
+     */
     public NetType GetReflectionType(NetType objectType, NetObject instance) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -320,6 +424,15 @@ public class TypeDescriptionProvider extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetRuntimeType.
+     *
+     * @param reflectionType the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.TypeDescriptionProvider.GetRuntimeType" target="_top">.NET documentation</a>
+     */
     public NetType GetRuntimeType(NetType reflectionType) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

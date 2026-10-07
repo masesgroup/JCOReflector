@@ -101,7 +101,10 @@ public class JsonPolymorphismOptions extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public JsonPolymorphismOptions(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class JsonPolymorphismOptions extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonPolymorphismOptions.-ctor" target="_top">.NET documentation</a>
+     */
     public JsonPolymorphismOptions() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -166,6 +175,13 @@ public class JsonPolymorphismOptions extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IgnoreUnrecognizedTypeDiscriminators.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonPolymorphismOptions.IgnoreUnrecognizedTypeDiscriminators" target="_top">.NET documentation</a>
+     */
     public boolean getIgnoreUnrecognizedTypeDiscriminators() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +196,18 @@ public class JsonPolymorphismOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IgnoreUnrecognizedTypeDiscriminators.
+     *
+     * @param IgnoreUnrecognizedTypeDiscriminators the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonPolymorphismOptions.IgnoreUnrecognizedTypeDiscriminators" target="_top">.NET documentation</a>
+     */
     public void setIgnoreUnrecognizedTypeDiscriminators(boolean IgnoreUnrecognizedTypeDiscriminators) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +218,20 @@ public class JsonPolymorphismOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DerivedTypes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonPolymorphismOptions.DerivedTypes" target="_top">.NET documentation</a>
+     */
     public IList_1 getDerivedTypes() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +247,13 @@ public class JsonPolymorphismOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TypeDiscriminatorPropertyName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonPolymorphismOptions.TypeDiscriminatorPropertyName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTypeDiscriminatorPropertyName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -219,6 +268,18 @@ public class JsonPolymorphismOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TypeDiscriminatorPropertyName.
+     *
+     * @param TypeDiscriminatorPropertyName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonPolymorphismOptions.TypeDiscriminatorPropertyName" target="_top">.NET documentation</a>
+     */
     public void setTypeDiscriminatorPropertyName(java.lang.String TypeDiscriminatorPropertyName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -229,6 +290,13 @@ public class JsonPolymorphismOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UnknownDerivedTypeHandling.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonPolymorphismOptions.UnknownDerivedTypeHandling" target="_top">.NET documentation</a>
+     */
     public JsonUnknownDerivedTypeHandling getUnknownDerivedTypeHandling() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -244,6 +312,18 @@ public class JsonPolymorphismOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property UnknownDerivedTypeHandling.
+     *
+     * @param UnknownDerivedTypeHandling the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonPolymorphismOptions.UnknownDerivedTypeHandling" target="_top">.NET documentation</a>
+     */
     public void setUnknownDerivedTypeHandling(JsonUnknownDerivedTypeHandling UnknownDerivedTypeHandling) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

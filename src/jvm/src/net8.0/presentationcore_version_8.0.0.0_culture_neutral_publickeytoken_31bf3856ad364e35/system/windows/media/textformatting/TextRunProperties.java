@@ -106,7 +106,10 @@ public class TextRunProperties extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TextRunProperties(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -163,6 +166,13 @@ public class TextRunProperties extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property FontHintingEmSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextRunProperties.FontHintingEmSize" target="_top">.NET documentation</a>
+     */
     public double getFontHintingEmSize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +213,13 @@ public class TextRunProperties extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FontRenderingEmSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextRunProperties.FontRenderingEmSize" target="_top">.NET documentation</a>
+     */
     public double getFontRenderingEmSize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -243,6 +260,13 @@ public class TextRunProperties extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PixelsPerDip.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextRunProperties.PixelsPerDip" target="_top">.NET documentation</a>
+     */
     public double getPixelsPerDip() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -283,6 +307,13 @@ public class TextRunProperties extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PixelsPerDip.
+     *
+     * @param PixelsPerDip the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextRunProperties.PixelsPerDip" target="_top">.NET documentation</a>
+     */
     public void setPixelsPerDip(double PixelsPerDip) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -293,6 +324,13 @@ public class TextRunProperties extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CultureInfo.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextRunProperties.CultureInfo" target="_top">.NET documentation</a>
+     */
     public CultureInfo getCultureInfo() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -308,6 +346,13 @@ public class TextRunProperties extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property BaselineAlignment.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextRunProperties.BaselineAlignment" target="_top">.NET documentation</a>
+     */
     public BaselineAlignment getBaselineAlignment() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -323,6 +368,13 @@ public class TextRunProperties extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property BackgroundBrush.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextRunProperties.BackgroundBrush" target="_top">.NET documentation</a>
+     */
     public Brush getBackgroundBrush() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -338,6 +390,13 @@ public class TextRunProperties extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ForegroundBrush.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextRunProperties.ForegroundBrush" target="_top">.NET documentation</a>
+     */
     public Brush getForegroundBrush() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -353,6 +412,13 @@ public class TextRunProperties extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NumberSubstitution.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextRunProperties.NumberSubstitution" target="_top">.NET documentation</a>
+     */
     public NumberSubstitution getNumberSubstitution() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -368,6 +434,13 @@ public class TextRunProperties extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TextEffects.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextRunProperties.TextEffects" target="_top">.NET documentation</a>
+     */
     public TextEffectCollection getTextEffects() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -383,6 +456,13 @@ public class TextRunProperties extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TypographyProperties.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextRunProperties.TypographyProperties" target="_top">.NET documentation</a>
+     */
     public TextRunTypographyProperties getTypographyProperties() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -398,6 +478,13 @@ public class TextRunProperties extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Typeface.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextRunProperties.Typeface" target="_top">.NET documentation</a>
+     */
     public Typeface getTypeface() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -413,6 +500,13 @@ public class TextRunProperties extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TextDecorations.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextRunProperties.TextDecorations" target="_top">.NET documentation</a>
+     */
     public TextDecorationCollection getTextDecorations() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

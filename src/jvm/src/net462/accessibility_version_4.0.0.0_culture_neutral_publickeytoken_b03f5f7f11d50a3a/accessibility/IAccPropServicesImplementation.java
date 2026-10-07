@@ -104,7 +104,10 @@ public class IAccPropServicesImplementation extends NetObject implements IAccPro
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IAccPropServicesImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,16 @@ public class IAccPropServicesImplementation extends NetObject implements IAccPro
 
     // Methods section
     
+    /**
+     * Invokes the .NET member ClearHmenuProps.
+     *
+     * @param hmenu the argument of type {@code JCORefOut<_RemotableHandle>}
+     * @param idChild the argument of type {@code UInt32}
+     * @param paProps the argument of type {@code JCORefOut<Guid>}
+     * @param cProps the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Accessibility.IAccPropServices.ClearHmenuProps" target="_top">.NET documentation</a>
+     */
     public void ClearHmenuProps(JCORefOut<_RemotableHandle> hmenu, UInt32 idChild, JCORefOut<Guid> paProps, int cProps) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -156,6 +169,17 @@ public class IAccPropServicesImplementation extends NetObject implements IAccPro
         }
     }
 
+    /**
+     * Invokes the .NET member ClearHwndProps.
+     *
+     * @param hwnd the argument of type {@code JCORefOut<_RemotableHandle>}
+     * @param idObject the argument of type {@code UInt32}
+     * @param idChild the argument of type {@code UInt32}
+     * @param paProps the argument of type {@code JCORefOut<Guid>}
+     * @param cProps the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Accessibility.IAccPropServices.ClearHwndProps" target="_top">.NET documentation</a>
+     */
     public void ClearHwndProps(JCORefOut<_RemotableHandle> hwnd, UInt32 idObject, UInt32 idChild, JCORefOut<Guid> paProps, int cProps) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -166,6 +190,16 @@ public class IAccPropServicesImplementation extends NetObject implements IAccPro
         }
     }
 
+    /**
+     * Invokes the .NET member ClearProps.
+     *
+     * @param pIDString the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Byte>>}
+     * @param dwIDStringLen the argument of type {@code UInt32}
+     * @param paProps the argument of type {@code JCORefOut<Guid>}
+     * @param cProps the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Accessibility.IAccPropServices.ClearProps" target="_top">.NET documentation</a>
+     */
     public void ClearProps(JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Byte>> pIDString, UInt32 dwIDStringLen, JCORefOut<Guid> paProps, int cProps) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -176,6 +210,16 @@ public class IAccPropServicesImplementation extends NetObject implements IAccPro
         }
     }
 
+    /**
+     * Invokes the .NET member SetHmenuProp.
+     *
+     * @param hmenu the argument of type {@code JCORefOut<_RemotableHandle>}
+     * @param idChild the argument of type {@code UInt32}
+     * @param idProp the argument of type {@code Guid}
+     * @param var the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Accessibility.IAccPropServices.SetHmenuProp" target="_top">.NET documentation</a>
+     */
     public void SetHmenuProp(JCORefOut<_RemotableHandle> hmenu, UInt32 idChild, Guid idProp, NetObject var) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -186,6 +230,18 @@ public class IAccPropServicesImplementation extends NetObject implements IAccPro
         }
     }
 
+    /**
+     * Invokes the .NET member SetHmenuPropServer.
+     *
+     * @param hmenu the argument of type {@code JCORefOut<_RemotableHandle>}
+     * @param idChild the argument of type {@code UInt32}
+     * @param paProps the argument of type {@code JCORefOut<Guid>}
+     * @param cProps the argument of type {@code int}
+     * @param pServer the argument of type {@code IAccPropServer}
+     * @param AnnoScope the argument of type {@code AnnoScope}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Accessibility.IAccPropServices.SetHmenuPropServer" target="_top">.NET documentation</a>
+     */
     public void SetHmenuPropServer(JCORefOut<_RemotableHandle> hmenu, UInt32 idChild, JCORefOut<Guid> paProps, int cProps, IAccPropServer pServer, AnnoScope AnnoScope) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -196,6 +252,16 @@ public class IAccPropServicesImplementation extends NetObject implements IAccPro
         }
     }
 
+    /**
+     * Invokes the .NET member SetHmenuPropStr.
+     *
+     * @param hmenu the argument of type {@code JCORefOut<_RemotableHandle>}
+     * @param idChild the argument of type {@code UInt32}
+     * @param idProp the argument of type {@code Guid}
+     * @param str the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Accessibility.IAccPropServices.SetHmenuPropStr" target="_top">.NET documentation</a>
+     */
     public void SetHmenuPropStr(JCORefOut<_RemotableHandle> hmenu, UInt32 idChild, Guid idProp, java.lang.String str) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,6 +272,17 @@ public class IAccPropServicesImplementation extends NetObject implements IAccPro
         }
     }
 
+    /**
+     * Invokes the .NET member SetHwndProp.
+     *
+     * @param hwnd the argument of type {@code JCORefOut<_RemotableHandle>}
+     * @param idObject the argument of type {@code UInt32}
+     * @param idChild the argument of type {@code UInt32}
+     * @param idProp the argument of type {@code Guid}
+     * @param var the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Accessibility.IAccPropServices.SetHwndProp" target="_top">.NET documentation</a>
+     */
     public void SetHwndProp(JCORefOut<_RemotableHandle> hwnd, UInt32 idObject, UInt32 idChild, Guid idProp, NetObject var) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +293,19 @@ public class IAccPropServicesImplementation extends NetObject implements IAccPro
         }
     }
 
+    /**
+     * Invokes the .NET member SetHwndPropServer.
+     *
+     * @param hwnd the argument of type {@code JCORefOut<_RemotableHandle>}
+     * @param idObject the argument of type {@code UInt32}
+     * @param idChild the argument of type {@code UInt32}
+     * @param paProps the argument of type {@code JCORefOut<Guid>}
+     * @param cProps the argument of type {@code int}
+     * @param pServer the argument of type {@code IAccPropServer}
+     * @param AnnoScope the argument of type {@code AnnoScope}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Accessibility.IAccPropServices.SetHwndPropServer" target="_top">.NET documentation</a>
+     */
     public void SetHwndPropServer(JCORefOut<_RemotableHandle> hwnd, UInt32 idObject, UInt32 idChild, JCORefOut<Guid> paProps, int cProps, IAccPropServer pServer, AnnoScope AnnoScope) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -226,6 +316,17 @@ public class IAccPropServicesImplementation extends NetObject implements IAccPro
         }
     }
 
+    /**
+     * Invokes the .NET member SetHwndPropStr.
+     *
+     * @param hwnd the argument of type {@code JCORefOut<_RemotableHandle>}
+     * @param idObject the argument of type {@code UInt32}
+     * @param idChild the argument of type {@code UInt32}
+     * @param idProp the argument of type {@code Guid}
+     * @param str the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Accessibility.IAccPropServices.SetHwndPropStr" target="_top">.NET documentation</a>
+     */
     public void SetHwndPropStr(JCORefOut<_RemotableHandle> hwnd, UInt32 idObject, UInt32 idChild, Guid idProp, java.lang.String str) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -236,6 +337,18 @@ public class IAccPropServicesImplementation extends NetObject implements IAccPro
         }
     }
 
+    /**
+     * Invokes the .NET member SetPropServer.
+     *
+     * @param pIDString the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Byte>>}
+     * @param dwIDStringLen the argument of type {@code UInt32}
+     * @param paProps the argument of type {@code JCORefOut<Guid>}
+     * @param cProps the argument of type {@code int}
+     * @param pServer the argument of type {@code IAccPropServer}
+     * @param AnnoScope the argument of type {@code AnnoScope}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Accessibility.IAccPropServices.SetPropServer" target="_top">.NET documentation</a>
+     */
     public void SetPropServer(JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Byte>> pIDString, UInt32 dwIDStringLen, JCORefOut<Guid> paProps, int cProps, IAccPropServer pServer, AnnoScope AnnoScope) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -246,6 +359,16 @@ public class IAccPropServicesImplementation extends NetObject implements IAccPro
         }
     }
 
+    /**
+     * Invokes the .NET member SetPropValue.
+     *
+     * @param pIDString the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Byte>>}
+     * @param dwIDStringLen the argument of type {@code UInt32}
+     * @param idProp the argument of type {@code Guid}
+     * @param var the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Accessibility.IAccPropServices.SetPropValue" target="_top">.NET documentation</a>
+     */
     public void SetPropValue(JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Byte>> pIDString, UInt32 dwIDStringLen, Guid idProp, NetObject var) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

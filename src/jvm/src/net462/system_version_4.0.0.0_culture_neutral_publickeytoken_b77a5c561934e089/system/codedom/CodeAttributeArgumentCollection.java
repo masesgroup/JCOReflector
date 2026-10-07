@@ -101,7 +101,10 @@ public class CodeAttributeArgumentCollection extends system.collections.Collecti
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CodeAttributeArgumentCollection(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class CodeAttributeArgumentCollection extends system.collections.Collecti
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeAttributeArgumentCollection.-ctor" target="_top">.NET documentation</a>
+     */
     public CodeAttributeArgumentCollection() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -158,6 +167,14 @@ public class CodeAttributeArgumentCollection extends system.collections.Collecti
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param value the argument of type {@code CodeAttributeArgument[]}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeAttributeArgumentCollection.-ctor" target="_top">.NET documentation</a>
+     */
     public CodeAttributeArgumentCollection(CodeAttributeArgument[] value) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +185,14 @@ public class CodeAttributeArgumentCollection extends system.collections.Collecti
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param value the argument of type {@code CodeAttributeArgumentCollection}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeAttributeArgumentCollection.-ctor" target="_top">.NET documentation</a>
+     */
     public CodeAttributeArgumentCollection(CodeAttributeArgumentCollection value) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -182,6 +207,14 @@ public class CodeAttributeArgumentCollection extends system.collections.Collecti
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Contains.
+     *
+     * @param value the argument of type {@code CodeAttributeArgument}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeAttributeArgumentCollection.Contains" target="_top">.NET documentation</a>
+     */
     public boolean Contains(CodeAttributeArgument value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -196,6 +229,14 @@ public class CodeAttributeArgumentCollection extends system.collections.Collecti
         }
     }
 
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param value the argument of type {@code CodeAttributeArgument}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeAttributeArgumentCollection.Add" target="_top">.NET documentation</a>
+     */
     public int Add(CodeAttributeArgument value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -236,6 +277,14 @@ public class CodeAttributeArgumentCollection extends system.collections.Collecti
         }
     }
 
+    /**
+     * Invokes the .NET member IndexOf.
+     *
+     * @param value the argument of type {@code CodeAttributeArgument}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeAttributeArgumentCollection.IndexOf" target="_top">.NET documentation</a>
+     */
     public int IndexOf(CodeAttributeArgument value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -276,6 +325,14 @@ public class CodeAttributeArgumentCollection extends system.collections.Collecti
         }
     }
 
+    /**
+     * Invokes the .NET member AddRange.
+     *
+     * @param value the argument of type {@code CodeAttributeArgument[]}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeAttributeArgumentCollection.AddRange" target="_top">.NET documentation</a>
+     */
     public void AddRange(CodeAttributeArgument[] value) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -286,6 +343,14 @@ public class CodeAttributeArgumentCollection extends system.collections.Collecti
         }
     }
 
+    /**
+     * Invokes the .NET member AddRange.
+     *
+     * @param value the argument of type {@code CodeAttributeArgumentCollection}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeAttributeArgumentCollection.AddRange" target="_top">.NET documentation</a>
+     */
     public void AddRange(CodeAttributeArgumentCollection value) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -296,6 +361,14 @@ public class CodeAttributeArgumentCollection extends system.collections.Collecti
         }
     }
 
+    /**
+     * Invokes the .NET member CopyTo.
+     *
+     * @param array the argument of type {@code CodeAttributeArgument[]}
+     * @param index the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeAttributeArgumentCollection.CopyTo" target="_top">.NET documentation</a>
+     */
     public void CopyTo(CodeAttributeArgument[] array, int index) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -306,6 +379,14 @@ public class CodeAttributeArgumentCollection extends system.collections.Collecti
         }
     }
 
+    /**
+     * Invokes the .NET member Insert.
+     *
+     * @param index the argument of type {@code int}
+     * @param value the argument of type {@code CodeAttributeArgument}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeAttributeArgumentCollection.Insert" target="_top">.NET documentation</a>
+     */
     public void Insert(int index, CodeAttributeArgument value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -316,6 +397,13 @@ public class CodeAttributeArgumentCollection extends system.collections.Collecti
         }
     }
 
+    /**
+     * Invokes the .NET member Remove.
+     *
+     * @param value the argument of type {@code CodeAttributeArgument}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeAttributeArgumentCollection.Remove" target="_top">.NET documentation</a>
+     */
     public void Remove(CodeAttributeArgument value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

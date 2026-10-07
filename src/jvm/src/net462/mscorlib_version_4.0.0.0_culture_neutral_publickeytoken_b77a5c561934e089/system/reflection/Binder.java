@@ -104,7 +104,10 @@ public class Binder extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Binder(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,16 @@ public class Binder extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ChangeType.
+     *
+     * @param value the argument of type {@code NetObject}
+     * @param type the argument of type {@code NetType}
+     * @param culture the argument of type {@code CultureInfo}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Binder.ChangeType" target="_top">.NET documentation</a>
+     */
     public NetObject ChangeType(NetObject value, NetType type, CultureInfo culture) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -172,6 +185,17 @@ public class Binder extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member BindToField.
+     *
+     * @param bindingAttr the argument of type {@code BindingFlags}
+     * @param match the argument of type {@code FieldInfo[]}
+     * @param value the argument of type {@code NetObject}
+     * @param culture the argument of type {@code CultureInfo}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Binder.BindToField" target="_top">.NET documentation</a>
+     */
     public FieldInfo BindToField(BindingFlags bindingAttr, FieldInfo[] match, NetObject value, CultureInfo culture) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +211,20 @@ public class Binder extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member BindToMethod.
+     *
+     * @param bindingAttr the argument of type {@code BindingFlags}
+     * @param match the argument of type {@code MethodBase[]}
+     * @param args the argument of type {@code JCORefOut<NetObject[]>}
+     * @param modifiers the argument of type {@code ParameterModifier[]}
+     * @param culture the argument of type {@code CultureInfo}
+     * @param names the argument of type {@code java.lang.String[]}
+     * @param state the argument of type {@code JCORefOut<NetObject>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Binder.BindToMethod" target="_top">.NET documentation</a>
+     */
     public MethodBase BindToMethod(BindingFlags bindingAttr, MethodBase[] match, JCORefOut<NetObject[]> args, ParameterModifier[] modifiers, CultureInfo culture, java.lang.String[] names, JCORefOut<NetObject> state) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +240,17 @@ public class Binder extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SelectMethod.
+     *
+     * @param bindingAttr the argument of type {@code BindingFlags}
+     * @param match the argument of type {@code MethodBase[]}
+     * @param types the argument of type {@code NetType[]}
+     * @param modifiers the argument of type {@code ParameterModifier[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Binder.SelectMethod" target="_top">.NET documentation</a>
+     */
     public MethodBase SelectMethod(BindingFlags bindingAttr, MethodBase[] match, NetType[] types, ParameterModifier[] modifiers) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -217,6 +266,18 @@ public class Binder extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SelectProperty.
+     *
+     * @param bindingAttr the argument of type {@code BindingFlags}
+     * @param match the argument of type {@code PropertyInfo[]}
+     * @param returnType the argument of type {@code NetType}
+     * @param indexes the argument of type {@code NetType[]}
+     * @param modifiers the argument of type {@code ParameterModifier[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Binder.SelectProperty" target="_top">.NET documentation</a>
+     */
     public PropertyInfo SelectProperty(BindingFlags bindingAttr, PropertyInfo[] match, NetType returnType, NetType[] indexes, ParameterModifier[] modifiers) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -232,6 +293,14 @@ public class Binder extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ReorderArgumentArray.
+     *
+     * @param args the argument of type {@code JCORefOut<NetObject[]>}
+     * @param state the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Binder.ReorderArgumentArray" target="_top">.NET documentation</a>
+     */
     public void ReorderArgumentArray(JCORefOut<NetObject[]> args, NetObject state) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

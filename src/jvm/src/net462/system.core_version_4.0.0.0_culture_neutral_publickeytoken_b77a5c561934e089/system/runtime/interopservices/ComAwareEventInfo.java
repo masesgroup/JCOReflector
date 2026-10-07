@@ -101,7 +101,10 @@ public class ComAwareEventInfo extends system.reflection.EventInfo  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ComAwareEventInfo(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,14 @@ public class ComAwareEventInfo extends system.reflection.EventInfo  {
     public ComAwareEventInfo() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param type the argument of type {@code NetType}
+     * @param eventName the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComAwareEventInfo.-ctor" target="_top">.NET documentation</a>
+     */
     public ComAwareEventInfo(NetType type, java.lang.String eventName) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -166,6 +177,15 @@ public class ComAwareEventInfo extends system.reflection.EventInfo  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member IsDefined.
+     *
+     * @param attributeType the argument of type {@code NetType}
+     * @param inherit the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComAwareEventInfo.IsDefined" target="_top">.NET documentation</a>
+     */
     public boolean IsDefined(NetType attributeType, boolean inherit) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +200,14 @@ public class ComAwareEventInfo extends system.reflection.EventInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetCustomAttributes.
+     *
+     * @param inherit the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComAwareEventInfo.GetCustomAttributes" target="_top">.NET documentation</a>
+     */
     public NetObject[] GetCustomAttributes(boolean inherit) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +229,15 @@ public class ComAwareEventInfo extends system.reflection.EventInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetCustomAttributes.
+     *
+     * @param attributeType the argument of type {@code NetType}
+     * @param inherit the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComAwareEventInfo.GetCustomAttributes" target="_top">.NET documentation</a>
+     */
     public NetObject[] GetCustomAttributes(NetType attributeType, boolean inherit) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -222,6 +259,14 @@ public class ComAwareEventInfo extends system.reflection.EventInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetAddMethod.
+     *
+     * @param nonPublic the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComAwareEventInfo.GetAddMethod" target="_top">.NET documentation</a>
+     */
     public MethodInfo GetAddMethod(boolean nonPublic) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -237,6 +282,14 @@ public class ComAwareEventInfo extends system.reflection.EventInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetRaiseMethod.
+     *
+     * @param nonPublic the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComAwareEventInfo.GetRaiseMethod" target="_top">.NET documentation</a>
+     */
     public MethodInfo GetRaiseMethod(boolean nonPublic) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -252,6 +305,14 @@ public class ComAwareEventInfo extends system.reflection.EventInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetRemoveMethod.
+     *
+     * @param nonPublic the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComAwareEventInfo.GetRemoveMethod" target="_top">.NET documentation</a>
+     */
     public MethodInfo GetRemoveMethod(boolean nonPublic) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

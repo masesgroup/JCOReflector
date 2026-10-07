@@ -106,7 +106,10 @@ public class XPathMessageContext extends system.xml.xsl.XsltContext  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XPathMessageContext(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,20 @@ public class XPathMessageContext extends system.xml.xsl.XsltContext  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.XPathMessageContext.-ctor" target="_top">.NET documentation</a>
+     */
     public XPathMessageContext() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.NullReferenceException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -163,6 +180,26 @@ public class XPathMessageContext extends system.xml.xsl.XsltContext  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param table the argument of type {@code NameTable}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.XPathMessageContext.-ctor" target="_top">.NET documentation</a>
+     */
     public XPathMessageContext(NameTable table) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NullReferenceException {
         try {
             // add reference to assemblyName.dll file
@@ -177,6 +214,14 @@ public class XPathMessageContext extends system.xml.xsl.XsltContext  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member PreserveWhitespace.
+     *
+     * @param node the argument of type {@code XPathNavigator}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.XPathMessageContext.PreserveWhitespace" target="_top">.NET documentation</a>
+     */
     public boolean PreserveWhitespace(XPathNavigator node) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -191,6 +236,15 @@ public class XPathMessageContext extends system.xml.xsl.XsltContext  {
         }
     }
 
+    /**
+     * Invokes the .NET member CompareDocument.
+     *
+     * @param baseUri the argument of type {@code java.lang.String}
+     * @param nextBaseUri the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.XPathMessageContext.CompareDocument" target="_top">.NET documentation</a>
+     */
     public int CompareDocument(java.lang.String baseUri, java.lang.String nextBaseUri) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -231,6 +285,27 @@ public class XPathMessageContext extends system.xml.xsl.XsltContext  {
         }
     }
 
+    /**
+     * Invokes the .NET member ResolveFunction.
+     *
+     * @param prefix the argument of type {@code java.lang.String}
+     * @param name the argument of type {@code java.lang.String}
+     * @param argTypes the argument of type {@code XPathResultType[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.XPathMessageContext.ResolveFunction" target="_top">.NET documentation</a>
+     */
     public IXsltContextFunction ResolveFunction(java.lang.String prefix, java.lang.String name, XPathResultType[] argTypes) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -246,6 +321,15 @@ public class XPathMessageContext extends system.xml.xsl.XsltContext  {
         }
     }
 
+    /**
+     * Invokes the .NET member ResolveVariable.
+     *
+     * @param prefix the argument of type {@code java.lang.String}
+     * @param name the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.XPathMessageContext.ResolveVariable" target="_top">.NET documentation</a>
+     */
     public IXsltContextVariable ResolveVariable(java.lang.String prefix, java.lang.String name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

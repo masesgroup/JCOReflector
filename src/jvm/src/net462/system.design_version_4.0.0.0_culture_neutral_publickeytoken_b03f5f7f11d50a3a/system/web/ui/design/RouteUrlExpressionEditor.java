@@ -102,7 +102,10 @@ public class RouteUrlExpressionEditor extends system.web.ui.design.ExpressionEdi
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public RouteUrlExpressionEditor(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,12 @@ public class RouteUrlExpressionEditor extends system.web.ui.design.ExpressionEdi
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.RouteUrlExpressionEditor.-ctor" target="_top">.NET documentation</a>
+     */
     public RouteUrlExpressionEditor() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -163,6 +172,29 @@ public class RouteUrlExpressionEditor extends system.web.ui.design.ExpressionEdi
     
     // Methods section
     
+    /**
+     * Invokes the .NET member EvaluateExpression.
+     *
+     * @param expression the argument of type {@code java.lang.String}
+     * @param parseTimeData the argument of type {@code NetObject}
+     * @param propertyType the argument of type {@code NetType}
+     * @param serviceProvider the argument of type {@code IServiceProvider}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.RouteUrlExpressionEditor.EvaluateExpression" target="_top">.NET documentation</a>
+     */
     public NetObject EvaluateExpression(java.lang.String expression, NetObject parseTimeData, NetType propertyType, IServiceProvider serviceProvider) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.NotImplementedException, system.resources.MissingManifestResourceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,6 +210,24 @@ public class RouteUrlExpressionEditor extends system.web.ui.design.ExpressionEdi
         }
     }
 
+    /**
+     * Invokes the .NET member GetExpressionEditorSheet.
+     *
+     * @param expression the argument of type {@code java.lang.String}
+     * @param serviceProvider the argument of type {@code IServiceProvider}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.RouteUrlExpressionEditor.GetExpressionEditorSheet" target="_top">.NET documentation</a>
+     */
     public ExpressionEditorSheet GetExpressionEditorSheet(java.lang.String expression, IServiceProvider serviceProvider) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

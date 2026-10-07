@@ -101,7 +101,10 @@ public class SharedPropertyGroupManager extends NetObjectEnumerable  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SharedPropertyGroupManager(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class SharedPropertyGroupManager extends NetObjectEnumerable  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.SharedPropertyGroupManager.-ctor" target="_top">.NET documentation</a>
+     */
     public SharedPropertyGroupManager() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -162,6 +171,17 @@ public class SharedPropertyGroupManager extends NetObjectEnumerable  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CreatePropertyGroup.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param dwIsoMode the argument of type {@code JCORefOut<PropertyLockMode>}
+     * @param dwRelMode the argument of type {@code JCORefOut<PropertyReleaseMode>}
+     * @param fExist the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicBoolean>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.SharedPropertyGroupManager.CreatePropertyGroup" target="_top">.NET documentation</a>
+     */
     public SharedPropertyGroup CreatePropertyGroup(java.lang.String name, JCORefOut<PropertyLockMode> dwIsoMode, JCORefOut<PropertyReleaseMode> dwRelMode, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> fExist) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -177,6 +197,14 @@ public class SharedPropertyGroupManager extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Invokes the .NET member Group.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.SharedPropertyGroupManager.Group" target="_top">.NET documentation</a>
+     */
     public SharedPropertyGroup Group(java.lang.String name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

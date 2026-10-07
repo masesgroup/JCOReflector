@@ -171,7 +171,10 @@ public class SubscribeContextCallback_1<TContextItemType extends IJCOBridgeRefle
         callerInstance = instance;
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     @SuppressWarnings("unchecked")
     public SubscribeContextCallback_1(java.lang.Object instance) throws Throwable {
@@ -194,6 +197,13 @@ public class SubscribeContextCallback_1<TContextItemType extends IJCOBridgeRefle
         return JCOBridgeInstance.translateException(ne);
     }
 
+    /**
+     * Invokes the .NET member DynamicInvoke.
+     *
+     * @param item the argument of type {@code TContextItemType}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Delegate.DynamicInvoke" target="_top">.NET documentation</a>
+     */
     public void DynamicInvoke(TContextItemType item) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,7 +215,9 @@ public class SubscribeContextCallback_1<TContextItemType extends IJCOBridgeRefle
     }
 
     /**
-     * Methods invoked in JVM when an event is raised in CLR 
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param item the .NET argument of type {@code TContextItemType}
      */
     public void Invoke(TContextItemType item) {
     }

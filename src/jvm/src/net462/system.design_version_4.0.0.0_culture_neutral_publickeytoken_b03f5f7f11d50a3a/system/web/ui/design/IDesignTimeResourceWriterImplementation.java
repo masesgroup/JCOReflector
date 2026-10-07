@@ -102,7 +102,10 @@ public class IDesignTimeResourceWriterImplementation extends NetObject implement
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IDesignTimeResourceWriterImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -144,6 +147,15 @@ public class IDesignTimeResourceWriterImplementation extends NetObject implement
 
     // Methods section
     
+    /**
+     * Invokes the .NET member CreateResourceKey.
+     *
+     * @param resourceName the argument of type {@code java.lang.String}
+     * @param obj the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.IDesignTimeResourceWriter.CreateResourceKey" target="_top">.NET documentation</a>
+     */
     public java.lang.String CreateResourceKey(java.lang.String resourceName, NetObject obj) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -158,6 +170,14 @@ public class IDesignTimeResourceWriterImplementation extends NetObject implement
         }
     }
 
+    /**
+     * Invokes the .NET member AddResource.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param value the argument of type {@code byte[]}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.IDesignTimeResourceWriter.AddResource" target="_top">.NET documentation</a>
+     */
     public void AddResource(java.lang.String name, byte[] value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -168,6 +188,14 @@ public class IDesignTimeResourceWriterImplementation extends NetObject implement
         }
     }
 
+    /**
+     * Invokes the .NET member AddResource.
+     *
+     * @param dupParam0 the argument of type {@code java.lang.String}
+     * @param dupParam1 the argument of type {@code JCORefOut}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.IDesignTimeResourceWriter.AddResource" target="_top">.NET documentation</a>
+     */
     public void AddResource(java.lang.String dupParam0, JCORefOut dupParam1) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,6 +206,14 @@ public class IDesignTimeResourceWriterImplementation extends NetObject implement
         }
     }
 
+    /**
+     * Invokes the .NET member AddResource.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param value the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.IDesignTimeResourceWriter.AddResource" target="_top">.NET documentation</a>
+     */
     public void AddResource(java.lang.String name, NetObject value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +224,14 @@ public class IDesignTimeResourceWriterImplementation extends NetObject implement
         }
     }
 
+    /**
+     * Invokes the .NET member AddResource.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param value the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.IDesignTimeResourceWriter.AddResource" target="_top">.NET documentation</a>
+     */
     public void AddResource(java.lang.String name, java.lang.String value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +242,12 @@ public class IDesignTimeResourceWriterImplementation extends NetObject implement
         }
     }
 
+    /**
+     * Invokes the .NET member Close.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.IDesignTimeResourceWriter.Close" target="_top">.NET documentation</a>
+     */
     public void Close() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +258,12 @@ public class IDesignTimeResourceWriterImplementation extends NetObject implement
         }
     }
 
+    /**
+     * Invokes the .NET member Dispose.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.IDesignTimeResourceWriter.Dispose" target="_top">.NET documentation</a>
+     */
     public void Dispose() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -218,6 +274,12 @@ public class IDesignTimeResourceWriterImplementation extends NetObject implement
         }
     }
 
+    /**
+     * Invokes the .NET member Generate.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.IDesignTimeResourceWriter.Generate" target="_top">.NET documentation</a>
+     */
     public void Generate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

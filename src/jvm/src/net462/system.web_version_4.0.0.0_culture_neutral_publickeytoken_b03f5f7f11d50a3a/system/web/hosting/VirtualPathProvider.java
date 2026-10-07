@@ -104,7 +104,10 @@ public class VirtualPathProvider extends system.MarshalByRefObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public VirtualPathProvider(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,14 @@ public class VirtualPathProvider extends system.MarshalByRefObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member DirectoryExists.
+     *
+     * @param virtualDir the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.VirtualPathProvider.DirectoryExists" target="_top">.NET documentation</a>
+     */
     public boolean DirectoryExists(java.lang.String virtualDir) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -171,6 +182,14 @@ public class VirtualPathProvider extends system.MarshalByRefObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member FileExists.
+     *
+     * @param virtualPath the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.VirtualPathProvider.FileExists" target="_top">.NET documentation</a>
+     */
     public boolean FileExists(java.lang.String virtualPath) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -185,6 +204,23 @@ public class VirtualPathProvider extends system.MarshalByRefObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member OpenFile.
+     *
+     * @param virtualPath the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.VirtualPathProvider.OpenFile" target="_top">.NET documentation</a>
+     */
     public static Stream OpenFile(java.lang.String virtualPath) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.web.HttpException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -200,6 +236,13 @@ public class VirtualPathProvider extends system.MarshalByRefObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member InitializeLifetimeService.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.VirtualPathProvider.InitializeLifetimeService" target="_top">.NET documentation</a>
+     */
     public NetObject InitializeLifetimeService() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +258,27 @@ public class VirtualPathProvider extends system.MarshalByRefObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CombineVirtualPaths.
+     *
+     * @param basePath the argument of type {@code java.lang.String}
+     * @param relativePath the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.VirtualPathProvider.CombineVirtualPaths" target="_top">.NET documentation</a>
+     */
     public java.lang.String CombineVirtualPaths(java.lang.String basePath, java.lang.String relativePath) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.web.HttpException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -229,6 +293,14 @@ public class VirtualPathProvider extends system.MarshalByRefObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetCacheKey.
+     *
+     * @param virtualPath the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.VirtualPathProvider.GetCacheKey" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetCacheKey(java.lang.String virtualPath) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -243,6 +315,15 @@ public class VirtualPathProvider extends system.MarshalByRefObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetFileHash.
+     *
+     * @param virtualPath the argument of type {@code java.lang.String}
+     * @param virtualPathDependencies the argument of type {@code IEnumerable}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.VirtualPathProvider.GetFileHash" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetFileHash(java.lang.String virtualPath, IEnumerable virtualPathDependencies) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -257,6 +338,16 @@ public class VirtualPathProvider extends system.MarshalByRefObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetCacheDependency.
+     *
+     * @param virtualPath the argument of type {@code java.lang.String}
+     * @param virtualPathDependencies the argument of type {@code IEnumerable}
+     * @param utcStart the argument of type {@code DateTime}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.VirtualPathProvider.GetCacheDependency" target="_top">.NET documentation</a>
+     */
     public CacheDependency GetCacheDependency(java.lang.String virtualPath, IEnumerable virtualPathDependencies, DateTime utcStart) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -272,6 +363,14 @@ public class VirtualPathProvider extends system.MarshalByRefObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetDirectory.
+     *
+     * @param virtualDir the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.VirtualPathProvider.GetDirectory" target="_top">.NET documentation</a>
+     */
     public VirtualDirectory GetDirectory(java.lang.String virtualDir) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -287,6 +386,14 @@ public class VirtualPathProvider extends system.MarshalByRefObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetFile.
+     *
+     * @param virtualPath the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.VirtualPathProvider.GetFile" target="_top">.NET documentation</a>
+     */
     public VirtualFile GetFile(java.lang.String virtualPath) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

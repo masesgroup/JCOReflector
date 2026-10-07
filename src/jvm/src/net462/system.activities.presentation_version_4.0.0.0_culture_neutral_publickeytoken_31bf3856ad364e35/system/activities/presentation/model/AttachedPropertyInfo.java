@@ -98,7 +98,10 @@ public class AttachedPropertyInfo extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public AttachedPropertyInfo(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,13 @@ public class AttachedPropertyInfo extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property PropertyName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Model.AttachedPropertyInfo.PropertyName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getPropertyName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -169,6 +179,13 @@ public class AttachedPropertyInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PropertyName.
+     *
+     * @param PropertyName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Model.AttachedPropertyInfo.PropertyName" target="_top">.NET documentation</a>
+     */
     public void setPropertyName(java.lang.String PropertyName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

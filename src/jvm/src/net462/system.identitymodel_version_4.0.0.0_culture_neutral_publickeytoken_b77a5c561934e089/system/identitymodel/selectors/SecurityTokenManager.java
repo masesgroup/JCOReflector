@@ -104,7 +104,10 @@ public class SecurityTokenManager extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SecurityTokenManager(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,15 @@ public class SecurityTokenManager extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CreateSecurityTokenAuthenticator.
+     *
+     * @param tokenRequirement the argument of type {@code SecurityTokenRequirement}
+     * @param outOfBandTokenResolver the argument of type {@code JCORefOut<SecurityTokenResolver>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator" target="_top">.NET documentation</a>
+     */
     public SecurityTokenAuthenticator CreateSecurityTokenAuthenticator(SecurityTokenRequirement tokenRequirement, JCORefOut<SecurityTokenResolver> outOfBandTokenResolver) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -172,6 +184,14 @@ public class SecurityTokenManager extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateSecurityTokenProvider.
+     *
+     * @param tokenRequirement the argument of type {@code SecurityTokenRequirement}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider" target="_top">.NET documentation</a>
+     */
     public SecurityTokenProvider CreateSecurityTokenProvider(SecurityTokenRequirement tokenRequirement) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +207,14 @@ public class SecurityTokenManager extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateSecurityTokenSerializer.
+     *
+     * @param version the argument of type {@code SecurityTokenVersion}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenSerializer" target="_top">.NET documentation</a>
+     */
     public SecurityTokenSerializer CreateSecurityTokenSerializer(SecurityTokenVersion version) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -110,7 +110,10 @@ public class BinaryFormatter extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public BinaryFormatter(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,12 @@ public class BinaryFormatter extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.-ctor" target="_top">.NET documentation</a>
+     */
     public BinaryFormatter() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +176,14 @@ public class BinaryFormatter extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param selector the argument of type {@code ISurrogateSelector}
+     * @param context the argument of type {@code StreamingContext}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.-ctor" target="_top">.NET documentation</a>
+     */
     public BinaryFormatter(ISurrogateSelector selector, StreamingContext context) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -181,6 +198,22 @@ public class BinaryFormatter extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Deserialize.
+     *
+     * @param serializationStream the argument of type {@code Stream}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.runtime.serialization.SerializationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.io.EndOfStreamException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.runtime.remoting.RemotingException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize" target="_top">.NET documentation</a>
+     */
     public NetObject Deserialize(Stream serializationStream) throws Throwable, system.ArgumentNullException, system.FormatException, system.runtime.serialization.SerializationException, system.ArgumentException, system.io.EndOfStreamException, system.ObjectDisposedException, system.runtime.remoting.RemotingException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -196,6 +229,25 @@ public class BinaryFormatter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Deserialize.
+     *
+     * @param serializationStream the argument of type {@code Stream}
+     * @param handler the argument of type {@code HeaderHandler}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.runtime.serialization.SerializationException if the .NET member raises it
+     * @throws system.io.EndOfStreamException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.runtime.remoting.RemotingException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize" target="_top">.NET documentation</a>
+     */
     public NetObject Deserialize(Stream serializationStream, HeaderHandler handler) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.runtime.serialization.SerializationException, system.io.EndOfStreamException, system.io.IOException, system.NullReferenceException, system.runtime.remoting.RemotingException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -211,6 +263,30 @@ public class BinaryFormatter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DeserializeMethodResponse.
+     *
+     * @param serializationStream the argument of type {@code Stream}
+     * @param handler the argument of type {@code HeaderHandler}
+     * @param methodCallMessage the argument of type {@code IMethodCallMessage}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.runtime.serialization.SerializationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.io.EndOfStreamException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.runtime.remoting.RemotingException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.DeserializeMethodResponse" target="_top">.NET documentation</a>
+     */
     public NetObject DeserializeMethodResponse(Stream serializationStream, HeaderHandler handler, IMethodCallMessage methodCallMessage) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.runtime.serialization.SerializationException, system.ObjectDisposedException, system.io.EndOfStreamException, system.io.IOException, system.MissingMemberException, system.NotSupportedException, system.runtime.remoting.RemotingException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -226,6 +302,25 @@ public class BinaryFormatter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member UnsafeDeserialize.
+     *
+     * @param serializationStream the argument of type {@code Stream}
+     * @param handler the argument of type {@code HeaderHandler}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.runtime.serialization.SerializationException if the .NET member raises it
+     * @throws system.io.EndOfStreamException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.runtime.remoting.RemotingException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.UnsafeDeserialize" target="_top">.NET documentation</a>
+     */
     public NetObject UnsafeDeserialize(Stream serializationStream, HeaderHandler handler) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.runtime.serialization.SerializationException, system.io.EndOfStreamException, system.io.IOException, system.NullReferenceException, system.runtime.remoting.RemotingException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -241,6 +336,30 @@ public class BinaryFormatter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member UnsafeDeserializeMethodResponse.
+     *
+     * @param serializationStream the argument of type {@code Stream}
+     * @param handler the argument of type {@code HeaderHandler}
+     * @param methodCallMessage the argument of type {@code IMethodCallMessage}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.runtime.serialization.SerializationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.io.EndOfStreamException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.runtime.remoting.RemotingException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.UnsafeDeserializeMethodResponse" target="_top">.NET documentation</a>
+     */
     public NetObject UnsafeDeserializeMethodResponse(Stream serializationStream, HeaderHandler handler, IMethodCallMessage methodCallMessage) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.runtime.serialization.SerializationException, system.ObjectDisposedException, system.io.EndOfStreamException, system.io.IOException, system.MissingMemberException, system.NotSupportedException, system.runtime.remoting.RemotingException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -256,6 +375,30 @@ public class BinaryFormatter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Serialize.
+     *
+     * @param serializationStream the argument of type {@code Stream}
+     * @param graph the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.runtime.serialization.SerializationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.reflection.TargetException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize" target="_top">.NET documentation</a>
+     */
     public void Serialize(Stream serializationStream, NetObject graph) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.runtime.serialization.SerializationException, system.ObjectDisposedException, system.MulticastNotSupportedException, system.NotImplementedException, system.security.SecurityException, system.reflection.TargetException, system.NullReferenceException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -266,6 +409,34 @@ public class BinaryFormatter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Serialize.
+     *
+     * @param serializationStream the argument of type {@code Stream}
+     * @param graph the argument of type {@code NetObject}
+     * @param headers the argument of type {@code Header[]}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.runtime.serialization.SerializationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.reflection.TargetException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize" target="_top">.NET documentation</a>
+     */
     public void Serialize(Stream serializationStream, NetObject graph, Header[] headers) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.NotSupportedException, system.runtime.serialization.SerializationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.MulticastNotSupportedException, system.NotImplementedException, system.security.SecurityException, system.reflection.TargetException, system.NullReferenceException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -280,6 +451,13 @@ public class BinaryFormatter extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AssemblyFormat.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.AssemblyFormat" target="_top">.NET documentation</a>
+     */
     public FormatterAssemblyStyle getAssemblyFormat() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -295,6 +473,13 @@ public class BinaryFormatter extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AssemblyFormat.
+     *
+     * @param AssemblyFormat the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.AssemblyFormat" target="_top">.NET documentation</a>
+     */
     public void setAssemblyFormat(FormatterAssemblyStyle AssemblyFormat) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -305,6 +490,13 @@ public class BinaryFormatter extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TypeFormat.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.TypeFormat" target="_top">.NET documentation</a>
+     */
     public FormatterTypeStyle getTypeFormat() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -320,6 +512,13 @@ public class BinaryFormatter extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TypeFormat.
+     *
+     * @param TypeFormat the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.TypeFormat" target="_top">.NET documentation</a>
+     */
     public void setTypeFormat(FormatterTypeStyle TypeFormat) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -330,6 +529,13 @@ public class BinaryFormatter extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FilterLevel.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.FilterLevel" target="_top">.NET documentation</a>
+     */
     public TypeFilterLevel getFilterLevel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -345,6 +551,13 @@ public class BinaryFormatter extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property FilterLevel.
+     *
+     * @param FilterLevel the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.FilterLevel" target="_top">.NET documentation</a>
+     */
     public void setFilterLevel(TypeFilterLevel FilterLevel) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -355,6 +568,13 @@ public class BinaryFormatter extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SurrogateSelector.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.SurrogateSelector" target="_top">.NET documentation</a>
+     */
     public ISurrogateSelector getSurrogateSelector() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -370,6 +590,13 @@ public class BinaryFormatter extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SurrogateSelector.
+     *
+     * @param SurrogateSelector the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.SurrogateSelector" target="_top">.NET documentation</a>
+     */
     public void setSurrogateSelector(ISurrogateSelector SurrogateSelector) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -380,6 +607,13 @@ public class BinaryFormatter extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Binder.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Binder" target="_top">.NET documentation</a>
+     */
     public SerializationBinder getBinder() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -395,6 +629,13 @@ public class BinaryFormatter extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Binder.
+     *
+     * @param Binder the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Binder" target="_top">.NET documentation</a>
+     */
     public void setBinder(SerializationBinder Binder) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -405,6 +646,13 @@ public class BinaryFormatter extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Context.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Context" target="_top">.NET documentation</a>
+     */
     public StreamingContext getContext() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -420,6 +668,13 @@ public class BinaryFormatter extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Context.
+     *
+     * @param Context the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Context" target="_top">.NET documentation</a>
+     */
     public void setContext(StreamingContext Context) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -102,7 +102,10 @@ public class RouteData extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public RouteData(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,14 @@ public class RouteData extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Routing.RouteData.-ctor" target="_top">.NET documentation</a>
+     */
     public RouteData() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
@@ -159,6 +170,16 @@ public class RouteData extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param route the argument of type {@code RouteBase}
+     * @param routeHandler the argument of type {@code IRouteHandler}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Routing.RouteData.-ctor" target="_top">.NET documentation</a>
+     */
     public RouteData(RouteBase route, IRouteHandler routeHandler) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
@@ -173,6 +194,28 @@ public class RouteData extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetRequiredString.
+     *
+     * @param valueName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Routing.RouteData.GetRequiredString" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetRequiredString(java.lang.String valueName) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -191,6 +234,13 @@ public class RouteData extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property RouteHandler.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Routing.RouteData.RouteHandler" target="_top">.NET documentation</a>
+     */
     public IRouteHandler getRouteHandler() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,6 +256,13 @@ public class RouteData extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RouteHandler.
+     *
+     * @param RouteHandler the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Routing.RouteData.RouteHandler" target="_top">.NET documentation</a>
+     */
     public void setRouteHandler(IRouteHandler RouteHandler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +273,13 @@ public class RouteData extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Route.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Routing.RouteData.Route" target="_top">.NET documentation</a>
+     */
     public RouteBase getRoute() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -231,6 +295,13 @@ public class RouteData extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Route.
+     *
+     * @param Route the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Routing.RouteData.Route" target="_top">.NET documentation</a>
+     */
     public void setRoute(RouteBase Route) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -241,6 +312,13 @@ public class RouteData extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DataTokens.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Routing.RouteData.DataTokens" target="_top">.NET documentation</a>
+     */
     public RouteValueDictionary getDataTokens() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -256,6 +334,13 @@ public class RouteData extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Values.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Routing.RouteData.Values" target="_top">.NET documentation</a>
+     */
     public RouteValueDictionary getValues() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

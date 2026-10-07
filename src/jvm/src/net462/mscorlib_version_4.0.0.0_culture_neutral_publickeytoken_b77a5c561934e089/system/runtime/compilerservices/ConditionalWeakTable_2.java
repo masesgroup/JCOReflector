@@ -98,7 +98,10 @@ public class ConditionalWeakTable_2<TKey extends IJCOBridgeReflected, TValue ext
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ConditionalWeakTable_2(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -145,6 +148,13 @@ public class ConditionalWeakTable_2<TKey extends IJCOBridgeReflected, TValue ext
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.ConditionalWeakTable-2.-ctor" target="_top">.NET documentation</a>
+     */
     public ConditionalWeakTable_2() throws Throwable, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
@@ -161,6 +171,17 @@ public class ConditionalWeakTable_2<TKey extends IJCOBridgeReflected, TValue ext
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Remove.
+     *
+     * @param key the argument of type {@code TKey}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.ConditionalWeakTable-2.Remove" target="_top">.NET documentation</a>
+     */
     public boolean Remove(TKey key) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -175,6 +196,18 @@ public class ConditionalWeakTable_2<TKey extends IJCOBridgeReflected, TValue ext
         }
     }
 
+    /**
+     * Invokes the .NET member TryGetValue.
+     *
+     * @param key the argument of type {@code TKey}
+     * @param value the argument of type {@code JCORefOut<TValue>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.ConditionalWeakTable-2.TryGetValue" target="_top">.NET documentation</a>
+     */
     public boolean TryGetValue(TKey key, JCORefOut<TValue> value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +222,21 @@ public class ConditionalWeakTable_2<TKey extends IJCOBridgeReflected, TValue ext
         }
     }
 
+    /**
+     * Invokes the .NET member GetOrCreateValue.
+     *
+     * @param key the argument of type {@code TKey}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.ConditionalWeakTable-2.GetOrCreateValue" target="_top">.NET documentation</a>
+     */
     public TValue GetOrCreateValue(TKey key) throws Throwable, system.MissingMethodException, system.InvalidOperationException, system.ArgumentException, system.ArgumentNullException, system.security.SecurityException, system.reflection.TargetInvocationException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +251,17 @@ public class ConditionalWeakTable_2<TKey extends IJCOBridgeReflected, TValue ext
         }
     }
 
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param key the argument of type {@code TKey}
+     * @param value the argument of type {@code TValue}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.ConditionalWeakTable-2.Add" target="_top">.NET documentation</a>
+     */
     public void Add(TKey key, TValue value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

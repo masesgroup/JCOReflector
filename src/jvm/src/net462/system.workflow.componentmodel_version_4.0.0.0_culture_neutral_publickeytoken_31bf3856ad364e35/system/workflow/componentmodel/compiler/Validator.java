@@ -103,7 +103,10 @@ public class Validator extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Validator(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,12 @@ public class Validator extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.Validator.-ctor" target="_top">.NET documentation</a>
+     */
     public Validator() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +173,16 @@ public class Validator extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ValidateActivityChange.
+     *
+     * @param activity the argument of type {@code Activity}
+     * @param action the argument of type {@code ActivityChangeAction}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.Validator.ValidateActivityChange" target="_top">.NET documentation</a>
+     */
     public ValidationError ValidateActivityChange(Activity activity, ActivityChangeAction action) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -179,6 +198,16 @@ public class Validator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Validate.
+     *
+     * @param manager the argument of type {@code ValidationManager}
+     * @param obj the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.Validator.Validate" target="_top">.NET documentation</a>
+     */
     public ValidationErrorCollection Validate(ValidationManager manager, NetObject obj) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +223,27 @@ public class Validator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ValidateProperties.
+     *
+     * @param manager the argument of type {@code ValidationManager}
+     * @param obj the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.Validator.ValidateProperties" target="_top">.NET documentation</a>
+     */
     public ValidationErrorCollection ValidateProperties(ValidationManager manager, NetObject obj) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -98,7 +98,10 @@ public class BaseCompatibilityPreferences extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public BaseCompatibilityPreferences(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,13 @@ public class BaseCompatibilityPreferences extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property FlowDispatcherSynchronizationContextPriority.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.BaseCompatibilityPreferences.FlowDispatcherSynchronizationContextPriority" target="_top">.NET documentation</a>
+     */
     public static boolean getFlowDispatcherSynchronizationContextPriority() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -169,6 +179,24 @@ public class BaseCompatibilityPreferences extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property FlowDispatcherSynchronizationContextPriority.
+     *
+     * @param FlowDispatcherSynchronizationContextPriority the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.BaseCompatibilityPreferences.FlowDispatcherSynchronizationContextPriority" target="_top">.NET documentation</a>
+     */
     public static void setFlowDispatcherSynchronizationContextPriority(boolean FlowDispatcherSynchronizationContextPriority) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -179,6 +207,13 @@ public class BaseCompatibilityPreferences extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property InlineDispatcherSynchronizationContextSend.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.BaseCompatibilityPreferences.InlineDispatcherSynchronizationContextSend" target="_top">.NET documentation</a>
+     */
     public static boolean getInlineDispatcherSynchronizationContextSend() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -193,6 +228,24 @@ public class BaseCompatibilityPreferences extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property InlineDispatcherSynchronizationContextSend.
+     *
+     * @param InlineDispatcherSynchronizationContextSend the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.BaseCompatibilityPreferences.InlineDispatcherSynchronizationContextSend" target="_top">.NET documentation</a>
+     */
     public static void setInlineDispatcherSynchronizationContextSend(boolean InlineDispatcherSynchronizationContextSend) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -203,6 +256,13 @@ public class BaseCompatibilityPreferences extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ReuseDispatcherSynchronizationContextInstance.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.BaseCompatibilityPreferences.ReuseDispatcherSynchronizationContextInstance" target="_top">.NET documentation</a>
+     */
     public static boolean getReuseDispatcherSynchronizationContextInstance() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -217,6 +277,24 @@ public class BaseCompatibilityPreferences extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ReuseDispatcherSynchronizationContextInstance.
+     *
+     * @param ReuseDispatcherSynchronizationContextInstance the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.BaseCompatibilityPreferences.ReuseDispatcherSynchronizationContextInstance" target="_top">.NET documentation</a>
+     */
     public static void setReuseDispatcherSynchronizationContextInstance(boolean ReuseDispatcherSynchronizationContextInstance) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

@@ -100,7 +100,10 @@ public class Namespace extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Namespace(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,15 @@ public class Namespace extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetNamespace.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param engine the argument of type {@code VsaEngine}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Namespace.GetNamespace" target="_top">.NET documentation</a>
+     */
     public static Namespace GetNamespace(java.lang.String name, VsaEngine engine) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

@@ -103,7 +103,10 @@ public class ReflectionPermissionAttribute extends system.security.permissions.C
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ReflectionPermissionAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,13 @@ public class ReflectionPermissionAttribute extends system.security.permissions.C
     public ReflectionPermissionAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param action the argument of type {@code SecurityAction}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.ReflectionPermissionAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public ReflectionPermissionAttribute(SecurityAction action) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +178,13 @@ public class ReflectionPermissionAttribute extends system.security.permissions.C
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CreatePermission.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.ReflectionPermissionAttribute.CreatePermission" target="_top">.NET documentation</a>
+     */
     public IPermission CreatePermission() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +204,13 @@ public class ReflectionPermissionAttribute extends system.security.permissions.C
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property MemberAccess.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.ReflectionPermissionAttribute.MemberAccess" target="_top">.NET documentation</a>
+     */
     public boolean getMemberAccess() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +225,13 @@ public class ReflectionPermissionAttribute extends system.security.permissions.C
         }
     }
 
+    /**
+     * Sets the value of the .NET property MemberAccess.
+     *
+     * @param MemberAccess the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.ReflectionPermissionAttribute.MemberAccess" target="_top">.NET documentation</a>
+     */
     public void setMemberAccess(boolean MemberAccess) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -211,6 +242,13 @@ public class ReflectionPermissionAttribute extends system.security.permissions.C
         }
     }
 
+    /**
+     * Gets the value of the .NET property ReflectionEmit.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.ReflectionPermissionAttribute.ReflectionEmit" target="_top">.NET documentation</a>
+     */
     public boolean getReflectionEmit() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -225,6 +263,13 @@ public class ReflectionPermissionAttribute extends system.security.permissions.C
         }
     }
 
+    /**
+     * Sets the value of the .NET property ReflectionEmit.
+     *
+     * @param ReflectionEmit the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.ReflectionPermissionAttribute.ReflectionEmit" target="_top">.NET documentation</a>
+     */
     public void setReflectionEmit(boolean ReflectionEmit) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -235,6 +280,13 @@ public class ReflectionPermissionAttribute extends system.security.permissions.C
         }
     }
 
+    /**
+     * Gets the value of the .NET property RestrictedMemberAccess.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.ReflectionPermissionAttribute.RestrictedMemberAccess" target="_top">.NET documentation</a>
+     */
     public boolean getRestrictedMemberAccess() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -249,6 +301,13 @@ public class ReflectionPermissionAttribute extends system.security.permissions.C
         }
     }
 
+    /**
+     * Sets the value of the .NET property RestrictedMemberAccess.
+     *
+     * @param RestrictedMemberAccess the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.ReflectionPermissionAttribute.RestrictedMemberAccess" target="_top">.NET documentation</a>
+     */
     public void setRestrictedMemberAccess(boolean RestrictedMemberAccess) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -259,6 +318,13 @@ public class ReflectionPermissionAttribute extends system.security.permissions.C
         }
     }
 
+    /**
+     * Gets the value of the .NET property TypeInformation.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.ReflectionPermissionAttribute.TypeInformation" target="_top">.NET documentation</a>
+     */
     public boolean getTypeInformation() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -273,6 +339,13 @@ public class ReflectionPermissionAttribute extends system.security.permissions.C
         }
     }
 
+    /**
+     * Sets the value of the .NET property TypeInformation.
+     *
+     * @param TypeInformation the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.ReflectionPermissionAttribute.TypeInformation" target="_top">.NET documentation</a>
+     */
     public void setTypeInformation(boolean TypeInformation) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -283,6 +356,13 @@ public class ReflectionPermissionAttribute extends system.security.permissions.C
         }
     }
 
+    /**
+     * Gets the value of the .NET property Flags.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.ReflectionPermissionAttribute.Flags" target="_top">.NET documentation</a>
+     */
     public ReflectionPermissionFlag getFlags() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -298,6 +378,13 @@ public class ReflectionPermissionAttribute extends system.security.permissions.C
         }
     }
 
+    /**
+     * Sets the value of the .NET property Flags.
+     *
+     * @param Flags the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.ReflectionPermissionAttribute.Flags" target="_top">.NET documentation</a>
+     */
     public void setFlags(ReflectionPermissionFlag Flags) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

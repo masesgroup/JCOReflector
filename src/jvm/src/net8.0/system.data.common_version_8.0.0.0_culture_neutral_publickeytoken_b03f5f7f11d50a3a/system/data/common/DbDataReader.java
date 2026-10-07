@@ -111,7 +111,10 @@ public class DbDataReader extends system.MarshalByRefObject implements AutoClose
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DbDataReader(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -164,6 +167,14 @@ public class DbDataReader extends system.MarshalByRefObject implements AutoClose
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetBoolean.
+     *
+     * @param ordinal the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbDataReader.GetBoolean" target="_top">.NET documentation</a>
+     */
     public boolean GetBoolean(int ordinal) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,6 +189,14 @@ public class DbDataReader extends system.MarshalByRefObject implements AutoClose
         }
     }
 
+    /**
+     * Invokes the .NET member IsDBNull.
+     *
+     * @param ordinal the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbDataReader.IsDBNull" target="_top">.NET documentation</a>
+     */
     public boolean IsDBNull(int ordinal) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -192,6 +211,13 @@ public class DbDataReader extends system.MarshalByRefObject implements AutoClose
         }
     }
 
+    /**
+     * Invokes the .NET member NextResult.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbDataReader.NextResult" target="_top">.NET documentation</a>
+     */
     public boolean NextResult() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,6 +232,13 @@ public class DbDataReader extends system.MarshalByRefObject implements AutoClose
         }
     }
 
+    /**
+     * Invokes the .NET member Read.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbDataReader.Read" target="_top">.NET documentation</a>
+     */
     public boolean Read() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -220,6 +253,14 @@ public class DbDataReader extends system.MarshalByRefObject implements AutoClose
         }
     }
 
+    /**
+     * Invokes the .NET member GetByte.
+     *
+     * @param ordinal the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbDataReader.GetByte" target="_top">.NET documentation</a>
+     */
     public byte GetByte(int ordinal) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -260,6 +301,14 @@ public class DbDataReader extends system.MarshalByRefObject implements AutoClose
         }
     }
 
+    /**
+     * Invokes the .NET member GetChar.
+     *
+     * @param ordinal the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbDataReader.GetChar" target="_top">.NET documentation</a>
+     */
     public char GetChar(int ordinal) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -274,6 +323,14 @@ public class DbDataReader extends system.MarshalByRefObject implements AutoClose
         }
     }
 
+    /**
+     * Invokes the .NET member GetDouble.
+     *
+     * @param ordinal the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbDataReader.GetDouble" target="_top">.NET documentation</a>
+     */
     public double GetDouble(int ordinal) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -314,6 +371,14 @@ public class DbDataReader extends system.MarshalByRefObject implements AutoClose
         }
     }
 
+    /**
+     * Invokes the .NET member GetInt16.
+     *
+     * @param ordinal the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbDataReader.GetInt16" target="_top">.NET documentation</a>
+     */
     public short GetInt16(int ordinal) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -354,6 +419,14 @@ public class DbDataReader extends system.MarshalByRefObject implements AutoClose
         }
     }
 
+    /**
+     * Invokes the .NET member GetInt32.
+     *
+     * @param ordinal the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbDataReader.GetInt32" target="_top">.NET documentation</a>
+     */
     public int GetInt32(int ordinal) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -394,6 +467,14 @@ public class DbDataReader extends system.MarshalByRefObject implements AutoClose
         }
     }
 
+    /**
+     * Invokes the .NET member GetOrdinal.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbDataReader.GetOrdinal" target="_top">.NET documentation</a>
+     */
     public int GetOrdinal(java.lang.String name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -434,6 +515,14 @@ public class DbDataReader extends system.MarshalByRefObject implements AutoClose
         }
     }
 
+    /**
+     * Invokes the .NET member GetProviderSpecificValues.
+     *
+     * @param values the argument of type {@code NetObject[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbDataReader.GetProviderSpecificValues" target="_top">.NET documentation</a>
+     */
     public int GetProviderSpecificValues(NetObject[] values) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -474,6 +563,14 @@ public class DbDataReader extends system.MarshalByRefObject implements AutoClose
         }
     }
 
+    /**
+     * Invokes the .NET member GetValues.
+     *
+     * @param values the argument of type {@code NetObject[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbDataReader.GetValues" target="_top">.NET documentation</a>
+     */
     public int GetValues(NetObject[] values) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -514,6 +611,18 @@ public class DbDataReader extends system.MarshalByRefObject implements AutoClose
         }
     }
 
+    /**
+     * Invokes the .NET member GetBytes.
+     *
+     * @param ordinal the argument of type {@code int}
+     * @param dataOffset the argument of type {@code long}
+     * @param buffer the argument of type {@code byte[]}
+     * @param bufferOffset the argument of type {@code int}
+     * @param length the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbDataReader.GetBytes" target="_top">.NET documentation</a>
+     */
     public long GetBytes(int ordinal, long dataOffset, byte[] buffer, int bufferOffset, int length) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -554,6 +663,18 @@ public class DbDataReader extends system.MarshalByRefObject implements AutoClose
         }
     }
 
+    /**
+     * Invokes the .NET member GetBytes.
+     *
+     * @param dupParam0 the argument of type {@code int}
+     * @param dupParam1 the argument of type {@code long}
+     * @param dupParam2 the argument of type {@code JCORefOut}
+     * @param dupParam3 the argument of type {@code int}
+     * @param dupParam4 the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbDataReader.GetBytes" target="_top">.NET documentation</a>
+     */
     public long GetBytes(int dupParam0, long dupParam1, JCORefOut dupParam2, int dupParam3, int dupParam4) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -594,6 +715,18 @@ public class DbDataReader extends system.MarshalByRefObject implements AutoClose
         }
     }
 
+    /**
+     * Invokes the .NET member GetChars.
+     *
+     * @param ordinal the argument of type {@code int}
+     * @param dataOffset the argument of type {@code long}
+     * @param buffer the argument of type {@code char[]}
+     * @param bufferOffset the argument of type {@code int}
+     * @param length the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbDataReader.GetChars" target="_top">.NET documentation</a>
+     */
     public long GetChars(int ordinal, long dataOffset, char[] buffer, int bufferOffset, int length) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -634,6 +767,18 @@ public class DbDataReader extends system.MarshalByRefObject implements AutoClose
         }
     }
 
+    /**
+     * Invokes the .NET member GetChars.
+     *
+     * @param dupParam0 the argument of type {@code int}
+     * @param dupParam1 the argument of type {@code long}
+     * @param dupParam2 the argument of type {@code JCORefOut}
+     * @param dupParam3 the argument of type {@code int}
+     * @param dupParam4 the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbDataReader.GetChars" target="_top">.NET documentation</a>
+     */
     public long GetChars(int dupParam0, long dupParam1, JCORefOut dupParam2, int dupParam3, int dupParam4) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -674,6 +819,14 @@ public class DbDataReader extends system.MarshalByRefObject implements AutoClose
         }
     }
 
+    /**
+     * Invokes the .NET member GetInt64.
+     *
+     * @param ordinal the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbDataReader.GetInt64" target="_top">.NET documentation</a>
+     */
     public long GetInt64(int ordinal) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -714,6 +867,14 @@ public class DbDataReader extends system.MarshalByRefObject implements AutoClose
         }
     }
 
+    /**
+     * Invokes the .NET member GetFloat.
+     *
+     * @param ordinal the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbDataReader.GetFloat" target="_top">.NET documentation</a>
+     */
     public Single GetFloat(int ordinal) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -729,6 +890,22 @@ public class DbDataReader extends system.MarshalByRefObject implements AutoClose
         }
     }
 
+    /**
+     * Invokes the .NET member GetData.
+     *
+     * @param ordinal the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbDataReader.GetData" target="_top">.NET documentation</a>
+     */
     public DbDataReader GetData(int ordinal) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -744,6 +921,22 @@ public class DbDataReader extends system.MarshalByRefObject implements AutoClose
         }
     }
 
+    /**
+     * Invokes the .NET member GetSchemaTable.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbDataReader.GetSchemaTable" target="_top">.NET documentation</a>
+     */
     public DataTable GetSchemaTable() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -759,6 +952,14 @@ public class DbDataReader extends system.MarshalByRefObject implements AutoClose
         }
     }
 
+    /**
+     * Invokes the .NET member GetDateTime.
+     *
+     * @param ordinal the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbDataReader.GetDateTime" target="_top">.NET documentation</a>
+     */
     public DateTime GetDateTime(int ordinal) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -774,6 +975,14 @@ public class DbDataReader extends system.MarshalByRefObject implements AutoClose
         }
     }
 
+    /**
+     * Invokes the .NET member GetDecimal.
+     *
+     * @param ordinal the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbDataReader.GetDecimal" target="_top">.NET documentation</a>
+     */
     public Decimal GetDecimal(int ordinal) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -789,6 +998,14 @@ public class DbDataReader extends system.MarshalByRefObject implements AutoClose
         }
     }
 
+    /**
+     * Invokes the .NET member GetGuid.
+     *
+     * @param ordinal the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbDataReader.GetGuid" target="_top">.NET documentation</a>
+     */
     public Guid GetGuid(int ordinal) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -804,6 +1021,22 @@ public class DbDataReader extends system.MarshalByRefObject implements AutoClose
         }
     }
 
+    /**
+     * Invokes the .NET member GetStream.
+     *
+     * @param ordinal the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbDataReader.GetStream" target="_top">.NET documentation</a>
+     */
     public Stream GetStream(int ordinal) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.FormatException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -819,6 +1052,23 @@ public class DbDataReader extends system.MarshalByRefObject implements AutoClose
         }
     }
 
+    /**
+     * Invokes the .NET member GetTextReader.
+     *
+     * @param ordinal the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbDataReader.GetTextReader" target="_top">.NET documentation</a>
+     */
     public TextReader GetTextReader(int ordinal) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -834,6 +1084,14 @@ public class DbDataReader extends system.MarshalByRefObject implements AutoClose
         }
     }
 
+    /**
+     * Invokes the .NET member GetProviderSpecificValue.
+     *
+     * @param ordinal the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbDataReader.GetProviderSpecificValue" target="_top">.NET documentation</a>
+     */
     public NetObject GetProviderSpecificValue(int ordinal) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -849,6 +1107,14 @@ public class DbDataReader extends system.MarshalByRefObject implements AutoClose
         }
     }
 
+    /**
+     * Invokes the .NET member GetValue.
+     *
+     * @param ordinal the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbDataReader.GetValue" target="_top">.NET documentation</a>
+     */
     public NetObject GetValue(int ordinal) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -864,6 +1130,14 @@ public class DbDataReader extends system.MarshalByRefObject implements AutoClose
         }
     }
 
+    /**
+     * Invokes the .NET member GetDataTypeName.
+     *
+     * @param ordinal the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbDataReader.GetDataTypeName" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetDataTypeName(int ordinal) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -878,6 +1152,14 @@ public class DbDataReader extends system.MarshalByRefObject implements AutoClose
         }
     }
 
+    /**
+     * Invokes the .NET member GetName.
+     *
+     * @param ordinal the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbDataReader.GetName" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetName(int ordinal) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -892,6 +1174,14 @@ public class DbDataReader extends system.MarshalByRefObject implements AutoClose
         }
     }
 
+    /**
+     * Invokes the .NET member GetString.
+     *
+     * @param ordinal the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbDataReader.GetString" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetString(int ordinal) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -906,6 +1196,23 @@ public class DbDataReader extends system.MarshalByRefObject implements AutoClose
         }
     }
 
+    /**
+     * Invokes the .NET member CloseAsync.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbDataReader.CloseAsync" target="_top">.NET documentation</a>
+     */
     public Task CloseAsync() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -921,6 +1228,22 @@ public class DbDataReader extends system.MarshalByRefObject implements AutoClose
         }
     }
 
+    /**
+     * Invokes the .NET member IsDBNullAsync.
+     *
+     * @param ordinal the argument of type {@code int}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbDataReader.IsDBNullAsync" target="_top">.NET documentation</a>
+     */
     public Task_1 IsDBNullAsync(int ordinal, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -936,6 +1259,21 @@ public class DbDataReader extends system.MarshalByRefObject implements AutoClose
         }
     }
 
+    /**
+     * Invokes the .NET member IsDBNullAsync.
+     *
+     * @param ordinal the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbDataReader.IsDBNullAsync" target="_top">.NET documentation</a>
+     */
     public Task_1 IsDBNullAsync(int ordinal) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -951,6 +1289,20 @@ public class DbDataReader extends system.MarshalByRefObject implements AutoClose
         }
     }
 
+    /**
+     * Invokes the .NET member NextResultAsync.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbDataReader.NextResultAsync" target="_top">.NET documentation</a>
+     */
     public Task_1 NextResultAsync() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -966,6 +1318,21 @@ public class DbDataReader extends system.MarshalByRefObject implements AutoClose
         }
     }
 
+    /**
+     * Invokes the .NET member NextResultAsync.
+     *
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbDataReader.NextResultAsync" target="_top">.NET documentation</a>
+     */
     public Task_1 NextResultAsync(CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -981,6 +1348,20 @@ public class DbDataReader extends system.MarshalByRefObject implements AutoClose
         }
     }
 
+    /**
+     * Invokes the .NET member ReadAsync.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbDataReader.ReadAsync" target="_top">.NET documentation</a>
+     */
     public Task_1 ReadAsync() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -996,6 +1377,21 @@ public class DbDataReader extends system.MarshalByRefObject implements AutoClose
         }
     }
 
+    /**
+     * Invokes the .NET member ReadAsync.
+     *
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbDataReader.ReadAsync" target="_top">.NET documentation</a>
+     */
     public Task_1 ReadAsync(CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1011,6 +1407,23 @@ public class DbDataReader extends system.MarshalByRefObject implements AutoClose
         }
     }
 
+    /**
+     * Invokes the .NET member GetColumnSchemaAsync.
+     *
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbDataReader.GetColumnSchemaAsync" target="_top">.NET documentation</a>
+     */
     public Task_1 GetColumnSchemaAsync(CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1026,6 +1439,24 @@ public class DbDataReader extends system.MarshalByRefObject implements AutoClose
         }
     }
 
+    /**
+     * Invokes the .NET member GetSchemaTableAsync.
+     *
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbDataReader.GetSchemaTableAsync" target="_top">.NET documentation</a>
+     */
     public Task_1 GetSchemaTableAsync(CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1041,6 +1472,23 @@ public class DbDataReader extends system.MarshalByRefObject implements AutoClose
         }
     }
 
+    /**
+     * Invokes the .NET member GetFieldValueAsync.
+     *
+     * @param <T> the type of the generic argument T
+     * @param ordinal the argument of type {@code int}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbDataReader.GetFieldValueAsync" target="_top">.NET documentation</a>
+     */
     public <T extends IJCOBridgeReflected> Task_1 GetFieldValueAsync(int ordinal, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1056,6 +1504,22 @@ public class DbDataReader extends system.MarshalByRefObject implements AutoClose
         }
     }
 
+    /**
+     * Invokes the .NET member GetFieldValueAsync.
+     *
+     * @param <T> the type of the generic argument T
+     * @param ordinal the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbDataReader.GetFieldValueAsync" target="_top">.NET documentation</a>
+     */
     public <T extends IJCOBridgeReflected> Task_1 GetFieldValueAsync(int ordinal) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1071,6 +1535,13 @@ public class DbDataReader extends system.MarshalByRefObject implements AutoClose
         }
     }
 
+    /**
+     * Invokes the .NET member DisposeAsync.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbDataReader.DisposeAsync" target="_top">.NET documentation</a>
+     */
     public ValueTask DisposeAsync() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1086,6 +1557,14 @@ public class DbDataReader extends system.MarshalByRefObject implements AutoClose
         }
     }
 
+    /**
+     * Invokes the .NET member GetFieldType.
+     *
+     * @param ordinal the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbDataReader.GetFieldType" target="_top">.NET documentation</a>
+     */
     public NetType GetFieldType(int ordinal) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1101,6 +1580,14 @@ public class DbDataReader extends system.MarshalByRefObject implements AutoClose
         }
     }
 
+    /**
+     * Invokes the .NET member GetProviderSpecificFieldType.
+     *
+     * @param ordinal the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbDataReader.GetProviderSpecificFieldType" target="_top">.NET documentation</a>
+     */
     public NetType GetProviderSpecificFieldType(int ordinal) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1116,6 +1603,12 @@ public class DbDataReader extends system.MarshalByRefObject implements AutoClose
         }
     }
 
+    /**
+     * Invokes the .NET member Close.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbDataReader.Close" target="_top">.NET documentation</a>
+     */
     public void Close() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1126,6 +1619,12 @@ public class DbDataReader extends system.MarshalByRefObject implements AutoClose
         }
     }
 
+    /**
+     * Invokes the .NET member Dispose.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbDataReader.Dispose" target="_top">.NET documentation</a>
+     */
     public void Dispose() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1153,6 +1652,13 @@ public class DbDataReader extends system.MarshalByRefObject implements AutoClose
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property HasRows.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbDataReader.HasRows" target="_top">.NET documentation</a>
+     */
     public boolean getHasRows() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1167,6 +1673,13 @@ public class DbDataReader extends system.MarshalByRefObject implements AutoClose
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsClosed.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbDataReader.IsClosed" target="_top">.NET documentation</a>
+     */
     public boolean getIsClosed() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1181,6 +1694,13 @@ public class DbDataReader extends system.MarshalByRefObject implements AutoClose
         }
     }
 
+    /**
+     * Gets the value of the .NET property Depth.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbDataReader.Depth" target="_top">.NET documentation</a>
+     */
     public int getDepth() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1221,6 +1741,13 @@ public class DbDataReader extends system.MarshalByRefObject implements AutoClose
         }
     }
 
+    /**
+     * Gets the value of the .NET property FieldCount.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbDataReader.FieldCount" target="_top">.NET documentation</a>
+     */
     public int getFieldCount() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1261,6 +1788,13 @@ public class DbDataReader extends system.MarshalByRefObject implements AutoClose
         }
     }
 
+    /**
+     * Gets the value of the .NET property RecordsAffected.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbDataReader.RecordsAffected" target="_top">.NET documentation</a>
+     */
     public int getRecordsAffected() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1301,6 +1835,13 @@ public class DbDataReader extends system.MarshalByRefObject implements AutoClose
         }
     }
 
+    /**
+     * Gets the value of the .NET property VisibleFieldCount.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbDataReader.VisibleFieldCount" target="_top">.NET documentation</a>
+     */
     public int getVisibleFieldCount() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

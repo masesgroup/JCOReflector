@@ -98,7 +98,10 @@ public class EventSourceCreationData extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public EventSourceCreationData(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,14 @@ public class EventSourceCreationData extends NetObject  {
     public EventSourceCreationData() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param source the argument of type {@code java.lang.String}
+     * @param logName the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.EventSourceCreationData.-ctor" target="_top">.NET documentation</a>
+     */
     public EventSourceCreationData(java.lang.String source, java.lang.String logName) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +178,13 @@ public class EventSourceCreationData extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CategoryCount.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.EventSourceCreationData.CategoryCount" target="_top">.NET documentation</a>
+     */
     public int getCategoryCount() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +225,14 @@ public class EventSourceCreationData extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CategoryCount.
+     *
+     * @param CategoryCount the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.EventSourceCreationData.CategoryCount" target="_top">.NET documentation</a>
+     */
     public void setCategoryCount(int CategoryCount) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -217,6 +243,13 @@ public class EventSourceCreationData extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CategoryResourceFile.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.EventSourceCreationData.CategoryResourceFile" target="_top">.NET documentation</a>
+     */
     public java.lang.String getCategoryResourceFile() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -231,6 +264,13 @@ public class EventSourceCreationData extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CategoryResourceFile.
+     *
+     * @param CategoryResourceFile the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.EventSourceCreationData.CategoryResourceFile" target="_top">.NET documentation</a>
+     */
     public void setCategoryResourceFile(java.lang.String CategoryResourceFile) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -241,6 +281,13 @@ public class EventSourceCreationData extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LogName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.EventSourceCreationData.LogName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getLogName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -255,6 +302,13 @@ public class EventSourceCreationData extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property LogName.
+     *
+     * @param LogName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.EventSourceCreationData.LogName" target="_top">.NET documentation</a>
+     */
     public void setLogName(java.lang.String LogName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -265,6 +319,13 @@ public class EventSourceCreationData extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MachineName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.EventSourceCreationData.MachineName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getMachineName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -279,6 +340,13 @@ public class EventSourceCreationData extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MachineName.
+     *
+     * @param MachineName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.EventSourceCreationData.MachineName" target="_top">.NET documentation</a>
+     */
     public void setMachineName(java.lang.String MachineName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -289,6 +357,13 @@ public class EventSourceCreationData extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MessageResourceFile.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.EventSourceCreationData.MessageResourceFile" target="_top">.NET documentation</a>
+     */
     public java.lang.String getMessageResourceFile() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -303,6 +378,13 @@ public class EventSourceCreationData extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MessageResourceFile.
+     *
+     * @param MessageResourceFile the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.EventSourceCreationData.MessageResourceFile" target="_top">.NET documentation</a>
+     */
     public void setMessageResourceFile(java.lang.String MessageResourceFile) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -313,6 +395,13 @@ public class EventSourceCreationData extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ParameterResourceFile.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.EventSourceCreationData.ParameterResourceFile" target="_top">.NET documentation</a>
+     */
     public java.lang.String getParameterResourceFile() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -327,6 +416,13 @@ public class EventSourceCreationData extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ParameterResourceFile.
+     *
+     * @param ParameterResourceFile the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.EventSourceCreationData.ParameterResourceFile" target="_top">.NET documentation</a>
+     */
     public void setParameterResourceFile(java.lang.String ParameterResourceFile) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -337,6 +433,13 @@ public class EventSourceCreationData extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Source.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.EventSourceCreationData.Source" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSource() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -351,6 +454,13 @@ public class EventSourceCreationData extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Source.
+     *
+     * @param Source the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.EventSourceCreationData.Source" target="_top">.NET documentation</a>
+     */
     public void setSource(java.lang.String Source) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

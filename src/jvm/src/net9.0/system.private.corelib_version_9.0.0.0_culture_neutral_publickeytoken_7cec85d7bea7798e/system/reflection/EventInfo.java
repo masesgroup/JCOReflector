@@ -102,7 +102,10 @@ public class EventInfo extends system.reflection.MemberInfo  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public EventInfo(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,13 @@ public class EventInfo extends system.reflection.MemberInfo  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetAddMethod.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.EventInfo.GetAddMethod" target="_top">.NET documentation</a>
+     */
     public MethodInfo GetAddMethod() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -170,6 +180,14 @@ public class EventInfo extends system.reflection.MemberInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetAddMethod.
+     *
+     * @param nonPublic the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.EventInfo.GetAddMethod" target="_top">.NET documentation</a>
+     */
     public MethodInfo GetAddMethod(boolean nonPublic) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -185,6 +203,13 @@ public class EventInfo extends system.reflection.MemberInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetRaiseMethod.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.EventInfo.GetRaiseMethod" target="_top">.NET documentation</a>
+     */
     public MethodInfo GetRaiseMethod() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +225,14 @@ public class EventInfo extends system.reflection.MemberInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetRaiseMethod.
+     *
+     * @param nonPublic the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.EventInfo.GetRaiseMethod" target="_top">.NET documentation</a>
+     */
     public MethodInfo GetRaiseMethod(boolean nonPublic) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +248,13 @@ public class EventInfo extends system.reflection.MemberInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetRemoveMethod.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.EventInfo.GetRemoveMethod" target="_top">.NET documentation</a>
+     */
     public MethodInfo GetRemoveMethod() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -230,6 +270,14 @@ public class EventInfo extends system.reflection.MemberInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetRemoveMethod.
+     *
+     * @param nonPublic the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.EventInfo.GetRemoveMethod" target="_top">.NET documentation</a>
+     */
     public MethodInfo GetRemoveMethod(boolean nonPublic) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -245,6 +293,21 @@ public class EventInfo extends system.reflection.MemberInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetOtherMethods.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.EventInfo.GetOtherMethods" target="_top">.NET documentation</a>
+     */
     public MethodInfo[] GetOtherMethods() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -266,6 +329,24 @@ public class EventInfo extends system.reflection.MemberInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetOtherMethods.
+     *
+     * @param nonPublic the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.EventInfo.GetOtherMethods" target="_top">.NET documentation</a>
+     */
     public MethodInfo[] GetOtherMethods(boolean nonPublic) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -291,6 +372,19 @@ public class EventInfo extends system.reflection.MemberInfo  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsMulticast.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.EventInfo.IsMulticast" target="_top">.NET documentation</a>
+     */
     public boolean getIsMulticast() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -305,6 +399,13 @@ public class EventInfo extends system.reflection.MemberInfo  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsSpecialName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.EventInfo.IsSpecialName" target="_top">.NET documentation</a>
+     */
     public boolean getIsSpecialName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -319,6 +420,13 @@ public class EventInfo extends system.reflection.MemberInfo  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Attributes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.EventInfo.Attributes" target="_top">.NET documentation</a>
+     */
     public EventAttributes getAttributes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -334,6 +442,13 @@ public class EventInfo extends system.reflection.MemberInfo  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AddMethod.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.EventInfo.AddMethod" target="_top">.NET documentation</a>
+     */
     public MethodInfo getAddMethod() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -349,6 +464,13 @@ public class EventInfo extends system.reflection.MemberInfo  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RaiseMethod.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.EventInfo.RaiseMethod" target="_top">.NET documentation</a>
+     */
     public MethodInfo getRaiseMethod() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -364,6 +486,13 @@ public class EventInfo extends system.reflection.MemberInfo  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RemoveMethod.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.EventInfo.RemoveMethod" target="_top">.NET documentation</a>
+     */
     public MethodInfo getRemoveMethod() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -379,6 +508,22 @@ public class EventInfo extends system.reflection.MemberInfo  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EventHandlerType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.EventInfo.EventHandlerType" target="_top">.NET documentation</a>
+     */
     public NetType getEventHandlerType() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

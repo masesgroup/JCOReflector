@@ -114,7 +114,9 @@ public class ValueTaskSourceStatus extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
      */
     public ValueTaskSourceStatus(java.lang.Object instance) {
         super(instance);

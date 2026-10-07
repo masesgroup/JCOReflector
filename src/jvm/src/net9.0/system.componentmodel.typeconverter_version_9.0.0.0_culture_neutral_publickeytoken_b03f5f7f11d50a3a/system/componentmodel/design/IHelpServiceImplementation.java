@@ -102,7 +102,10 @@ public class IHelpServiceImplementation extends NetObject implements IHelpServic
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IHelpServiceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -144,6 +147,14 @@ public class IHelpServiceImplementation extends NetObject implements IHelpServic
 
     // Methods section
     
+    /**
+     * Invokes the .NET member CreateLocalContext.
+     *
+     * @param contextType the argument of type {@code HelpContextType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IHelpService.CreateLocalContext" target="_top">.NET documentation</a>
+     */
     public IHelpService CreateLocalContext(HelpContextType contextType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -159,6 +170,15 @@ public class IHelpServiceImplementation extends NetObject implements IHelpServic
         }
     }
 
+    /**
+     * Invokes the .NET member AddContextAttribute.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param value the argument of type {@code java.lang.String}
+     * @param keywordType the argument of type {@code HelpKeywordType}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IHelpService.AddContextAttribute" target="_top">.NET documentation</a>
+     */
     public void AddContextAttribute(java.lang.String name, java.lang.String value, HelpKeywordType keywordType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -169,6 +189,12 @@ public class IHelpServiceImplementation extends NetObject implements IHelpServic
         }
     }
 
+    /**
+     * Invokes the .NET member ClearContextAttributes.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IHelpService.ClearContextAttributes" target="_top">.NET documentation</a>
+     */
     public void ClearContextAttributes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -179,6 +205,14 @@ public class IHelpServiceImplementation extends NetObject implements IHelpServic
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveContextAttribute.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param value the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IHelpService.RemoveContextAttribute" target="_top">.NET documentation</a>
+     */
     public void RemoveContextAttribute(java.lang.String name, java.lang.String value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +223,13 @@ public class IHelpServiceImplementation extends NetObject implements IHelpServic
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveLocalContext.
+     *
+     * @param localContext the argument of type {@code IHelpService}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IHelpService.RemoveLocalContext" target="_top">.NET documentation</a>
+     */
     public void RemoveLocalContext(IHelpService localContext) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -199,6 +240,13 @@ public class IHelpServiceImplementation extends NetObject implements IHelpServic
         }
     }
 
+    /**
+     * Invokes the .NET member ShowHelpFromKeyword.
+     *
+     * @param helpKeyword the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IHelpService.ShowHelpFromKeyword" target="_top">.NET documentation</a>
+     */
     public void ShowHelpFromKeyword(java.lang.String helpKeyword) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -209,6 +257,13 @@ public class IHelpServiceImplementation extends NetObject implements IHelpServic
         }
     }
 
+    /**
+     * Invokes the .NET member ShowHelpFromUrl.
+     *
+     * @param helpUrl the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IHelpService.ShowHelpFromUrl" target="_top">.NET documentation</a>
+     */
     public void ShowHelpFromUrl(java.lang.String helpUrl) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

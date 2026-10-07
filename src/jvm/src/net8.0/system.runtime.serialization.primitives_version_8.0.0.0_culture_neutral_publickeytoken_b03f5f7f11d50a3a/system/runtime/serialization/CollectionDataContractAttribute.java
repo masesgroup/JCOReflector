@@ -99,7 +99,10 @@ public class CollectionDataContractAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CollectionDataContractAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class CollectionDataContractAttribute extends system.Attribute  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.CollectionDataContractAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public CollectionDataContractAttribute() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +173,13 @@ public class CollectionDataContractAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsItemNameSetExplicitly.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.CollectionDataContractAttribute.IsItemNameSetExplicitly" target="_top">.NET documentation</a>
+     */
     public boolean getIsItemNameSetExplicitly() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,6 +194,13 @@ public class CollectionDataContractAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsKeyNameSetExplicitly.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.CollectionDataContractAttribute.IsKeyNameSetExplicitly" target="_top">.NET documentation</a>
+     */
     public boolean getIsKeyNameSetExplicitly() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -192,6 +215,13 @@ public class CollectionDataContractAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsNameSetExplicitly.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.CollectionDataContractAttribute.IsNameSetExplicitly" target="_top">.NET documentation</a>
+     */
     public boolean getIsNameSetExplicitly() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,6 +236,13 @@ public class CollectionDataContractAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsNamespaceSetExplicitly.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.CollectionDataContractAttribute.IsNamespaceSetExplicitly" target="_top">.NET documentation</a>
+     */
     public boolean getIsNamespaceSetExplicitly() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -220,6 +257,13 @@ public class CollectionDataContractAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsReference.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.CollectionDataContractAttribute.IsReference" target="_top">.NET documentation</a>
+     */
     public boolean getIsReference() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -234,6 +278,13 @@ public class CollectionDataContractAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsReference.
+     *
+     * @param IsReference the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.CollectionDataContractAttribute.IsReference" target="_top">.NET documentation</a>
+     */
     public void setIsReference(boolean IsReference) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -244,6 +295,13 @@ public class CollectionDataContractAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsReferenceSetExplicitly.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.CollectionDataContractAttribute.IsReferenceSetExplicitly" target="_top">.NET documentation</a>
+     */
     public boolean getIsReferenceSetExplicitly() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -258,6 +316,13 @@ public class CollectionDataContractAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsValueNameSetExplicitly.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.CollectionDataContractAttribute.IsValueNameSetExplicitly" target="_top">.NET documentation</a>
+     */
     public boolean getIsValueNameSetExplicitly() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -272,6 +337,13 @@ public class CollectionDataContractAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ItemName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.CollectionDataContractAttribute.ItemName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getItemName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -286,6 +358,13 @@ public class CollectionDataContractAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ItemName.
+     *
+     * @param ItemName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.CollectionDataContractAttribute.ItemName" target="_top">.NET documentation</a>
+     */
     public void setItemName(java.lang.String ItemName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -296,6 +375,13 @@ public class CollectionDataContractAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property KeyName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.CollectionDataContractAttribute.KeyName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getKeyName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -310,6 +396,13 @@ public class CollectionDataContractAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property KeyName.
+     *
+     * @param KeyName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.CollectionDataContractAttribute.KeyName" target="_top">.NET documentation</a>
+     */
     public void setKeyName(java.lang.String KeyName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -320,6 +413,13 @@ public class CollectionDataContractAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.CollectionDataContractAttribute.Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -334,6 +434,13 @@ public class CollectionDataContractAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Name.
+     *
+     * @param Name the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.CollectionDataContractAttribute.Name" target="_top">.NET documentation</a>
+     */
     public void setName(java.lang.String Name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -344,6 +451,13 @@ public class CollectionDataContractAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Namespace.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.CollectionDataContractAttribute.Namespace" target="_top">.NET documentation</a>
+     */
     public java.lang.String getNamespace() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -358,6 +472,13 @@ public class CollectionDataContractAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Namespace.
+     *
+     * @param Namespace the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.CollectionDataContractAttribute.Namespace" target="_top">.NET documentation</a>
+     */
     public void setNamespace(java.lang.String Namespace) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -368,6 +489,13 @@ public class CollectionDataContractAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ValueName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.CollectionDataContractAttribute.ValueName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getValueName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -382,6 +510,13 @@ public class CollectionDataContractAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ValueName.
+     *
+     * @param ValueName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.CollectionDataContractAttribute.ValueName" target="_top">.NET documentation</a>
+     */
     public void setValueName(java.lang.String ValueName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

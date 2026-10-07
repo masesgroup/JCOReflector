@@ -105,7 +105,10 @@ public class ApplicationCatalog extends system.componentmodel.composition.primit
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ApplicationCatalog(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,12 @@ public class ApplicationCatalog extends system.componentmodel.composition.primit
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.Hosting.ApplicationCatalog.-ctor" target="_top">.NET documentation</a>
+     */
     public ApplicationCatalog() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -162,6 +171,14 @@ public class ApplicationCatalog extends system.componentmodel.composition.primit
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param definitionOrigin the argument of type {@code ICompositionElement}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.Hosting.ApplicationCatalog.-ctor" target="_top">.NET documentation</a>
+     */
     public ApplicationCatalog(ICompositionElement definitionOrigin) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -172,6 +189,14 @@ public class ApplicationCatalog extends system.componentmodel.composition.primit
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param reflectionContext the argument of type {@code ReflectionContext}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.Hosting.ApplicationCatalog.-ctor" target="_top">.NET documentation</a>
+     */
     public ApplicationCatalog(ReflectionContext reflectionContext) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -182,6 +207,15 @@ public class ApplicationCatalog extends system.componentmodel.composition.primit
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param reflectionContext the argument of type {@code ReflectionContext}
+     * @param definitionOrigin the argument of type {@code ICompositionElement}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.Hosting.ApplicationCatalog.-ctor" target="_top">.NET documentation</a>
+     */
     public ApplicationCatalog(ReflectionContext reflectionContext, ICompositionElement definitionOrigin) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -196,6 +230,27 @@ public class ApplicationCatalog extends system.componentmodel.composition.primit
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetExports.
+     *
+     * @param definition the argument of type {@code ImportDefinition}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.MemberAccessException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.Hosting.ApplicationCatalog.GetExports" target="_top">.NET documentation</a>
+     */
     public IEnumerable_1 GetExports(ImportDefinition definition) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.MemberAccessException, system.NotSupportedException, system.NotImplementedException, system.threading.ThreadAbortException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

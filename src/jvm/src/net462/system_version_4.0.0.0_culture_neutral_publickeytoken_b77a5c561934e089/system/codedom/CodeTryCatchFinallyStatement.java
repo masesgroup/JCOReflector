@@ -102,7 +102,10 @@ public class CodeTryCatchFinallyStatement extends system.codedom.CodeStatement  
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CodeTryCatchFinallyStatement(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,12 @@ public class CodeTryCatchFinallyStatement extends system.codedom.CodeStatement  
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeTryCatchFinallyStatement.-ctor" target="_top">.NET documentation</a>
+     */
     public CodeTryCatchFinallyStatement() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -159,6 +168,15 @@ public class CodeTryCatchFinallyStatement extends system.codedom.CodeStatement  
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param tryStatements the argument of type {@code CodeStatement[]}
+     * @param catchClauses the argument of type {@code CodeCatchClause[]}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeTryCatchFinallyStatement.-ctor" target="_top">.NET documentation</a>
+     */
     public CodeTryCatchFinallyStatement(CodeStatement[] tryStatements, CodeCatchClause[] catchClauses) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +187,16 @@ public class CodeTryCatchFinallyStatement extends system.codedom.CodeStatement  
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param tryStatements the argument of type {@code CodeStatement[]}
+     * @param catchClauses the argument of type {@code CodeCatchClause[]}
+     * @param finallyStatements the argument of type {@code CodeStatement[]}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeTryCatchFinallyStatement.-ctor" target="_top">.NET documentation</a>
+     */
     public CodeTryCatchFinallyStatement(CodeStatement[] tryStatements, CodeCatchClause[] catchClauses, CodeStatement[] finallyStatements) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -187,6 +215,13 @@ public class CodeTryCatchFinallyStatement extends system.codedom.CodeStatement  
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CatchClauses.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeTryCatchFinallyStatement.CatchClauses" target="_top">.NET documentation</a>
+     */
     public CodeCatchClauseCollection getCatchClauses() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +237,13 @@ public class CodeTryCatchFinallyStatement extends system.codedom.CodeStatement  
         }
     }
 
+    /**
+     * Gets the value of the .NET property FinallyStatements.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeTryCatchFinallyStatement.FinallyStatements" target="_top">.NET documentation</a>
+     */
     public CodeStatementCollection getFinallyStatements() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -217,6 +259,13 @@ public class CodeTryCatchFinallyStatement extends system.codedom.CodeStatement  
         }
     }
 
+    /**
+     * Gets the value of the .NET property TryStatements.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeTryCatchFinallyStatement.TryStatements" target="_top">.NET documentation</a>
+     */
     public CodeStatementCollection getTryStatements() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

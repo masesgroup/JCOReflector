@@ -102,7 +102,10 @@ public class EventCommandEventArgs extends system.EventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public EventCommandEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,15 @@ public class EventCommandEventArgs extends system.EventArgs  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member DisableEvent.
+     *
+     * @param eventId the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Tracing.EventCommandEventArgs.DisableEvent" target="_top">.NET documentation</a>
+     */
     public boolean DisableEvent(int eventId) throws Throwable, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -171,6 +183,15 @@ public class EventCommandEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Invokes the .NET member EnableEvent.
+     *
+     * @param eventId the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Tracing.EventCommandEventArgs.EnableEvent" target="_top">.NET documentation</a>
+     */
     public boolean EnableEvent(int eventId) throws Throwable, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +210,13 @@ public class EventCommandEventArgs extends system.EventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Arguments.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Tracing.EventCommandEventArgs.Arguments" target="_top">.NET documentation</a>
+     */
     public IDictionary_2 getArguments() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +232,13 @@ public class EventCommandEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Arguments.
+     *
+     * @param Arguments the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Tracing.EventCommandEventArgs.Arguments" target="_top">.NET documentation</a>
+     */
     public void setArguments(IDictionary_2 Arguments) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -214,6 +249,13 @@ public class EventCommandEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Command.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Tracing.EventCommandEventArgs.Command" target="_top">.NET documentation</a>
+     */
     public EventCommand getCommand() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -229,6 +271,13 @@ public class EventCommandEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Command.
+     *
+     * @param Command the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Tracing.EventCommandEventArgs.Command" target="_top">.NET documentation</a>
+     */
     public void setCommand(EventCommand Command) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

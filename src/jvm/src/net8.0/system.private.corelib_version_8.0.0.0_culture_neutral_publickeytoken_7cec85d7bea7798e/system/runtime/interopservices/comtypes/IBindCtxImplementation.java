@@ -103,7 +103,10 @@ public class IBindCtxImplementation extends NetObject implements IBindCtx {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IBindCtxImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -145,6 +148,14 @@ public class IBindCtxImplementation extends NetObject implements IBindCtx {
 
     // Methods section
     
+    /**
+     * Invokes the .NET member RevokeObjectParam.
+     *
+     * @param pszKey the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComTypes.IBindCtx.RevokeObjectParam" target="_top">.NET documentation</a>
+     */
     public int RevokeObjectParam(java.lang.String pszKey) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -185,6 +196,13 @@ public class IBindCtxImplementation extends NetObject implements IBindCtx {
         }
     }
 
+    /**
+     * Invokes the .NET member EnumObjectParam.
+     *
+     * @param ppenum the argument of type {@code JCORefOut<IEnumString>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComTypes.IBindCtx.EnumObjectParam" target="_top">.NET documentation</a>
+     */
     public void EnumObjectParam(JCORefOut<IEnumString> ppenum) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -195,6 +213,13 @@ public class IBindCtxImplementation extends NetObject implements IBindCtx {
         }
     }
 
+    /**
+     * Invokes the .NET member GetBindOptions.
+     *
+     * @param pbindopts the argument of type {@code JCORefOut<BIND_OPTS>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComTypes.IBindCtx.GetBindOptions" target="_top">.NET documentation</a>
+     */
     public void GetBindOptions(JCORefOut<BIND_OPTS> pbindopts) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +230,14 @@ public class IBindCtxImplementation extends NetObject implements IBindCtx {
         }
     }
 
+    /**
+     * Invokes the .NET member GetObjectParam.
+     *
+     * @param pszKey the argument of type {@code java.lang.String}
+     * @param ppunk the argument of type {@code JCORefOut<NetObject>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComTypes.IBindCtx.GetObjectParam" target="_top">.NET documentation</a>
+     */
     public void GetObjectParam(java.lang.String pszKey, JCORefOut<NetObject> ppunk) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +248,13 @@ public class IBindCtxImplementation extends NetObject implements IBindCtx {
         }
     }
 
+    /**
+     * Invokes the .NET member GetRunningObjectTable.
+     *
+     * @param pprot the argument of type {@code JCORefOut<IRunningObjectTable>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComTypes.IBindCtx.GetRunningObjectTable" target="_top">.NET documentation</a>
+     */
     public void GetRunningObjectTable(JCORefOut<IRunningObjectTable> pprot) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -225,6 +265,13 @@ public class IBindCtxImplementation extends NetObject implements IBindCtx {
         }
     }
 
+    /**
+     * Invokes the .NET member RegisterObjectBound.
+     *
+     * @param punk the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComTypes.IBindCtx.RegisterObjectBound" target="_top">.NET documentation</a>
+     */
     public void RegisterObjectBound(NetObject punk) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -235,6 +282,14 @@ public class IBindCtxImplementation extends NetObject implements IBindCtx {
         }
     }
 
+    /**
+     * Invokes the .NET member RegisterObjectParam.
+     *
+     * @param pszKey the argument of type {@code java.lang.String}
+     * @param punk the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComTypes.IBindCtx.RegisterObjectParam" target="_top">.NET documentation</a>
+     */
     public void RegisterObjectParam(java.lang.String pszKey, NetObject punk) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -245,6 +300,12 @@ public class IBindCtxImplementation extends NetObject implements IBindCtx {
         }
     }
 
+    /**
+     * Invokes the .NET member ReleaseBoundObjects.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComTypes.IBindCtx.ReleaseBoundObjects" target="_top">.NET documentation</a>
+     */
     public void ReleaseBoundObjects() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -255,6 +316,13 @@ public class IBindCtxImplementation extends NetObject implements IBindCtx {
         }
     }
 
+    /**
+     * Invokes the .NET member RevokeObjectBound.
+     *
+     * @param punk the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComTypes.IBindCtx.RevokeObjectBound" target="_top">.NET documentation</a>
+     */
     public void RevokeObjectBound(NetObject punk) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -265,6 +333,13 @@ public class IBindCtxImplementation extends NetObject implements IBindCtx {
         }
     }
 
+    /**
+     * Invokes the .NET member SetBindOptions.
+     *
+     * @param pbindopts the argument of type {@code JCORefOut<BIND_OPTS>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComTypes.IBindCtx.SetBindOptions" target="_top">.NET documentation</a>
+     */
     public void SetBindOptions(JCORefOut<BIND_OPTS> pbindopts) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -101,7 +101,10 @@ public class CacheEntryRemovedArguments extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CacheEntryRemovedArguments(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,16 @@ public class CacheEntryRemovedArguments extends NetObject  {
     public CacheEntryRemovedArguments() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param source the argument of type {@code ObjectCache}
+     * @param reason the argument of type {@code CacheEntryRemovedReason}
+     * @param cacheItem the argument of type {@code CacheItem}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Caching.CacheEntryRemovedArguments.-ctor" target="_top">.NET documentation</a>
+     */
     public CacheEntryRemovedArguments(ObjectCache source, CacheEntryRemovedReason reason, CacheItem cacheItem) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +183,13 @@ public class CacheEntryRemovedArguments extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property RemovedReason.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Caching.CacheEntryRemovedArguments.RemovedReason" target="_top">.NET documentation</a>
+     */
     public CacheEntryRemovedReason getRemovedReason() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -185,6 +205,13 @@ public class CacheEntryRemovedArguments extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CacheItem.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Caching.CacheEntryRemovedArguments.CacheItem" target="_top">.NET documentation</a>
+     */
     public CacheItem getCacheItem() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +227,13 @@ public class CacheEntryRemovedArguments extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Source.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Caching.CacheEntryRemovedArguments.Source" target="_top">.NET documentation</a>
+     */
     public ObjectCache getSource() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

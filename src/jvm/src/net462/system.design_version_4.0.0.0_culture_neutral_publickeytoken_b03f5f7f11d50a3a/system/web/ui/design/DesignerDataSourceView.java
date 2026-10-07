@@ -102,7 +102,10 @@ public class DesignerDataSourceView extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DesignerDataSourceView(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,31 @@ public class DesignerDataSourceView extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetDesignTimeData.
+     *
+     * @param minimumRows the argument of type {@code int}
+     * @param isSampleData the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicBoolean>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.data.DataException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.InvalidTimeZoneException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.DesignerDataSourceView.GetDesignTimeData" target="_top">.NET documentation</a>
+     */
     public IEnumerable GetDesignTimeData(int minimumRows, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> isSampleData) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NullReferenceException, system.data.DataException, system.collections.generic.KeyNotFoundException, system.InvalidTimeZoneException, system.OverflowException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -174,6 +202,13 @@ public class DesignerDataSourceView extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CanDelete.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.DesignerDataSourceView.CanDelete" target="_top">.NET documentation</a>
+     */
     public boolean getCanDelete() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +223,13 @@ public class DesignerDataSourceView extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CanInsert.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.DesignerDataSourceView.CanInsert" target="_top">.NET documentation</a>
+     */
     public boolean getCanInsert() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +244,13 @@ public class DesignerDataSourceView extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CanPage.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.DesignerDataSourceView.CanPage" target="_top">.NET documentation</a>
+     */
     public boolean getCanPage() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +265,13 @@ public class DesignerDataSourceView extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CanRetrieveTotalRowCount.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.DesignerDataSourceView.CanRetrieveTotalRowCount" target="_top">.NET documentation</a>
+     */
     public boolean getCanRetrieveTotalRowCount() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -230,6 +286,13 @@ public class DesignerDataSourceView extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CanSort.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.DesignerDataSourceView.CanSort" target="_top">.NET documentation</a>
+     */
     public boolean getCanSort() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -244,6 +307,13 @@ public class DesignerDataSourceView extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CanUpdate.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.DesignerDataSourceView.CanUpdate" target="_top">.NET documentation</a>
+     */
     public boolean getCanUpdate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -258,6 +328,13 @@ public class DesignerDataSourceView extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.DesignerDataSourceView.Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -272,6 +349,13 @@ public class DesignerDataSourceView extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DataSourceDesigner.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.DesignerDataSourceView.DataSourceDesigner" target="_top">.NET documentation</a>
+     */
     public IDataSourceDesigner getDataSourceDesigner() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -287,6 +371,13 @@ public class DesignerDataSourceView extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Schema.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.DesignerDataSourceView.Schema" target="_top">.NET documentation</a>
+     */
     public IDataSourceViewSchema getSchema() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

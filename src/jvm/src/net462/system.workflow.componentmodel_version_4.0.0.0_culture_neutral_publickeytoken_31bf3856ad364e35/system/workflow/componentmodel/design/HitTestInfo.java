@@ -104,7 +104,10 @@ public class HitTestInfo extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public HitTestInfo(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,15 @@ public class HitTestInfo extends NetObject  {
     public HitTestInfo() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param designer the argument of type {@code ActivityDesigner}
+     * @param location the argument of type {@code HitTestLocations}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.HitTestInfo.-ctor" target="_top">.NET documentation</a>
+     */
     public HitTestInfo(ActivityDesigner designer, HitTestLocations location) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +181,13 @@ public class HitTestInfo extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member MapToIndex.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.HitTestInfo.MapToIndex" target="_top">.NET documentation</a>
+     */
     public int MapToIndex() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -213,6 +232,13 @@ public class HitTestInfo extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property UserData.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.HitTestInfo.UserData" target="_top">.NET documentation</a>
+     */
     public IDictionary getUserData() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -228,6 +254,13 @@ public class HitTestInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Bounds.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.HitTestInfo.Bounds" target="_top">.NET documentation</a>
+     */
     public Rectangle getBounds() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -243,6 +276,13 @@ public class HitTestInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SelectableObject.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.HitTestInfo.SelectableObject" target="_top">.NET documentation</a>
+     */
     public NetObject getSelectableObject() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -258,6 +298,13 @@ public class HitTestInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AssociatedDesigner.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.HitTestInfo.AssociatedDesigner" target="_top">.NET documentation</a>
+     */
     public ActivityDesigner getAssociatedDesigner() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -273,6 +320,13 @@ public class HitTestInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Nowhere.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.HitTestInfo.Nowhere" target="_top">.NET documentation</a>
+     */
     public static HitTestInfo getNowhere() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -288,6 +342,13 @@ public class HitTestInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property HitLocation.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.HitTestInfo.HitLocation" target="_top">.NET documentation</a>
+     */
     public HitTestLocations getHitLocation() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

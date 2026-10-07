@@ -101,7 +101,10 @@ public class ValidationError extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ValidationError(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,14 @@ public class ValidationError extends NetObject  {
     public ValidationError() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param errorText the argument of type {@code java.lang.String}
+     * @param errorNumber the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.ValidationError.-ctor" target="_top">.NET documentation</a>
+     */
     public ValidationError(java.lang.String errorText, int errorNumber) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -161,6 +172,15 @@ public class ValidationError extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param errorText the argument of type {@code java.lang.String}
+     * @param errorNumber the argument of type {@code int}
+     * @param isWarning the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.ValidationError.-ctor" target="_top">.NET documentation</a>
+     */
     public ValidationError(java.lang.String errorText, int errorNumber, boolean isWarning) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -171,6 +191,16 @@ public class ValidationError extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param errorText the argument of type {@code java.lang.String}
+     * @param errorNumber the argument of type {@code int}
+     * @param isWarning the argument of type {@code boolean}
+     * @param propertyName the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.ValidationError.-ctor" target="_top">.NET documentation</a>
+     */
     public ValidationError(java.lang.String errorText, int errorNumber, boolean isWarning, java.lang.String propertyName) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -186,6 +216,24 @@ public class ValidationError extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetNotSetValidationError.
+     *
+     * @param propertyName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.ValidationError.GetNotSetValidationError" target="_top">.NET documentation</a>
+     */
     public static ValidationError GetNotSetValidationError(java.lang.String propertyName) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -205,6 +253,13 @@ public class ValidationError extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsWarning.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.ValidationError.IsWarning" target="_top">.NET documentation</a>
+     */
     public boolean getIsWarning() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -219,6 +274,13 @@ public class ValidationError extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ErrorNumber.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.ValidationError.ErrorNumber" target="_top">.NET documentation</a>
+     */
     public int getErrorNumber() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -259,6 +321,20 @@ public class ValidationError extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UserData.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.ValidationError.UserData" target="_top">.NET documentation</a>
+     */
     public IDictionary getUserData() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -274,6 +350,13 @@ public class ValidationError extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ErrorText.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.ValidationError.ErrorText" target="_top">.NET documentation</a>
+     */
     public java.lang.String getErrorText() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -288,6 +371,13 @@ public class ValidationError extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PropertyName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.ValidationError.PropertyName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getPropertyName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -302,6 +392,13 @@ public class ValidationError extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PropertyName.
+     *
+     * @param PropertyName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.ValidationError.PropertyName" target="_top">.NET documentation</a>
+     */
     public void setPropertyName(java.lang.String PropertyName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

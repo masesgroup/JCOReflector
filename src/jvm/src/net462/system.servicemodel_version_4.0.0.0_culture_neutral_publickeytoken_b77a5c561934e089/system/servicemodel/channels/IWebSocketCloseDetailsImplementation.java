@@ -100,7 +100,10 @@ public class IWebSocketCloseDetailsImplementation extends NetObject implements I
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IWebSocketCloseDetailsImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -142,6 +145,14 @@ public class IWebSocketCloseDetailsImplementation extends NetObject implements I
 
     // Methods section
     
+    /**
+     * Invokes the .NET member SetOutputCloseStatus.
+     *
+     * @param closeStatus the argument of type {@code WebSocketCloseStatus}
+     * @param closeStatusDescription the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.IWebSocketCloseDetails.SetOutputCloseStatus" target="_top">.NET documentation</a>
+     */
     public void SetOutputCloseStatus(WebSocketCloseStatus closeStatus, java.lang.String closeStatusDescription) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -156,6 +167,13 @@ public class IWebSocketCloseDetailsImplementation extends NetObject implements I
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property InputCloseStatus.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.IWebSocketCloseDetails.InputCloseStatus" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getInputCloseStatus() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -171,6 +189,13 @@ public class IWebSocketCloseDetailsImplementation extends NetObject implements I
         }
     }
 
+    /**
+     * Gets the value of the .NET property InputCloseStatusDescription.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.IWebSocketCloseDetails.InputCloseStatusDescription" target="_top">.NET documentation</a>
+     */
     public java.lang.String getInputCloseStatusDescription() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

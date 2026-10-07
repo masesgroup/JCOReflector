@@ -108,7 +108,10 @@ public class IConstructionReturnMessageImplementation extends NetObject implemen
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IConstructionReturnMessageImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,14 @@ public class IConstructionReturnMessageImplementation extends NetObject implemen
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetArg.
+     *
+     * @param argNum the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Activation.IConstructionReturnMessage.GetArg" target="_top">.NET documentation</a>
+     */
     public NetObject GetArg(int argNum) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -165,6 +176,14 @@ public class IConstructionReturnMessageImplementation extends NetObject implemen
         }
     }
 
+    /**
+     * Invokes the .NET member GetOutArg.
+     *
+     * @param argNum the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Activation.IConstructionReturnMessage.GetOutArg" target="_top">.NET documentation</a>
+     */
     public NetObject GetOutArg(int argNum) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +199,14 @@ public class IConstructionReturnMessageImplementation extends NetObject implemen
         }
     }
 
+    /**
+     * Invokes the .NET member GetArgName.
+     *
+     * @param index the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Activation.IConstructionReturnMessage.GetArgName" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetArgName(int index) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +221,14 @@ public class IConstructionReturnMessageImplementation extends NetObject implemen
         }
     }
 
+    /**
+     * Invokes the .NET member GetOutArgName.
+     *
+     * @param index the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Activation.IConstructionReturnMessage.GetOutArgName" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetOutArgName(int index) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -212,6 +247,13 @@ public class IConstructionReturnMessageImplementation extends NetObject implemen
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property HasVarArgs.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Activation.IConstructionReturnMessage.HasVarArgs" target="_top">.NET documentation</a>
+     */
     public boolean getHasVarArgs() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -226,6 +268,13 @@ public class IConstructionReturnMessageImplementation extends NetObject implemen
         }
     }
 
+    /**
+     * Gets the value of the .NET property ArgCount.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Activation.IConstructionReturnMessage.ArgCount" target="_top">.NET documentation</a>
+     */
     public int getArgCount() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -266,6 +315,13 @@ public class IConstructionReturnMessageImplementation extends NetObject implemen
         }
     }
 
+    /**
+     * Gets the value of the .NET property OutArgCount.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Activation.IConstructionReturnMessage.OutArgCount" target="_top">.NET documentation</a>
+     */
     public int getOutArgCount() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -306,6 +362,13 @@ public class IConstructionReturnMessageImplementation extends NetObject implemen
         }
     }
 
+    /**
+     * Gets the value of the .NET property Properties.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Activation.IConstructionReturnMessage.Properties" target="_top">.NET documentation</a>
+     */
     public IDictionary getProperties() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -321,6 +384,13 @@ public class IConstructionReturnMessageImplementation extends NetObject implemen
         }
     }
 
+    /**
+     * Gets the value of the .NET property Exception.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Activation.IConstructionReturnMessage.Exception" target="_top">.NET documentation</a>
+     */
     public NetException getException() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -336,6 +406,13 @@ public class IConstructionReturnMessageImplementation extends NetObject implemen
         }
     }
 
+    /**
+     * Gets the value of the .NET property MethodSignature.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Activation.IConstructionReturnMessage.MethodSignature" target="_top">.NET documentation</a>
+     */
     public NetObject getMethodSignature() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -351,6 +428,13 @@ public class IConstructionReturnMessageImplementation extends NetObject implemen
         }
     }
 
+    /**
+     * Gets the value of the .NET property ReturnValue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Activation.IConstructionReturnMessage.ReturnValue" target="_top">.NET documentation</a>
+     */
     public NetObject getReturnValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -366,6 +450,13 @@ public class IConstructionReturnMessageImplementation extends NetObject implemen
         }
     }
 
+    /**
+     * Gets the value of the .NET property Args.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Activation.IConstructionReturnMessage.Args" target="_top">.NET documentation</a>
+     */
     public final NetObject[] getArgs() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -387,6 +478,13 @@ public class IConstructionReturnMessageImplementation extends NetObject implemen
         }
     }
 
+    /**
+     * Gets the value of the .NET property OutArgs.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Activation.IConstructionReturnMessage.OutArgs" target="_top">.NET documentation</a>
+     */
     public final NetObject[] getOutArgs() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -408,6 +506,13 @@ public class IConstructionReturnMessageImplementation extends NetObject implemen
         }
     }
 
+    /**
+     * Gets the value of the .NET property MethodBase.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Activation.IConstructionReturnMessage.MethodBase" target="_top">.NET documentation</a>
+     */
     public MethodBase getMethodBase() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -423,6 +528,13 @@ public class IConstructionReturnMessageImplementation extends NetObject implemen
         }
     }
 
+    /**
+     * Gets the value of the .NET property LogicalCallContext.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Activation.IConstructionReturnMessage.LogicalCallContext" target="_top">.NET documentation</a>
+     */
     public LogicalCallContext getLogicalCallContext() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -438,6 +550,13 @@ public class IConstructionReturnMessageImplementation extends NetObject implemen
         }
     }
 
+    /**
+     * Gets the value of the .NET property MethodName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Activation.IConstructionReturnMessage.MethodName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getMethodName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -452,6 +571,13 @@ public class IConstructionReturnMessageImplementation extends NetObject implemen
         }
     }
 
+    /**
+     * Gets the value of the .NET property TypeName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Activation.IConstructionReturnMessage.TypeName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTypeName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -466,6 +592,13 @@ public class IConstructionReturnMessageImplementation extends NetObject implemen
         }
     }
 
+    /**
+     * Gets the value of the .NET property Uri.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Activation.IConstructionReturnMessage.Uri" target="_top">.NET documentation</a>
+     */
     public java.lang.String getUri() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

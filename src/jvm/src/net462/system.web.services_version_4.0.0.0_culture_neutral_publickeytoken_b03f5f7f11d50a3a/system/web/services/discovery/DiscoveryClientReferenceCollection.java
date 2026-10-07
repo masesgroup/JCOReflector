@@ -102,7 +102,10 @@ public class DiscoveryClientReferenceCollection extends system.collections.Dicti
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DiscoveryClientReferenceCollection(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,12 @@ public class DiscoveryClientReferenceCollection extends system.collections.Dicti
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Discovery.DiscoveryClientReferenceCollection.-ctor" target="_top">.NET documentation</a>
+     */
     public DiscoveryClientReferenceCollection() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -163,6 +172,14 @@ public class DiscoveryClientReferenceCollection extends system.collections.Dicti
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Contains.
+     *
+     * @param url the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Discovery.DiscoveryClientReferenceCollection.Contains" target="_top">.NET documentation</a>
+     */
     public boolean Contains(java.lang.String url) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -177,6 +194,14 @@ public class DiscoveryClientReferenceCollection extends system.collections.Dicti
         }
     }
 
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param url the argument of type {@code java.lang.String}
+     * @param value the argument of type {@code DiscoveryReference}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Discovery.DiscoveryClientReferenceCollection.Add" target="_top">.NET documentation</a>
+     */
     public void Add(java.lang.String url, DiscoveryReference value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +212,13 @@ public class DiscoveryClientReferenceCollection extends system.collections.Dicti
         }
     }
 
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param value the argument of type {@code DiscoveryReference}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Discovery.DiscoveryClientReferenceCollection.Add" target="_top">.NET documentation</a>
+     */
     public void Add(DiscoveryReference value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +229,13 @@ public class DiscoveryClientReferenceCollection extends system.collections.Dicti
         }
     }
 
+    /**
+     * Invokes the .NET member Remove.
+     *
+     * @param url the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Discovery.DiscoveryClientReferenceCollection.Remove" target="_top">.NET documentation</a>
+     */
     public void Remove(java.lang.String url) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -211,6 +250,13 @@ public class DiscoveryClientReferenceCollection extends system.collections.Dicti
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Keys.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Discovery.DiscoveryClientReferenceCollection.Keys" target="_top">.NET documentation</a>
+     */
     public ICollection getKeys() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -226,6 +272,13 @@ public class DiscoveryClientReferenceCollection extends system.collections.Dicti
         }
     }
 
+    /**
+     * Gets the value of the .NET property Values.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Discovery.DiscoveryClientReferenceCollection.Values" target="_top">.NET documentation</a>
+     */
     public ICollection getValues() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

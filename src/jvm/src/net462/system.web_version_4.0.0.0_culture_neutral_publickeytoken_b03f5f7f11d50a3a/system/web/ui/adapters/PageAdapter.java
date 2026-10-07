@@ -106,7 +106,10 @@ public class PageAdapter extends system.web.ui.adapters.ControlAdapter  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PageAdapter(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -159,6 +162,14 @@ public class PageAdapter extends system.web.ui.adapters.ControlAdapter  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetRadioButtonsByGroup.
+     *
+     * @param groupName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Adapters.PageAdapter.GetRadioButtonsByGroup" target="_top">.NET documentation</a>
+     */
     public ICollection GetRadioButtonsByGroup(java.lang.String groupName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -174,6 +185,26 @@ public class PageAdapter extends system.web.ui.adapters.ControlAdapter  {
         }
     }
 
+    /**
+     * Invokes the .NET member DeterminePostBackMode.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Adapters.PageAdapter.DeterminePostBackMode" target="_top">.NET documentation</a>
+     */
     public NameValueCollection DeterminePostBackMode() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.NullReferenceException, system.configuration.ConfigurationErrorsException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +220,26 @@ public class PageAdapter extends system.web.ui.adapters.ControlAdapter  {
         }
     }
 
+    /**
+     * Invokes the .NET member DeterminePostBackModeUnvalidated.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Adapters.PageAdapter.DeterminePostBackModeUnvalidated" target="_top">.NET documentation</a>
+     */
     public NameValueCollection DeterminePostBackModeUnvalidated() throws Throwable, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentException, system.web.HttpException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.configuration.ConfigurationErrorsException, system.InvalidOperationException, system.NotSupportedException, system.configuration.ConfigurationException, system.FormatException, system.OverflowException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +255,14 @@ public class PageAdapter extends system.web.ui.adapters.ControlAdapter  {
         }
     }
 
+    /**
+     * Invokes the .NET member TransformText.
+     *
+     * @param text the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Adapters.PageAdapter.TransformText" target="_top">.NET documentation</a>
+     */
     public java.lang.String TransformText(java.lang.String text) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -218,6 +277,22 @@ public class PageAdapter extends system.web.ui.adapters.ControlAdapter  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetStatePersister.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Adapters.PageAdapter.GetStatePersister" target="_top">.NET documentation</a>
+     */
     public PageStatePersister GetStatePersister() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -233,6 +308,21 @@ public class PageAdapter extends system.web.ui.adapters.ControlAdapter  {
         }
     }
 
+    /**
+     * Invokes the .NET member RegisterRadioButton.
+     *
+     * @param radioButton the argument of type {@code RadioButton}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Adapters.PageAdapter.RegisterRadioButton" target="_top">.NET documentation</a>
+     */
     public void RegisterRadioButton(RadioButton radioButton) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -243,6 +333,28 @@ public class PageAdapter extends system.web.ui.adapters.ControlAdapter  {
         }
     }
 
+    /**
+     * Invokes the .NET member RenderBeginHyperlink.
+     *
+     * @param writer the argument of type {@code HtmlTextWriter}
+     * @param targetUrl the argument of type {@code java.lang.String}
+     * @param encodeUrl the argument of type {@code boolean}
+     * @param softkeyLabel the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Adapters.PageAdapter.RenderBeginHyperlink" target="_top">.NET documentation</a>
+     */
     public void RenderBeginHyperlink(HtmlTextWriter writer, java.lang.String targetUrl, boolean encodeUrl, java.lang.String softkeyLabel) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.resources.MissingManifestResourceException, system.web.HttpException, system.NullReferenceException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -253,6 +365,32 @@ public class PageAdapter extends system.web.ui.adapters.ControlAdapter  {
         }
     }
 
+    /**
+     * Invokes the .NET member RenderBeginHyperlink.
+     *
+     * @param writer the argument of type {@code HtmlTextWriter}
+     * @param targetUrl the argument of type {@code java.lang.String}
+     * @param encodeUrl the argument of type {@code boolean}
+     * @param softkeyLabel the argument of type {@code java.lang.String}
+     * @param accessKey the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Adapters.PageAdapter.RenderBeginHyperlink" target="_top">.NET documentation</a>
+     */
     public void RenderBeginHyperlink(HtmlTextWriter writer, java.lang.String targetUrl, boolean encodeUrl, java.lang.String softkeyLabel, java.lang.String accessKey) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.web.HttpException, system.PlatformNotSupportedException, system.NotSupportedException, system.NullReferenceException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -263,6 +401,16 @@ public class PageAdapter extends system.web.ui.adapters.ControlAdapter  {
         }
     }
 
+    /**
+     * Invokes the .NET member RenderEndHyperlink.
+     *
+     * @param writer the argument of type {@code HtmlTextWriter}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Adapters.PageAdapter.RenderEndHyperlink" target="_top">.NET documentation</a>
+     */
     public void RenderEndHyperlink(HtmlTextWriter writer) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -273,6 +421,36 @@ public class PageAdapter extends system.web.ui.adapters.ControlAdapter  {
         }
     }
 
+    /**
+     * Invokes the .NET member RenderPostBackEvent.
+     *
+     * @param writer the argument of type {@code HtmlTextWriter}
+     * @param target the argument of type {@code java.lang.String}
+     * @param argument the argument of type {@code java.lang.String}
+     * @param softkeyLabel the argument of type {@code java.lang.String}
+     * @param text the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.configuration.provider.ProviderException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.web.HttpRequestValidationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Adapters.PageAdapter.RenderPostBackEvent" target="_top">.NET documentation</a>
+     */
     public void RenderPostBackEvent(HtmlTextWriter writer, java.lang.String target, java.lang.String argument, java.lang.String softkeyLabel, java.lang.String text) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationErrorsException, system.web.HttpException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.configuration.provider.ProviderException, system.NullReferenceException, system.web.HttpRequestValidationException, system.globalization.CultureNotFoundException, system.security.cryptography.CryptographicException, system.PlatformNotSupportedException, system.NotSupportedException, system.OutOfMemoryException, system.FormatException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -283,6 +461,41 @@ public class PageAdapter extends system.web.ui.adapters.ControlAdapter  {
         }
     }
 
+    /**
+     * Invokes the .NET member RenderPostBackEvent.
+     *
+     * @param writer the argument of type {@code HtmlTextWriter}
+     * @param target the argument of type {@code java.lang.String}
+     * @param argument the argument of type {@code java.lang.String}
+     * @param softkeyLabel the argument of type {@code java.lang.String}
+     * @param text the argument of type {@code java.lang.String}
+     * @param postUrl the argument of type {@code java.lang.String}
+     * @param accessKey the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.configuration.provider.ProviderException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Adapters.PageAdapter.RenderPostBackEvent" target="_top">.NET documentation</a>
+     */
     public void RenderPostBackEvent(HtmlTextWriter writer, java.lang.String target, java.lang.String argument, java.lang.String softkeyLabel, java.lang.String text, java.lang.String postUrl, java.lang.String accessKey) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.web.HttpException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.configuration.provider.ProviderException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.UriFormatException, system.threading.ThreadAbortException, system.security.cryptography.CryptographicException, system.PlatformNotSupportedException, system.NotSupportedException, system.OutOfMemoryException, system.FormatException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -297,6 +510,13 @@ public class PageAdapter extends system.web.ui.adapters.ControlAdapter  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CacheVaryByHeaders.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Adapters.PageAdapter.CacheVaryByHeaders" target="_top">.NET documentation</a>
+     */
     public StringCollection getCacheVaryByHeaders() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -312,6 +532,13 @@ public class PageAdapter extends system.web.ui.adapters.ControlAdapter  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CacheVaryByParams.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Adapters.PageAdapter.CacheVaryByParams" target="_top">.NET documentation</a>
+     */
     public StringCollection getCacheVaryByParams() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

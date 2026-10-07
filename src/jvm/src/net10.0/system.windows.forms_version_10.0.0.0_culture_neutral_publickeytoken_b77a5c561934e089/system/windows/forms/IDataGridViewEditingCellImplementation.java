@@ -99,7 +99,10 @@ public class IDataGridViewEditingCellImplementation extends NetObject implements
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IDataGridViewEditingCellImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -141,6 +144,14 @@ public class IDataGridViewEditingCellImplementation extends NetObject implements
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetEditingCellFormattedValue.
+     *
+     * @param context the argument of type {@code DataGridViewDataErrorContexts}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.IDataGridViewEditingCell.GetEditingCellFormattedValue" target="_top">.NET documentation</a>
+     */
     public NetObject GetEditingCellFormattedValue(DataGridViewDataErrorContexts context) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -156,6 +167,13 @@ public class IDataGridViewEditingCellImplementation extends NetObject implements
         }
     }
 
+    /**
+     * Invokes the .NET member PrepareEditingCellForEdit.
+     *
+     * @param selectAll the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.IDataGridViewEditingCell.PrepareEditingCellForEdit" target="_top">.NET documentation</a>
+     */
     public void PrepareEditingCellForEdit(boolean selectAll) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -170,6 +188,13 @@ public class IDataGridViewEditingCellImplementation extends NetObject implements
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property EditingCellValueChanged.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.IDataGridViewEditingCell.EditingCellValueChanged" target="_top">.NET documentation</a>
+     */
     public boolean getEditingCellValueChanged() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +209,13 @@ public class IDataGridViewEditingCellImplementation extends NetObject implements
         }
     }
 
+    /**
+     * Sets the value of the .NET property EditingCellValueChanged.
+     *
+     * @param EditingCellValueChanged the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.IDataGridViewEditingCell.EditingCellValueChanged" target="_top">.NET documentation</a>
+     */
     public void setEditingCellValueChanged(boolean EditingCellValueChanged) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +226,13 @@ public class IDataGridViewEditingCellImplementation extends NetObject implements
         }
     }
 
+    /**
+     * Gets the value of the .NET property EditingCellFormattedValue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.IDataGridViewEditingCell.EditingCellFormattedValue" target="_top">.NET documentation</a>
+     */
     public NetObject getEditingCellFormattedValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -209,6 +248,13 @@ public class IDataGridViewEditingCellImplementation extends NetObject implements
         }
     }
 
+    /**
+     * Sets the value of the .NET property EditingCellFormattedValue.
+     *
+     * @param EditingCellFormattedValue the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.IDataGridViewEditingCell.EditingCellFormattedValue" target="_top">.NET documentation</a>
+     */
     public void setEditingCellFormattedValue(NetObject EditingCellFormattedValue) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -102,7 +102,10 @@ public class IAsyncDropTargetImplementation extends NetObject implements IAsyncD
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IAsyncDropTargetImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -144,6 +147,13 @@ public class IAsyncDropTargetImplementation extends NetObject implements IAsyncD
 
     // Methods section
     
+    /**
+     * Invokes the .NET member OnAsyncDragDrop.
+     *
+     * @param e the argument of type {@code DragEventArgs}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.IAsyncDropTarget.OnAsyncDragDrop" target="_top">.NET documentation</a>
+     */
     public void OnAsyncDragDrop(DragEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -154,6 +164,13 @@ public class IAsyncDropTargetImplementation extends NetObject implements IAsyncD
         }
     }
 
+    /**
+     * Invokes the .NET member OnDragDrop.
+     *
+     * @param e the argument of type {@code DragEventArgs}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.IAsyncDropTarget.OnDragDrop" target="_top">.NET documentation</a>
+     */
     public void OnDragDrop(DragEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -164,6 +181,13 @@ public class IAsyncDropTargetImplementation extends NetObject implements IAsyncD
         }
     }
 
+    /**
+     * Invokes the .NET member OnDragEnter.
+     *
+     * @param e the argument of type {@code DragEventArgs}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.IAsyncDropTarget.OnDragEnter" target="_top">.NET documentation</a>
+     */
     public void OnDragEnter(DragEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -174,6 +198,13 @@ public class IAsyncDropTargetImplementation extends NetObject implements IAsyncD
         }
     }
 
+    /**
+     * Invokes the .NET member OnDragLeave.
+     *
+     * @param e the argument of type {@code EventArgs}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.IAsyncDropTarget.OnDragLeave" target="_top">.NET documentation</a>
+     */
     public void OnDragLeave(EventArgs e) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +215,13 @@ public class IAsyncDropTargetImplementation extends NetObject implements IAsyncD
         }
     }
 
+    /**
+     * Invokes the .NET member OnDragOver.
+     *
+     * @param e the argument of type {@code DragEventArgs}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.IAsyncDropTarget.OnDragOver" target="_top">.NET documentation</a>
+     */
     public void OnDragOver(DragEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -105,7 +105,10 @@ public class IExtendedUIServiceImplementation extends NetObject implements IExte
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IExtendedUIServiceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,14 @@ public class IExtendedUIServiceImplementation extends NetObject implements IExte
 
     // Methods section
     
+    /**
+     * Invokes the .NET member NavigateToProperty.
+     *
+     * @param propName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.IExtendedUIService.NavigateToProperty" target="_top">.NET documentation</a>
+     */
     public boolean NavigateToProperty(java.lang.String propName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -161,6 +172,13 @@ public class IExtendedUIServiceImplementation extends NetObject implements IExte
         }
     }
 
+    /**
+     * Invokes the .NET member GetXsdProjectItemsInfo.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.IExtendedUIService.GetXsdProjectItemsInfo" target="_top">.NET documentation</a>
+     */
     public Dictionary_2 GetXsdProjectItemsInfo() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -176,6 +194,13 @@ public class IExtendedUIServiceImplementation extends NetObject implements IExte
         }
     }
 
+    /**
+     * Invokes the .NET member GetSelectedPropertyContext.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.IExtendedUIService.GetSelectedPropertyContext" target="_top">.NET documentation</a>
+     */
     public ITypeDescriptorContext GetSelectedPropertyContext() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -191,6 +216,14 @@ public class IExtendedUIServiceImplementation extends NetObject implements IExte
         }
     }
 
+    /**
+     * Invokes the .NET member GetProxyClassForUrl.
+     *
+     * @param url the argument of type {@code Uri}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.IExtendedUIService.GetProxyClassForUrl" target="_top">.NET documentation</a>
+     */
     public NetType GetProxyClassForUrl(Uri url) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,6 +239,14 @@ public class IExtendedUIServiceImplementation extends NetObject implements IExte
         }
     }
 
+    /**
+     * Invokes the .NET member GetUrlForProxyClass.
+     *
+     * @param proxyClass the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.IExtendedUIService.GetUrlForProxyClass" target="_top">.NET documentation</a>
+     */
     public Uri GetUrlForProxyClass(NetType proxyClass) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -221,6 +262,15 @@ public class IExtendedUIServiceImplementation extends NetObject implements IExte
         }
     }
 
+    /**
+     * Invokes the .NET member AddWebReference.
+     *
+     * @param url the argument of type {@code JCORefOut<Uri>}
+     * @param proxyClass the argument of type {@code JCORefOut<NetType>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.IExtendedUIService.AddWebReference" target="_top">.NET documentation</a>
+     */
     public DialogResult AddWebReference(JCORefOut<Uri> url, JCORefOut<NetType> proxyClass) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -236,6 +286,13 @@ public class IExtendedUIServiceImplementation extends NetObject implements IExte
         }
     }
 
+    /**
+     * Invokes the .NET member AddAssemblyReference.
+     *
+     * @param assemblyName the argument of type {@code AssemblyName}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.IExtendedUIService.AddAssemblyReference" target="_top">.NET documentation</a>
+     */
     public void AddAssemblyReference(AssemblyName assemblyName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -246,6 +303,13 @@ public class IExtendedUIServiceImplementation extends NetObject implements IExte
         }
     }
 
+    /**
+     * Invokes the .NET member AddDesignerActions.
+     *
+     * @param actions the argument of type {@code DesignerAction[]}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.IExtendedUIService.AddDesignerActions" target="_top">.NET documentation</a>
+     */
     public void AddDesignerActions(DesignerAction[] actions) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -256,6 +320,12 @@ public class IExtendedUIServiceImplementation extends NetObject implements IExte
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveDesignerActions.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.IExtendedUIService.RemoveDesignerActions" target="_top">.NET documentation</a>
+     */
     public void RemoveDesignerActions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -266,6 +336,12 @@ public class IExtendedUIServiceImplementation extends NetObject implements IExte
         }
     }
 
+    /**
+     * Invokes the .NET member ShowToolsOptions.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.IExtendedUIService.ShowToolsOptions" target="_top">.NET documentation</a>
+     */
     public void ShowToolsOptions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

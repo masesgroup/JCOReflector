@@ -107,7 +107,10 @@ public class ToolStripItemTextRenderEventArgs extends system.windows.forms.ToolS
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ToolStripItemTextRenderEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,19 @@ public class ToolStripItemTextRenderEventArgs extends system.windows.forms.ToolS
     public ToolStripItemTextRenderEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param g the argument of type {@code Graphics}
+     * @param item the argument of type {@code ToolStripItem}
+     * @param text the argument of type {@code java.lang.String}
+     * @param textRectangle the argument of type {@code Rectangle}
+     * @param textColor the argument of type {@code Color}
+     * @param textFont the argument of type {@code Font}
+     * @param textAlign the argument of type {@code ContentAlignment}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripItemTextRenderEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public ToolStripItemTextRenderEventArgs(Graphics g, ToolStripItem item, java.lang.String text, Rectangle textRectangle, Color textColor, Font textFont, ContentAlignment textAlign) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +183,19 @@ public class ToolStripItemTextRenderEventArgs extends system.windows.forms.ToolS
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param g the argument of type {@code Graphics}
+     * @param item the argument of type {@code ToolStripItem}
+     * @param text the argument of type {@code java.lang.String}
+     * @param textRectangle the argument of type {@code Rectangle}
+     * @param textColor the argument of type {@code Color}
+     * @param textFont the argument of type {@code Font}
+     * @param format the argument of type {@code TextFormatFlags}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripItemTextRenderEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public ToolStripItemTextRenderEventArgs(Graphics g, ToolStripItem item, java.lang.String text, Rectangle textRectangle, Color textColor, Font textFont, TextFormatFlags format) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -186,6 +215,13 @@ public class ToolStripItemTextRenderEventArgs extends system.windows.forms.ToolS
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property TextColor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripItemTextRenderEventArgs.TextColor" target="_top">.NET documentation</a>
+     */
     public Color getTextColor() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +237,13 @@ public class ToolStripItemTextRenderEventArgs extends system.windows.forms.ToolS
         }
     }
 
+    /**
+     * Sets the value of the .NET property TextColor.
+     *
+     * @param TextColor the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripItemTextRenderEventArgs.TextColor" target="_top">.NET documentation</a>
+     */
     public void setTextColor(Color TextColor) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -211,6 +254,13 @@ public class ToolStripItemTextRenderEventArgs extends system.windows.forms.ToolS
         }
     }
 
+    /**
+     * Gets the value of the .NET property TextFont.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripItemTextRenderEventArgs.TextFont" target="_top">.NET documentation</a>
+     */
     public Font getTextFont() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -226,6 +276,13 @@ public class ToolStripItemTextRenderEventArgs extends system.windows.forms.ToolS
         }
     }
 
+    /**
+     * Sets the value of the .NET property TextFont.
+     *
+     * @param TextFont the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripItemTextRenderEventArgs.TextFont" target="_top">.NET documentation</a>
+     */
     public void setTextFont(Font TextFont) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -236,6 +293,13 @@ public class ToolStripItemTextRenderEventArgs extends system.windows.forms.ToolS
         }
     }
 
+    /**
+     * Gets the value of the .NET property TextRectangle.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripItemTextRenderEventArgs.TextRectangle" target="_top">.NET documentation</a>
+     */
     public Rectangle getTextRectangle() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -251,6 +315,13 @@ public class ToolStripItemTextRenderEventArgs extends system.windows.forms.ToolS
         }
     }
 
+    /**
+     * Sets the value of the .NET property TextRectangle.
+     *
+     * @param TextRectangle the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripItemTextRenderEventArgs.TextRectangle" target="_top">.NET documentation</a>
+     */
     public void setTextRectangle(Rectangle TextRectangle) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -261,6 +332,13 @@ public class ToolStripItemTextRenderEventArgs extends system.windows.forms.ToolS
         }
     }
 
+    /**
+     * Gets the value of the .NET property Text.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripItemTextRenderEventArgs.Text" target="_top">.NET documentation</a>
+     */
     public java.lang.String getText() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -275,6 +353,13 @@ public class ToolStripItemTextRenderEventArgs extends system.windows.forms.ToolS
         }
     }
 
+    /**
+     * Sets the value of the .NET property Text.
+     *
+     * @param Text the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripItemTextRenderEventArgs.Text" target="_top">.NET documentation</a>
+     */
     public void setText(java.lang.String Text) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -285,6 +370,13 @@ public class ToolStripItemTextRenderEventArgs extends system.windows.forms.ToolS
         }
     }
 
+    /**
+     * Gets the value of the .NET property TextFormat.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripItemTextRenderEventArgs.TextFormat" target="_top">.NET documentation</a>
+     */
     public TextFormatFlags getTextFormat() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -300,6 +392,13 @@ public class ToolStripItemTextRenderEventArgs extends system.windows.forms.ToolS
         }
     }
 
+    /**
+     * Sets the value of the .NET property TextFormat.
+     *
+     * @param TextFormat the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripItemTextRenderEventArgs.TextFormat" target="_top">.NET documentation</a>
+     */
     public void setTextFormat(TextFormatFlags TextFormat) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -310,6 +409,13 @@ public class ToolStripItemTextRenderEventArgs extends system.windows.forms.ToolS
         }
     }
 
+    /**
+     * Gets the value of the .NET property TextDirection.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripItemTextRenderEventArgs.TextDirection" target="_top">.NET documentation</a>
+     */
     public ToolStripTextDirection getTextDirection() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -325,6 +431,13 @@ public class ToolStripItemTextRenderEventArgs extends system.windows.forms.ToolS
         }
     }
 
+    /**
+     * Sets the value of the .NET property TextDirection.
+     *
+     * @param TextDirection the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripItemTextRenderEventArgs.TextDirection" target="_top">.NET documentation</a>
+     */
     public void setTextDirection(ToolStripTextDirection TextDirection) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

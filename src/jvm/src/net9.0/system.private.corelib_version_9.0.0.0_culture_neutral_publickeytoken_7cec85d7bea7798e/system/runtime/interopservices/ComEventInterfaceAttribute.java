@@ -99,7 +99,10 @@ public class ComEventInterfaceAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ComEventInterfaceAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,14 @@ public class ComEventInterfaceAttribute extends system.Attribute  {
     public ComEventInterfaceAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param SourceInterface the argument of type {@code NetType}
+     * @param EventProvider the argument of type {@code NetType}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComEventInterfaceAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public ComEventInterfaceAttribute(NetType SourceInterface, NetType EventProvider) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +179,13 @@ public class ComEventInterfaceAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property EventProvider.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComEventInterfaceAttribute.EventProvider" target="_top">.NET documentation</a>
+     */
     public NetType getEventProvider() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +201,13 @@ public class ComEventInterfaceAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SourceInterface.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComEventInterfaceAttribute.SourceInterface" target="_top">.NET documentation</a>
+     */
     public NetType getSourceInterface() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

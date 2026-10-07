@@ -101,7 +101,10 @@ public class RequestValidator extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public RequestValidator(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class RequestValidator extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Util.RequestValidator.-ctor" target="_top">.NET documentation</a>
+     */
     public RequestValidator() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -162,6 +171,18 @@ public class RequestValidator extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member InvokeIsValidRequestString.
+     *
+     * @param context the argument of type {@code HttpContext}
+     * @param value the argument of type {@code java.lang.String}
+     * @param requestValidationSource the argument of type {@code RequestValidationSource}
+     * @param collectionKey the argument of type {@code java.lang.String}
+     * @param validationFailureIndex the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicInteger>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Util.RequestValidator.InvokeIsValidRequestString" target="_top">.NET documentation</a>
+     */
     public boolean InvokeIsValidRequestString(HttpContext context, java.lang.String value, RequestValidationSource requestValidationSource, java.lang.String collectionKey, JCORefOut<java.util.concurrent.atomic.AtomicInteger> validationFailureIndex) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +201,20 @@ public class RequestValidator extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Current.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Util.RequestValidator.Current" target="_top">.NET documentation</a>
+     */
     public static RequestValidator getCurrent() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -195,6 +230,14 @@ public class RequestValidator extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Current.
+     *
+     * @param Current the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Util.RequestValidator.Current" target="_top">.NET documentation</a>
+     */
     public static void setCurrent(RequestValidator Current) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

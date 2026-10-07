@@ -101,7 +101,10 @@ public class FilterUIHintAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public FilterUIHintAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,14 @@ public class FilterUIHintAttribute extends system.Attribute  {
     public FilterUIHintAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param filterUIHint the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.DataAnnotations.FilterUIHintAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public FilterUIHintAttribute(java.lang.String filterUIHint) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -161,6 +172,15 @@ public class FilterUIHintAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param filterUIHint the argument of type {@code java.lang.String}
+     * @param presentationLayer the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.DataAnnotations.FilterUIHintAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public FilterUIHintAttribute(java.lang.String filterUIHint, java.lang.String presentationLayer) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -171,6 +191,16 @@ public class FilterUIHintAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param filterUIHint the argument of type {@code java.lang.String}
+     * @param presentationLayer the argument of type {@code java.lang.String}
+     * @param controlParameters the argument of type {@code NetObject...}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.DataAnnotations.FilterUIHintAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public FilterUIHintAttribute(java.lang.String filterUIHint, java.lang.String presentationLayer, NetObject... controlParameters) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -190,6 +220,25 @@ public class FilterUIHintAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ControlParameters.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.DataAnnotations.FilterUIHintAttribute.ControlParameters" target="_top">.NET documentation</a>
+     */
     public IDictionary_2 getControlParameters() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +254,13 @@ public class FilterUIHintAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FilterUIHint.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.DataAnnotations.FilterUIHintAttribute.FilterUIHint" target="_top">.NET documentation</a>
+     */
     public java.lang.String getFilterUIHint() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -219,6 +275,13 @@ public class FilterUIHintAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PresentationLayer.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.DataAnnotations.FilterUIHintAttribute.PresentationLayer" target="_top">.NET documentation</a>
+     */
     public java.lang.String getPresentationLayer() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

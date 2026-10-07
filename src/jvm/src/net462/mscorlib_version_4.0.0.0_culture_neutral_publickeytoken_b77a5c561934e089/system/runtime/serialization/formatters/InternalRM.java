@@ -98,7 +98,10 @@ public class InternalRM extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public InternalRM(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -145,6 +148,12 @@ public class InternalRM extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.Formatters.InternalRM.-ctor" target="_top">.NET documentation</a>
+     */
     public InternalRM() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -159,6 +168,20 @@ public class InternalRM extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member SoapCheckEnabled.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.Formatters.InternalRM.SoapCheckEnabled" target="_top">.NET documentation</a>
+     */
     public static boolean SoapCheckEnabled() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -173,6 +196,13 @@ public class InternalRM extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member InfoSoap.
+     *
+     * @param messages the argument of type {@code NetObject...}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.Formatters.InternalRM.InfoSoap" target="_top">.NET documentation</a>
+     */
     public static void InfoSoap(NetObject... messages) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

@@ -99,7 +99,10 @@ public class ExperimentalAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ExperimentalAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,13 @@ public class ExperimentalAttribute extends system.Attribute  {
     public ExperimentalAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param diagnosticId the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.CodeAnalysis.ExperimentalAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public ExperimentalAttribute(java.lang.String diagnosticId) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +178,13 @@ public class ExperimentalAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property DiagnosticId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.CodeAnalysis.ExperimentalAttribute.DiagnosticId" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDiagnosticId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +199,13 @@ public class ExperimentalAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Message.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.CodeAnalysis.ExperimentalAttribute.Message" target="_top">.NET documentation</a>
+     */
     public java.lang.String getMessage() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -196,6 +220,13 @@ public class ExperimentalAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Message.
+     *
+     * @param Message the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.CodeAnalysis.ExperimentalAttribute.Message" target="_top">.NET documentation</a>
+     */
     public void setMessage(java.lang.String Message) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,6 +237,13 @@ public class ExperimentalAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UrlFormat.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.CodeAnalysis.ExperimentalAttribute.UrlFormat" target="_top">.NET documentation</a>
+     */
     public java.lang.String getUrlFormat() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -220,6 +258,13 @@ public class ExperimentalAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property UrlFormat.
+     *
+     * @param UrlFormat the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.CodeAnalysis.ExperimentalAttribute.UrlFormat" target="_top">.NET documentation</a>
+     */
     public void setUrlFormat(java.lang.String UrlFormat) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -100,7 +100,10 @@ public class MemberInfoInitializerImplementation extends NetObject implements Me
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public MemberInfoInitializerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -142,6 +145,13 @@ public class MemberInfoInitializerImplementation extends NetObject implements Me
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetCOMMemberInfo.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.MemberInfoInitializer.GetCOMMemberInfo" target="_top">.NET documentation</a>
+     */
     public COMMemberInfo GetCOMMemberInfo() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -157,6 +167,14 @@ public class MemberInfoInitializerImplementation extends NetObject implements Me
         }
     }
 
+    /**
+     * Invokes the .NET member Initialize.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param dispatch the argument of type {@code COMMemberInfo}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.MemberInfoInitializer.Initialize" target="_top">.NET documentation</a>
+     */
     public void Initialize(java.lang.String name, COMMemberInfo dispatch) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

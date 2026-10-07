@@ -100,7 +100,10 @@ public class XamlXmlWriterSettings extends system.xaml.XamlWriterSettings  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XamlXmlWriterSettings(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class XamlXmlWriterSettings extends system.xaml.XamlWriterSettings  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlXmlWriterSettings.-ctor" target="_top">.NET documentation</a>
+     */
     public XamlXmlWriterSettings() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -161,6 +170,13 @@ public class XamlXmlWriterSettings extends system.xaml.XamlWriterSettings  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Copy.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlXmlWriterSettings.Copy" target="_top">.NET documentation</a>
+     */
     public XamlXmlWriterSettings Copy() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +196,13 @@ public class XamlXmlWriterSettings extends system.xaml.XamlWriterSettings  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AssumeValidInput.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlXmlWriterSettings.AssumeValidInput" target="_top">.NET documentation</a>
+     */
     public boolean getAssumeValidInput() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +217,13 @@ public class XamlXmlWriterSettings extends system.xaml.XamlWriterSettings  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AssumeValidInput.
+     *
+     * @param AssumeValidInput the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlXmlWriterSettings.AssumeValidInput" target="_top">.NET documentation</a>
+     */
     public void setAssumeValidInput(boolean AssumeValidInput) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +234,13 @@ public class XamlXmlWriterSettings extends system.xaml.XamlWriterSettings  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CloseOutput.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlXmlWriterSettings.CloseOutput" target="_top">.NET documentation</a>
+     */
     public boolean getCloseOutput() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -218,6 +255,13 @@ public class XamlXmlWriterSettings extends system.xaml.XamlWriterSettings  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CloseOutput.
+     *
+     * @param CloseOutput the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlXmlWriterSettings.CloseOutput" target="_top">.NET documentation</a>
+     */
     public void setCloseOutput(boolean CloseOutput) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

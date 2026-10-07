@@ -100,7 +100,10 @@ public class OpenFileDialog extends microsoft.win32.FileDialog  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public OpenFileDialog(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,13 @@ public class OpenFileDialog extends microsoft.win32.FileDialog  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Win32.OpenFileDialog.-ctor" target="_top">.NET documentation</a>
+     */
     public OpenFileDialog() throws Throwable, system.PlatformNotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -161,6 +171,22 @@ public class OpenFileDialog extends microsoft.win32.FileDialog  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member OpenFile.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.runtime.serialization.SerializationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Win32.OpenFileDialog.OpenFile" target="_top">.NET documentation</a>
+     */
     public Stream OpenFile() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.runtime.serialization.SerializationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -176,6 +202,21 @@ public class OpenFileDialog extends microsoft.win32.FileDialog  {
         }
     }
 
+    /**
+     * Invokes the .NET member OpenFiles.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.runtime.serialization.SerializationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Win32.OpenFileDialog.OpenFiles" target="_top">.NET documentation</a>
+     */
     public Stream[] OpenFiles() throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.runtime.serialization.SerializationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +238,12 @@ public class OpenFileDialog extends microsoft.win32.FileDialog  {
         }
     }
 
+    /**
+     * Invokes the .NET member Reset.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Win32.OpenFileDialog.Reset" target="_top">.NET documentation</a>
+     */
     public void Reset() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -211,6 +258,13 @@ public class OpenFileDialog extends microsoft.win32.FileDialog  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ForcePreviewPane.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Win32.OpenFileDialog.ForcePreviewPane" target="_top">.NET documentation</a>
+     */
     public boolean getForcePreviewPane() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -225,6 +279,13 @@ public class OpenFileDialog extends microsoft.win32.FileDialog  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ForcePreviewPane.
+     *
+     * @param ForcePreviewPane the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Win32.OpenFileDialog.ForcePreviewPane" target="_top">.NET documentation</a>
+     */
     public void setForcePreviewPane(boolean ForcePreviewPane) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -235,6 +296,13 @@ public class OpenFileDialog extends microsoft.win32.FileDialog  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Multiselect.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Win32.OpenFileDialog.Multiselect" target="_top">.NET documentation</a>
+     */
     public boolean getMultiselect() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -249,6 +317,13 @@ public class OpenFileDialog extends microsoft.win32.FileDialog  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Multiselect.
+     *
+     * @param Multiselect the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Win32.OpenFileDialog.Multiselect" target="_top">.NET documentation</a>
+     */
     public void setMultiselect(boolean Multiselect) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -259,6 +334,13 @@ public class OpenFileDialog extends microsoft.win32.FileDialog  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ReadOnlyChecked.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Win32.OpenFileDialog.ReadOnlyChecked" target="_top">.NET documentation</a>
+     */
     public boolean getReadOnlyChecked() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -273,6 +355,13 @@ public class OpenFileDialog extends microsoft.win32.FileDialog  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ReadOnlyChecked.
+     *
+     * @param ReadOnlyChecked the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Win32.OpenFileDialog.ReadOnlyChecked" target="_top">.NET documentation</a>
+     */
     public void setReadOnlyChecked(boolean ReadOnlyChecked) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -283,6 +372,13 @@ public class OpenFileDialog extends microsoft.win32.FileDialog  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ShowReadOnly.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Win32.OpenFileDialog.ShowReadOnly" target="_top">.NET documentation</a>
+     */
     public boolean getShowReadOnly() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -297,6 +393,13 @@ public class OpenFileDialog extends microsoft.win32.FileDialog  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ShowReadOnly.
+     *
+     * @param ShowReadOnly the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Win32.OpenFileDialog.ShowReadOnly" target="_top">.NET documentation</a>
+     */
     public void setShowReadOnly(boolean ShowReadOnly) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

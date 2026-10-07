@@ -105,7 +105,10 @@ public class SqlRowUpdatedEventArgs extends system.data.common.RowUpdatedEventAr
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SqlRowUpdatedEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,24 @@ public class SqlRowUpdatedEventArgs extends system.data.common.RowUpdatedEventAr
     public SqlRowUpdatedEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param row the argument of type {@code DataRow}
+     * @param command the argument of type {@code IDbCommand}
+     * @param statementType the argument of type {@code StatementType}
+     * @param tableMapping the argument of type {@code DataTableMapping}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlRowUpdatedEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public SqlRowUpdatedEventArgs(DataRow row, IDbCommand command, StatementType statementType, DataTableMapping tableMapping) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
@@ -174,6 +195,13 @@ public class SqlRowUpdatedEventArgs extends system.data.common.RowUpdatedEventAr
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CommandNewSqlRowUpdatedEventArgs.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlRowUpdatedEventArgs.CommandNewSqlRowUpdatedEventArgs" target="_top">.NET documentation</a>
+     */
     public SqlCommand getCommandNewSqlRowUpdatedEventArgs() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

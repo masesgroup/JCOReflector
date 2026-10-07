@@ -102,7 +102,10 @@ public class RepeaterItem extends system.web.ui.Control implements system.web.ui
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public RepeaterItem(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,14 @@ public class RepeaterItem extends system.web.ui.Control implements system.web.ui
     public RepeaterItem() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param itemIndex the argument of type {@code int}
+     * @param itemType the argument of type {@code ListItemType}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.RepeaterItem.-ctor" target="_top">.NET documentation</a>
+     */
     public RepeaterItem(int itemIndex, ListItemType itemType) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -171,6 +182,13 @@ public class RepeaterItem extends system.web.ui.Control implements system.web.ui
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ItemIndex.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.RepeaterItem.ItemIndex" target="_top">.NET documentation</a>
+     */
     public int getItemIndex() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -211,6 +229,13 @@ public class RepeaterItem extends system.web.ui.Control implements system.web.ui
         }
     }
 
+    /**
+     * Gets the value of the .NET property DataItem.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.RepeaterItem.DataItem" target="_top">.NET documentation</a>
+     */
     public NetObject getDataItem() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -226,6 +251,13 @@ public class RepeaterItem extends system.web.ui.Control implements system.web.ui
         }
     }
 
+    /**
+     * Sets the value of the .NET property DataItem.
+     *
+     * @param DataItem the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.RepeaterItem.DataItem" target="_top">.NET documentation</a>
+     */
     public void setDataItem(NetObject DataItem) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -236,6 +268,13 @@ public class RepeaterItem extends system.web.ui.Control implements system.web.ui
         }
     }
 
+    /**
+     * Gets the value of the .NET property ItemType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.RepeaterItem.ItemType" target="_top">.NET documentation</a>
+     */
     public ListItemType getItemType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

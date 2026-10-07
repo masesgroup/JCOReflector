@@ -100,7 +100,10 @@ public class TextSource extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TextSource(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,14 @@ public class TextSource extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetTextEffectCharacterIndexFromTextSourceCharacterIndex.
+     *
+     * @param textSourceCharacterIndex the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextSource.GetTextEffectCharacterIndexFromTextSourceCharacterIndex" target="_top">.NET documentation</a>
+     */
     public int GetTextEffectCharacterIndexFromTextSourceCharacterIndex(int textSourceCharacterIndex) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +204,14 @@ public class TextSource extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetTextRun.
+     *
+     * @param textSourceCharacterIndex the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextSource.GetTextRun" target="_top">.NET documentation</a>
+     */
     public TextRun GetTextRun(int textSourceCharacterIndex) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +227,14 @@ public class TextSource extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetPrecedingText.
+     *
+     * @param textSourceCharacterIndexLimit the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextSource.GetPrecedingText" target="_top">.NET documentation</a>
+     */
     public TextSpan_1 GetPrecedingText(int textSourceCharacterIndexLimit) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -227,6 +254,13 @@ public class TextSource extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property PixelsPerDip.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextSource.PixelsPerDip" target="_top">.NET documentation</a>
+     */
     public double getPixelsPerDip() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -267,6 +301,13 @@ public class TextSource extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PixelsPerDip.
+     *
+     * @param PixelsPerDip the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextSource.PixelsPerDip" target="_top">.NET documentation</a>
+     */
     public void setPixelsPerDip(double PixelsPerDip) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

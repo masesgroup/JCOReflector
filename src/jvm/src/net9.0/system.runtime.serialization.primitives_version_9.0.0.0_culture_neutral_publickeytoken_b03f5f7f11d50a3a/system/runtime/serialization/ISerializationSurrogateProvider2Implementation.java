@@ -102,7 +102,10 @@ public class ISerializationSurrogateProvider2Implementation extends NetObject im
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ISerializationSurrogateProvider2Implementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -144,6 +147,15 @@ public class ISerializationSurrogateProvider2Implementation extends NetObject im
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetCustomDataToExport.
+     *
+     * @param memberInfo the argument of type {@code MemberInfo}
+     * @param dataContractType the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.ISerializationSurrogateProvider2.GetCustomDataToExport" target="_top">.NET documentation</a>
+     */
     public NetObject GetCustomDataToExport(MemberInfo memberInfo, NetType dataContractType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -159,6 +171,15 @@ public class ISerializationSurrogateProvider2Implementation extends NetObject im
         }
     }
 
+    /**
+     * Invokes the .NET member GetCustomDataToExport.
+     *
+     * @param runtimeType the argument of type {@code NetType}
+     * @param dataContractType the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.ISerializationSurrogateProvider2.GetCustomDataToExport" target="_top">.NET documentation</a>
+     */
     public NetObject GetCustomDataToExport(NetType runtimeType, NetType dataContractType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -174,6 +195,15 @@ public class ISerializationSurrogateProvider2Implementation extends NetObject im
         }
     }
 
+    /**
+     * Invokes the .NET member GetDeserializedObject.
+     *
+     * @param obj the argument of type {@code NetObject}
+     * @param targetType the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.ISerializationSurrogateProvider2.GetDeserializedObject" target="_top">.NET documentation</a>
+     */
     public NetObject GetDeserializedObject(NetObject obj, NetType targetType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +219,15 @@ public class ISerializationSurrogateProvider2Implementation extends NetObject im
         }
     }
 
+    /**
+     * Invokes the .NET member GetObjectToSerialize.
+     *
+     * @param obj the argument of type {@code NetObject}
+     * @param targetType the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.ISerializationSurrogateProvider2.GetObjectToSerialize" target="_top">.NET documentation</a>
+     */
     public NetObject GetObjectToSerialize(NetObject obj, NetType targetType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +243,16 @@ public class ISerializationSurrogateProvider2Implementation extends NetObject im
         }
     }
 
+    /**
+     * Invokes the .NET member GetReferencedTypeOnImport.
+     *
+     * @param typeName the argument of type {@code java.lang.String}
+     * @param typeNamespace the argument of type {@code java.lang.String}
+     * @param customData the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.ISerializationSurrogateProvider2.GetReferencedTypeOnImport" target="_top">.NET documentation</a>
+     */
     public NetType GetReferencedTypeOnImport(java.lang.String typeName, java.lang.String typeNamespace, NetObject customData) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -219,6 +268,14 @@ public class ISerializationSurrogateProvider2Implementation extends NetObject im
         }
     }
 
+    /**
+     * Invokes the .NET member GetSurrogateType.
+     *
+     * @param type the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.ISerializationSurrogateProvider2.GetSurrogateType" target="_top">.NET documentation</a>
+     */
     public NetType GetSurrogateType(NetType type) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -234,6 +291,13 @@ public class ISerializationSurrogateProvider2Implementation extends NetObject im
         }
     }
 
+    /**
+     * Invokes the .NET member GetKnownCustomDataTypes.
+     *
+     * @param customDataTypes the argument of type {@code Collection_1}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.ISerializationSurrogateProvider2.GetKnownCustomDataTypes" target="_top">.NET documentation</a>
+     */
     public void GetKnownCustomDataTypes(Collection_1 customDataTypes) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

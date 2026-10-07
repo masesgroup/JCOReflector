@@ -101,7 +101,10 @@ public class LicFileLicenseProvider extends system.componentmodel.LicenseProvide
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public LicFileLicenseProvider(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class LicFileLicenseProvider extends system.componentmodel.LicenseProvide
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.LicFileLicenseProvider.-ctor" target="_top">.NET documentation</a>
+     */
     public LicFileLicenseProvider() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -162,6 +171,31 @@ public class LicFileLicenseProvider extends system.componentmodel.LicenseProvide
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetLicense.
+     *
+     * @param context the argument of type {@code LicenseContext}
+     * @param type the argument of type {@code NetType}
+     * @param instance the argument of type {@code NetObject}
+     * @param allowExceptions the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.MethodAccessException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.MemberAccessException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.runtime.serialization.SerializationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.LicFileLicenseProvider.GetLicense" target="_top">.NET documentation</a>
+     */
     public License GetLicense(LicenseContext context, NetType type, NetObject instance, boolean allowExceptions) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.runtime.serialization.SerializationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -100,7 +100,10 @@ public class CalendarDateChangedEventArgs extends system.windows.RoutedEventArgs
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CalendarDateChangedEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -159,6 +162,13 @@ public class CalendarDateChangedEventArgs extends system.windows.RoutedEventArgs
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AddedDate.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.CalendarDateChangedEventArgs.AddedDate" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getAddedDate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -174,6 +184,13 @@ public class CalendarDateChangedEventArgs extends system.windows.RoutedEventArgs
         }
     }
 
+    /**
+     * Sets the value of the .NET property AddedDate.
+     *
+     * @param AddedDate the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.CalendarDateChangedEventArgs.AddedDate" target="_top">.NET documentation</a>
+     */
     public void setAddedDate(Nullable_1 AddedDate) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +201,13 @@ public class CalendarDateChangedEventArgs extends system.windows.RoutedEventArgs
         }
     }
 
+    /**
+     * Gets the value of the .NET property RemovedDate.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.CalendarDateChangedEventArgs.RemovedDate" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getRemovedDate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -199,6 +223,13 @@ public class CalendarDateChangedEventArgs extends system.windows.RoutedEventArgs
         }
     }
 
+    /**
+     * Sets the value of the .NET property RemovedDate.
+     *
+     * @param RemovedDate the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.CalendarDateChangedEventArgs.RemovedDate" target="_top">.NET documentation</a>
+     */
     public void setRemovedDate(Nullable_1 RemovedDate) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

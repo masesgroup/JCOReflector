@@ -98,7 +98,10 @@ public class CorrelationDataDescription extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CorrelationDataDescription(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,13 @@ public class CorrelationDataDescription extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsDefault.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.CorrelationDataDescription.IsDefault" target="_top">.NET documentation</a>
+     */
     public boolean getIsDefault() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -169,6 +179,13 @@ public class CorrelationDataDescription extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsOptional.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.CorrelationDataDescription.IsOptional" target="_top">.NET documentation</a>
+     */
     public boolean getIsOptional() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +200,13 @@ public class CorrelationDataDescription extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property KnownBeforeSend.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.CorrelationDataDescription.KnownBeforeSend" target="_top">.NET documentation</a>
+     */
     public boolean getKnownBeforeSend() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +221,13 @@ public class CorrelationDataDescription extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ReceiveValue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.CorrelationDataDescription.ReceiveValue" target="_top">.NET documentation</a>
+     */
     public boolean getReceiveValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -211,6 +242,13 @@ public class CorrelationDataDescription extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SendValue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.CorrelationDataDescription.SendValue" target="_top">.NET documentation</a>
+     */
     public boolean getSendValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -225,6 +263,13 @@ public class CorrelationDataDescription extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.CorrelationDataDescription.Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

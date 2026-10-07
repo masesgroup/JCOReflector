@@ -106,7 +106,10 @@ public class RuleExpressionWalker extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public RuleExpressionWalker(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -159,6 +162,15 @@ public class RuleExpressionWalker extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Match.
+     *
+     * @param firstExpression the argument of type {@code CodeExpression}
+     * @param secondExpression the argument of type {@code CodeExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.Rules.RuleExpressionWalker.Match" target="_top">.NET documentation</a>
+     */
     public static boolean Match(CodeExpression firstExpression, CodeExpression secondExpression) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -173,6 +185,27 @@ public class RuleExpressionWalker extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Clone.
+     *
+     * @param originalExpression the argument of type {@code CodeExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.Rules.RuleExpressionWalker.Clone" target="_top">.NET documentation</a>
+     */
     public static CodeExpression Clone(CodeExpression originalExpression) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -188,6 +221,29 @@ public class RuleExpressionWalker extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Validate.
+     *
+     * @param validation the argument of type {@code RuleValidation}
+     * @param expression the argument of type {@code CodeExpression}
+     * @param isWritten the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.Rules.RuleExpressionWalker.Validate" target="_top">.NET documentation</a>
+     */
     public static RuleExpressionInfo Validate(RuleValidation validation, CodeExpression expression, boolean isWritten) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -203,6 +259,16 @@ public class RuleExpressionWalker extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Evaluate.
+     *
+     * @param execution the argument of type {@code RuleExecution}
+     * @param expression the argument of type {@code CodeExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.Rules.RuleExpressionWalker.Evaluate" target="_top">.NET documentation</a>
+     */
     public static RuleExpressionResult Evaluate(RuleExecution execution, CodeExpression expression) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -218,6 +284,18 @@ public class RuleExpressionWalker extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AnalyzeUsage.
+     *
+     * @param analysis the argument of type {@code RuleAnalysis}
+     * @param expression the argument of type {@code CodeExpression}
+     * @param isRead the argument of type {@code boolean}
+     * @param isWritten the argument of type {@code boolean}
+     * @param qualifier the argument of type {@code RulePathQualifier}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.Rules.RuleExpressionWalker.AnalyzeUsage" target="_top">.NET documentation</a>
+     */
     public static void AnalyzeUsage(RuleAnalysis analysis, CodeExpression expression, boolean isRead, boolean isWritten, RulePathQualifier qualifier) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -228,6 +306,15 @@ public class RuleExpressionWalker extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Decompile.
+     *
+     * @param stringBuilder the argument of type {@code StringBuilder}
+     * @param expression the argument of type {@code CodeExpression}
+     * @param parentExpression the argument of type {@code CodeExpression}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.Rules.RuleExpressionWalker.Decompile" target="_top">.NET documentation</a>
+     */
     public static void Decompile(StringBuilder stringBuilder, CodeExpression expression, CodeExpression parentExpression) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

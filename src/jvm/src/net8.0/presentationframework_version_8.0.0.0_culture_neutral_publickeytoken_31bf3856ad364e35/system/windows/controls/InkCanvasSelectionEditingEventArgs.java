@@ -100,7 +100,10 @@ public class InkCanvasSelectionEditingEventArgs extends system.componentmodel.Ca
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public InkCanvasSelectionEditingEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -159,6 +162,13 @@ public class InkCanvasSelectionEditingEventArgs extends system.componentmodel.Ca
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property NewRectangle.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.InkCanvasSelectionEditingEventArgs.NewRectangle" target="_top">.NET documentation</a>
+     */
     public Rect getNewRectangle() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -174,6 +184,13 @@ public class InkCanvasSelectionEditingEventArgs extends system.componentmodel.Ca
         }
     }
 
+    /**
+     * Sets the value of the .NET property NewRectangle.
+     *
+     * @param NewRectangle the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.InkCanvasSelectionEditingEventArgs.NewRectangle" target="_top">.NET documentation</a>
+     */
     public void setNewRectangle(Rect NewRectangle) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +201,13 @@ public class InkCanvasSelectionEditingEventArgs extends system.componentmodel.Ca
         }
     }
 
+    /**
+     * Gets the value of the .NET property OldRectangle.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.InkCanvasSelectionEditingEventArgs.OldRectangle" target="_top">.NET documentation</a>
+     */
     public Rect getOldRectangle() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

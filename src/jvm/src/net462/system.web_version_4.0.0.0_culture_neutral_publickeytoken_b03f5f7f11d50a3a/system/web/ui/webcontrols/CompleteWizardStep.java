@@ -100,7 +100,10 @@ public class CompleteWizardStep extends system.web.ui.webcontrols.TemplatedWizar
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CompleteWizardStep(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class CompleteWizardStep extends system.web.ui.webcontrols.TemplatedWizar
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.CompleteWizardStep.-ctor" target="_top">.NET documentation</a>
+     */
     public CompleteWizardStep() throws Throwable {
         try {
             // add reference to assemblyName.dll file

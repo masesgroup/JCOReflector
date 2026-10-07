@@ -100,7 +100,10 @@ public class IInputSessionShutdownImplementation extends NetObject implements II
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IInputSessionShutdownImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -142,6 +145,13 @@ public class IInputSessionShutdownImplementation extends NetObject implements II
 
     // Methods section
     
+    /**
+     * Invokes the .NET member ChannelFaulted.
+     *
+     * @param channel the argument of type {@code IDuplexContextChannel}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.IInputSessionShutdown.ChannelFaulted" target="_top">.NET documentation</a>
+     */
     public void ChannelFaulted(IDuplexContextChannel channel) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -152,6 +162,13 @@ public class IInputSessionShutdownImplementation extends NetObject implements II
         }
     }
 
+    /**
+     * Invokes the .NET member DoneReceiving.
+     *
+     * @param channel the argument of type {@code IDuplexContextChannel}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.IInputSessionShutdown.DoneReceiving" target="_top">.NET documentation</a>
+     */
     public void DoneReceiving(IDuplexContextChannel channel) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

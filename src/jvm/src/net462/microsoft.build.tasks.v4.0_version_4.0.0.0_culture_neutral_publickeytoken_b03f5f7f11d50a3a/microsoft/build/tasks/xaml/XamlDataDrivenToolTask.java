@@ -103,7 +103,10 @@ public class XamlDataDrivenToolTask extends microsoft.build.utilities.ToolTask  
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XamlDataDrivenToolTask(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,43 @@ public class XamlDataDrivenToolTask extends microsoft.build.utilities.ToolTask  
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Execute.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.threading.SemaphoreFullException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Xaml.XamlDataDrivenToolTask.Execute" target="_top">.NET documentation</a>
+     */
     public boolean Execute() throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.InvalidCastException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NullReferenceException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.WaitHandleCannotBeOpenedException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.MulticastNotSupportedException, system.RankException, system.security.cryptography.CryptographicException, system.collections.generic.KeyNotFoundException, system.threading.SemaphoreFullException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -170,6 +210,15 @@ public class XamlDataDrivenToolTask extends microsoft.build.utilities.ToolTask  
         }
     }
 
+    /**
+     * Invokes the .NET member IsPropertySet.
+     *
+     * @param propertyName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Xaml.XamlDataDrivenToolTask.IsPropertySet" target="_top">.NET documentation</a>
+     */
     public boolean IsPropertySet(java.lang.String propertyName) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +233,23 @@ public class XamlDataDrivenToolTask extends microsoft.build.utilities.ToolTask  
         }
     }
 
+    /**
+     * Invokes the .NET member ValidateInteger.
+     *
+     * @param switchName the argument of type {@code java.lang.String}
+     * @param min the argument of type {@code int}
+     * @param max the argument of type {@code int}
+     * @param value the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Xaml.XamlDataDrivenToolTask.ValidateInteger" target="_top">.NET documentation</a>
+     */
     public boolean ValidateInteger(java.lang.String switchName, int min, int max, int value) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +264,27 @@ public class XamlDataDrivenToolTask extends microsoft.build.utilities.ToolTask  
         }
     }
 
+    /**
+     * Invokes the .NET member ReadSwitchMap2.
+     *
+     * @param propertyName the argument of type {@code java.lang.String}
+     * @param switchMap the argument of type {@code Tuple_3[]}
+     * @param value the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Xaml.XamlDataDrivenToolTask.ReadSwitchMap2" target="_top">.NET documentation</a>
+     */
     public int ReadSwitchMap2(java.lang.String propertyName, Tuple_3[] switchMap, java.lang.String value) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -238,6 +325,25 @@ public class XamlDataDrivenToolTask extends microsoft.build.utilities.ToolTask  
         }
     }
 
+    /**
+     * Invokes the .NET member CreateSwitchValue.
+     *
+     * @param propertyName the argument of type {@code java.lang.String}
+     * @param baseSwitch the argument of type {@code java.lang.String}
+     * @param separator the argument of type {@code java.lang.String}
+     * @param arguments the argument of type {@code Tuple_2[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Xaml.XamlDataDrivenToolTask.CreateSwitchValue" target="_top">.NET documentation</a>
+     */
     public java.lang.String CreateSwitchValue(java.lang.String propertyName, java.lang.String baseSwitch, java.lang.String separator, Tuple_2[] arguments) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -252,6 +358,18 @@ public class XamlDataDrivenToolTask extends microsoft.build.utilities.ToolTask  
         }
     }
 
+    /**
+     * Invokes the .NET member AddActiveSwitchToolValue.
+     *
+     * @param switchToAdd the argument of type {@code CommandLineToolSwitch}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Xaml.XamlDataDrivenToolTask.AddActiveSwitchToolValue" target="_top">.NET documentation</a>
+     */
     public void AddActiveSwitchToolValue(CommandLineToolSwitch switchToAdd) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -262,6 +380,16 @@ public class XamlDataDrivenToolTask extends microsoft.build.utilities.ToolTask  
         }
     }
 
+    /**
+     * Invokes the .NET member ReplaceToolSwitch.
+     *
+     * @param switchToAdd the argument of type {@code CommandLineToolSwitch}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Xaml.XamlDataDrivenToolTask.ReplaceToolSwitch" target="_top">.NET documentation</a>
+     */
     public void ReplaceToolSwitch(CommandLineToolSwitch switchToAdd) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -276,6 +404,13 @@ public class XamlDataDrivenToolTask extends microsoft.build.utilities.ToolTask  
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ActiveToolSwitchesValues.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Xaml.XamlDataDrivenToolTask.ActiveToolSwitchesValues" target="_top">.NET documentation</a>
+     */
     public Dictionary_2 getActiveToolSwitchesValues() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -291,6 +426,13 @@ public class XamlDataDrivenToolTask extends microsoft.build.utilities.ToolTask  
         }
     }
 
+    /**
+     * Sets the value of the .NET property ActiveToolSwitchesValues.
+     *
+     * @param ActiveToolSwitchesValues the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Xaml.XamlDataDrivenToolTask.ActiveToolSwitchesValues" target="_top">.NET documentation</a>
+     */
     public void setActiveToolSwitchesValues(Dictionary_2 ActiveToolSwitchesValues) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -301,6 +443,13 @@ public class XamlDataDrivenToolTask extends microsoft.build.utilities.ToolTask  
         }
     }
 
+    /**
+     * Gets the value of the .NET property AdditionalOptions.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Xaml.XamlDataDrivenToolTask.AdditionalOptions" target="_top">.NET documentation</a>
+     */
     public java.lang.String getAdditionalOptions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -315,6 +464,13 @@ public class XamlDataDrivenToolTask extends microsoft.build.utilities.ToolTask  
         }
     }
 
+    /**
+     * Sets the value of the .NET property AdditionalOptions.
+     *
+     * @param AdditionalOptions the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Xaml.XamlDataDrivenToolTask.AdditionalOptions" target="_top">.NET documentation</a>
+     */
     public void setAdditionalOptions(java.lang.String AdditionalOptions) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -325,6 +481,13 @@ public class XamlDataDrivenToolTask extends microsoft.build.utilities.ToolTask  
         }
     }
 
+    /**
+     * Gets the value of the .NET property CommandLineTemplate.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Xaml.XamlDataDrivenToolTask.CommandLineTemplate" target="_top">.NET documentation</a>
+     */
     public java.lang.String getCommandLineTemplate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -339,6 +502,13 @@ public class XamlDataDrivenToolTask extends microsoft.build.utilities.ToolTask  
         }
     }
 
+    /**
+     * Sets the value of the .NET property CommandLineTemplate.
+     *
+     * @param CommandLineTemplate the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Xaml.XamlDataDrivenToolTask.CommandLineTemplate" target="_top">.NET documentation</a>
+     */
     public void setCommandLineTemplate(java.lang.String CommandLineTemplate) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -349,6 +519,13 @@ public class XamlDataDrivenToolTask extends microsoft.build.utilities.ToolTask  
         }
     }
 
+    /**
+     * Gets the value of the .NET property AcceptableNonZeroExitCodes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Xaml.XamlDataDrivenToolTask.AcceptableNonZeroExitCodes" target="_top">.NET documentation</a>
+     */
     public java.lang.String[] getAcceptableNonZeroExitCodes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -372,6 +549,13 @@ public class XamlDataDrivenToolTask extends microsoft.build.utilities.ToolTask  
         }
     }
 
+    /**
+     * Sets the value of the .NET property AcceptableNonZeroExitCodes.
+     *
+     * @param AcceptableNonZeroExitCodes the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Xaml.XamlDataDrivenToolTask.AcceptableNonZeroExitCodes" target="_top">.NET documentation</a>
+     */
     public void setAcceptableNonZeroExitCodes(java.lang.String[] AcceptableNonZeroExitCodes) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -98,7 +98,10 @@ public class IControlDesignerBehaviorImplementation extends NetObject implements
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IControlDesignerBehaviorImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -140,6 +143,12 @@ public class IControlDesignerBehaviorImplementation extends NetObject implements
 
     // Methods section
     
+    /**
+     * Invokes the .NET member OnTemplateModeChanged.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.IControlDesignerBehavior.OnTemplateModeChanged" target="_top">.NET documentation</a>
+     */
     public void OnTemplateModeChanged() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -154,6 +163,13 @@ public class IControlDesignerBehaviorImplementation extends NetObject implements
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property DesignTimeElementView.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.IControlDesignerBehavior.DesignTimeElementView" target="_top">.NET documentation</a>
+     */
     public NetObject getDesignTimeElementView() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -169,6 +185,13 @@ public class IControlDesignerBehaviorImplementation extends NetObject implements
         }
     }
 
+    /**
+     * Gets the value of the .NET property DesignTimeHtml.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.IControlDesignerBehavior.DesignTimeHtml" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDesignTimeHtml() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +206,13 @@ public class IControlDesignerBehaviorImplementation extends NetObject implements
         }
     }
 
+    /**
+     * Sets the value of the .NET property DesignTimeHtml.
+     *
+     * @param DesignTimeHtml the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.IControlDesignerBehavior.DesignTimeHtml" target="_top">.NET documentation</a>
+     */
     public void setDesignTimeHtml(java.lang.String DesignTimeHtml) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

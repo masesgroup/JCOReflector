@@ -102,7 +102,10 @@ public class LayoutEventArgs extends system.EventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public LayoutEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,14 @@ public class LayoutEventArgs extends system.EventArgs  {
     public LayoutEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param affectedComponent the argument of type {@code IComponent}
+     * @param affectedProperty the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.LayoutEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public LayoutEventArgs(IComponent affectedComponent, java.lang.String affectedProperty) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -162,6 +173,14 @@ public class LayoutEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param affectedControl the argument of type {@code Control}
+     * @param affectedProperty the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.LayoutEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public LayoutEventArgs(Control affectedControl, java.lang.String affectedProperty) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -181,6 +200,13 @@ public class LayoutEventArgs extends system.EventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AffectedComponent.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.LayoutEventArgs.AffectedComponent" target="_top">.NET documentation</a>
+     */
     public IComponent getAffectedComponent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -196,6 +222,13 @@ public class LayoutEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AffectedProperty.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.LayoutEventArgs.AffectedProperty" target="_top">.NET documentation</a>
+     */
     public java.lang.String getAffectedProperty() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -210,6 +243,13 @@ public class LayoutEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AffectedControl.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.LayoutEventArgs.AffectedControl" target="_top">.NET documentation</a>
+     */
     public Control getAffectedControl() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

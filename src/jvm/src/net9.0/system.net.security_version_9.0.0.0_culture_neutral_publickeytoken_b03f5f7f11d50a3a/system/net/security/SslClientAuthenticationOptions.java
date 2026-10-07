@@ -108,7 +108,10 @@ public class SslClientAuthenticationOptions extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SslClientAuthenticationOptions(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,12 @@ public class SslClientAuthenticationOptions extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Security.SslClientAuthenticationOptions.-ctor" target="_top">.NET documentation</a>
+     */
     public SslClientAuthenticationOptions() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -173,6 +182,13 @@ public class SslClientAuthenticationOptions extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AllowRenegotiation.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Security.SslClientAuthenticationOptions.AllowRenegotiation" target="_top">.NET documentation</a>
+     */
     public boolean getAllowRenegotiation() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +203,13 @@ public class SslClientAuthenticationOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AllowRenegotiation.
+     *
+     * @param AllowRenegotiation the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Security.SslClientAuthenticationOptions.AllowRenegotiation" target="_top">.NET documentation</a>
+     */
     public void setAllowRenegotiation(boolean AllowRenegotiation) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +220,13 @@ public class SslClientAuthenticationOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AllowTlsResume.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Security.SslClientAuthenticationOptions.AllowTlsResume" target="_top">.NET documentation</a>
+     */
     public boolean getAllowTlsResume() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -211,6 +241,13 @@ public class SslClientAuthenticationOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AllowTlsResume.
+     *
+     * @param AllowTlsResume the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Security.SslClientAuthenticationOptions.AllowTlsResume" target="_top">.NET documentation</a>
+     */
     public void setAllowTlsResume(boolean AllowTlsResume) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -221,6 +258,13 @@ public class SslClientAuthenticationOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ApplicationProtocols.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Security.SslClientAuthenticationOptions.ApplicationProtocols" target="_top">.NET documentation</a>
+     */
     public List_1 getApplicationProtocols() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -236,6 +280,13 @@ public class SslClientAuthenticationOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ApplicationProtocols.
+     *
+     * @param ApplicationProtocols the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Security.SslClientAuthenticationOptions.ApplicationProtocols" target="_top">.NET documentation</a>
+     */
     public void setApplicationProtocols(List_1 ApplicationProtocols) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -246,6 +297,13 @@ public class SslClientAuthenticationOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CipherSuitesPolicy.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Security.SslClientAuthenticationOptions.CipherSuitesPolicy" target="_top">.NET documentation</a>
+     */
     public CipherSuitesPolicy getCipherSuitesPolicy() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -261,6 +319,13 @@ public class SslClientAuthenticationOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CipherSuitesPolicy.
+     *
+     * @param CipherSuitesPolicy the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Security.SslClientAuthenticationOptions.CipherSuitesPolicy" target="_top">.NET documentation</a>
+     */
     public void setCipherSuitesPolicy(CipherSuitesPolicy CipherSuitesPolicy) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -271,6 +336,13 @@ public class SslClientAuthenticationOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EncryptionPolicy.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Security.SslClientAuthenticationOptions.EncryptionPolicy" target="_top">.NET documentation</a>
+     */
     public EncryptionPolicy getEncryptionPolicy() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -286,6 +358,21 @@ public class SslClientAuthenticationOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property EncryptionPolicy.
+     *
+     * @param EncryptionPolicy the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Security.SslClientAuthenticationOptions.EncryptionPolicy" target="_top">.NET documentation</a>
+     */
     public void setEncryptionPolicy(EncryptionPolicy EncryptionPolicy) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -296,6 +383,13 @@ public class SslClientAuthenticationOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LocalCertificateSelectionCallback.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Security.SslClientAuthenticationOptions.LocalCertificateSelectionCallback" target="_top">.NET documentation</a>
+     */
     public LocalCertificateSelectionCallback getLocalCertificateSelectionCallback() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -310,6 +404,13 @@ public class SslClientAuthenticationOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property LocalCertificateSelectionCallback.
+     *
+     * @param LocalCertificateSelectionCallback the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Security.SslClientAuthenticationOptions.LocalCertificateSelectionCallback" target="_top">.NET documentation</a>
+     */
     public void setLocalCertificateSelectionCallback(LocalCertificateSelectionCallback LocalCertificateSelectionCallback) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -320,6 +421,13 @@ public class SslClientAuthenticationOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RemoteCertificateValidationCallback.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Security.SslClientAuthenticationOptions.RemoteCertificateValidationCallback" target="_top">.NET documentation</a>
+     */
     public RemoteCertificateValidationCallback getRemoteCertificateValidationCallback() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -334,6 +442,13 @@ public class SslClientAuthenticationOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RemoteCertificateValidationCallback.
+     *
+     * @param RemoteCertificateValidationCallback the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Security.SslClientAuthenticationOptions.RemoteCertificateValidationCallback" target="_top">.NET documentation</a>
+     */
     public void setRemoteCertificateValidationCallback(RemoteCertificateValidationCallback RemoteCertificateValidationCallback) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -344,6 +459,13 @@ public class SslClientAuthenticationOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ClientCertificateContext.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Security.SslClientAuthenticationOptions.ClientCertificateContext" target="_top">.NET documentation</a>
+     */
     public SslStreamCertificateContext getClientCertificateContext() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -359,6 +481,13 @@ public class SslClientAuthenticationOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ClientCertificateContext.
+     *
+     * @param ClientCertificateContext the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Security.SslClientAuthenticationOptions.ClientCertificateContext" target="_top">.NET documentation</a>
+     */
     public void setClientCertificateContext(SslStreamCertificateContext ClientCertificateContext) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -369,6 +498,13 @@ public class SslClientAuthenticationOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EnabledSslProtocols.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Security.SslClientAuthenticationOptions.EnabledSslProtocols" target="_top">.NET documentation</a>
+     */
     public SslProtocols getEnabledSslProtocols() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -384,6 +520,13 @@ public class SslClientAuthenticationOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property EnabledSslProtocols.
+     *
+     * @param EnabledSslProtocols the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Security.SslClientAuthenticationOptions.EnabledSslProtocols" target="_top">.NET documentation</a>
+     */
     public void setEnabledSslProtocols(SslProtocols EnabledSslProtocols) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -394,6 +537,13 @@ public class SslClientAuthenticationOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ClientCertificates.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Security.SslClientAuthenticationOptions.ClientCertificates" target="_top">.NET documentation</a>
+     */
     public X509CertificateCollection getClientCertificates() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -409,6 +559,13 @@ public class SslClientAuthenticationOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ClientCertificates.
+     *
+     * @param ClientCertificates the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Security.SslClientAuthenticationOptions.ClientCertificates" target="_top">.NET documentation</a>
+     */
     public void setClientCertificates(X509CertificateCollection ClientCertificates) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -419,6 +576,13 @@ public class SslClientAuthenticationOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CertificateChainPolicy.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Security.SslClientAuthenticationOptions.CertificateChainPolicy" target="_top">.NET documentation</a>
+     */
     public X509ChainPolicy getCertificateChainPolicy() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -434,6 +598,13 @@ public class SslClientAuthenticationOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CertificateChainPolicy.
+     *
+     * @param CertificateChainPolicy the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Security.SslClientAuthenticationOptions.CertificateChainPolicy" target="_top">.NET documentation</a>
+     */
     public void setCertificateChainPolicy(X509ChainPolicy CertificateChainPolicy) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -444,6 +615,13 @@ public class SslClientAuthenticationOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CertificateRevocationCheckMode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Security.SslClientAuthenticationOptions.CertificateRevocationCheckMode" target="_top">.NET documentation</a>
+     */
     public X509RevocationMode getCertificateRevocationCheckMode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -459,6 +637,21 @@ public class SslClientAuthenticationOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CertificateRevocationCheckMode.
+     *
+     * @param CertificateRevocationCheckMode the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Security.SslClientAuthenticationOptions.CertificateRevocationCheckMode" target="_top">.NET documentation</a>
+     */
     public void setCertificateRevocationCheckMode(X509RevocationMode CertificateRevocationCheckMode) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -469,6 +662,13 @@ public class SslClientAuthenticationOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TargetHost.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Security.SslClientAuthenticationOptions.TargetHost" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTargetHost() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -483,6 +683,13 @@ public class SslClientAuthenticationOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TargetHost.
+     *
+     * @param TargetHost the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Security.SslClientAuthenticationOptions.TargetHost" target="_top">.NET documentation</a>
+     */
     public void setTargetHost(java.lang.String TargetHost) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

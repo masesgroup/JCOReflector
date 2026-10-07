@@ -98,7 +98,10 @@ public class ObjectIDGenerator extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ObjectIDGenerator(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -145,6 +148,12 @@ public class ObjectIDGenerator extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.ObjectIDGenerator.-ctor" target="_top">.NET documentation</a>
+     */
     public ObjectIDGenerator() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -159,6 +168,18 @@ public class ObjectIDGenerator extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetId.
+     *
+     * @param obj the argument of type {@code NetObject}
+     * @param firstTime the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicBoolean>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.runtime.serialization.SerializationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.ObjectIDGenerator.GetId" target="_top">.NET documentation</a>
+     */
     public long GetId(NetObject obj, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> firstTime) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.runtime.serialization.SerializationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -199,6 +220,16 @@ public class ObjectIDGenerator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member HasId.
+     *
+     * @param obj the argument of type {@code NetObject}
+     * @param firstTime the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicBoolean>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.ObjectIDGenerator.HasId" target="_top">.NET documentation</a>
+     */
     public long HasId(NetObject obj, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> firstTime) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

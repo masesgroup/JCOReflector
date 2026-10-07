@@ -98,7 +98,10 @@ public class IChangeTrackingImplementation extends NetObject implements IChangeT
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IChangeTrackingImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -140,6 +143,12 @@ public class IChangeTrackingImplementation extends NetObject implements IChangeT
 
     // Methods section
     
+    /**
+     * Invokes the .NET member AcceptChanges.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.IChangeTracking.AcceptChanges" target="_top">.NET documentation</a>
+     */
     public void AcceptChanges() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -154,6 +163,13 @@ public class IChangeTrackingImplementation extends NetObject implements IChangeT
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsChanged.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.IChangeTracking.IsChanged" target="_top">.NET documentation</a>
+     */
     public boolean getIsChanged() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

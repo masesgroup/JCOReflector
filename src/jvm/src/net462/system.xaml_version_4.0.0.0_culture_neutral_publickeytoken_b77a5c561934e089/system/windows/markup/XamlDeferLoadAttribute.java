@@ -99,7 +99,10 @@ public class XamlDeferLoadAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XamlDeferLoadAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,15 @@ public class XamlDeferLoadAttribute extends system.Attribute  {
     public XamlDeferLoadAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param loaderType the argument of type {@code java.lang.String}
+     * @param contentType the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.XamlDeferLoadAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public XamlDeferLoadAttribute(java.lang.String loaderType, java.lang.String contentType) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -159,6 +171,15 @@ public class XamlDeferLoadAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param loaderType the argument of type {@code NetType}
+     * @param contentType the argument of type {@code NetType}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.XamlDeferLoadAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public XamlDeferLoadAttribute(NetType loaderType, NetType contentType) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -178,6 +199,13 @@ public class XamlDeferLoadAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ContentTypeName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.XamlDeferLoadAttribute.ContentTypeName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getContentTypeName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -192,6 +220,13 @@ public class XamlDeferLoadAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LoaderTypeName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.XamlDeferLoadAttribute.LoaderTypeName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getLoaderTypeName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,6 +241,13 @@ public class XamlDeferLoadAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ContentType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.XamlDeferLoadAttribute.ContentType" target="_top">.NET documentation</a>
+     */
     public NetType getContentType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -221,6 +263,13 @@ public class XamlDeferLoadAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ContentType.
+     *
+     * @param ContentType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.XamlDeferLoadAttribute.ContentType" target="_top">.NET documentation</a>
+     */
     public void setContentType(NetType ContentType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -231,6 +280,13 @@ public class XamlDeferLoadAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LoaderType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.XamlDeferLoadAttribute.LoaderType" target="_top">.NET documentation</a>
+     */
     public NetType getLoaderType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -246,6 +302,13 @@ public class XamlDeferLoadAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property LoaderType.
+     *
+     * @param LoaderType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.XamlDeferLoadAttribute.LoaderType" target="_top">.NET documentation</a>
+     */
     public void setLoaderType(NetType LoaderType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

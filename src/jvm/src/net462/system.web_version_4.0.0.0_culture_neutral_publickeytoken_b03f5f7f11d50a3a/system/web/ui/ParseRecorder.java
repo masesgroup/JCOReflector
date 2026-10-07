@@ -106,7 +106,10 @@ public class ParseRecorder extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ParseRecorder(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -159,6 +162,13 @@ public class ParseRecorder extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Initialize.
+     *
+     * @param parser the argument of type {@code TemplateParser}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.ParseRecorder.Initialize" target="_top">.NET documentation</a>
+     */
     public void Initialize(TemplateParser parser) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -169,6 +179,13 @@ public class ParseRecorder extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ParseComplete.
+     *
+     * @param root the argument of type {@code ControlBuilder}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.ParseRecorder.ParseComplete" target="_top">.NET documentation</a>
+     */
     public void ParseComplete(ControlBuilder root) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -179,6 +196,18 @@ public class ParseRecorder extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ProcessGeneratedCode.
+     *
+     * @param builder the argument of type {@code ControlBuilder}
+     * @param codeCompileUnit the argument of type {@code CodeCompileUnit}
+     * @param baseType the argument of type {@code CodeTypeDeclaration}
+     * @param derivedType the argument of type {@code CodeTypeDeclaration}
+     * @param buildMethod the argument of type {@code CodeMemberMethod}
+     * @param dataBindingMethod the argument of type {@code CodeMemberMethod}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.ParseRecorder.ProcessGeneratedCode" target="_top">.NET documentation</a>
+     */
     public void ProcessGeneratedCode(ControlBuilder builder, CodeCompileUnit codeCompileUnit, CodeTypeDeclaration baseType, CodeTypeDeclaration derivedType, CodeMemberMethod buildMethod, CodeMemberMethod dataBindingMethod) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +218,14 @@ public class ParseRecorder extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RecordBeginTag.
+     *
+     * @param builder the argument of type {@code ControlBuilder}
+     * @param tag the argument of type {@code Match}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.ParseRecorder.RecordBeginTag" target="_top">.NET documentation</a>
+     */
     public void RecordBeginTag(ControlBuilder builder, Match tag) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -199,6 +236,14 @@ public class ParseRecorder extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RecordCodeBlock.
+     *
+     * @param builder the argument of type {@code ControlBuilder}
+     * @param codeBlock the argument of type {@code Match}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.ParseRecorder.RecordCodeBlock" target="_top">.NET documentation</a>
+     */
     public void RecordCodeBlock(ControlBuilder builder, Match codeBlock) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -209,6 +254,14 @@ public class ParseRecorder extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RecordEmptyTag.
+     *
+     * @param builder the argument of type {@code ControlBuilder}
+     * @param tag the argument of type {@code Match}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.ParseRecorder.RecordEmptyTag" target="_top">.NET documentation</a>
+     */
     public void RecordEmptyTag(ControlBuilder builder, Match tag) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -219,6 +272,14 @@ public class ParseRecorder extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RecordEndTag.
+     *
+     * @param builder the argument of type {@code ControlBuilder}
+     * @param tag the argument of type {@code Match}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.ParseRecorder.RecordEndTag" target="_top">.NET documentation</a>
+     */
     public void RecordEndTag(ControlBuilder builder, Match tag) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -233,6 +294,13 @@ public class ParseRecorder extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property RecorderFactories.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.ParseRecorder.RecorderFactories" target="_top">.NET documentation</a>
+     */
     public static IList_1 getRecorderFactories() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

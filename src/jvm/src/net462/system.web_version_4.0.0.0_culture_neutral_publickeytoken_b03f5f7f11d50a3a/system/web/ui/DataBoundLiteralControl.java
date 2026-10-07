@@ -99,7 +99,10 @@ public class DataBoundLiteralControl extends system.web.ui.Control  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DataBoundLiteralControl(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,14 @@ public class DataBoundLiteralControl extends system.web.ui.Control  {
     public DataBoundLiteralControl() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param staticLiteralsCount the argument of type {@code int}
+     * @param dataBoundLiteralCount the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.DataBoundLiteralControl.-ctor" target="_top">.NET documentation</a>
+     */
     public DataBoundLiteralControl(int staticLiteralsCount, int dataBoundLiteralCount) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +175,14 @@ public class DataBoundLiteralControl extends system.web.ui.Control  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member SetDataBoundString.
+     *
+     * @param index the argument of type {@code int}
+     * @param s the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.DataBoundLiteralControl.SetDataBoundString" target="_top">.NET documentation</a>
+     */
     public void SetDataBoundString(int index, java.lang.String s) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -174,6 +193,14 @@ public class DataBoundLiteralControl extends system.web.ui.Control  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetStaticString.
+     *
+     * @param index the argument of type {@code int}
+     * @param s the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.DataBoundLiteralControl.SetStaticString" target="_top">.NET documentation</a>
+     */
     public void SetStaticString(int index, java.lang.String s) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +215,16 @@ public class DataBoundLiteralControl extends system.web.ui.Control  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Text.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.DataBoundLiteralControl.Text" target="_top">.NET documentation</a>
+     */
     public java.lang.String getText() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

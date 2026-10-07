@@ -98,7 +98,10 @@ public class IControlDesignerTagImplementation extends NetObject implements ICon
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IControlDesignerTagImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -140,6 +143,14 @@ public class IControlDesignerTagImplementation extends NetObject implements ICon
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetAttribute.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.IControlDesignerTag.GetAttribute" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetAttribute(java.lang.String name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -154,6 +165,13 @@ public class IControlDesignerTagImplementation extends NetObject implements ICon
         }
     }
 
+    /**
+     * Invokes the .NET member GetContent.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.IControlDesignerTag.GetContent" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetContent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -168,6 +186,13 @@ public class IControlDesignerTagImplementation extends NetObject implements ICon
         }
     }
 
+    /**
+     * Invokes the .NET member GetOuterContent.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.IControlDesignerTag.GetOuterContent" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetOuterContent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +207,13 @@ public class IControlDesignerTagImplementation extends NetObject implements ICon
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveAttribute.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.IControlDesignerTag.RemoveAttribute" target="_top">.NET documentation</a>
+     */
     public void RemoveAttribute(java.lang.String name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -192,6 +224,14 @@ public class IControlDesignerTagImplementation extends NetObject implements ICon
         }
     }
 
+    /**
+     * Invokes the .NET member SetAttribute.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param value the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.IControlDesignerTag.SetAttribute" target="_top">.NET documentation</a>
+     */
     public void SetAttribute(java.lang.String name, java.lang.String value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +242,13 @@ public class IControlDesignerTagImplementation extends NetObject implements ICon
         }
     }
 
+    /**
+     * Invokes the .NET member SetContent.
+     *
+     * @param content the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.IControlDesignerTag.SetContent" target="_top">.NET documentation</a>
+     */
     public void SetContent(java.lang.String content) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -212,6 +259,13 @@ public class IControlDesignerTagImplementation extends NetObject implements ICon
         }
     }
 
+    /**
+     * Invokes the .NET member SetDirty.
+     *
+     * @param dirty the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.IControlDesignerTag.SetDirty" target="_top">.NET documentation</a>
+     */
     public void SetDirty(boolean dirty) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -226,6 +280,13 @@ public class IControlDesignerTagImplementation extends NetObject implements ICon
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsDirty.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.IControlDesignerTag.IsDirty" target="_top">.NET documentation</a>
+     */
     public boolean getIsDirty() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

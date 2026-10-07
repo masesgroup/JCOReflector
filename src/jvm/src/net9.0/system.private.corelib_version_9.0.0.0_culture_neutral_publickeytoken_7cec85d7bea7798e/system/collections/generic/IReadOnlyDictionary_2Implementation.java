@@ -103,7 +103,10 @@ public class IReadOnlyDictionary_2Implementation<TKey extends IJCOBridgeReflecte
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IReadOnlyDictionary_2Implementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -145,6 +148,14 @@ public class IReadOnlyDictionary_2Implementation<TKey extends IJCOBridgeReflecte
 
     // Methods section
     
+    /**
+     * Invokes the .NET member ContainsKey.
+     *
+     * @param key the argument of type {@code TKey}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.IReadOnlyDictionary-2.ContainsKey" target="_top">.NET documentation</a>
+     */
     public boolean ContainsKey(TKey key) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -159,6 +170,15 @@ public class IReadOnlyDictionary_2Implementation<TKey extends IJCOBridgeReflecte
         }
     }
 
+    /**
+     * Invokes the .NET member TryGetValue.
+     *
+     * @param key the argument of type {@code TKey}
+     * @param value the argument of type {@code JCORefOut<TValue>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.IReadOnlyDictionary-2.TryGetValue" target="_top">.NET documentation</a>
+     */
     public boolean TryGetValue(TKey key, JCORefOut<TValue> value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -177,6 +197,13 @@ public class IReadOnlyDictionary_2Implementation<TKey extends IJCOBridgeReflecte
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Count.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.IReadOnlyDictionary-2.Count" target="_top">.NET documentation</a>
+     */
     public int getCount() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -217,6 +244,13 @@ public class IReadOnlyDictionary_2Implementation<TKey extends IJCOBridgeReflecte
         }
     }
 
+    /**
+     * Gets the value of the .NET property Keys.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.IReadOnlyDictionary-2.Keys" target="_top">.NET documentation</a>
+     */
     public IEnumerable_1 getKeys() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -232,6 +266,13 @@ public class IReadOnlyDictionary_2Implementation<TKey extends IJCOBridgeReflecte
         }
     }
 
+    /**
+     * Gets the value of the .NET property Values.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.IReadOnlyDictionary-2.Values" target="_top">.NET documentation</a>
+     */
     public IEnumerable_1 getValues() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

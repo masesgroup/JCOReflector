@@ -107,7 +107,10 @@ public class IEngine2Implementation extends NetObject implements IEngine2 {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IEngine2Implementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,13 @@ public class IEngine2Implementation extends NetObject implements IEngine2 {
 
     // Methods section
     
+    /**
+     * Invokes the .NET member CompileEmpty.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.IEngine2.CompileEmpty" target="_top">.NET documentation</a>
+     */
     public boolean CompileEmpty() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -163,6 +173,13 @@ public class IEngine2Implementation extends NetObject implements IEngine2 {
         }
     }
 
+    /**
+     * Invokes the .NET member GetGlobalScope.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.IEngine2.GetGlobalScope" target="_top">.NET documentation</a>
+     */
     public IVsaScriptScope GetGlobalScope() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,6 +195,14 @@ public class IEngine2Implementation extends NetObject implements IEngine2 {
         }
     }
 
+    /**
+     * Invokes the .NET member Clone.
+     *
+     * @param domain the argument of type {@code AppDomain}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.IEngine2.Clone" target="_top">.NET documentation</a>
+     */
     public IJSVsaEngine Clone(AppDomain domain) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +218,13 @@ public class IEngine2Implementation extends NetObject implements IEngine2 {
         }
     }
 
+    /**
+     * Invokes the .NET member GetAssembly.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.IEngine2.GetAssembly" target="_top">.NET documentation</a>
+     */
     public Assembly GetAssembly() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +240,13 @@ public class IEngine2Implementation extends NetObject implements IEngine2 {
         }
     }
 
+    /**
+     * Invokes the .NET member GetModule.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.IEngine2.GetModule" target="_top">.NET documentation</a>
+     */
     public Module GetModule() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -223,6 +262,12 @@ public class IEngine2Implementation extends NetObject implements IEngine2 {
         }
     }
 
+    /**
+     * Invokes the .NET member ConnectEvents.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.IEngine2.ConnectEvents" target="_top">.NET documentation</a>
+     */
     public void ConnectEvents() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -233,6 +278,12 @@ public class IEngine2Implementation extends NetObject implements IEngine2 {
         }
     }
 
+    /**
+     * Invokes the .NET member DisconnectEvents.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.IEngine2.DisconnectEvents" target="_top">.NET documentation</a>
+     */
     public void DisconnectEvents() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -243,6 +294,14 @@ public class IEngine2Implementation extends NetObject implements IEngine2 {
         }
     }
 
+    /**
+     * Invokes the .NET member InitVsaEngine.
+     *
+     * @param rootMoniker the argument of type {@code java.lang.String}
+     * @param site the argument of type {@code IJSVsaSite}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.IEngine2.InitVsaEngine" target="_top">.NET documentation</a>
+     */
     public void InitVsaEngine(java.lang.String rootMoniker, IJSVsaSite site) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -253,6 +312,12 @@ public class IEngine2Implementation extends NetObject implements IEngine2 {
         }
     }
 
+    /**
+     * Invokes the .NET member Interrupt.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.IEngine2.Interrupt" target="_top">.NET documentation</a>
+     */
     public void Interrupt() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -263,6 +328,13 @@ public class IEngine2Implementation extends NetObject implements IEngine2 {
         }
     }
 
+    /**
+     * Invokes the .NET member RegisterEventSource.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.IEngine2.RegisterEventSource" target="_top">.NET documentation</a>
+     */
     public void RegisterEventSource(java.lang.String name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -273,6 +345,12 @@ public class IEngine2Implementation extends NetObject implements IEngine2 {
         }
     }
 
+    /**
+     * Invokes the .NET member Restart.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.IEngine2.Restart" target="_top">.NET documentation</a>
+     */
     public void Restart() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -283,6 +361,13 @@ public class IEngine2Implementation extends NetObject implements IEngine2 {
         }
     }
 
+    /**
+     * Invokes the .NET member Run.
+     *
+     * @param domain the argument of type {@code AppDomain}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.IEngine2.Run" target="_top">.NET documentation</a>
+     */
     public void Run(AppDomain domain) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -293,6 +378,12 @@ public class IEngine2Implementation extends NetObject implements IEngine2 {
         }
     }
 
+    /**
+     * Invokes the .NET member RunEmpty.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.IEngine2.RunEmpty" target="_top">.NET documentation</a>
+     */
     public void RunEmpty() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

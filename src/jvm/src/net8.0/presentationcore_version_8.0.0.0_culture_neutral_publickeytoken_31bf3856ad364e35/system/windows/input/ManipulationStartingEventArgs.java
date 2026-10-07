@@ -106,7 +106,10 @@ public class ManipulationStartingEventArgs extends system.windows.input.InputEve
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ManipulationStartingEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -161,6 +164,13 @@ public class ManipulationStartingEventArgs extends system.windows.input.InputEve
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Cancel.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.ManipulationStartingEventArgs.Cancel" target="_top">.NET documentation</a>
+     */
     public boolean Cancel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -175,6 +185,20 @@ public class ManipulationStartingEventArgs extends system.windows.input.InputEve
         }
     }
 
+    /**
+     * Invokes the .NET member SetManipulationParameter.
+     *
+     * @param parameter the argument of type {@code ManipulationParameters2D}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.ManipulationStartingEventArgs.SetManipulationParameter" target="_top">.NET documentation</a>
+     */
     public void SetManipulationParameter(ManipulationParameters2D parameter) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +213,13 @@ public class ManipulationStartingEventArgs extends system.windows.input.InputEve
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsSingleTouchEnabled.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.ManipulationStartingEventArgs.IsSingleTouchEnabled" target="_top">.NET documentation</a>
+     */
     public boolean getIsSingleTouchEnabled() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +234,13 @@ public class ManipulationStartingEventArgs extends system.windows.input.InputEve
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsSingleTouchEnabled.
+     *
+     * @param IsSingleTouchEnabled the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.ManipulationStartingEventArgs.IsSingleTouchEnabled" target="_top">.NET documentation</a>
+     */
     public void setIsSingleTouchEnabled(boolean IsSingleTouchEnabled) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -213,6 +251,18 @@ public class ManipulationStartingEventArgs extends system.windows.input.InputEve
         }
     }
 
+    /**
+     * Gets the value of the .NET property Manipulators.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.ManipulationStartingEventArgs.Manipulators" target="_top">.NET documentation</a>
+     */
     public IEnumerable_1 getManipulators() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -228,6 +278,13 @@ public class ManipulationStartingEventArgs extends system.windows.input.InputEve
         }
     }
 
+    /**
+     * Gets the value of the .NET property ManipulationContainer.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.ManipulationStartingEventArgs.ManipulationContainer" target="_top">.NET documentation</a>
+     */
     public IInputElement getManipulationContainer() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -243,6 +300,13 @@ public class ManipulationStartingEventArgs extends system.windows.input.InputEve
         }
     }
 
+    /**
+     * Sets the value of the .NET property ManipulationContainer.
+     *
+     * @param ManipulationContainer the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.ManipulationStartingEventArgs.ManipulationContainer" target="_top">.NET documentation</a>
+     */
     public void setManipulationContainer(IInputElement ManipulationContainer) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -253,6 +317,13 @@ public class ManipulationStartingEventArgs extends system.windows.input.InputEve
         }
     }
 
+    /**
+     * Gets the value of the .NET property Mode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.ManipulationStartingEventArgs.Mode" target="_top">.NET documentation</a>
+     */
     public ManipulationModes getMode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -268,6 +339,20 @@ public class ManipulationStartingEventArgs extends system.windows.input.InputEve
         }
     }
 
+    /**
+     * Sets the value of the .NET property Mode.
+     *
+     * @param Mode the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.ManipulationStartingEventArgs.Mode" target="_top">.NET documentation</a>
+     */
     public void setMode(ManipulationModes Mode) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -278,6 +363,13 @@ public class ManipulationStartingEventArgs extends system.windows.input.InputEve
         }
     }
 
+    /**
+     * Gets the value of the .NET property Pivot.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.ManipulationStartingEventArgs.Pivot" target="_top">.NET documentation</a>
+     */
     public ManipulationPivot getPivot() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -293,6 +385,13 @@ public class ManipulationStartingEventArgs extends system.windows.input.InputEve
         }
     }
 
+    /**
+     * Sets the value of the .NET property Pivot.
+     *
+     * @param Pivot the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.ManipulationStartingEventArgs.Pivot" target="_top">.NET documentation</a>
+     */
     public void setPivot(ManipulationPivot Pivot) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

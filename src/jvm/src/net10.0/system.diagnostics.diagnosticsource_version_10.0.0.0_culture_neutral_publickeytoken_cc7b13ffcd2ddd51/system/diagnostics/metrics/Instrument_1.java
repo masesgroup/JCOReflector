@@ -100,7 +100,10 @@ public class Instrument_1<T extends IJCOBridgeReflected> extends system.diagnost
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Instrument_1(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,13 @@ public class Instrument_1<T extends IJCOBridgeReflected> extends system.diagnost
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Advice.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Metrics.Instrument-1.Advice" target="_top">.NET documentation</a>
+     */
     public InstrumentAdvice_1 getAdvice() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -99,7 +99,10 @@ public class DiscoverySearchPattern extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DiscoverySearchPattern(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,14 @@ public class DiscoverySearchPattern extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetDiscoveryReference.
+     *
+     * @param filename the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Discovery.DiscoverySearchPattern.GetDiscoveryReference" target="_top">.NET documentation</a>
+     */
     public DiscoveryReference GetDiscoveryReference(java.lang.String filename) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -171,6 +182,13 @@ public class DiscoverySearchPattern extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Pattern.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Discovery.DiscoverySearchPattern.Pattern" target="_top">.NET documentation</a>
+     */
     public java.lang.String getPattern() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

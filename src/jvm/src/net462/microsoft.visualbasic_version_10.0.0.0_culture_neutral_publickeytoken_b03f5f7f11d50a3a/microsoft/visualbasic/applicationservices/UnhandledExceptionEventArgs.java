@@ -99,7 +99,10 @@ public class UnhandledExceptionEventArgs extends system.threading.ThreadExceptio
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public UnhandledExceptionEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,14 @@ public class UnhandledExceptionEventArgs extends system.threading.ThreadExceptio
     public UnhandledExceptionEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param exitApplication the argument of type {@code boolean}
+     * @param exception the argument of type {@code NetException}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.ApplicationServices.UnhandledExceptionEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public UnhandledExceptionEventArgs(boolean exitApplication, NetException exception) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +179,13 @@ public class UnhandledExceptionEventArgs extends system.threading.ThreadExceptio
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ExitApplication.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.ApplicationServices.UnhandledExceptionEventArgs.ExitApplication" target="_top">.NET documentation</a>
+     */
     public boolean getExitApplication() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +200,13 @@ public class UnhandledExceptionEventArgs extends system.threading.ThreadExceptio
         }
     }
 
+    /**
+     * Sets the value of the .NET property ExitApplication.
+     *
+     * @param ExitApplication the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.ApplicationServices.UnhandledExceptionEventArgs.ExitApplication" target="_top">.NET documentation</a>
+     */
     public void setExitApplication(boolean ExitApplication) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

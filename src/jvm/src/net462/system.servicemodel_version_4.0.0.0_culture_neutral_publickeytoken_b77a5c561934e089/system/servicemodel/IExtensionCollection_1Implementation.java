@@ -105,7 +105,10 @@ public class IExtensionCollection_1Implementation<T extends IJCOBridgeReflected>
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IExtensionCollection_1Implementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,14 @@ public class IExtensionCollection_1Implementation<T extends IJCOBridgeReflected>
 
     // Methods section
     
+    /**
+     * Invokes the .NET member Contains.
+     *
+     * @param item the argument of type {@code IExtension_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.IExtensionCollection-1.Contains" target="_top">.NET documentation</a>
+     */
     public boolean Contains(IExtension_1 item) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -161,6 +172,14 @@ public class IExtensionCollection_1Implementation<T extends IJCOBridgeReflected>
         }
     }
 
+    /**
+     * Invokes the .NET member Remove.
+     *
+     * @param item the argument of type {@code IExtension_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.IExtensionCollection-1.Remove" target="_top">.NET documentation</a>
+     */
     public boolean Remove(IExtension_1 item) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -175,6 +194,14 @@ public class IExtensionCollection_1Implementation<T extends IJCOBridgeReflected>
         }
     }
 
+    /**
+     * Invokes the .NET member FindAll.
+     *
+     * @param <E> the type of the generic argument E
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.IExtensionCollection-1.FindAll" target="_top">.NET documentation</a>
+     */
     public <E extends IJCOBridgeReflected> Collection_1 FindAll() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +217,13 @@ public class IExtensionCollection_1Implementation<T extends IJCOBridgeReflected>
         }
     }
 
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param item the argument of type {@code IExtension_1}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.IExtensionCollection-1.Add" target="_top">.NET documentation</a>
+     */
     public void Add(IExtension_1 item) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +234,12 @@ public class IExtensionCollection_1Implementation<T extends IJCOBridgeReflected>
         }
     }
 
+    /**
+     * Invokes the .NET member Clear.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.IExtensionCollection-1.Clear" target="_top">.NET documentation</a>
+     */
     public void Clear() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -210,6 +250,14 @@ public class IExtensionCollection_1Implementation<T extends IJCOBridgeReflected>
         }
     }
 
+    /**
+     * Invokes the .NET member CopyTo.
+     *
+     * @param array the argument of type {@code IExtension_1[]}
+     * @param arrayIndex the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.IExtensionCollection-1.CopyTo" target="_top">.NET documentation</a>
+     */
     public void CopyTo(IExtension_1[] array, int arrayIndex) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -224,6 +272,13 @@ public class IExtensionCollection_1Implementation<T extends IJCOBridgeReflected>
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsReadOnly.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.IExtensionCollection-1.IsReadOnly" target="_top">.NET documentation</a>
+     */
     public boolean getIsReadOnly() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -238,6 +293,13 @@ public class IExtensionCollection_1Implementation<T extends IJCOBridgeReflected>
         }
     }
 
+    /**
+     * Gets the value of the .NET property Count.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.IExtensionCollection-1.Count" target="_top">.NET documentation</a>
+     */
     public int getCount() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

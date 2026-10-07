@@ -102,7 +102,10 @@ public class ValidationSettings extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ValidationSettings(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,12 @@ public class ValidationSettings extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Validation.ValidationSettings.-ctor" target="_top">.NET documentation</a>
+     */
     public ValidationSettings() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +176,13 @@ public class ValidationSettings extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property OnlyUseAdditionalConstraints.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints" target="_top">.NET documentation</a>
+     */
     public boolean getOnlyUseAdditionalConstraints() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -181,6 +197,13 @@ public class ValidationSettings extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property OnlyUseAdditionalConstraints.
+     *
+     * @param OnlyUseAdditionalConstraints the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints" target="_top">.NET documentation</a>
+     */
     public void setOnlyUseAdditionalConstraints(boolean OnlyUseAdditionalConstraints) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -191,6 +214,13 @@ public class ValidationSettings extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PrepareForRuntime.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Validation.ValidationSettings.PrepareForRuntime" target="_top">.NET documentation</a>
+     */
     public boolean getPrepareForRuntime() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +235,13 @@ public class ValidationSettings extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PrepareForRuntime.
+     *
+     * @param PrepareForRuntime the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Validation.ValidationSettings.PrepareForRuntime" target="_top">.NET documentation</a>
+     */
     public void setPrepareForRuntime(boolean PrepareForRuntime) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +252,13 @@ public class ValidationSettings extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SingleLevel.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Validation.ValidationSettings.SingleLevel" target="_top">.NET documentation</a>
+     */
     public boolean getSingleLevel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -229,6 +273,13 @@ public class ValidationSettings extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SingleLevel.
+     *
+     * @param SingleLevel the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Validation.ValidationSettings.SingleLevel" target="_top">.NET documentation</a>
+     */
     public void setSingleLevel(boolean SingleLevel) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -239,6 +290,13 @@ public class ValidationSettings extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SkipValidatingRootConfiguration.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Validation.ValidationSettings.SkipValidatingRootConfiguration" target="_top">.NET documentation</a>
+     */
     public boolean getSkipValidatingRootConfiguration() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -253,6 +311,13 @@ public class ValidationSettings extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SkipValidatingRootConfiguration.
+     *
+     * @param SkipValidatingRootConfiguration the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Validation.ValidationSettings.SkipValidatingRootConfiguration" target="_top">.NET documentation</a>
+     */
     public void setSkipValidatingRootConfiguration(boolean SkipValidatingRootConfiguration) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -263,6 +328,13 @@ public class ValidationSettings extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Environment.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Validation.ValidationSettings.Environment" target="_top">.NET documentation</a>
+     */
     public LocationReferenceEnvironment getEnvironment() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -278,6 +350,13 @@ public class ValidationSettings extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Environment.
+     *
+     * @param Environment the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Validation.ValidationSettings.Environment" target="_top">.NET documentation</a>
+     */
     public void setEnvironment(LocationReferenceEnvironment Environment) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -288,6 +367,15 @@ public class ValidationSettings extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AdditionalConstraints.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Validation.ValidationSettings.AdditionalConstraints" target="_top">.NET documentation</a>
+     */
     public IDictionary_2 getAdditionalConstraints() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -303,6 +391,13 @@ public class ValidationSettings extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CancellationToken.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Validation.ValidationSettings.CancellationToken" target="_top">.NET documentation</a>
+     */
     public CancellationToken getCancellationToken() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -318,6 +413,13 @@ public class ValidationSettings extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CancellationToken.
+     *
+     * @param CancellationToken the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Validation.ValidationSettings.CancellationToken" target="_top">.NET documentation</a>
+     */
     public void setCancellationToken(CancellationToken CancellationToken) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

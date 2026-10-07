@@ -99,7 +99,10 @@ public class IWebProxyScriptImplementation extends NetObject implements IWebProx
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IWebProxyScriptImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -141,6 +144,16 @@ public class IWebProxyScriptImplementation extends NetObject implements IWebProx
 
     // Methods section
     
+    /**
+     * Invokes the .NET member Load.
+     *
+     * @param scriptLocation the argument of type {@code Uri}
+     * @param script the argument of type {@code java.lang.String}
+     * @param helperType the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.IWebProxyScript.Load" target="_top">.NET documentation</a>
+     */
     public boolean Load(Uri scriptLocation, java.lang.String script, NetType helperType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -155,6 +168,15 @@ public class IWebProxyScriptImplementation extends NetObject implements IWebProx
         }
     }
 
+    /**
+     * Invokes the .NET member Run.
+     *
+     * @param url the argument of type {@code java.lang.String}
+     * @param host the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.IWebProxyScript.Run" target="_top">.NET documentation</a>
+     */
     public java.lang.String Run(java.lang.String url, java.lang.String host) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -169,6 +191,12 @@ public class IWebProxyScriptImplementation extends NetObject implements IWebProx
         }
     }
 
+    /**
+     * Invokes the .NET member Close.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.IWebProxyScript.Close" target="_top">.NET documentation</a>
+     */
     public void Close() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

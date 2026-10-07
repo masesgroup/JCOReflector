@@ -105,7 +105,10 @@ public class IControlDesignerViewImplementation extends NetObject implements ICo
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IControlDesignerViewImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,14 @@ public class IControlDesignerViewImplementation extends NetObject implements ICo
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetBounds.
+     *
+     * @param region the argument of type {@code DesignerRegion}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.IControlDesignerView.GetBounds" target="_top">.NET documentation</a>
+     */
     public Rectangle GetBounds(DesignerRegion region) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -162,6 +173,13 @@ public class IControlDesignerViewImplementation extends NetObject implements ICo
         }
     }
 
+    /**
+     * Invokes the .NET member Invalidate.
+     *
+     * @param rectangle the argument of type {@code Rectangle}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.IControlDesignerView.Invalidate" target="_top">.NET documentation</a>
+     */
     public void Invalidate(Rectangle rectangle) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -172,6 +190,14 @@ public class IControlDesignerViewImplementation extends NetObject implements ICo
         }
     }
 
+    /**
+     * Invokes the .NET member SetFlags.
+     *
+     * @param viewFlags the argument of type {@code ViewFlags}
+     * @param setFlag the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.IControlDesignerView.SetFlags" target="_top">.NET documentation</a>
+     */
     public void SetFlags(ViewFlags viewFlags, boolean setFlag) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +208,14 @@ public class IControlDesignerViewImplementation extends NetObject implements ICo
         }
     }
 
+    /**
+     * Invokes the .NET member SetRegionContent.
+     *
+     * @param region the argument of type {@code EditableDesignerRegion}
+     * @param content the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.IControlDesignerView.SetRegionContent" target="_top">.NET documentation</a>
+     */
     public void SetRegionContent(EditableDesignerRegion region, java.lang.String content) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -192,6 +226,12 @@ public class IControlDesignerViewImplementation extends NetObject implements ICo
         }
     }
 
+    /**
+     * Invokes the .NET member Update.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.IControlDesignerView.Update" target="_top">.NET documentation</a>
+     */
     public void Update() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,6 +246,13 @@ public class IControlDesignerViewImplementation extends NetObject implements ICo
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property SupportsRegions.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.IControlDesignerView.SupportsRegions" target="_top">.NET documentation</a>
+     */
     public boolean getSupportsRegions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -220,6 +267,13 @@ public class IControlDesignerViewImplementation extends NetObject implements ICo
         }
     }
 
+    /**
+     * Gets the value of the .NET property NamingContainerDesigner.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.IControlDesignerView.NamingContainerDesigner" target="_top">.NET documentation</a>
+     */
     public IDesigner getNamingContainerDesigner() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -235,6 +289,13 @@ public class IControlDesignerViewImplementation extends NetObject implements ICo
         }
     }
 
+    /**
+     * Gets the value of the .NET property ContainingRegion.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.IControlDesignerView.ContainingRegion" target="_top">.NET documentation</a>
+     */
     public DesignerRegion getContainingRegion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -255,6 +316,13 @@ public class IControlDesignerViewImplementation extends NetObject implements ICo
     // Instance Events section
     
 
+    /**
+     * Invokes the .NET member addViewEvent.
+     *
+     * @param handler the argument of type {@code ViewEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addViewEvent(ViewEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -265,6 +333,13 @@ public class IControlDesignerViewImplementation extends NetObject implements ICo
         }
     }
 
+    /**
+     * Invokes the .NET member removeViewEvent.
+     *
+     * @param handler the argument of type {@code ViewEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeViewEvent(ViewEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

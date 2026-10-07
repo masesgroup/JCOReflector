@@ -101,7 +101,10 @@ public class ISponsorImplementation extends NetObject implements ISponsor {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ISponsorImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -143,6 +146,14 @@ public class ISponsorImplementation extends NetObject implements ISponsor {
 
     // Methods section
     
+    /**
+     * Invokes the .NET member Renewal.
+     *
+     * @param lease the argument of type {@code ILease}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Lifetime.ISponsor.Renewal" target="_top">.NET documentation</a>
+     */
     public TimeSpan Renewal(ILease lease) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -108,7 +108,10 @@ public class XmlCodeExporter extends system.xml.serialization.CodeExporter  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XmlCodeExporter(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -158,6 +161,18 @@ public class XmlCodeExporter extends system.xml.serialization.CodeExporter  {
     public XmlCodeExporter() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param codeNamespace the argument of type {@code CodeNamespace}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlCodeExporter.-ctor" target="_top">.NET documentation</a>
+     */
     public XmlCodeExporter(CodeNamespace codeNamespace) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +183,19 @@ public class XmlCodeExporter extends system.xml.serialization.CodeExporter  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param codeNamespace the argument of type {@code CodeNamespace}
+     * @param codeCompileUnit the argument of type {@code CodeCompileUnit}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlCodeExporter.-ctor" target="_top">.NET documentation</a>
+     */
     public XmlCodeExporter(CodeNamespace codeNamespace, CodeCompileUnit codeCompileUnit) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -178,6 +206,22 @@ public class XmlCodeExporter extends system.xml.serialization.CodeExporter  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param codeNamespace the argument of type {@code CodeNamespace}
+     * @param codeCompileUnit the argument of type {@code CodeCompileUnit}
+     * @param codeProvider the argument of type {@code CodeDomProvider}
+     * @param options the argument of type {@code CodeGenerationOptions}
+     * @param mappings the argument of type {@code Hashtable}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlCodeExporter.-ctor" target="_top">.NET documentation</a>
+     */
     public XmlCodeExporter(CodeNamespace codeNamespace, CodeCompileUnit codeCompileUnit, CodeDomProvider codeProvider, CodeGenerationOptions options, Hashtable mappings) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -188,6 +232,20 @@ public class XmlCodeExporter extends system.xml.serialization.CodeExporter  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param codeNamespace the argument of type {@code CodeNamespace}
+     * @param codeCompileUnit the argument of type {@code CodeCompileUnit}
+     * @param options the argument of type {@code CodeGenerationOptions}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlCodeExporter.-ctor" target="_top">.NET documentation</a>
+     */
     public XmlCodeExporter(CodeNamespace codeNamespace, CodeCompileUnit codeCompileUnit, CodeGenerationOptions options) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -198,6 +256,21 @@ public class XmlCodeExporter extends system.xml.serialization.CodeExporter  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param codeNamespace the argument of type {@code CodeNamespace}
+     * @param codeCompileUnit the argument of type {@code CodeCompileUnit}
+     * @param options the argument of type {@code CodeGenerationOptions}
+     * @param mappings the argument of type {@code Hashtable}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlCodeExporter.-ctor" target="_top">.NET documentation</a>
+     */
     public XmlCodeExporter(CodeNamespace codeNamespace, CodeCompileUnit codeCompileUnit, CodeGenerationOptions options, Hashtable mappings) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -213,6 +286,26 @@ public class XmlCodeExporter extends system.xml.serialization.CodeExporter  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member AddMappingMetadata.
+     *
+     * @param metadata the argument of type {@code CodeAttributeDeclarationCollection}
+     * @param member the argument of type {@code XmlMemberMapping}
+     * @param ns the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlCodeExporter.AddMappingMetadata" target="_top">.NET documentation</a>
+     */
     public void AddMappingMetadata(CodeAttributeDeclarationCollection metadata, XmlMemberMapping member, java.lang.String ns) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.security.SecurityException, system.NotImplementedException, system.FormatException, system.configuration.ConfigurationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -223,6 +316,27 @@ public class XmlCodeExporter extends system.xml.serialization.CodeExporter  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddMappingMetadata.
+     *
+     * @param metadata the argument of type {@code CodeAttributeDeclarationCollection}
+     * @param member the argument of type {@code XmlMemberMapping}
+     * @param ns the argument of type {@code java.lang.String}
+     * @param forceUseMemberName the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlCodeExporter.AddMappingMetadata" target="_top">.NET documentation</a>
+     */
     public void AddMappingMetadata(CodeAttributeDeclarationCollection metadata, XmlMemberMapping member, java.lang.String ns, boolean forceUseMemberName) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.security.SecurityException, system.NotImplementedException, system.FormatException, system.configuration.ConfigurationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -233,6 +347,29 @@ public class XmlCodeExporter extends system.xml.serialization.CodeExporter  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddMappingMetadata.
+     *
+     * @param metadata the argument of type {@code CodeAttributeDeclarationCollection}
+     * @param mapping the argument of type {@code XmlTypeMapping}
+     * @param ns the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlCodeExporter.AddMappingMetadata" target="_top">.NET documentation</a>
+     */
     public void AddMappingMetadata(CodeAttributeDeclarationCollection metadata, XmlTypeMapping mapping, java.lang.String ns) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.NotSupportedException, system.security.SecurityException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -243,6 +380,28 @@ public class XmlCodeExporter extends system.xml.serialization.CodeExporter  {
         }
     }
 
+    /**
+     * Invokes the .NET member ExportMembersMapping.
+     *
+     * @param xmlMembersMapping the argument of type {@code XmlMembersMapping}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlCodeExporter.ExportMembersMapping" target="_top">.NET documentation</a>
+     */
     public void ExportMembersMapping(XmlMembersMapping xmlMembersMapping) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.NotSupportedException, system.security.SecurityException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -253,6 +412,28 @@ public class XmlCodeExporter extends system.xml.serialization.CodeExporter  {
         }
     }
 
+    /**
+     * Invokes the .NET member ExportTypeMapping.
+     *
+     * @param xmlTypeMapping the argument of type {@code XmlTypeMapping}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlCodeExporter.ExportTypeMapping" target="_top">.NET documentation</a>
+     */
     public void ExportTypeMapping(XmlTypeMapping xmlTypeMapping) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.NotSupportedException, system.security.SecurityException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

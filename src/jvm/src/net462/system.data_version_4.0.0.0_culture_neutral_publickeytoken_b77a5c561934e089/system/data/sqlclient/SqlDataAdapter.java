@@ -103,7 +103,10 @@ public class SqlDataAdapter extends system.data.common.DbDataAdapter  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SqlDataAdapter(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,13 @@ public class SqlDataAdapter extends system.data.common.DbDataAdapter  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlDataAdapter.-ctor" target="_top">.NET documentation</a>
+     */
     public SqlDataAdapter() throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -160,6 +170,14 @@ public class SqlDataAdapter extends system.data.common.DbDataAdapter  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param selectCommand the argument of type {@code SqlCommand}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlDataAdapter.-ctor" target="_top">.NET documentation</a>
+     */
     public SqlDataAdapter(SqlCommand selectCommand) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +188,22 @@ public class SqlDataAdapter extends system.data.common.DbDataAdapter  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param selectCommandText the argument of type {@code java.lang.String}
+     * @param selectConnection the argument of type {@code SqlConnection}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlDataAdapter.-ctor" target="_top">.NET documentation</a>
+     */
     public SqlDataAdapter(java.lang.String selectCommandText, SqlConnection selectConnection) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
@@ -180,6 +214,22 @@ public class SqlDataAdapter extends system.data.common.DbDataAdapter  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param selectCommandText the argument of type {@code java.lang.String}
+     * @param selectConnectionString the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlDataAdapter.-ctor" target="_top">.NET documentation</a>
+     */
     public SqlDataAdapter(java.lang.String selectCommandText, java.lang.String selectConnectionString) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
@@ -198,6 +248,13 @@ public class SqlDataAdapter extends system.data.common.DbDataAdapter  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property DeleteCommandNewSqlDataAdapter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlDataAdapter.DeleteCommandNewSqlDataAdapter" target="_top">.NET documentation</a>
+     */
     public SqlCommand getDeleteCommandNewSqlDataAdapter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -213,6 +270,13 @@ public class SqlDataAdapter extends system.data.common.DbDataAdapter  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DeleteCommand.
+     *
+     * @param DeleteCommand the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlDataAdapter.DeleteCommand" target="_top">.NET documentation</a>
+     */
     public void setDeleteCommand(SqlCommand DeleteCommand) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -223,6 +287,13 @@ public class SqlDataAdapter extends system.data.common.DbDataAdapter  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property InsertCommandNewSqlDataAdapter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlDataAdapter.InsertCommandNewSqlDataAdapter" target="_top">.NET documentation</a>
+     */
     public SqlCommand getInsertCommandNewSqlDataAdapter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -238,6 +309,13 @@ public class SqlDataAdapter extends system.data.common.DbDataAdapter  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property InsertCommand.
+     *
+     * @param InsertCommand the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlDataAdapter.InsertCommand" target="_top">.NET documentation</a>
+     */
     public void setInsertCommand(SqlCommand InsertCommand) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -248,6 +326,13 @@ public class SqlDataAdapter extends system.data.common.DbDataAdapter  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SelectCommandNewSqlDataAdapter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlDataAdapter.SelectCommandNewSqlDataAdapter" target="_top">.NET documentation</a>
+     */
     public SqlCommand getSelectCommandNewSqlDataAdapter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -263,6 +348,13 @@ public class SqlDataAdapter extends system.data.common.DbDataAdapter  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SelectCommand.
+     *
+     * @param SelectCommand the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlDataAdapter.SelectCommand" target="_top">.NET documentation</a>
+     */
     public void setSelectCommand(SqlCommand SelectCommand) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -273,6 +365,13 @@ public class SqlDataAdapter extends system.data.common.DbDataAdapter  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UpdateCommandNewSqlDataAdapter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlDataAdapter.UpdateCommandNewSqlDataAdapter" target="_top">.NET documentation</a>
+     */
     public SqlCommand getUpdateCommandNewSqlDataAdapter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -288,6 +387,13 @@ public class SqlDataAdapter extends system.data.common.DbDataAdapter  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property UpdateCommand.
+     *
+     * @param UpdateCommand the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlDataAdapter.UpdateCommand" target="_top">.NET documentation</a>
+     */
     public void setUpdateCommand(SqlCommand UpdateCommand) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -303,6 +409,13 @@ public class SqlDataAdapter extends system.data.common.DbDataAdapter  {
     // Instance Events section
     
 
+    /**
+     * Invokes the .NET member addRowUpdated.
+     *
+     * @param handler the argument of type {@code SqlRowUpdatedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addRowUpdated(SqlRowUpdatedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -313,6 +426,13 @@ public class SqlDataAdapter extends system.data.common.DbDataAdapter  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeRowUpdated.
+     *
+     * @param handler the argument of type {@code SqlRowUpdatedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeRowUpdated(SqlRowUpdatedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -323,6 +443,13 @@ public class SqlDataAdapter extends system.data.common.DbDataAdapter  {
         }
     }
 
+    /**
+     * Invokes the .NET member addRowUpdating.
+     *
+     * @param handler the argument of type {@code SqlRowUpdatingEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addRowUpdating(SqlRowUpdatingEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -333,6 +460,13 @@ public class SqlDataAdapter extends system.data.common.DbDataAdapter  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeRowUpdating.
+     *
+     * @param handler the argument of type {@code SqlRowUpdatingEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeRowUpdating(SqlRowUpdatingEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

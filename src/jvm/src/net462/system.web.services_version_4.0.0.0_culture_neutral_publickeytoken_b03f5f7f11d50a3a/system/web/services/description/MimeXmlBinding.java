@@ -99,7 +99,10 @@ public class MimeXmlBinding extends system.web.services.description.ServiceDescr
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public MimeXmlBinding(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class MimeXmlBinding extends system.web.services.description.ServiceDescr
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.MimeXmlBinding.-ctor" target="_top">.NET documentation</a>
+     */
     public MimeXmlBinding() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +173,13 @@ public class MimeXmlBinding extends system.web.services.description.ServiceDescr
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Part.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.MimeXmlBinding.Part" target="_top">.NET documentation</a>
+     */
     public java.lang.String getPart() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,6 +194,13 @@ public class MimeXmlBinding extends system.web.services.description.ServiceDescr
         }
     }
 
+    /**
+     * Sets the value of the .NET property Part.
+     *
+     * @param Part the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.MimeXmlBinding.Part" target="_top">.NET documentation</a>
+     */
     public void setPart(java.lang.String Part) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

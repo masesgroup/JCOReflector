@@ -101,7 +101,10 @@ public class ConfigurationDuplexChannelFactory_1<TChannel extends IJCOBridgeRefl
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ConfigurationDuplexChannelFactory_1(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,24 @@ public class ConfigurationDuplexChannelFactory_1<TChannel extends IJCOBridgeRefl
     public ConfigurationDuplexChannelFactory_1() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param callbackObject the argument of type {@code NetObject}
+     * @param endpointConfigurationName the argument of type {@code java.lang.String}
+     * @param remoteAddress the argument of type {@code EndpointAddress}
+     * @param configuration the argument of type {@code Configuration}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Configuration.ConfigurationDuplexChannelFactory-1.-ctor" target="_top">.NET documentation</a>
+     */
     public ConfigurationDuplexChannelFactory_1(NetObject callbackObject, java.lang.String endpointConfigurationName, EndpointAddress remoteAddress, Configuration configuration) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.configuration.ConfigurationException, system.globalization.CultureNotFoundException {
         try {
             // add reference to assemblyName.dll file

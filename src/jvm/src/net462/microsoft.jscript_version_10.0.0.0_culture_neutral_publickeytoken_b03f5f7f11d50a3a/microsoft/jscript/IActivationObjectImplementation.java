@@ -100,7 +100,10 @@ public class IActivationObjectImplementation extends NetObject implements IActiv
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IActivationObjectImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -142,6 +145,13 @@ public class IActivationObjectImplementation extends NetObject implements IActiv
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetGlobalScope.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.IActivationObject.GetGlobalScope" target="_top">.NET documentation</a>
+     */
     public GlobalScope GetGlobalScope() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -157,6 +167,13 @@ public class IActivationObjectImplementation extends NetObject implements IActiv
         }
     }
 
+    /**
+     * Invokes the .NET member GetDefaultThisObject.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.IActivationObject.GetDefaultThisObject" target="_top">.NET documentation</a>
+     */
     public NetObject GetDefaultThisObject() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -172,6 +189,15 @@ public class IActivationObjectImplementation extends NetObject implements IActiv
         }
     }
 
+    /**
+     * Invokes the .NET member GetMemberValue.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param lexlevel the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.IActivationObject.GetMemberValue" target="_top">.NET documentation</a>
+     */
     public NetObject GetMemberValue(java.lang.String name, int lexlevel) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +213,15 @@ public class IActivationObjectImplementation extends NetObject implements IActiv
         }
     }
 
+    /**
+     * Invokes the .NET member GetField.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param lexLevel the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.IActivationObject.GetField" target="_top">.NET documentation</a>
+     */
     public FieldInfo GetField(java.lang.String name, int lexLevel) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +237,14 @@ public class IActivationObjectImplementation extends NetObject implements IActiv
         }
     }
 
+    /**
+     * Invokes the .NET member GetLocalField.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.IActivationObject.GetLocalField" target="_top">.NET documentation</a>
+     */
     public FieldInfo GetLocalField(java.lang.String name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

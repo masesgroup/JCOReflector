@@ -52,5 +52,11 @@ import system.web.HttpContext;
  * @version 2.0.0.0
  */
 public interface IHttpResponseSubstitutionCallback {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param context the .NET argument of type {@code System.Web.HttpContext}
+     * @return the value returned to the CLR
+     */
     public java.lang.String Invoke(HttpContext context);
 }

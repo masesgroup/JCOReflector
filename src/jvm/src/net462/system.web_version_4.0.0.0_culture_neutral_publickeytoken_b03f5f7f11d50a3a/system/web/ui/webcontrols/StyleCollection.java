@@ -100,7 +100,10 @@ public class StyleCollection extends system.web.ui.StateManagedCollection  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public StyleCollection(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,14 @@ public class StyleCollection extends system.web.ui.StateManagedCollection  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Contains.
+     *
+     * @param style the argument of type {@code Style}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.StyleCollection.Contains" target="_top">.NET documentation</a>
+     */
     public boolean Contains(Style style) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -169,6 +180,14 @@ public class StyleCollection extends system.web.ui.StateManagedCollection  {
         }
     }
 
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param style the argument of type {@code Style}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.StyleCollection.Add" target="_top">.NET documentation</a>
+     */
     public int Add(Style style) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -209,6 +228,14 @@ public class StyleCollection extends system.web.ui.StateManagedCollection  {
         }
     }
 
+    /**
+     * Invokes the .NET member IndexOf.
+     *
+     * @param style the argument of type {@code Style}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.StyleCollection.IndexOf" target="_top">.NET documentation</a>
+     */
     public int IndexOf(Style style) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -249,6 +276,15 @@ public class StyleCollection extends system.web.ui.StateManagedCollection  {
         }
     }
 
+    /**
+     * Invokes the .NET member CopyTo.
+     *
+     * @param styleArray the argument of type {@code Style[]}
+     * @param index the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.StyleCollection.CopyTo" target="_top">.NET documentation</a>
+     */
     public void CopyTo(Style[] styleArray, int index) throws Throwable, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -259,6 +295,14 @@ public class StyleCollection extends system.web.ui.StateManagedCollection  {
         }
     }
 
+    /**
+     * Invokes the .NET member Insert.
+     *
+     * @param index the argument of type {@code int}
+     * @param style the argument of type {@code Style}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.StyleCollection.Insert" target="_top">.NET documentation</a>
+     */
     public void Insert(int index, Style style) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -269,6 +313,13 @@ public class StyleCollection extends system.web.ui.StateManagedCollection  {
         }
     }
 
+    /**
+     * Invokes the .NET member Remove.
+     *
+     * @param style the argument of type {@code Style}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.StyleCollection.Remove" target="_top">.NET documentation</a>
+     */
     public void Remove(Style style) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -279,6 +330,13 @@ public class StyleCollection extends system.web.ui.StateManagedCollection  {
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveAt.
+     *
+     * @param index the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.StyleCollection.RemoveAt" target="_top">.NET documentation</a>
+     */
     public void RemoveAt(int index) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

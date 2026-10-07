@@ -100,7 +100,10 @@ public class SqlAuthenticationParameters extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SqlAuthenticationParameters(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -159,6 +162,13 @@ public class SqlAuthenticationParameters extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AuthenticationMethod.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlAuthenticationParameters.AuthenticationMethod" target="_top">.NET documentation</a>
+     */
     public SqlAuthenticationMethod getAuthenticationMethod() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -174,6 +184,13 @@ public class SqlAuthenticationParameters extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ConnectionId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlAuthenticationParameters.ConnectionId" target="_top">.NET documentation</a>
+     */
     public Guid getConnectionId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +206,13 @@ public class SqlAuthenticationParameters extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Authority.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlAuthenticationParameters.Authority" target="_top">.NET documentation</a>
+     */
     public java.lang.String getAuthority() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +227,13 @@ public class SqlAuthenticationParameters extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DatabaseName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlAuthenticationParameters.DatabaseName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDatabaseName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -217,6 +248,13 @@ public class SqlAuthenticationParameters extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Password.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlAuthenticationParameters.Password" target="_top">.NET documentation</a>
+     */
     public java.lang.String getPassword() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -231,6 +269,13 @@ public class SqlAuthenticationParameters extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Resource.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlAuthenticationParameters.Resource" target="_top">.NET documentation</a>
+     */
     public java.lang.String getResource() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -245,6 +290,13 @@ public class SqlAuthenticationParameters extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ServerName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlAuthenticationParameters.ServerName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getServerName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -259,6 +311,13 @@ public class SqlAuthenticationParameters extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UserId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlAuthenticationParameters.UserId" target="_top">.NET documentation</a>
+     */
     public java.lang.String getUserId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

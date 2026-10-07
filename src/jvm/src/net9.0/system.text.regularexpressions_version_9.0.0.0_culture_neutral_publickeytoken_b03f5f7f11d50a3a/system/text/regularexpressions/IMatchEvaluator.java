@@ -52,5 +52,11 @@ import system.text.regularexpressions.Match;
  * @version 2.0.0.0
  */
 public interface IMatchEvaluator {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param match the .NET argument of type {@code System.Text.RegularExpressions.Match}
+     * @return the value returned to the CLR
+     */
     public java.lang.String Invoke(Match match);
 }

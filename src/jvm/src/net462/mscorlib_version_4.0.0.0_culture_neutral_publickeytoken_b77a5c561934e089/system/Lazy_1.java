@@ -100,7 +100,10 @@ public class Lazy_1<T extends IJCOBridgeReflected> extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Lazy_1(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,13 @@ public class Lazy_1<T extends IJCOBridgeReflected> extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Lazy-1.-ctor" target="_top">.NET documentation</a>
+     */
     public Lazy_1() throws Throwable, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -159,6 +169,14 @@ public class Lazy_1<T extends IJCOBridgeReflected> extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param isThreadSafe the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Lazy-1.-ctor" target="_top">.NET documentation</a>
+     */
     public Lazy_1(boolean isThreadSafe) throws Throwable, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -171,6 +189,15 @@ public class Lazy_1<T extends IJCOBridgeReflected> extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param valueFactory the argument of type {@code Func_1}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Lazy-1.-ctor" target="_top">.NET documentation</a>
+     */
     public Lazy_1(Func_1 valueFactory) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -183,6 +210,16 @@ public class Lazy_1<T extends IJCOBridgeReflected> extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param valueFactory the argument of type {@code Func_1}
+     * @param isThreadSafe the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Lazy-1.-ctor" target="_top">.NET documentation</a>
+     */
     public Lazy_1(Func_1 valueFactory, boolean isThreadSafe) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -195,6 +232,16 @@ public class Lazy_1<T extends IJCOBridgeReflected> extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param valueFactory the argument of type {@code Func_1}
+     * @param mode the argument of type {@code LazyThreadSafetyMode}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Lazy-1.-ctor" target="_top">.NET documentation</a>
+     */
     public Lazy_1(Func_1 valueFactory, LazyThreadSafetyMode mode) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -207,6 +254,14 @@ public class Lazy_1<T extends IJCOBridgeReflected> extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param mode the argument of type {@code LazyThreadSafetyMode}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Lazy-1.-ctor" target="_top">.NET documentation</a>
+     */
     public Lazy_1(LazyThreadSafetyMode mode) throws Throwable, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -227,6 +282,13 @@ public class Lazy_1<T extends IJCOBridgeReflected> extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsValueCreated.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Lazy-1.IsValueCreated" target="_top">.NET documentation</a>
+     */
     public boolean getIsValueCreated() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -241,6 +303,21 @@ public class Lazy_1<T extends IJCOBridgeReflected> extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Value.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Lazy-1.Value" target="_top">.NET documentation</a>
+     */
     public T getValue() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentNullException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

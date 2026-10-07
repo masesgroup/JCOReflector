@@ -101,7 +101,10 @@ public class RequiresFramework35SP1Assembly extends microsoft.build.tasks.TaskEx
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public RequiresFramework35SP1Assembly(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,13 @@ public class RequiresFramework35SP1Assembly extends microsoft.build.tasks.TaskEx
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.RequiresFramework35SP1Assembly.-ctor" target="_top">.NET documentation</a>
+     */
     public RequiresFramework35SP1Assembly() throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -162,6 +172,19 @@ public class RequiresFramework35SP1Assembly extends microsoft.build.tasks.TaskEx
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Execute.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.RequiresFramework35SP1Assembly.Execute" target="_top">.NET documentation</a>
+     */
     public boolean Execute() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +203,19 @@ public class RequiresFramework35SP1Assembly extends microsoft.build.tasks.TaskEx
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CreateDesktopShortcut.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.RequiresFramework35SP1Assembly.CreateDesktopShortcut" target="_top">.NET documentation</a>
+     */
     public boolean getCreateDesktopShortcut() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +230,13 @@ public class RequiresFramework35SP1Assembly extends microsoft.build.tasks.TaskEx
         }
     }
 
+    /**
+     * Sets the value of the .NET property CreateDesktopShortcut.
+     *
+     * @param CreateDesktopShortcut the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.RequiresFramework35SP1Assembly.CreateDesktopShortcut" target="_top">.NET documentation</a>
+     */
     public void setCreateDesktopShortcut(boolean CreateDesktopShortcut) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +247,13 @@ public class RequiresFramework35SP1Assembly extends microsoft.build.tasks.TaskEx
         }
     }
 
+    /**
+     * Gets the value of the .NET property RequiresMinimumFramework35SP1.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.RequiresFramework35SP1Assembly.RequiresMinimumFramework35SP1" target="_top">.NET documentation</a>
+     */
     public boolean getRequiresMinimumFramework35SP1() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -218,6 +268,13 @@ public class RequiresFramework35SP1Assembly extends microsoft.build.tasks.TaskEx
         }
     }
 
+    /**
+     * Sets the value of the .NET property RequiresMinimumFramework35SP1.
+     *
+     * @param RequiresMinimumFramework35SP1 the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.RequiresFramework35SP1Assembly.RequiresMinimumFramework35SP1" target="_top">.NET documentation</a>
+     */
     public void setRequiresMinimumFramework35SP1(boolean RequiresMinimumFramework35SP1) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -228,6 +285,13 @@ public class RequiresFramework35SP1Assembly extends microsoft.build.tasks.TaskEx
         }
     }
 
+    /**
+     * Gets the value of the .NET property SigningManifests.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.RequiresFramework35SP1Assembly.SigningManifests" target="_top">.NET documentation</a>
+     */
     public boolean getSigningManifests() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -242,6 +306,13 @@ public class RequiresFramework35SP1Assembly extends microsoft.build.tasks.TaskEx
         }
     }
 
+    /**
+     * Sets the value of the .NET property SigningManifests.
+     *
+     * @param SigningManifests the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.RequiresFramework35SP1Assembly.SigningManifests" target="_top">.NET documentation</a>
+     */
     public void setSigningManifests(boolean SigningManifests) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -252,6 +323,13 @@ public class RequiresFramework35SP1Assembly extends microsoft.build.tasks.TaskEx
         }
     }
 
+    /**
+     * Gets the value of the .NET property DeploymentManifestEntryPoint.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.RequiresFramework35SP1Assembly.DeploymentManifestEntryPoint" target="_top">.NET documentation</a>
+     */
     public ITaskItem getDeploymentManifestEntryPoint() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -267,6 +345,13 @@ public class RequiresFramework35SP1Assembly extends microsoft.build.tasks.TaskEx
         }
     }
 
+    /**
+     * Sets the value of the .NET property DeploymentManifestEntryPoint.
+     *
+     * @param DeploymentManifestEntryPoint the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.RequiresFramework35SP1Assembly.DeploymentManifestEntryPoint" target="_top">.NET documentation</a>
+     */
     public void setDeploymentManifestEntryPoint(ITaskItem DeploymentManifestEntryPoint) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -277,6 +362,13 @@ public class RequiresFramework35SP1Assembly extends microsoft.build.tasks.TaskEx
         }
     }
 
+    /**
+     * Gets the value of the .NET property EntryPoint.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.RequiresFramework35SP1Assembly.EntryPoint" target="_top">.NET documentation</a>
+     */
     public ITaskItem getEntryPoint() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -292,6 +384,13 @@ public class RequiresFramework35SP1Assembly extends microsoft.build.tasks.TaskEx
         }
     }
 
+    /**
+     * Sets the value of the .NET property EntryPoint.
+     *
+     * @param EntryPoint the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.RequiresFramework35SP1Assembly.EntryPoint" target="_top">.NET documentation</a>
+     */
     public void setEntryPoint(ITaskItem EntryPoint) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -302,6 +401,13 @@ public class RequiresFramework35SP1Assembly extends microsoft.build.tasks.TaskEx
         }
     }
 
+    /**
+     * Gets the value of the .NET property Assemblies.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.RequiresFramework35SP1Assembly.Assemblies" target="_top">.NET documentation</a>
+     */
     public final ITaskItem[] getAssemblies() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -323,6 +429,13 @@ public class RequiresFramework35SP1Assembly extends microsoft.build.tasks.TaskEx
         }
     }
 
+    /**
+     * Sets the value of the .NET property Assemblies.
+     *
+     * @param Assemblies the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.RequiresFramework35SP1Assembly.Assemblies" target="_top">.NET documentation</a>
+     */
     public void setAssemblies(ITaskItem[] Assemblies) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -333,6 +446,13 @@ public class RequiresFramework35SP1Assembly extends microsoft.build.tasks.TaskEx
         }
     }
 
+    /**
+     * Gets the value of the .NET property Files.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.RequiresFramework35SP1Assembly.Files" target="_top">.NET documentation</a>
+     */
     public final ITaskItem[] getFiles() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -354,6 +474,13 @@ public class RequiresFramework35SP1Assembly extends microsoft.build.tasks.TaskEx
         }
     }
 
+    /**
+     * Sets the value of the .NET property Files.
+     *
+     * @param Files the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.RequiresFramework35SP1Assembly.Files" target="_top">.NET documentation</a>
+     */
     public void setFiles(ITaskItem[] Files) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -364,6 +491,13 @@ public class RequiresFramework35SP1Assembly extends microsoft.build.tasks.TaskEx
         }
     }
 
+    /**
+     * Gets the value of the .NET property ReferencedAssemblies.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.RequiresFramework35SP1Assembly.ReferencedAssemblies" target="_top">.NET documentation</a>
+     */
     public final ITaskItem[] getReferencedAssemblies() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -385,6 +519,13 @@ public class RequiresFramework35SP1Assembly extends microsoft.build.tasks.TaskEx
         }
     }
 
+    /**
+     * Sets the value of the .NET property ReferencedAssemblies.
+     *
+     * @param ReferencedAssemblies the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.RequiresFramework35SP1Assembly.ReferencedAssemblies" target="_top">.NET documentation</a>
+     */
     public void setReferencedAssemblies(ITaskItem[] ReferencedAssemblies) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -395,6 +536,13 @@ public class RequiresFramework35SP1Assembly extends microsoft.build.tasks.TaskEx
         }
     }
 
+    /**
+     * Gets the value of the .NET property ErrorReportUrl.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.RequiresFramework35SP1Assembly.ErrorReportUrl" target="_top">.NET documentation</a>
+     */
     public java.lang.String getErrorReportUrl() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -409,6 +557,13 @@ public class RequiresFramework35SP1Assembly extends microsoft.build.tasks.TaskEx
         }
     }
 
+    /**
+     * Sets the value of the .NET property ErrorReportUrl.
+     *
+     * @param ErrorReportUrl the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.RequiresFramework35SP1Assembly.ErrorReportUrl" target="_top">.NET documentation</a>
+     */
     public void setErrorReportUrl(java.lang.String ErrorReportUrl) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -419,6 +574,13 @@ public class RequiresFramework35SP1Assembly extends microsoft.build.tasks.TaskEx
         }
     }
 
+    /**
+     * Gets the value of the .NET property SuiteName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.RequiresFramework35SP1Assembly.SuiteName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSuiteName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -433,6 +595,13 @@ public class RequiresFramework35SP1Assembly extends microsoft.build.tasks.TaskEx
         }
     }
 
+    /**
+     * Sets the value of the .NET property SuiteName.
+     *
+     * @param SuiteName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.RequiresFramework35SP1Assembly.SuiteName" target="_top">.NET documentation</a>
+     */
     public void setSuiteName(java.lang.String SuiteName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -443,6 +612,13 @@ public class RequiresFramework35SP1Assembly extends microsoft.build.tasks.TaskEx
         }
     }
 
+    /**
+     * Gets the value of the .NET property TargetFrameworkVersion.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.RequiresFramework35SP1Assembly.TargetFrameworkVersion" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTargetFrameworkVersion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -457,6 +633,13 @@ public class RequiresFramework35SP1Assembly extends microsoft.build.tasks.TaskEx
         }
     }
 
+    /**
+     * Sets the value of the .NET property TargetFrameworkVersion.
+     *
+     * @param TargetFrameworkVersion the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.RequiresFramework35SP1Assembly.TargetFrameworkVersion" target="_top">.NET documentation</a>
+     */
     public void setTargetFrameworkVersion(java.lang.String TargetFrameworkVersion) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

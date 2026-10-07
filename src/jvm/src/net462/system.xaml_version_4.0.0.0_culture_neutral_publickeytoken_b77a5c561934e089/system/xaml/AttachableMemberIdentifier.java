@@ -99,7 +99,10 @@ public class AttachableMemberIdentifier extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public AttachableMemberIdentifier(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,14 @@ public class AttachableMemberIdentifier extends NetObject  {
     public AttachableMemberIdentifier() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param declaringType the argument of type {@code NetType}
+     * @param memberName the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.AttachableMemberIdentifier.-ctor" target="_top">.NET documentation</a>
+     */
     public AttachableMemberIdentifier(NetType declaringType, java.lang.String memberName) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +175,14 @@ public class AttachableMemberIdentifier extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Equals.
+     *
+     * @param other the argument of type {@code AttachableMemberIdentifier}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.AttachableMemberIdentifier.Equals" target="_top">.NET documentation</a>
+     */
     public boolean Equals(AttachableMemberIdentifier other) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +201,13 @@ public class AttachableMemberIdentifier extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property MemberName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.AttachableMemberIdentifier.MemberName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getMemberName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -196,6 +222,13 @@ public class AttachableMemberIdentifier extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DeclaringType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.AttachableMemberIdentifier.DeclaringType" target="_top">.NET documentation</a>
+     */
     public NetType getDeclaringType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

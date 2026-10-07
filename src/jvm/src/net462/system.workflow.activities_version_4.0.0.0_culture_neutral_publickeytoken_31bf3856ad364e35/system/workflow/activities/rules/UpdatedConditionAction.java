@@ -100,7 +100,10 @@ public class UpdatedConditionAction extends system.workflow.activities.rules.Rul
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public UpdatedConditionAction(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class UpdatedConditionAction extends system.workflow.activities.rules.Rul
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.Rules.UpdatedConditionAction.-ctor" target="_top">.NET documentation</a>
+     */
     public UpdatedConditionAction() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -157,6 +166,27 @@ public class UpdatedConditionAction extends system.workflow.activities.rules.Rul
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param conditionDefinition the argument of type {@code RuleCondition}
+     * @param newConditionDefinition the argument of type {@code RuleCondition}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.Rules.UpdatedConditionAction.-ctor" target="_top">.NET documentation</a>
+     */
     public UpdatedConditionAction(RuleCondition conditionDefinition, RuleCondition newConditionDefinition) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
@@ -175,6 +205,13 @@ public class UpdatedConditionAction extends system.workflow.activities.rules.Rul
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ConditionDefinition.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.Rules.UpdatedConditionAction.ConditionDefinition" target="_top">.NET documentation</a>
+     */
     public RuleCondition getConditionDefinition() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +227,14 @@ public class UpdatedConditionAction extends system.workflow.activities.rules.Rul
         }
     }
 
+    /**
+     * Sets the value of the .NET property ConditionDefinition.
+     *
+     * @param ConditionDefinition the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.Rules.UpdatedConditionAction.ConditionDefinition" target="_top">.NET documentation</a>
+     */
     public void setConditionDefinition(RuleCondition ConditionDefinition) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +245,13 @@ public class UpdatedConditionAction extends system.workflow.activities.rules.Rul
         }
     }
 
+    /**
+     * Gets the value of the .NET property NewConditionDefinition.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.Rules.UpdatedConditionAction.NewConditionDefinition" target="_top">.NET documentation</a>
+     */
     public RuleCondition getNewConditionDefinition() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +267,14 @@ public class UpdatedConditionAction extends system.workflow.activities.rules.Rul
         }
     }
 
+    /**
+     * Sets the value of the .NET property NewConditionDefinition.
+     *
+     * @param NewConditionDefinition the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.Rules.UpdatedConditionAction.NewConditionDefinition" target="_top">.NET documentation</a>
+     */
     public void setNewConditionDefinition(RuleCondition NewConditionDefinition) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

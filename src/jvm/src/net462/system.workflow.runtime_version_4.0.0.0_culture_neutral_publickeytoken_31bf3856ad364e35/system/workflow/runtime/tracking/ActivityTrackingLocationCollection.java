@@ -102,7 +102,10 @@ public class ActivityTrackingLocationCollection extends system.collections.gener
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ActivityTrackingLocationCollection(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,12 @@ public class ActivityTrackingLocationCollection extends system.collections.gener
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.ActivityTrackingLocationCollection.-ctor" target="_top">.NET documentation</a>
+     */
     public ActivityTrackingLocationCollection() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -159,6 +168,16 @@ public class ActivityTrackingLocationCollection extends system.collections.gener
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param locations the argument of type {@code IEnumerable_1}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.ActivityTrackingLocationCollection.-ctor" target="_top">.NET documentation</a>
+     */
     public ActivityTrackingLocationCollection(IEnumerable_1 locations) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file

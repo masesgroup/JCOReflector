@@ -99,7 +99,10 @@ public class RegExpObject extends microsoft.jscript.JSObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public RegExpObject(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -158,6 +161,13 @@ public class RegExpObject extends microsoft.jscript.JSObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property global.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.RegExpObject.getglobal" target="_top">.NET documentation</a>
+     */
     public boolean getglobal() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -172,6 +182,13 @@ public class RegExpObject extends microsoft.jscript.JSObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ignoreCase.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.RegExpObject.getignoreCase" target="_top">.NET documentation</a>
+     */
     public boolean getignoreCase() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -186,6 +203,13 @@ public class RegExpObject extends microsoft.jscript.JSObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property multiline.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.RegExpObject.getmultiline" target="_top">.NET documentation</a>
+     */
     public boolean getmultiline() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +224,13 @@ public class RegExpObject extends microsoft.jscript.JSObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property lastIndex.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.RegExpObject.getlastIndex" target="_top">.NET documentation</a>
+     */
     public NetObject getlastIndex() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +246,13 @@ public class RegExpObject extends microsoft.jscript.JSObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property lastIndex.
+     *
+     * @param lastIndex the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.RegExpObject.setlastIndex" target="_top">.NET documentation</a>
+     */
     public void setlastIndex(NetObject lastIndex) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -225,6 +263,13 @@ public class RegExpObject extends microsoft.jscript.JSObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property source.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.RegExpObject.getsource" target="_top">.NET documentation</a>
+     */
     public java.lang.String getsource() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

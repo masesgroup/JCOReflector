@@ -104,7 +104,10 @@ public class CommonSecurityDescriptor extends system.security.accesscontrol.Gene
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CommonSecurityDescriptor(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,23 @@ public class CommonSecurityDescriptor extends system.security.accesscontrol.Gene
     public CommonSecurityDescriptor() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param isContainer the argument of type {@code boolean}
+     * @param isDS the argument of type {@code boolean}
+     * @param binaryForm the argument of type {@code byte[]}
+     * @param offset the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.SystemException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.CommonSecurityDescriptor.-ctor" target="_top">.NET documentation</a>
+     */
     public CommonSecurityDescriptor(boolean isContainer, boolean isDS, byte[] binaryForm, int offset) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.SystemException, system.OverflowException, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +184,25 @@ public class CommonSecurityDescriptor extends system.security.accesscontrol.Gene
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param isContainer the argument of type {@code boolean}
+     * @param isDS the argument of type {@code boolean}
+     * @param flags the argument of type {@code ControlFlags}
+     * @param owner the argument of type {@code SecurityIdentifier}
+     * @param group the argument of type {@code SecurityIdentifier}
+     * @param systemAcl the argument of type {@code SystemAcl}
+     * @param discretionaryAcl the argument of type {@code DiscretionaryAcl}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.SystemException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.CommonSecurityDescriptor.-ctor" target="_top">.NET documentation</a>
+     */
     public CommonSecurityDescriptor(boolean isContainer, boolean isDS, ControlFlags flags, SecurityIdentifier owner, SecurityIdentifier group, SystemAcl systemAcl, DiscretionaryAcl discretionaryAcl) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.SystemException, system.OverflowException {
         try {
             // add reference to assemblyName.dll file
@@ -174,6 +213,22 @@ public class CommonSecurityDescriptor extends system.security.accesscontrol.Gene
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param isContainer the argument of type {@code boolean}
+     * @param isDS the argument of type {@code boolean}
+     * @param rawSecurityDescriptor the argument of type {@code RawSecurityDescriptor}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.SystemException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.CommonSecurityDescriptor.-ctor" target="_top">.NET documentation</a>
+     */
     public CommonSecurityDescriptor(boolean isContainer, boolean isDS, RawSecurityDescriptor rawSecurityDescriptor) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentException, system.SystemException, system.OverflowException, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
@@ -184,6 +239,23 @@ public class CommonSecurityDescriptor extends system.security.accesscontrol.Gene
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param isContainer the argument of type {@code boolean}
+     * @param isDS the argument of type {@code boolean}
+     * @param sddlForm the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.SystemException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.CommonSecurityDescriptor.-ctor" target="_top">.NET documentation</a>
+     */
     public CommonSecurityDescriptor(boolean isContainer, boolean isDS, java.lang.String sddlForm) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.SystemException, system.ArgumentOutOfRangeException, system.FormatException, system.OverflowException {
         try {
             // add reference to assemblyName.dll file
@@ -199,6 +271,21 @@ public class CommonSecurityDescriptor extends system.security.accesscontrol.Gene
     
     // Methods section
     
+    /**
+     * Invokes the .NET member AddDiscretionaryAcl.
+     *
+     * @param revision the argument of type {@code byte}
+     * @param trusted the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.SystemException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.CommonSecurityDescriptor.AddDiscretionaryAcl" target="_top">.NET documentation</a>
+     */
     public void AddDiscretionaryAcl(byte revision, int trusted) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.SystemException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -209,6 +296,18 @@ public class CommonSecurityDescriptor extends system.security.accesscontrol.Gene
         }
     }
 
+    /**
+     * Invokes the .NET member AddSystemAcl.
+     *
+     * @param revision the argument of type {@code byte}
+     * @param trusted the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.CommonSecurityDescriptor.AddSystemAcl" target="_top">.NET documentation</a>
+     */
     public void AddSystemAcl(byte revision, int trusted) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -219,6 +318,16 @@ public class CommonSecurityDescriptor extends system.security.accesscontrol.Gene
         }
     }
 
+    /**
+     * Invokes the .NET member PurgeAccessControl.
+     *
+     * @param sid the argument of type {@code SecurityIdentifier}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.CommonSecurityDescriptor.PurgeAccessControl" target="_top">.NET documentation</a>
+     */
     public void PurgeAccessControl(SecurityIdentifier sid) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -229,6 +338,16 @@ public class CommonSecurityDescriptor extends system.security.accesscontrol.Gene
         }
     }
 
+    /**
+     * Invokes the .NET member PurgeAudit.
+     *
+     * @param sid the argument of type {@code SecurityIdentifier}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.CommonSecurityDescriptor.PurgeAudit" target="_top">.NET documentation</a>
+     */
     public void PurgeAudit(SecurityIdentifier sid) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -239,6 +358,16 @@ public class CommonSecurityDescriptor extends system.security.accesscontrol.Gene
         }
     }
 
+    /**
+     * Invokes the .NET member SetDiscretionaryAclProtection.
+     *
+     * @param isProtected the argument of type {@code boolean}
+     * @param preserveInheritance the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.CommonSecurityDescriptor.SetDiscretionaryAclProtection" target="_top">.NET documentation</a>
+     */
     public void SetDiscretionaryAclProtection(boolean isProtected, boolean preserveInheritance) throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -249,6 +378,16 @@ public class CommonSecurityDescriptor extends system.security.accesscontrol.Gene
         }
     }
 
+    /**
+     * Invokes the .NET member SetSystemAclProtection.
+     *
+     * @param isProtected the argument of type {@code boolean}
+     * @param preserveInheritance the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.CommonSecurityDescriptor.SetSystemAclProtection" target="_top">.NET documentation</a>
+     */
     public void SetSystemAclProtection(boolean isProtected, boolean preserveInheritance) throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -263,6 +402,13 @@ public class CommonSecurityDescriptor extends system.security.accesscontrol.Gene
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsContainer.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.CommonSecurityDescriptor.IsContainer" target="_top">.NET documentation</a>
+     */
     public boolean getIsContainer() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -277,6 +423,13 @@ public class CommonSecurityDescriptor extends system.security.accesscontrol.Gene
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsDiscretionaryAclCanonical.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.CommonSecurityDescriptor.IsDiscretionaryAclCanonical" target="_top">.NET documentation</a>
+     */
     public boolean getIsDiscretionaryAclCanonical() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -291,6 +444,13 @@ public class CommonSecurityDescriptor extends system.security.accesscontrol.Gene
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsDS.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.CommonSecurityDescriptor.IsDS" target="_top">.NET documentation</a>
+     */
     public boolean getIsDS() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -305,6 +465,13 @@ public class CommonSecurityDescriptor extends system.security.accesscontrol.Gene
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsSystemAclCanonical.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.CommonSecurityDescriptor.IsSystemAclCanonical" target="_top">.NET documentation</a>
+     */
     public boolean getIsSystemAclCanonical() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -319,6 +486,13 @@ public class CommonSecurityDescriptor extends system.security.accesscontrol.Gene
         }
     }
 
+    /**
+     * Gets the value of the .NET property DiscretionaryAcl.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.CommonSecurityDescriptor.DiscretionaryAcl" target="_top">.NET documentation</a>
+     */
     public DiscretionaryAcl getDiscretionaryAcl() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -334,6 +508,19 @@ public class CommonSecurityDescriptor extends system.security.accesscontrol.Gene
         }
     }
 
+    /**
+     * Sets the value of the .NET property DiscretionaryAcl.
+     *
+     * @param DiscretionaryAcl the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.SystemException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.CommonSecurityDescriptor.DiscretionaryAcl" target="_top">.NET documentation</a>
+     */
     public void setDiscretionaryAcl(DiscretionaryAcl DiscretionaryAcl) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.SystemException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -344,6 +531,13 @@ public class CommonSecurityDescriptor extends system.security.accesscontrol.Gene
         }
     }
 
+    /**
+     * Gets the value of the .NET property SystemAcl.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.CommonSecurityDescriptor.SystemAcl" target="_top">.NET documentation</a>
+     */
     public SystemAcl getSystemAcl() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -359,6 +553,14 @@ public class CommonSecurityDescriptor extends system.security.accesscontrol.Gene
         }
     }
 
+    /**
+     * Sets the value of the .NET property SystemAcl.
+     *
+     * @param SystemAcl the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.CommonSecurityDescriptor.SystemAcl" target="_top">.NET documentation</a>
+     */
     public void setSystemAcl(SystemAcl SystemAcl) throws Throwable, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -101,7 +101,10 @@ public class VisualTreeChangeEventArgs extends system.EventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public VisualTreeChangeEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,16 @@ public class VisualTreeChangeEventArgs extends system.EventArgs  {
     public VisualTreeChangeEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param parent the argument of type {@code DependencyObject}
+     * @param child the argument of type {@code DependencyObject}
+     * @param childIndex the argument of type {@code int}
+     * @param changeType the argument of type {@code VisualTreeChangeType}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Diagnostics.VisualTreeChangeEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public VisualTreeChangeEventArgs(DependencyObject parent, DependencyObject child, int childIndex, VisualTreeChangeType changeType) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +183,13 @@ public class VisualTreeChangeEventArgs extends system.EventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ChildIndex.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Diagnostics.VisualTreeChangeEventArgs.ChildIndex" target="_top">.NET documentation</a>
+     */
     public int getChildIndex() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -210,6 +230,13 @@ public class VisualTreeChangeEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ChildIndex.
+     *
+     * @param ChildIndex the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Diagnostics.VisualTreeChangeEventArgs.ChildIndex" target="_top">.NET documentation</a>
+     */
     public void setChildIndex(int ChildIndex) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -220,6 +247,13 @@ public class VisualTreeChangeEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Child.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Diagnostics.VisualTreeChangeEventArgs.Child" target="_top">.NET documentation</a>
+     */
     public DependencyObject getChild() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -235,6 +269,13 @@ public class VisualTreeChangeEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Child.
+     *
+     * @param Child the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Diagnostics.VisualTreeChangeEventArgs.Child" target="_top">.NET documentation</a>
+     */
     public void setChild(DependencyObject Child) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -245,6 +286,13 @@ public class VisualTreeChangeEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Parent.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Diagnostics.VisualTreeChangeEventArgs.Parent" target="_top">.NET documentation</a>
+     */
     public DependencyObject getParent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -260,6 +308,13 @@ public class VisualTreeChangeEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Parent.
+     *
+     * @param Parent the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Diagnostics.VisualTreeChangeEventArgs.Parent" target="_top">.NET documentation</a>
+     */
     public void setParent(DependencyObject Parent) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -270,6 +325,13 @@ public class VisualTreeChangeEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ChangeType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Diagnostics.VisualTreeChangeEventArgs.ChangeType" target="_top">.NET documentation</a>
+     */
     public VisualTreeChangeType getChangeType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -285,6 +347,13 @@ public class VisualTreeChangeEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ChangeType.
+     *
+     * @param ChangeType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Diagnostics.VisualTreeChangeEventArgs.ChangeType" target="_top">.NET documentation</a>
+     */
     public void setChangeType(VisualTreeChangeType ChangeType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

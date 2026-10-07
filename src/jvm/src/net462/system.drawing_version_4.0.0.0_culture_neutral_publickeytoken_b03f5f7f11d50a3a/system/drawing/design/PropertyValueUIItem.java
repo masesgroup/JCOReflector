@@ -100,7 +100,10 @@ public class PropertyValueUIItem extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PropertyValueUIItem(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,16 @@ public class PropertyValueUIItem extends NetObject  {
     public PropertyValueUIItem() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param uiItemImage the argument of type {@code Image}
+     * @param handler the argument of type {@code PropertyValueUIItemInvokeHandler}
+     * @param tooltip the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Design.PropertyValueUIItem.-ctor" target="_top">.NET documentation</a>
+     */
     public PropertyValueUIItem(Image uiItemImage, PropertyValueUIItemInvokeHandler handler, java.lang.String tooltip) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +178,12 @@ public class PropertyValueUIItem extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Reset.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Design.PropertyValueUIItem.Reset" target="_top">.NET documentation</a>
+     */
     public void Reset() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -179,6 +198,13 @@ public class PropertyValueUIItem extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property InvokeHandler.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Design.PropertyValueUIItem.InvokeHandler" target="_top">.NET documentation</a>
+     */
     public PropertyValueUIItemInvokeHandler getInvokeHandler() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +219,13 @@ public class PropertyValueUIItem extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Image.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Design.PropertyValueUIItem.Image" target="_top">.NET documentation</a>
+     */
     public Image getImage() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +241,13 @@ public class PropertyValueUIItem extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ToolTip.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Design.PropertyValueUIItem.ToolTip" target="_top">.NET documentation</a>
+     */
     public java.lang.String getToolTip() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

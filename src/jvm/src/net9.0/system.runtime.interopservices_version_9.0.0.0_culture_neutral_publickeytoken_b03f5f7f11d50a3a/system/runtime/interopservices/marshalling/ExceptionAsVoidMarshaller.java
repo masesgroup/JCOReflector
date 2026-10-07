@@ -98,7 +98,10 @@ public class ExceptionAsVoidMarshaller extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ExceptionAsVoidMarshaller(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,18 @@ public class ExceptionAsVoidMarshaller extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ConvertToUnmanaged.
+     *
+     * @param e the argument of type {@code NetException}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Marshalling.ExceptionAsVoidMarshaller.ConvertToUnmanaged" target="_top">.NET documentation</a>
+     */
     public static void ConvertToUnmanaged(NetException e) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

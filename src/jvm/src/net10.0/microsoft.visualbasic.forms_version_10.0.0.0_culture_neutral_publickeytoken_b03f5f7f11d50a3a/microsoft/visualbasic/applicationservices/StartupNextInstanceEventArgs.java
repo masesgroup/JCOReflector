@@ -100,7 +100,10 @@ public class StartupNextInstanceEventArgs extends system.EventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public StartupNextInstanceEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,23 @@ public class StartupNextInstanceEventArgs extends system.EventArgs  {
     public StartupNextInstanceEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param args the argument of type {@code ReadOnlyCollection_1}
+     * @param bringToForegroundFlag the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.ApplicationServices.StartupNextInstanceEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public StartupNextInstanceEventArgs(ReadOnlyCollection_1 args, boolean bringToForegroundFlag) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +189,13 @@ public class StartupNextInstanceEventArgs extends system.EventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property BringToForeground.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.ApplicationServices.StartupNextInstanceEventArgs.BringToForeground" target="_top">.NET documentation</a>
+     */
     public boolean getBringToForeground() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +210,13 @@ public class StartupNextInstanceEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property BringToForeground.
+     *
+     * @param BringToForeground the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.ApplicationServices.StartupNextInstanceEventArgs.BringToForeground" target="_top">.NET documentation</a>
+     */
     public void setBringToForeground(boolean BringToForeground) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +227,13 @@ public class StartupNextInstanceEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CommandLine.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.ApplicationServices.StartupNextInstanceEventArgs.CommandLine" target="_top">.NET documentation</a>
+     */
     public ReadOnlyCollection_1 getCommandLine() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

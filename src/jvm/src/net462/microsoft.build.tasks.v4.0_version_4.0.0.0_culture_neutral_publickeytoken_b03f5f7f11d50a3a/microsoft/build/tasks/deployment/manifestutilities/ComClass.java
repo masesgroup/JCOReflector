@@ -98,7 +98,10 @@ public class ComClass extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ComClass(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -145,6 +148,12 @@ public class ComClass extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ComClass.-ctor" target="_top">.NET documentation</a>
+     */
     public ComClass() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -163,6 +172,13 @@ public class ComClass extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ClsId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ComClass.ClsId" target="_top">.NET documentation</a>
+     */
     public java.lang.String getClsId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -177,6 +193,13 @@ public class ComClass extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Description.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ComClass.Description" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDescription() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -191,6 +214,13 @@ public class ComClass extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ProgId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ComClass.ProgId" target="_top">.NET documentation</a>
+     */
     public java.lang.String getProgId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +235,13 @@ public class ComClass extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ThreadingModel.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ComClass.ThreadingModel" target="_top">.NET documentation</a>
+     */
     public java.lang.String getThreadingModel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -219,6 +256,13 @@ public class ComClass extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TlbId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ComClass.TlbId" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTlbId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -233,6 +277,13 @@ public class ComClass extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlClsId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ComClass.XmlClsId" target="_top">.NET documentation</a>
+     */
     public java.lang.String getXmlClsId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -247,6 +298,13 @@ public class ComClass extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property XmlClsId.
+     *
+     * @param XmlClsId the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ComClass.XmlClsId" target="_top">.NET documentation</a>
+     */
     public void setXmlClsId(java.lang.String XmlClsId) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -257,6 +315,13 @@ public class ComClass extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlDescription.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ComClass.XmlDescription" target="_top">.NET documentation</a>
+     */
     public java.lang.String getXmlDescription() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -271,6 +336,13 @@ public class ComClass extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property XmlDescription.
+     *
+     * @param XmlDescription the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ComClass.XmlDescription" target="_top">.NET documentation</a>
+     */
     public void setXmlDescription(java.lang.String XmlDescription) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -281,6 +353,13 @@ public class ComClass extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlProgId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ComClass.XmlProgId" target="_top">.NET documentation</a>
+     */
     public java.lang.String getXmlProgId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -295,6 +374,13 @@ public class ComClass extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property XmlProgId.
+     *
+     * @param XmlProgId the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ComClass.XmlProgId" target="_top">.NET documentation</a>
+     */
     public void setXmlProgId(java.lang.String XmlProgId) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -305,6 +391,13 @@ public class ComClass extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlThreadingModel.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ComClass.XmlThreadingModel" target="_top">.NET documentation</a>
+     */
     public java.lang.String getXmlThreadingModel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -319,6 +412,13 @@ public class ComClass extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property XmlThreadingModel.
+     *
+     * @param XmlThreadingModel the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ComClass.XmlThreadingModel" target="_top">.NET documentation</a>
+     */
     public void setXmlThreadingModel(java.lang.String XmlThreadingModel) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -329,6 +429,13 @@ public class ComClass extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlTlbId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ComClass.XmlTlbId" target="_top">.NET documentation</a>
+     */
     public java.lang.String getXmlTlbId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -343,6 +450,13 @@ public class ComClass extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property XmlTlbId.
+     *
+     * @param XmlTlbId the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ComClass.XmlTlbId" target="_top">.NET documentation</a>
+     */
     public void setXmlTlbId(java.lang.String XmlTlbId) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

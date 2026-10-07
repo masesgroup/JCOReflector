@@ -100,7 +100,10 @@ public class JsonReaderOptions extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public JsonReaderOptions(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -159,6 +162,13 @@ public class JsonReaderOptions extends system.ValueType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AllowMultipleValues.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonReaderOptions.AllowMultipleValues" target="_top">.NET documentation</a>
+     */
     public boolean getAllowMultipleValues() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -173,6 +183,13 @@ public class JsonReaderOptions extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AllowMultipleValues.
+     *
+     * @param AllowMultipleValues the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonReaderOptions.AllowMultipleValues" target="_top">.NET documentation</a>
+     */
     public void setAllowMultipleValues(boolean AllowMultipleValues) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +200,13 @@ public class JsonReaderOptions extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AllowTrailingCommas.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonReaderOptions.AllowTrailingCommas" target="_top">.NET documentation</a>
+     */
     public boolean getAllowTrailingCommas() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +221,13 @@ public class JsonReaderOptions extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AllowTrailingCommas.
+     *
+     * @param AllowTrailingCommas the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonReaderOptions.AllowTrailingCommas" target="_top">.NET documentation</a>
+     */
     public void setAllowTrailingCommas(boolean AllowTrailingCommas) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +238,13 @@ public class JsonReaderOptions extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MaxDepth.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonReaderOptions.MaxDepth" target="_top">.NET documentation</a>
+     */
     public int getMaxDepth() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -247,6 +285,21 @@ public class JsonReaderOptions extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MaxDepth.
+     *
+     * @param MaxDepth the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonReaderOptions.MaxDepth" target="_top">.NET documentation</a>
+     */
     public void setMaxDepth(int MaxDepth) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -257,6 +310,13 @@ public class JsonReaderOptions extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CommentHandling.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonReaderOptions.CommentHandling" target="_top">.NET documentation</a>
+     */
     public JsonCommentHandling getCommentHandling() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -272,6 +332,21 @@ public class JsonReaderOptions extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CommentHandling.
+     *
+     * @param CommentHandling the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonReaderOptions.CommentHandling" target="_top">.NET documentation</a>
+     */
     public void setCommentHandling(JsonCommentHandling CommentHandling) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

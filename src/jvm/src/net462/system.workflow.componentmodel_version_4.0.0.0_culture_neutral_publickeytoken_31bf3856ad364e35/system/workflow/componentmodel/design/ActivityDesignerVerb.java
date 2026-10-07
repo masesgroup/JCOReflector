@@ -103,7 +103,10 @@ public class ActivityDesignerVerb extends system.componentmodel.design.DesignerV
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ActivityDesignerVerb(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,25 @@ public class ActivityDesignerVerb extends system.componentmodel.design.DesignerV
     public ActivityDesignerVerb() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param activityDesigner the argument of type {@code ActivityDesigner}
+     * @param verbGroup the argument of type {@code DesignerVerbGroup}
+     * @param text the argument of type {@code java.lang.String}
+     * @param invokeHandler the argument of type {@code EventHandler}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.ActivityDesignerVerb.-ctor" target="_top">.NET documentation</a>
+     */
     public ActivityDesignerVerb(ActivityDesigner activityDesigner, DesignerVerbGroup verbGroup, java.lang.String text, EventHandler invokeHandler) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.NotSupportedException, system.security.SecurityException {
         try {
             // add reference to assemblyName.dll file
@@ -163,6 +185,26 @@ public class ActivityDesignerVerb extends system.componentmodel.design.DesignerV
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param activityDesigner the argument of type {@code ActivityDesigner}
+     * @param verbGroup the argument of type {@code DesignerVerbGroup}
+     * @param text the argument of type {@code java.lang.String}
+     * @param invokeHandler the argument of type {@code EventHandler}
+     * @param statusHandler the argument of type {@code EventHandler}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.ActivityDesignerVerb.-ctor" target="_top">.NET documentation</a>
+     */
     public ActivityDesignerVerb(ActivityDesigner activityDesigner, DesignerVerbGroup verbGroup, java.lang.String text, EventHandler invokeHandler, EventHandler statusHandler) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.security.SecurityException, system.NullReferenceException {
         try {
             // add reference to assemblyName.dll file
@@ -182,6 +224,13 @@ public class ActivityDesignerVerb extends system.componentmodel.design.DesignerV
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Group.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.ActivityDesignerVerb.Group" target="_top">.NET documentation</a>
+     */
     public DesignerVerbGroup getGroup() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

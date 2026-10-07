@@ -101,7 +101,10 @@ public class Compensator extends system.enterpriseservices.ServicedComponent  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Compensator(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,18 @@ public class Compensator extends system.enterpriseservices.ServicedComponent  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.CompensatingResourceManager.Compensator.-ctor" target="_top">.NET documentation</a>
+     */
     public Compensator() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotImplementedException, system.ArgumentException, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
@@ -162,6 +177,14 @@ public class Compensator extends system.enterpriseservices.ServicedComponent  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member AbortRecord.
+     *
+     * @param rec the argument of type {@code LogRecord}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.CompensatingResourceManager.Compensator.AbortRecord" target="_top">.NET documentation</a>
+     */
     public boolean AbortRecord(LogRecord rec) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -176,6 +199,14 @@ public class Compensator extends system.enterpriseservices.ServicedComponent  {
         }
     }
 
+    /**
+     * Invokes the .NET member CommitRecord.
+     *
+     * @param rec the argument of type {@code LogRecord}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.CompensatingResourceManager.Compensator.CommitRecord" target="_top">.NET documentation</a>
+     */
     public boolean CommitRecord(LogRecord rec) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +221,13 @@ public class Compensator extends system.enterpriseservices.ServicedComponent  {
         }
     }
 
+    /**
+     * Invokes the .NET member EndPrepare.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.CompensatingResourceManager.Compensator.EndPrepare" target="_top">.NET documentation</a>
+     */
     public boolean EndPrepare() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +242,14 @@ public class Compensator extends system.enterpriseservices.ServicedComponent  {
         }
     }
 
+    /**
+     * Invokes the .NET member PrepareRecord.
+     *
+     * @param rec the argument of type {@code LogRecord}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.CompensatingResourceManager.Compensator.PrepareRecord" target="_top">.NET documentation</a>
+     */
     public boolean PrepareRecord(LogRecord rec) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -218,6 +264,13 @@ public class Compensator extends system.enterpriseservices.ServicedComponent  {
         }
     }
 
+    /**
+     * Invokes the .NET member BeginAbort.
+     *
+     * @param fRecovery the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.CompensatingResourceManager.Compensator.BeginAbort" target="_top">.NET documentation</a>
+     */
     public void BeginAbort(boolean fRecovery) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -228,6 +281,13 @@ public class Compensator extends system.enterpriseservices.ServicedComponent  {
         }
     }
 
+    /**
+     * Invokes the .NET member BeginCommit.
+     *
+     * @param fRecovery the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.CompensatingResourceManager.Compensator.BeginCommit" target="_top">.NET documentation</a>
+     */
     public void BeginCommit(boolean fRecovery) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -238,6 +298,12 @@ public class Compensator extends system.enterpriseservices.ServicedComponent  {
         }
     }
 
+    /**
+     * Invokes the .NET member BeginPrepare.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.CompensatingResourceManager.Compensator.BeginPrepare" target="_top">.NET documentation</a>
+     */
     public void BeginPrepare() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -248,6 +314,12 @@ public class Compensator extends system.enterpriseservices.ServicedComponent  {
         }
     }
 
+    /**
+     * Invokes the .NET member EndAbort.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.CompensatingResourceManager.Compensator.EndAbort" target="_top">.NET documentation</a>
+     */
     public void EndAbort() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -258,6 +330,12 @@ public class Compensator extends system.enterpriseservices.ServicedComponent  {
         }
     }
 
+    /**
+     * Invokes the .NET member EndCommit.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.CompensatingResourceManager.Compensator.EndCommit" target="_top">.NET documentation</a>
+     */
     public void EndCommit() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -272,6 +350,13 @@ public class Compensator extends system.enterpriseservices.ServicedComponent  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Clerk.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.CompensatingResourceManager.Compensator.Clerk" target="_top">.NET documentation</a>
+     */
     public Clerk getClerk() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

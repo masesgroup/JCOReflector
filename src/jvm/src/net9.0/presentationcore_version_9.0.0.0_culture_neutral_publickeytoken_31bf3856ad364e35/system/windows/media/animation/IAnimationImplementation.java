@@ -99,7 +99,10 @@ public class IAnimationImplementation extends NetObject implements IAnimation {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IAnimationImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -141,6 +144,16 @@ public class IAnimationImplementation extends NetObject implements IAnimation {
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetCurrentValue.
+     *
+     * @param defaultOriginValue the argument of type {@code NetObject}
+     * @param defaultDestinationValue the argument of type {@code NetObject}
+     * @param animationClock the argument of type {@code AnimationClock}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Animation.IAnimation.GetCurrentValue" target="_top">.NET documentation</a>
+     */
     public NetObject GetCurrentValue(NetObject defaultOriginValue, NetObject defaultDestinationValue, AnimationClock animationClock) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

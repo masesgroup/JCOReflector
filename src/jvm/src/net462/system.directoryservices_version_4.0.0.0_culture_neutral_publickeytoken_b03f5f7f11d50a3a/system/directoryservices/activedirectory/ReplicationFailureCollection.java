@@ -100,7 +100,10 @@ public class ReplicationFailureCollection extends system.collections.ReadOnlyCol
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ReplicationFailureCollection(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,15 @@ public class ReplicationFailureCollection extends system.collections.ReadOnlyCol
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Contains.
+     *
+     * @param failure the argument of type {@code ReplicationFailure}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.ActiveDirectory.ReplicationFailureCollection.Contains" target="_top">.NET documentation</a>
+     */
     public boolean Contains(ReplicationFailure failure) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -169,6 +181,18 @@ public class ReplicationFailureCollection extends system.collections.ReadOnlyCol
         }
     }
 
+    /**
+     * Invokes the .NET member IndexOf.
+     *
+     * @param failure the argument of type {@code ReplicationFailure}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.ActiveDirectory.ReplicationFailureCollection.IndexOf" target="_top">.NET documentation</a>
+     */
     public int IndexOf(ReplicationFailure failure) throws Throwable, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -209,6 +233,15 @@ public class ReplicationFailureCollection extends system.collections.ReadOnlyCol
         }
     }
 
+    /**
+     * Invokes the .NET member CopyTo.
+     *
+     * @param failures the argument of type {@code ReplicationFailure[]}
+     * @param index the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.ActiveDirectory.ReplicationFailureCollection.CopyTo" target="_top">.NET documentation</a>
+     */
     public void CopyTo(ReplicationFailure[] failures, int index) throws Throwable, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

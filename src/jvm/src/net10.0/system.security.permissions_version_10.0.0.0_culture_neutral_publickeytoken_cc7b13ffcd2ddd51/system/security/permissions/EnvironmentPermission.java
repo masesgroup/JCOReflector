@@ -104,7 +104,10 @@ public class EnvironmentPermission extends system.security.CodeAccessPermission 
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public EnvironmentPermission(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,14 @@ public class EnvironmentPermission extends system.security.CodeAccessPermission 
     public EnvironmentPermission() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param flag the argument of type {@code EnvironmentPermissionAccess}
+     * @param pathList the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.EnvironmentPermission.-ctor" target="_top">.NET documentation</a>
+     */
     public EnvironmentPermission(EnvironmentPermissionAccess flag, java.lang.String pathList) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +175,13 @@ public class EnvironmentPermission extends system.security.CodeAccessPermission 
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param state the argument of type {@code PermissionState}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.EnvironmentPermission.-ctor" target="_top">.NET documentation</a>
+     */
     public EnvironmentPermission(PermissionState state) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -179,6 +197,14 @@ public class EnvironmentPermission extends system.security.CodeAccessPermission 
     
     // Methods section
     
+    /**
+     * Invokes the .NET member IsSubsetOf.
+     *
+     * @param target the argument of type {@code IPermission}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.EnvironmentPermission.IsSubsetOf" target="_top">.NET documentation</a>
+     */
     public boolean IsSubsetOf(IPermission target) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +219,13 @@ public class EnvironmentPermission extends system.security.CodeAccessPermission 
         }
     }
 
+    /**
+     * Invokes the .NET member IsUnrestricted.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.EnvironmentPermission.IsUnrestricted" target="_top">.NET documentation</a>
+     */
     public boolean IsUnrestricted() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +240,13 @@ public class EnvironmentPermission extends system.security.CodeAccessPermission 
         }
     }
 
+    /**
+     * Invokes the .NET member Copy.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.EnvironmentPermission.Copy" target="_top">.NET documentation</a>
+     */
     public IPermission Copy() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -222,6 +262,14 @@ public class EnvironmentPermission extends system.security.CodeAccessPermission 
         }
     }
 
+    /**
+     * Invokes the .NET member Intersect.
+     *
+     * @param target the argument of type {@code IPermission}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.EnvironmentPermission.Intersect" target="_top">.NET documentation</a>
+     */
     public IPermission Intersect(IPermission target) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -237,6 +285,14 @@ public class EnvironmentPermission extends system.security.CodeAccessPermission 
         }
     }
 
+    /**
+     * Invokes the .NET member Union.
+     *
+     * @param other the argument of type {@code IPermission}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.EnvironmentPermission.Union" target="_top">.NET documentation</a>
+     */
     public IPermission Union(IPermission other) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -252,6 +308,13 @@ public class EnvironmentPermission extends system.security.CodeAccessPermission 
         }
     }
 
+    /**
+     * Invokes the .NET member ToXml.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.EnvironmentPermission.ToXml" target="_top">.NET documentation</a>
+     */
     public SecurityElement ToXml() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -267,6 +330,14 @@ public class EnvironmentPermission extends system.security.CodeAccessPermission 
         }
     }
 
+    /**
+     * Invokes the .NET member GetPathList.
+     *
+     * @param flag the argument of type {@code EnvironmentPermissionAccess}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.EnvironmentPermission.GetPathList" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetPathList(EnvironmentPermissionAccess flag) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -281,6 +352,14 @@ public class EnvironmentPermission extends system.security.CodeAccessPermission 
         }
     }
 
+    /**
+     * Invokes the .NET member AddPathList.
+     *
+     * @param flag the argument of type {@code EnvironmentPermissionAccess}
+     * @param pathList the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.EnvironmentPermission.AddPathList" target="_top">.NET documentation</a>
+     */
     public void AddPathList(EnvironmentPermissionAccess flag, java.lang.String pathList) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -291,6 +370,13 @@ public class EnvironmentPermission extends system.security.CodeAccessPermission 
         }
     }
 
+    /**
+     * Invokes the .NET member FromXml.
+     *
+     * @param esd the argument of type {@code SecurityElement}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.EnvironmentPermission.FromXml" target="_top">.NET documentation</a>
+     */
     public void FromXml(SecurityElement esd) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -301,6 +387,14 @@ public class EnvironmentPermission extends system.security.CodeAccessPermission 
         }
     }
 
+    /**
+     * Invokes the .NET member SetPathList.
+     *
+     * @param flag the argument of type {@code EnvironmentPermissionAccess}
+     * @param pathList the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.EnvironmentPermission.SetPathList" target="_top">.NET documentation</a>
+     */
     public void SetPathList(EnvironmentPermissionAccess flag, java.lang.String pathList) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

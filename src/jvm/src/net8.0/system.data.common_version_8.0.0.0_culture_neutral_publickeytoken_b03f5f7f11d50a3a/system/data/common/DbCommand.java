@@ -111,7 +111,10 @@ public class DbCommand extends system.componentmodel.Component  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DbCommand(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -164,6 +167,13 @@ public class DbCommand extends system.componentmodel.Component  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ExecuteNonQuery.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbCommand.ExecuteNonQuery" target="_top">.NET documentation</a>
+     */
     public int ExecuteNonQuery() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +214,13 @@ public class DbCommand extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member ExecuteReader.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbCommand.ExecuteReader" target="_top">.NET documentation</a>
+     */
     public DbDataReader ExecuteReader() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -219,6 +236,14 @@ public class DbCommand extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member ExecuteReader.
+     *
+     * @param behavior the argument of type {@code CommandBehavior}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbCommand.ExecuteReader" target="_top">.NET documentation</a>
+     */
     public DbDataReader ExecuteReader(CommandBehavior behavior) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -234,6 +259,13 @@ public class DbCommand extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateParameter.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbCommand.CreateParameter" target="_top">.NET documentation</a>
+     */
     public DbParameter CreateParameter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -249,6 +281,13 @@ public class DbCommand extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member ExecuteScalar.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbCommand.ExecuteScalar" target="_top">.NET documentation</a>
+     */
     public NetObject ExecuteScalar() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -264,6 +303,24 @@ public class DbCommand extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member PrepareAsync.
+     *
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbCommand.PrepareAsync" target="_top">.NET documentation</a>
+     */
     public Task PrepareAsync(CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -279,6 +336,19 @@ public class DbCommand extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member ExecuteReaderAsync.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbCommand.ExecuteReaderAsync" target="_top">.NET documentation</a>
+     */
     public Task_1 ExecuteReaderAsync() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -294,6 +364,22 @@ public class DbCommand extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member ExecuteReaderAsync.
+     *
+     * @param behavior the argument of type {@code CommandBehavior}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbCommand.ExecuteReaderAsync" target="_top">.NET documentation</a>
+     */
     public Task_1 ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -309,6 +395,20 @@ public class DbCommand extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member ExecuteReaderAsync.
+     *
+     * @param behavior the argument of type {@code CommandBehavior}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbCommand.ExecuteReaderAsync" target="_top">.NET documentation</a>
+     */
     public Task_1 ExecuteReaderAsync(CommandBehavior behavior) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -324,6 +424,20 @@ public class DbCommand extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member ExecuteReaderAsync.
+     *
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbCommand.ExecuteReaderAsync" target="_top">.NET documentation</a>
+     */
     public Task_1 ExecuteReaderAsync(CancellationToken cancellationToken) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -339,6 +453,20 @@ public class DbCommand extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member ExecuteNonQueryAsync.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbCommand.ExecuteNonQueryAsync" target="_top">.NET documentation</a>
+     */
     public Task_1 ExecuteNonQueryAsync() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -354,6 +482,21 @@ public class DbCommand extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member ExecuteNonQueryAsync.
+     *
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbCommand.ExecuteNonQueryAsync" target="_top">.NET documentation</a>
+     */
     public Task_1 ExecuteNonQueryAsync(CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -369,6 +512,20 @@ public class DbCommand extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member ExecuteScalarAsync.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbCommand.ExecuteScalarAsync" target="_top">.NET documentation</a>
+     */
     public Task_1 ExecuteScalarAsync() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -384,6 +541,21 @@ public class DbCommand extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member ExecuteScalarAsync.
+     *
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbCommand.ExecuteScalarAsync" target="_top">.NET documentation</a>
+     */
     public Task_1 ExecuteScalarAsync(CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -399,6 +571,17 @@ public class DbCommand extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member DisposeAsync.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbCommand.DisposeAsync" target="_top">.NET documentation</a>
+     */
     public ValueTask DisposeAsync() throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -414,6 +597,12 @@ public class DbCommand extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member Cancel.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbCommand.Cancel" target="_top">.NET documentation</a>
+     */
     public void Cancel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -424,6 +613,12 @@ public class DbCommand extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Invokes the .NET member Prepare.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbCommand.Prepare" target="_top">.NET documentation</a>
+     */
     public void Prepare() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -438,6 +633,13 @@ public class DbCommand extends system.componentmodel.Component  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property DesignTimeVisible.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbCommand.DesignTimeVisible" target="_top">.NET documentation</a>
+     */
     public boolean getDesignTimeVisible() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -452,6 +654,13 @@ public class DbCommand extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DesignTimeVisible.
+     *
+     * @param DesignTimeVisible the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbCommand.DesignTimeVisible" target="_top">.NET documentation</a>
+     */
     public void setDesignTimeVisible(boolean DesignTimeVisible) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -462,6 +671,13 @@ public class DbCommand extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CommandTimeout.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbCommand.CommandTimeout" target="_top">.NET documentation</a>
+     */
     public int getCommandTimeout() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -502,6 +718,13 @@ public class DbCommand extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CommandTimeout.
+     *
+     * @param CommandTimeout the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbCommand.CommandTimeout" target="_top">.NET documentation</a>
+     */
     public void setCommandTimeout(int CommandTimeout) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -512,6 +735,13 @@ public class DbCommand extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CommandType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbCommand.CommandType" target="_top">.NET documentation</a>
+     */
     public CommandType getCommandType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -527,6 +757,13 @@ public class DbCommand extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CommandType.
+     *
+     * @param CommandType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbCommand.CommandType" target="_top">.NET documentation</a>
+     */
     public void setCommandType(CommandType CommandType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -537,6 +774,13 @@ public class DbCommand extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Connection.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbCommand.Connection" target="_top">.NET documentation</a>
+     */
     public DbConnection getConnection() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -552,6 +796,13 @@ public class DbCommand extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Connection.
+     *
+     * @param Connection the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbCommand.Connection" target="_top">.NET documentation</a>
+     */
     public void setConnection(DbConnection Connection) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -562,6 +813,13 @@ public class DbCommand extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Parameters.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbCommand.Parameters" target="_top">.NET documentation</a>
+     */
     public DbParameterCollection getParameters() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -577,6 +835,13 @@ public class DbCommand extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Transaction.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbCommand.Transaction" target="_top">.NET documentation</a>
+     */
     public DbTransaction getTransaction() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -592,6 +857,13 @@ public class DbCommand extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Transaction.
+     *
+     * @param Transaction the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbCommand.Transaction" target="_top">.NET documentation</a>
+     */
     public void setTransaction(DbTransaction Transaction) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -602,6 +874,13 @@ public class DbCommand extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UpdatedRowSource.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbCommand.UpdatedRowSource" target="_top">.NET documentation</a>
+     */
     public UpdateRowSource getUpdatedRowSource() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -617,6 +896,13 @@ public class DbCommand extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property UpdatedRowSource.
+     *
+     * @param UpdatedRowSource the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbCommand.UpdatedRowSource" target="_top">.NET documentation</a>
+     */
     public void setUpdatedRowSource(UpdateRowSource UpdatedRowSource) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -627,6 +913,13 @@ public class DbCommand extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CommandText.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbCommand.CommandText" target="_top">.NET documentation</a>
+     */
     public java.lang.String getCommandText() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -641,6 +934,13 @@ public class DbCommand extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CommandText.
+     *
+     * @param CommandText the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbCommand.CommandText" target="_top">.NET documentation</a>
+     */
     public void setCommandText(java.lang.String CommandText) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

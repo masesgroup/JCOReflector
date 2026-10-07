@@ -99,7 +99,10 @@ public class PayloadOptions extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PayloadOptions(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class PayloadOptions extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Formats.Nrbf.PayloadOptions.-ctor" target="_top">.NET documentation</a>
+     */
     public PayloadOptions() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +173,13 @@ public class PayloadOptions extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property UndoTruncatedTypeNames.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Formats.Nrbf.PayloadOptions.UndoTruncatedTypeNames" target="_top">.NET documentation</a>
+     */
     public boolean getUndoTruncatedTypeNames() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,6 +194,13 @@ public class PayloadOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property UndoTruncatedTypeNames.
+     *
+     * @param UndoTruncatedTypeNames the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Formats.Nrbf.PayloadOptions.UndoTruncatedTypeNames" target="_top">.NET documentation</a>
+     */
     public void setUndoTruncatedTypeNames(boolean UndoTruncatedTypeNames) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +211,13 @@ public class PayloadOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TypeNameParseOptions.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Formats.Nrbf.PayloadOptions.TypeNameParseOptions" target="_top">.NET documentation</a>
+     */
     public TypeNameParseOptions getTypeNameParseOptions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +233,13 @@ public class PayloadOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TypeNameParseOptions.
+     *
+     * @param TypeNameParseOptions the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Formats.Nrbf.PayloadOptions.TypeNameParseOptions" target="_top">.NET documentation</a>
+     */
     public void setTypeNameParseOptions(TypeNameParseOptions TypeNameParseOptions) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

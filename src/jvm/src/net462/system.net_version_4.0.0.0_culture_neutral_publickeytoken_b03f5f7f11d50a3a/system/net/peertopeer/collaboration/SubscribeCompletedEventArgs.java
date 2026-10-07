@@ -101,7 +101,10 @@ public class SubscribeCompletedEventArgs extends system.componentmodel.AsyncComp
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SubscribeCompletedEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -160,6 +163,13 @@ public class SubscribeCompletedEventArgs extends system.componentmodel.AsyncComp
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property PeerContact.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.PeerToPeer.Collaboration.SubscribeCompletedEventArgs.PeerContact" target="_top">.NET documentation</a>
+     */
     public PeerContact getPeerContact() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -175,6 +185,13 @@ public class SubscribeCompletedEventArgs extends system.componentmodel.AsyncComp
         }
     }
 
+    /**
+     * Gets the value of the .NET property PeerNearMe.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.PeerToPeer.Collaboration.SubscribeCompletedEventArgs.PeerNearMe" target="_top">.NET documentation</a>
+     */
     public PeerNearMe getPeerNearMe() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -100,7 +100,10 @@ public class FlowStep extends system.activities.statements.FlowNode  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public FlowStep(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class FlowStep extends system.activities.statements.FlowNode  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.FlowStep.-ctor" target="_top">.NET documentation</a>
+     */
     public FlowStep() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +174,13 @@ public class FlowStep extends system.activities.statements.FlowNode  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Action.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.FlowStep.Action" target="_top">.NET documentation</a>
+     */
     public Activity getAction() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +196,13 @@ public class FlowStep extends system.activities.statements.FlowNode  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Action.
+     *
+     * @param Action the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.FlowStep.Action" target="_top">.NET documentation</a>
+     */
     public void setAction(Activity Action) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +213,13 @@ public class FlowStep extends system.activities.statements.FlowNode  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Next.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.FlowStep.Next" target="_top">.NET documentation</a>
+     */
     public FlowNode getNext() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +235,13 @@ public class FlowStep extends system.activities.statements.FlowNode  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Next.
+     *
+     * @param Next the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.FlowStep.Next" target="_top">.NET documentation</a>
+     */
     public void setNext(FlowNode Next) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -100,7 +100,10 @@ public class WebPartTransformerCollection extends system.collections.CollectionB
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public WebPartTransformerCollection(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class WebPartTransformerCollection extends system.collections.CollectionB
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartTransformerCollection.-ctor" target="_top">.NET documentation</a>
+     */
     public WebPartTransformerCollection() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -161,6 +170,14 @@ public class WebPartTransformerCollection extends system.collections.CollectionB
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Contains.
+     *
+     * @param transformer the argument of type {@code WebPartTransformer}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartTransformerCollection.Contains" target="_top">.NET documentation</a>
+     */
     public boolean Contains(WebPartTransformer transformer) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -175,6 +192,14 @@ public class WebPartTransformerCollection extends system.collections.CollectionB
         }
     }
 
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param transformer the argument of type {@code WebPartTransformer}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartTransformerCollection.Add" target="_top">.NET documentation</a>
+     */
     public int Add(WebPartTransformer transformer) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +240,14 @@ public class WebPartTransformerCollection extends system.collections.CollectionB
         }
     }
 
+    /**
+     * Invokes the .NET member IndexOf.
+     *
+     * @param transformer the argument of type {@code WebPartTransformer}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartTransformerCollection.IndexOf" target="_top">.NET documentation</a>
+     */
     public int IndexOf(WebPartTransformer transformer) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -255,6 +288,14 @@ public class WebPartTransformerCollection extends system.collections.CollectionB
         }
     }
 
+    /**
+     * Invokes the .NET member CopyTo.
+     *
+     * @param array the argument of type {@code WebPartTransformer[]}
+     * @param index the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartTransformerCollection.CopyTo" target="_top">.NET documentation</a>
+     */
     public void CopyTo(WebPartTransformer[] array, int index) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -265,6 +306,14 @@ public class WebPartTransformerCollection extends system.collections.CollectionB
         }
     }
 
+    /**
+     * Invokes the .NET member Insert.
+     *
+     * @param index the argument of type {@code int}
+     * @param transformer the argument of type {@code WebPartTransformer}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartTransformerCollection.Insert" target="_top">.NET documentation</a>
+     */
     public void Insert(int index, WebPartTransformer transformer) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -275,6 +324,13 @@ public class WebPartTransformerCollection extends system.collections.CollectionB
         }
     }
 
+    /**
+     * Invokes the .NET member Remove.
+     *
+     * @param transformer the argument of type {@code WebPartTransformer}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartTransformerCollection.Remove" target="_top">.NET documentation</a>
+     */
     public void Remove(WebPartTransformer transformer) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -289,6 +345,13 @@ public class WebPartTransformerCollection extends system.collections.CollectionB
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsReadOnly.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartTransformerCollection.IsReadOnly" target="_top">.NET documentation</a>
+     */
     public boolean getIsReadOnly() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

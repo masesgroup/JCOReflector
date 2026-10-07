@@ -105,7 +105,10 @@ public class SqlWorkflowInstanceStore extends system.runtime.durableinstancing.I
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SqlWorkflowInstanceStore(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,25 @@ public class SqlWorkflowInstanceStore extends system.runtime.durableinstancing.I
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.runtime.durableinstancing.InstancePersistenceCommandException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DurableInstancing.SqlWorkflowInstanceStore.-ctor" target="_top">.NET documentation</a>
+     */
     public SqlWorkflowInstanceStore() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.runtime.durableinstancing.InstancePersistenceCommandException, system.threading.WaitHandleCannotBeOpenedException, system.OverflowException {
         try {
             // add reference to assemblyName.dll file
@@ -162,6 +184,34 @@ public class SqlWorkflowInstanceStore extends system.runtime.durableinstancing.I
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param connectionString the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.runtime.durableinstancing.InstancePersistenceCommandException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DurableInstancing.SqlWorkflowInstanceStore.-ctor" target="_top">.NET documentation</a>
+     */
     public SqlWorkflowInstanceStore(java.lang.String connectionString) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.runtime.durableinstancing.InstancePersistenceCommandException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.OverflowException {
         try {
             // add reference to assemblyName.dll file
@@ -176,6 +226,25 @@ public class SqlWorkflowInstanceStore extends system.runtime.durableinstancing.I
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Promote.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param promoteAsVariant the argument of type {@code IEnumerable_1}
+     * @param promoteAsBinary the argument of type {@code IEnumerable_1}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DurableInstancing.SqlWorkflowInstanceStore.Promote" target="_top">.NET documentation</a>
+     */
     public void Promote(java.lang.String name, IEnumerable_1 promoteAsVariant, IEnumerable_1 promoteAsBinary) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +259,13 @@ public class SqlWorkflowInstanceStore extends system.runtime.durableinstancing.I
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property EnqueueRunCommands.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DurableInstancing.SqlWorkflowInstanceStore.EnqueueRunCommands" target="_top">.NET documentation</a>
+     */
     public boolean getEnqueueRunCommands() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +280,23 @@ public class SqlWorkflowInstanceStore extends system.runtime.durableinstancing.I
         }
     }
 
+    /**
+     * Sets the value of the .NET property EnqueueRunCommands.
+     *
+     * @param EnqueueRunCommands the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DurableInstancing.SqlWorkflowInstanceStore.EnqueueRunCommands" target="_top">.NET documentation</a>
+     */
     public void setEnqueueRunCommands(boolean EnqueueRunCommands) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -214,6 +307,13 @@ public class SqlWorkflowInstanceStore extends system.runtime.durableinstancing.I
         }
     }
 
+    /**
+     * Gets the value of the .NET property MaxConnectionRetries.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DurableInstancing.SqlWorkflowInstanceStore.MaxConnectionRetries" target="_top">.NET documentation</a>
+     */
     public int getMaxConnectionRetries() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -254,6 +354,13 @@ public class SqlWorkflowInstanceStore extends system.runtime.durableinstancing.I
         }
     }
 
+    /**
+     * Sets the value of the .NET property MaxConnectionRetries.
+     *
+     * @param MaxConnectionRetries the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DurableInstancing.SqlWorkflowInstanceStore.MaxConnectionRetries" target="_top">.NET documentation</a>
+     */
     public void setMaxConnectionRetries(int MaxConnectionRetries) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -264,6 +371,13 @@ public class SqlWorkflowInstanceStore extends system.runtime.durableinstancing.I
         }
     }
 
+    /**
+     * Gets the value of the .NET property InstanceCompletionAction.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DurableInstancing.SqlWorkflowInstanceStore.InstanceCompletionAction" target="_top">.NET documentation</a>
+     */
     public InstanceCompletionAction getInstanceCompletionAction() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -279,6 +393,23 @@ public class SqlWorkflowInstanceStore extends system.runtime.durableinstancing.I
         }
     }
 
+    /**
+     * Sets the value of the .NET property InstanceCompletionAction.
+     *
+     * @param InstanceCompletionAction the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DurableInstancing.SqlWorkflowInstanceStore.InstanceCompletionAction" target="_top">.NET documentation</a>
+     */
     public void setInstanceCompletionAction(InstanceCompletionAction InstanceCompletionAction) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -289,6 +420,13 @@ public class SqlWorkflowInstanceStore extends system.runtime.durableinstancing.I
         }
     }
 
+    /**
+     * Gets the value of the .NET property InstanceEncodingOption.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DurableInstancing.SqlWorkflowInstanceStore.InstanceEncodingOption" target="_top">.NET documentation</a>
+     */
     public InstanceEncodingOption getInstanceEncodingOption() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -304,6 +442,23 @@ public class SqlWorkflowInstanceStore extends system.runtime.durableinstancing.I
         }
     }
 
+    /**
+     * Sets the value of the .NET property InstanceEncodingOption.
+     *
+     * @param InstanceEncodingOption the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DurableInstancing.SqlWorkflowInstanceStore.InstanceEncodingOption" target="_top">.NET documentation</a>
+     */
     public void setInstanceEncodingOption(InstanceEncodingOption InstanceEncodingOption) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -314,6 +469,13 @@ public class SqlWorkflowInstanceStore extends system.runtime.durableinstancing.I
         }
     }
 
+    /**
+     * Gets the value of the .NET property InstanceLockedExceptionAction.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DurableInstancing.SqlWorkflowInstanceStore.InstanceLockedExceptionAction" target="_top">.NET documentation</a>
+     */
     public InstanceLockedExceptionAction getInstanceLockedExceptionAction() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -329,6 +491,23 @@ public class SqlWorkflowInstanceStore extends system.runtime.durableinstancing.I
         }
     }
 
+    /**
+     * Sets the value of the .NET property InstanceLockedExceptionAction.
+     *
+     * @param InstanceLockedExceptionAction the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DurableInstancing.SqlWorkflowInstanceStore.InstanceLockedExceptionAction" target="_top">.NET documentation</a>
+     */
     public void setInstanceLockedExceptionAction(InstanceLockedExceptionAction InstanceLockedExceptionAction) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -339,6 +518,13 @@ public class SqlWorkflowInstanceStore extends system.runtime.durableinstancing.I
         }
     }
 
+    /**
+     * Gets the value of the .NET property ConnectionString.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DurableInstancing.SqlWorkflowInstanceStore.ConnectionString" target="_top">.NET documentation</a>
+     */
     public java.lang.String getConnectionString() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -353,6 +539,23 @@ public class SqlWorkflowInstanceStore extends system.runtime.durableinstancing.I
         }
     }
 
+    /**
+     * Sets the value of the .NET property ConnectionString.
+     *
+     * @param ConnectionString the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DurableInstancing.SqlWorkflowInstanceStore.ConnectionString" target="_top">.NET documentation</a>
+     */
     public void setConnectionString(java.lang.String ConnectionString) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -363,6 +566,13 @@ public class SqlWorkflowInstanceStore extends system.runtime.durableinstancing.I
         }
     }
 
+    /**
+     * Gets the value of the .NET property HostLockRenewalPeriod.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DurableInstancing.SqlWorkflowInstanceStore.HostLockRenewalPeriod" target="_top">.NET documentation</a>
+     */
     public TimeSpan getHostLockRenewalPeriod() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -378,6 +588,20 @@ public class SqlWorkflowInstanceStore extends system.runtime.durableinstancing.I
         }
     }
 
+    /**
+     * Sets the value of the .NET property HostLockRenewalPeriod.
+     *
+     * @param HostLockRenewalPeriod the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DurableInstancing.SqlWorkflowInstanceStore.HostLockRenewalPeriod" target="_top">.NET documentation</a>
+     */
     public void setHostLockRenewalPeriod(TimeSpan HostLockRenewalPeriod) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -388,6 +612,13 @@ public class SqlWorkflowInstanceStore extends system.runtime.durableinstancing.I
         }
     }
 
+    /**
+     * Gets the value of the .NET property RunnableInstancesDetectionPeriod.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DurableInstancing.SqlWorkflowInstanceStore.RunnableInstancesDetectionPeriod" target="_top">.NET documentation</a>
+     */
     public TimeSpan getRunnableInstancesDetectionPeriod() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -403,6 +634,20 @@ public class SqlWorkflowInstanceStore extends system.runtime.durableinstancing.I
         }
     }
 
+    /**
+     * Sets the value of the .NET property RunnableInstancesDetectionPeriod.
+     *
+     * @param RunnableInstancesDetectionPeriod the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DurableInstancing.SqlWorkflowInstanceStore.RunnableInstancesDetectionPeriod" target="_top">.NET documentation</a>
+     */
     public void setRunnableInstancesDetectionPeriod(TimeSpan RunnableInstancesDetectionPeriod) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

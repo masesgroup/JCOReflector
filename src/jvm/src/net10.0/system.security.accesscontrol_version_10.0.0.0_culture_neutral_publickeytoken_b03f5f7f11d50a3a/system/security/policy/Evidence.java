@@ -101,7 +101,10 @@ public class Evidence extends NetObjectEnumerable  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Evidence(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class Evidence extends NetObjectEnumerable  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.Evidence.-ctor" target="_top">.NET documentation</a>
+     */
     public Evidence() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -158,6 +167,14 @@ public class Evidence extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param hostEvidence the argument of type {@code NetObject[]}
+     * @param assemblyEvidence the argument of type {@code NetObject[]}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.Evidence.-ctor" target="_top">.NET documentation</a>
+     */
     public Evidence(NetObject[] hostEvidence, NetObject[] assemblyEvidence) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +185,13 @@ public class Evidence extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param evidence the argument of type {@code Evidence}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.Evidence.-ctor" target="_top">.NET documentation</a>
+     */
     public Evidence(Evidence evidence) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -178,6 +202,14 @@ public class Evidence extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param hostEvidence the argument of type {@code EvidenceBase[]}
+     * @param assemblyEvidence the argument of type {@code EvidenceBase[]}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.Evidence.-ctor" target="_top">.NET documentation</a>
+     */
     public Evidence(EvidenceBase[] hostEvidence, EvidenceBase[] assemblyEvidence) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -192,6 +224,13 @@ public class Evidence extends NetObjectEnumerable  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetAssemblyEnumerator.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.Evidence.GetAssemblyEnumerator" target="_top">.NET documentation</a>
+     */
     public IEnumerator GetAssemblyEnumerator() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +246,13 @@ public class Evidence extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetHostEnumerator.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.Evidence.GetHostEnumerator" target="_top">.NET documentation</a>
+     */
     public IEnumerator GetHostEnumerator() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -222,6 +268,13 @@ public class Evidence extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Invokes the .NET member Clone.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.Evidence.Clone" target="_top">.NET documentation</a>
+     */
     public Evidence Clone() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -237,6 +290,13 @@ public class Evidence extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddAssembly.
+     *
+     * @param id the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.Evidence.AddAssembly" target="_top">.NET documentation</a>
+     */
     public void AddAssembly(NetObject id) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -247,6 +307,14 @@ public class Evidence extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddAssemblyEvidence.
+     *
+     * @param <T> the type of the generic argument T
+     * @param evidence the argument of type {@code T}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.Evidence.AddAssemblyEvidence" target="_top">.NET documentation</a>
+     */
     public <T extends IJCOBridgeReflected> void AddAssemblyEvidence(T evidence) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -257,6 +325,13 @@ public class Evidence extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddHost.
+     *
+     * @param id the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.Evidence.AddHost" target="_top">.NET documentation</a>
+     */
     public void AddHost(NetObject id) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -267,6 +342,14 @@ public class Evidence extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddHostEvidence.
+     *
+     * @param <T> the type of the generic argument T
+     * @param evidence the argument of type {@code T}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.Evidence.AddHostEvidence" target="_top">.NET documentation</a>
+     */
     public <T extends IJCOBridgeReflected> void AddHostEvidence(T evidence) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -277,6 +360,12 @@ public class Evidence extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Invokes the .NET member Clear.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.Evidence.Clear" target="_top">.NET documentation</a>
+     */
     public void Clear() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -287,6 +376,14 @@ public class Evidence extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Invokes the .NET member CopyTo.
+     *
+     * @param array the argument of type {@code Array}
+     * @param index the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.Evidence.CopyTo" target="_top">.NET documentation</a>
+     */
     public void CopyTo(Array array, int index) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -297,6 +394,13 @@ public class Evidence extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Invokes the .NET member Merge.
+     *
+     * @param evidence the argument of type {@code Evidence}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.Evidence.Merge" target="_top">.NET documentation</a>
+     */
     public void Merge(Evidence evidence) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -307,6 +411,13 @@ public class Evidence extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveType.
+     *
+     * @param t the argument of type {@code NetType}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.Evidence.RemoveType" target="_top">.NET documentation</a>
+     */
     public void RemoveType(NetType t) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -321,6 +432,13 @@ public class Evidence extends NetObjectEnumerable  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsReadOnly.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.Evidence.IsReadOnly" target="_top">.NET documentation</a>
+     */
     public boolean getIsReadOnly() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -335,6 +453,13 @@ public class Evidence extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsSynchronized.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.Evidence.IsSynchronized" target="_top">.NET documentation</a>
+     */
     public boolean getIsSynchronized() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -349,6 +474,13 @@ public class Evidence extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Locked.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.Evidence.Locked" target="_top">.NET documentation</a>
+     */
     public boolean getLocked() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -363,6 +495,13 @@ public class Evidence extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Locked.
+     *
+     * @param Locked the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.Evidence.Locked" target="_top">.NET documentation</a>
+     */
     public void setLocked(boolean Locked) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -373,6 +512,13 @@ public class Evidence extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Count.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.Evidence.Count" target="_top">.NET documentation</a>
+     */
     public int getCount() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -413,6 +559,13 @@ public class Evidence extends NetObjectEnumerable  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SyncRoot.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.Evidence.SyncRoot" target="_top">.NET documentation</a>
+     */
     public NetObject getSyncRoot() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

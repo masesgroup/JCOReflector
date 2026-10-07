@@ -98,7 +98,10 @@ public class IActivityEventListener_1Implementation<T extends IJCOBridgeReflecte
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IActivityEventListener_1Implementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -140,6 +143,14 @@ public class IActivityEventListener_1Implementation<T extends IJCOBridgeReflecte
 
     // Methods section
     
+    /**
+     * Invokes the .NET member OnEvent.
+     *
+     * @param sender the argument of type {@code NetObject}
+     * @param e the argument of type {@code T}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.IActivityEventListener-1.OnEvent" target="_top">.NET documentation</a>
+     */
     public void OnEvent(NetObject sender, T e) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

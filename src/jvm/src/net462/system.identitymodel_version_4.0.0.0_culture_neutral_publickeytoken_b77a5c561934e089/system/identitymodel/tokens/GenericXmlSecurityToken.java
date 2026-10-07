@@ -103,7 +103,10 @@ public class GenericXmlSecurityToken extends system.identitymodel.tokens.Securit
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public GenericXmlSecurityToken(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,34 @@ public class GenericXmlSecurityToken extends system.identitymodel.tokens.Securit
     public GenericXmlSecurityToken() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param tokenXml the argument of type {@code XmlElement}
+     * @param proofToken the argument of type {@code SecurityToken}
+     * @param effectiveTime the argument of type {@code DateTime}
+     * @param expirationTime the argument of type {@code DateTime}
+     * @param internalTokenReference the argument of type {@code SecurityKeyIdentifierClause}
+     * @param externalTokenReference the argument of type {@code SecurityKeyIdentifierClause}
+     * @param authorizationPolicies the argument of type {@code ReadOnlyCollection_1}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.InvalidTimeZoneException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.GenericXmlSecurityToken.-ctor" target="_top">.NET documentation</a>
+     */
     public GenericXmlSecurityToken(XmlElement tokenXml, SecurityToken proofToken, DateTime effectiveTime, DateTime expirationTime, SecurityKeyIdentifierClause internalTokenReference, SecurityKeyIdentifierClause externalTokenReference, ReadOnlyCollection_1 authorizationPolicies) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.InvalidTimeZoneException, system.security.SecurityException, system.io.IOException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +199,14 @@ public class GenericXmlSecurityToken extends system.identitymodel.tokens.Securit
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CanCreateKeyIdentifierClause.
+     *
+     * @param <T> the type of the generic argument T
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.GenericXmlSecurityToken.CanCreateKeyIdentifierClause" target="_top">.NET documentation</a>
+     */
     public <T extends IJCOBridgeReflected> boolean CanCreateKeyIdentifierClause() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +221,14 @@ public class GenericXmlSecurityToken extends system.identitymodel.tokens.Securit
         }
     }
 
+    /**
+     * Invokes the .NET member MatchesKeyIdentifierClause.
+     *
+     * @param keyIdentifierClause the argument of type {@code SecurityKeyIdentifierClause}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.GenericXmlSecurityToken.MatchesKeyIdentifierClause" target="_top">.NET documentation</a>
+     */
     public boolean MatchesKeyIdentifierClause(SecurityKeyIdentifierClause keyIdentifierClause) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +247,13 @@ public class GenericXmlSecurityToken extends system.identitymodel.tokens.Securit
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AuthorizationPolicies.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.GenericXmlSecurityToken.AuthorizationPolicies" target="_top">.NET documentation</a>
+     */
     public ReadOnlyCollection_1 getAuthorizationPolicies() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +269,13 @@ public class GenericXmlSecurityToken extends system.identitymodel.tokens.Securit
         }
     }
 
+    /**
+     * Gets the value of the .NET property ExternalTokenReference.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.GenericXmlSecurityToken.ExternalTokenReference" target="_top">.NET documentation</a>
+     */
     public SecurityKeyIdentifierClause getExternalTokenReference() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -230,6 +291,13 @@ public class GenericXmlSecurityToken extends system.identitymodel.tokens.Securit
         }
     }
 
+    /**
+     * Gets the value of the .NET property InternalTokenReference.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.GenericXmlSecurityToken.InternalTokenReference" target="_top">.NET documentation</a>
+     */
     public SecurityKeyIdentifierClause getInternalTokenReference() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -245,6 +313,13 @@ public class GenericXmlSecurityToken extends system.identitymodel.tokens.Securit
         }
     }
 
+    /**
+     * Gets the value of the .NET property ProofToken.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.GenericXmlSecurityToken.ProofToken" target="_top">.NET documentation</a>
+     */
     public SecurityToken getProofToken() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -260,6 +335,13 @@ public class GenericXmlSecurityToken extends system.identitymodel.tokens.Securit
         }
     }
 
+    /**
+     * Gets the value of the .NET property TokenXml.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.GenericXmlSecurityToken.TokenXml" target="_top">.NET documentation</a>
+     */
     public XmlElement getTokenXml() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

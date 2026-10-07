@@ -100,7 +100,10 @@ public class SequencePosition extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SequencePosition(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,14 @@ public class SequencePosition extends system.ValueType  {
     public SequencePosition() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param object the argument of type {@code NetObject}
+     * @param integer the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.SequencePosition.-ctor" target="_top">.NET documentation</a>
+     */
     public SequencePosition(NetObject object, int integer) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +176,14 @@ public class SequencePosition extends system.ValueType  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Equals.
+     *
+     * @param other the argument of type {@code SequencePosition}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.SequencePosition.Equals" target="_top">.NET documentation</a>
+     */
     public boolean Equals(SequencePosition other) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -179,6 +198,13 @@ public class SequencePosition extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetInteger.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.SequencePosition.GetInteger" target="_top">.NET documentation</a>
+     */
     public int GetInteger() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -219,6 +245,13 @@ public class SequencePosition extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetObject.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.SequencePosition.GetObject" target="_top">.NET documentation</a>
+     */
     public NetObject GetObject() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

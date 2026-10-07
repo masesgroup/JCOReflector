@@ -101,7 +101,10 @@ public class ISerializerFactoryImplementation extends NetObject implements ISeri
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ISerializerFactoryImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -143,6 +146,14 @@ public class ISerializerFactoryImplementation extends NetObject implements ISeri
 
     // Methods section
     
+    /**
+     * Invokes the .NET member CreateSerializerWriter.
+     *
+     * @param stream the argument of type {@code Stream}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Documents.Serialization.ISerializerFactory.CreateSerializerWriter" target="_top">.NET documentation</a>
+     */
     public SerializerWriter CreateSerializerWriter(Stream stream) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -162,6 +173,13 @@ public class ISerializerFactoryImplementation extends NetObject implements ISeri
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property DefaultFileExtension.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Documents.Serialization.ISerializerFactory.DefaultFileExtension" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDefaultFileExtension() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -176,6 +194,13 @@ public class ISerializerFactoryImplementation extends NetObject implements ISeri
         }
     }
 
+    /**
+     * Gets the value of the .NET property DisplayName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Documents.Serialization.ISerializerFactory.DisplayName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDisplayName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +215,13 @@ public class ISerializerFactoryImplementation extends NetObject implements ISeri
         }
     }
 
+    /**
+     * Gets the value of the .NET property ManufacturerName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Documents.Serialization.ISerializerFactory.ManufacturerName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getManufacturerName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +236,13 @@ public class ISerializerFactoryImplementation extends NetObject implements ISeri
         }
     }
 
+    /**
+     * Gets the value of the .NET property ManufacturerWebsite.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Documents.Serialization.ISerializerFactory.ManufacturerWebsite" target="_top">.NET documentation</a>
+     */
     public Uri getManufacturerWebsite() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

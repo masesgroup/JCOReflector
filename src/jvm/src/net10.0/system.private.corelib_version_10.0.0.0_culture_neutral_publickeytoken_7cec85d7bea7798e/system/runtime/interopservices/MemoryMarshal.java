@@ -104,7 +104,10 @@ public class MemoryMarshal extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public MemoryMarshal(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,19 @@ public class MemoryMarshal extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member TryGetArray.
+     *
+     * @param <T> the type of the generic argument T
+     * @param memory the argument of type {@code ReadOnlyMemory_1}
+     * @param segment the argument of type {@code JCORefOut<ArraySegment_1>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.MemoryMarshal.TryGetArray" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> boolean TryGetArray(ReadOnlyMemory_1 memory, JCORefOut<ArraySegment_1> segment) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -171,6 +187,19 @@ public class MemoryMarshal extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member TryGetMemoryManager.
+     *
+     * @param <T> the type of the generic argument T
+     * @param <TManager> the type of the generic argument TManager
+     * @param memory the argument of type {@code ReadOnlyMemory_1}
+     * @param manager the argument of type {@code JCORefOut<TManager>}
+     * @param start the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicInteger>}
+     * @param length the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicInteger>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.MemoryMarshal.TryGetMemoryManager" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected, TManager extends IJCOBridgeReflected> boolean TryGetMemoryManager(ReadOnlyMemory_1 memory, JCORefOut<TManager> manager, JCORefOut<java.util.concurrent.atomic.AtomicInteger> start, JCORefOut<java.util.concurrent.atomic.AtomicInteger> length) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -185,6 +214,17 @@ public class MemoryMarshal extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member TryGetMemoryManager.
+     *
+     * @param <T> the type of the generic argument T
+     * @param <TManager> the type of the generic argument TManager
+     * @param memory the argument of type {@code ReadOnlyMemory_1}
+     * @param manager the argument of type {@code JCORefOut<TManager>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.MemoryMarshal.TryGetMemoryManager" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected, TManager extends IJCOBridgeReflected> boolean TryGetMemoryManager(ReadOnlyMemory_1 memory, JCORefOut<TManager> manager) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -199,6 +239,17 @@ public class MemoryMarshal extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member TryGetString.
+     *
+     * @param memory the argument of type {@code ReadOnlyMemory_1}
+     * @param text the argument of type {@code JCORefOut}
+     * @param start the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicInteger>}
+     * @param length the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicInteger>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.MemoryMarshal.TryGetString" target="_top">.NET documentation</a>
+     */
     public static boolean TryGetString(ReadOnlyMemory_1 memory, JCORefOut text, JCORefOut<java.util.concurrent.atomic.AtomicInteger> start, JCORefOut<java.util.concurrent.atomic.AtomicInteger> length) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -213,6 +264,24 @@ public class MemoryMarshal extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetArrayDataReference.
+     *
+     * @param array the argument of type {@code Array}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.MemoryMarshal.GetArrayDataReference" target="_top">.NET documentation</a>
+     */
     public static byte GetArrayDataReference(Array array) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -253,6 +322,25 @@ public class MemoryMarshal extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToEnumerable.
+     *
+     * @param <T> the type of the generic argument T
+     * @param memory the argument of type {@code ReadOnlyMemory_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.MemoryMarshal.ToEnumerable" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> IEnumerable_1 ToEnumerable(ReadOnlyMemory_1 memory) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -268,6 +356,15 @@ public class MemoryMarshal extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AsMemory.
+     *
+     * @param <T> the type of the generic argument T
+     * @param memory the argument of type {@code ReadOnlyMemory_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.MemoryMarshal.AsMemory" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Memory_1 AsMemory(ReadOnlyMemory_1 memory) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -283,6 +380,27 @@ public class MemoryMarshal extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateFromPinnedArray.
+     *
+     * @param <T> the type of the generic argument T
+     * @param array the argument of type {@code T[]}
+     * @param start the argument of type {@code int}
+     * @param length the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.MemoryMarshal.CreateFromPinnedArray" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Memory_1 CreateFromPinnedArray(T[] array, int start, int length) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

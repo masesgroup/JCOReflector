@@ -98,7 +98,10 @@ public class ManagementQuery extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ManagementQuery(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,13 @@ public class ManagementQuery extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Clone.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.ManagementQuery.Clone" target="_top">.NET documentation</a>
+     */
     public NetObject Clone() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -170,6 +180,13 @@ public class ManagementQuery extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property QueryLanguage.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.ManagementQuery.QueryLanguage" target="_top">.NET documentation</a>
+     */
     public java.lang.String getQueryLanguage() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +201,13 @@ public class ManagementQuery extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property QueryLanguage.
+     *
+     * @param QueryLanguage the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.ManagementQuery.QueryLanguage" target="_top">.NET documentation</a>
+     */
     public void setQueryLanguage(java.lang.String QueryLanguage) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +218,13 @@ public class ManagementQuery extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property QueryString.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.ManagementQuery.QueryString" target="_top">.NET documentation</a>
+     */
     public java.lang.String getQueryString() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +239,13 @@ public class ManagementQuery extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property QueryString.
+     *
+     * @param QueryString the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.ManagementQuery.QueryString" target="_top">.NET documentation</a>
+     */
     public void setQueryString(java.lang.String QueryString) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

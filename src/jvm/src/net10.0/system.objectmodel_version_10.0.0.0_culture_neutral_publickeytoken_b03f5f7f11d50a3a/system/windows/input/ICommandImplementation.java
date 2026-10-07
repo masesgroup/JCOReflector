@@ -99,7 +99,10 @@ public class ICommandImplementation extends NetObject implements ICommand {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ICommandImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -141,6 +144,14 @@ public class ICommandImplementation extends NetObject implements ICommand {
 
     // Methods section
     
+    /**
+     * Invokes the .NET member CanExecute.
+     *
+     * @param parameter the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.ICommand.CanExecute" target="_top">.NET documentation</a>
+     */
     public boolean CanExecute(NetObject parameter) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -155,6 +166,13 @@ public class ICommandImplementation extends NetObject implements ICommand {
         }
     }
 
+    /**
+     * Invokes the .NET member Execute.
+     *
+     * @param parameter the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.ICommand.Execute" target="_top">.NET documentation</a>
+     */
     public void Execute(NetObject parameter) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -174,6 +192,13 @@ public class ICommandImplementation extends NetObject implements ICommand {
     // Instance Events section
     
 
+    /**
+     * Invokes the .NET member addCanExecuteChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addCanExecuteChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +209,13 @@ public class ICommandImplementation extends NetObject implements ICommand {
         }
     }
 
+    /**
+     * Invokes the .NET member removeCanExecuteChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeCanExecuteChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

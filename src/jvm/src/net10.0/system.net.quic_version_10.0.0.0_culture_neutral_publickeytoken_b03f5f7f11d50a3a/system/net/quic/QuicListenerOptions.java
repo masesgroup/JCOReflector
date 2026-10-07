@@ -101,7 +101,10 @@ public class QuicListenerOptions extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public QuicListenerOptions(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class QuicListenerOptions extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Quic.QuicListenerOptions.-ctor" target="_top">.NET documentation</a>
+     */
     public QuicListenerOptions() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -166,6 +175,13 @@ public class QuicListenerOptions extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ListenBacklog.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Quic.QuicListenerOptions.ListenBacklog" target="_top">.NET documentation</a>
+     */
     public int getListenBacklog() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,6 +222,13 @@ public class QuicListenerOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ListenBacklog.
+     *
+     * @param ListenBacklog the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Quic.QuicListenerOptions.ListenBacklog" target="_top">.NET documentation</a>
+     */
     public void setListenBacklog(int ListenBacklog) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +239,13 @@ public class QuicListenerOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ApplicationProtocols.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Quic.QuicListenerOptions.ApplicationProtocols" target="_top">.NET documentation</a>
+     */
     public List_1 getApplicationProtocols() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -231,6 +261,13 @@ public class QuicListenerOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ApplicationProtocols.
+     *
+     * @param ApplicationProtocols the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Quic.QuicListenerOptions.ApplicationProtocols" target="_top">.NET documentation</a>
+     */
     public void setApplicationProtocols(List_1 ApplicationProtocols) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -241,6 +278,13 @@ public class QuicListenerOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ConnectionOptionsCallback.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Quic.QuicListenerOptions.ConnectionOptionsCallback" target="_top">.NET documentation</a>
+     */
     public Func_4 getConnectionOptionsCallback() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -255,6 +299,13 @@ public class QuicListenerOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ConnectionOptionsCallback.
+     *
+     * @param ConnectionOptionsCallback the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Quic.QuicListenerOptions.ConnectionOptionsCallback" target="_top">.NET documentation</a>
+     */
     public void setConnectionOptionsCallback(Func_4 ConnectionOptionsCallback) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -265,6 +316,13 @@ public class QuicListenerOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ListenEndPoint.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Quic.QuicListenerOptions.ListenEndPoint" target="_top">.NET documentation</a>
+     */
     public IPEndPoint getListenEndPoint() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -280,6 +338,13 @@ public class QuicListenerOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ListenEndPoint.
+     *
+     * @param ListenEndPoint the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Quic.QuicListenerOptions.ListenEndPoint" target="_top">.NET documentation</a>
+     */
     public void setListenEndPoint(IPEndPoint ListenEndPoint) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

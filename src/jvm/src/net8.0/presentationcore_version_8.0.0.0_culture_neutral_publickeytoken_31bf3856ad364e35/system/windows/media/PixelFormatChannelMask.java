@@ -102,7 +102,10 @@ public class PixelFormatChannelMask extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PixelFormatChannelMask(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,15 @@ public class PixelFormatChannelMask extends system.ValueType  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Equals.
+     *
+     * @param left the argument of type {@code PixelFormatChannelMask}
+     * @param right the argument of type {@code PixelFormatChannelMask}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.PixelFormatChannelMask.Equals" target="_top">.NET documentation</a>
+     */
     public static boolean Equals(PixelFormatChannelMask left, PixelFormatChannelMask right) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -175,6 +187,14 @@ public class PixelFormatChannelMask extends system.ValueType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Mask.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.PixelFormatChannelMask.Mask" target="_top">.NET documentation</a>
+     */
     public IList_1 getMask() throws Throwable, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

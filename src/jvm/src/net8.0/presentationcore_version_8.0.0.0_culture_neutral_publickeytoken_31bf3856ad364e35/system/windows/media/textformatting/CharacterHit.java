@@ -100,7 +100,10 @@ public class CharacterHit extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CharacterHit(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,14 @@ public class CharacterHit extends system.ValueType  {
     public CharacterHit() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param firstCharacterIndex the argument of type {@code int}
+     * @param trailingLength the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.CharacterHit.-ctor" target="_top">.NET documentation</a>
+     */
     public CharacterHit(int firstCharacterIndex, int trailingLength) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +176,14 @@ public class CharacterHit extends system.ValueType  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Equals.
+     *
+     * @param obj the argument of type {@code CharacterHit}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.CharacterHit.Equals" target="_top">.NET documentation</a>
+     */
     public boolean Equals(CharacterHit obj) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +202,13 @@ public class CharacterHit extends system.ValueType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property FirstCharacterIndex.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.CharacterHit.FirstCharacterIndex" target="_top">.NET documentation</a>
+     */
     public int getFirstCharacterIndex() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -223,6 +249,13 @@ public class CharacterHit extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TrailingLength.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.CharacterHit.TrailingLength" target="_top">.NET documentation</a>
+     */
     public int getTrailingLength() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

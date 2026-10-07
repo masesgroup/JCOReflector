@@ -100,7 +100,10 @@ public class SimpleWorkerRequest extends system.web.HttpWorkerRequest  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SimpleWorkerRequest(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,30 @@ public class SimpleWorkerRequest extends system.web.HttpWorkerRequest  {
     public SimpleWorkerRequest() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param page the argument of type {@code java.lang.String}
+     * @param query the argument of type {@code java.lang.String}
+     * @param output the argument of type {@code TextWriter}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.MemberAccessException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.SimpleWorkerRequest.-ctor" target="_top">.NET documentation</a>
+     */
     public SimpleWorkerRequest(java.lang.String page, java.lang.String query, TextWriter output) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NullReferenceException, system.ArgumentException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.MemberAccessException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -160,6 +187,40 @@ public class SimpleWorkerRequest extends system.web.HttpWorkerRequest  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param appVirtualDir the argument of type {@code java.lang.String}
+     * @param appPhysicalDir the argument of type {@code java.lang.String}
+     * @param page the argument of type {@code java.lang.String}
+     * @param query the argument of type {@code java.lang.String}
+     * @param output the argument of type {@code TextWriter}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.MemberAccessException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.SimpleWorkerRequest.-ctor" target="_top">.NET documentation</a>
+     */
     public SimpleWorkerRequest(java.lang.String appVirtualDir, java.lang.String appPhysicalDir, java.lang.String page, java.lang.String query, TextWriter output) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NullReferenceException, system.ArgumentException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.MemberAccessException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.web.HttpException {
         try {
             // add reference to assemblyName.dll file
@@ -175,6 +236,13 @@ public class SimpleWorkerRequest extends system.web.HttpWorkerRequest  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetLocalPort.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.SimpleWorkerRequest.GetLocalPort" target="_top">.NET documentation</a>
+     */
     public int GetLocalPort() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +283,13 @@ public class SimpleWorkerRequest extends system.web.HttpWorkerRequest  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetRemotePort.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.SimpleWorkerRequest.GetRemotePort" target="_top">.NET documentation</a>
+     */
     public int GetRemotePort() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -255,6 +330,13 @@ public class SimpleWorkerRequest extends system.web.HttpWorkerRequest  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetAppPath.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.SimpleWorkerRequest.GetAppPath" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetAppPath() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -269,6 +351,21 @@ public class SimpleWorkerRequest extends system.web.HttpWorkerRequest  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetAppPathTranslated.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.SimpleWorkerRequest.GetAppPathTranslated" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetAppPathTranslated() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -283,6 +380,15 @@ public class SimpleWorkerRequest extends system.web.HttpWorkerRequest  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetFilePath.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.SimpleWorkerRequest.GetFilePath" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetFilePath() throws Throwable, system.NullReferenceException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -297,6 +403,21 @@ public class SimpleWorkerRequest extends system.web.HttpWorkerRequest  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetFilePathTranslated.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.SimpleWorkerRequest.GetFilePathTranslated" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetFilePathTranslated() throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -311,6 +432,13 @@ public class SimpleWorkerRequest extends system.web.HttpWorkerRequest  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetHttpVerbName.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.SimpleWorkerRequest.GetHttpVerbName" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetHttpVerbName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -325,6 +453,13 @@ public class SimpleWorkerRequest extends system.web.HttpWorkerRequest  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetHttpVersion.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.SimpleWorkerRequest.GetHttpVersion" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetHttpVersion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -339,6 +474,13 @@ public class SimpleWorkerRequest extends system.web.HttpWorkerRequest  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetLocalAddress.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.SimpleWorkerRequest.GetLocalAddress" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetLocalAddress() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -353,6 +495,13 @@ public class SimpleWorkerRequest extends system.web.HttpWorkerRequest  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetPathInfo.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.SimpleWorkerRequest.GetPathInfo" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetPathInfo() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -367,6 +516,13 @@ public class SimpleWorkerRequest extends system.web.HttpWorkerRequest  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetQueryString.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.SimpleWorkerRequest.GetQueryString" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetQueryString() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -381,6 +537,15 @@ public class SimpleWorkerRequest extends system.web.HttpWorkerRequest  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetRawUrl.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.SimpleWorkerRequest.GetRawUrl" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetRawUrl() throws Throwable, system.NullReferenceException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -395,6 +560,13 @@ public class SimpleWorkerRequest extends system.web.HttpWorkerRequest  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetRemoteAddress.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.SimpleWorkerRequest.GetRemoteAddress" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetRemoteAddress() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -409,6 +581,14 @@ public class SimpleWorkerRequest extends system.web.HttpWorkerRequest  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetServerVariable.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.SimpleWorkerRequest.GetServerVariable" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetServerVariable(java.lang.String name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -423,6 +603,15 @@ public class SimpleWorkerRequest extends system.web.HttpWorkerRequest  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetUriPath.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.SimpleWorkerRequest.GetUriPath" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetUriPath() throws Throwable, system.NullReferenceException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -437,6 +626,23 @@ public class SimpleWorkerRequest extends system.web.HttpWorkerRequest  {
         }
     }
 
+    /**
+     * Invokes the .NET member MapPath.
+     *
+     * @param path the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.SimpleWorkerRequest.MapPath" target="_top">.NET documentation</a>
+     */
     public java.lang.String MapPath(java.lang.String path) throws Throwable, system.ArgumentOutOfRangeException, system.NullReferenceException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -451,6 +657,12 @@ public class SimpleWorkerRequest extends system.web.HttpWorkerRequest  {
         }
     }
 
+    /**
+     * Invokes the .NET member EndOfRequest.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.SimpleWorkerRequest.EndOfRequest" target="_top">.NET documentation</a>
+     */
     public void EndOfRequest() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -461,6 +673,13 @@ public class SimpleWorkerRequest extends system.web.HttpWorkerRequest  {
         }
     }
 
+    /**
+     * Invokes the .NET member FlushResponse.
+     *
+     * @param finalFlush the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.SimpleWorkerRequest.FlushResponse" target="_top">.NET documentation</a>
+     */
     public void FlushResponse(boolean finalFlush) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -471,6 +690,14 @@ public class SimpleWorkerRequest extends system.web.HttpWorkerRequest  {
         }
     }
 
+    /**
+     * Invokes the .NET member SendKnownResponseHeader.
+     *
+     * @param index the argument of type {@code int}
+     * @param value the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.SimpleWorkerRequest.SendKnownResponseHeader" target="_top">.NET documentation</a>
+     */
     public void SendKnownResponseHeader(int index, java.lang.String value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -481,6 +708,15 @@ public class SimpleWorkerRequest extends system.web.HttpWorkerRequest  {
         }
     }
 
+    /**
+     * Invokes the .NET member SendResponseFromFile.
+     *
+     * @param filename the argument of type {@code java.lang.String}
+     * @param offset the argument of type {@code long}
+     * @param length the argument of type {@code long}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.SimpleWorkerRequest.SendResponseFromFile" target="_top">.NET documentation</a>
+     */
     public void SendResponseFromFile(java.lang.String filename, long offset, long length) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -491,6 +727,21 @@ public class SimpleWorkerRequest extends system.web.HttpWorkerRequest  {
         }
     }
 
+    /**
+     * Invokes the .NET member SendResponseFromMemory.
+     *
+     * @param data the argument of type {@code byte[]}
+     * @param length the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.SimpleWorkerRequest.SendResponseFromMemory" target="_top">.NET documentation</a>
+     */
     public void SendResponseFromMemory(byte[] data, int length) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -501,6 +752,21 @@ public class SimpleWorkerRequest extends system.web.HttpWorkerRequest  {
         }
     }
 
+    /**
+     * Invokes the .NET member SendResponseFromMemory.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.SimpleWorkerRequest.SendResponseFromMemory" target="_top">.NET documentation</a>
+     */
     public void SendResponseFromMemory(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -511,6 +777,14 @@ public class SimpleWorkerRequest extends system.web.HttpWorkerRequest  {
         }
     }
 
+    /**
+     * Invokes the .NET member SendStatus.
+     *
+     * @param statusCode the argument of type {@code int}
+     * @param statusDescription the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.SimpleWorkerRequest.SendStatus" target="_top">.NET documentation</a>
+     */
     public void SendStatus(int statusCode, java.lang.String statusDescription) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -521,6 +795,14 @@ public class SimpleWorkerRequest extends system.web.HttpWorkerRequest  {
         }
     }
 
+    /**
+     * Invokes the .NET member SendUnknownResponseHeader.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param value the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.SimpleWorkerRequest.SendUnknownResponseHeader" target="_top">.NET documentation</a>
+     */
     public void SendUnknownResponseHeader(java.lang.String name, java.lang.String value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

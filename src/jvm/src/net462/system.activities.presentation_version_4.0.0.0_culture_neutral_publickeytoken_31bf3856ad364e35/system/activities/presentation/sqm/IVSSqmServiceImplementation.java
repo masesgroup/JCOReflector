@@ -99,7 +99,10 @@ public class IVSSqmServiceImplementation extends NetObject implements IVSSqmServ
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IVSSqmServiceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -141,6 +144,15 @@ public class IVSSqmServiceImplementation extends NetObject implements IVSSqmServ
 
     // Methods section
     
+    /**
+     * Invokes the .NET member AddArrayToStream.
+     *
+     * @param dataPointId the argument of type {@code int}
+     * @param data the argument of type {@code UInt32[]}
+     * @param count the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Sqm.IVSSqmService.AddArrayToStream" target="_top">.NET documentation</a>
+     */
     public void AddArrayToStream(int dataPointId, UInt32[] data, int count) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -151,6 +163,14 @@ public class IVSSqmServiceImplementation extends NetObject implements IVSSqmServ
         }
     }
 
+    /**
+     * Invokes the .NET member AddItemToStream.
+     *
+     * @param dataPointId the argument of type {@code int}
+     * @param value the argument of type {@code UInt32}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Sqm.IVSSqmService.AddItemToStream" target="_top">.NET documentation</a>
+     */
     public void AddItemToStream(int dataPointId, UInt32 value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -161,6 +181,14 @@ public class IVSSqmServiceImplementation extends NetObject implements IVSSqmServ
         }
     }
 
+    /**
+     * Invokes the .NET member SetDatapoint.
+     *
+     * @param dataPointId the argument of type {@code int}
+     * @param value the argument of type {@code UInt32}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Sqm.IVSSqmService.SetDatapoint" target="_top">.NET documentation</a>
+     */
     public void SetDatapoint(int dataPointId, UInt32 value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -113,7 +113,10 @@ public class _AssemblyImplementation extends NetObject implements _Assembly {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public _AssemblyImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,15 @@ public class _AssemblyImplementation extends NetObject implements _Assembly {
 
     // Methods section
     
+    /**
+     * Invokes the .NET member IsDefined.
+     *
+     * @param attributeType the argument of type {@code NetType}
+     * @param inherit the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Assembly.IsDefined" target="_top">.NET documentation</a>
+     */
     public boolean IsDefined(NetType attributeType, boolean inherit) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -169,6 +181,14 @@ public class _AssemblyImplementation extends NetObject implements _Assembly {
         }
     }
 
+    /**
+     * Invokes the .NET member GetFile.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Assembly.GetFile" target="_top">.NET documentation</a>
+     */
     public FileStream GetFile(java.lang.String name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +204,13 @@ public class _AssemblyImplementation extends NetObject implements _Assembly {
         }
     }
 
+    /**
+     * Invokes the .NET member GetFiles.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Assembly.GetFiles" target="_top">.NET documentation</a>
+     */
     public FileStream[] GetFiles() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +232,14 @@ public class _AssemblyImplementation extends NetObject implements _Assembly {
         }
     }
 
+    /**
+     * Invokes the .NET member GetFiles.
+     *
+     * @param getResourceModules the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Assembly.GetFiles" target="_top">.NET documentation</a>
+     */
     public FileStream[] GetFiles(boolean getResourceModules) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -226,6 +261,14 @@ public class _AssemblyImplementation extends NetObject implements _Assembly {
         }
     }
 
+    /**
+     * Invokes the .NET member GetManifestResourceStream.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Assembly.GetManifestResourceStream" target="_top">.NET documentation</a>
+     */
     public Stream GetManifestResourceStream(java.lang.String name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -241,6 +284,15 @@ public class _AssemblyImplementation extends NetObject implements _Assembly {
         }
     }
 
+    /**
+     * Invokes the .NET member GetManifestResourceStream.
+     *
+     * @param type the argument of type {@code NetType}
+     * @param name the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Assembly.GetManifestResourceStream" target="_top">.NET documentation</a>
+     */
     public Stream GetManifestResourceStream(NetType type, java.lang.String name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -256,6 +308,14 @@ public class _AssemblyImplementation extends NetObject implements _Assembly {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateInstance.
+     *
+     * @param typeName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Assembly.CreateInstance" target="_top">.NET documentation</a>
+     */
     public NetObject CreateInstance(java.lang.String typeName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -271,6 +331,15 @@ public class _AssemblyImplementation extends NetObject implements _Assembly {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateInstance.
+     *
+     * @param typeName the argument of type {@code java.lang.String}
+     * @param ignoreCase the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Assembly.CreateInstance" target="_top">.NET documentation</a>
+     */
     public NetObject CreateInstance(java.lang.String typeName, boolean ignoreCase) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -286,6 +355,20 @@ public class _AssemblyImplementation extends NetObject implements _Assembly {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateInstance.
+     *
+     * @param typeName the argument of type {@code java.lang.String}
+     * @param ignoreCase the argument of type {@code boolean}
+     * @param bindingAttr the argument of type {@code BindingFlags}
+     * @param binder the argument of type {@code Binder}
+     * @param args the argument of type {@code NetObject[]}
+     * @param culture the argument of type {@code CultureInfo}
+     * @param activationAttributes the argument of type {@code NetObject[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Assembly.CreateInstance" target="_top">.NET documentation</a>
+     */
     public NetObject CreateInstance(java.lang.String typeName, boolean ignoreCase, BindingFlags bindingAttr, Binder binder, NetObject[] args, CultureInfo culture, NetObject[] activationAttributes) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -301,6 +384,14 @@ public class _AssemblyImplementation extends NetObject implements _Assembly {
         }
     }
 
+    /**
+     * Invokes the .NET member GetCustomAttributes.
+     *
+     * @param inherit the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Assembly.GetCustomAttributes" target="_top">.NET documentation</a>
+     */
     public NetObject[] GetCustomAttributes(boolean inherit) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -322,6 +413,15 @@ public class _AssemblyImplementation extends NetObject implements _Assembly {
         }
     }
 
+    /**
+     * Invokes the .NET member GetCustomAttributes.
+     *
+     * @param attributeType the argument of type {@code NetType}
+     * @param inherit the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Assembly.GetCustomAttributes" target="_top">.NET documentation</a>
+     */
     public NetObject[] GetCustomAttributes(NetType attributeType, boolean inherit) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -343,6 +443,14 @@ public class _AssemblyImplementation extends NetObject implements _Assembly {
         }
     }
 
+    /**
+     * Invokes the .NET member GetSatelliteAssembly.
+     *
+     * @param culture the argument of type {@code CultureInfo}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Assembly.GetSatelliteAssembly" target="_top">.NET documentation</a>
+     */
     public Assembly GetSatelliteAssembly(CultureInfo culture) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -358,6 +466,15 @@ public class _AssemblyImplementation extends NetObject implements _Assembly {
         }
     }
 
+    /**
+     * Invokes the .NET member GetSatelliteAssembly.
+     *
+     * @param culture the argument of type {@code CultureInfo}
+     * @param version the argument of type {@code Version}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Assembly.GetSatelliteAssembly" target="_top">.NET documentation</a>
+     */
     public Assembly GetSatelliteAssembly(CultureInfo culture, Version version) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -373,6 +490,13 @@ public class _AssemblyImplementation extends NetObject implements _Assembly {
         }
     }
 
+    /**
+     * Invokes the .NET member GetName.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Assembly.GetName" target="_top">.NET documentation</a>
+     */
     public AssemblyName GetName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -388,6 +512,14 @@ public class _AssemblyImplementation extends NetObject implements _Assembly {
         }
     }
 
+    /**
+     * Invokes the .NET member GetName.
+     *
+     * @param copiedName the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Assembly.GetName" target="_top">.NET documentation</a>
+     */
     public AssemblyName GetName(boolean copiedName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -403,6 +535,13 @@ public class _AssemblyImplementation extends NetObject implements _Assembly {
         }
     }
 
+    /**
+     * Invokes the .NET member GetReferencedAssemblies.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Assembly.GetReferencedAssemblies" target="_top">.NET documentation</a>
+     */
     public AssemblyName[] GetReferencedAssemblies() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -424,6 +563,14 @@ public class _AssemblyImplementation extends NetObject implements _Assembly {
         }
     }
 
+    /**
+     * Invokes the .NET member GetManifestResourceInfo.
+     *
+     * @param resourceName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Assembly.GetManifestResourceInfo" target="_top">.NET documentation</a>
+     */
     public ManifestResourceInfo GetManifestResourceInfo(java.lang.String resourceName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -439,6 +586,14 @@ public class _AssemblyImplementation extends NetObject implements _Assembly {
         }
     }
 
+    /**
+     * Invokes the .NET member GetModule.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Assembly.GetModule" target="_top">.NET documentation</a>
+     */
     public Module GetModule(java.lang.String name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -454,6 +609,15 @@ public class _AssemblyImplementation extends NetObject implements _Assembly {
         }
     }
 
+    /**
+     * Invokes the .NET member LoadModule.
+     *
+     * @param moduleName the argument of type {@code java.lang.String}
+     * @param rawModule the argument of type {@code byte[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Assembly.LoadModule" target="_top">.NET documentation</a>
+     */
     public Module LoadModule(java.lang.String moduleName, byte[] rawModule) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -469,6 +633,15 @@ public class _AssemblyImplementation extends NetObject implements _Assembly {
         }
     }
 
+    /**
+     * Invokes the .NET member LoadModule.
+     *
+     * @param dupParam0 the argument of type {@code java.lang.String}
+     * @param dupParam1 the argument of type {@code JCORefOut}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Assembly.LoadModule" target="_top">.NET documentation</a>
+     */
     public Module LoadModule(java.lang.String dupParam0, JCORefOut dupParam1) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -484,6 +657,16 @@ public class _AssemblyImplementation extends NetObject implements _Assembly {
         }
     }
 
+    /**
+     * Invokes the .NET member LoadModule.
+     *
+     * @param moduleName the argument of type {@code java.lang.String}
+     * @param rawModule the argument of type {@code byte[]}
+     * @param rawSymbolStore the argument of type {@code byte[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Assembly.LoadModule" target="_top">.NET documentation</a>
+     */
     public Module LoadModule(java.lang.String moduleName, byte[] rawModule, byte[] rawSymbolStore) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -499,6 +682,16 @@ public class _AssemblyImplementation extends NetObject implements _Assembly {
         }
     }
 
+    /**
+     * Invokes the .NET member LoadModule.
+     *
+     * @param dupParam0 the argument of type {@code java.lang.String}
+     * @param dupParam1 the argument of type {@code JCORefOut}
+     * @param dupParam2 the argument of type {@code JCORefOut}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Assembly.LoadModule" target="_top">.NET documentation</a>
+     */
     public Module LoadModule(java.lang.String dupParam0, JCORefOut dupParam1, JCORefOut dupParam2) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -514,6 +707,13 @@ public class _AssemblyImplementation extends NetObject implements _Assembly {
         }
     }
 
+    /**
+     * Invokes the .NET member GetLoadedModules.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Assembly.GetLoadedModules" target="_top">.NET documentation</a>
+     */
     public Module[] GetLoadedModules() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -535,6 +735,14 @@ public class _AssemblyImplementation extends NetObject implements _Assembly {
         }
     }
 
+    /**
+     * Invokes the .NET member GetLoadedModules.
+     *
+     * @param getResourceModules the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Assembly.GetLoadedModules" target="_top">.NET documentation</a>
+     */
     public Module[] GetLoadedModules(boolean getResourceModules) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -556,6 +764,13 @@ public class _AssemblyImplementation extends NetObject implements _Assembly {
         }
     }
 
+    /**
+     * Invokes the .NET member GetModules.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Assembly.GetModules" target="_top">.NET documentation</a>
+     */
     public Module[] GetModules() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -577,6 +792,14 @@ public class _AssemblyImplementation extends NetObject implements _Assembly {
         }
     }
 
+    /**
+     * Invokes the .NET member GetModules.
+     *
+     * @param getResourceModules the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Assembly.GetModules" target="_top">.NET documentation</a>
+     */
     public Module[] GetModules(boolean getResourceModules) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -598,6 +821,13 @@ public class _AssemblyImplementation extends NetObject implements _Assembly {
         }
     }
 
+    /**
+     * Invokes the .NET member GetManifestResourceNames.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Assembly.GetManifestResourceNames" target="_top">.NET documentation</a>
+     */
     public java.lang.String[] GetManifestResourceNames() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -621,6 +851,14 @@ public class _AssemblyImplementation extends NetObject implements _Assembly {
         }
     }
 
+    /**
+     * Invokes the .NET member GetType.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Assembly.GetType" target="_top">.NET documentation</a>
+     */
     public NetType GetType(java.lang.String name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -636,6 +874,15 @@ public class _AssemblyImplementation extends NetObject implements _Assembly {
         }
     }
 
+    /**
+     * Invokes the .NET member GetType.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param throwOnError the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Assembly.GetType" target="_top">.NET documentation</a>
+     */
     public NetType GetType(java.lang.String name, boolean throwOnError) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -651,6 +898,16 @@ public class _AssemblyImplementation extends NetObject implements _Assembly {
         }
     }
 
+    /**
+     * Invokes the .NET member GetType.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param throwOnError the argument of type {@code boolean}
+     * @param ignoreCase the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Assembly.GetType" target="_top">.NET documentation</a>
+     */
     public NetType GetType(java.lang.String name, boolean throwOnError, boolean ignoreCase) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -666,6 +923,13 @@ public class _AssemblyImplementation extends NetObject implements _Assembly {
         }
     }
 
+    /**
+     * Invokes the .NET member GetExportedTypes.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Assembly.GetExportedTypes" target="_top">.NET documentation</a>
+     */
     public NetType[] GetExportedTypes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -687,6 +951,13 @@ public class _AssemblyImplementation extends NetObject implements _Assembly {
         }
     }
 
+    /**
+     * Invokes the .NET member GetTypes.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Assembly.GetTypes" target="_top">.NET documentation</a>
+     */
     public NetType[] GetTypes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -708,6 +979,14 @@ public class _AssemblyImplementation extends NetObject implements _Assembly {
         }
     }
 
+    /**
+     * Invokes the .NET member GetObjectData.
+     *
+     * @param info the argument of type {@code SerializationInfo}
+     * @param context the argument of type {@code StreamingContext}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Assembly.GetObjectData" target="_top">.NET documentation</a>
+     */
     public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -722,6 +1001,13 @@ public class _AssemblyImplementation extends NetObject implements _Assembly {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property GlobalAssemblyCache.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Assembly.GlobalAssemblyCache" target="_top">.NET documentation</a>
+     */
     public boolean getGlobalAssemblyCache() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -736,6 +1022,13 @@ public class _AssemblyImplementation extends NetObject implements _Assembly {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EntryPoint.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Assembly.EntryPoint" target="_top">.NET documentation</a>
+     */
     public MethodInfo getEntryPoint() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -751,6 +1044,13 @@ public class _AssemblyImplementation extends NetObject implements _Assembly {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Evidence.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Assembly.Evidence" target="_top">.NET documentation</a>
+     */
     public Evidence getEvidence() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -766,6 +1066,13 @@ public class _AssemblyImplementation extends NetObject implements _Assembly {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CodeBase.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Assembly.CodeBase" target="_top">.NET documentation</a>
+     */
     public java.lang.String getCodeBase() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -780,6 +1087,13 @@ public class _AssemblyImplementation extends NetObject implements _Assembly {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EscapedCodeBase.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Assembly.EscapedCodeBase" target="_top">.NET documentation</a>
+     */
     public java.lang.String getEscapedCodeBase() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -794,6 +1108,13 @@ public class _AssemblyImplementation extends NetObject implements _Assembly {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FullName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Assembly.FullName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getFullName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -808,6 +1129,13 @@ public class _AssemblyImplementation extends NetObject implements _Assembly {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Location.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Assembly.Location" target="_top">.NET documentation</a>
+     */
     public java.lang.String getLocation() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -827,6 +1155,13 @@ public class _AssemblyImplementation extends NetObject implements _Assembly {
     // Instance Events section
     
 
+    /**
+     * Invokes the .NET member addModuleResolve.
+     *
+     * @param handler the argument of type {@code ModuleResolveEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addModuleResolve(ModuleResolveEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -837,6 +1172,13 @@ public class _AssemblyImplementation extends NetObject implements _Assembly {
         }
     }
 
+    /**
+     * Invokes the .NET member removeModuleResolve.
+     *
+     * @param handler the argument of type {@code ModuleResolveEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeModuleResolve(ModuleResolveEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

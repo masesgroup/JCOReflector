@@ -101,7 +101,10 @@ public class IndexedProtocolEndpoint extends system.identitymodel.metadata.Proto
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IndexedProtocolEndpoint(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class IndexedProtocolEndpoint extends system.identitymodel.metadata.Proto
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.IndexedProtocolEndpoint.-ctor" target="_top">.NET documentation</a>
+     */
     public IndexedProtocolEndpoint() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -158,6 +167,15 @@ public class IndexedProtocolEndpoint extends system.identitymodel.metadata.Proto
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param index the argument of type {@code int}
+     * @param binding the argument of type {@code Uri}
+     * @param location the argument of type {@code Uri}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.IndexedProtocolEndpoint.-ctor" target="_top">.NET documentation</a>
+     */
     public IndexedProtocolEndpoint(int index, Uri binding, Uri location) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -176,6 +194,13 @@ public class IndexedProtocolEndpoint extends system.identitymodel.metadata.Proto
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Index.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.IndexedProtocolEndpoint.Index" target="_top">.NET documentation</a>
+     */
     public int getIndex() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +241,13 @@ public class IndexedProtocolEndpoint extends system.identitymodel.metadata.Proto
         }
     }
 
+    /**
+     * Sets the value of the .NET property Index.
+     *
+     * @param Index the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.IndexedProtocolEndpoint.Index" target="_top">.NET documentation</a>
+     */
     public void setIndex(int Index) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -226,6 +258,13 @@ public class IndexedProtocolEndpoint extends system.identitymodel.metadata.Proto
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsDefault.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.IndexedProtocolEndpoint.IsDefault" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getIsDefault() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -241,6 +280,13 @@ public class IndexedProtocolEndpoint extends system.identitymodel.metadata.Proto
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsDefault.
+     *
+     * @param IsDefault the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.IndexedProtocolEndpoint.IsDefault" target="_top">.NET documentation</a>
+     */
     public void setIsDefault(Nullable_1 IsDefault) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

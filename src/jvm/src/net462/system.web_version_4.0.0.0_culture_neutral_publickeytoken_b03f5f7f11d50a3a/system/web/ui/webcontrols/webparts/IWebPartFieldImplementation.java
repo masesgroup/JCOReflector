@@ -100,7 +100,10 @@ public class IWebPartFieldImplementation extends NetObject implements IWebPartFi
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IWebPartFieldImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -142,6 +145,13 @@ public class IWebPartFieldImplementation extends NetObject implements IWebPartFi
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetFieldValue.
+     *
+     * @param callback the argument of type {@code FieldCallback}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.IWebPartField.GetFieldValue" target="_top">.NET documentation</a>
+     */
     public void GetFieldValue(FieldCallback callback) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -156,6 +166,13 @@ public class IWebPartFieldImplementation extends NetObject implements IWebPartFi
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Schema.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.IWebPartField.Schema" target="_top">.NET documentation</a>
+     */
     public PropertyDescriptor getSchema() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

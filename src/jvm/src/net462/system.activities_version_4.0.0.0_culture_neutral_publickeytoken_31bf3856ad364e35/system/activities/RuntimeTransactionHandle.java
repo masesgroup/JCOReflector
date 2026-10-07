@@ -106,7 +106,10 @@ public class RuntimeTransactionHandle extends system.activities.Handle  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public RuntimeTransactionHandle(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,12 @@ public class RuntimeTransactionHandle extends system.activities.Handle  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.RuntimeTransactionHandle.-ctor" target="_top">.NET documentation</a>
+     */
     public RuntimeTransactionHandle() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -163,6 +172,20 @@ public class RuntimeTransactionHandle extends system.activities.Handle  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param rootTransaction the argument of type {@code Transaction}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.RuntimeTransactionHandle.-ctor" target="_top">.NET documentation</a>
+     */
     public RuntimeTransactionHandle(Transaction rootTransaction) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
@@ -177,6 +200,23 @@ public class RuntimeTransactionHandle extends system.activities.Handle  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetCurrentTransaction.
+     *
+     * @param context the argument of type {@code AsyncCodeActivityContext}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.RuntimeTransactionHandle.GetCurrentTransaction" target="_top">.NET documentation</a>
+     */
     public Transaction GetCurrentTransaction(AsyncCodeActivityContext context) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -192,6 +232,23 @@ public class RuntimeTransactionHandle extends system.activities.Handle  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetCurrentTransaction.
+     *
+     * @param context the argument of type {@code CodeActivityContext}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.RuntimeTransactionHandle.GetCurrentTransaction" target="_top">.NET documentation</a>
+     */
     public Transaction GetCurrentTransaction(CodeActivityContext context) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +264,23 @@ public class RuntimeTransactionHandle extends system.activities.Handle  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetCurrentTransaction.
+     *
+     * @param context the argument of type {@code NativeActivityContext}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.RuntimeTransactionHandle.GetCurrentTransaction" target="_top">.NET documentation</a>
+     */
     public Transaction GetCurrentTransaction(NativeActivityContext context) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -222,6 +296,25 @@ public class RuntimeTransactionHandle extends system.activities.Handle  {
         }
     }
 
+    /**
+     * Invokes the .NET member CompleteTransaction.
+     *
+     * @param context the argument of type {@code NativeActivityContext}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.RuntimeTransactionHandle.CompleteTransaction" target="_top">.NET documentation</a>
+     */
     public void CompleteTransaction(NativeActivityContext context) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -232,6 +325,22 @@ public class RuntimeTransactionHandle extends system.activities.Handle  {
         }
     }
 
+    /**
+     * Invokes the .NET member CompleteTransaction.
+     *
+     * @param context the argument of type {@code NativeActivityContext}
+     * @param callback the argument of type {@code BookmarkCallback}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.RuntimeTransactionHandle.CompleteTransaction" target="_top">.NET documentation</a>
+     */
     public void CompleteTransaction(NativeActivityContext context, BookmarkCallback callback) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -242,6 +351,24 @@ public class RuntimeTransactionHandle extends system.activities.Handle  {
         }
     }
 
+    /**
+     * Invokes the .NET member RequestTransactionContext.
+     *
+     * @param context the argument of type {@code NativeActivityContext}
+     * @param callback the argument of type {@code Action_2}
+     * @param state the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.RuntimeTransactionHandle.RequestTransactionContext" target="_top">.NET documentation</a>
+     */
     public void RequestTransactionContext(NativeActivityContext context, Action_2 callback, NetObject state) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -252,6 +379,24 @@ public class RuntimeTransactionHandle extends system.activities.Handle  {
         }
     }
 
+    /**
+     * Invokes the .NET member RequireTransactionContext.
+     *
+     * @param context the argument of type {@code NativeActivityContext}
+     * @param callback the argument of type {@code Action_2}
+     * @param state the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.RuntimeTransactionHandle.RequireTransactionContext" target="_top">.NET documentation</a>
+     */
     public void RequireTransactionContext(NativeActivityContext context, Action_2 callback, NetObject state) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -265,8 +410,11 @@ public class RuntimeTransactionHandle extends system.activities.Handle  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIExecutionProperty method available in IExecutionProperty to obtain an object with an invocable method
+     *
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.IExecutionProperty.CleanupWorkflowThread" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void CleanupWorkflowThread() throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIExecutionProperty to obtain the full interface.");
     }
@@ -274,8 +422,11 @@ public class RuntimeTransactionHandle extends system.activities.Handle  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIExecutionProperty method available in IExecutionProperty to obtain an object with an invocable method
+     *
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.IExecutionProperty.SetupWorkflowThread" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void SetupWorkflowThread() throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIExecutionProperty to obtain the full interface.");
     }
@@ -283,8 +434,12 @@ public class RuntimeTransactionHandle extends system.activities.Handle  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIPropertyRegistrationCallback method available in IPropertyRegistrationCallback to obtain an object with an invocable method
+     *
+     * @param context the argument of type {@code RegistrationContext}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.IPropertyRegistrationCallback.Register" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void Register(RegistrationContext context) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPropertyRegistrationCallback to obtain the full interface.");
     }
@@ -292,8 +447,12 @@ public class RuntimeTransactionHandle extends system.activities.Handle  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIPropertyRegistrationCallback method available in IPropertyRegistrationCallback to obtain an object with an invocable method
+     *
+     * @param context the argument of type {@code RegistrationContext}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.IPropertyRegistrationCallback.Unregister" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void Unregister(RegistrationContext context) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPropertyRegistrationCallback to obtain the full interface.");
     }
@@ -302,6 +461,13 @@ public class RuntimeTransactionHandle extends system.activities.Handle  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AbortInstanceOnTransactionFailure.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.RuntimeTransactionHandle.AbortInstanceOnTransactionFailure" target="_top">.NET documentation</a>
+     */
     public boolean getAbortInstanceOnTransactionFailure() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -316,6 +482,27 @@ public class RuntimeTransactionHandle extends system.activities.Handle  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AbortInstanceOnTransactionFailure.
+     *
+     * @param AbortInstanceOnTransactionFailure the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.RuntimeTransactionHandle.AbortInstanceOnTransactionFailure" target="_top">.NET documentation</a>
+     */
     public void setAbortInstanceOnTransactionFailure(boolean AbortInstanceOnTransactionFailure) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -326,6 +513,13 @@ public class RuntimeTransactionHandle extends system.activities.Handle  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SuppressTransaction.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.RuntimeTransactionHandle.SuppressTransaction" target="_top">.NET documentation</a>
+     */
     public boolean getSuppressTransaction() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -340,6 +534,27 @@ public class RuntimeTransactionHandle extends system.activities.Handle  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SuppressTransaction.
+     *
+     * @param SuppressTransaction the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.RuntimeTransactionHandle.SuppressTransaction" target="_top">.NET documentation</a>
+     */
     public void setSuppressTransaction(boolean SuppressTransaction) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

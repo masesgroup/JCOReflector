@@ -106,7 +106,10 @@ public class ControlBodyGlyph extends system.windows.forms.design.behavior.Compo
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ControlBodyGlyph(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,16 @@ public class ControlBodyGlyph extends system.windows.forms.design.behavior.Compo
     public ControlBodyGlyph() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param bounds the argument of type {@code Rectangle}
+     * @param cursor the argument of type {@code Cursor}
+     * @param relatedComponent the argument of type {@code IComponent}
+     * @param behavior the argument of type {@code Behavior}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Design.Behavior.ControlBodyGlyph.-ctor" target="_top">.NET documentation</a>
+     */
     public ControlBodyGlyph(Rectangle bounds, Cursor cursor, IComponent relatedComponent, Behavior behavior) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -166,6 +179,16 @@ public class ControlBodyGlyph extends system.windows.forms.design.behavior.Compo
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param bounds the argument of type {@code Rectangle}
+     * @param cursor the argument of type {@code Cursor}
+     * @param relatedComponent the argument of type {@code IComponent}
+     * @param designer the argument of type {@code ControlDesigner}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Design.Behavior.ControlBodyGlyph.-ctor" target="_top">.NET documentation</a>
+     */
     public ControlBodyGlyph(Rectangle bounds, Cursor cursor, IComponent relatedComponent, ControlDesigner designer) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -181,6 +204,14 @@ public class ControlBodyGlyph extends system.windows.forms.design.behavior.Compo
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetHitTest.
+     *
+     * @param p the argument of type {@code Point}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Design.Behavior.ControlBodyGlyph.GetHitTest" target="_top">.NET documentation</a>
+     */
     public Cursor GetHitTest(Point p) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

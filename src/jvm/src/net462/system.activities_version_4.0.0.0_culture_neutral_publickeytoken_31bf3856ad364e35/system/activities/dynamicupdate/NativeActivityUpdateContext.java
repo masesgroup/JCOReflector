@@ -150,7 +150,10 @@ public class NativeActivityUpdateContext extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public NativeActivityUpdateContext(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -205,6 +208,24 @@ public class NativeActivityUpdateContext extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member IsNewlyAdded.
+     *
+     * @param childActivity the argument of type {@code Activity}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.NativeActivityUpdateContext.IsNewlyAdded" target="_top">.NET documentation</a>
+     */
     public boolean IsNewlyAdded(Activity childActivity) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -219,6 +240,24 @@ public class NativeActivityUpdateContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveBookmark.
+     *
+     * @param bookmark the argument of type {@code Bookmark}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.NativeActivityUpdateContext.RemoveBookmark" target="_top">.NET documentation</a>
+     */
     public boolean RemoveBookmark(Bookmark bookmark) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -233,6 +272,24 @@ public class NativeActivityUpdateContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveBookmark.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.NativeActivityUpdateContext.RemoveBookmark" target="_top">.NET documentation</a>
+     */
     public boolean RemoveBookmark(java.lang.String name) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -247,6 +304,25 @@ public class NativeActivityUpdateContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveBookmark.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param scope the argument of type {@code BookmarkScope}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.NativeActivityUpdateContext.RemoveBookmark" target="_top">.NET documentation</a>
+     */
     public boolean RemoveBookmark(java.lang.String name, BookmarkScope scope) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -261,6 +337,24 @@ public class NativeActivityUpdateContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateBookmark.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.NativeActivityUpdateContext.CreateBookmark" target="_top">.NET documentation</a>
+     */
     public Bookmark CreateBookmark() throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.MulticastNotSupportedException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -276,6 +370,27 @@ public class NativeActivityUpdateContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateBookmark.
+     *
+     * @param callback the argument of type {@code BookmarkCallback}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.NativeActivityUpdateContext.CreateBookmark" target="_top">.NET documentation</a>
+     */
     public Bookmark CreateBookmark(BookmarkCallback callback) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -291,6 +406,26 @@ public class NativeActivityUpdateContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateBookmark.
+     *
+     * @param callback the argument of type {@code BookmarkCallback}
+     * @param options the argument of type {@code BookmarkOptions}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.NativeActivityUpdateContext.CreateBookmark" target="_top">.NET documentation</a>
+     */
     public Bookmark CreateBookmark(BookmarkCallback callback, BookmarkOptions options) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -306,6 +441,25 @@ public class NativeActivityUpdateContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateBookmark.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.NativeActivityUpdateContext.CreateBookmark" target="_top">.NET documentation</a>
+     */
     public Bookmark CreateBookmark(java.lang.String name) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -321,6 +475,28 @@ public class NativeActivityUpdateContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateBookmark.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param callback the argument of type {@code BookmarkCallback}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.NativeActivityUpdateContext.CreateBookmark" target="_top">.NET documentation</a>
+     */
     public Bookmark CreateBookmark(java.lang.String name, BookmarkCallback callback) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -336,6 +512,27 @@ public class NativeActivityUpdateContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateBookmark.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param callback the argument of type {@code BookmarkCallback}
+     * @param options the argument of type {@code BookmarkOptions}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.NativeActivityUpdateContext.CreateBookmark" target="_top">.NET documentation</a>
+     */
     public Bookmark CreateBookmark(java.lang.String name, BookmarkCallback callback, BookmarkOptions options) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -351,6 +548,28 @@ public class NativeActivityUpdateContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateBookmark.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param callback the argument of type {@code BookmarkCallback}
+     * @param scope the argument of type {@code BookmarkScope}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.NativeActivityUpdateContext.CreateBookmark" target="_top">.NET documentation</a>
+     */
     public Bookmark CreateBookmark(java.lang.String name, BookmarkCallback callback, BookmarkScope scope) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -366,6 +585,28 @@ public class NativeActivityUpdateContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateBookmark.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param callback the argument of type {@code BookmarkCallback}
+     * @param scope the argument of type {@code BookmarkScope}
+     * @param options the argument of type {@code BookmarkOptions}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.NativeActivityUpdateContext.CreateBookmark" target="_top">.NET documentation</a>
+     */
     public Bookmark CreateBookmark(java.lang.String name, BookmarkCallback callback, BookmarkScope scope, BookmarkOptions options) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -381,6 +622,25 @@ public class NativeActivityUpdateContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetLocation.
+     *
+     * @param <T> the type of the generic argument T
+     * @param variable the argument of type {@code Variable}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.NativeActivityUpdateContext.GetLocation" target="_top">.NET documentation</a>
+     */
     public <T extends IJCOBridgeReflected> Location_1 GetLocation(Variable variable) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -396,6 +656,24 @@ public class NativeActivityUpdateContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member FindExecutionProperty.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.NativeActivityUpdateContext.FindExecutionProperty" target="_top">.NET documentation</a>
+     */
     public NetObject FindExecutionProperty(java.lang.String name) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -411,6 +689,24 @@ public class NativeActivityUpdateContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetSavedOriginalValue.
+     *
+     * @param childActivity the argument of type {@code Activity}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.NativeActivityUpdateContext.GetSavedOriginalValue" target="_top">.NET documentation</a>
+     */
     public NetObject GetSavedOriginalValue(Activity childActivity) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -426,6 +722,24 @@ public class NativeActivityUpdateContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetSavedOriginalValue.
+     *
+     * @param propertyName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.NativeActivityUpdateContext.GetSavedOriginalValue" target="_top">.NET documentation</a>
+     */
     public NetObject GetSavedOriginalValue(java.lang.String propertyName) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -441,6 +755,24 @@ public class NativeActivityUpdateContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetValue.
+     *
+     * @param argument the argument of type {@code Argument}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.NativeActivityUpdateContext.GetValue" target="_top">.NET documentation</a>
+     */
     public NetObject GetValue(Argument argument) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -456,6 +788,24 @@ public class NativeActivityUpdateContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetValue.
+     *
+     * @param runtimeArgument the argument of type {@code RuntimeArgument}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.NativeActivityUpdateContext.GetValue" target="_top">.NET documentation</a>
+     */
     public NetObject GetValue(RuntimeArgument runtimeArgument) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -471,6 +821,24 @@ public class NativeActivityUpdateContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetValue.
+     *
+     * @param variable the argument of type {@code Variable}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.NativeActivityUpdateContext.GetValue" target="_top">.NET documentation</a>
+     */
     public NetObject GetValue(Variable variable) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -486,6 +854,23 @@ public class NativeActivityUpdateContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DisallowUpdate.
+     *
+     * @param reason the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.NativeActivityUpdateContext.DisallowUpdate" target="_top">.NET documentation</a>
+     */
     public void DisallowUpdate(java.lang.String reason) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -496,6 +881,23 @@ public class NativeActivityUpdateContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveAllBookmarks.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.NativeActivityUpdateContext.RemoveAllBookmarks" target="_top">.NET documentation</a>
+     */
     public void RemoveAllBookmarks() throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -506,6 +908,26 @@ public class NativeActivityUpdateContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ScheduleAction.
+     *
+     * @param activityAction the argument of type {@code ActivityAction}
+     * @param onCompleted the argument of type {@code CompletionCallback}
+     * @param onFaulted the argument of type {@code FaultCallback}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.NativeActivityUpdateContext.ScheduleAction" target="_top">.NET documentation</a>
+     */
     public void ScheduleAction(ActivityAction activityAction, CompletionCallback onCompleted, FaultCallback onFaulted) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -516,6 +938,28 @@ public class NativeActivityUpdateContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ScheduleAction.
+     *
+     * @param <T> the type of the generic argument T
+     * @param activityAction the argument of type {@code ActivityAction_1}
+     * @param argument the argument of type {@code T}
+     * @param onCompleted the argument of type {@code CompletionCallback}
+     * @param onFaulted the argument of type {@code FaultCallback}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.NativeActivityUpdateContext.ScheduleAction" target="_top">.NET documentation</a>
+     */
     public <T extends IJCOBridgeReflected> void ScheduleAction(ActivityAction_1 activityAction, T argument, CompletionCallback onCompleted, FaultCallback onFaulted) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -526,6 +970,58 @@ public class NativeActivityUpdateContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ScheduleAction.
+     *
+     * @param <T1> the type of the generic argument T1
+     * @param <T2> the type of the generic argument T2
+     * @param <T3> the type of the generic argument T3
+     * @param <T4> the type of the generic argument T4
+     * @param <T5> the type of the generic argument T5
+     * @param <T6> the type of the generic argument T6
+     * @param <T7> the type of the generic argument T7
+     * @param <T8> the type of the generic argument T8
+     * @param <T9> the type of the generic argument T9
+     * @param <T10> the type of the generic argument T10
+     * @param <T11> the type of the generic argument T11
+     * @param <T12> the type of the generic argument T12
+     * @param <T13> the type of the generic argument T13
+     * @param <T14> the type of the generic argument T14
+     * @param <T15> the type of the generic argument T15
+     * @param <T16> the type of the generic argument T16
+     * @param activityAction the argument of type {@code ActivityAction_16}
+     * @param argument1 the argument of type {@code T1}
+     * @param argument2 the argument of type {@code T2}
+     * @param argument3 the argument of type {@code T3}
+     * @param argument4 the argument of type {@code T4}
+     * @param argument5 the argument of type {@code T5}
+     * @param argument6 the argument of type {@code T6}
+     * @param argument7 the argument of type {@code T7}
+     * @param argument8 the argument of type {@code T8}
+     * @param argument9 the argument of type {@code T9}
+     * @param argument10 the argument of type {@code T10}
+     * @param argument11 the argument of type {@code T11}
+     * @param argument12 the argument of type {@code T12}
+     * @param argument13 the argument of type {@code T13}
+     * @param argument14 the argument of type {@code T14}
+     * @param argument15 the argument of type {@code T15}
+     * @param argument16 the argument of type {@code T16}
+     * @param onCompleted the argument of type {@code CompletionCallback}
+     * @param onFaulted the argument of type {@code FaultCallback}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.NativeActivityUpdateContext.ScheduleAction" target="_top">.NET documentation</a>
+     */
     public <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected, T7 extends IJCOBridgeReflected, T8 extends IJCOBridgeReflected, T9 extends IJCOBridgeReflected, T10 extends IJCOBridgeReflected, T11 extends IJCOBridgeReflected, T12 extends IJCOBridgeReflected, T13 extends IJCOBridgeReflected, T14 extends IJCOBridgeReflected, T15 extends IJCOBridgeReflected, T16 extends IJCOBridgeReflected> void ScheduleAction(ActivityAction_16 activityAction, T1 argument1, T2 argument2, T3 argument3, T4 argument4, T5 argument5, T6 argument6, T7 argument7, T8 argument8, T9 argument9, T10 argument10, T11 argument11, T12 argument12, T13 argument13, T14 argument14, T15 argument15, T16 argument16, CompletionCallback onCompleted, FaultCallback onFaulted) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -536,6 +1032,56 @@ public class NativeActivityUpdateContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ScheduleAction.
+     *
+     * @param <T1> the type of the generic argument T1
+     * @param <T2> the type of the generic argument T2
+     * @param <T3> the type of the generic argument T3
+     * @param <T4> the type of the generic argument T4
+     * @param <T5> the type of the generic argument T5
+     * @param <T6> the type of the generic argument T6
+     * @param <T7> the type of the generic argument T7
+     * @param <T8> the type of the generic argument T8
+     * @param <T9> the type of the generic argument T9
+     * @param <T10> the type of the generic argument T10
+     * @param <T11> the type of the generic argument T11
+     * @param <T12> the type of the generic argument T12
+     * @param <T13> the type of the generic argument T13
+     * @param <T14> the type of the generic argument T14
+     * @param <T15> the type of the generic argument T15
+     * @param activityAction the argument of type {@code ActivityAction_15}
+     * @param argument1 the argument of type {@code T1}
+     * @param argument2 the argument of type {@code T2}
+     * @param argument3 the argument of type {@code T3}
+     * @param argument4 the argument of type {@code T4}
+     * @param argument5 the argument of type {@code T5}
+     * @param argument6 the argument of type {@code T6}
+     * @param argument7 the argument of type {@code T7}
+     * @param argument8 the argument of type {@code T8}
+     * @param argument9 the argument of type {@code T9}
+     * @param argument10 the argument of type {@code T10}
+     * @param argument11 the argument of type {@code T11}
+     * @param argument12 the argument of type {@code T12}
+     * @param argument13 the argument of type {@code T13}
+     * @param argument14 the argument of type {@code T14}
+     * @param argument15 the argument of type {@code T15}
+     * @param onCompleted the argument of type {@code CompletionCallback}
+     * @param onFaulted the argument of type {@code FaultCallback}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.NativeActivityUpdateContext.ScheduleAction" target="_top">.NET documentation</a>
+     */
     public <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected, T7 extends IJCOBridgeReflected, T8 extends IJCOBridgeReflected, T9 extends IJCOBridgeReflected, T10 extends IJCOBridgeReflected, T11 extends IJCOBridgeReflected, T12 extends IJCOBridgeReflected, T13 extends IJCOBridgeReflected, T14 extends IJCOBridgeReflected, T15 extends IJCOBridgeReflected> void ScheduleAction(ActivityAction_15 activityAction, T1 argument1, T2 argument2, T3 argument3, T4 argument4, T5 argument5, T6 argument6, T7 argument7, T8 argument8, T9 argument9, T10 argument10, T11 argument11, T12 argument12, T13 argument13, T14 argument14, T15 argument15, CompletionCallback onCompleted, FaultCallback onFaulted) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -546,6 +1092,54 @@ public class NativeActivityUpdateContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ScheduleAction.
+     *
+     * @param <T1> the type of the generic argument T1
+     * @param <T2> the type of the generic argument T2
+     * @param <T3> the type of the generic argument T3
+     * @param <T4> the type of the generic argument T4
+     * @param <T5> the type of the generic argument T5
+     * @param <T6> the type of the generic argument T6
+     * @param <T7> the type of the generic argument T7
+     * @param <T8> the type of the generic argument T8
+     * @param <T9> the type of the generic argument T9
+     * @param <T10> the type of the generic argument T10
+     * @param <T11> the type of the generic argument T11
+     * @param <T12> the type of the generic argument T12
+     * @param <T13> the type of the generic argument T13
+     * @param <T14> the type of the generic argument T14
+     * @param activityAction the argument of type {@code ActivityAction_14}
+     * @param argument1 the argument of type {@code T1}
+     * @param argument2 the argument of type {@code T2}
+     * @param argument3 the argument of type {@code T3}
+     * @param argument4 the argument of type {@code T4}
+     * @param argument5 the argument of type {@code T5}
+     * @param argument6 the argument of type {@code T6}
+     * @param argument7 the argument of type {@code T7}
+     * @param argument8 the argument of type {@code T8}
+     * @param argument9 the argument of type {@code T9}
+     * @param argument10 the argument of type {@code T10}
+     * @param argument11 the argument of type {@code T11}
+     * @param argument12 the argument of type {@code T12}
+     * @param argument13 the argument of type {@code T13}
+     * @param argument14 the argument of type {@code T14}
+     * @param onCompleted the argument of type {@code CompletionCallback}
+     * @param onFaulted the argument of type {@code FaultCallback}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.NativeActivityUpdateContext.ScheduleAction" target="_top">.NET documentation</a>
+     */
     public <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected, T7 extends IJCOBridgeReflected, T8 extends IJCOBridgeReflected, T9 extends IJCOBridgeReflected, T10 extends IJCOBridgeReflected, T11 extends IJCOBridgeReflected, T12 extends IJCOBridgeReflected, T13 extends IJCOBridgeReflected, T14 extends IJCOBridgeReflected> void ScheduleAction(ActivityAction_14 activityAction, T1 argument1, T2 argument2, T3 argument3, T4 argument4, T5 argument5, T6 argument6, T7 argument7, T8 argument8, T9 argument9, T10 argument10, T11 argument11, T12 argument12, T13 argument13, T14 argument14, CompletionCallback onCompleted, FaultCallback onFaulted) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -556,6 +1150,52 @@ public class NativeActivityUpdateContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ScheduleAction.
+     *
+     * @param <T1> the type of the generic argument T1
+     * @param <T2> the type of the generic argument T2
+     * @param <T3> the type of the generic argument T3
+     * @param <T4> the type of the generic argument T4
+     * @param <T5> the type of the generic argument T5
+     * @param <T6> the type of the generic argument T6
+     * @param <T7> the type of the generic argument T7
+     * @param <T8> the type of the generic argument T8
+     * @param <T9> the type of the generic argument T9
+     * @param <T10> the type of the generic argument T10
+     * @param <T11> the type of the generic argument T11
+     * @param <T12> the type of the generic argument T12
+     * @param <T13> the type of the generic argument T13
+     * @param activityAction the argument of type {@code ActivityAction_13}
+     * @param argument1 the argument of type {@code T1}
+     * @param argument2 the argument of type {@code T2}
+     * @param argument3 the argument of type {@code T3}
+     * @param argument4 the argument of type {@code T4}
+     * @param argument5 the argument of type {@code T5}
+     * @param argument6 the argument of type {@code T6}
+     * @param argument7 the argument of type {@code T7}
+     * @param argument8 the argument of type {@code T8}
+     * @param argument9 the argument of type {@code T9}
+     * @param argument10 the argument of type {@code T10}
+     * @param argument11 the argument of type {@code T11}
+     * @param argument12 the argument of type {@code T12}
+     * @param argument13 the argument of type {@code T13}
+     * @param onCompleted the argument of type {@code CompletionCallback}
+     * @param onFaulted the argument of type {@code FaultCallback}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.NativeActivityUpdateContext.ScheduleAction" target="_top">.NET documentation</a>
+     */
     public <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected, T7 extends IJCOBridgeReflected, T8 extends IJCOBridgeReflected, T9 extends IJCOBridgeReflected, T10 extends IJCOBridgeReflected, T11 extends IJCOBridgeReflected, T12 extends IJCOBridgeReflected, T13 extends IJCOBridgeReflected> void ScheduleAction(ActivityAction_13 activityAction, T1 argument1, T2 argument2, T3 argument3, T4 argument4, T5 argument5, T6 argument6, T7 argument7, T8 argument8, T9 argument9, T10 argument10, T11 argument11, T12 argument12, T13 argument13, CompletionCallback onCompleted, FaultCallback onFaulted) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -566,6 +1206,50 @@ public class NativeActivityUpdateContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ScheduleAction.
+     *
+     * @param <T1> the type of the generic argument T1
+     * @param <T2> the type of the generic argument T2
+     * @param <T3> the type of the generic argument T3
+     * @param <T4> the type of the generic argument T4
+     * @param <T5> the type of the generic argument T5
+     * @param <T6> the type of the generic argument T6
+     * @param <T7> the type of the generic argument T7
+     * @param <T8> the type of the generic argument T8
+     * @param <T9> the type of the generic argument T9
+     * @param <T10> the type of the generic argument T10
+     * @param <T11> the type of the generic argument T11
+     * @param <T12> the type of the generic argument T12
+     * @param activityAction the argument of type {@code ActivityAction_12}
+     * @param argument1 the argument of type {@code T1}
+     * @param argument2 the argument of type {@code T2}
+     * @param argument3 the argument of type {@code T3}
+     * @param argument4 the argument of type {@code T4}
+     * @param argument5 the argument of type {@code T5}
+     * @param argument6 the argument of type {@code T6}
+     * @param argument7 the argument of type {@code T7}
+     * @param argument8 the argument of type {@code T8}
+     * @param argument9 the argument of type {@code T9}
+     * @param argument10 the argument of type {@code T10}
+     * @param argument11 the argument of type {@code T11}
+     * @param argument12 the argument of type {@code T12}
+     * @param onCompleted the argument of type {@code CompletionCallback}
+     * @param onFaulted the argument of type {@code FaultCallback}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.NativeActivityUpdateContext.ScheduleAction" target="_top">.NET documentation</a>
+     */
     public <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected, T7 extends IJCOBridgeReflected, T8 extends IJCOBridgeReflected, T9 extends IJCOBridgeReflected, T10 extends IJCOBridgeReflected, T11 extends IJCOBridgeReflected, T12 extends IJCOBridgeReflected> void ScheduleAction(ActivityAction_12 activityAction, T1 argument1, T2 argument2, T3 argument3, T4 argument4, T5 argument5, T6 argument6, T7 argument7, T8 argument8, T9 argument9, T10 argument10, T11 argument11, T12 argument12, CompletionCallback onCompleted, FaultCallback onFaulted) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -576,6 +1260,48 @@ public class NativeActivityUpdateContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ScheduleAction.
+     *
+     * @param <T1> the type of the generic argument T1
+     * @param <T2> the type of the generic argument T2
+     * @param <T3> the type of the generic argument T3
+     * @param <T4> the type of the generic argument T4
+     * @param <T5> the type of the generic argument T5
+     * @param <T6> the type of the generic argument T6
+     * @param <T7> the type of the generic argument T7
+     * @param <T8> the type of the generic argument T8
+     * @param <T9> the type of the generic argument T9
+     * @param <T10> the type of the generic argument T10
+     * @param <T11> the type of the generic argument T11
+     * @param activityAction the argument of type {@code ActivityAction_11}
+     * @param argument1 the argument of type {@code T1}
+     * @param argument2 the argument of type {@code T2}
+     * @param argument3 the argument of type {@code T3}
+     * @param argument4 the argument of type {@code T4}
+     * @param argument5 the argument of type {@code T5}
+     * @param argument6 the argument of type {@code T6}
+     * @param argument7 the argument of type {@code T7}
+     * @param argument8 the argument of type {@code T8}
+     * @param argument9 the argument of type {@code T9}
+     * @param argument10 the argument of type {@code T10}
+     * @param argument11 the argument of type {@code T11}
+     * @param onCompleted the argument of type {@code CompletionCallback}
+     * @param onFaulted the argument of type {@code FaultCallback}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.NativeActivityUpdateContext.ScheduleAction" target="_top">.NET documentation</a>
+     */
     public <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected, T7 extends IJCOBridgeReflected, T8 extends IJCOBridgeReflected, T9 extends IJCOBridgeReflected, T10 extends IJCOBridgeReflected, T11 extends IJCOBridgeReflected> void ScheduleAction(ActivityAction_11 activityAction, T1 argument1, T2 argument2, T3 argument3, T4 argument4, T5 argument5, T6 argument6, T7 argument7, T8 argument8, T9 argument9, T10 argument10, T11 argument11, CompletionCallback onCompleted, FaultCallback onFaulted) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -586,6 +1312,46 @@ public class NativeActivityUpdateContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ScheduleAction.
+     *
+     * @param <T1> the type of the generic argument T1
+     * @param <T2> the type of the generic argument T2
+     * @param <T3> the type of the generic argument T3
+     * @param <T4> the type of the generic argument T4
+     * @param <T5> the type of the generic argument T5
+     * @param <T6> the type of the generic argument T6
+     * @param <T7> the type of the generic argument T7
+     * @param <T8> the type of the generic argument T8
+     * @param <T9> the type of the generic argument T9
+     * @param <T10> the type of the generic argument T10
+     * @param activityAction the argument of type {@code ActivityAction_10}
+     * @param argument1 the argument of type {@code T1}
+     * @param argument2 the argument of type {@code T2}
+     * @param argument3 the argument of type {@code T3}
+     * @param argument4 the argument of type {@code T4}
+     * @param argument5 the argument of type {@code T5}
+     * @param argument6 the argument of type {@code T6}
+     * @param argument7 the argument of type {@code T7}
+     * @param argument8 the argument of type {@code T8}
+     * @param argument9 the argument of type {@code T9}
+     * @param argument10 the argument of type {@code T10}
+     * @param onCompleted the argument of type {@code CompletionCallback}
+     * @param onFaulted the argument of type {@code FaultCallback}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.NativeActivityUpdateContext.ScheduleAction" target="_top">.NET documentation</a>
+     */
     public <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected, T7 extends IJCOBridgeReflected, T8 extends IJCOBridgeReflected, T9 extends IJCOBridgeReflected, T10 extends IJCOBridgeReflected> void ScheduleAction(ActivityAction_10 activityAction, T1 argument1, T2 argument2, T3 argument3, T4 argument4, T5 argument5, T6 argument6, T7 argument7, T8 argument8, T9 argument9, T10 argument10, CompletionCallback onCompleted, FaultCallback onFaulted) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -596,6 +1362,44 @@ public class NativeActivityUpdateContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ScheduleAction.
+     *
+     * @param <T1> the type of the generic argument T1
+     * @param <T2> the type of the generic argument T2
+     * @param <T3> the type of the generic argument T3
+     * @param <T4> the type of the generic argument T4
+     * @param <T5> the type of the generic argument T5
+     * @param <T6> the type of the generic argument T6
+     * @param <T7> the type of the generic argument T7
+     * @param <T8> the type of the generic argument T8
+     * @param <T9> the type of the generic argument T9
+     * @param activityAction the argument of type {@code ActivityAction_9}
+     * @param argument1 the argument of type {@code T1}
+     * @param argument2 the argument of type {@code T2}
+     * @param argument3 the argument of type {@code T3}
+     * @param argument4 the argument of type {@code T4}
+     * @param argument5 the argument of type {@code T5}
+     * @param argument6 the argument of type {@code T6}
+     * @param argument7 the argument of type {@code T7}
+     * @param argument8 the argument of type {@code T8}
+     * @param argument9 the argument of type {@code T9}
+     * @param onCompleted the argument of type {@code CompletionCallback}
+     * @param onFaulted the argument of type {@code FaultCallback}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.NativeActivityUpdateContext.ScheduleAction" target="_top">.NET documentation</a>
+     */
     public <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected, T7 extends IJCOBridgeReflected, T8 extends IJCOBridgeReflected, T9 extends IJCOBridgeReflected> void ScheduleAction(ActivityAction_9 activityAction, T1 argument1, T2 argument2, T3 argument3, T4 argument4, T5 argument5, T6 argument6, T7 argument7, T8 argument8, T9 argument9, CompletionCallback onCompleted, FaultCallback onFaulted) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -606,6 +1410,42 @@ public class NativeActivityUpdateContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ScheduleAction.
+     *
+     * @param <T1> the type of the generic argument T1
+     * @param <T2> the type of the generic argument T2
+     * @param <T3> the type of the generic argument T3
+     * @param <T4> the type of the generic argument T4
+     * @param <T5> the type of the generic argument T5
+     * @param <T6> the type of the generic argument T6
+     * @param <T7> the type of the generic argument T7
+     * @param <T8> the type of the generic argument T8
+     * @param activityAction the argument of type {@code ActivityAction_8}
+     * @param argument1 the argument of type {@code T1}
+     * @param argument2 the argument of type {@code T2}
+     * @param argument3 the argument of type {@code T3}
+     * @param argument4 the argument of type {@code T4}
+     * @param argument5 the argument of type {@code T5}
+     * @param argument6 the argument of type {@code T6}
+     * @param argument7 the argument of type {@code T7}
+     * @param argument8 the argument of type {@code T8}
+     * @param onCompleted the argument of type {@code CompletionCallback}
+     * @param onFaulted the argument of type {@code FaultCallback}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.NativeActivityUpdateContext.ScheduleAction" target="_top">.NET documentation</a>
+     */
     public <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected, T7 extends IJCOBridgeReflected, T8 extends IJCOBridgeReflected> void ScheduleAction(ActivityAction_8 activityAction, T1 argument1, T2 argument2, T3 argument3, T4 argument4, T5 argument5, T6 argument6, T7 argument7, T8 argument8, CompletionCallback onCompleted, FaultCallback onFaulted) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -616,6 +1456,40 @@ public class NativeActivityUpdateContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ScheduleAction.
+     *
+     * @param <T1> the type of the generic argument T1
+     * @param <T2> the type of the generic argument T2
+     * @param <T3> the type of the generic argument T3
+     * @param <T4> the type of the generic argument T4
+     * @param <T5> the type of the generic argument T5
+     * @param <T6> the type of the generic argument T6
+     * @param <T7> the type of the generic argument T7
+     * @param activityAction the argument of type {@code ActivityAction_7}
+     * @param argument1 the argument of type {@code T1}
+     * @param argument2 the argument of type {@code T2}
+     * @param argument3 the argument of type {@code T3}
+     * @param argument4 the argument of type {@code T4}
+     * @param argument5 the argument of type {@code T5}
+     * @param argument6 the argument of type {@code T6}
+     * @param argument7 the argument of type {@code T7}
+     * @param onCompleted the argument of type {@code CompletionCallback}
+     * @param onFaulted the argument of type {@code FaultCallback}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.NativeActivityUpdateContext.ScheduleAction" target="_top">.NET documentation</a>
+     */
     public <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected, T7 extends IJCOBridgeReflected> void ScheduleAction(ActivityAction_7 activityAction, T1 argument1, T2 argument2, T3 argument3, T4 argument4, T5 argument5, T6 argument6, T7 argument7, CompletionCallback onCompleted, FaultCallback onFaulted) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -626,6 +1500,38 @@ public class NativeActivityUpdateContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ScheduleAction.
+     *
+     * @param <T1> the type of the generic argument T1
+     * @param <T2> the type of the generic argument T2
+     * @param <T3> the type of the generic argument T3
+     * @param <T4> the type of the generic argument T4
+     * @param <T5> the type of the generic argument T5
+     * @param <T6> the type of the generic argument T6
+     * @param activityAction the argument of type {@code ActivityAction_6}
+     * @param argument1 the argument of type {@code T1}
+     * @param argument2 the argument of type {@code T2}
+     * @param argument3 the argument of type {@code T3}
+     * @param argument4 the argument of type {@code T4}
+     * @param argument5 the argument of type {@code T5}
+     * @param argument6 the argument of type {@code T6}
+     * @param onCompleted the argument of type {@code CompletionCallback}
+     * @param onFaulted the argument of type {@code FaultCallback}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.NativeActivityUpdateContext.ScheduleAction" target="_top">.NET documentation</a>
+     */
     public <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected> void ScheduleAction(ActivityAction_6 activityAction, T1 argument1, T2 argument2, T3 argument3, T4 argument4, T5 argument5, T6 argument6, CompletionCallback onCompleted, FaultCallback onFaulted) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -636,6 +1542,36 @@ public class NativeActivityUpdateContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ScheduleAction.
+     *
+     * @param <T1> the type of the generic argument T1
+     * @param <T2> the type of the generic argument T2
+     * @param <T3> the type of the generic argument T3
+     * @param <T4> the type of the generic argument T4
+     * @param <T5> the type of the generic argument T5
+     * @param activityAction the argument of type {@code ActivityAction_5}
+     * @param argument1 the argument of type {@code T1}
+     * @param argument2 the argument of type {@code T2}
+     * @param argument3 the argument of type {@code T3}
+     * @param argument4 the argument of type {@code T4}
+     * @param argument5 the argument of type {@code T5}
+     * @param onCompleted the argument of type {@code CompletionCallback}
+     * @param onFaulted the argument of type {@code FaultCallback}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.NativeActivityUpdateContext.ScheduleAction" target="_top">.NET documentation</a>
+     */
     public <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected> void ScheduleAction(ActivityAction_5 activityAction, T1 argument1, T2 argument2, T3 argument3, T4 argument4, T5 argument5, CompletionCallback onCompleted, FaultCallback onFaulted) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -646,6 +1582,34 @@ public class NativeActivityUpdateContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ScheduleAction.
+     *
+     * @param <T1> the type of the generic argument T1
+     * @param <T2> the type of the generic argument T2
+     * @param <T3> the type of the generic argument T3
+     * @param <T4> the type of the generic argument T4
+     * @param activityAction the argument of type {@code ActivityAction_4}
+     * @param argument1 the argument of type {@code T1}
+     * @param argument2 the argument of type {@code T2}
+     * @param argument3 the argument of type {@code T3}
+     * @param argument4 the argument of type {@code T4}
+     * @param onCompleted the argument of type {@code CompletionCallback}
+     * @param onFaulted the argument of type {@code FaultCallback}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.NativeActivityUpdateContext.ScheduleAction" target="_top">.NET documentation</a>
+     */
     public <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected> void ScheduleAction(ActivityAction_4 activityAction, T1 argument1, T2 argument2, T3 argument3, T4 argument4, CompletionCallback onCompleted, FaultCallback onFaulted) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -656,6 +1620,32 @@ public class NativeActivityUpdateContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ScheduleAction.
+     *
+     * @param <T1> the type of the generic argument T1
+     * @param <T2> the type of the generic argument T2
+     * @param <T3> the type of the generic argument T3
+     * @param activityAction the argument of type {@code ActivityAction_3}
+     * @param argument1 the argument of type {@code T1}
+     * @param argument2 the argument of type {@code T2}
+     * @param argument3 the argument of type {@code T3}
+     * @param onCompleted the argument of type {@code CompletionCallback}
+     * @param onFaulted the argument of type {@code FaultCallback}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.NativeActivityUpdateContext.ScheduleAction" target="_top">.NET documentation</a>
+     */
     public <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected> void ScheduleAction(ActivityAction_3 activityAction, T1 argument1, T2 argument2, T3 argument3, CompletionCallback onCompleted, FaultCallback onFaulted) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -666,6 +1656,30 @@ public class NativeActivityUpdateContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ScheduleAction.
+     *
+     * @param <T1> the type of the generic argument T1
+     * @param <T2> the type of the generic argument T2
+     * @param activityAction the argument of type {@code ActivityAction_2}
+     * @param argument1 the argument of type {@code T1}
+     * @param argument2 the argument of type {@code T2}
+     * @param onCompleted the argument of type {@code CompletionCallback}
+     * @param onFaulted the argument of type {@code FaultCallback}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.NativeActivityUpdateContext.ScheduleAction" target="_top">.NET documentation</a>
+     */
     public <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected> void ScheduleAction(ActivityAction_2 activityAction, T1 argument1, T2 argument2, CompletionCallback onCompleted, FaultCallback onFaulted) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -676,6 +1690,26 @@ public class NativeActivityUpdateContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ScheduleActivity.
+     *
+     * @param activity the argument of type {@code Activity}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.NativeActivityUpdateContext.ScheduleActivity" target="_top">.NET documentation</a>
+     */
     public void ScheduleActivity(Activity activity) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -686,6 +1720,27 @@ public class NativeActivityUpdateContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ScheduleActivity.
+     *
+     * @param activity the argument of type {@code Activity}
+     * @param onCompleted the argument of type {@code CompletionCallback}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.NativeActivityUpdateContext.ScheduleActivity" target="_top">.NET documentation</a>
+     */
     public void ScheduleActivity(Activity activity, CompletionCallback onCompleted) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -696,6 +1751,26 @@ public class NativeActivityUpdateContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ScheduleActivity.
+     *
+     * @param activity the argument of type {@code Activity}
+     * @param onCompleted the argument of type {@code CompletionCallback}
+     * @param onFaulted the argument of type {@code FaultCallback}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.NativeActivityUpdateContext.ScheduleActivity" target="_top">.NET documentation</a>
+     */
     public void ScheduleActivity(Activity activity, CompletionCallback onCompleted, FaultCallback onFaulted) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -706,6 +1781,27 @@ public class NativeActivityUpdateContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ScheduleActivity.
+     *
+     * @param activity the argument of type {@code Activity}
+     * @param onFaulted the argument of type {@code FaultCallback}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.NativeActivityUpdateContext.ScheduleActivity" target="_top">.NET documentation</a>
+     */
     public void ScheduleActivity(Activity activity, FaultCallback onFaulted) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -716,6 +1812,27 @@ public class NativeActivityUpdateContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ScheduleActivity.
+     *
+     * @param <TResult> the type of the generic argument TResult
+     * @param activity the argument of type {@code Activity_1}
+     * @param onCompleted the argument of type {@code CompletionCallback_1}
+     * @param onFaulted the argument of type {@code FaultCallback}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.NativeActivityUpdateContext.ScheduleActivity" target="_top">.NET documentation</a>
+     */
     public <TResult extends IJCOBridgeReflected> void ScheduleActivity(Activity_1 activity, CompletionCallback_1 onCompleted, FaultCallback onFaulted) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -726,6 +1843,28 @@ public class NativeActivityUpdateContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ScheduleDelegate.
+     *
+     * @param activityDelegate the argument of type {@code ActivityDelegate}
+     * @param inputParameters the argument of type {@code IDictionary_2}
+     * @param onCompleted the argument of type {@code DelegateCompletionCallback}
+     * @param onFaulted the argument of type {@code FaultCallback}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.NativeActivityUpdateContext.ScheduleDelegate" target="_top">.NET documentation</a>
+     */
     public void ScheduleDelegate(ActivityDelegate activityDelegate, IDictionary_2 inputParameters, DelegateCompletionCallback onCompleted, FaultCallback onFaulted) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -736,6 +1875,29 @@ public class NativeActivityUpdateContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ScheduleFunc.
+     *
+     * @param <T> the type of the generic argument T
+     * @param <TResult> the type of the generic argument TResult
+     * @param activityFunc the argument of type {@code ActivityFunc_2}
+     * @param argument the argument of type {@code T}
+     * @param onCompleted the argument of type {@code CompletionCallback_1}
+     * @param onFaulted the argument of type {@code FaultCallback}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.NativeActivityUpdateContext.ScheduleFunc" target="_top">.NET documentation</a>
+     */
     public <T extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> void ScheduleFunc(ActivityFunc_2 activityFunc, T argument, CompletionCallback_1 onCompleted, FaultCallback onFaulted) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -746,6 +1908,59 @@ public class NativeActivityUpdateContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ScheduleFunc.
+     *
+     * @param <T1> the type of the generic argument T1
+     * @param <T2> the type of the generic argument T2
+     * @param <T3> the type of the generic argument T3
+     * @param <T4> the type of the generic argument T4
+     * @param <T5> the type of the generic argument T5
+     * @param <T6> the type of the generic argument T6
+     * @param <T7> the type of the generic argument T7
+     * @param <T8> the type of the generic argument T8
+     * @param <T9> the type of the generic argument T9
+     * @param <T10> the type of the generic argument T10
+     * @param <T11> the type of the generic argument T11
+     * @param <T12> the type of the generic argument T12
+     * @param <T13> the type of the generic argument T13
+     * @param <T14> the type of the generic argument T14
+     * @param <T15> the type of the generic argument T15
+     * @param <T16> the type of the generic argument T16
+     * @param <TResult> the type of the generic argument TResult
+     * @param activityFunc the argument of type {@code ActivityFunc_17}
+     * @param argument1 the argument of type {@code T1}
+     * @param argument2 the argument of type {@code T2}
+     * @param argument3 the argument of type {@code T3}
+     * @param argument4 the argument of type {@code T4}
+     * @param argument5 the argument of type {@code T5}
+     * @param argument6 the argument of type {@code T6}
+     * @param argument7 the argument of type {@code T7}
+     * @param argument8 the argument of type {@code T8}
+     * @param argument9 the argument of type {@code T9}
+     * @param argument10 the argument of type {@code T10}
+     * @param argument11 the argument of type {@code T11}
+     * @param argument12 the argument of type {@code T12}
+     * @param argument13 the argument of type {@code T13}
+     * @param argument14 the argument of type {@code T14}
+     * @param argument15 the argument of type {@code T15}
+     * @param argument16 the argument of type {@code T16}
+     * @param onCompleted the argument of type {@code CompletionCallback_1}
+     * @param onFaulted the argument of type {@code FaultCallback}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.NativeActivityUpdateContext.ScheduleFunc" target="_top">.NET documentation</a>
+     */
     public <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected, T7 extends IJCOBridgeReflected, T8 extends IJCOBridgeReflected, T9 extends IJCOBridgeReflected, T10 extends IJCOBridgeReflected, T11 extends IJCOBridgeReflected, T12 extends IJCOBridgeReflected, T13 extends IJCOBridgeReflected, T14 extends IJCOBridgeReflected, T15 extends IJCOBridgeReflected, T16 extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> void ScheduleFunc(ActivityFunc_17 activityFunc, T1 argument1, T2 argument2, T3 argument3, T4 argument4, T5 argument5, T6 argument6, T7 argument7, T8 argument8, T9 argument9, T10 argument10, T11 argument11, T12 argument12, T13 argument13, T14 argument14, T15 argument15, T16 argument16, CompletionCallback_1 onCompleted, FaultCallback onFaulted) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -756,6 +1971,57 @@ public class NativeActivityUpdateContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ScheduleFunc.
+     *
+     * @param <T1> the type of the generic argument T1
+     * @param <T2> the type of the generic argument T2
+     * @param <T3> the type of the generic argument T3
+     * @param <T4> the type of the generic argument T4
+     * @param <T5> the type of the generic argument T5
+     * @param <T6> the type of the generic argument T6
+     * @param <T7> the type of the generic argument T7
+     * @param <T8> the type of the generic argument T8
+     * @param <T9> the type of the generic argument T9
+     * @param <T10> the type of the generic argument T10
+     * @param <T11> the type of the generic argument T11
+     * @param <T12> the type of the generic argument T12
+     * @param <T13> the type of the generic argument T13
+     * @param <T14> the type of the generic argument T14
+     * @param <T15> the type of the generic argument T15
+     * @param <TResult> the type of the generic argument TResult
+     * @param activityFunc the argument of type {@code ActivityFunc_16}
+     * @param argument1 the argument of type {@code T1}
+     * @param argument2 the argument of type {@code T2}
+     * @param argument3 the argument of type {@code T3}
+     * @param argument4 the argument of type {@code T4}
+     * @param argument5 the argument of type {@code T5}
+     * @param argument6 the argument of type {@code T6}
+     * @param argument7 the argument of type {@code T7}
+     * @param argument8 the argument of type {@code T8}
+     * @param argument9 the argument of type {@code T9}
+     * @param argument10 the argument of type {@code T10}
+     * @param argument11 the argument of type {@code T11}
+     * @param argument12 the argument of type {@code T12}
+     * @param argument13 the argument of type {@code T13}
+     * @param argument14 the argument of type {@code T14}
+     * @param argument15 the argument of type {@code T15}
+     * @param onCompleted the argument of type {@code CompletionCallback_1}
+     * @param onFaulted the argument of type {@code FaultCallback}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.NativeActivityUpdateContext.ScheduleFunc" target="_top">.NET documentation</a>
+     */
     public <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected, T7 extends IJCOBridgeReflected, T8 extends IJCOBridgeReflected, T9 extends IJCOBridgeReflected, T10 extends IJCOBridgeReflected, T11 extends IJCOBridgeReflected, T12 extends IJCOBridgeReflected, T13 extends IJCOBridgeReflected, T14 extends IJCOBridgeReflected, T15 extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> void ScheduleFunc(ActivityFunc_16 activityFunc, T1 argument1, T2 argument2, T3 argument3, T4 argument4, T5 argument5, T6 argument6, T7 argument7, T8 argument8, T9 argument9, T10 argument10, T11 argument11, T12 argument12, T13 argument13, T14 argument14, T15 argument15, CompletionCallback_1 onCompleted, FaultCallback onFaulted) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -766,6 +2032,55 @@ public class NativeActivityUpdateContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ScheduleFunc.
+     *
+     * @param <T1> the type of the generic argument T1
+     * @param <T2> the type of the generic argument T2
+     * @param <T3> the type of the generic argument T3
+     * @param <T4> the type of the generic argument T4
+     * @param <T5> the type of the generic argument T5
+     * @param <T6> the type of the generic argument T6
+     * @param <T7> the type of the generic argument T7
+     * @param <T8> the type of the generic argument T8
+     * @param <T9> the type of the generic argument T9
+     * @param <T10> the type of the generic argument T10
+     * @param <T11> the type of the generic argument T11
+     * @param <T12> the type of the generic argument T12
+     * @param <T13> the type of the generic argument T13
+     * @param <T14> the type of the generic argument T14
+     * @param <TResult> the type of the generic argument TResult
+     * @param activityFunc the argument of type {@code ActivityFunc_15}
+     * @param argument1 the argument of type {@code T1}
+     * @param argument2 the argument of type {@code T2}
+     * @param argument3 the argument of type {@code T3}
+     * @param argument4 the argument of type {@code T4}
+     * @param argument5 the argument of type {@code T5}
+     * @param argument6 the argument of type {@code T6}
+     * @param argument7 the argument of type {@code T7}
+     * @param argument8 the argument of type {@code T8}
+     * @param argument9 the argument of type {@code T9}
+     * @param argument10 the argument of type {@code T10}
+     * @param argument11 the argument of type {@code T11}
+     * @param argument12 the argument of type {@code T12}
+     * @param argument13 the argument of type {@code T13}
+     * @param argument14 the argument of type {@code T14}
+     * @param onCompleted the argument of type {@code CompletionCallback_1}
+     * @param onFaulted the argument of type {@code FaultCallback}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.NativeActivityUpdateContext.ScheduleFunc" target="_top">.NET documentation</a>
+     */
     public <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected, T7 extends IJCOBridgeReflected, T8 extends IJCOBridgeReflected, T9 extends IJCOBridgeReflected, T10 extends IJCOBridgeReflected, T11 extends IJCOBridgeReflected, T12 extends IJCOBridgeReflected, T13 extends IJCOBridgeReflected, T14 extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> void ScheduleFunc(ActivityFunc_15 activityFunc, T1 argument1, T2 argument2, T3 argument3, T4 argument4, T5 argument5, T6 argument6, T7 argument7, T8 argument8, T9 argument9, T10 argument10, T11 argument11, T12 argument12, T13 argument13, T14 argument14, CompletionCallback_1 onCompleted, FaultCallback onFaulted) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -776,6 +2091,53 @@ public class NativeActivityUpdateContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ScheduleFunc.
+     *
+     * @param <T1> the type of the generic argument T1
+     * @param <T2> the type of the generic argument T2
+     * @param <T3> the type of the generic argument T3
+     * @param <T4> the type of the generic argument T4
+     * @param <T5> the type of the generic argument T5
+     * @param <T6> the type of the generic argument T6
+     * @param <T7> the type of the generic argument T7
+     * @param <T8> the type of the generic argument T8
+     * @param <T9> the type of the generic argument T9
+     * @param <T10> the type of the generic argument T10
+     * @param <T11> the type of the generic argument T11
+     * @param <T12> the type of the generic argument T12
+     * @param <T13> the type of the generic argument T13
+     * @param <TResult> the type of the generic argument TResult
+     * @param activityFunc the argument of type {@code ActivityFunc_14}
+     * @param argument1 the argument of type {@code T1}
+     * @param argument2 the argument of type {@code T2}
+     * @param argument3 the argument of type {@code T3}
+     * @param argument4 the argument of type {@code T4}
+     * @param argument5 the argument of type {@code T5}
+     * @param argument6 the argument of type {@code T6}
+     * @param argument7 the argument of type {@code T7}
+     * @param argument8 the argument of type {@code T8}
+     * @param argument9 the argument of type {@code T9}
+     * @param argument10 the argument of type {@code T10}
+     * @param argument11 the argument of type {@code T11}
+     * @param argument12 the argument of type {@code T12}
+     * @param argument13 the argument of type {@code T13}
+     * @param onCompleted the argument of type {@code CompletionCallback_1}
+     * @param onFaulted the argument of type {@code FaultCallback}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.NativeActivityUpdateContext.ScheduleFunc" target="_top">.NET documentation</a>
+     */
     public <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected, T7 extends IJCOBridgeReflected, T8 extends IJCOBridgeReflected, T9 extends IJCOBridgeReflected, T10 extends IJCOBridgeReflected, T11 extends IJCOBridgeReflected, T12 extends IJCOBridgeReflected, T13 extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> void ScheduleFunc(ActivityFunc_14 activityFunc, T1 argument1, T2 argument2, T3 argument3, T4 argument4, T5 argument5, T6 argument6, T7 argument7, T8 argument8, T9 argument9, T10 argument10, T11 argument11, T12 argument12, T13 argument13, CompletionCallback_1 onCompleted, FaultCallback onFaulted) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -786,6 +2148,51 @@ public class NativeActivityUpdateContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ScheduleFunc.
+     *
+     * @param <T1> the type of the generic argument T1
+     * @param <T2> the type of the generic argument T2
+     * @param <T3> the type of the generic argument T3
+     * @param <T4> the type of the generic argument T4
+     * @param <T5> the type of the generic argument T5
+     * @param <T6> the type of the generic argument T6
+     * @param <T7> the type of the generic argument T7
+     * @param <T8> the type of the generic argument T8
+     * @param <T9> the type of the generic argument T9
+     * @param <T10> the type of the generic argument T10
+     * @param <T11> the type of the generic argument T11
+     * @param <T12> the type of the generic argument T12
+     * @param <TResult> the type of the generic argument TResult
+     * @param activityFunc the argument of type {@code ActivityFunc_13}
+     * @param argument1 the argument of type {@code T1}
+     * @param argument2 the argument of type {@code T2}
+     * @param argument3 the argument of type {@code T3}
+     * @param argument4 the argument of type {@code T4}
+     * @param argument5 the argument of type {@code T5}
+     * @param argument6 the argument of type {@code T6}
+     * @param argument7 the argument of type {@code T7}
+     * @param argument8 the argument of type {@code T8}
+     * @param argument9 the argument of type {@code T9}
+     * @param argument10 the argument of type {@code T10}
+     * @param argument11 the argument of type {@code T11}
+     * @param argument12 the argument of type {@code T12}
+     * @param onCompleted the argument of type {@code CompletionCallback_1}
+     * @param onFaulted the argument of type {@code FaultCallback}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.NativeActivityUpdateContext.ScheduleFunc" target="_top">.NET documentation</a>
+     */
     public <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected, T7 extends IJCOBridgeReflected, T8 extends IJCOBridgeReflected, T9 extends IJCOBridgeReflected, T10 extends IJCOBridgeReflected, T11 extends IJCOBridgeReflected, T12 extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> void ScheduleFunc(ActivityFunc_13 activityFunc, T1 argument1, T2 argument2, T3 argument3, T4 argument4, T5 argument5, T6 argument6, T7 argument7, T8 argument8, T9 argument9, T10 argument10, T11 argument11, T12 argument12, CompletionCallback_1 onCompleted, FaultCallback onFaulted) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -796,6 +2203,49 @@ public class NativeActivityUpdateContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ScheduleFunc.
+     *
+     * @param <T1> the type of the generic argument T1
+     * @param <T2> the type of the generic argument T2
+     * @param <T3> the type of the generic argument T3
+     * @param <T4> the type of the generic argument T4
+     * @param <T5> the type of the generic argument T5
+     * @param <T6> the type of the generic argument T6
+     * @param <T7> the type of the generic argument T7
+     * @param <T8> the type of the generic argument T8
+     * @param <T9> the type of the generic argument T9
+     * @param <T10> the type of the generic argument T10
+     * @param <T11> the type of the generic argument T11
+     * @param <TResult> the type of the generic argument TResult
+     * @param activityFunc the argument of type {@code ActivityFunc_12}
+     * @param argument1 the argument of type {@code T1}
+     * @param argument2 the argument of type {@code T2}
+     * @param argument3 the argument of type {@code T3}
+     * @param argument4 the argument of type {@code T4}
+     * @param argument5 the argument of type {@code T5}
+     * @param argument6 the argument of type {@code T6}
+     * @param argument7 the argument of type {@code T7}
+     * @param argument8 the argument of type {@code T8}
+     * @param argument9 the argument of type {@code T9}
+     * @param argument10 the argument of type {@code T10}
+     * @param argument11 the argument of type {@code T11}
+     * @param onCompleted the argument of type {@code CompletionCallback_1}
+     * @param onFaulted the argument of type {@code FaultCallback}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.NativeActivityUpdateContext.ScheduleFunc" target="_top">.NET documentation</a>
+     */
     public <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected, T7 extends IJCOBridgeReflected, T8 extends IJCOBridgeReflected, T9 extends IJCOBridgeReflected, T10 extends IJCOBridgeReflected, T11 extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> void ScheduleFunc(ActivityFunc_12 activityFunc, T1 argument1, T2 argument2, T3 argument3, T4 argument4, T5 argument5, T6 argument6, T7 argument7, T8 argument8, T9 argument9, T10 argument10, T11 argument11, CompletionCallback_1 onCompleted, FaultCallback onFaulted) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -806,6 +2256,47 @@ public class NativeActivityUpdateContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ScheduleFunc.
+     *
+     * @param <T1> the type of the generic argument T1
+     * @param <T2> the type of the generic argument T2
+     * @param <T3> the type of the generic argument T3
+     * @param <T4> the type of the generic argument T4
+     * @param <T5> the type of the generic argument T5
+     * @param <T6> the type of the generic argument T6
+     * @param <T7> the type of the generic argument T7
+     * @param <T8> the type of the generic argument T8
+     * @param <T9> the type of the generic argument T9
+     * @param <T10> the type of the generic argument T10
+     * @param <TResult> the type of the generic argument TResult
+     * @param activityFunc the argument of type {@code ActivityFunc_11}
+     * @param argument1 the argument of type {@code T1}
+     * @param argument2 the argument of type {@code T2}
+     * @param argument3 the argument of type {@code T3}
+     * @param argument4 the argument of type {@code T4}
+     * @param argument5 the argument of type {@code T5}
+     * @param argument6 the argument of type {@code T6}
+     * @param argument7 the argument of type {@code T7}
+     * @param argument8 the argument of type {@code T8}
+     * @param argument9 the argument of type {@code T9}
+     * @param argument10 the argument of type {@code T10}
+     * @param onCompleted the argument of type {@code CompletionCallback_1}
+     * @param onFaulted the argument of type {@code FaultCallback}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.NativeActivityUpdateContext.ScheduleFunc" target="_top">.NET documentation</a>
+     */
     public <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected, T7 extends IJCOBridgeReflected, T8 extends IJCOBridgeReflected, T9 extends IJCOBridgeReflected, T10 extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> void ScheduleFunc(ActivityFunc_11 activityFunc, T1 argument1, T2 argument2, T3 argument3, T4 argument4, T5 argument5, T6 argument6, T7 argument7, T8 argument8, T9 argument9, T10 argument10, CompletionCallback_1 onCompleted, FaultCallback onFaulted) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -816,6 +2307,45 @@ public class NativeActivityUpdateContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ScheduleFunc.
+     *
+     * @param <T1> the type of the generic argument T1
+     * @param <T2> the type of the generic argument T2
+     * @param <T3> the type of the generic argument T3
+     * @param <T4> the type of the generic argument T4
+     * @param <T5> the type of the generic argument T5
+     * @param <T6> the type of the generic argument T6
+     * @param <T7> the type of the generic argument T7
+     * @param <T8> the type of the generic argument T8
+     * @param <T9> the type of the generic argument T9
+     * @param <TResult> the type of the generic argument TResult
+     * @param activityFunc the argument of type {@code ActivityFunc_10}
+     * @param argument1 the argument of type {@code T1}
+     * @param argument2 the argument of type {@code T2}
+     * @param argument3 the argument of type {@code T3}
+     * @param argument4 the argument of type {@code T4}
+     * @param argument5 the argument of type {@code T5}
+     * @param argument6 the argument of type {@code T6}
+     * @param argument7 the argument of type {@code T7}
+     * @param argument8 the argument of type {@code T8}
+     * @param argument9 the argument of type {@code T9}
+     * @param onCompleted the argument of type {@code CompletionCallback_1}
+     * @param onFaulted the argument of type {@code FaultCallback}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.NativeActivityUpdateContext.ScheduleFunc" target="_top">.NET documentation</a>
+     */
     public <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected, T7 extends IJCOBridgeReflected, T8 extends IJCOBridgeReflected, T9 extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> void ScheduleFunc(ActivityFunc_10 activityFunc, T1 argument1, T2 argument2, T3 argument3, T4 argument4, T5 argument5, T6 argument6, T7 argument7, T8 argument8, T9 argument9, CompletionCallback_1 onCompleted, FaultCallback onFaulted) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -826,6 +2356,43 @@ public class NativeActivityUpdateContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ScheduleFunc.
+     *
+     * @param <T1> the type of the generic argument T1
+     * @param <T2> the type of the generic argument T2
+     * @param <T3> the type of the generic argument T3
+     * @param <T4> the type of the generic argument T4
+     * @param <T5> the type of the generic argument T5
+     * @param <T6> the type of the generic argument T6
+     * @param <T7> the type of the generic argument T7
+     * @param <T8> the type of the generic argument T8
+     * @param <TResult> the type of the generic argument TResult
+     * @param activityFunc the argument of type {@code ActivityFunc_9}
+     * @param argument1 the argument of type {@code T1}
+     * @param argument2 the argument of type {@code T2}
+     * @param argument3 the argument of type {@code T3}
+     * @param argument4 the argument of type {@code T4}
+     * @param argument5 the argument of type {@code T5}
+     * @param argument6 the argument of type {@code T6}
+     * @param argument7 the argument of type {@code T7}
+     * @param argument8 the argument of type {@code T8}
+     * @param onCompleted the argument of type {@code CompletionCallback_1}
+     * @param onFaulted the argument of type {@code FaultCallback}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.NativeActivityUpdateContext.ScheduleFunc" target="_top">.NET documentation</a>
+     */
     public <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected, T7 extends IJCOBridgeReflected, T8 extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> void ScheduleFunc(ActivityFunc_9 activityFunc, T1 argument1, T2 argument2, T3 argument3, T4 argument4, T5 argument5, T6 argument6, T7 argument7, T8 argument8, CompletionCallback_1 onCompleted, FaultCallback onFaulted) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -836,6 +2403,41 @@ public class NativeActivityUpdateContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ScheduleFunc.
+     *
+     * @param <T1> the type of the generic argument T1
+     * @param <T2> the type of the generic argument T2
+     * @param <T3> the type of the generic argument T3
+     * @param <T4> the type of the generic argument T4
+     * @param <T5> the type of the generic argument T5
+     * @param <T6> the type of the generic argument T6
+     * @param <T7> the type of the generic argument T7
+     * @param <TResult> the type of the generic argument TResult
+     * @param activityFunc the argument of type {@code ActivityFunc_8}
+     * @param argument1 the argument of type {@code T1}
+     * @param argument2 the argument of type {@code T2}
+     * @param argument3 the argument of type {@code T3}
+     * @param argument4 the argument of type {@code T4}
+     * @param argument5 the argument of type {@code T5}
+     * @param argument6 the argument of type {@code T6}
+     * @param argument7 the argument of type {@code T7}
+     * @param onCompleted the argument of type {@code CompletionCallback_1}
+     * @param onFaulted the argument of type {@code FaultCallback}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.NativeActivityUpdateContext.ScheduleFunc" target="_top">.NET documentation</a>
+     */
     public <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected, T7 extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> void ScheduleFunc(ActivityFunc_8 activityFunc, T1 argument1, T2 argument2, T3 argument3, T4 argument4, T5 argument5, T6 argument6, T7 argument7, CompletionCallback_1 onCompleted, FaultCallback onFaulted) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -846,6 +2448,39 @@ public class NativeActivityUpdateContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ScheduleFunc.
+     *
+     * @param <T1> the type of the generic argument T1
+     * @param <T2> the type of the generic argument T2
+     * @param <T3> the type of the generic argument T3
+     * @param <T4> the type of the generic argument T4
+     * @param <T5> the type of the generic argument T5
+     * @param <T6> the type of the generic argument T6
+     * @param <TResult> the type of the generic argument TResult
+     * @param activityFunc the argument of type {@code ActivityFunc_7}
+     * @param argument1 the argument of type {@code T1}
+     * @param argument2 the argument of type {@code T2}
+     * @param argument3 the argument of type {@code T3}
+     * @param argument4 the argument of type {@code T4}
+     * @param argument5 the argument of type {@code T5}
+     * @param argument6 the argument of type {@code T6}
+     * @param onCompleted the argument of type {@code CompletionCallback_1}
+     * @param onFaulted the argument of type {@code FaultCallback}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.NativeActivityUpdateContext.ScheduleFunc" target="_top">.NET documentation</a>
+     */
     public <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> void ScheduleFunc(ActivityFunc_7 activityFunc, T1 argument1, T2 argument2, T3 argument3, T4 argument4, T5 argument5, T6 argument6, CompletionCallback_1 onCompleted, FaultCallback onFaulted) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -856,6 +2491,37 @@ public class NativeActivityUpdateContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ScheduleFunc.
+     *
+     * @param <T1> the type of the generic argument T1
+     * @param <T2> the type of the generic argument T2
+     * @param <T3> the type of the generic argument T3
+     * @param <T4> the type of the generic argument T4
+     * @param <T5> the type of the generic argument T5
+     * @param <TResult> the type of the generic argument TResult
+     * @param activityFunc the argument of type {@code ActivityFunc_6}
+     * @param argument1 the argument of type {@code T1}
+     * @param argument2 the argument of type {@code T2}
+     * @param argument3 the argument of type {@code T3}
+     * @param argument4 the argument of type {@code T4}
+     * @param argument5 the argument of type {@code T5}
+     * @param onCompleted the argument of type {@code CompletionCallback_1}
+     * @param onFaulted the argument of type {@code FaultCallback}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.NativeActivityUpdateContext.ScheduleFunc" target="_top">.NET documentation</a>
+     */
     public <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> void ScheduleFunc(ActivityFunc_6 activityFunc, T1 argument1, T2 argument2, T3 argument3, T4 argument4, T5 argument5, CompletionCallback_1 onCompleted, FaultCallback onFaulted) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -866,6 +2532,35 @@ public class NativeActivityUpdateContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ScheduleFunc.
+     *
+     * @param <T1> the type of the generic argument T1
+     * @param <T2> the type of the generic argument T2
+     * @param <T3> the type of the generic argument T3
+     * @param <T4> the type of the generic argument T4
+     * @param <TResult> the type of the generic argument TResult
+     * @param activityFunc the argument of type {@code ActivityFunc_5}
+     * @param argument1 the argument of type {@code T1}
+     * @param argument2 the argument of type {@code T2}
+     * @param argument3 the argument of type {@code T3}
+     * @param argument4 the argument of type {@code T4}
+     * @param onCompleted the argument of type {@code CompletionCallback_1}
+     * @param onFaulted the argument of type {@code FaultCallback}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.NativeActivityUpdateContext.ScheduleFunc" target="_top">.NET documentation</a>
+     */
     public <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> void ScheduleFunc(ActivityFunc_5 activityFunc, T1 argument1, T2 argument2, T3 argument3, T4 argument4, CompletionCallback_1 onCompleted, FaultCallback onFaulted) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -876,6 +2571,33 @@ public class NativeActivityUpdateContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ScheduleFunc.
+     *
+     * @param <T1> the type of the generic argument T1
+     * @param <T2> the type of the generic argument T2
+     * @param <T3> the type of the generic argument T3
+     * @param <TResult> the type of the generic argument TResult
+     * @param activityFunc the argument of type {@code ActivityFunc_4}
+     * @param argument1 the argument of type {@code T1}
+     * @param argument2 the argument of type {@code T2}
+     * @param argument3 the argument of type {@code T3}
+     * @param onCompleted the argument of type {@code CompletionCallback_1}
+     * @param onFaulted the argument of type {@code FaultCallback}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.NativeActivityUpdateContext.ScheduleFunc" target="_top">.NET documentation</a>
+     */
     public <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> void ScheduleFunc(ActivityFunc_4 activityFunc, T1 argument1, T2 argument2, T3 argument3, CompletionCallback_1 onCompleted, FaultCallback onFaulted) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -886,6 +2608,31 @@ public class NativeActivityUpdateContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ScheduleFunc.
+     *
+     * @param <T1> the type of the generic argument T1
+     * @param <T2> the type of the generic argument T2
+     * @param <TResult> the type of the generic argument TResult
+     * @param activityFunc the argument of type {@code ActivityFunc_3}
+     * @param argument1 the argument of type {@code T1}
+     * @param argument2 the argument of type {@code T2}
+     * @param onCompleted the argument of type {@code CompletionCallback_1}
+     * @param onFaulted the argument of type {@code FaultCallback}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.NativeActivityUpdateContext.ScheduleFunc" target="_top">.NET documentation</a>
+     */
     public <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> void ScheduleFunc(ActivityFunc_3 activityFunc, T1 argument1, T2 argument2, CompletionCallback_1 onCompleted, FaultCallback onFaulted) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -896,6 +2643,27 @@ public class NativeActivityUpdateContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ScheduleFunc.
+     *
+     * @param <TResult> the type of the generic argument TResult
+     * @param activityFunc the argument of type {@code ActivityFunc_1}
+     * @param onCompleted the argument of type {@code CompletionCallback_1}
+     * @param onFaulted the argument of type {@code FaultCallback}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.NativeActivityUpdateContext.ScheduleFunc" target="_top">.NET documentation</a>
+     */
     public <TResult extends IJCOBridgeReflected> void ScheduleFunc(ActivityFunc_1 activityFunc, CompletionCallback_1 onCompleted, FaultCallback onFaulted) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -906,6 +2674,24 @@ public class NativeActivityUpdateContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetValue.
+     *
+     * @param argument the argument of type {@code Argument}
+     * @param value the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.NativeActivityUpdateContext.SetValue" target="_top">.NET documentation</a>
+     */
     public void SetValue(Argument argument, NetObject value) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -916,6 +2702,24 @@ public class NativeActivityUpdateContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetValue.
+     *
+     * @param variable the argument of type {@code Variable}
+     * @param value the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.NativeActivityUpdateContext.SetValue" target="_top">.NET documentation</a>
+     */
     public void SetValue(Variable variable, NetObject value) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -926,6 +2730,25 @@ public class NativeActivityUpdateContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetValue.
+     *
+     * @param <T> the type of the generic argument T
+     * @param variable the argument of type {@code Variable_1}
+     * @param value the argument of type {@code T}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.NativeActivityUpdateContext.SetValue" target="_top">.NET documentation</a>
+     */
     public <T extends IJCOBridgeReflected> void SetValue(Variable_1 variable, T value) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -940,6 +2763,23 @@ public class NativeActivityUpdateContext extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsCancellationRequested.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.NativeActivityUpdateContext.IsCancellationRequested" target="_top">.NET documentation</a>
+     */
     public boolean getIsCancellationRequested() throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -954,6 +2794,23 @@ public class NativeActivityUpdateContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DefaultBookmarkScope.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.NativeActivityUpdateContext.DefaultBookmarkScope" target="_top">.NET documentation</a>
+     */
     public BookmarkScope getDefaultBookmarkScope() throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -969,6 +2826,23 @@ public class NativeActivityUpdateContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ActivityInstanceId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.NativeActivityUpdateContext.ActivityInstanceId" target="_top">.NET documentation</a>
+     */
     public java.lang.String getActivityInstanceId() throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

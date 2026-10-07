@@ -55,5 +55,13 @@ import system.componentmodel.dataannotations.ValidationAttribute;
  * @version 2.0.0.0
  */
 public interface IDataAnnotationsModelValidationFactory {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param metadata the .NET argument of type {@code System.Web.ModelBinding.ModelMetadata}
+     * @param context the .NET argument of type {@code System.Web.ModelBinding.ModelBindingExecutionContext}
+     * @param attribute the .NET argument of type {@code System.ComponentModel.DataAnnotations.ValidationAttribute}
+     * @return the value returned to the CLR
+     */
     public ModelValidator Invoke(ModelMetadata metadata, ModelBindingExecutionContext context, ValidationAttribute attribute);
 }

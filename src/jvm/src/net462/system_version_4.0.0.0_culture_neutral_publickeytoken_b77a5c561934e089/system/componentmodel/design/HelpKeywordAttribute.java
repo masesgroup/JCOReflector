@@ -99,7 +99,10 @@ public class HelpKeywordAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public HelpKeywordAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class HelpKeywordAttribute extends system.Attribute  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.HelpKeywordAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public HelpKeywordAttribute() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -156,6 +165,14 @@ public class HelpKeywordAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param keyword the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.HelpKeywordAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public HelpKeywordAttribute(java.lang.String keyword) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -166,6 +183,14 @@ public class HelpKeywordAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param t the argument of type {@code NetType}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.HelpKeywordAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public HelpKeywordAttribute(NetType t) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -180,6 +205,13 @@ public class HelpKeywordAttribute extends system.Attribute  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member IsDefaultAttribute.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.HelpKeywordAttribute.IsDefaultAttribute" target="_top">.NET documentation</a>
+     */
     public boolean IsDefaultAttribute() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +230,13 @@ public class HelpKeywordAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property HelpKeyword.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.HelpKeywordAttribute.HelpKeyword" target="_top">.NET documentation</a>
+     */
     public java.lang.String getHelpKeyword() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

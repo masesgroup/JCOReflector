@@ -105,7 +105,10 @@ public class IFixedTypeInfoImplementation extends NetObject implements IFixedTyp
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IFixedTypeInfoImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,15 @@ public class IFixedTypeInfoImplementation extends NetObject implements IFixedTyp
 
     // Methods section
     
+    /**
+     * Invokes the .NET member CreateInstance.
+     *
+     * @param pUnkOuter the argument of type {@code NetObject}
+     * @param riid the argument of type {@code JCORefOut<Guid>}
+     * @param ppvObj the argument of type {@code JCORefOut<NetObject>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.IFixedTypeInfo.CreateInstance" target="_top">.NET documentation</a>
+     */
     public void CreateInstance(NetObject pUnkOuter, JCORefOut<Guid> riid, JCORefOut<NetObject> ppvObj) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -157,6 +169,14 @@ public class IFixedTypeInfoImplementation extends NetObject implements IFixedTyp
         }
     }
 
+    /**
+     * Invokes the .NET member GetContainingTypeLib.
+     *
+     * @param ppTLB the argument of type {@code JCORefOut<ITypeLib>}
+     * @param pIndex the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicInteger>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.IFixedTypeInfo.GetContainingTypeLib" target="_top">.NET documentation</a>
+     */
     public void GetContainingTypeLib(JCORefOut<ITypeLib> ppTLB, JCORefOut<java.util.concurrent.atomic.AtomicInteger> pIndex) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -167,6 +187,17 @@ public class IFixedTypeInfoImplementation extends NetObject implements IFixedTyp
         }
     }
 
+    /**
+     * Invokes the .NET member GetDocumentation.
+     *
+     * @param index the argument of type {@code int}
+     * @param strName the argument of type {@code JCORefOut}
+     * @param strDocString the argument of type {@code JCORefOut}
+     * @param dwHelpContext the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicInteger>}
+     * @param strHelpFile the argument of type {@code JCORefOut}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.IFixedTypeInfo.GetDocumentation" target="_top">.NET documentation</a>
+     */
     public void GetDocumentation(int index, JCORefOut strName, JCORefOut strDocString, JCORefOut<java.util.concurrent.atomic.AtomicInteger> dwHelpContext, JCORefOut strHelpFile) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -177,6 +208,15 @@ public class IFixedTypeInfoImplementation extends NetObject implements IFixedTyp
         }
     }
 
+    /**
+     * Invokes the .NET member GetIDsOfNames.
+     *
+     * @param rgszNames the argument of type {@code java.lang.String[]}
+     * @param cNames the argument of type {@code int}
+     * @param pMemId the argument of type {@code JCORefOut}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.IFixedTypeInfo.GetIDsOfNames" target="_top">.NET documentation</a>
+     */
     public void GetIDsOfNames(java.lang.String[] rgszNames, int cNames, JCORefOut pMemId) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +227,14 @@ public class IFixedTypeInfoImplementation extends NetObject implements IFixedTyp
         }
     }
 
+    /**
+     * Invokes the .NET member GetImplTypeFlags.
+     *
+     * @param index the argument of type {@code int}
+     * @param pImplTypeFlags the argument of type {@code JCORefOut<IMPLTYPEFLAGS>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.IFixedTypeInfo.GetImplTypeFlags" target="_top">.NET documentation</a>
+     */
     public void GetImplTypeFlags(int index, JCORefOut<IMPLTYPEFLAGS> pImplTypeFlags) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +245,14 @@ public class IFixedTypeInfoImplementation extends NetObject implements IFixedTyp
         }
     }
 
+    /**
+     * Invokes the .NET member GetMops.
+     *
+     * @param memid the argument of type {@code int}
+     * @param pBstrMops the argument of type {@code JCORefOut}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.IFixedTypeInfo.GetMops" target="_top">.NET documentation</a>
+     */
     public void GetMops(int memid, JCORefOut pBstrMops) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +263,16 @@ public class IFixedTypeInfoImplementation extends NetObject implements IFixedTyp
         }
     }
 
+    /**
+     * Invokes the .NET member GetNames.
+     *
+     * @param memid the argument of type {@code int}
+     * @param rgBstrNames the argument of type {@code JCORefOut}
+     * @param cMaxNames the argument of type {@code int}
+     * @param pcNames the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicInteger>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.IFixedTypeInfo.GetNames" target="_top">.NET documentation</a>
+     */
     public void GetNames(int memid, JCORefOut rgBstrNames, int cMaxNames, JCORefOut<java.util.concurrent.atomic.AtomicInteger> pcNames) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -217,6 +283,13 @@ public class IFixedTypeInfoImplementation extends NetObject implements IFixedTyp
         }
     }
 
+    /**
+     * Invokes the .NET member GetTypeComp.
+     *
+     * @param ppTComp the argument of type {@code JCORefOut<ITypeComp>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.IFixedTypeInfo.GetTypeComp" target="_top">.NET documentation</a>
+     */
     public void GetTypeComp(JCORefOut<ITypeComp> ppTComp) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

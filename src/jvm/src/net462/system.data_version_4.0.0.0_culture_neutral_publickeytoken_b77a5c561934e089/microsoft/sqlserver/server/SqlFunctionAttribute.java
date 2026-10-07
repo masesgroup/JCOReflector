@@ -101,7 +101,10 @@ public class SqlFunctionAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SqlFunctionAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class SqlFunctionAttribute extends system.Attribute  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlFunctionAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public SqlFunctionAttribute() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -166,6 +175,13 @@ public class SqlFunctionAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsDeterministic.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlFunctionAttribute.IsDeterministic" target="_top">.NET documentation</a>
+     */
     public boolean getIsDeterministic() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +196,13 @@ public class SqlFunctionAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsDeterministic.
+     *
+     * @param IsDeterministic the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlFunctionAttribute.IsDeterministic" target="_top">.NET documentation</a>
+     */
     public void setIsDeterministic(boolean IsDeterministic) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +213,13 @@ public class SqlFunctionAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsPrecise.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlFunctionAttribute.IsPrecise" target="_top">.NET documentation</a>
+     */
     public boolean getIsPrecise() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +234,13 @@ public class SqlFunctionAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsPrecise.
+     *
+     * @param IsPrecise the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlFunctionAttribute.IsPrecise" target="_top">.NET documentation</a>
+     */
     public void setIsPrecise(boolean IsPrecise) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -214,6 +251,13 @@ public class SqlFunctionAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DataAccess.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlFunctionAttribute.DataAccess" target="_top">.NET documentation</a>
+     */
     public DataAccessKind getDataAccess() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -229,6 +273,13 @@ public class SqlFunctionAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DataAccess.
+     *
+     * @param DataAccess the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlFunctionAttribute.DataAccess" target="_top">.NET documentation</a>
+     */
     public void setDataAccess(DataAccessKind DataAccess) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -239,6 +290,13 @@ public class SqlFunctionAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SystemDataAccess.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlFunctionAttribute.SystemDataAccess" target="_top">.NET documentation</a>
+     */
     public SystemDataAccessKind getSystemDataAccess() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -254,6 +312,13 @@ public class SqlFunctionAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SystemDataAccess.
+     *
+     * @param SystemDataAccess the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlFunctionAttribute.SystemDataAccess" target="_top">.NET documentation</a>
+     */
     public void setSystemDataAccess(SystemDataAccessKind SystemDataAccess) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -264,6 +329,13 @@ public class SqlFunctionAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FillRowMethodName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlFunctionAttribute.FillRowMethodName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getFillRowMethodName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -278,6 +350,13 @@ public class SqlFunctionAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property FillRowMethodName.
+     *
+     * @param FillRowMethodName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlFunctionAttribute.FillRowMethodName" target="_top">.NET documentation</a>
+     */
     public void setFillRowMethodName(java.lang.String FillRowMethodName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -288,6 +367,13 @@ public class SqlFunctionAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlFunctionAttribute.Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -302,6 +388,13 @@ public class SqlFunctionAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Name.
+     *
+     * @param Name the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlFunctionAttribute.Name" target="_top">.NET documentation</a>
+     */
     public void setName(java.lang.String Name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -312,6 +405,13 @@ public class SqlFunctionAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TableDefinition.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlFunctionAttribute.TableDefinition" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTableDefinition() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -326,6 +426,13 @@ public class SqlFunctionAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TableDefinition.
+     *
+     * @param TableDefinition the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlFunctionAttribute.TableDefinition" target="_top">.NET documentation</a>
+     */
     public void setTableDefinition(java.lang.String TableDefinition) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

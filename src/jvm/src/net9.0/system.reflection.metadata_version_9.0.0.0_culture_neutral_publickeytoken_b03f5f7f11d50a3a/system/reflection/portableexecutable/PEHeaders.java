@@ -104,7 +104,10 @@ public class PEHeaders extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PEHeaders(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,30 @@ public class PEHeaders extends NetObject  {
     public PEHeaders() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param peStream the argument of type {@code Stream}
+     * @param size the argument of type {@code int}
+     * @param isLoadedImage the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.BadImageFormatException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.PEHeaders.-ctor" target="_top">.NET documentation</a>
+     */
     public PEHeaders(Stream peStream, int size, boolean isLoadedImage) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.BadImageFormatException, system.io.IOException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +191,29 @@ public class PEHeaders extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param peStream the argument of type {@code Stream}
+     * @param size the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.BadImageFormatException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.PEHeaders.-ctor" target="_top">.NET documentation</a>
+     */
     public PEHeaders(Stream peStream, int size) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.BadImageFormatException, system.io.IOException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException {
         try {
             // add reference to assemblyName.dll file
@@ -174,6 +224,23 @@ public class PEHeaders extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param peStream the argument of type {@code Stream}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.BadImageFormatException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.PEHeaders.-ctor" target="_top">.NET documentation</a>
+     */
     public PEHeaders(Stream peStream) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.BadImageFormatException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.io.IOException, system.globalization.CultureNotFoundException {
         try {
             // add reference to assemblyName.dll file
@@ -189,6 +256,24 @@ public class PEHeaders extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member TryGetDirectoryOffset.
+     *
+     * @param directory the argument of type {@code DirectoryEntry}
+     * @param offset the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicInteger>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.BadImageFormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.PEHeaders.TryGetDirectoryOffset" target="_top">.NET documentation</a>
+     */
     public boolean TryGetDirectoryOffset(DirectoryEntry directory, JCORefOut<java.util.concurrent.atomic.AtomicInteger> offset) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.BadImageFormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +288,14 @@ public class PEHeaders extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetContainingSectionIndex.
+     *
+     * @param relativeVirtualAddress the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.PEHeaders.GetContainingSectionIndex" target="_top">.NET documentation</a>
+     */
     public int GetContainingSectionIndex(int relativeVirtualAddress) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -247,6 +340,13 @@ public class PEHeaders extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsCoffOnly.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.PEHeaders.IsCoffOnly" target="_top">.NET documentation</a>
+     */
     public boolean getIsCoffOnly() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -261,6 +361,13 @@ public class PEHeaders extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsConsoleApplication.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.PEHeaders.IsConsoleApplication" target="_top">.NET documentation</a>
+     */
     public boolean getIsConsoleApplication() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -275,6 +382,13 @@ public class PEHeaders extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsDll.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.PEHeaders.IsDll" target="_top">.NET documentation</a>
+     */
     public boolean getIsDll() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -289,6 +403,13 @@ public class PEHeaders extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsExe.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.PEHeaders.IsExe" target="_top">.NET documentation</a>
+     */
     public boolean getIsExe() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -303,6 +424,13 @@ public class PEHeaders extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CoffHeaderStartOffset.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.PEHeaders.CoffHeaderStartOffset" target="_top">.NET documentation</a>
+     */
     public int getCoffHeaderStartOffset() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -343,6 +471,13 @@ public class PEHeaders extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CorHeaderStartOffset.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.PEHeaders.CorHeaderStartOffset" target="_top">.NET documentation</a>
+     */
     public int getCorHeaderStartOffset() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -383,6 +518,13 @@ public class PEHeaders extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MetadataSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.PEHeaders.MetadataSize" target="_top">.NET documentation</a>
+     */
     public int getMetadataSize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -423,6 +565,13 @@ public class PEHeaders extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MetadataStartOffset.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.PEHeaders.MetadataStartOffset" target="_top">.NET documentation</a>
+     */
     public int getMetadataStartOffset() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -463,6 +612,13 @@ public class PEHeaders extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PEHeaderStartOffset.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.PEHeaders.PEHeaderStartOffset" target="_top">.NET documentation</a>
+     */
     public int getPEHeaderStartOffset() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -503,6 +659,13 @@ public class PEHeaders extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SectionHeaders.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.PEHeaders.SectionHeaders" target="_top">.NET documentation</a>
+     */
     public ImmutableArray_1 getSectionHeaders() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -518,6 +681,13 @@ public class PEHeaders extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CoffHeader.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.PEHeaders.CoffHeader" target="_top">.NET documentation</a>
+     */
     public CoffHeader getCoffHeader() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -533,6 +703,13 @@ public class PEHeaders extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CorHeader.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.PEHeaders.CorHeader" target="_top">.NET documentation</a>
+     */
     public CorHeader getCorHeader() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -548,6 +725,13 @@ public class PEHeaders extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PEHeader.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.PEHeaders.PEHeader" target="_top">.NET documentation</a>
+     */
     public PEHeader getPEHeader() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

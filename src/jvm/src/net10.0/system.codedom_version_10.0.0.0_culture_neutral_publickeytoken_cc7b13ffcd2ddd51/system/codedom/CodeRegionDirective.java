@@ -100,7 +100,10 @@ public class CodeRegionDirective extends system.codedom.CodeDirective  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CodeRegionDirective(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class CodeRegionDirective extends system.codedom.CodeDirective  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeRegionDirective.-ctor" target="_top">.NET documentation</a>
+     */
     public CodeRegionDirective() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -157,6 +166,14 @@ public class CodeRegionDirective extends system.codedom.CodeDirective  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param regionMode the argument of type {@code CodeRegionMode}
+     * @param regionText the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeRegionDirective.-ctor" target="_top">.NET documentation</a>
+     */
     public CodeRegionDirective(CodeRegionMode regionMode, java.lang.String regionText) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -175,6 +192,13 @@ public class CodeRegionDirective extends system.codedom.CodeDirective  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property RegionMode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeRegionDirective.RegionMode" target="_top">.NET documentation</a>
+     */
     public CodeRegionMode getRegionMode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +214,13 @@ public class CodeRegionDirective extends system.codedom.CodeDirective  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RegionMode.
+     *
+     * @param RegionMode the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeRegionDirective.RegionMode" target="_top">.NET documentation</a>
+     */
     public void setRegionMode(CodeRegionMode RegionMode) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +231,13 @@ public class CodeRegionDirective extends system.codedom.CodeDirective  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RegionText.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeRegionDirective.RegionText" target="_top">.NET documentation</a>
+     */
     public java.lang.String getRegionText() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -214,6 +252,13 @@ public class CodeRegionDirective extends system.codedom.CodeDirective  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RegionText.
+     *
+     * @param RegionText the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeRegionDirective.RegionText" target="_top">.NET documentation</a>
+     */
     public void setRegionText(java.lang.String RegionText) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

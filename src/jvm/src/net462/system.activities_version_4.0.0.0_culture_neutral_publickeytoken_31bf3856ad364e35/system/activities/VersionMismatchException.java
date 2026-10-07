@@ -105,7 +105,9 @@ public class VersionMismatchException extends NetException {
         super();
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
      */
     public VersionMismatchException(java.lang.Object instance) {
         super(instance);
@@ -166,6 +168,26 @@ public class VersionMismatchException extends NetException {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param expectedVersion the argument of type {@code WorkflowIdentity}
+     * @param actualVersion the argument of type {@code WorkflowIdentity}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.VersionMismatchException.-ctor" target="_top">.NET documentation</a>
+     */
     public VersionMismatchException(WorkflowIdentity expectedVersion, WorkflowIdentity actualVersion) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
@@ -176,6 +198,15 @@ public class VersionMismatchException extends NetException {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param message the argument of type {@code java.lang.String}
+     * @param expectedVersion the argument of type {@code WorkflowIdentity}
+     * @param actualVersion the argument of type {@code WorkflowIdentity}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.VersionMismatchException.-ctor" target="_top">.NET documentation</a>
+     */
     public VersionMismatchException(java.lang.String message, WorkflowIdentity expectedVersion, WorkflowIdentity actualVersion) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -186,6 +217,16 @@ public class VersionMismatchException extends NetException {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param message the argument of type {@code java.lang.String}
+     * @param expectedVersion the argument of type {@code WorkflowIdentity}
+     * @param actualVersion the argument of type {@code WorkflowIdentity}
+     * @param innerException the argument of type {@code NetException}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.VersionMismatchException.-ctor" target="_top">.NET documentation</a>
+     */
     public VersionMismatchException(java.lang.String message, WorkflowIdentity expectedVersion, WorkflowIdentity actualVersion, NetException innerException) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -200,6 +241,29 @@ public class VersionMismatchException extends NetException {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetObjectData.
+     *
+     * @param info the argument of type {@code SerializationInfo}
+     * @param context the argument of type {@code StreamingContext}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.runtime.serialization.SerializationException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.VersionMismatchException.GetObjectData" target="_top">.NET documentation</a>
+     */
     public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.TypeLoadException, system.NotSupportedException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.NotImplementedException, system.runtime.serialization.SerializationException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -214,6 +278,13 @@ public class VersionMismatchException extends NetException {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ActualVersion.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.VersionMismatchException.ActualVersion" target="_top">.NET documentation</a>
+     */
     public WorkflowIdentity getActualVersion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -229,6 +300,13 @@ public class VersionMismatchException extends NetException {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ActualVersion.
+     *
+     * @param ActualVersion the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.VersionMismatchException.ActualVersion" target="_top">.NET documentation</a>
+     */
     public void setActualVersion(WorkflowIdentity ActualVersion) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -239,6 +317,13 @@ public class VersionMismatchException extends NetException {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ExpectedVersion.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.VersionMismatchException.ExpectedVersion" target="_top">.NET documentation</a>
+     */
     public WorkflowIdentity getExpectedVersion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -254,6 +339,13 @@ public class VersionMismatchException extends NetException {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ExpectedVersion.
+     *
+     * @param ExpectedVersion the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.VersionMismatchException.ExpectedVersion" target="_top">.NET documentation</a>
+     */
     public void setExpectedVersion(WorkflowIdentity ExpectedVersion) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

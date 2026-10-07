@@ -102,7 +102,10 @@ public class MustUnderstandBehavior extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public MustUnderstandBehavior(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,13 @@ public class MustUnderstandBehavior extends NetObject  {
     public MustUnderstandBehavior() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param validate the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.MustUnderstandBehavior.-ctor" target="_top">.NET documentation</a>
+     */
     public MustUnderstandBehavior(boolean validate) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -170,8 +180,13 @@ public class MustUnderstandBehavior extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIEndpointBehavior method available in IEndpointBehavior to obtain an object with an invocable method
+     *
+     * @param endpoint the argument of type {@code ServiceEndpoint}
+     * @param bindingParameters the argument of type {@code BindingParameterCollection}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.IEndpointBehavior.AddBindingParameters" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void AddBindingParameters(ServiceEndpoint endpoint, BindingParameterCollection bindingParameters) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEndpointBehavior to obtain the full interface.");
     }
@@ -179,8 +194,13 @@ public class MustUnderstandBehavior extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIEndpointBehavior method available in IEndpointBehavior to obtain an object with an invocable method
+     *
+     * @param endpoint the argument of type {@code ServiceEndpoint}
+     * @param clientRuntime the argument of type {@code ClientRuntime}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.IEndpointBehavior.ApplyClientBehavior" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void ApplyClientBehavior(ServiceEndpoint endpoint, ClientRuntime clientRuntime) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEndpointBehavior to obtain the full interface.");
     }
@@ -188,8 +208,13 @@ public class MustUnderstandBehavior extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIEndpointBehavior method available in IEndpointBehavior to obtain an object with an invocable method
+     *
+     * @param endpoint the argument of type {@code ServiceEndpoint}
+     * @param endpointDispatcher the argument of type {@code EndpointDispatcher}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.IEndpointBehavior.ApplyDispatchBehavior" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void ApplyDispatchBehavior(ServiceEndpoint endpoint, EndpointDispatcher endpointDispatcher) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEndpointBehavior to obtain the full interface.");
     }
@@ -197,8 +222,12 @@ public class MustUnderstandBehavior extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIEndpointBehavior method available in IEndpointBehavior to obtain an object with an invocable method
+     *
+     * @param endpoint the argument of type {@code ServiceEndpoint}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.IEndpointBehavior.Validate" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void Validate(ServiceEndpoint endpoint) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEndpointBehavior to obtain the full interface.");
     }
@@ -207,6 +236,13 @@ public class MustUnderstandBehavior extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ValidateMustUnderstand.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.MustUnderstandBehavior.ValidateMustUnderstand" target="_top">.NET documentation</a>
+     */
     public boolean getValidateMustUnderstand() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -221,6 +257,13 @@ public class MustUnderstandBehavior extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ValidateMustUnderstand.
+     *
+     * @param ValidateMustUnderstand the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.MustUnderstandBehavior.ValidateMustUnderstand" target="_top">.NET documentation</a>
+     */
     public void setValidateMustUnderstand(boolean ValidateMustUnderstand) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

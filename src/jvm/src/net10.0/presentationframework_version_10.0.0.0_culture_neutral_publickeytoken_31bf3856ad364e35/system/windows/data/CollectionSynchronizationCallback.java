@@ -161,7 +161,10 @@ public class CollectionSynchronizationCallback extends JCVoidDelegate implements
         callerInstance = instance;
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CollectionSynchronizationCallback(java.lang.Object instance) throws Throwable {
         super(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
@@ -183,6 +186,16 @@ public class CollectionSynchronizationCallback extends JCVoidDelegate implements
         return JCOBridgeInstance.translateException(ne);
     }
 
+    /**
+     * Invokes the .NET member DynamicInvoke.
+     *
+     * @param collection the argument of type {@code IEnumerable}
+     * @param context the argument of type {@code NetObject}
+     * @param accessMethod the argument of type {@code Action}
+     * @param writeAccess the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Delegate.DynamicInvoke" target="_top">.NET documentation</a>
+     */
     public void DynamicInvoke(IEnumerable collection, NetObject context, Action accessMethod, boolean writeAccess) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,7 +207,12 @@ public class CollectionSynchronizationCallback extends JCVoidDelegate implements
     }
 
     /**
-     * Methods invoked in JVM when an event is raised in CLR 
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param collection the .NET argument of type {@code System.Collections.IEnumerable}
+     * @param context the .NET argument of type {@code System.Object}
+     * @param accessMethod the .NET argument of type {@code System.Action}
+     * @param writeAccess the .NET argument of type {@code System.Boolean}
      */
     public void Invoke(IEnumerable collection, NetObject context, Action accessMethod, boolean writeAccess) {
     }

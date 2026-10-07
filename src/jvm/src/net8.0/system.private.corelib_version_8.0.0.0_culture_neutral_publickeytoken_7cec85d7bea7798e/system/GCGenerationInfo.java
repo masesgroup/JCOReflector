@@ -99,7 +99,10 @@ public class GCGenerationInfo extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public GCGenerationInfo(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -158,6 +161,13 @@ public class GCGenerationInfo extends system.ValueType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property FragmentationAfterBytes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.GCGenerationInfo.FragmentationAfterBytes" target="_top">.NET documentation</a>
+     */
     public long getFragmentationAfterBytes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +208,13 @@ public class GCGenerationInfo extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FragmentationBeforeBytes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.GCGenerationInfo.FragmentationBeforeBytes" target="_top">.NET documentation</a>
+     */
     public long getFragmentationBeforeBytes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -238,6 +255,13 @@ public class GCGenerationInfo extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SizeAfterBytes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.GCGenerationInfo.SizeAfterBytes" target="_top">.NET documentation</a>
+     */
     public long getSizeAfterBytes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -278,6 +302,13 @@ public class GCGenerationInfo extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SizeBeforeBytes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.GCGenerationInfo.SizeBeforeBytes" target="_top">.NET documentation</a>
+     */
     public long getSizeBeforeBytes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

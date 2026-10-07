@@ -100,7 +100,10 @@ public class AffineTransform3D extends system.windows.media.media3d.Transform3D 
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public AffineTransform3D(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,18 @@ public class AffineTransform3D extends system.windows.media.media3d.Transform3D 
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CloneNewAffineTransform3D.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.AffineTransform3D.CloneNewAffineTransform3D" target="_top">.NET documentation</a>
+     */
     public AffineTransform3D CloneNewAffineTransform3D() throws Throwable, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -168,6 +183,19 @@ public class AffineTransform3D extends system.windows.media.media3d.Transform3D 
         }
     }
 
+    /**
+     * Invokes the .NET member CloneCurrentValueNewAffineTransform3D.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.AffineTransform3D.CloneCurrentValueNewAffineTransform3D" target="_top">.NET documentation</a>
+     */
     public AffineTransform3D CloneCurrentValueNewAffineTransform3D() throws Throwable, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

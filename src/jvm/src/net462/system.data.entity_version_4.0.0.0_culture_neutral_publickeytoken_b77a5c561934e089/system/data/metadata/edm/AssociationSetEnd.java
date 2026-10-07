@@ -103,7 +103,10 @@ public class AssociationSetEnd extends system.data.metadata.edm.MetadataItem  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public AssociationSetEnd(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -162,6 +165,13 @@ public class AssociationSetEnd extends system.data.metadata.edm.MetadataItem  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CorrespondingAssociationEndMember.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.AssociationSetEnd.CorrespondingAssociationEndMember" target="_top">.NET documentation</a>
+     */
     public AssociationEndMember getCorrespondingAssociationEndMember() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -177,6 +187,13 @@ public class AssociationSetEnd extends system.data.metadata.edm.MetadataItem  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ParentAssociationSet.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.AssociationSetEnd.ParentAssociationSet" target="_top">.NET documentation</a>
+     */
     public AssociationSet getParentAssociationSet() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -192,6 +209,13 @@ public class AssociationSetEnd extends system.data.metadata.edm.MetadataItem  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EntitySet.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.AssociationSetEnd.EntitySet" target="_top">.NET documentation</a>
+     */
     public EntitySet getEntitySet() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +231,13 @@ public class AssociationSetEnd extends system.data.metadata.edm.MetadataItem  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.AssociationSetEnd.Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -221,6 +252,13 @@ public class AssociationSetEnd extends system.data.metadata.edm.MetadataItem  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Role.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.AssociationSetEnd.Role" target="_top">.NET documentation</a>
+     */
     public java.lang.String getRole() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

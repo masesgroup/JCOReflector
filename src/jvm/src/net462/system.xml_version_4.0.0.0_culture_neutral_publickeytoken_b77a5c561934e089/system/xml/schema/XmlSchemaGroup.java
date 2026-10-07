@@ -101,7 +101,10 @@ public class XmlSchemaGroup extends system.xml.schema.XmlSchemaAnnotated  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XmlSchemaGroup(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class XmlSchemaGroup extends system.xml.schema.XmlSchemaAnnotated  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaGroup.-ctor" target="_top">.NET documentation</a>
+     */
     public XmlSchemaGroup() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -166,6 +175,13 @@ public class XmlSchemaGroup extends system.xml.schema.XmlSchemaAnnotated  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaGroup.Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +196,13 @@ public class XmlSchemaGroup extends system.xml.schema.XmlSchemaAnnotated  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Name.
+     *
+     * @param Name the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaGroup.Name" target="_top">.NET documentation</a>
+     */
     public void setName(java.lang.String Name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +213,13 @@ public class XmlSchemaGroup extends system.xml.schema.XmlSchemaAnnotated  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Particle.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaGroup.Particle" target="_top">.NET documentation</a>
+     */
     public XmlSchemaGroupBase getParticle() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +235,13 @@ public class XmlSchemaGroup extends system.xml.schema.XmlSchemaAnnotated  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Particle.
+     *
+     * @param Particle the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaGroup.Particle" target="_top">.NET documentation</a>
+     */
     public void setParticle(XmlSchemaGroupBase Particle) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +252,13 @@ public class XmlSchemaGroup extends system.xml.schema.XmlSchemaAnnotated  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property QualifiedName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaGroup.QualifiedName" target="_top">.NET documentation</a>
+     */
     public XmlQualifiedName getQualifiedName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

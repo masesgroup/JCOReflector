@@ -103,7 +103,10 @@ public class IConnectionPointImplementation extends NetObject implements IConnec
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IConnectionPointImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -145,6 +148,14 @@ public class IConnectionPointImplementation extends NetObject implements IConnec
 
     // Methods section
     
+    /**
+     * Invokes the .NET member Advise.
+     *
+     * @param pUnkSink the argument of type {@code NetObject}
+     * @param pdwCookie the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicInteger>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComTypes.IConnectionPoint.Advise" target="_top">.NET documentation</a>
+     */
     public void Advise(NetObject pUnkSink, JCORefOut<java.util.concurrent.atomic.AtomicInteger> pdwCookie) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -155,6 +166,13 @@ public class IConnectionPointImplementation extends NetObject implements IConnec
         }
     }
 
+    /**
+     * Invokes the .NET member EnumConnections.
+     *
+     * @param ppEnum the argument of type {@code JCORefOut<IEnumConnections>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComTypes.IConnectionPoint.EnumConnections" target="_top">.NET documentation</a>
+     */
     public void EnumConnections(JCORefOut<IEnumConnections> ppEnum) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -165,6 +183,13 @@ public class IConnectionPointImplementation extends NetObject implements IConnec
         }
     }
 
+    /**
+     * Invokes the .NET member GetConnectionInterface.
+     *
+     * @param pIID the argument of type {@code JCORefOut<Guid>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComTypes.IConnectionPoint.GetConnectionInterface" target="_top">.NET documentation</a>
+     */
     public void GetConnectionInterface(JCORefOut<Guid> pIID) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -175,6 +200,13 @@ public class IConnectionPointImplementation extends NetObject implements IConnec
         }
     }
 
+    /**
+     * Invokes the .NET member GetConnectionPointContainer.
+     *
+     * @param ppCPC the argument of type {@code JCORefOut<IConnectionPointContainer>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComTypes.IConnectionPoint.GetConnectionPointContainer" target="_top">.NET documentation</a>
+     */
     public void GetConnectionPointContainer(JCORefOut<IConnectionPointContainer> ppCPC) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -185,6 +217,13 @@ public class IConnectionPointImplementation extends NetObject implements IConnec
         }
     }
 
+    /**
+     * Invokes the .NET member Unadvise.
+     *
+     * @param dwCookie the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComTypes.IConnectionPoint.Unadvise" target="_top">.NET documentation</a>
+     */
     public void Unadvise(int dwCookie) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

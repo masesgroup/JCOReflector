@@ -114,7 +114,9 @@ public class PropertySort extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
      */
     public PropertySort(java.lang.Object instance) {
         super(instance);
@@ -179,18 +181,50 @@ public class PropertySort extends NetObject  {
 
     // Flags management section
 
+    /**
+     * Invokes the .NET member add.
+     *
+     * @param val the argument of type {@code PropertySort}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public final PropertySort add(PropertySort val) throws Throwable {
         return new PropertySort(NetEnum.add(classInstance, val.classInstance));
     }
 
+    /**
+     * Invokes the .NET member remove.
+     *
+     * @param val the argument of type {@code PropertySort}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public final PropertySort remove(PropertySort val) throws Throwable {
         return new PropertySort(NetEnum.remove(classInstance, val.classInstance));
     }
 
+    /**
+     * Invokes the .NET member is.
+     *
+     * @param val the argument of type {@code PropertySort}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public final boolean is(PropertySort val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
+    /**
+     * Invokes the .NET member has.
+     *
+     * @param val the argument of type {@code PropertySort}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public final boolean has(PropertySort val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }

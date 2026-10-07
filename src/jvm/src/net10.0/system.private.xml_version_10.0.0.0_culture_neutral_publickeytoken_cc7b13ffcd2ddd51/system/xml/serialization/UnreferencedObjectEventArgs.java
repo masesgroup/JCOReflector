@@ -99,7 +99,10 @@ public class UnreferencedObjectEventArgs extends system.EventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public UnreferencedObjectEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,14 @@ public class UnreferencedObjectEventArgs extends system.EventArgs  {
     public UnreferencedObjectEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param o the argument of type {@code NetObject}
+     * @param id the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.UnreferencedObjectEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public UnreferencedObjectEventArgs(NetObject o, java.lang.String id) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +179,13 @@ public class UnreferencedObjectEventArgs extends system.EventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property UnreferencedObject.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.UnreferencedObjectEventArgs.UnreferencedObject" target="_top">.NET documentation</a>
+     */
     public NetObject getUnreferencedObject() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +201,13 @@ public class UnreferencedObjectEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UnreferencedId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.UnreferencedObjectEventArgs.UnreferencedId" target="_top">.NET documentation</a>
+     */
     public java.lang.String getUnreferencedId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

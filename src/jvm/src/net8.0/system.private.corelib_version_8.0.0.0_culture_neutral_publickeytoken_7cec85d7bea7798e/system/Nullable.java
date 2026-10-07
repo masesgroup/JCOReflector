@@ -99,7 +99,10 @@ public class Nullable extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Nullable(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,16 @@ public class Nullable extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Equals.
+     *
+     * @param <T> the type of the generic argument T
+     * @param n1 the argument of type {@code Nullable_1}
+     * @param n2 the argument of type {@code Nullable_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Nullable.Equals" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> boolean Equals(Nullable_1 n1, Nullable_1 n2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -166,6 +179,16 @@ public class Nullable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Compare.
+     *
+     * @param <T> the type of the generic argument T
+     * @param n1 the argument of type {@code Nullable_1}
+     * @param n2 the argument of type {@code Nullable_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Nullable.Compare" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> int Compare(Nullable_1 n1, Nullable_1 n2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -206,6 +229,23 @@ public class Nullable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetUnderlyingType.
+     *
+     * @param nullableType the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Nullable.GetUnderlyingType" target="_top">.NET documentation</a>
+     */
     public static NetType GetUnderlyingType(NetType nullableType) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

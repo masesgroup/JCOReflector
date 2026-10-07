@@ -99,7 +99,10 @@ public class TextDecorations extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TextDecorations(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,13 @@ public class TextDecorations extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Baseline.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.TextDecorations.Baseline" target="_top">.NET documentation</a>
+     */
     public static TextDecorationCollection getBaseline() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -171,6 +181,13 @@ public class TextDecorations extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OverLine.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.TextDecorations.OverLine" target="_top">.NET documentation</a>
+     */
     public static TextDecorationCollection getOverLine() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -186,6 +203,13 @@ public class TextDecorations extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Strikethrough.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.TextDecorations.Strikethrough" target="_top">.NET documentation</a>
+     */
     public static TextDecorationCollection getStrikethrough() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -201,6 +225,13 @@ public class TextDecorations extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Underline.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.TextDecorations.Underline" target="_top">.NET documentation</a>
+     */
     public static TextDecorationCollection getUnderline() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

@@ -99,7 +99,10 @@ public class ManagedToNativeComInteropStubAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ManagedToNativeComInteropStubAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,14 @@ public class ManagedToNativeComInteropStubAttribute extends system.Attribute  {
     public ManagedToNativeComInteropStubAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param _classType the argument of type {@code NetType}
+     * @param methodName the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ManagedToNativeComInteropStubAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public ManagedToNativeComInteropStubAttribute(NetType _classType, java.lang.String methodName) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +179,13 @@ public class ManagedToNativeComInteropStubAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property MethodName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ManagedToNativeComInteropStubAttribute.MethodName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getMethodName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +200,13 @@ public class ManagedToNativeComInteropStubAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ClassType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ManagedToNativeComInteropStubAttribute.ClassType" target="_top">.NET documentation</a>
+     */
     public NetType getClassType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

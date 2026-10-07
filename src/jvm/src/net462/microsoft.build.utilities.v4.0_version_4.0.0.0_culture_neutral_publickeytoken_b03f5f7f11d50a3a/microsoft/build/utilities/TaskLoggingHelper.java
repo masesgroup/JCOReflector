@@ -106,7 +106,10 @@ public class TaskLoggingHelper extends system.MarshalByRefObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TaskLoggingHelper(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,21 @@ public class TaskLoggingHelper extends system.MarshalByRefObject  {
     public TaskLoggingHelper() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param buildEngine the argument of type {@code IBuildEngine}
+     * @param taskName the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.TaskLoggingHelper.-ctor" target="_top">.NET documentation</a>
+     */
     public TaskLoggingHelper(IBuildEngine buildEngine, java.lang.String taskName) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
@@ -166,6 +184,19 @@ public class TaskLoggingHelper extends system.MarshalByRefObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param taskInstance the argument of type {@code ITask}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.TaskLoggingHelper.-ctor" target="_top">.NET documentation</a>
+     */
     public TaskLoggingHelper(ITask taskInstance) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -181,6 +212,26 @@ public class TaskLoggingHelper extends system.MarshalByRefObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member LogMessageFromText.
+     *
+     * @param lineOfText the argument of type {@code java.lang.String}
+     * @param messageImportance the argument of type {@code MessageImportance}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.text.regularexpressions.RegexMatchTimeoutException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.TaskLoggingHelper.LogMessageFromText" target="_top">.NET documentation</a>
+     */
     public boolean LogMessageFromText(java.lang.String lineOfText, MessageImportance messageImportance) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.OverflowException, system.text.regularexpressions.RegexMatchTimeoutException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -195,6 +246,28 @@ public class TaskLoggingHelper extends system.MarshalByRefObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LogMessagesFromFile.
+     *
+     * @param fileName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.TaskLoggingHelper.LogMessagesFromFile" target="_top">.NET documentation</a>
+     */
     public boolean LogMessagesFromFile(java.lang.String fileName) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.io.PathTooLongException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.security.SecurityException, system.io.IOException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -209,6 +282,33 @@ public class TaskLoggingHelper extends system.MarshalByRefObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LogMessagesFromFile.
+     *
+     * @param fileName the argument of type {@code java.lang.String}
+     * @param messageImportance the argument of type {@code MessageImportance}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.text.regularexpressions.RegexMatchTimeoutException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.TaskLoggingHelper.LogMessagesFromFile" target="_top">.NET documentation</a>
+     */
     public boolean LogMessagesFromFile(java.lang.String fileName, MessageImportance messageImportance) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NullReferenceException, system.security.SecurityException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -223,6 +323,25 @@ public class TaskLoggingHelper extends system.MarshalByRefObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LogMessagesFromStream.
+     *
+     * @param stream the argument of type {@code TextReader}
+     * @param messageImportance the argument of type {@code MessageImportance}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.text.regularexpressions.RegexMatchTimeoutException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.TaskLoggingHelper.LogMessagesFromStream" target="_top">.NET documentation</a>
+     */
     public boolean LogMessagesFromStream(TextReader stream, MessageImportance messageImportance) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.text.regularexpressions.RegexMatchTimeoutException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -237,6 +356,33 @@ public class TaskLoggingHelper extends system.MarshalByRefObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member InitializeLifetimeService.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.runtime.remoting.RemotingException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.TypeInitializationException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.TaskLoggingHelper.InitializeLifetimeService" target="_top">.NET documentation</a>
+     */
     public NetObject InitializeLifetimeService() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.runtime.remoting.RemotingException, system.ObjectDisposedException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.IndexOutOfRangeException, system.NullReferenceException, system.NotSupportedException, system.OutOfMemoryException, system.TypeInitializationException, system.InvalidOperationException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -252,6 +398,21 @@ public class TaskLoggingHelper extends system.MarshalByRefObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ExtractMessageCode.
+     *
+     * @param message the argument of type {@code java.lang.String}
+     * @param messageWithoutCodePrefix the argument of type {@code JCORefOut}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.TaskLoggingHelper.ExtractMessageCode" target="_top">.NET documentation</a>
+     */
     public java.lang.String ExtractMessageCode(java.lang.String message, JCORefOut messageWithoutCodePrefix) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -266,6 +427,22 @@ public class TaskLoggingHelper extends system.MarshalByRefObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member FormatResourceString.
+     *
+     * @param resourceName the argument of type {@code java.lang.String}
+     * @param args the argument of type {@code NetObject...}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.TaskLoggingHelper.FormatResourceString" target="_top">.NET documentation</a>
+     */
     public java.lang.String FormatResourceString(java.lang.String resourceName, NetObject... args) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -280,6 +457,21 @@ public class TaskLoggingHelper extends system.MarshalByRefObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member FormatString.
+     *
+     * @param unformatted the argument of type {@code java.lang.String}
+     * @param args the argument of type {@code NetObject...}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.TaskLoggingHelper.FormatString" target="_top">.NET documentation</a>
+     */
     public java.lang.String FormatString(java.lang.String unformatted, NetObject... args) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -294,6 +486,20 @@ public class TaskLoggingHelper extends system.MarshalByRefObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetResourceMessage.
+     *
+     * @param resourceName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.TaskLoggingHelper.GetResourceMessage" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetResourceMessage(java.lang.String resourceName) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -308,6 +514,20 @@ public class TaskLoggingHelper extends system.MarshalByRefObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LogCommandLine.
+     *
+     * @param importance the argument of type {@code MessageImportance}
+     * @param commandLine the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.TaskLoggingHelper.LogCommandLine" target="_top">.NET documentation</a>
+     */
     public void LogCommandLine(MessageImportance importance, java.lang.String commandLine) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -318,6 +538,18 @@ public class TaskLoggingHelper extends system.MarshalByRefObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LogCommandLine.
+     *
+     * @param commandLine the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.TaskLoggingHelper.LogCommandLine" target="_top">.NET documentation</a>
+     */
     public void LogCommandLine(java.lang.String commandLine) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -328,6 +560,28 @@ public class TaskLoggingHelper extends system.MarshalByRefObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LogCriticalMessage.
+     *
+     * @param subcategory the argument of type {@code java.lang.String}
+     * @param code the argument of type {@code java.lang.String}
+     * @param helpKeyword the argument of type {@code java.lang.String}
+     * @param file the argument of type {@code java.lang.String}
+     * @param lineNumber the argument of type {@code int}
+     * @param columnNumber the argument of type {@code int}
+     * @param endLineNumber the argument of type {@code int}
+     * @param endColumnNumber the argument of type {@code int}
+     * @param message the argument of type {@code java.lang.String}
+     * @param messageArgs the argument of type {@code NetObject...}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.TaskLoggingHelper.LogCriticalMessage" target="_top">.NET documentation</a>
+     */
     public void LogCriticalMessage(java.lang.String subcategory, java.lang.String code, java.lang.String helpKeyword, java.lang.String file, int lineNumber, int columnNumber, int endLineNumber, int endColumnNumber, java.lang.String message, NetObject... messageArgs) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -338,6 +592,19 @@ public class TaskLoggingHelper extends system.MarshalByRefObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LogError.
+     *
+     * @param message the argument of type {@code java.lang.String}
+     * @param messageArgs the argument of type {@code NetObject...}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.TaskLoggingHelper.LogError" target="_top">.NET documentation</a>
+     */
     public void LogError(java.lang.String message, NetObject... messageArgs) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -348,6 +615,28 @@ public class TaskLoggingHelper extends system.MarshalByRefObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LogError.
+     *
+     * @param subcategory the argument of type {@code java.lang.String}
+     * @param errorCode the argument of type {@code java.lang.String}
+     * @param helpKeyword the argument of type {@code java.lang.String}
+     * @param file the argument of type {@code java.lang.String}
+     * @param lineNumber the argument of type {@code int}
+     * @param columnNumber the argument of type {@code int}
+     * @param endLineNumber the argument of type {@code int}
+     * @param endColumnNumber the argument of type {@code int}
+     * @param message the argument of type {@code java.lang.String}
+     * @param messageArgs the argument of type {@code NetObject...}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.TaskLoggingHelper.LogError" target="_top">.NET documentation</a>
+     */
     public void LogError(java.lang.String subcategory, java.lang.String errorCode, java.lang.String helpKeyword, java.lang.String file, int lineNumber, int columnNumber, int endLineNumber, int endColumnNumber, java.lang.String message, NetObject... messageArgs) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -358,6 +647,21 @@ public class TaskLoggingHelper extends system.MarshalByRefObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LogErrorFromException.
+     *
+     * @param exception the argument of type {@code NetException}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.TaskLoggingHelper.LogErrorFromException" target="_top">.NET documentation</a>
+     */
     public void LogErrorFromException(NetException exception) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.NotSupportedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -368,6 +672,24 @@ public class TaskLoggingHelper extends system.MarshalByRefObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LogErrorFromException.
+     *
+     * @param exception the argument of type {@code NetException}
+     * @param showStackTrace the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.TaskLoggingHelper.LogErrorFromException" target="_top">.NET documentation</a>
+     */
     public void LogErrorFromException(NetException exception, boolean showStackTrace) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.security.SecurityException, system.NotSupportedException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -378,6 +700,30 @@ public class TaskLoggingHelper extends system.MarshalByRefObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LogErrorFromException.
+     *
+     * @param exception the argument of type {@code NetException}
+     * @param showStackTrace the argument of type {@code boolean}
+     * @param showDetail the argument of type {@code boolean}
+     * @param file the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.TaskLoggingHelper.LogErrorFromException" target="_top">.NET documentation</a>
+     */
     public void LogErrorFromException(NetException exception, boolean showStackTrace, boolean showDetail, java.lang.String file) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NullReferenceException, system.NotSupportedException, system.OutOfMemoryException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -388,6 +734,20 @@ public class TaskLoggingHelper extends system.MarshalByRefObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LogErrorFromResources.
+     *
+     * @param messageResourceName the argument of type {@code java.lang.String}
+     * @param messageArgs the argument of type {@code NetObject...}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.TaskLoggingHelper.LogErrorFromResources" target="_top">.NET documentation</a>
+     */
     public void LogErrorFromResources(java.lang.String messageResourceName, NetObject... messageArgs) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -398,6 +758,29 @@ public class TaskLoggingHelper extends system.MarshalByRefObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LogErrorFromResources.
+     *
+     * @param subcategoryResourceName the argument of type {@code java.lang.String}
+     * @param errorCode the argument of type {@code java.lang.String}
+     * @param helpKeyword the argument of type {@code java.lang.String}
+     * @param file the argument of type {@code java.lang.String}
+     * @param lineNumber the argument of type {@code int}
+     * @param columnNumber the argument of type {@code int}
+     * @param endLineNumber the argument of type {@code int}
+     * @param endColumnNumber the argument of type {@code int}
+     * @param messageResourceName the argument of type {@code java.lang.String}
+     * @param messageArgs the argument of type {@code NetObject...}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.TaskLoggingHelper.LogErrorFromResources" target="_top">.NET documentation</a>
+     */
     public void LogErrorFromResources(java.lang.String subcategoryResourceName, java.lang.String errorCode, java.lang.String helpKeyword, java.lang.String file, int lineNumber, int columnNumber, int endLineNumber, int endColumnNumber, java.lang.String messageResourceName, NetObject... messageArgs) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -408,6 +791,20 @@ public class TaskLoggingHelper extends system.MarshalByRefObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LogErrorWithCodeFromResources.
+     *
+     * @param messageResourceName the argument of type {@code java.lang.String}
+     * @param messageArgs the argument of type {@code NetObject...}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.TaskLoggingHelper.LogErrorWithCodeFromResources" target="_top">.NET documentation</a>
+     */
     public void LogErrorWithCodeFromResources(java.lang.String messageResourceName, NetObject... messageArgs) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -418,6 +815,27 @@ public class TaskLoggingHelper extends system.MarshalByRefObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LogErrorWithCodeFromResources.
+     *
+     * @param subcategoryResourceName the argument of type {@code java.lang.String}
+     * @param file the argument of type {@code java.lang.String}
+     * @param lineNumber the argument of type {@code int}
+     * @param columnNumber the argument of type {@code int}
+     * @param endLineNumber the argument of type {@code int}
+     * @param endColumnNumber the argument of type {@code int}
+     * @param messageResourceName the argument of type {@code java.lang.String}
+     * @param messageArgs the argument of type {@code NetObject...}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.TaskLoggingHelper.LogErrorWithCodeFromResources" target="_top">.NET documentation</a>
+     */
     public void LogErrorWithCodeFromResources(java.lang.String subcategoryResourceName, java.lang.String file, int lineNumber, int columnNumber, int endLineNumber, int endColumnNumber, java.lang.String messageResourceName, NetObject... messageArgs) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -428,6 +846,17 @@ public class TaskLoggingHelper extends system.MarshalByRefObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LogExternalProjectFinished.
+     *
+     * @param message the argument of type {@code java.lang.String}
+     * @param helpKeyword the argument of type {@code java.lang.String}
+     * @param projectFile the argument of type {@code java.lang.String}
+     * @param succeeded the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.TaskLoggingHelper.LogExternalProjectFinished" target="_top">.NET documentation</a>
+     */
     public void LogExternalProjectFinished(java.lang.String message, java.lang.String helpKeyword, java.lang.String projectFile, boolean succeeded) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -438,6 +867,17 @@ public class TaskLoggingHelper extends system.MarshalByRefObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LogExternalProjectStarted.
+     *
+     * @param message the argument of type {@code java.lang.String}
+     * @param helpKeyword the argument of type {@code java.lang.String}
+     * @param projectFile the argument of type {@code java.lang.String}
+     * @param targetNames the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.TaskLoggingHelper.LogExternalProjectStarted" target="_top">.NET documentation</a>
+     */
     public void LogExternalProjectStarted(java.lang.String message, java.lang.String helpKeyword, java.lang.String projectFile, java.lang.String targetNames) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -448,6 +888,21 @@ public class TaskLoggingHelper extends system.MarshalByRefObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LogMessage.
+     *
+     * @param importance the argument of type {@code MessageImportance}
+     * @param message the argument of type {@code java.lang.String}
+     * @param messageArgs the argument of type {@code NetObject...}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.TaskLoggingHelper.LogMessage" target="_top">.NET documentation</a>
+     */
     public void LogMessage(MessageImportance importance, java.lang.String message, NetObject... messageArgs) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -458,6 +913,19 @@ public class TaskLoggingHelper extends system.MarshalByRefObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LogMessage.
+     *
+     * @param message the argument of type {@code java.lang.String}
+     * @param messageArgs the argument of type {@code NetObject...}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.TaskLoggingHelper.LogMessage" target="_top">.NET documentation</a>
+     */
     public void LogMessage(java.lang.String message, NetObject... messageArgs) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -468,6 +936,29 @@ public class TaskLoggingHelper extends system.MarshalByRefObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LogMessage.
+     *
+     * @param subcategory the argument of type {@code java.lang.String}
+     * @param code the argument of type {@code java.lang.String}
+     * @param helpKeyword the argument of type {@code java.lang.String}
+     * @param file the argument of type {@code java.lang.String}
+     * @param lineNumber the argument of type {@code int}
+     * @param columnNumber the argument of type {@code int}
+     * @param endLineNumber the argument of type {@code int}
+     * @param endColumnNumber the argument of type {@code int}
+     * @param importance the argument of type {@code MessageImportance}
+     * @param message the argument of type {@code java.lang.String}
+     * @param messageArgs the argument of type {@code NetObject...}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.TaskLoggingHelper.LogMessage" target="_top">.NET documentation</a>
+     */
     public void LogMessage(java.lang.String subcategory, java.lang.String code, java.lang.String helpKeyword, java.lang.String file, int lineNumber, int columnNumber, int endLineNumber, int endColumnNumber, MessageImportance importance, java.lang.String message, NetObject... messageArgs) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -478,6 +969,22 @@ public class TaskLoggingHelper extends system.MarshalByRefObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LogMessageFromResources.
+     *
+     * @param importance the argument of type {@code MessageImportance}
+     * @param messageResourceName the argument of type {@code java.lang.String}
+     * @param messageArgs the argument of type {@code NetObject...}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.TaskLoggingHelper.LogMessageFromResources" target="_top">.NET documentation</a>
+     */
     public void LogMessageFromResources(MessageImportance importance, java.lang.String messageResourceName, NetObject... messageArgs) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -488,6 +995,20 @@ public class TaskLoggingHelper extends system.MarshalByRefObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LogMessageFromResources.
+     *
+     * @param messageResourceName the argument of type {@code java.lang.String}
+     * @param messageArgs the argument of type {@code NetObject...}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.TaskLoggingHelper.LogMessageFromResources" target="_top">.NET documentation</a>
+     */
     public void LogMessageFromResources(java.lang.String messageResourceName, NetObject... messageArgs) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -498,6 +1019,19 @@ public class TaskLoggingHelper extends system.MarshalByRefObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LogWarning.
+     *
+     * @param message the argument of type {@code java.lang.String}
+     * @param messageArgs the argument of type {@code NetObject...}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.TaskLoggingHelper.LogWarning" target="_top">.NET documentation</a>
+     */
     public void LogWarning(java.lang.String message, NetObject... messageArgs) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -508,6 +1042,28 @@ public class TaskLoggingHelper extends system.MarshalByRefObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LogWarning.
+     *
+     * @param subcategory the argument of type {@code java.lang.String}
+     * @param warningCode the argument of type {@code java.lang.String}
+     * @param helpKeyword the argument of type {@code java.lang.String}
+     * @param file the argument of type {@code java.lang.String}
+     * @param lineNumber the argument of type {@code int}
+     * @param columnNumber the argument of type {@code int}
+     * @param endLineNumber the argument of type {@code int}
+     * @param endColumnNumber the argument of type {@code int}
+     * @param message the argument of type {@code java.lang.String}
+     * @param messageArgs the argument of type {@code NetObject...}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.TaskLoggingHelper.LogWarning" target="_top">.NET documentation</a>
+     */
     public void LogWarning(java.lang.String subcategory, java.lang.String warningCode, java.lang.String helpKeyword, java.lang.String file, int lineNumber, int columnNumber, int endLineNumber, int endColumnNumber, java.lang.String message, NetObject... messageArgs) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -518,6 +1074,23 @@ public class TaskLoggingHelper extends system.MarshalByRefObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LogWarningFromException.
+     *
+     * @param exception the argument of type {@code NetException}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.TaskLoggingHelper.LogWarningFromException" target="_top">.NET documentation</a>
+     */
     public void LogWarningFromException(NetException exception) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.security.SecurityException, system.NotSupportedException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -528,6 +1101,28 @@ public class TaskLoggingHelper extends system.MarshalByRefObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LogWarningFromException.
+     *
+     * @param exception the argument of type {@code NetException}
+     * @param showStackTrace the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.TaskLoggingHelper.LogWarningFromException" target="_top">.NET documentation</a>
+     */
     public void LogWarningFromException(NetException exception, boolean showStackTrace) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -538,6 +1133,20 @@ public class TaskLoggingHelper extends system.MarshalByRefObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LogWarningFromResources.
+     *
+     * @param messageResourceName the argument of type {@code java.lang.String}
+     * @param messageArgs the argument of type {@code NetObject...}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.TaskLoggingHelper.LogWarningFromResources" target="_top">.NET documentation</a>
+     */
     public void LogWarningFromResources(java.lang.String messageResourceName, NetObject... messageArgs) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -548,6 +1157,29 @@ public class TaskLoggingHelper extends system.MarshalByRefObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LogWarningFromResources.
+     *
+     * @param subcategoryResourceName the argument of type {@code java.lang.String}
+     * @param warningCode the argument of type {@code java.lang.String}
+     * @param helpKeyword the argument of type {@code java.lang.String}
+     * @param file the argument of type {@code java.lang.String}
+     * @param lineNumber the argument of type {@code int}
+     * @param columnNumber the argument of type {@code int}
+     * @param endLineNumber the argument of type {@code int}
+     * @param endColumnNumber the argument of type {@code int}
+     * @param messageResourceName the argument of type {@code java.lang.String}
+     * @param messageArgs the argument of type {@code NetObject...}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.TaskLoggingHelper.LogWarningFromResources" target="_top">.NET documentation</a>
+     */
     public void LogWarningFromResources(java.lang.String subcategoryResourceName, java.lang.String warningCode, java.lang.String helpKeyword, java.lang.String file, int lineNumber, int columnNumber, int endLineNumber, int endColumnNumber, java.lang.String messageResourceName, NetObject... messageArgs) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -558,6 +1190,20 @@ public class TaskLoggingHelper extends system.MarshalByRefObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LogWarningWithCodeFromResources.
+     *
+     * @param messageResourceName the argument of type {@code java.lang.String}
+     * @param messageArgs the argument of type {@code NetObject...}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.TaskLoggingHelper.LogWarningWithCodeFromResources" target="_top">.NET documentation</a>
+     */
     public void LogWarningWithCodeFromResources(java.lang.String messageResourceName, NetObject... messageArgs) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -568,6 +1214,27 @@ public class TaskLoggingHelper extends system.MarshalByRefObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LogWarningWithCodeFromResources.
+     *
+     * @param subcategoryResourceName the argument of type {@code java.lang.String}
+     * @param file the argument of type {@code java.lang.String}
+     * @param lineNumber the argument of type {@code int}
+     * @param columnNumber the argument of type {@code int}
+     * @param endLineNumber the argument of type {@code int}
+     * @param endColumnNumber the argument of type {@code int}
+     * @param messageResourceName the argument of type {@code java.lang.String}
+     * @param messageArgs the argument of type {@code NetObject...}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.TaskLoggingHelper.LogWarningWithCodeFromResources" target="_top">.NET documentation</a>
+     */
     public void LogWarningWithCodeFromResources(java.lang.String subcategoryResourceName, java.lang.String file, int lineNumber, int columnNumber, int endLineNumber, int endColumnNumber, java.lang.String messageResourceName, NetObject... messageArgs) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -578,6 +1245,24 @@ public class TaskLoggingHelper extends system.MarshalByRefObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member MarkAsInactive.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.TaskLoggingHelper.MarkAsInactive" target="_top">.NET documentation</a>
+     */
     public void MarkAsInactive() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -592,6 +1277,13 @@ public class TaskLoggingHelper extends system.MarshalByRefObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property HasLoggedErrors.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.TaskLoggingHelper.HasLoggedErrors" target="_top">.NET documentation</a>
+     */
     public boolean getHasLoggedErrors() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -606,6 +1298,13 @@ public class TaskLoggingHelper extends system.MarshalByRefObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TaskResources.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.TaskLoggingHelper.TaskResources" target="_top">.NET documentation</a>
+     */
     public ResourceManager getTaskResources() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -621,6 +1320,13 @@ public class TaskLoggingHelper extends system.MarshalByRefObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TaskResources.
+     *
+     * @param TaskResources the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.TaskLoggingHelper.TaskResources" target="_top">.NET documentation</a>
+     */
     public void setTaskResources(ResourceManager TaskResources) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -631,6 +1337,13 @@ public class TaskLoggingHelper extends system.MarshalByRefObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property HelpKeywordPrefix.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.TaskLoggingHelper.HelpKeywordPrefix" target="_top">.NET documentation</a>
+     */
     public java.lang.String getHelpKeywordPrefix() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -645,6 +1358,13 @@ public class TaskLoggingHelper extends system.MarshalByRefObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property HelpKeywordPrefix.
+     *
+     * @param HelpKeywordPrefix the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.TaskLoggingHelper.HelpKeywordPrefix" target="_top">.NET documentation</a>
+     */
     public void setHelpKeywordPrefix(java.lang.String HelpKeywordPrefix) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

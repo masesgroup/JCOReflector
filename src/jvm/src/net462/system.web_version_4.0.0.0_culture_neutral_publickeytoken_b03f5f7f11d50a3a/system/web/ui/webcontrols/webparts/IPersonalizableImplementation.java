@@ -99,7 +99,10 @@ public class IPersonalizableImplementation extends NetObject implements IPersona
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IPersonalizableImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -141,6 +144,13 @@ public class IPersonalizableImplementation extends NetObject implements IPersona
 
     // Methods section
     
+    /**
+     * Invokes the .NET member Load.
+     *
+     * @param state the argument of type {@code PersonalizationDictionary}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.IPersonalizable.Load" target="_top">.NET documentation</a>
+     */
     public void Load(PersonalizationDictionary state) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -151,6 +161,13 @@ public class IPersonalizableImplementation extends NetObject implements IPersona
         }
     }
 
+    /**
+     * Invokes the .NET member Save.
+     *
+     * @param state the argument of type {@code PersonalizationDictionary}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.IPersonalizable.Save" target="_top">.NET documentation</a>
+     */
     public void Save(PersonalizationDictionary state) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -165,6 +182,13 @@ public class IPersonalizableImplementation extends NetObject implements IPersona
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsDirty.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.IPersonalizable.IsDirty" target="_top">.NET documentation</a>
+     */
     public boolean getIsDirty() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

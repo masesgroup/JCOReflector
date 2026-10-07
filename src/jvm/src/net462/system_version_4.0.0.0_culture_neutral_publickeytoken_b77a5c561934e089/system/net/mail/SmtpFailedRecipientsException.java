@@ -105,7 +105,9 @@ public class SmtpFailedRecipientsException extends system.net.mail.SmtpFailedRec
         super();
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
      */
     public SmtpFailedRecipientsException(java.lang.Object instance) {
         super(instance);
@@ -166,6 +168,15 @@ public class SmtpFailedRecipientsException extends system.net.mail.SmtpFailedRec
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param message the argument of type {@code java.lang.String}
+     * @param innerExceptions the argument of type {@code SmtpFailedRecipientException[]}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Mail.SmtpFailedRecipientsException.-ctor" target="_top">.NET documentation</a>
+     */
     public SmtpFailedRecipientsException(java.lang.String message, SmtpFailedRecipientException[] innerExceptions) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -180,6 +191,27 @@ public class SmtpFailedRecipientsException extends system.net.mail.SmtpFailedRec
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetObjectData.
+     *
+     * @param serializationInfo the argument of type {@code SerializationInfo}
+     * @param streamingContext the argument of type {@code StreamingContext}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.runtime.serialization.SerializationException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Mail.SmtpFailedRecipientsException.GetObjectData" target="_top">.NET documentation</a>
+     */
     public void GetObjectData(SerializationInfo serializationInfo, StreamingContext streamingContext) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.IndexOutOfRangeException, system.NotImplementedException, system.InvalidOperationException, system.runtime.serialization.SerializationException, system.OverflowException, system.NullReferenceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +226,13 @@ public class SmtpFailedRecipientsException extends system.net.mail.SmtpFailedRec
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property InnerExceptions.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Mail.SmtpFailedRecipientsException.InnerExceptions" target="_top">.NET documentation</a>
+     */
     public final SmtpFailedRecipientException[] getInnerExceptions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

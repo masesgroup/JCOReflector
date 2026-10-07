@@ -103,7 +103,10 @@ public class INodeLoggerImplementation extends NetObject implements INodeLogger 
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public INodeLoggerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -145,6 +148,13 @@ public class INodeLoggerImplementation extends NetObject implements INodeLogger 
 
     // Methods section
     
+    /**
+     * Invokes the .NET member Initialize.
+     *
+     * @param eventSource the argument of type {@code IEventSource}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.INodeLogger.Initialize" target="_top">.NET documentation</a>
+     */
     public void Initialize(IEventSource eventSource) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -155,6 +165,14 @@ public class INodeLoggerImplementation extends NetObject implements INodeLogger 
         }
     }
 
+    /**
+     * Invokes the .NET member Initialize.
+     *
+     * @param eventSource the argument of type {@code IEventSource}
+     * @param nodeCount the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.INodeLogger.Initialize" target="_top">.NET documentation</a>
+     */
     public void Initialize(IEventSource eventSource, int nodeCount) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -165,6 +183,12 @@ public class INodeLoggerImplementation extends NetObject implements INodeLogger 
         }
     }
 
+    /**
+     * Invokes the .NET member Shutdown.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.INodeLogger.Shutdown" target="_top">.NET documentation</a>
+     */
     public void Shutdown() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -179,6 +203,13 @@ public class INodeLoggerImplementation extends NetObject implements INodeLogger 
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Verbosity.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.INodeLogger.Verbosity" target="_top">.NET documentation</a>
+     */
     public LoggerVerbosity getVerbosity() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +225,13 @@ public class INodeLoggerImplementation extends NetObject implements INodeLogger 
         }
     }
 
+    /**
+     * Sets the value of the .NET property Verbosity.
+     *
+     * @param Verbosity the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.INodeLogger.Verbosity" target="_top">.NET documentation</a>
+     */
     public void setVerbosity(LoggerVerbosity Verbosity) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +242,13 @@ public class INodeLoggerImplementation extends NetObject implements INodeLogger 
         }
     }
 
+    /**
+     * Gets the value of the .NET property Parameters.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.INodeLogger.Parameters" target="_top">.NET documentation</a>
+     */
     public java.lang.String getParameters() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -218,6 +263,13 @@ public class INodeLoggerImplementation extends NetObject implements INodeLogger 
         }
     }
 
+    /**
+     * Sets the value of the .NET property Parameters.
+     *
+     * @param Parameters the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.INodeLogger.Parameters" target="_top">.NET documentation</a>
+     */
     public void setParameters(java.lang.String Parameters) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

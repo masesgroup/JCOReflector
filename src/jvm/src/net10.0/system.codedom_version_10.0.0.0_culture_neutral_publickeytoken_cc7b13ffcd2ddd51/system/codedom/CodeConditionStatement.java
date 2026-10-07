@@ -101,7 +101,10 @@ public class CodeConditionStatement extends system.codedom.CodeStatement  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CodeConditionStatement(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class CodeConditionStatement extends system.codedom.CodeStatement  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeConditionStatement.-ctor" target="_top">.NET documentation</a>
+     */
     public CodeConditionStatement() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -158,6 +167,20 @@ public class CodeConditionStatement extends system.codedom.CodeStatement  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param condition the argument of type {@code CodeExpression}
+     * @param trueStatements the argument of type {@code CodeStatement[]}
+     * @param falseStatements the argument of type {@code CodeStatement[]}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeConditionStatement.-ctor" target="_top">.NET documentation</a>
+     */
     public CodeConditionStatement(CodeExpression condition, CodeStatement[] trueStatements, CodeStatement[] falseStatements) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +191,19 @@ public class CodeConditionStatement extends system.codedom.CodeStatement  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param condition the argument of type {@code CodeExpression}
+     * @param trueStatements the argument of type {@code CodeStatement...}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeConditionStatement.-ctor" target="_top">.NET documentation</a>
+     */
     public CodeConditionStatement(CodeExpression condition, CodeStatement... trueStatements) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -186,6 +222,13 @@ public class CodeConditionStatement extends system.codedom.CodeStatement  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Condition.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeConditionStatement.Condition" target="_top">.NET documentation</a>
+     */
     public CodeExpression getCondition() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +244,13 @@ public class CodeConditionStatement extends system.codedom.CodeStatement  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Condition.
+     *
+     * @param Condition the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeConditionStatement.Condition" target="_top">.NET documentation</a>
+     */
     public void setCondition(CodeExpression Condition) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -211,6 +261,13 @@ public class CodeConditionStatement extends system.codedom.CodeStatement  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FalseStatements.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeConditionStatement.FalseStatements" target="_top">.NET documentation</a>
+     */
     public CodeStatementCollection getFalseStatements() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -226,6 +283,13 @@ public class CodeConditionStatement extends system.codedom.CodeStatement  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TrueStatements.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeConditionStatement.TrueStatements" target="_top">.NET documentation</a>
+     */
     public CodeStatementCollection getTrueStatements() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

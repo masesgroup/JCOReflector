@@ -102,7 +102,10 @@ public class IAsyncEnumerator_1Implementation<T extends IJCOBridgeReflected> ext
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IAsyncEnumerator_1Implementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -144,6 +147,13 @@ public class IAsyncEnumerator_1Implementation<T extends IJCOBridgeReflected> ext
 
     // Methods section
     
+    /**
+     * Invokes the .NET member DisposeAsync.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.IAsyncEnumerator-1.DisposeAsync" target="_top">.NET documentation</a>
+     */
     public ValueTask DisposeAsync() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -159,6 +169,13 @@ public class IAsyncEnumerator_1Implementation<T extends IJCOBridgeReflected> ext
         }
     }
 
+    /**
+     * Invokes the .NET member MoveNextAsync.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.IAsyncEnumerator-1.MoveNextAsync" target="_top">.NET documentation</a>
+     */
     public ValueTask_1 MoveNextAsync() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,6 +195,13 @@ public class IAsyncEnumerator_1Implementation<T extends IJCOBridgeReflected> ext
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Current.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.IAsyncEnumerator-1.Current" target="_top">.NET documentation</a>
+     */
     public T getCurrent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

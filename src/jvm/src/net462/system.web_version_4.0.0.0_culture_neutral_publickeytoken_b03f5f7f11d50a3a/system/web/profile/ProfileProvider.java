@@ -102,7 +102,10 @@ public class ProfileProvider extends system.configuration.SettingsProvider  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ProfileProvider(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,15 @@ public class ProfileProvider extends system.configuration.SettingsProvider  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member DeleteInactiveProfiles.
+     *
+     * @param authenticationOption the argument of type {@code ProfileAuthenticationOption}
+     * @param userInactiveSinceDate the argument of type {@code DateTime}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Profile.ProfileProvider.DeleteInactiveProfiles" target="_top">.NET documentation</a>
+     */
     public int DeleteInactiveProfiles(ProfileAuthenticationOption authenticationOption, DateTime userInactiveSinceDate) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -195,6 +207,14 @@ public class ProfileProvider extends system.configuration.SettingsProvider  {
         }
     }
 
+    /**
+     * Invokes the .NET member DeleteProfiles.
+     *
+     * @param usernames the argument of type {@code java.lang.String[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Profile.ProfileProvider.DeleteProfiles" target="_top">.NET documentation</a>
+     */
     public int DeleteProfiles(java.lang.String[] usernames) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -235,6 +255,14 @@ public class ProfileProvider extends system.configuration.SettingsProvider  {
         }
     }
 
+    /**
+     * Invokes the .NET member DeleteProfiles.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Profile.ProfileProvider.DeleteProfiles" target="_top">.NET documentation</a>
+     */
     public int DeleteProfiles(JCORefOut dupParam0) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -275,6 +303,14 @@ public class ProfileProvider extends system.configuration.SettingsProvider  {
         }
     }
 
+    /**
+     * Invokes the .NET member DeleteProfiles.
+     *
+     * @param profiles the argument of type {@code ProfileInfoCollection}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Profile.ProfileProvider.DeleteProfiles" target="_top">.NET documentation</a>
+     */
     public int DeleteProfiles(ProfileInfoCollection profiles) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -315,6 +351,15 @@ public class ProfileProvider extends system.configuration.SettingsProvider  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetNumberOfInactiveProfiles.
+     *
+     * @param authenticationOption the argument of type {@code ProfileAuthenticationOption}
+     * @param userInactiveSinceDate the argument of type {@code DateTime}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Profile.ProfileProvider.GetNumberOfInactiveProfiles" target="_top">.NET documentation</a>
+     */
     public int GetNumberOfInactiveProfiles(ProfileAuthenticationOption authenticationOption, DateTime userInactiveSinceDate) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -355,6 +400,19 @@ public class ProfileProvider extends system.configuration.SettingsProvider  {
         }
     }
 
+    /**
+     * Invokes the .NET member FindInactiveProfilesByUserName.
+     *
+     * @param authenticationOption the argument of type {@code ProfileAuthenticationOption}
+     * @param usernameToMatch the argument of type {@code java.lang.String}
+     * @param userInactiveSinceDate the argument of type {@code DateTime}
+     * @param pageIndex the argument of type {@code int}
+     * @param pageSize the argument of type {@code int}
+     * @param totalRecords the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicInteger>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Profile.ProfileProvider.FindInactiveProfilesByUserName" target="_top">.NET documentation</a>
+     */
     public ProfileInfoCollection FindInactiveProfilesByUserName(ProfileAuthenticationOption authenticationOption, java.lang.String usernameToMatch, DateTime userInactiveSinceDate, int pageIndex, int pageSize, JCORefOut<java.util.concurrent.atomic.AtomicInteger> totalRecords) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -370,6 +428,18 @@ public class ProfileProvider extends system.configuration.SettingsProvider  {
         }
     }
 
+    /**
+     * Invokes the .NET member FindProfilesByUserName.
+     *
+     * @param authenticationOption the argument of type {@code ProfileAuthenticationOption}
+     * @param usernameToMatch the argument of type {@code java.lang.String}
+     * @param pageIndex the argument of type {@code int}
+     * @param pageSize the argument of type {@code int}
+     * @param totalRecords the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicInteger>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Profile.ProfileProvider.FindProfilesByUserName" target="_top">.NET documentation</a>
+     */
     public ProfileInfoCollection FindProfilesByUserName(ProfileAuthenticationOption authenticationOption, java.lang.String usernameToMatch, int pageIndex, int pageSize, JCORefOut<java.util.concurrent.atomic.AtomicInteger> totalRecords) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -385,6 +455,18 @@ public class ProfileProvider extends system.configuration.SettingsProvider  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetAllInactiveProfiles.
+     *
+     * @param authenticationOption the argument of type {@code ProfileAuthenticationOption}
+     * @param userInactiveSinceDate the argument of type {@code DateTime}
+     * @param pageIndex the argument of type {@code int}
+     * @param pageSize the argument of type {@code int}
+     * @param totalRecords the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicInteger>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Profile.ProfileProvider.GetAllInactiveProfiles" target="_top">.NET documentation</a>
+     */
     public ProfileInfoCollection GetAllInactiveProfiles(ProfileAuthenticationOption authenticationOption, DateTime userInactiveSinceDate, int pageIndex, int pageSize, JCORefOut<java.util.concurrent.atomic.AtomicInteger> totalRecords) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -400,6 +482,17 @@ public class ProfileProvider extends system.configuration.SettingsProvider  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetAllProfiles.
+     *
+     * @param authenticationOption the argument of type {@code ProfileAuthenticationOption}
+     * @param pageIndex the argument of type {@code int}
+     * @param pageSize the argument of type {@code int}
+     * @param totalRecords the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicInteger>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Profile.ProfileProvider.GetAllProfiles" target="_top">.NET documentation</a>
+     */
     public ProfileInfoCollection GetAllProfiles(ProfileAuthenticationOption authenticationOption, int pageIndex, int pageSize, JCORefOut<java.util.concurrent.atomic.AtomicInteger> totalRecords) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -101,7 +101,10 @@ public class ExceptionValidationRule extends system.windows.controls.ValidationR
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ExceptionValidationRule(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class ExceptionValidationRule extends system.windows.controls.ValidationR
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.ExceptionValidationRule.-ctor" target="_top">.NET documentation</a>
+     */
     public ExceptionValidationRule() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -162,6 +171,15 @@ public class ExceptionValidationRule extends system.windows.controls.ValidationR
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Validate.
+     *
+     * @param value the argument of type {@code NetObject}
+     * @param cultureInfo the argument of type {@code CultureInfo}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.ExceptionValidationRule.Validate" target="_top">.NET documentation</a>
+     */
     public ValidationResult Validate(NetObject value, CultureInfo cultureInfo) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -105,7 +105,10 @@ public class NamedPipeServerStreamAcl extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public NamedPipeServerStreamAcl(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -158,6 +161,39 @@ public class NamedPipeServerStreamAcl extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param pipeName the argument of type {@code java.lang.String}
+     * @param direction the argument of type {@code PipeDirection}
+     * @param maxNumberOfServerInstances the argument of type {@code int}
+     * @param transmissionMode the argument of type {@code PipeTransmissionMode}
+     * @param options the argument of type {@code PipeOptions}
+     * @param inBufferSize the argument of type {@code int}
+     * @param outBufferSize the argument of type {@code int}
+     * @param pipeSecurity the argument of type {@code PipeSecurity}
+     * @param inheritability the argument of type {@code HandleInheritability}
+     * @param additionalAccessRights the argument of type {@code PipeAccessRights}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.AccessViolationException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Pipes.NamedPipeServerStreamAcl.Create" target="_top">.NET documentation</a>
+     */
     public static NamedPipeServerStream Create(java.lang.String pipeName, PipeDirection direction, int maxNumberOfServerInstances, PipeTransmissionMode transmissionMode, PipeOptions options, int inBufferSize, int outBufferSize, PipeSecurity pipeSecurity, HandleInheritability inheritability, PipeAccessRights additionalAccessRights) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.security.SecurityException, system.ObjectDisposedException, system.AccessViolationException, system.ArrayTypeMismatchException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.RankException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

@@ -107,7 +107,10 @@ public class FieldInfo extends system.reflection.MemberInfo  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public FieldInfo(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -160,6 +163,24 @@ public class FieldInfo extends system.reflection.MemberInfo  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetRawConstantValue.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.FieldInfo.GetRawConstantValue" target="_top">.NET documentation</a>
+     */
     public NetObject GetRawConstantValue() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -175,6 +196,14 @@ public class FieldInfo extends system.reflection.MemberInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetValue.
+     *
+     * @param obj the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.FieldInfo.GetValue" target="_top">.NET documentation</a>
+     */
     public NetObject GetValue(NetObject obj) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +219,27 @@ public class FieldInfo extends system.reflection.MemberInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetFieldFromHandle.
+     *
+     * @param handle the argument of type {@code RuntimeFieldHandle}
+     * @param declaringType the argument of type {@code RuntimeTypeHandle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.FieldInfo.GetFieldFromHandle" target="_top">.NET documentation</a>
+     */
     public static FieldInfo GetFieldFromHandle(RuntimeFieldHandle handle, RuntimeTypeHandle declaringType) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -205,6 +255,26 @@ public class FieldInfo extends system.reflection.MemberInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetFieldFromHandle.
+     *
+     * @param handle the argument of type {@code RuntimeFieldHandle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.FieldInfo.GetFieldFromHandle" target="_top">.NET documentation</a>
+     */
     public static FieldInfo GetFieldFromHandle(RuntimeFieldHandle handle) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -220,6 +290,22 @@ public class FieldInfo extends system.reflection.MemberInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetModifiedFieldType.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.FieldInfo.GetModifiedFieldType" target="_top">.NET documentation</a>
+     */
     public NetType GetModifiedFieldType() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -235,6 +321,23 @@ public class FieldInfo extends system.reflection.MemberInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetOptionalCustomModifiers.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.FieldInfo.GetOptionalCustomModifiers" target="_top">.NET documentation</a>
+     */
     public NetType[] GetOptionalCustomModifiers() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -256,6 +359,23 @@ public class FieldInfo extends system.reflection.MemberInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetRequiredCustomModifiers.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.FieldInfo.GetRequiredCustomModifiers" target="_top">.NET documentation</a>
+     */
     public NetType[] GetRequiredCustomModifiers() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -277,6 +397,17 @@ public class FieldInfo extends system.reflection.MemberInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetValue.
+     *
+     * @param obj the argument of type {@code NetObject}
+     * @param value the argument of type {@code NetObject}
+     * @param invokeAttr the argument of type {@code BindingFlags}
+     * @param binder the argument of type {@code Binder}
+     * @param culture the argument of type {@code CultureInfo}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.FieldInfo.SetValue" target="_top">.NET documentation</a>
+     */
     public void SetValue(NetObject obj, NetObject value, BindingFlags invokeAttr, Binder binder, CultureInfo culture) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -287,6 +418,19 @@ public class FieldInfo extends system.reflection.MemberInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetValue.
+     *
+     * @param obj the argument of type {@code NetObject}
+     * @param value the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.FieldInfo.SetValue" target="_top">.NET documentation</a>
+     */
     public void SetValue(NetObject obj, NetObject value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -301,6 +445,13 @@ public class FieldInfo extends system.reflection.MemberInfo  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsAssembly.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.FieldInfo.IsAssembly" target="_top">.NET documentation</a>
+     */
     public boolean getIsAssembly() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -315,6 +466,13 @@ public class FieldInfo extends system.reflection.MemberInfo  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsFamily.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.FieldInfo.IsFamily" target="_top">.NET documentation</a>
+     */
     public boolean getIsFamily() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -329,6 +487,13 @@ public class FieldInfo extends system.reflection.MemberInfo  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsFamilyAndAssembly.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.FieldInfo.IsFamilyAndAssembly" target="_top">.NET documentation</a>
+     */
     public boolean getIsFamilyAndAssembly() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -343,6 +508,13 @@ public class FieldInfo extends system.reflection.MemberInfo  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsFamilyOrAssembly.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.FieldInfo.IsFamilyOrAssembly" target="_top">.NET documentation</a>
+     */
     public boolean getIsFamilyOrAssembly() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -357,6 +529,13 @@ public class FieldInfo extends system.reflection.MemberInfo  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsInitOnly.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.FieldInfo.IsInitOnly" target="_top">.NET documentation</a>
+     */
     public boolean getIsInitOnly() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -371,6 +550,13 @@ public class FieldInfo extends system.reflection.MemberInfo  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsLiteral.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.FieldInfo.IsLiteral" target="_top">.NET documentation</a>
+     */
     public boolean getIsLiteral() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -385,6 +571,13 @@ public class FieldInfo extends system.reflection.MemberInfo  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsNotSerialized.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.FieldInfo.IsNotSerialized" target="_top">.NET documentation</a>
+     */
     public boolean getIsNotSerialized() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -399,6 +592,13 @@ public class FieldInfo extends system.reflection.MemberInfo  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsPinvokeImpl.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.FieldInfo.IsPinvokeImpl" target="_top">.NET documentation</a>
+     */
     public boolean getIsPinvokeImpl() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -413,6 +613,13 @@ public class FieldInfo extends system.reflection.MemberInfo  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsPrivate.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.FieldInfo.IsPrivate" target="_top">.NET documentation</a>
+     */
     public boolean getIsPrivate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -427,6 +634,13 @@ public class FieldInfo extends system.reflection.MemberInfo  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsPublic.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.FieldInfo.IsPublic" target="_top">.NET documentation</a>
+     */
     public boolean getIsPublic() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -441,6 +655,13 @@ public class FieldInfo extends system.reflection.MemberInfo  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsSecurityCritical.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.FieldInfo.IsSecurityCritical" target="_top">.NET documentation</a>
+     */
     public boolean getIsSecurityCritical() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -455,6 +676,13 @@ public class FieldInfo extends system.reflection.MemberInfo  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsSecuritySafeCritical.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.FieldInfo.IsSecuritySafeCritical" target="_top">.NET documentation</a>
+     */
     public boolean getIsSecuritySafeCritical() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -469,6 +697,13 @@ public class FieldInfo extends system.reflection.MemberInfo  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsSecurityTransparent.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.FieldInfo.IsSecurityTransparent" target="_top">.NET documentation</a>
+     */
     public boolean getIsSecurityTransparent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -483,6 +718,13 @@ public class FieldInfo extends system.reflection.MemberInfo  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsSpecialName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.FieldInfo.IsSpecialName" target="_top">.NET documentation</a>
+     */
     public boolean getIsSpecialName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -497,6 +739,13 @@ public class FieldInfo extends system.reflection.MemberInfo  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsStatic.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.FieldInfo.IsStatic" target="_top">.NET documentation</a>
+     */
     public boolean getIsStatic() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -511,6 +760,13 @@ public class FieldInfo extends system.reflection.MemberInfo  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Attributes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.FieldInfo.Attributes" target="_top">.NET documentation</a>
+     */
     public FieldAttributes getAttributes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -526,6 +782,13 @@ public class FieldInfo extends system.reflection.MemberInfo  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FieldHandle.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.FieldInfo.FieldHandle" target="_top">.NET documentation</a>
+     */
     public RuntimeFieldHandle getFieldHandle() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -541,6 +804,13 @@ public class FieldInfo extends system.reflection.MemberInfo  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FieldType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.FieldInfo.FieldType" target="_top">.NET documentation</a>
+     */
     public NetType getFieldType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

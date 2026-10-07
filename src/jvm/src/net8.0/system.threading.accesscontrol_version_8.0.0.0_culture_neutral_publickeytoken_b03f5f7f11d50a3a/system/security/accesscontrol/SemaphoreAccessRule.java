@@ -102,7 +102,10 @@ public class SemaphoreAccessRule extends system.security.accesscontrol.AccessRul
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SemaphoreAccessRule(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,22 @@ public class SemaphoreAccessRule extends system.security.accesscontrol.AccessRul
     public SemaphoreAccessRule() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param identity the argument of type {@code IdentityReference}
+     * @param eventRights the argument of type {@code SemaphoreRights}
+     * @param type the argument of type {@code AccessControlType}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.SemaphoreAccessRule.-ctor" target="_top">.NET documentation</a>
+     */
     public SemaphoreAccessRule(IdentityReference identity, SemaphoreRights eventRights, AccessControlType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
@@ -162,6 +181,21 @@ public class SemaphoreAccessRule extends system.security.accesscontrol.AccessRul
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param identity the argument of type {@code java.lang.String}
+     * @param eventRights the argument of type {@code SemaphoreRights}
+     * @param type the argument of type {@code AccessControlType}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.SemaphoreAccessRule.-ctor" target="_top">.NET documentation</a>
+     */
     public SemaphoreAccessRule(java.lang.String identity, SemaphoreRights eventRights, AccessControlType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         try {
             // add reference to assemblyName.dll file
@@ -181,6 +215,13 @@ public class SemaphoreAccessRule extends system.security.accesscontrol.AccessRul
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property SemaphoreRights.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.SemaphoreAccessRule.SemaphoreRights" target="_top">.NET documentation</a>
+     */
     public SemaphoreRights getSemaphoreRights() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -52,5 +52,11 @@ import system.windows.forms.DataGridViewCellContextMenuStripNeededEventArgs;
  * @version 2.0.0.0
  */
 public interface IDataGridViewCellContextMenuStripNeededEventHandler {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param sender the .NET argument of type {@code System.Object}
+     * @param e the .NET argument of type {@code System.Windows.Forms.DataGridViewCellContextMenuStripNeededEventArgs}
+     */
     public void Invoke(NetObject sender, DataGridViewCellContextMenuStripNeededEventArgs e);
 }

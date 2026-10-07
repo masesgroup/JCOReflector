@@ -101,7 +101,10 @@ public class IColorizeTextImplementation extends NetObject implements IColorizeT
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IColorizeTextImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -143,6 +146,15 @@ public class IColorizeTextImplementation extends NetObject implements IColorizeT
 
     // Methods section
     
+    /**
+     * Invokes the .NET member Colorize.
+     *
+     * @param sourceCode the argument of type {@code java.lang.String}
+     * @param state the argument of type {@code SourceState}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.IColorizeText.Colorize" target="_top">.NET documentation</a>
+     */
     public ITokenEnumerator Colorize(java.lang.String sourceCode, SourceState state) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -158,6 +170,15 @@ public class IColorizeTextImplementation extends NetObject implements IColorizeT
         }
     }
 
+    /**
+     * Invokes the .NET member GetStateForText.
+     *
+     * @param sourceCode the argument of type {@code java.lang.String}
+     * @param currentState the argument of type {@code SourceState}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.IColorizeText.GetStateForText" target="_top">.NET documentation</a>
+     */
     public SourceState GetStateForText(java.lang.String sourceCode, SourceState currentState) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

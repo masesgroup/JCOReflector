@@ -100,7 +100,10 @@ public class AppDomainInfoEnum extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public AppDomainInfoEnum(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,13 @@ public class AppDomainInfoEnum extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member MoveNext.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.AppDomainInfoEnum.MoveNext" target="_top">.NET documentation</a>
+     */
     public boolean MoveNext() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -169,6 +179,13 @@ public class AppDomainInfoEnum extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Count.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.AppDomainInfoEnum.Count" target="_top">.NET documentation</a>
+     */
     public int Count() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -209,6 +226,13 @@ public class AppDomainInfoEnum extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetData.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.AppDomainInfoEnum.GetData" target="_top">.NET documentation</a>
+     */
     public IAppDomainInfo GetData() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -224,6 +248,12 @@ public class AppDomainInfoEnum extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Reset.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.AppDomainInfoEnum.Reset" target="_top">.NET documentation</a>
+     */
     public void Reset() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

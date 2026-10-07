@@ -106,7 +106,10 @@ public class UCOMITypeInfoImplementation extends NetObject implements UCOMITypeI
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public UCOMITypeInfoImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,15 @@ public class UCOMITypeInfoImplementation extends NetObject implements UCOMITypeI
 
     // Methods section
     
+    /**
+     * Invokes the .NET member CreateInstance.
+     *
+     * @param pUnkOuter the argument of type {@code NetObject}
+     * @param riid the argument of type {@code JCORefOut<Guid>}
+     * @param ppvObj the argument of type {@code JCORefOut<NetObject>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.UCOMITypeInfo.CreateInstance" target="_top">.NET documentation</a>
+     */
     public void CreateInstance(NetObject pUnkOuter, JCORefOut<Guid> riid, JCORefOut<NetObject> ppvObj) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -158,6 +170,14 @@ public class UCOMITypeInfoImplementation extends NetObject implements UCOMITypeI
         }
     }
 
+    /**
+     * Invokes the .NET member GetContainingTypeLib.
+     *
+     * @param ppTLB the argument of type {@code JCORefOut<UCOMITypeLib>}
+     * @param pIndex the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicInteger>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.UCOMITypeInfo.GetContainingTypeLib" target="_top">.NET documentation</a>
+     */
     public void GetContainingTypeLib(JCORefOut<UCOMITypeLib> ppTLB, JCORefOut<java.util.concurrent.atomic.AtomicInteger> pIndex) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -168,6 +188,17 @@ public class UCOMITypeInfoImplementation extends NetObject implements UCOMITypeI
         }
     }
 
+    /**
+     * Invokes the .NET member GetDllEntry.
+     *
+     * @param memid the argument of type {@code int}
+     * @param invKind the argument of type {@code INVOKEKIND}
+     * @param pBstrDllName the argument of type {@code JCORefOut}
+     * @param pBstrName the argument of type {@code JCORefOut}
+     * @param pwOrdinal the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Short>>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.UCOMITypeInfo.GetDllEntry" target="_top">.NET documentation</a>
+     */
     public void GetDllEntry(int memid, INVOKEKIND invKind, JCORefOut pBstrDllName, JCORefOut pBstrName, JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Short>> pwOrdinal) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,6 +209,17 @@ public class UCOMITypeInfoImplementation extends NetObject implements UCOMITypeI
         }
     }
 
+    /**
+     * Invokes the .NET member GetDocumentation.
+     *
+     * @param index the argument of type {@code int}
+     * @param strName the argument of type {@code JCORefOut}
+     * @param strDocString the argument of type {@code JCORefOut}
+     * @param dwHelpContext the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicInteger>}
+     * @param strHelpFile the argument of type {@code JCORefOut}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.UCOMITypeInfo.GetDocumentation" target="_top">.NET documentation</a>
+     */
     public void GetDocumentation(int index, JCORefOut strName, JCORefOut strDocString, JCORefOut<java.util.concurrent.atomic.AtomicInteger> dwHelpContext, JCORefOut strHelpFile) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +230,15 @@ public class UCOMITypeInfoImplementation extends NetObject implements UCOMITypeI
         }
     }
 
+    /**
+     * Invokes the .NET member GetIDsOfNames.
+     *
+     * @param rgszNames the argument of type {@code java.lang.String[]}
+     * @param cNames the argument of type {@code int}
+     * @param pMemId the argument of type {@code JCORefOut}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.UCOMITypeInfo.GetIDsOfNames" target="_top">.NET documentation</a>
+     */
     public void GetIDsOfNames(java.lang.String[] rgszNames, int cNames, JCORefOut pMemId) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +249,14 @@ public class UCOMITypeInfoImplementation extends NetObject implements UCOMITypeI
         }
     }
 
+    /**
+     * Invokes the .NET member GetImplTypeFlags.
+     *
+     * @param index the argument of type {@code int}
+     * @param pImplTypeFlags the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicInteger>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.UCOMITypeInfo.GetImplTypeFlags" target="_top">.NET documentation</a>
+     */
     public void GetImplTypeFlags(int index, JCORefOut<java.util.concurrent.atomic.AtomicInteger> pImplTypeFlags) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +267,14 @@ public class UCOMITypeInfoImplementation extends NetObject implements UCOMITypeI
         }
     }
 
+    /**
+     * Invokes the .NET member GetMops.
+     *
+     * @param memid the argument of type {@code int}
+     * @param pBstrMops the argument of type {@code JCORefOut}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.UCOMITypeInfo.GetMops" target="_top">.NET documentation</a>
+     */
     public void GetMops(int memid, JCORefOut pBstrMops) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -218,6 +285,16 @@ public class UCOMITypeInfoImplementation extends NetObject implements UCOMITypeI
         }
     }
 
+    /**
+     * Invokes the .NET member GetNames.
+     *
+     * @param memid the argument of type {@code int}
+     * @param rgBstrNames the argument of type {@code JCORefOut}
+     * @param cMaxNames the argument of type {@code int}
+     * @param pcNames the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicInteger>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.UCOMITypeInfo.GetNames" target="_top">.NET documentation</a>
+     */
     public void GetNames(int memid, JCORefOut rgBstrNames, int cMaxNames, JCORefOut<java.util.concurrent.atomic.AtomicInteger> pcNames) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -228,6 +305,14 @@ public class UCOMITypeInfoImplementation extends NetObject implements UCOMITypeI
         }
     }
 
+    /**
+     * Invokes the .NET member GetRefTypeInfo.
+     *
+     * @param hRef the argument of type {@code int}
+     * @param ppTI the argument of type {@code JCORefOut<UCOMITypeInfo>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.UCOMITypeInfo.GetRefTypeInfo" target="_top">.NET documentation</a>
+     */
     public void GetRefTypeInfo(int hRef, JCORefOut<UCOMITypeInfo> ppTI) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -238,6 +323,14 @@ public class UCOMITypeInfoImplementation extends NetObject implements UCOMITypeI
         }
     }
 
+    /**
+     * Invokes the .NET member GetRefTypeOfImplType.
+     *
+     * @param index the argument of type {@code int}
+     * @param href the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicInteger>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.UCOMITypeInfo.GetRefTypeOfImplType" target="_top">.NET documentation</a>
+     */
     public void GetRefTypeOfImplType(int index, JCORefOut<java.util.concurrent.atomic.AtomicInteger> href) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -248,6 +341,13 @@ public class UCOMITypeInfoImplementation extends NetObject implements UCOMITypeI
         }
     }
 
+    /**
+     * Invokes the .NET member GetTypeComp.
+     *
+     * @param ppTComp the argument of type {@code JCORefOut<UCOMITypeComp>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.UCOMITypeInfo.GetTypeComp" target="_top">.NET documentation</a>
+     */
     public void GetTypeComp(JCORefOut<UCOMITypeComp> ppTComp) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

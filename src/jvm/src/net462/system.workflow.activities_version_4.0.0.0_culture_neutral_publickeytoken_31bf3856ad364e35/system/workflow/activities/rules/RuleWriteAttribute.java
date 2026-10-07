@@ -100,7 +100,10 @@ public class RuleWriteAttribute extends system.workflow.activities.rules.RuleRea
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public RuleWriteAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,13 @@ public class RuleWriteAttribute extends system.workflow.activities.rules.RuleRea
     public RuleWriteAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param path the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.Rules.RuleWriteAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public RuleWriteAttribute(java.lang.String path) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -160,6 +170,14 @@ public class RuleWriteAttribute extends system.workflow.activities.rules.RuleRea
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param path the argument of type {@code java.lang.String}
+     * @param target the argument of type {@code RuleAttributeTarget}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.Rules.RuleWriteAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public RuleWriteAttribute(java.lang.String path, RuleAttributeTarget target) throws Throwable {
         try {
             // add reference to assemblyName.dll file

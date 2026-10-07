@@ -102,7 +102,10 @@ public class VerificationAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public VerificationAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,17 @@ public class VerificationAttribute extends system.Attribute  {
     public VerificationAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param guideline the argument of type {@code java.lang.String}
+     * @param checkpoint the argument of type {@code java.lang.String}
+     * @param reportLevel the argument of type {@code VerificationReportLevel}
+     * @param priority the argument of type {@code int}
+     * @param message the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.VerificationAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public VerificationAttribute(java.lang.String guideline, java.lang.String checkpoint, VerificationReportLevel reportLevel, int priority, java.lang.String message) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -162,6 +176,19 @@ public class VerificationAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param guideline the argument of type {@code java.lang.String}
+     * @param checkpoint the argument of type {@code java.lang.String}
+     * @param reportLevel the argument of type {@code VerificationReportLevel}
+     * @param priority the argument of type {@code int}
+     * @param message the argument of type {@code java.lang.String}
+     * @param rule the argument of type {@code VerificationRule}
+     * @param conditionalProperty the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.VerificationAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public VerificationAttribute(java.lang.String guideline, java.lang.String checkpoint, VerificationReportLevel reportLevel, int priority, java.lang.String message, VerificationRule rule, java.lang.String conditionalProperty) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -172,6 +199,22 @@ public class VerificationAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param guideline the argument of type {@code java.lang.String}
+     * @param checkpoint the argument of type {@code java.lang.String}
+     * @param reportLevel the argument of type {@code VerificationReportLevel}
+     * @param priority the argument of type {@code int}
+     * @param message the argument of type {@code java.lang.String}
+     * @param rule the argument of type {@code VerificationRule}
+     * @param conditionalProperty the argument of type {@code java.lang.String}
+     * @param conditionalOperator the argument of type {@code VerificationConditionalOperator}
+     * @param conditionalValue the argument of type {@code java.lang.String}
+     * @param guidelineUrl the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.VerificationAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public VerificationAttribute(java.lang.String guideline, java.lang.String checkpoint, VerificationReportLevel reportLevel, int priority, java.lang.String message, VerificationRule rule, java.lang.String conditionalProperty, VerificationConditionalOperator conditionalOperator, java.lang.String conditionalValue, java.lang.String guidelineUrl) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -191,6 +234,13 @@ public class VerificationAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Priority.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.VerificationAttribute.Priority" target="_top">.NET documentation</a>
+     */
     public int getPriority() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -231,6 +281,13 @@ public class VerificationAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Checkpoint.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.VerificationAttribute.Checkpoint" target="_top">.NET documentation</a>
+     */
     public java.lang.String getCheckpoint() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -245,6 +302,13 @@ public class VerificationAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ConditionalProperty.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.VerificationAttribute.ConditionalProperty" target="_top">.NET documentation</a>
+     */
     public java.lang.String getConditionalProperty() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -259,6 +323,13 @@ public class VerificationAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ConditionalValue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.VerificationAttribute.ConditionalValue" target="_top">.NET documentation</a>
+     */
     public java.lang.String getConditionalValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -273,6 +344,13 @@ public class VerificationAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Guideline.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.VerificationAttribute.Guideline" target="_top">.NET documentation</a>
+     */
     public java.lang.String getGuideline() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -287,6 +365,13 @@ public class VerificationAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property GuidelineUrl.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.VerificationAttribute.GuidelineUrl" target="_top">.NET documentation</a>
+     */
     public java.lang.String getGuidelineUrl() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -301,6 +386,13 @@ public class VerificationAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Message.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.VerificationAttribute.Message" target="_top">.NET documentation</a>
+     */
     public java.lang.String getMessage() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -315,6 +407,13 @@ public class VerificationAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property VerificationConditionalOperator.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.VerificationAttribute.VerificationConditionalOperator" target="_top">.NET documentation</a>
+     */
     public VerificationConditionalOperator getVerificationConditionalOperator() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -330,6 +429,13 @@ public class VerificationAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property VerificationReportLevel.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.VerificationAttribute.VerificationReportLevel" target="_top">.NET documentation</a>
+     */
     public VerificationReportLevel getVerificationReportLevel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -345,6 +451,13 @@ public class VerificationAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property VerificationRule.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.VerificationAttribute.VerificationRule" target="_top">.NET documentation</a>
+     */
     public VerificationRule getVerificationRule() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

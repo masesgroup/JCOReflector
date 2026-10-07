@@ -100,7 +100,10 @@ public class IChannelReceiverHookImplementation extends NetObject implements ICh
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IChannelReceiverHookImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -142,6 +145,13 @@ public class IChannelReceiverHookImplementation extends NetObject implements ICh
 
     // Methods section
     
+    /**
+     * Invokes the .NET member AddHookChannelUri.
+     *
+     * @param channelUri the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Channels.IChannelReceiverHook.AddHookChannelUri" target="_top">.NET documentation</a>
+     */
     public void AddHookChannelUri(java.lang.String channelUri) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -156,6 +166,13 @@ public class IChannelReceiverHookImplementation extends NetObject implements ICh
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property WantsToListen.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Channels.IChannelReceiverHook.WantsToListen" target="_top">.NET documentation</a>
+     */
     public boolean getWantsToListen() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -170,6 +187,13 @@ public class IChannelReceiverHookImplementation extends NetObject implements ICh
         }
     }
 
+    /**
+     * Gets the value of the .NET property ChannelSinkChain.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Channels.IChannelReceiverHook.ChannelSinkChain" target="_top">.NET documentation</a>
+     */
     public IServerChannelSink getChannelSinkChain() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -185,6 +209,13 @@ public class IChannelReceiverHookImplementation extends NetObject implements ICh
         }
     }
 
+    /**
+     * Gets the value of the .NET property ChannelScheme.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Channels.IChannelReceiverHook.ChannelScheme" target="_top">.NET documentation</a>
+     */
     public java.lang.String getChannelScheme() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

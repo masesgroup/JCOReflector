@@ -103,7 +103,10 @@ public class IViewAutomationPeerImplementation extends NetObject implements IVie
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IViewAutomationPeerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -145,6 +148,14 @@ public class IViewAutomationPeerImplementation extends NetObject implements IVie
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetChildren.
+     *
+     * @param children the argument of type {@code List_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Peers.IViewAutomationPeer.GetChildren" target="_top">.NET documentation</a>
+     */
     public List_1 GetChildren(List_1 children) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -160,6 +171,14 @@ public class IViewAutomationPeerImplementation extends NetObject implements IVie
         }
     }
 
+    /**
+     * Invokes the .NET member GetPattern.
+     *
+     * @param patternInterface the argument of type {@code PatternInterface}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Peers.IViewAutomationPeer.GetPattern" target="_top">.NET documentation</a>
+     */
     public NetObject GetPattern(PatternInterface patternInterface) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -175,6 +194,13 @@ public class IViewAutomationPeerImplementation extends NetObject implements IVie
         }
     }
 
+    /**
+     * Invokes the .NET member GetAutomationControlType.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Peers.IViewAutomationPeer.GetAutomationControlType" target="_top">.NET documentation</a>
+     */
     public AutomationControlType GetAutomationControlType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +216,14 @@ public class IViewAutomationPeerImplementation extends NetObject implements IVie
         }
     }
 
+    /**
+     * Invokes the .NET member CreateItemAutomationPeer.
+     *
+     * @param item the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Peers.IViewAutomationPeer.CreateItemAutomationPeer" target="_top">.NET documentation</a>
+     */
     public ItemAutomationPeer CreateItemAutomationPeer(NetObject item) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +239,13 @@ public class IViewAutomationPeerImplementation extends NetObject implements IVie
         }
     }
 
+    /**
+     * Invokes the .NET member ItemsChanged.
+     *
+     * @param e the argument of type {@code NotifyCollectionChangedEventArgs}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Peers.IViewAutomationPeer.ItemsChanged" target="_top">.NET documentation</a>
+     */
     public void ItemsChanged(NotifyCollectionChangedEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +256,12 @@ public class IViewAutomationPeerImplementation extends NetObject implements IVie
         }
     }
 
+    /**
+     * Invokes the .NET member ViewDetached.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Peers.IViewAutomationPeer.ViewDetached" target="_top">.NET documentation</a>
+     */
     public void ViewDetached() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -111,7 +111,10 @@ public class XmlAttributes extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XmlAttributes(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -158,6 +161,12 @@ public class XmlAttributes extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlAttributes.-ctor" target="_top">.NET documentation</a>
+     */
     public XmlAttributes() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +177,23 @@ public class XmlAttributes extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param provider the argument of type {@code ICustomAttributeProvider}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlAttributes.-ctor" target="_top">.NET documentation</a>
+     */
     public XmlAttributes(ICustomAttributeProvider provider) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -186,6 +212,13 @@ public class XmlAttributes extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property XmlIgnore.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlAttributes.XmlIgnore" target="_top">.NET documentation</a>
+     */
     public boolean getXmlIgnore() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +233,13 @@ public class XmlAttributes extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property XmlIgnore.
+     *
+     * @param XmlIgnore the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlAttributes.XmlIgnore" target="_top">.NET documentation</a>
+     */
     public void setXmlIgnore(boolean XmlIgnore) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -210,6 +250,13 @@ public class XmlAttributes extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Xmlns.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlAttributes.Xmlns" target="_top">.NET documentation</a>
+     */
     public boolean getXmlns() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -224,6 +271,13 @@ public class XmlAttributes extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Xmlns.
+     *
+     * @param Xmlns the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlAttributes.Xmlns" target="_top">.NET documentation</a>
+     */
     public void setXmlns(boolean Xmlns) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -234,6 +288,13 @@ public class XmlAttributes extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlDefaultValue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlAttributes.XmlDefaultValue" target="_top">.NET documentation</a>
+     */
     public NetObject getXmlDefaultValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -249,6 +310,13 @@ public class XmlAttributes extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property XmlDefaultValue.
+     *
+     * @param XmlDefaultValue the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlAttributes.XmlDefaultValue" target="_top">.NET documentation</a>
+     */
     public void setXmlDefaultValue(NetObject XmlDefaultValue) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -259,6 +327,13 @@ public class XmlAttributes extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlAnyAttribute.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlAttributes.XmlAnyAttribute" target="_top">.NET documentation</a>
+     */
     public XmlAnyAttributeAttribute getXmlAnyAttribute() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -274,6 +349,13 @@ public class XmlAttributes extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property XmlAnyAttribute.
+     *
+     * @param XmlAnyAttribute the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlAttributes.XmlAnyAttribute" target="_top">.NET documentation</a>
+     */
     public void setXmlAnyAttribute(XmlAnyAttributeAttribute XmlAnyAttribute) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -284,6 +366,13 @@ public class XmlAttributes extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlAnyElements.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlAttributes.XmlAnyElements" target="_top">.NET documentation</a>
+     */
     public XmlAnyElementAttributes getXmlAnyElements() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -299,6 +388,13 @@ public class XmlAttributes extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlArray.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlAttributes.XmlArray" target="_top">.NET documentation</a>
+     */
     public XmlArrayAttribute getXmlArray() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -314,6 +410,13 @@ public class XmlAttributes extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property XmlArray.
+     *
+     * @param XmlArray the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlAttributes.XmlArray" target="_top">.NET documentation</a>
+     */
     public void setXmlArray(XmlArrayAttribute XmlArray) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -324,6 +427,13 @@ public class XmlAttributes extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlArrayItems.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlAttributes.XmlArrayItems" target="_top">.NET documentation</a>
+     */
     public XmlArrayItemAttributes getXmlArrayItems() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -339,6 +449,13 @@ public class XmlAttributes extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlAttribute.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlAttributes.XmlAttribute" target="_top">.NET documentation</a>
+     */
     public XmlAttributeAttribute getXmlAttribute() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -354,6 +471,13 @@ public class XmlAttributes extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property XmlAttribute.
+     *
+     * @param XmlAttribute the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlAttributes.XmlAttribute" target="_top">.NET documentation</a>
+     */
     public void setXmlAttribute(XmlAttributeAttribute XmlAttribute) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -364,6 +488,13 @@ public class XmlAttributes extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlChoiceIdentifier.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlAttributes.XmlChoiceIdentifier" target="_top">.NET documentation</a>
+     */
     public XmlChoiceIdentifierAttribute getXmlChoiceIdentifier() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -379,6 +510,13 @@ public class XmlAttributes extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlElements.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlAttributes.XmlElements" target="_top">.NET documentation</a>
+     */
     public XmlElementAttributes getXmlElements() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -394,6 +532,13 @@ public class XmlAttributes extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlEnum.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlAttributes.XmlEnum" target="_top">.NET documentation</a>
+     */
     public XmlEnumAttribute getXmlEnum() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -409,6 +554,13 @@ public class XmlAttributes extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property XmlEnum.
+     *
+     * @param XmlEnum the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlAttributes.XmlEnum" target="_top">.NET documentation</a>
+     */
     public void setXmlEnum(XmlEnumAttribute XmlEnum) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -419,6 +571,13 @@ public class XmlAttributes extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlRoot.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlAttributes.XmlRoot" target="_top">.NET documentation</a>
+     */
     public XmlRootAttribute getXmlRoot() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -434,6 +593,13 @@ public class XmlAttributes extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property XmlRoot.
+     *
+     * @param XmlRoot the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlAttributes.XmlRoot" target="_top">.NET documentation</a>
+     */
     public void setXmlRoot(XmlRootAttribute XmlRoot) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -444,6 +610,13 @@ public class XmlAttributes extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlText.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlAttributes.XmlText" target="_top">.NET documentation</a>
+     */
     public XmlTextAttribute getXmlText() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -459,6 +632,13 @@ public class XmlAttributes extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property XmlText.
+     *
+     * @param XmlText the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlAttributes.XmlText" target="_top">.NET documentation</a>
+     */
     public void setXmlText(XmlTextAttribute XmlText) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -469,6 +649,13 @@ public class XmlAttributes extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlAttributes.XmlType" target="_top">.NET documentation</a>
+     */
     public XmlTypeAttribute getXmlType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -484,6 +671,13 @@ public class XmlAttributes extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property XmlType.
+     *
+     * @param XmlType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlAttributes.XmlType" target="_top">.NET documentation</a>
+     */
     public void setXmlType(XmlTypeAttribute XmlType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

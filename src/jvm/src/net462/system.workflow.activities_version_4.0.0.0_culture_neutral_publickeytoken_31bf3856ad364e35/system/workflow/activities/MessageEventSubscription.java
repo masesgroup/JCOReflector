@@ -103,7 +103,10 @@ public class MessageEventSubscription extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public MessageEventSubscription(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,14 @@ public class MessageEventSubscription extends NetObject  {
     public MessageEventSubscription() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param queueName the argument of type {@code IComparable}
+     * @param instanceId the argument of type {@code Guid}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.MessageEventSubscription.-ctor" target="_top">.NET documentation</a>
+     */
     public MessageEventSubscription(IComparable queueName, Guid instanceId) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -163,6 +174,15 @@ public class MessageEventSubscription extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param queueName the argument of type {@code IComparable}
+     * @param instanceId the argument of type {@code Guid}
+     * @param subscriptionId the argument of type {@code Guid}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.MessageEventSubscription.-ctor" target="_top">.NET documentation</a>
+     */
     public MessageEventSubscription(IComparable queueName, Guid instanceId, Guid subscriptionId) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -173,6 +193,16 @@ public class MessageEventSubscription extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param queueName the argument of type {@code IComparable}
+     * @param subscriptionId the argument of type {@code Guid}
+     * @param interfaceType the argument of type {@code NetType}
+     * @param operation the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.MessageEventSubscription.-ctor" target="_top">.NET documentation</a>
+     */
     public MessageEventSubscription(IComparable queueName, Guid subscriptionId, NetType interfaceType, java.lang.String operation) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -183,6 +213,17 @@ public class MessageEventSubscription extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param queueName the argument of type {@code IComparable}
+     * @param instanceId the argument of type {@code Guid}
+     * @param interfaceType the argument of type {@code NetType}
+     * @param operation the argument of type {@code java.lang.String}
+     * @param subscriptionId the argument of type {@code Guid}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.MessageEventSubscription.-ctor" target="_top">.NET documentation</a>
+     */
     public MessageEventSubscription(IComparable queueName, Guid instanceId, NetType interfaceType, java.lang.String operation, Guid subscriptionId) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -202,6 +243,13 @@ public class MessageEventSubscription extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CorrelationProperties.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.MessageEventSubscription.CorrelationProperties" target="_top">.NET documentation</a>
+     */
     public ICollection_1 getCorrelationProperties() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -217,6 +265,13 @@ public class MessageEventSubscription extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SubscriptionId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.MessageEventSubscription.SubscriptionId" target="_top">.NET documentation</a>
+     */
     public Guid getSubscriptionId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -232,6 +287,13 @@ public class MessageEventSubscription extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property WorkflowInstanceId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.MessageEventSubscription.WorkflowInstanceId" target="_top">.NET documentation</a>
+     */
     public Guid getWorkflowInstanceId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -247,6 +309,13 @@ public class MessageEventSubscription extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property QueueName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.MessageEventSubscription.QueueName" target="_top">.NET documentation</a>
+     */
     public IComparable getQueueName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -262,6 +331,13 @@ public class MessageEventSubscription extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property QueueName.
+     *
+     * @param QueueName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.MessageEventSubscription.QueueName" target="_top">.NET documentation</a>
+     */
     public void setQueueName(IComparable QueueName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -272,6 +348,13 @@ public class MessageEventSubscription extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MethodName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.MessageEventSubscription.MethodName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getMethodName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -286,6 +369,13 @@ public class MessageEventSubscription extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MethodName.
+     *
+     * @param MethodName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.MessageEventSubscription.MethodName" target="_top">.NET documentation</a>
+     */
     public void setMethodName(java.lang.String MethodName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -296,6 +386,13 @@ public class MessageEventSubscription extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property InterfaceType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.MessageEventSubscription.InterfaceType" target="_top">.NET documentation</a>
+     */
     public NetType getInterfaceType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -311,6 +408,13 @@ public class MessageEventSubscription extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property InterfaceType.
+     *
+     * @param InterfaceType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.MessageEventSubscription.InterfaceType" target="_top">.NET documentation</a>
+     */
     public void setInterfaceType(NetType InterfaceType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

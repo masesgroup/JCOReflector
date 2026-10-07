@@ -53,5 +53,11 @@ import system.web.ui.Control;
  * @version 2.0.0.0
  */
 public interface IRenderMethod {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param output the .NET argument of type {@code System.Web.UI.HtmlTextWriter}
+     * @param container the .NET argument of type {@code System.Web.UI.Control}
+     */
     public void Invoke(HtmlTextWriter output, Control container);
 }

@@ -98,7 +98,10 @@ public class IWebObjectFactoryImplementation extends NetObject implements IWebOb
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IWebObjectFactoryImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -140,6 +143,13 @@ public class IWebObjectFactoryImplementation extends NetObject implements IWebOb
 
     // Methods section
     
+    /**
+     * Invokes the .NET member CreateInstance.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Util.IWebObjectFactory.CreateInstance" target="_top">.NET documentation</a>
+     */
     public NetObject CreateInstance() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

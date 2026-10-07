@@ -100,7 +100,10 @@ public class CodeConstructor extends system.codedom.CodeMemberMethod  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CodeConstructor(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class CodeConstructor extends system.codedom.CodeMemberMethod  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeConstructor.-ctor" target="_top">.NET documentation</a>
+     */
     public CodeConstructor() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +174,13 @@ public class CodeConstructor extends system.codedom.CodeMemberMethod  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property BaseConstructorArgs.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeConstructor.BaseConstructorArgs" target="_top">.NET documentation</a>
+     */
     public CodeExpressionCollection getBaseConstructorArgs() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +196,13 @@ public class CodeConstructor extends system.codedom.CodeMemberMethod  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ChainedConstructorArgs.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeConstructor.ChainedConstructorArgs" target="_top">.NET documentation</a>
+     */
     public CodeExpressionCollection getChainedConstructorArgs() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

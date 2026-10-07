@@ -100,7 +100,10 @@ public class IErrorPageImplementation extends NetObject implements IErrorPage {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IErrorPageImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,13 @@ public class IErrorPageImplementation extends NetObject implements IErrorPage {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ErrorFlag.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.IErrorPage.ErrorFlag" target="_top">.NET documentation</a>
+     */
     public boolean getErrorFlag() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -160,6 +170,13 @@ public class IErrorPageImplementation extends NetObject implements IErrorPage {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ErrorFlag.
+     *
+     * @param ErrorFlag the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.IErrorPage.ErrorFlag" target="_top">.NET documentation</a>
+     */
     public void setErrorFlag(boolean ErrorFlag) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -170,6 +187,13 @@ public class IErrorPageImplementation extends NetObject implements IErrorPage {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ErrorText.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.IErrorPage.ErrorText" target="_top">.NET documentation</a>
+     */
     public java.lang.String getErrorText() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +208,13 @@ public class IErrorPageImplementation extends NetObject implements IErrorPage {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ErrorText.
+     *
+     * @param ErrorText the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.IErrorPage.ErrorText" target="_top">.NET documentation</a>
+     */
     public void setErrorText(java.lang.String ErrorText) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +225,13 @@ public class IErrorPageImplementation extends NetObject implements IErrorPage {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ErrorTitle.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.IErrorPage.ErrorTitle" target="_top">.NET documentation</a>
+     */
     public java.lang.String getErrorTitle() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +246,13 @@ public class IErrorPageImplementation extends NetObject implements IErrorPage {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ErrorTitle.
+     *
+     * @param ErrorTitle the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.IErrorPage.ErrorTitle" target="_top">.NET documentation</a>
+     */
     public void setErrorTitle(java.lang.String ErrorTitle) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -218,6 +263,13 @@ public class IErrorPageImplementation extends NetObject implements IErrorPage {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LogFilePath.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.IErrorPage.LogFilePath" target="_top">.NET documentation</a>
+     */
     public java.lang.String getLogFilePath() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -232,6 +284,13 @@ public class IErrorPageImplementation extends NetObject implements IErrorPage {
         }
     }
 
+    /**
+     * Sets the value of the .NET property LogFilePath.
+     *
+     * @param LogFilePath the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.IErrorPage.LogFilePath" target="_top">.NET documentation</a>
+     */
     public void setLogFilePath(java.lang.String LogFilePath) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -242,6 +301,13 @@ public class IErrorPageImplementation extends NetObject implements IErrorPage {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DeploymentPath.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.IErrorPage.DeploymentPath" target="_top">.NET documentation</a>
+     */
     public Uri getDeploymentPath() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -257,6 +323,13 @@ public class IErrorPageImplementation extends NetObject implements IErrorPage {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DeploymentPath.
+     *
+     * @param DeploymentPath the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.IErrorPage.DeploymentPath" target="_top">.NET documentation</a>
+     */
     public void setDeploymentPath(Uri DeploymentPath) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -267,6 +340,13 @@ public class IErrorPageImplementation extends NetObject implements IErrorPage {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SupportUri.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.IErrorPage.SupportUri" target="_top">.NET documentation</a>
+     */
     public Uri getSupportUri() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -282,6 +362,13 @@ public class IErrorPageImplementation extends NetObject implements IErrorPage {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SupportUri.
+     *
+     * @param SupportUri the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.IErrorPage.SupportUri" target="_top">.NET documentation</a>
+     */
     public void setSupportUri(Uri SupportUri) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -292,6 +379,13 @@ public class IErrorPageImplementation extends NetObject implements IErrorPage {
         }
     }
 
+    /**
+     * Gets the value of the .NET property GetWinFxCallback.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.IErrorPage.GetWinFxCallback" target="_top">.NET documentation</a>
+     */
     public DispatcherOperationCallback getGetWinFxCallback() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -306,6 +400,13 @@ public class IErrorPageImplementation extends NetObject implements IErrorPage {
         }
     }
 
+    /**
+     * Sets the value of the .NET property GetWinFxCallback.
+     *
+     * @param GetWinFxCallback the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.IErrorPage.GetWinFxCallback" target="_top">.NET documentation</a>
+     */
     public void setGetWinFxCallback(DispatcherOperationCallback GetWinFxCallback) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -316,6 +417,13 @@ public class IErrorPageImplementation extends NetObject implements IErrorPage {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RefreshCallback.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.IErrorPage.RefreshCallback" target="_top">.NET documentation</a>
+     */
     public DispatcherOperationCallback getRefreshCallback() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -330,6 +438,13 @@ public class IErrorPageImplementation extends NetObject implements IErrorPage {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RefreshCallback.
+     *
+     * @param RefreshCallback the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.IErrorPage.RefreshCallback" target="_top">.NET documentation</a>
+     */
     public void setRefreshCallback(DispatcherOperationCallback RefreshCallback) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

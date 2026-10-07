@@ -109,7 +109,10 @@ public class DiagnosticListener extends system.diagnostics.DiagnosticSource impl
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DiagnosticListener(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -159,6 +162,23 @@ public class DiagnosticListener extends system.diagnostics.DiagnosticSource impl
     public DiagnosticListener() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.DiagnosticListener.-ctor" target="_top">.NET documentation</a>
+     */
     public DiagnosticListener(java.lang.String name) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.ArgumentException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -174,6 +194,13 @@ public class DiagnosticListener extends system.diagnostics.DiagnosticSource impl
     
     // Methods section
     
+    /**
+     * Invokes the .NET member IsEnabled.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.DiagnosticListener.IsEnabled" target="_top">.NET documentation</a>
+     */
     public boolean IsEnabled() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +215,16 @@ public class DiagnosticListener extends system.diagnostics.DiagnosticSource impl
         }
     }
 
+    /**
+     * Invokes the .NET member IsEnabled.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param arg1 the argument of type {@code NetObject}
+     * @param arg2 the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.DiagnosticListener.IsEnabled" target="_top">.NET documentation</a>
+     */
     public boolean IsEnabled(java.lang.String name, NetObject arg1, NetObject arg2) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +239,14 @@ public class DiagnosticListener extends system.diagnostics.DiagnosticSource impl
         }
     }
 
+    /**
+     * Invokes the .NET member IsEnabled.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.DiagnosticListener.IsEnabled" target="_top">.NET documentation</a>
+     */
     public boolean IsEnabled(java.lang.String name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +261,22 @@ public class DiagnosticListener extends system.diagnostics.DiagnosticSource impl
         }
     }
 
+    /**
+     * Invokes the .NET member Subscribe.
+     *
+     * @param observer the argument of type {@code IObserver_1}
+     * @param isEnabled the argument of type {@code Func_4}
+     * @param onActivityImport the argument of type {@code Action_2}
+     * @param onActivityExport the argument of type {@code Action_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.DiagnosticListener.Subscribe" target="_top">.NET documentation</a>
+     */
     public IDisposable Subscribe(IObserver_1 observer, Func_4 isEnabled, Action_2 onActivityImport, Action_2 onActivityExport) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -231,6 +292,20 @@ public class DiagnosticListener extends system.diagnostics.DiagnosticSource impl
         }
     }
 
+    /**
+     * Invokes the .NET member Subscribe.
+     *
+     * @param observer the argument of type {@code IObserver_1}
+     * @param isEnabled the argument of type {@code Func_4}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.DiagnosticListener.Subscribe" target="_top">.NET documentation</a>
+     */
     public IDisposable Subscribe(IObserver_1 observer, Func_4 isEnabled) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -246,6 +321,20 @@ public class DiagnosticListener extends system.diagnostics.DiagnosticSource impl
         }
     }
 
+    /**
+     * Invokes the .NET member Subscribe.
+     *
+     * @param observer the argument of type {@code IObserver_1}
+     * @param isEnabled the argument of type {@code Predicate_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.DiagnosticListener.Subscribe" target="_top">.NET documentation</a>
+     */
     public IDisposable Subscribe(IObserver_1 observer, Predicate_1 isEnabled) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -261,6 +350,19 @@ public class DiagnosticListener extends system.diagnostics.DiagnosticSource impl
         }
     }
 
+    /**
+     * Invokes the .NET member Subscribe.
+     *
+     * @param observer the argument of type {@code IObserver_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.DiagnosticListener.Subscribe" target="_top">.NET documentation</a>
+     */
     public IDisposable Subscribe(IObserver_1 observer) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -276,6 +378,22 @@ public class DiagnosticListener extends system.diagnostics.DiagnosticSource impl
         }
     }
 
+    /**
+     * Invokes the .NET member Dispose.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.DiagnosticListener.Dispose" target="_top">.NET documentation</a>
+     */
     public void Dispose() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.ArgumentException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -286,6 +404,14 @@ public class DiagnosticListener extends system.diagnostics.DiagnosticSource impl
         }
     }
 
+    /**
+     * Invokes the .NET member OnActivityExport.
+     *
+     * @param activity the argument of type {@code Activity}
+     * @param payload the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.DiagnosticListener.OnActivityExport" target="_top">.NET documentation</a>
+     */
     public void OnActivityExport(Activity activity, NetObject payload) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -296,6 +422,14 @@ public class DiagnosticListener extends system.diagnostics.DiagnosticSource impl
         }
     }
 
+    /**
+     * Invokes the .NET member OnActivityImport.
+     *
+     * @param activity the argument of type {@code Activity}
+     * @param payload the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.DiagnosticListener.OnActivityImport" target="_top">.NET documentation</a>
+     */
     public void OnActivityImport(Activity activity, NetObject payload) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -306,6 +440,14 @@ public class DiagnosticListener extends system.diagnostics.DiagnosticSource impl
         }
     }
 
+    /**
+     * Invokes the .NET member Write.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param value the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.DiagnosticListener.Write" target="_top">.NET documentation</a>
+     */
     public void Write(java.lang.String name, NetObject value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -333,6 +475,21 @@ public class DiagnosticListener extends system.diagnostics.DiagnosticSource impl
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AllListeners.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.DiagnosticListener.AllListeners" target="_top">.NET documentation</a>
+     */
     public static IObservable_1 getAllListeners() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -348,6 +505,13 @@ public class DiagnosticListener extends system.diagnostics.DiagnosticSource impl
         }
     }
 
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.DiagnosticListener.Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -362,6 +526,13 @@ public class DiagnosticListener extends system.diagnostics.DiagnosticSource impl
         }
     }
 
+    /**
+     * Sets the value of the .NET property Name.
+     *
+     * @param Name the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.DiagnosticListener.Name" target="_top">.NET documentation</a>
+     */
     public void setName(java.lang.String Name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

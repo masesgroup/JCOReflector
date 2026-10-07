@@ -100,7 +100,10 @@ public class IWebPartParametersImplementation extends NetObject implements IWebP
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IWebPartParametersImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -142,6 +145,13 @@ public class IWebPartParametersImplementation extends NetObject implements IWebP
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetParametersData.
+     *
+     * @param callback the argument of type {@code ParametersCallback}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.IWebPartParameters.GetParametersData" target="_top">.NET documentation</a>
+     */
     public void GetParametersData(ParametersCallback callback) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -152,6 +162,13 @@ public class IWebPartParametersImplementation extends NetObject implements IWebP
         }
     }
 
+    /**
+     * Invokes the .NET member SetConsumerSchema.
+     *
+     * @param schema the argument of type {@code PropertyDescriptorCollection}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.IWebPartParameters.SetConsumerSchema" target="_top">.NET documentation</a>
+     */
     public void SetConsumerSchema(PropertyDescriptorCollection schema) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -166,6 +183,13 @@ public class IWebPartParametersImplementation extends NetObject implements IWebP
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Schema.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.IWebPartParameters.Schema" target="_top">.NET documentation</a>
+     */
     public PropertyDescriptorCollection getSchema() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

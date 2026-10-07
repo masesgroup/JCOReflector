@@ -102,7 +102,10 @@ public class ProfileAttribute extends system.web.modelbinding.ValueProviderSourc
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ProfileAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,12 @@ public class ProfileAttribute extends system.web.modelbinding.ValueProviderSourc
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ProfileAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public ProfileAttribute() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -159,6 +168,13 @@ public class ProfileAttribute extends system.web.modelbinding.ValueProviderSourc
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param key the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ProfileAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public ProfileAttribute(java.lang.String key) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -173,6 +189,13 @@ public class ProfileAttribute extends system.web.modelbinding.ValueProviderSourc
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetModelName.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ProfileAttribute.GetModelName" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetModelName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +210,20 @@ public class ProfileAttribute extends system.web.modelbinding.ValueProviderSourc
         }
     }
 
+    /**
+     * Invokes the .NET member GetValueProvider.
+     *
+     * @param modelBindingExecutionContext the argument of type {@code ModelBindingExecutionContext}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ProfileAttribute.GetValueProvider" target="_top">.NET documentation</a>
+     */
     public IValueProvider GetValueProvider(ModelBindingExecutionContext modelBindingExecutionContext) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,6 +243,13 @@ public class ProfileAttribute extends system.web.modelbinding.ValueProviderSourc
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Key.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ProfileAttribute.Key" target="_top">.NET documentation</a>
+     */
     public java.lang.String getKey() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -220,6 +264,13 @@ public class ProfileAttribute extends system.web.modelbinding.ValueProviderSourc
         }
     }
 
+    /**
+     * Sets the value of the .NET property Key.
+     *
+     * @param Key the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ProfileAttribute.Key" target="_top">.NET documentation</a>
+     */
     public void setKey(java.lang.String Key) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

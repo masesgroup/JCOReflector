@@ -102,7 +102,10 @@ public class BuildStartedEventArgs extends microsoft.build.framework.BuildStatus
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public BuildStartedEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,17 @@ public class BuildStartedEventArgs extends microsoft.build.framework.BuildStatus
     public BuildStartedEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param message the argument of type {@code java.lang.String}
+     * @param helpKeyword the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.BuildStartedEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public BuildStartedEventArgs(java.lang.String message, java.lang.String helpKeyword) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
@@ -162,6 +176,18 @@ public class BuildStartedEventArgs extends microsoft.build.framework.BuildStatus
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param message the argument of type {@code java.lang.String}
+     * @param helpKeyword the argument of type {@code java.lang.String}
+     * @param environmentOfBuild the argument of type {@code IDictionary_2}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.BuildStartedEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public BuildStartedEventArgs(java.lang.String message, java.lang.String helpKeyword, IDictionary_2 environmentOfBuild) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
@@ -172,6 +198,20 @@ public class BuildStartedEventArgs extends microsoft.build.framework.BuildStatus
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param message the argument of type {@code java.lang.String}
+     * @param helpKeyword the argument of type {@code java.lang.String}
+     * @param eventTimestamp the argument of type {@code DateTime}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.BuildStartedEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public BuildStartedEventArgs(java.lang.String message, java.lang.String helpKeyword, DateTime eventTimestamp) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException {
         try {
             // add reference to assemblyName.dll file
@@ -182,6 +222,22 @@ public class BuildStartedEventArgs extends microsoft.build.framework.BuildStatus
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param message the argument of type {@code java.lang.String}
+     * @param helpKeyword the argument of type {@code java.lang.String}
+     * @param eventTimestamp the argument of type {@code DateTime}
+     * @param messageArgs the argument of type {@code NetObject...}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.BuildStartedEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public BuildStartedEventArgs(java.lang.String message, java.lang.String helpKeyword, DateTime eventTimestamp, NetObject... messageArgs) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException {
         try {
             // add reference to assemblyName.dll file
@@ -201,6 +257,13 @@ public class BuildStartedEventArgs extends microsoft.build.framework.BuildStatus
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property BuildEnvironment.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.BuildStartedEventArgs.BuildEnvironment" target="_top">.NET documentation</a>
+     */
     public IDictionary_2 getBuildEnvironment() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

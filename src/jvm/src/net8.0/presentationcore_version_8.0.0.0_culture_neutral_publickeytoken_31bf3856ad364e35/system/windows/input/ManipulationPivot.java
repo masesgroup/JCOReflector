@@ -99,7 +99,10 @@ public class ManipulationPivot extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ManipulationPivot(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class ManipulationPivot extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.ManipulationPivot.-ctor" target="_top">.NET documentation</a>
+     */
     public ManipulationPivot() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -156,6 +165,14 @@ public class ManipulationPivot extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param center the argument of type {@code Point}
+     * @param radius the argument of type {@code double}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.ManipulationPivot.-ctor" target="_top">.NET documentation</a>
+     */
     public ManipulationPivot(Point center, double radius) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -174,6 +191,13 @@ public class ManipulationPivot extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Radius.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.ManipulationPivot.Radius" target="_top">.NET documentation</a>
+     */
     public double getRadius() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -214,6 +238,13 @@ public class ManipulationPivot extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Radius.
+     *
+     * @param Radius the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.ManipulationPivot.Radius" target="_top">.NET documentation</a>
+     */
     public void setRadius(double Radius) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -224,6 +255,13 @@ public class ManipulationPivot extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Center.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.ManipulationPivot.Center" target="_top">.NET documentation</a>
+     */
     public Point getCenter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -239,6 +277,13 @@ public class ManipulationPivot extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Center.
+     *
+     * @param Center the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.ManipulationPivot.Center" target="_top">.NET documentation</a>
+     */
     public void setCenter(Point Center) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

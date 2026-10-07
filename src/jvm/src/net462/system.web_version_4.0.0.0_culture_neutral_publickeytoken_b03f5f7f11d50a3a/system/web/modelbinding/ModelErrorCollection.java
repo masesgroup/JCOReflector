@@ -100,7 +100,10 @@ public class ModelErrorCollection extends system.collections.objectmodel.Collect
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ModelErrorCollection(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class ModelErrorCollection extends system.collections.objectmodel.Collect
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelErrorCollection.-ctor" target="_top">.NET documentation</a>
+     */
     public ModelErrorCollection() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -161,6 +170,15 @@ public class ModelErrorCollection extends system.collections.objectmodel.Collect
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param exception the argument of type {@code NetException}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelErrorCollection.Add" target="_top">.NET documentation</a>
+     */
     public void Add(NetException exception) throws Throwable, system.ArgumentNullException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -171,6 +189,14 @@ public class ModelErrorCollection extends system.collections.objectmodel.Collect
         }
     }
 
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param errorMessage the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelErrorCollection.Add" target="_top">.NET documentation</a>
+     */
     public void Add(java.lang.String errorMessage) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

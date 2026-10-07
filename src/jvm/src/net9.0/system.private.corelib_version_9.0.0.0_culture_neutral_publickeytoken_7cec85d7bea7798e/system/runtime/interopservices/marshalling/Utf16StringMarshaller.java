@@ -98,7 +98,10 @@ public class Utf16StringMarshaller extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Utf16StringMarshaller(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,14 @@ public class Utf16StringMarshaller extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetPinnableReference.
+     *
+     * @param str the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Marshalling.Utf16StringMarshaller.GetPinnableReference" target="_top">.NET documentation</a>
+     */
     public static char GetPinnableReference(java.lang.String str) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

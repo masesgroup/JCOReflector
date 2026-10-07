@@ -99,7 +99,10 @@ public class ITrackingHandlerImplementation extends NetObject implements ITracki
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ITrackingHandlerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -141,6 +144,13 @@ public class ITrackingHandlerImplementation extends NetObject implements ITracki
 
     // Methods section
     
+    /**
+     * Invokes the .NET member DisconnectedObject.
+     *
+     * @param obj the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Services.ITrackingHandler.DisconnectedObject" target="_top">.NET documentation</a>
+     */
     public void DisconnectedObject(NetObject obj) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -151,6 +161,14 @@ public class ITrackingHandlerImplementation extends NetObject implements ITracki
         }
     }
 
+    /**
+     * Invokes the .NET member MarshaledObject.
+     *
+     * @param obj the argument of type {@code NetObject}
+     * @param or the argument of type {@code ObjRef}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Services.ITrackingHandler.MarshaledObject" target="_top">.NET documentation</a>
+     */
     public void MarshaledObject(NetObject obj, ObjRef or) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -161,6 +179,14 @@ public class ITrackingHandlerImplementation extends NetObject implements ITracki
         }
     }
 
+    /**
+     * Invokes the .NET member UnmarshaledObject.
+     *
+     * @param obj the argument of type {@code NetObject}
+     * @param or the argument of type {@code ObjRef}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Services.ITrackingHandler.UnmarshaledObject" target="_top">.NET documentation</a>
+     */
     public void UnmarshaledObject(NetObject obj, ObjRef or) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

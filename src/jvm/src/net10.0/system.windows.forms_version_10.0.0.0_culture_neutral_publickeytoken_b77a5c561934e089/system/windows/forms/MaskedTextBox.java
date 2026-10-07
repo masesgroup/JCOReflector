@@ -110,7 +110,10 @@ public class MaskedTextBox extends system.windows.forms.TextBoxBase  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public MaskedTextBox(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,29 @@ public class MaskedTextBox extends system.windows.forms.TextBoxBase  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.TypeInitializationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.MaskedTextBox.-ctor" target="_top">.NET documentation</a>
+     */
     public MaskedTextBox() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.InvalidCastException, system.ObjectDisposedException, system.FormatException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.RankException, system.ArrayTypeMismatchException, system.TypeInitializationException, system.IndexOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +193,25 @@ public class MaskedTextBox extends system.windows.forms.TextBoxBase  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param maskedTextProvider the argument of type {@code MaskedTextProvider}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.MaskedTextBox.-ctor" target="_top">.NET documentation</a>
+     */
     public MaskedTextBox(MaskedTextProvider maskedTextProvider) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.InvalidCastException, system.ObjectDisposedException, system.FormatException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.NotSupportedException, system.IndexOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -177,6 +222,30 @@ public class MaskedTextBox extends system.windows.forms.TextBoxBase  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param mask the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.TypeInitializationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.MaskedTextBox.-ctor" target="_top">.NET documentation</a>
+     */
     public MaskedTextBox(java.lang.String mask) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.InvalidCastException, system.ObjectDisposedException, system.FormatException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.RankException, system.ArrayTypeMismatchException, system.TypeInitializationException, system.IndexOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -191,6 +260,24 @@ public class MaskedTextBox extends system.windows.forms.TextBoxBase  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetCharFromPosition.
+     *
+     * @param pt the argument of type {@code Point}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.MaskedTextBox.GetCharFromPosition" target="_top">.NET documentation</a>
+     */
     public char GetCharFromPosition(Point pt) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException, system.InvalidCastException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +292,23 @@ public class MaskedTextBox extends system.windows.forms.TextBoxBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetCharIndexFromPosition.
+     *
+     * @param pt the argument of type {@code Point}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.MaskedTextBox.GetCharIndexFromPosition" target="_top">.NET documentation</a>
+     */
     public int GetCharIndexFromPosition(Point pt) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException, system.InvalidCastException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -245,6 +349,14 @@ public class MaskedTextBox extends system.windows.forms.TextBoxBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetFirstCharIndexFromLineNewMaskedTextBox.
+     *
+     * @param lineNumber the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.MaskedTextBox.GetFirstCharIndexFromLineNewMaskedTextBox" target="_top">.NET documentation</a>
+     */
     public int GetFirstCharIndexFromLineNewMaskedTextBox(int lineNumber) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -285,6 +397,13 @@ public class MaskedTextBox extends system.windows.forms.TextBoxBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetFirstCharIndexOfCurrentLineNewMaskedTextBox.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.MaskedTextBox.GetFirstCharIndexOfCurrentLineNewMaskedTextBox" target="_top">.NET documentation</a>
+     */
     public int GetFirstCharIndexOfCurrentLineNewMaskedTextBox() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -325,6 +444,14 @@ public class MaskedTextBox extends system.windows.forms.TextBoxBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetLineFromCharIndex.
+     *
+     * @param index the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.MaskedTextBox.GetLineFromCharIndex" target="_top">.NET documentation</a>
+     */
     public int GetLineFromCharIndex(int index) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -365,6 +492,23 @@ public class MaskedTextBox extends system.windows.forms.TextBoxBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetPositionFromCharIndex.
+     *
+     * @param index the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.MaskedTextBox.GetPositionFromCharIndex" target="_top">.NET documentation</a>
+     */
     public Point GetPositionFromCharIndex(int index) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException, system.InvalidCastException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -380,6 +524,26 @@ public class MaskedTextBox extends system.windows.forms.TextBoxBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member ValidateText.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.MaskedTextBox.ValidateText" target="_top">.NET documentation</a>
+     */
     public NetObject ValidateText() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.InvalidCastException, system.FormatException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -395,6 +559,12 @@ public class MaskedTextBox extends system.windows.forms.TextBoxBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member ClearUndoNewMaskedTextBox.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.MaskedTextBox.ClearUndoNewMaskedTextBox" target="_top">.NET documentation</a>
+     */
     public void ClearUndoNewMaskedTextBox() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -405,6 +575,12 @@ public class MaskedTextBox extends system.windows.forms.TextBoxBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member ScrollToCaretNewMaskedTextBox.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.MaskedTextBox.ScrollToCaretNewMaskedTextBox" target="_top">.NET documentation</a>
+     */
     public void ScrollToCaretNewMaskedTextBox() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -415,6 +591,12 @@ public class MaskedTextBox extends system.windows.forms.TextBoxBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member UndoNewMaskedTextBox.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.MaskedTextBox.UndoNewMaskedTextBox" target="_top">.NET documentation</a>
+     */
     public void UndoNewMaskedTextBox() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -429,6 +611,13 @@ public class MaskedTextBox extends system.windows.forms.TextBoxBase  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AcceptsTab.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.MaskedTextBox.AcceptsTab" target="_top">.NET documentation</a>
+     */
     public boolean getAcceptsTab() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -443,6 +632,13 @@ public class MaskedTextBox extends system.windows.forms.TextBoxBase  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AcceptsTab.
+     *
+     * @param AcceptsTab the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.MaskedTextBox.AcceptsTab" target="_top">.NET documentation</a>
+     */
     public void setAcceptsTab(boolean AcceptsTab) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -453,6 +649,13 @@ public class MaskedTextBox extends system.windows.forms.TextBoxBase  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AllowPromptAsInput.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.MaskedTextBox.AllowPromptAsInput" target="_top">.NET documentation</a>
+     */
     public boolean getAllowPromptAsInput() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -467,6 +670,29 @@ public class MaskedTextBox extends system.windows.forms.TextBoxBase  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AllowPromptAsInput.
+     *
+     * @param AllowPromptAsInput the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.TypeInitializationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.TimeoutException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.MaskedTextBox.AllowPromptAsInput" target="_top">.NET documentation</a>
+     */
     public void setAllowPromptAsInput(boolean AllowPromptAsInput) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.NotSupportedException, system.OutOfMemoryException, system.InvalidOperationException, system.TypeInitializationException, system.FormatException, system.io.FileNotFoundException, system.threading.AbandonedMutexException, system.TimeoutException, system.componentmodel.Win32Exception {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -477,6 +703,13 @@ public class MaskedTextBox extends system.windows.forms.TextBoxBase  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AsciiOnly.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.MaskedTextBox.AsciiOnly" target="_top">.NET documentation</a>
+     */
     public boolean getAsciiOnly() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -491,6 +724,29 @@ public class MaskedTextBox extends system.windows.forms.TextBoxBase  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AsciiOnly.
+     *
+     * @param AsciiOnly the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.TypeInitializationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.TimeoutException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.MaskedTextBox.AsciiOnly" target="_top">.NET documentation</a>
+     */
     public void setAsciiOnly(boolean AsciiOnly) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.NotSupportedException, system.OutOfMemoryException, system.InvalidOperationException, system.TypeInitializationException, system.FormatException, system.io.FileNotFoundException, system.threading.AbandonedMutexException, system.TimeoutException, system.componentmodel.Win32Exception {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -501,6 +757,13 @@ public class MaskedTextBox extends system.windows.forms.TextBoxBase  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property BeepOnError.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.MaskedTextBox.BeepOnError" target="_top">.NET documentation</a>
+     */
     public boolean getBeepOnError() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -515,6 +778,13 @@ public class MaskedTextBox extends system.windows.forms.TextBoxBase  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property BeepOnError.
+     *
+     * @param BeepOnError the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.MaskedTextBox.BeepOnError" target="_top">.NET documentation</a>
+     */
     public void setBeepOnError(boolean BeepOnError) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -525,6 +795,13 @@ public class MaskedTextBox extends system.windows.forms.TextBoxBase  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CanUndo.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.MaskedTextBox.CanUndo" target="_top">.NET documentation</a>
+     */
     public boolean getCanUndo() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -539,6 +816,13 @@ public class MaskedTextBox extends system.windows.forms.TextBoxBase  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property HidePromptOnLeave.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.MaskedTextBox.HidePromptOnLeave" target="_top">.NET documentation</a>
+     */
     public boolean getHidePromptOnLeave() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -553,6 +837,27 @@ public class MaskedTextBox extends system.windows.forms.TextBoxBase  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property HidePromptOnLeave.
+     *
+     * @param HidePromptOnLeave the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.MaskedTextBox.HidePromptOnLeave" target="_top">.NET documentation</a>
+     */
     public void setHidePromptOnLeave(boolean HidePromptOnLeave) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.InvalidCastException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.Win32Exception, system.ArgumentOutOfRangeException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -563,6 +868,13 @@ public class MaskedTextBox extends system.windows.forms.TextBoxBase  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsOverwriteMode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.MaskedTextBox.IsOverwriteMode" target="_top">.NET documentation</a>
+     */
     public boolean getIsOverwriteMode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -577,6 +889,13 @@ public class MaskedTextBox extends system.windows.forms.TextBoxBase  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MaskCompleted.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.MaskedTextBox.MaskCompleted" target="_top">.NET documentation</a>
+     */
     public boolean getMaskCompleted() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -591,6 +910,13 @@ public class MaskedTextBox extends system.windows.forms.TextBoxBase  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MaskFull.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.MaskedTextBox.MaskFull" target="_top">.NET documentation</a>
+     */
     public boolean getMaskFull() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -605,6 +931,13 @@ public class MaskedTextBox extends system.windows.forms.TextBoxBase  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ReadOnly.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.MaskedTextBox.ReadOnly" target="_top">.NET documentation</a>
+     */
     public boolean getReadOnly() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -619,6 +952,27 @@ public class MaskedTextBox extends system.windows.forms.TextBoxBase  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ReadOnly.
+     *
+     * @param ReadOnly the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.MaskedTextBox.ReadOnly" target="_top">.NET documentation</a>
+     */
     public void setReadOnly(boolean ReadOnly) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.OverflowException, system.InvalidOperationException, system.NotSupportedException, system.InvalidCastException, system.componentmodel.Win32Exception, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -629,6 +983,13 @@ public class MaskedTextBox extends system.windows.forms.TextBoxBase  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RejectInputOnFirstFailure.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.MaskedTextBox.RejectInputOnFirstFailure" target="_top">.NET documentation</a>
+     */
     public boolean getRejectInputOnFirstFailure() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -643,6 +1004,13 @@ public class MaskedTextBox extends system.windows.forms.TextBoxBase  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RejectInputOnFirstFailure.
+     *
+     * @param RejectInputOnFirstFailure the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.MaskedTextBox.RejectInputOnFirstFailure" target="_top">.NET documentation</a>
+     */
     public void setRejectInputOnFirstFailure(boolean RejectInputOnFirstFailure) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -653,6 +1021,13 @@ public class MaskedTextBox extends system.windows.forms.TextBoxBase  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ResetOnPrompt.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.MaskedTextBox.ResetOnPrompt" target="_top">.NET documentation</a>
+     */
     public boolean getResetOnPrompt() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -667,6 +1042,13 @@ public class MaskedTextBox extends system.windows.forms.TextBoxBase  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ResetOnPrompt.
+     *
+     * @param ResetOnPrompt the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.MaskedTextBox.ResetOnPrompt" target="_top">.NET documentation</a>
+     */
     public void setResetOnPrompt(boolean ResetOnPrompt) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -677,6 +1059,13 @@ public class MaskedTextBox extends system.windows.forms.TextBoxBase  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ResetOnSpace.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.MaskedTextBox.ResetOnSpace" target="_top">.NET documentation</a>
+     */
     public boolean getResetOnSpace() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -691,6 +1080,13 @@ public class MaskedTextBox extends system.windows.forms.TextBoxBase  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ResetOnSpace.
+     *
+     * @param ResetOnSpace the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.MaskedTextBox.ResetOnSpace" target="_top">.NET documentation</a>
+     */
     public void setResetOnSpace(boolean ResetOnSpace) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -701,6 +1097,13 @@ public class MaskedTextBox extends system.windows.forms.TextBoxBase  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SkipLiterals.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.MaskedTextBox.SkipLiterals" target="_top">.NET documentation</a>
+     */
     public boolean getSkipLiterals() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -715,6 +1118,13 @@ public class MaskedTextBox extends system.windows.forms.TextBoxBase  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SkipLiterals.
+     *
+     * @param SkipLiterals the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.MaskedTextBox.SkipLiterals" target="_top">.NET documentation</a>
+     */
     public void setSkipLiterals(boolean SkipLiterals) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -725,6 +1135,13 @@ public class MaskedTextBox extends system.windows.forms.TextBoxBase  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UseSystemPasswordChar.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.MaskedTextBox.UseSystemPasswordChar" target="_top">.NET documentation</a>
+     */
     public boolean getUseSystemPasswordChar() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -739,6 +1156,23 @@ public class MaskedTextBox extends system.windows.forms.TextBoxBase  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property UseSystemPasswordChar.
+     *
+     * @param UseSystemPasswordChar the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.MaskedTextBox.UseSystemPasswordChar" target="_top">.NET documentation</a>
+     */
     public void setUseSystemPasswordChar(boolean UseSystemPasswordChar) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.InvalidCastException, system.componentmodel.Win32Exception, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.OverflowException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -749,6 +1183,13 @@ public class MaskedTextBox extends system.windows.forms.TextBoxBase  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property WordWrap.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.MaskedTextBox.WordWrap" target="_top">.NET documentation</a>
+     */
     public boolean getWordWrap() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -763,6 +1204,13 @@ public class MaskedTextBox extends system.windows.forms.TextBoxBase  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property WordWrap.
+     *
+     * @param WordWrap the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.MaskedTextBox.WordWrap" target="_top">.NET documentation</a>
+     */
     public void setWordWrap(boolean WordWrap) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -773,6 +1221,13 @@ public class MaskedTextBox extends system.windows.forms.TextBoxBase  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PasswordChar.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.MaskedTextBox.PasswordChar" target="_top">.NET documentation</a>
+     */
     public char getPasswordChar() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -787,6 +1242,24 @@ public class MaskedTextBox extends system.windows.forms.TextBoxBase  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PasswordChar.
+     *
+     * @param PasswordChar the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.MaskedTextBox.PasswordChar" target="_top">.NET documentation</a>
+     */
     public void setPasswordChar(char PasswordChar) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -797,6 +1270,13 @@ public class MaskedTextBox extends system.windows.forms.TextBoxBase  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PromptChar.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.MaskedTextBox.PromptChar" target="_top">.NET documentation</a>
+     */
     public char getPromptChar() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -811,6 +1291,31 @@ public class MaskedTextBox extends system.windows.forms.TextBoxBase  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PromptChar.
+     *
+     * @param PromptChar the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.TypeInitializationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.TimeoutException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.MaskedTextBox.PromptChar" target="_top">.NET documentation</a>
+     */
     public void setPromptChar(char PromptChar) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.TypeInitializationException, system.FormatException, system.io.FileNotFoundException, system.threading.AbandonedMutexException, system.TimeoutException, system.componentmodel.Win32Exception, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -821,6 +1326,27 @@ public class MaskedTextBox extends system.windows.forms.TextBoxBase  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MaskedTextProvider.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.TypeInitializationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.MaskedTextBox.MaskedTextProvider" target="_top">.NET documentation</a>
+     */
     public MaskedTextProvider getMaskedTextProvider() throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.NotSupportedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.TypeInitializationException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -836,6 +1362,13 @@ public class MaskedTextBox extends system.windows.forms.TextBoxBase  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Culture.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.MaskedTextBox.Culture" target="_top">.NET documentation</a>
+     */
     public CultureInfo getCulture() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -851,6 +1384,32 @@ public class MaskedTextBox extends system.windows.forms.TextBoxBase  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Culture.
+     *
+     * @param Culture the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.TypeInitializationException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.TimeoutException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.MaskedTextBox.Culture" target="_top">.NET documentation</a>
+     */
     public void setCulture(CultureInfo Culture) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.FormatException, system.TypeInitializationException, system.io.FileNotFoundException, system.threading.AbandonedMutexException, system.TimeoutException, system.componentmodel.Win32Exception, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -861,6 +1420,13 @@ public class MaskedTextBox extends system.windows.forms.TextBoxBase  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FormatProvider.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.MaskedTextBox.FormatProvider" target="_top">.NET documentation</a>
+     */
     public IFormatProvider getFormatProvider() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -876,6 +1442,13 @@ public class MaskedTextBox extends system.windows.forms.TextBoxBase  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property FormatProvider.
+     *
+     * @param FormatProvider the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.MaskedTextBox.FormatProvider" target="_top">.NET documentation</a>
+     */
     public void setFormatProvider(IFormatProvider FormatProvider) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -886,6 +1459,13 @@ public class MaskedTextBox extends system.windows.forms.TextBoxBase  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Mask.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.MaskedTextBox.Mask" target="_top">.NET documentation</a>
+     */
     public java.lang.String getMask() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -900,6 +1480,30 @@ public class MaskedTextBox extends system.windows.forms.TextBoxBase  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Mask.
+     *
+     * @param Mask the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.TypeInitializationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.TimeoutException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.MaskedTextBox.Mask" target="_top">.NET documentation</a>
+     */
     public void setMask(java.lang.String Mask) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.TypeInitializationException, system.ArgumentNullException, system.FormatException, system.UriFormatException, system.io.FileNotFoundException, system.threading.AbandonedMutexException, system.TimeoutException, system.io.IOException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -910,6 +1514,24 @@ public class MaskedTextBox extends system.windows.forms.TextBoxBase  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Lines.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.MaskedTextBox.Lines" target="_top">.NET documentation</a>
+     */
     public java.lang.String[] getLines() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException, system.InvalidCastException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.RankException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -933,6 +1555,13 @@ public class MaskedTextBox extends system.windows.forms.TextBoxBase  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Lines.
+     *
+     * @param Lines the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.MaskedTextBox.Lines" target="_top">.NET documentation</a>
+     */
     public void setLines(java.lang.String[] Lines) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -943,6 +1572,13 @@ public class MaskedTextBox extends system.windows.forms.TextBoxBase  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ValidatingType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.MaskedTextBox.ValidatingType" target="_top">.NET documentation</a>
+     */
     public NetType getValidatingType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -958,6 +1594,13 @@ public class MaskedTextBox extends system.windows.forms.TextBoxBase  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ValidatingType.
+     *
+     * @param ValidatingType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.MaskedTextBox.ValidatingType" target="_top">.NET documentation</a>
+     */
     public void setValidatingType(NetType ValidatingType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -968,6 +1611,13 @@ public class MaskedTextBox extends system.windows.forms.TextBoxBase  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TextAlign.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.MaskedTextBox.TextAlign" target="_top">.NET documentation</a>
+     */
     public HorizontalAlignment getTextAlign() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -983,6 +1633,30 @@ public class MaskedTextBox extends system.windows.forms.TextBoxBase  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TextAlign.
+     *
+     * @param TextAlign the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.MaskedTextBox.TextAlign" target="_top">.NET documentation</a>
+     */
     public void setTextAlign(HorizontalAlignment TextAlign) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentNullException, system.InvalidCastException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.NotSupportedException, system.OutOfMemoryException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -993,6 +1667,13 @@ public class MaskedTextBox extends system.windows.forms.TextBoxBase  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property InsertKeyMode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.MaskedTextBox.InsertKeyMode" target="_top">.NET documentation</a>
+     */
     public InsertKeyMode getInsertKeyMode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1008,6 +1689,20 @@ public class MaskedTextBox extends system.windows.forms.TextBoxBase  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property InsertKeyMode.
+     *
+     * @param InsertKeyMode the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.MaskedTextBox.InsertKeyMode" target="_top">.NET documentation</a>
+     */
     public void setInsertKeyMode(InsertKeyMode InsertKeyMode) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1018,6 +1713,13 @@ public class MaskedTextBox extends system.windows.forms.TextBoxBase  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CutCopyMaskFormat.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.MaskedTextBox.CutCopyMaskFormat" target="_top">.NET documentation</a>
+     */
     public MaskFormat getCutCopyMaskFormat() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1033,6 +1735,20 @@ public class MaskedTextBox extends system.windows.forms.TextBoxBase  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CutCopyMaskFormat.
+     *
+     * @param CutCopyMaskFormat the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.MaskedTextBox.CutCopyMaskFormat" target="_top">.NET documentation</a>
+     */
     public void setCutCopyMaskFormat(MaskFormat CutCopyMaskFormat) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1043,6 +1759,13 @@ public class MaskedTextBox extends system.windows.forms.TextBoxBase  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TextMaskFormat.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.MaskedTextBox.TextMaskFormat" target="_top">.NET documentation</a>
+     */
     public MaskFormat getTextMaskFormat() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1058,6 +1781,21 @@ public class MaskedTextBox extends system.windows.forms.TextBoxBase  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TextMaskFormat.
+     *
+     * @param TextMaskFormat the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.MaskedTextBox.TextMaskFormat" target="_top">.NET documentation</a>
+     */
     public void setTextMaskFormat(MaskFormat TextMaskFormat) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1073,6 +1811,13 @@ public class MaskedTextBox extends system.windows.forms.TextBoxBase  {
     // Instance Events section
     
 
+    /**
+     * Invokes the .NET member addAcceptsTabChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addAcceptsTabChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1083,6 +1828,13 @@ public class MaskedTextBox extends system.windows.forms.TextBoxBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeAcceptsTabChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeAcceptsTabChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1093,6 +1845,13 @@ public class MaskedTextBox extends system.windows.forms.TextBoxBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member addIsOverwriteModeChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addIsOverwriteModeChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1103,6 +1862,13 @@ public class MaskedTextBox extends system.windows.forms.TextBoxBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeIsOverwriteModeChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeIsOverwriteModeChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1113,6 +1879,13 @@ public class MaskedTextBox extends system.windows.forms.TextBoxBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member addMaskChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addMaskChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1123,6 +1896,13 @@ public class MaskedTextBox extends system.windows.forms.TextBoxBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeMaskChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeMaskChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1133,6 +1913,13 @@ public class MaskedTextBox extends system.windows.forms.TextBoxBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member addMultilineChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addMultilineChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1143,6 +1930,13 @@ public class MaskedTextBox extends system.windows.forms.TextBoxBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeMultilineChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeMultilineChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1153,6 +1947,13 @@ public class MaskedTextBox extends system.windows.forms.TextBoxBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member addTextAlignChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addTextAlignChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1163,6 +1964,13 @@ public class MaskedTextBox extends system.windows.forms.TextBoxBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeTextAlignChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeTextAlignChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1173,6 +1981,13 @@ public class MaskedTextBox extends system.windows.forms.TextBoxBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member addMaskInputRejected.
+     *
+     * @param handler the argument of type {@code MaskInputRejectedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addMaskInputRejected(MaskInputRejectedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1183,6 +1998,13 @@ public class MaskedTextBox extends system.windows.forms.TextBoxBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeMaskInputRejected.
+     *
+     * @param handler the argument of type {@code MaskInputRejectedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeMaskInputRejected(MaskInputRejectedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1193,6 +2015,13 @@ public class MaskedTextBox extends system.windows.forms.TextBoxBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member addTypeValidationCompleted.
+     *
+     * @param handler the argument of type {@code TypeValidationEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addTypeValidationCompleted(TypeValidationEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1203,6 +2032,13 @@ public class MaskedTextBox extends system.windows.forms.TextBoxBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeTypeValidationCompleted.
+     *
+     * @param handler the argument of type {@code TypeValidationEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeTypeValidationCompleted(TypeValidationEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

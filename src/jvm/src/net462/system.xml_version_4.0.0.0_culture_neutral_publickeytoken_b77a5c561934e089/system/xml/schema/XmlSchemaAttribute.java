@@ -103,7 +103,10 @@ public class XmlSchemaAttribute extends system.xml.schema.XmlSchemaAnnotated  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XmlSchemaAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,12 @@ public class XmlSchemaAttribute extends system.xml.schema.XmlSchemaAnnotated  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public XmlSchemaAttribute() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +177,13 @@ public class XmlSchemaAttribute extends system.xml.schema.XmlSchemaAnnotated  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AttributeType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaAttribute.AttributeType" target="_top">.NET documentation</a>
+     */
     public NetObject getAttributeType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +199,13 @@ public class XmlSchemaAttribute extends system.xml.schema.XmlSchemaAnnotated  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DefaultValue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaAttribute.DefaultValue" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDefaultValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +220,13 @@ public class XmlSchemaAttribute extends system.xml.schema.XmlSchemaAnnotated  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DefaultValue.
+     *
+     * @param DefaultValue the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaAttribute.DefaultValue" target="_top">.NET documentation</a>
+     */
     public void setDefaultValue(java.lang.String DefaultValue) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +237,13 @@ public class XmlSchemaAttribute extends system.xml.schema.XmlSchemaAnnotated  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FixedValue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaAttribute.FixedValue" target="_top">.NET documentation</a>
+     */
     public java.lang.String getFixedValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -221,6 +258,13 @@ public class XmlSchemaAttribute extends system.xml.schema.XmlSchemaAnnotated  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property FixedValue.
+     *
+     * @param FixedValue the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaAttribute.FixedValue" target="_top">.NET documentation</a>
+     */
     public void setFixedValue(java.lang.String FixedValue) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -231,6 +275,13 @@ public class XmlSchemaAttribute extends system.xml.schema.XmlSchemaAnnotated  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaAttribute.Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -245,6 +296,13 @@ public class XmlSchemaAttribute extends system.xml.schema.XmlSchemaAnnotated  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Name.
+     *
+     * @param Name the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaAttribute.Name" target="_top">.NET documentation</a>
+     */
     public void setName(java.lang.String Name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -255,6 +313,13 @@ public class XmlSchemaAttribute extends system.xml.schema.XmlSchemaAnnotated  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Form.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaAttribute.Form" target="_top">.NET documentation</a>
+     */
     public XmlSchemaForm getForm() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -270,6 +335,13 @@ public class XmlSchemaAttribute extends system.xml.schema.XmlSchemaAnnotated  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Form.
+     *
+     * @param Form the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaAttribute.Form" target="_top">.NET documentation</a>
+     */
     public void setForm(XmlSchemaForm Form) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -280,6 +352,13 @@ public class XmlSchemaAttribute extends system.xml.schema.XmlSchemaAnnotated  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AttributeSchemaType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaAttribute.AttributeSchemaType" target="_top">.NET documentation</a>
+     */
     public XmlSchemaSimpleType getAttributeSchemaType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -295,6 +374,13 @@ public class XmlSchemaAttribute extends system.xml.schema.XmlSchemaAnnotated  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SchemaType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaAttribute.SchemaType" target="_top">.NET documentation</a>
+     */
     public XmlSchemaSimpleType getSchemaType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -310,6 +396,13 @@ public class XmlSchemaAttribute extends system.xml.schema.XmlSchemaAnnotated  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SchemaType.
+     *
+     * @param SchemaType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaAttribute.SchemaType" target="_top">.NET documentation</a>
+     */
     public void setSchemaType(XmlSchemaSimpleType SchemaType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -320,6 +413,13 @@ public class XmlSchemaAttribute extends system.xml.schema.XmlSchemaAnnotated  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Use.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaAttribute.Use" target="_top">.NET documentation</a>
+     */
     public XmlSchemaUse getUse() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -335,6 +435,13 @@ public class XmlSchemaAttribute extends system.xml.schema.XmlSchemaAnnotated  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Use.
+     *
+     * @param Use the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaAttribute.Use" target="_top">.NET documentation</a>
+     */
     public void setUse(XmlSchemaUse Use) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -345,6 +452,13 @@ public class XmlSchemaAttribute extends system.xml.schema.XmlSchemaAnnotated  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property QualifiedName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaAttribute.QualifiedName" target="_top">.NET documentation</a>
+     */
     public XmlQualifiedName getQualifiedName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -360,6 +474,13 @@ public class XmlSchemaAttribute extends system.xml.schema.XmlSchemaAnnotated  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RefName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaAttribute.RefName" target="_top">.NET documentation</a>
+     */
     public XmlQualifiedName getRefName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -375,6 +496,13 @@ public class XmlSchemaAttribute extends system.xml.schema.XmlSchemaAnnotated  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RefName.
+     *
+     * @param RefName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaAttribute.RefName" target="_top">.NET documentation</a>
+     */
     public void setRefName(XmlQualifiedName RefName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -385,6 +513,13 @@ public class XmlSchemaAttribute extends system.xml.schema.XmlSchemaAnnotated  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SchemaTypeName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaAttribute.SchemaTypeName" target="_top">.NET documentation</a>
+     */
     public XmlQualifiedName getSchemaTypeName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -400,6 +535,13 @@ public class XmlSchemaAttribute extends system.xml.schema.XmlSchemaAnnotated  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SchemaTypeName.
+     *
+     * @param SchemaTypeName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaAttribute.SchemaTypeName" target="_top">.NET documentation</a>
+     */
     public void setSchemaTypeName(XmlQualifiedName SchemaTypeName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

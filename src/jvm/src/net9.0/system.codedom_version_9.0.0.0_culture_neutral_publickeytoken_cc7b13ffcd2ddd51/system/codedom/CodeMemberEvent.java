@@ -101,7 +101,10 @@ public class CodeMemberEvent extends system.codedom.CodeTypeMember  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CodeMemberEvent(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class CodeMemberEvent extends system.codedom.CodeTypeMember  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeMemberEvent.-ctor" target="_top">.NET documentation</a>
+     */
     public CodeMemberEvent() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -166,6 +175,13 @@ public class CodeMemberEvent extends system.codedom.CodeTypeMember  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property PrivateImplementationType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeMemberEvent.PrivateImplementationType" target="_top">.NET documentation</a>
+     */
     public CodeTypeReference getPrivateImplementationType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -181,6 +197,13 @@ public class CodeMemberEvent extends system.codedom.CodeTypeMember  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PrivateImplementationType.
+     *
+     * @param PrivateImplementationType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeMemberEvent.PrivateImplementationType" target="_top">.NET documentation</a>
+     */
     public void setPrivateImplementationType(CodeTypeReference PrivateImplementationType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -191,6 +214,22 @@ public class CodeMemberEvent extends system.codedom.CodeTypeMember  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Type.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeMemberEvent.Type" target="_top">.NET documentation</a>
+     */
     public CodeTypeReference getType() throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,6 +245,13 @@ public class CodeMemberEvent extends system.codedom.CodeTypeMember  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Type.
+     *
+     * @param Type the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeMemberEvent.Type" target="_top">.NET documentation</a>
+     */
     public void setType(CodeTypeReference Type) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +262,13 @@ public class CodeMemberEvent extends system.codedom.CodeTypeMember  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ImplementationTypes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeMemberEvent.ImplementationTypes" target="_top">.NET documentation</a>
+     */
     public CodeTypeReferenceCollection getImplementationTypes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -99,7 +99,10 @@ public class ObfuscationAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ObfuscationAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class ObfuscationAttribute extends system.Attribute  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.ObfuscationAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public ObfuscationAttribute() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +173,13 @@ public class ObfuscationAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ApplyToMembers.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.ObfuscationAttribute.ApplyToMembers" target="_top">.NET documentation</a>
+     */
     public boolean getApplyToMembers() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,6 +194,13 @@ public class ObfuscationAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ApplyToMembers.
+     *
+     * @param ApplyToMembers the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.ObfuscationAttribute.ApplyToMembers" target="_top">.NET documentation</a>
+     */
     public void setApplyToMembers(boolean ApplyToMembers) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +211,13 @@ public class ObfuscationAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Exclude.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.ObfuscationAttribute.Exclude" target="_top">.NET documentation</a>
+     */
     public boolean getExclude() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +232,13 @@ public class ObfuscationAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Exclude.
+     *
+     * @param Exclude the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.ObfuscationAttribute.Exclude" target="_top">.NET documentation</a>
+     */
     public void setExclude(boolean Exclude) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -212,6 +249,13 @@ public class ObfuscationAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StripAfterObfuscation.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.ObfuscationAttribute.StripAfterObfuscation" target="_top">.NET documentation</a>
+     */
     public boolean getStripAfterObfuscation() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -226,6 +270,13 @@ public class ObfuscationAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property StripAfterObfuscation.
+     *
+     * @param StripAfterObfuscation the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.ObfuscationAttribute.StripAfterObfuscation" target="_top">.NET documentation</a>
+     */
     public void setStripAfterObfuscation(boolean StripAfterObfuscation) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -236,6 +287,13 @@ public class ObfuscationAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Feature.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.ObfuscationAttribute.Feature" target="_top">.NET documentation</a>
+     */
     public java.lang.String getFeature() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -250,6 +308,13 @@ public class ObfuscationAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Feature.
+     *
+     * @param Feature the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.ObfuscationAttribute.Feature" target="_top">.NET documentation</a>
+     */
     public void setFeature(java.lang.String Feature) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -101,7 +101,10 @@ public class EnumerationOptions extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public EnumerationOptions(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,23 @@ public class EnumerationOptions extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.EnumerationOptions.-ctor" target="_top">.NET documentation</a>
+     */
     public EnumerationOptions() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
@@ -166,6 +186,13 @@ public class EnumerationOptions extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IgnoreInaccessible.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.EnumerationOptions.IgnoreInaccessible" target="_top">.NET documentation</a>
+     */
     public boolean getIgnoreInaccessible() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +207,13 @@ public class EnumerationOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IgnoreInaccessible.
+     *
+     * @param IgnoreInaccessible the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.EnumerationOptions.IgnoreInaccessible" target="_top">.NET documentation</a>
+     */
     public void setIgnoreInaccessible(boolean IgnoreInaccessible) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +224,13 @@ public class EnumerationOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RecurseSubdirectories.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.EnumerationOptions.RecurseSubdirectories" target="_top">.NET documentation</a>
+     */
     public boolean getRecurseSubdirectories() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +245,13 @@ public class EnumerationOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RecurseSubdirectories.
+     *
+     * @param RecurseSubdirectories the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.EnumerationOptions.RecurseSubdirectories" target="_top">.NET documentation</a>
+     */
     public void setRecurseSubdirectories(boolean RecurseSubdirectories) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -214,6 +262,13 @@ public class EnumerationOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ReturnSpecialDirectories.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.EnumerationOptions.ReturnSpecialDirectories" target="_top">.NET documentation</a>
+     */
     public boolean getReturnSpecialDirectories() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -228,6 +283,13 @@ public class EnumerationOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ReturnSpecialDirectories.
+     *
+     * @param ReturnSpecialDirectories the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.EnumerationOptions.ReturnSpecialDirectories" target="_top">.NET documentation</a>
+     */
     public void setReturnSpecialDirectories(boolean ReturnSpecialDirectories) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -238,6 +300,13 @@ public class EnumerationOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property BufferSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.EnumerationOptions.BufferSize" target="_top">.NET documentation</a>
+     */
     public int getBufferSize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -278,6 +347,13 @@ public class EnumerationOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property BufferSize.
+     *
+     * @param BufferSize the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.EnumerationOptions.BufferSize" target="_top">.NET documentation</a>
+     */
     public void setBufferSize(int BufferSize) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -288,6 +364,13 @@ public class EnumerationOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MaxRecursionDepth.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.EnumerationOptions.MaxRecursionDepth" target="_top">.NET documentation</a>
+     */
     public int getMaxRecursionDepth() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -328,6 +411,23 @@ public class EnumerationOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MaxRecursionDepth.
+     *
+     * @param MaxRecursionDepth the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.EnumerationOptions.MaxRecursionDepth" target="_top">.NET documentation</a>
+     */
     public void setMaxRecursionDepth(int MaxRecursionDepth) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -338,6 +438,13 @@ public class EnumerationOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AttributesToSkip.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.EnumerationOptions.AttributesToSkip" target="_top">.NET documentation</a>
+     */
     public FileAttributes getAttributesToSkip() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -353,6 +460,13 @@ public class EnumerationOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AttributesToSkip.
+     *
+     * @param AttributesToSkip the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.EnumerationOptions.AttributesToSkip" target="_top">.NET documentation</a>
+     */
     public void setAttributesToSkip(FileAttributes AttributesToSkip) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -363,6 +477,13 @@ public class EnumerationOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MatchCasing.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.EnumerationOptions.MatchCasing" target="_top">.NET documentation</a>
+     */
     public MatchCasing getMatchCasing() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -378,6 +499,13 @@ public class EnumerationOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MatchCasing.
+     *
+     * @param MatchCasing the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.EnumerationOptions.MatchCasing" target="_top">.NET documentation</a>
+     */
     public void setMatchCasing(MatchCasing MatchCasing) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -388,6 +516,13 @@ public class EnumerationOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MatchType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.EnumerationOptions.MatchType" target="_top">.NET documentation</a>
+     */
     public MatchType getMatchType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -403,6 +538,13 @@ public class EnumerationOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MatchType.
+     *
+     * @param MatchType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.EnumerationOptions.MatchType" target="_top">.NET documentation</a>
+     */
     public void setMatchType(MatchType MatchType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

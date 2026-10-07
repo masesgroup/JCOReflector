@@ -100,7 +100,10 @@ public class Throw extends system.activities.CodeActivity  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Throw(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class Throw extends system.activities.CodeActivity  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.Throw.-ctor" target="_top">.NET documentation</a>
+     */
     public Throw() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +174,13 @@ public class Throw extends system.activities.CodeActivity  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Exception.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.Throw.Exception" target="_top">.NET documentation</a>
+     */
     public InArgument_1 getException() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +196,13 @@ public class Throw extends system.activities.CodeActivity  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Exception.
+     *
+     * @param Exception the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.Throw.Exception" target="_top">.NET documentation</a>
+     */
     public void setException(InArgument_1 Exception) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

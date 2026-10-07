@@ -102,7 +102,10 @@ public class EdmFunction extends system.data.metadata.edm.EdmType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public EdmFunction(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -161,6 +164,13 @@ public class EdmFunction extends system.data.metadata.edm.EdmType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsComposableAttribute.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.EdmFunction.IsComposableAttribute" target="_top">.NET documentation</a>
+     */
     public boolean getIsComposableAttribute() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -175,6 +185,13 @@ public class EdmFunction extends system.data.metadata.edm.EdmType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ReturnParameter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.EdmFunction.ReturnParameter" target="_top">.NET documentation</a>
+     */
     public FunctionParameter getReturnParameter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +207,13 @@ public class EdmFunction extends system.data.metadata.edm.EdmType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Parameters.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.EdmFunction.Parameters" target="_top">.NET documentation</a>
+     */
     public ReadOnlyMetadataCollection_1 getParameters() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +229,13 @@ public class EdmFunction extends system.data.metadata.edm.EdmType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ReturnParameters.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.EdmFunction.ReturnParameters" target="_top">.NET documentation</a>
+     */
     public ReadOnlyMetadataCollection_1 getReturnParameters() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -220,6 +251,13 @@ public class EdmFunction extends system.data.metadata.edm.EdmType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CommandTextAttribute.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.EdmFunction.CommandTextAttribute" target="_top">.NET documentation</a>
+     */
     public java.lang.String getCommandTextAttribute() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -103,7 +103,10 @@ public class WSFederationHttpBinding extends system.servicemodel.WSHttpBindingBa
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public WSFederationHttpBinding(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,20 @@ public class WSFederationHttpBinding extends system.servicemodel.WSHttpBindingBa
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.WSFederationHttpBinding.-ctor" target="_top">.NET documentation</a>
+     */
     public WSFederationHttpBinding() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -160,6 +177,18 @@ public class WSFederationHttpBinding extends system.servicemodel.WSHttpBindingBa
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param securityMode the argument of type {@code WSFederationHttpSecurityMode}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.WSFederationHttpBinding.-ctor" target="_top">.NET documentation</a>
+     */
     public WSFederationHttpBinding(WSFederationHttpSecurityMode securityMode) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +199,21 @@ public class WSFederationHttpBinding extends system.servicemodel.WSHttpBindingBa
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param securityMode the argument of type {@code WSFederationHttpSecurityMode}
+     * @param reliableSessionEnabled the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.WSFederationHttpBinding.-ctor" target="_top">.NET documentation</a>
+     */
     public WSFederationHttpBinding(WSFederationHttpSecurityMode securityMode, boolean reliableSessionEnabled) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
@@ -180,6 +224,24 @@ public class WSFederationHttpBinding extends system.servicemodel.WSHttpBindingBa
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param configName the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.WSFederationHttpBinding.-ctor" target="_top">.NET documentation</a>
+     */
     public WSFederationHttpBinding(java.lang.String configName) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException, system.TypeLoadException, system.configuration.ConfigurationErrorsException {
         try {
             // add reference to assemblyName.dll file
@@ -194,6 +256,13 @@ public class WSFederationHttpBinding extends system.servicemodel.WSHttpBindingBa
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ShouldSerializeSecurity.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.WSFederationHttpBinding.ShouldSerializeSecurity" target="_top">.NET documentation</a>
+     */
     public boolean ShouldSerializeSecurity() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +277,21 @@ public class WSFederationHttpBinding extends system.servicemodel.WSHttpBindingBa
         }
     }
 
+    /**
+     * Invokes the .NET member CreateBindingElements.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.WSFederationHttpBinding.CreateBindingElements" target="_top">.NET documentation</a>
+     */
     public BindingElementCollection CreateBindingElements() throws Throwable, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -227,6 +311,13 @@ public class WSFederationHttpBinding extends system.servicemodel.WSHttpBindingBa
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property PrivacyNoticeVersion.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.WSFederationHttpBinding.PrivacyNoticeVersion" target="_top">.NET documentation</a>
+     */
     public int getPrivacyNoticeVersion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -267,6 +358,13 @@ public class WSFederationHttpBinding extends system.servicemodel.WSHttpBindingBa
         }
     }
 
+    /**
+     * Sets the value of the .NET property PrivacyNoticeVersion.
+     *
+     * @param PrivacyNoticeVersion the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.WSFederationHttpBinding.PrivacyNoticeVersion" target="_top">.NET documentation</a>
+     */
     public void setPrivacyNoticeVersion(int PrivacyNoticeVersion) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -277,6 +375,13 @@ public class WSFederationHttpBinding extends system.servicemodel.WSHttpBindingBa
         }
     }
 
+    /**
+     * Gets the value of the .NET property Security.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.WSFederationHttpBinding.Security" target="_top">.NET documentation</a>
+     */
     public WSFederationHttpSecurity getSecurity() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -292,6 +397,24 @@ public class WSFederationHttpBinding extends system.servicemodel.WSHttpBindingBa
         }
     }
 
+    /**
+     * Sets the value of the .NET property Security.
+     *
+     * @param Security the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.WSFederationHttpBinding.Security" target="_top">.NET documentation</a>
+     */
     public void setSecurity(WSFederationHttpSecurity Security) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -302,6 +425,13 @@ public class WSFederationHttpBinding extends system.servicemodel.WSHttpBindingBa
         }
     }
 
+    /**
+     * Gets the value of the .NET property PrivacyNoticeAt.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.WSFederationHttpBinding.PrivacyNoticeAt" target="_top">.NET documentation</a>
+     */
     public Uri getPrivacyNoticeAt() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -317,6 +447,13 @@ public class WSFederationHttpBinding extends system.servicemodel.WSHttpBindingBa
         }
     }
 
+    /**
+     * Sets the value of the .NET property PrivacyNoticeAt.
+     *
+     * @param PrivacyNoticeAt the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.WSFederationHttpBinding.PrivacyNoticeAt" target="_top">.NET documentation</a>
+     */
     public void setPrivacyNoticeAt(Uri PrivacyNoticeAt) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

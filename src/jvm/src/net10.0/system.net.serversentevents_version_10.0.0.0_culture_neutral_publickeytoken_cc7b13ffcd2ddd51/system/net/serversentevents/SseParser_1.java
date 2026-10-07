@@ -104,7 +104,10 @@ public class SseParser_1<T extends IJCOBridgeReflected> extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SseParser_1(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -159,6 +162,14 @@ public class SseParser_1<T extends IJCOBridgeReflected> extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member EnumerateAsync.
+     *
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.ServerSentEvents.SseParser-1.EnumerateAsync" target="_top">.NET documentation</a>
+     */
     public IAsyncEnumerable_1 EnumerateAsync(CancellationToken cancellationToken) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -174,6 +185,13 @@ public class SseParser_1<T extends IJCOBridgeReflected> extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Enumerate.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.ServerSentEvents.SseParser-1.Enumerate" target="_top">.NET documentation</a>
+     */
     public IEnumerable_1 Enumerate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +211,13 @@ public class SseParser_1<T extends IJCOBridgeReflected> extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property LastEventId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.ServerSentEvents.SseParser-1.LastEventId" target="_top">.NET documentation</a>
+     */
     public java.lang.String getLastEventId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +232,13 @@ public class SseParser_1<T extends IJCOBridgeReflected> extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property LastEventId.
+     *
+     * @param LastEventId the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.ServerSentEvents.SseParser-1.LastEventId" target="_top">.NET documentation</a>
+     */
     public void setLastEventId(java.lang.String LastEventId) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -217,6 +249,13 @@ public class SseParser_1<T extends IJCOBridgeReflected> extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ReconnectionInterval.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.ServerSentEvents.SseParser-1.ReconnectionInterval" target="_top">.NET documentation</a>
+     */
     public TimeSpan getReconnectionInterval() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -232,6 +271,13 @@ public class SseParser_1<T extends IJCOBridgeReflected> extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ReconnectionInterval.
+     *
+     * @param ReconnectionInterval the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.ServerSentEvents.SseParser-1.ReconnectionInterval" target="_top">.NET documentation</a>
+     */
     public void setReconnectionInterval(TimeSpan ReconnectionInterval) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

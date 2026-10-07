@@ -100,7 +100,10 @@ public class IExtendedUIService2Implementation extends NetObject implements IExt
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IExtendedUIService2Implementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -142,6 +145,14 @@ public class IExtendedUIService2Implementation extends NetObject implements IExt
 
     // Methods section
     
+    /**
+     * Invokes the .NET member IsSupportedType.
+     *
+     * @param type the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.IExtendedUIService2.IsSupportedType" target="_top">.NET documentation</a>
+     */
     public boolean IsSupportedType(NetType type) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -156,6 +167,13 @@ public class IExtendedUIService2Implementation extends NetObject implements IExt
         }
     }
 
+    /**
+     * Invokes the .NET member GetTargetFrameworkVersion.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.IExtendedUIService2.GetTargetFrameworkVersion" target="_top">.NET documentation</a>
+     */
     public long GetTargetFrameworkVersion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -196,6 +214,14 @@ public class IExtendedUIService2Implementation extends NetObject implements IExt
         }
     }
 
+    /**
+     * Invokes the .NET member GetReflectionAssembly.
+     *
+     * @param assemblyName the argument of type {@code AssemblyName}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.IExtendedUIService2.GetReflectionAssembly" target="_top">.NET documentation</a>
+     */
     public Assembly GetReflectionAssembly(AssemblyName assemblyName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -211,6 +237,14 @@ public class IExtendedUIService2Implementation extends NetObject implements IExt
         }
     }
 
+    /**
+     * Invokes the .NET member GetRuntimeType.
+     *
+     * @param reflectionType the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.IExtendedUIService2.GetRuntimeType" target="_top">.NET documentation</a>
+     */
     public NetType GetRuntimeType(NetType reflectionType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

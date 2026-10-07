@@ -106,7 +106,10 @@ public class HttpRequestHeaders extends system.net.http.headers.HttpHeaders  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public HttpRequestHeaders(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -165,6 +168,19 @@ public class HttpRequestHeaders extends system.net.http.headers.HttpHeaders  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Authorization.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.HttpRequestHeaders.Authorization" target="_top">.NET documentation</a>
+     */
     public AuthenticationHeaderValue getAuthorization() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.FormatException, system.ArgumentOutOfRangeException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +196,22 @@ public class HttpRequestHeaders extends system.net.http.headers.HttpHeaders  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Authorization.
+     *
+     * @param Authorization the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.HttpRequestHeaders.Authorization" target="_top">.NET documentation</a>
+     */
     public void setAuthorization(AuthenticationHeaderValue Authorization) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +222,19 @@ public class HttpRequestHeaders extends system.net.http.headers.HttpHeaders  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ProxyAuthorization.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.HttpRequestHeaders.ProxyAuthorization" target="_top">.NET documentation</a>
+     */
     public AuthenticationHeaderValue getProxyAuthorization() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.FormatException, system.ArgumentOutOfRangeException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +250,22 @@ public class HttpRequestHeaders extends system.net.http.headers.HttpHeaders  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ProxyAuthorization.
+     *
+     * @param ProxyAuthorization the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.HttpRequestHeaders.ProxyAuthorization" target="_top">.NET documentation</a>
+     */
     public void setProxyAuthorization(AuthenticationHeaderValue ProxyAuthorization) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +276,17 @@ public class HttpRequestHeaders extends system.net.http.headers.HttpHeaders  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CacheControl.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.HttpRequestHeaders.CacheControl" target="_top">.NET documentation</a>
+     */
     public CacheControlHeaderValue getCacheControl() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -230,6 +302,21 @@ public class HttpRequestHeaders extends system.net.http.headers.HttpHeaders  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CacheControl.
+     *
+     * @param CacheControl the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.HttpRequestHeaders.CacheControl" target="_top">.NET documentation</a>
+     */
     public void setCacheControl(CacheControlHeaderValue CacheControl) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.FormatException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -240,6 +327,13 @@ public class HttpRequestHeaders extends system.net.http.headers.HttpHeaders  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IfMatch.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.HttpRequestHeaders.IfMatch" target="_top">.NET documentation</a>
+     */
     public HttpHeaderValueCollection_1 getIfMatch() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -255,6 +349,13 @@ public class HttpRequestHeaders extends system.net.http.headers.HttpHeaders  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IfNoneMatch.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.HttpRequestHeaders.IfNoneMatch" target="_top">.NET documentation</a>
+     */
     public HttpHeaderValueCollection_1 getIfNoneMatch() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -270,6 +371,13 @@ public class HttpRequestHeaders extends system.net.http.headers.HttpHeaders  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Accept.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.HttpRequestHeaders.Accept" target="_top">.NET documentation</a>
+     */
     public HttpHeaderValueCollection_1 getAccept() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -285,6 +393,13 @@ public class HttpRequestHeaders extends system.net.http.headers.HttpHeaders  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Pragma.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.HttpRequestHeaders.Pragma" target="_top">.NET documentation</a>
+     */
     public HttpHeaderValueCollection_1 getPragma() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -300,6 +415,13 @@ public class HttpRequestHeaders extends system.net.http.headers.HttpHeaders  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Expect.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.HttpRequestHeaders.Expect" target="_top">.NET documentation</a>
+     */
     public HttpHeaderValueCollection_1 getExpect() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -315,6 +437,13 @@ public class HttpRequestHeaders extends system.net.http.headers.HttpHeaders  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Upgrade.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.HttpRequestHeaders.Upgrade" target="_top">.NET documentation</a>
+     */
     public HttpHeaderValueCollection_1 getUpgrade() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -330,6 +459,13 @@ public class HttpRequestHeaders extends system.net.http.headers.HttpHeaders  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UserAgent.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.HttpRequestHeaders.UserAgent" target="_top">.NET documentation</a>
+     */
     public HttpHeaderValueCollection_1 getUserAgent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -345,6 +481,13 @@ public class HttpRequestHeaders extends system.net.http.headers.HttpHeaders  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AcceptCharset.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.HttpRequestHeaders.AcceptCharset" target="_top">.NET documentation</a>
+     */
     public HttpHeaderValueCollection_1 getAcceptCharset() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -360,6 +503,13 @@ public class HttpRequestHeaders extends system.net.http.headers.HttpHeaders  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AcceptEncoding.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.HttpRequestHeaders.AcceptEncoding" target="_top">.NET documentation</a>
+     */
     public HttpHeaderValueCollection_1 getAcceptEncoding() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -375,6 +525,13 @@ public class HttpRequestHeaders extends system.net.http.headers.HttpHeaders  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AcceptLanguage.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.HttpRequestHeaders.AcceptLanguage" target="_top">.NET documentation</a>
+     */
     public HttpHeaderValueCollection_1 getAcceptLanguage() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -390,6 +547,13 @@ public class HttpRequestHeaders extends system.net.http.headers.HttpHeaders  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TransferEncoding.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.HttpRequestHeaders.TransferEncoding" target="_top">.NET documentation</a>
+     */
     public HttpHeaderValueCollection_1 getTransferEncoding() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -405,6 +569,13 @@ public class HttpRequestHeaders extends system.net.http.headers.HttpHeaders  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TE.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.HttpRequestHeaders.TE" target="_top">.NET documentation</a>
+     */
     public HttpHeaderValueCollection_1 getTE() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -420,6 +591,13 @@ public class HttpRequestHeaders extends system.net.http.headers.HttpHeaders  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Via.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.HttpRequestHeaders.Via" target="_top">.NET documentation</a>
+     */
     public HttpHeaderValueCollection_1 getVia() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -435,6 +613,13 @@ public class HttpRequestHeaders extends system.net.http.headers.HttpHeaders  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Warning.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.HttpRequestHeaders.Warning" target="_top">.NET documentation</a>
+     */
     public HttpHeaderValueCollection_1 getWarning() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -450,6 +635,13 @@ public class HttpRequestHeaders extends system.net.http.headers.HttpHeaders  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Connection.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.HttpRequestHeaders.Connection" target="_top">.NET documentation</a>
+     */
     public HttpHeaderValueCollection_1 getConnection() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -465,6 +657,13 @@ public class HttpRequestHeaders extends system.net.http.headers.HttpHeaders  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Trailer.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.HttpRequestHeaders.Trailer" target="_top">.NET documentation</a>
+     */
     public HttpHeaderValueCollection_1 getTrailer() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -480,6 +679,19 @@ public class HttpRequestHeaders extends system.net.http.headers.HttpHeaders  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IfRange.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.HttpRequestHeaders.IfRange" target="_top">.NET documentation</a>
+     */
     public RangeConditionHeaderValue getIfRange() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.FormatException, system.ArgumentOutOfRangeException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -495,6 +707,22 @@ public class HttpRequestHeaders extends system.net.http.headers.HttpHeaders  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IfRange.
+     *
+     * @param IfRange the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.HttpRequestHeaders.IfRange" target="_top">.NET documentation</a>
+     */
     public void setIfRange(RangeConditionHeaderValue IfRange) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -505,6 +733,19 @@ public class HttpRequestHeaders extends system.net.http.headers.HttpHeaders  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Range.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.HttpRequestHeaders.Range" target="_top">.NET documentation</a>
+     */
     public RangeHeaderValue getRange() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.FormatException, system.ArgumentOutOfRangeException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -520,6 +761,22 @@ public class HttpRequestHeaders extends system.net.http.headers.HttpHeaders  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Range.
+     *
+     * @param Range the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.HttpRequestHeaders.Range" target="_top">.NET documentation</a>
+     */
     public void setRange(RangeHeaderValue Range) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -530,6 +787,15 @@ public class HttpRequestHeaders extends system.net.http.headers.HttpHeaders  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ConnectionClose.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.HttpRequestHeaders.ConnectionClose" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getConnectionClose() throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -545,6 +811,18 @@ public class HttpRequestHeaders extends system.net.http.headers.HttpHeaders  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ConnectionClose.
+     *
+     * @param ConnectionClose the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.HttpRequestHeaders.ConnectionClose" target="_top">.NET documentation</a>
+     */
     public void setConnectionClose(Nullable_1 ConnectionClose) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -555,6 +833,17 @@ public class HttpRequestHeaders extends system.net.http.headers.HttpHeaders  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ExpectContinue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.HttpRequestHeaders.ExpectContinue" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getExpectContinue() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -570,6 +859,18 @@ public class HttpRequestHeaders extends system.net.http.headers.HttpHeaders  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ExpectContinue.
+     *
+     * @param ExpectContinue the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.HttpRequestHeaders.ExpectContinue" target="_top">.NET documentation</a>
+     */
     public void setExpectContinue(Nullable_1 ExpectContinue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -580,6 +881,15 @@ public class HttpRequestHeaders extends system.net.http.headers.HttpHeaders  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TransferEncodingChunked.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.HttpRequestHeaders.TransferEncodingChunked" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getTransferEncodingChunked() throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -595,6 +905,18 @@ public class HttpRequestHeaders extends system.net.http.headers.HttpHeaders  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TransferEncodingChunked.
+     *
+     * @param TransferEncodingChunked the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.HttpRequestHeaders.TransferEncodingChunked" target="_top">.NET documentation</a>
+     */
     public void setTransferEncodingChunked(Nullable_1 TransferEncodingChunked) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -605,6 +927,15 @@ public class HttpRequestHeaders extends system.net.http.headers.HttpHeaders  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Date.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.HttpRequestHeaders.Date" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getDate() throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -620,6 +951,21 @@ public class HttpRequestHeaders extends system.net.http.headers.HttpHeaders  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Date.
+     *
+     * @param Date the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.HttpRequestHeaders.Date" target="_top">.NET documentation</a>
+     */
     public void setDate(Nullable_1 Date) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.FormatException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -630,6 +976,17 @@ public class HttpRequestHeaders extends system.net.http.headers.HttpHeaders  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IfModifiedSince.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.HttpRequestHeaders.IfModifiedSince" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getIfModifiedSince() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -645,6 +1002,22 @@ public class HttpRequestHeaders extends system.net.http.headers.HttpHeaders  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IfModifiedSince.
+     *
+     * @param IfModifiedSince the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.HttpRequestHeaders.IfModifiedSince" target="_top">.NET documentation</a>
+     */
     public void setIfModifiedSince(Nullable_1 IfModifiedSince) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -655,6 +1028,17 @@ public class HttpRequestHeaders extends system.net.http.headers.HttpHeaders  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IfUnmodifiedSince.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.HttpRequestHeaders.IfUnmodifiedSince" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getIfUnmodifiedSince() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -670,6 +1054,22 @@ public class HttpRequestHeaders extends system.net.http.headers.HttpHeaders  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IfUnmodifiedSince.
+     *
+     * @param IfUnmodifiedSince the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.HttpRequestHeaders.IfUnmodifiedSince" target="_top">.NET documentation</a>
+     */
     public void setIfUnmodifiedSince(Nullable_1 IfUnmodifiedSince) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -680,6 +1080,19 @@ public class HttpRequestHeaders extends system.net.http.headers.HttpHeaders  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MaxForwards.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.HttpRequestHeaders.MaxForwards" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getMaxForwards() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.FormatException, system.ArgumentOutOfRangeException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -695,6 +1108,22 @@ public class HttpRequestHeaders extends system.net.http.headers.HttpHeaders  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MaxForwards.
+     *
+     * @param MaxForwards the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.HttpRequestHeaders.MaxForwards" target="_top">.NET documentation</a>
+     */
     public void setMaxForwards(Nullable_1 MaxForwards) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -705,6 +1134,19 @@ public class HttpRequestHeaders extends system.net.http.headers.HttpHeaders  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property From.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.HttpRequestHeaders.From" target="_top">.NET documentation</a>
+     */
     public java.lang.String getFrom() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.FormatException, system.ArgumentOutOfRangeException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -719,6 +1161,26 @@ public class HttpRequestHeaders extends system.net.http.headers.HttpHeaders  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property From.
+     *
+     * @param From the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.HttpRequestHeaders.From" target="_top">.NET documentation</a>
+     */
     public void setFrom(java.lang.String From) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.NotSupportedException, system.FormatException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -729,6 +1191,19 @@ public class HttpRequestHeaders extends system.net.http.headers.HttpHeaders  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Host.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.HttpRequestHeaders.Host" target="_top">.NET documentation</a>
+     */
     public java.lang.String getHost() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.FormatException, system.ArgumentOutOfRangeException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -743,6 +1218,26 @@ public class HttpRequestHeaders extends system.net.http.headers.HttpHeaders  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Host.
+     *
+     * @param Host the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.HttpRequestHeaders.Host" target="_top">.NET documentation</a>
+     */
     public void setHost(java.lang.String Host) throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.UriFormatException, system.OutOfMemoryException, system.NotSupportedException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -753,6 +1248,19 @@ public class HttpRequestHeaders extends system.net.http.headers.HttpHeaders  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Referrer.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.HttpRequestHeaders.Referrer" target="_top">.NET documentation</a>
+     */
     public Uri getReferrer() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.FormatException, system.ArgumentOutOfRangeException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -768,6 +1276,22 @@ public class HttpRequestHeaders extends system.net.http.headers.HttpHeaders  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Referrer.
+     *
+     * @param Referrer the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.HttpRequestHeaders.Referrer" target="_top">.NET documentation</a>
+     */
     public void setReferrer(Uri Referrer) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

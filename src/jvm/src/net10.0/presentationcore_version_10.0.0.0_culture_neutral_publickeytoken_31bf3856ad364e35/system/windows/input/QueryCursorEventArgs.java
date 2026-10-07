@@ -102,7 +102,10 @@ public class QueryCursorEventArgs extends system.windows.input.MouseEventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public QueryCursorEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,20 @@ public class QueryCursorEventArgs extends system.windows.input.MouseEventArgs  {
     public QueryCursorEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param mouse the argument of type {@code MouseDevice}
+     * @param timestamp the argument of type {@code int}
+     * @param stylusDevice the argument of type {@code StylusDevice}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.QueryCursorEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public QueryCursorEventArgs(MouseDevice mouse, int timestamp, StylusDevice stylusDevice) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -162,6 +179,19 @@ public class QueryCursorEventArgs extends system.windows.input.MouseEventArgs  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param mouse the argument of type {@code MouseDevice}
+     * @param timestamp the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.QueryCursorEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public QueryCursorEventArgs(MouseDevice mouse, int timestamp) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -181,6 +211,13 @@ public class QueryCursorEventArgs extends system.windows.input.MouseEventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Cursor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.QueryCursorEventArgs.Cursor" target="_top">.NET documentation</a>
+     */
     public Cursor getCursor() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -196,6 +233,23 @@ public class QueryCursorEventArgs extends system.windows.input.MouseEventArgs  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Cursor.
+     *
+     * @param Cursor the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.QueryCursorEventArgs.Cursor" target="_top">.NET documentation</a>
+     */
     public void setCursor(Cursor Cursor) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

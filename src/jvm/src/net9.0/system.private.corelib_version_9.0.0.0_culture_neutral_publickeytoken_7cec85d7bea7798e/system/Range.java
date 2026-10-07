@@ -102,7 +102,10 @@ public class Range extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Range(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,14 @@ public class Range extends system.ValueType  {
     public Range() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param start the argument of type {@code Index}
+     * @param end the argument of type {@code Index}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Range.-ctor" target="_top">.NET documentation</a>
+     */
     public Range(Index start, Index end) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +178,14 @@ public class Range extends system.ValueType  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Equals.
+     *
+     * @param other the argument of type {@code Range}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Range.Equals" target="_top">.NET documentation</a>
+     */
     public boolean Equals(Range other) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -181,6 +200,14 @@ public class Range extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member EndAt.
+     *
+     * @param end the argument of type {@code Index}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Range.EndAt" target="_top">.NET documentation</a>
+     */
     public static Range EndAt(Index end) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -196,6 +223,14 @@ public class Range extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member StartAt.
+     *
+     * @param start the argument of type {@code Index}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Range.StartAt" target="_top">.NET documentation</a>
+     */
     public static Range StartAt(Index start) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -211,6 +246,24 @@ public class Range extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetOffsetAndLength.
+     *
+     * @param length the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Range.GetOffsetAndLength" target="_top">.NET documentation</a>
+     */
     public ValueTuple_2 GetOffsetAndLength(int length) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -230,6 +283,13 @@ public class Range extends system.ValueType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property End.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Range.End" target="_top">.NET documentation</a>
+     */
     public Index getEnd() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -245,6 +305,13 @@ public class Range extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Start.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Range.Start" target="_top">.NET documentation</a>
+     */
     public Index getStart() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -260,6 +327,13 @@ public class Range extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property All.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Range.All" target="_top">.NET documentation</a>
+     */
     public static Range getAll() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

@@ -101,7 +101,10 @@ public class MathF extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public MathF(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,19 @@ public class MathF extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ILogB.
+     *
+     * @param x the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.MathF.ILogB" target="_top">.NET documentation</a>
+     */
     public static int ILogB(Single x) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -194,6 +210,24 @@ public class MathF extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Sign.
+     *
+     * @param x the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.ArithmeticException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.MathF.Sign" target="_top">.NET documentation</a>
+     */
     public static int Sign(Single x) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.ArithmeticException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -234,6 +268,17 @@ public class MathF extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Abs.
+     *
+     * @param x the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.MathF.Abs" target="_top">.NET documentation</a>
+     */
     public static Single Abs(Single x) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -249,6 +294,14 @@ public class MathF extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Acos.
+     *
+     * @param x the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.MathF.Acos" target="_top">.NET documentation</a>
+     */
     public static Single Acos(Single x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -264,6 +317,14 @@ public class MathF extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Acosh.
+     *
+     * @param x the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.MathF.Acosh" target="_top">.NET documentation</a>
+     */
     public static Single Acosh(Single x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -279,6 +340,14 @@ public class MathF extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Asin.
+     *
+     * @param x the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.MathF.Asin" target="_top">.NET documentation</a>
+     */
     public static Single Asin(Single x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -294,6 +363,14 @@ public class MathF extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Asinh.
+     *
+     * @param x the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.MathF.Asinh" target="_top">.NET documentation</a>
+     */
     public static Single Asinh(Single x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -309,6 +386,14 @@ public class MathF extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Atan.
+     *
+     * @param x the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.MathF.Atan" target="_top">.NET documentation</a>
+     */
     public static Single Atan(Single x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -324,6 +409,15 @@ public class MathF extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Atan2.
+     *
+     * @param y the argument of type {@code Single}
+     * @param x the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.MathF.Atan2" target="_top">.NET documentation</a>
+     */
     public static Single Atan2(Single y, Single x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -339,6 +433,14 @@ public class MathF extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Atanh.
+     *
+     * @param x the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.MathF.Atanh" target="_top">.NET documentation</a>
+     */
     public static Single Atanh(Single x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -354,6 +456,19 @@ public class MathF extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member BitDecrement.
+     *
+     * @param x the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.MathF.BitDecrement" target="_top">.NET documentation</a>
+     */
     public static Single BitDecrement(Single x) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -369,6 +484,19 @@ public class MathF extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member BitIncrement.
+     *
+     * @param x the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.MathF.BitIncrement" target="_top">.NET documentation</a>
+     */
     public static Single BitIncrement(Single x) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -384,6 +512,14 @@ public class MathF extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Cbrt.
+     *
+     * @param x the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.MathF.Cbrt" target="_top">.NET documentation</a>
+     */
     public static Single Cbrt(Single x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -399,6 +535,14 @@ public class MathF extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Ceiling.
+     *
+     * @param x the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.MathF.Ceiling" target="_top">.NET documentation</a>
+     */
     public static Single Ceiling(Single x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -414,6 +558,18 @@ public class MathF extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CopySign.
+     *
+     * @param x the argument of type {@code Single}
+     * @param y the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.MathF.CopySign" target="_top">.NET documentation</a>
+     */
     public static Single CopySign(Single x, Single y) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -429,6 +585,14 @@ public class MathF extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Cos.
+     *
+     * @param x the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.MathF.Cos" target="_top">.NET documentation</a>
+     */
     public static Single Cos(Single x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -444,6 +608,14 @@ public class MathF extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Cosh.
+     *
+     * @param x the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.MathF.Cosh" target="_top">.NET documentation</a>
+     */
     public static Single Cosh(Single x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -459,6 +631,14 @@ public class MathF extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Exp.
+     *
+     * @param x the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.MathF.Exp" target="_top">.NET documentation</a>
+     */
     public static Single Exp(Single x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -474,6 +654,14 @@ public class MathF extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Floor.
+     *
+     * @param x the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.MathF.Floor" target="_top">.NET documentation</a>
+     */
     public static Single Floor(Single x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -489,6 +677,16 @@ public class MathF extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member FusedMultiplyAdd.
+     *
+     * @param x the argument of type {@code Single}
+     * @param y the argument of type {@code Single}
+     * @param z the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.MathF.FusedMultiplyAdd" target="_top">.NET documentation</a>
+     */
     public static Single FusedMultiplyAdd(Single x, Single y, Single z) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -504,6 +702,19 @@ public class MathF extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IEEERemainder.
+     *
+     * @param x the argument of type {@code Single}
+     * @param y the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArithmeticException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.MathF.IEEERemainder" target="_top">.NET documentation</a>
+     */
     public static Single IEEERemainder(Single x, Single y) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArithmeticException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -519,6 +730,15 @@ public class MathF extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Log.
+     *
+     * @param x the argument of type {@code Single}
+     * @param y the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.MathF.Log" target="_top">.NET documentation</a>
+     */
     public static Single Log(Single x, Single y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -534,6 +754,14 @@ public class MathF extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Log.
+     *
+     * @param x the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.MathF.Log" target="_top">.NET documentation</a>
+     */
     public static Single Log(Single x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -549,6 +777,14 @@ public class MathF extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Log10.
+     *
+     * @param x the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.MathF.Log10" target="_top">.NET documentation</a>
+     */
     public static Single Log10(Single x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -564,6 +800,14 @@ public class MathF extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Log2.
+     *
+     * @param x the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.MathF.Log2" target="_top">.NET documentation</a>
+     */
     public static Single Log2(Single x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -579,6 +823,17 @@ public class MathF extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Max.
+     *
+     * @param x the argument of type {@code Single}
+     * @param y the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.MathF.Max" target="_top">.NET documentation</a>
+     */
     public static Single Max(Single x, Single y) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -594,6 +849,17 @@ public class MathF extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member MaxMagnitude.
+     *
+     * @param x the argument of type {@code Single}
+     * @param y the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.MathF.MaxMagnitude" target="_top">.NET documentation</a>
+     */
     public static Single MaxMagnitude(Single x, Single y) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -609,6 +875,17 @@ public class MathF extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Min.
+     *
+     * @param x the argument of type {@code Single}
+     * @param y the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.MathF.Min" target="_top">.NET documentation</a>
+     */
     public static Single Min(Single x, Single y) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -624,6 +901,17 @@ public class MathF extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member MinMagnitude.
+     *
+     * @param x the argument of type {@code Single}
+     * @param y the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.MathF.MinMagnitude" target="_top">.NET documentation</a>
+     */
     public static Single MinMagnitude(Single x, Single y) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -639,6 +927,15 @@ public class MathF extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Pow.
+     *
+     * @param x the argument of type {@code Single}
+     * @param y the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.MathF.Pow" target="_top">.NET documentation</a>
+     */
     public static Single Pow(Single x, Single y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -654,6 +951,17 @@ public class MathF extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ReciprocalEstimate.
+     *
+     * @param x the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.MathF.ReciprocalEstimate" target="_top">.NET documentation</a>
+     */
     public static Single ReciprocalEstimate(Single x) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -669,6 +977,17 @@ public class MathF extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ReciprocalSqrtEstimate.
+     *
+     * @param x the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.MathF.ReciprocalSqrtEstimate" target="_top">.NET documentation</a>
+     */
     public static Single ReciprocalSqrtEstimate(Single x) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -684,6 +1003,27 @@ public class MathF extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Round.
+     *
+     * @param x the argument of type {@code Single}
+     * @param digits the argument of type {@code int}
+     * @param mode the argument of type {@code MidpointRounding}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.MathF.Round" target="_top">.NET documentation</a>
+     */
     public static Single Round(Single x, int digits, MidpointRounding mode) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -699,6 +1039,25 @@ public class MathF extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Round.
+     *
+     * @param x the argument of type {@code Single}
+     * @param digits the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.MathF.Round" target="_top">.NET documentation</a>
+     */
     public static Single Round(Single x, int digits) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -714,6 +1073,22 @@ public class MathF extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Round.
+     *
+     * @param x the argument of type {@code Single}
+     * @param mode the argument of type {@code MidpointRounding}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.MathF.Round" target="_top">.NET documentation</a>
+     */
     public static Single Round(Single x, MidpointRounding mode) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -729,6 +1104,19 @@ public class MathF extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Round.
+     *
+     * @param x the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.MathF.Round" target="_top">.NET documentation</a>
+     */
     public static Single Round(Single x) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -744,6 +1132,20 @@ public class MathF extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ScaleB.
+     *
+     * @param x the argument of type {@code Single}
+     * @param n the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.MathF.ScaleB" target="_top">.NET documentation</a>
+     */
     public static Single ScaleB(Single x, int n) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -759,6 +1161,14 @@ public class MathF extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Sin.
+     *
+     * @param x the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.MathF.Sin" target="_top">.NET documentation</a>
+     */
     public static Single Sin(Single x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -774,6 +1184,14 @@ public class MathF extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Sinh.
+     *
+     * @param x the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.MathF.Sinh" target="_top">.NET documentation</a>
+     */
     public static Single Sinh(Single x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -789,6 +1207,14 @@ public class MathF extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Sqrt.
+     *
+     * @param x the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.MathF.Sqrt" target="_top">.NET documentation</a>
+     */
     public static Single Sqrt(Single x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -804,6 +1230,14 @@ public class MathF extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Tan.
+     *
+     * @param x the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.MathF.Tan" target="_top">.NET documentation</a>
+     */
     public static Single Tan(Single x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -819,6 +1253,14 @@ public class MathF extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Tanh.
+     *
+     * @param x the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.MathF.Tanh" target="_top">.NET documentation</a>
+     */
     public static Single Tanh(Single x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -834,6 +1276,14 @@ public class MathF extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Truncate.
+     *
+     * @param x the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.MathF.Truncate" target="_top">.NET documentation</a>
+     */
     public static Single Truncate(Single x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -849,6 +1299,14 @@ public class MathF extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SinCos.
+     *
+     * @param x the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.MathF.SinCos" target="_top">.NET documentation</a>
+     */
     public static ValueTuple_2 SinCos(Single x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

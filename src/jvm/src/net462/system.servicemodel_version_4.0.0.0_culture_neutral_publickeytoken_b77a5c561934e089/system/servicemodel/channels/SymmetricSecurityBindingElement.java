@@ -104,7 +104,10 @@ public class SymmetricSecurityBindingElement extends system.servicemodel.channel
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SymmetricSecurityBindingElement(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,20 @@ public class SymmetricSecurityBindingElement extends system.servicemodel.channel
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.SymmetricSecurityBindingElement.-ctor" target="_top">.NET documentation</a>
+     */
     public SymmetricSecurityBindingElement() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -161,6 +178,22 @@ public class SymmetricSecurityBindingElement extends system.servicemodel.channel
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param protectionTokenParameters the argument of type {@code SecurityTokenParameters}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.SymmetricSecurityBindingElement.-ctor" target="_top">.NET documentation</a>
+     */
     public SymmetricSecurityBindingElement(SecurityTokenParameters protectionTokenParameters) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -175,6 +208,22 @@ public class SymmetricSecurityBindingElement extends system.servicemodel.channel
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Clone.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.SymmetricSecurityBindingElement.Clone" target="_top">.NET documentation</a>
+     */
     public BindingElement Clone() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +239,13 @@ public class SymmetricSecurityBindingElement extends system.servicemodel.channel
         }
     }
 
+    /**
+     * Invokes the .NET member SetKeyDerivation.
+     *
+     * @param requireDerivedKeys the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.SymmetricSecurityBindingElement.SetKeyDerivation" target="_top">.NET documentation</a>
+     */
     public void SetKeyDerivation(boolean requireDerivedKeys) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,8 +259,13 @@ public class SymmetricSecurityBindingElement extends system.servicemodel.channel
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIPolicyExportExtension method available in IPolicyExportExtension to obtain an object with an invocable method
+     *
+     * @param exporter the argument of type {@code MetadataExporter}
+     * @param context the argument of type {@code PolicyConversionContext}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.IPolicyExportExtension.ExportPolicy" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void ExportPolicy(MetadataExporter exporter, PolicyConversionContext context) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPolicyExportExtension to obtain the full interface.");
     }
@@ -213,6 +274,13 @@ public class SymmetricSecurityBindingElement extends system.servicemodel.channel
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property RequireSignatureConfirmation.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.SymmetricSecurityBindingElement.RequireSignatureConfirmation" target="_top">.NET documentation</a>
+     */
     public boolean getRequireSignatureConfirmation() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -227,6 +295,13 @@ public class SymmetricSecurityBindingElement extends system.servicemodel.channel
         }
     }
 
+    /**
+     * Sets the value of the .NET property RequireSignatureConfirmation.
+     *
+     * @param RequireSignatureConfirmation the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.SymmetricSecurityBindingElement.RequireSignatureConfirmation" target="_top">.NET documentation</a>
+     */
     public void setRequireSignatureConfirmation(boolean RequireSignatureConfirmation) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -237,6 +312,13 @@ public class SymmetricSecurityBindingElement extends system.servicemodel.channel
         }
     }
 
+    /**
+     * Gets the value of the .NET property MessageProtectionOrder.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.SymmetricSecurityBindingElement.MessageProtectionOrder" target="_top">.NET documentation</a>
+     */
     public MessageProtectionOrder getMessageProtectionOrder() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -252,6 +334,24 @@ public class SymmetricSecurityBindingElement extends system.servicemodel.channel
         }
     }
 
+    /**
+     * Sets the value of the .NET property MessageProtectionOrder.
+     *
+     * @param MessageProtectionOrder the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.SymmetricSecurityBindingElement.MessageProtectionOrder" target="_top">.NET documentation</a>
+     */
     public void setMessageProtectionOrder(MessageProtectionOrder MessageProtectionOrder) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -262,6 +362,13 @@ public class SymmetricSecurityBindingElement extends system.servicemodel.channel
         }
     }
 
+    /**
+     * Gets the value of the .NET property ProtectionTokenParameters.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.SymmetricSecurityBindingElement.ProtectionTokenParameters" target="_top">.NET documentation</a>
+     */
     public SecurityTokenParameters getProtectionTokenParameters() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -277,6 +384,13 @@ public class SymmetricSecurityBindingElement extends system.servicemodel.channel
         }
     }
 
+    /**
+     * Sets the value of the .NET property ProtectionTokenParameters.
+     *
+     * @param ProtectionTokenParameters the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.SymmetricSecurityBindingElement.ProtectionTokenParameters" target="_top">.NET documentation</a>
+     */
     public void setProtectionTokenParameters(SecurityTokenParameters ProtectionTokenParameters) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

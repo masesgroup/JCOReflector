@@ -100,7 +100,10 @@ public class MessageCollection extends system.web.services.description.ServiceDe
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public MessageCollection(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,14 @@ public class MessageCollection extends system.web.services.description.ServiceDe
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Contains.
+     *
+     * @param message the argument of type {@code Message}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.MessageCollection.Contains" target="_top">.NET documentation</a>
+     */
     public boolean Contains(Message message) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -169,6 +180,14 @@ public class MessageCollection extends system.web.services.description.ServiceDe
         }
     }
 
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param message the argument of type {@code Message}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.MessageCollection.Add" target="_top">.NET documentation</a>
+     */
     public int Add(Message message) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -209,6 +228,14 @@ public class MessageCollection extends system.web.services.description.ServiceDe
         }
     }
 
+    /**
+     * Invokes the .NET member IndexOf.
+     *
+     * @param message the argument of type {@code Message}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.MessageCollection.IndexOf" target="_top">.NET documentation</a>
+     */
     public int IndexOf(Message message) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -249,6 +276,14 @@ public class MessageCollection extends system.web.services.description.ServiceDe
         }
     }
 
+    /**
+     * Invokes the .NET member CopyTo.
+     *
+     * @param array the argument of type {@code Message[]}
+     * @param index the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.MessageCollection.CopyTo" target="_top">.NET documentation</a>
+     */
     public void CopyTo(Message[] array, int index) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -259,6 +294,14 @@ public class MessageCollection extends system.web.services.description.ServiceDe
         }
     }
 
+    /**
+     * Invokes the .NET member Insert.
+     *
+     * @param index the argument of type {@code int}
+     * @param message the argument of type {@code Message}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.MessageCollection.Insert" target="_top">.NET documentation</a>
+     */
     public void Insert(int index, Message message) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -269,6 +312,13 @@ public class MessageCollection extends system.web.services.description.ServiceDe
         }
     }
 
+    /**
+     * Invokes the .NET member Remove.
+     *
+     * @param message the argument of type {@code Message}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.MessageCollection.Remove" target="_top">.NET documentation</a>
+     */
     public void Remove(Message message) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

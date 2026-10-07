@@ -103,7 +103,10 @@ public class AssociatedMetadataProvider extends system.web.modelbinding.ModelMet
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public AssociatedMetadataProvider(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,16 @@ public class AssociatedMetadataProvider extends system.web.modelbinding.ModelMet
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetMetadataForProperties.
+     *
+     * @param container the argument of type {@code NetObject}
+     * @param containerType the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.AssociatedMetadataProvider.GetMetadataForProperties" target="_top">.NET documentation</a>
+     */
     public IEnumerable_1 GetMetadataForProperties(NetObject container, NetType containerType) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -171,6 +184,30 @@ public class AssociatedMetadataProvider extends system.web.modelbinding.ModelMet
         }
     }
 
+    /**
+     * Invokes the .NET member GetMetadataForProperty.
+     *
+     * @param modelAccessor the argument of type {@code Func_1}
+     * @param containerType the argument of type {@code NetType}
+     * @param propertyName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.AssociatedMetadataProvider.GetMetadataForProperty" target="_top">.NET documentation</a>
+     */
     public ModelMetadata GetMetadataForProperty(Func_1 modelAccessor, NetType containerType, java.lang.String propertyName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException, system.NullReferenceException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -186,6 +223,20 @@ public class AssociatedMetadataProvider extends system.web.modelbinding.ModelMet
         }
     }
 
+    /**
+     * Invokes the .NET member GetMetadataForType.
+     *
+     * @param modelAccessor the argument of type {@code Func_1}
+     * @param modelType the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.AssociatedMetadataProvider.GetMetadataForType" target="_top">.NET documentation</a>
+     */
     public ModelMetadata GetMetadataForType(Func_1 modelAccessor, NetType modelType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

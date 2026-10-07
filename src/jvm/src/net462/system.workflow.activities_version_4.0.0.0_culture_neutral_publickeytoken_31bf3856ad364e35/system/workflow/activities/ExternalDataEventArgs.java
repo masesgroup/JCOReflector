@@ -102,7 +102,10 @@ public class ExternalDataEventArgs extends system.EventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ExternalDataEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,12 @@ public class ExternalDataEventArgs extends system.EventArgs  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.ExternalDataEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public ExternalDataEventArgs() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -159,6 +168,13 @@ public class ExternalDataEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param instanceId the argument of type {@code Guid}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.ExternalDataEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public ExternalDataEventArgs(Guid instanceId) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +185,15 @@ public class ExternalDataEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param instanceId the argument of type {@code Guid}
+     * @param workHandler the argument of type {@code IPendingWork}
+     * @param workItem the argument of type {@code NetObject}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.ExternalDataEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public ExternalDataEventArgs(Guid instanceId, IPendingWork workHandler, NetObject workItem) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -179,6 +204,16 @@ public class ExternalDataEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param instanceId the argument of type {@code Guid}
+     * @param workHandler the argument of type {@code IPendingWork}
+     * @param workItem the argument of type {@code NetObject}
+     * @param waitForIdle the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.ExternalDataEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public ExternalDataEventArgs(Guid instanceId, IPendingWork workHandler, NetObject workItem, boolean waitForIdle) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -197,6 +232,13 @@ public class ExternalDataEventArgs extends system.EventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property WaitForIdle.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.ExternalDataEventArgs.WaitForIdle" target="_top">.NET documentation</a>
+     */
     public boolean getWaitForIdle() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -211,6 +253,13 @@ public class ExternalDataEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property WaitForIdle.
+     *
+     * @param WaitForIdle the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.ExternalDataEventArgs.WaitForIdle" target="_top">.NET documentation</a>
+     */
     public void setWaitForIdle(boolean WaitForIdle) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -221,6 +270,13 @@ public class ExternalDataEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property InstanceId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.ExternalDataEventArgs.InstanceId" target="_top">.NET documentation</a>
+     */
     public Guid getInstanceId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -236,6 +292,13 @@ public class ExternalDataEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property InstanceId.
+     *
+     * @param InstanceId the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.ExternalDataEventArgs.InstanceId" target="_top">.NET documentation</a>
+     */
     public void setInstanceId(Guid InstanceId) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -246,6 +309,13 @@ public class ExternalDataEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property WorkItem.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.ExternalDataEventArgs.WorkItem" target="_top">.NET documentation</a>
+     */
     public NetObject getWorkItem() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -261,6 +331,13 @@ public class ExternalDataEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property WorkItem.
+     *
+     * @param WorkItem the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.ExternalDataEventArgs.WorkItem" target="_top">.NET documentation</a>
+     */
     public void setWorkItem(NetObject WorkItem) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -271,6 +348,13 @@ public class ExternalDataEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Identity.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.ExternalDataEventArgs.Identity" target="_top">.NET documentation</a>
+     */
     public java.lang.String getIdentity() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -285,6 +369,13 @@ public class ExternalDataEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Identity.
+     *
+     * @param Identity the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.ExternalDataEventArgs.Identity" target="_top">.NET documentation</a>
+     */
     public void setIdentity(java.lang.String Identity) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -295,6 +386,13 @@ public class ExternalDataEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property WorkHandler.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.ExternalDataEventArgs.WorkHandler" target="_top">.NET documentation</a>
+     */
     public IPendingWork getWorkHandler() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -310,6 +408,13 @@ public class ExternalDataEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property WorkHandler.
+     *
+     * @param WorkHandler the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.ExternalDataEventArgs.WorkHandler" target="_top">.NET documentation</a>
+     */
     public void setWorkHandler(IPendingWork WorkHandler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

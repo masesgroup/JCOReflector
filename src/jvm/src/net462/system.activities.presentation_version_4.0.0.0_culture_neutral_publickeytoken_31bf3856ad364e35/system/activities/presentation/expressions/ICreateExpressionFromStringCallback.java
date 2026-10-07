@@ -52,5 +52,13 @@ import system.activities.ActivityWithResult;
  * @version 2.0.0.0
  */
 public interface ICreateExpressionFromStringCallback {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param expressionText the .NET argument of type {@code System.String}
+     * @param useLocationExpression the .NET argument of type {@code System.Boolean}
+     * @param expressionType the .NET argument of type {@code System.Type}
+     * @return the value returned to the CLR
+     */
     public ActivityWithResult Invoke(java.lang.String expressionText, boolean useLocationExpression, NetType expressionType);
 }

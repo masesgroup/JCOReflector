@@ -101,7 +101,10 @@ public class TransactionOptions extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TransactionOptions(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -160,6 +163,13 @@ public class TransactionOptions extends system.ValueType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Timeout.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Transactions.TransactionOptions.Timeout" target="_top">.NET documentation</a>
+     */
     public TimeSpan getTimeout() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -175,6 +185,13 @@ public class TransactionOptions extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Timeout.
+     *
+     * @param Timeout the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Transactions.TransactionOptions.Timeout" target="_top">.NET documentation</a>
+     */
     public void setTimeout(TimeSpan Timeout) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -185,6 +202,13 @@ public class TransactionOptions extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsolationLevel.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Transactions.TransactionOptions.IsolationLevel" target="_top">.NET documentation</a>
+     */
     public IsolationLevel getIsolationLevel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +224,13 @@ public class TransactionOptions extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsolationLevel.
+     *
+     * @param IsolationLevel the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Transactions.TransactionOptions.IsolationLevel" target="_top">.NET documentation</a>
+     */
     public void setIsolationLevel(IsolationLevel IsolationLevel) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

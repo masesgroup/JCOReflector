@@ -103,7 +103,10 @@ public class RuleCondition extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public RuleCondition(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,14 @@ public class RuleCondition extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Evaluate.
+     *
+     * @param execution the argument of type {@code RuleExecution}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.Rules.RuleCondition.Evaluate" target="_top">.NET documentation</a>
+     */
     public boolean Evaluate(RuleExecution execution) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -170,6 +181,14 @@ public class RuleCondition extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Validate.
+     *
+     * @param validation the argument of type {@code RuleValidation}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.Rules.RuleCondition.Validate" target="_top">.NET documentation</a>
+     */
     public boolean Validate(RuleValidation validation) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +203,14 @@ public class RuleCondition extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetDependencies.
+     *
+     * @param validation the argument of type {@code RuleValidation}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.Rules.RuleCondition.GetDependencies" target="_top">.NET documentation</a>
+     */
     public ICollection_1 GetDependencies(RuleValidation validation) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -199,6 +226,13 @@ public class RuleCondition extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Clone.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.Rules.RuleCondition.Clone" target="_top">.NET documentation</a>
+     */
     public RuleCondition Clone() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -214,6 +248,12 @@ public class RuleCondition extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member OnRuntimeInitialized.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.Rules.RuleCondition.OnRuntimeInitialized" target="_top">.NET documentation</a>
+     */
     public void OnRuntimeInitialized() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -228,6 +268,13 @@ public class RuleCondition extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.Rules.RuleCondition.Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -242,6 +289,13 @@ public class RuleCondition extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Name.
+     *
+     * @param Name the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.Rules.RuleCondition.Name" target="_top">.NET documentation</a>
+     */
     public void setName(java.lang.String Name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

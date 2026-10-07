@@ -105,7 +105,10 @@ public class Transform3D extends system.windows.media.media3d.GeneralTransform3D
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Transform3D(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -158,6 +161,15 @@ public class Transform3D extends system.windows.media.media3d.GeneralTransform3D
     
     // Methods section
     
+    /**
+     * Invokes the .NET member TryTransform.
+     *
+     * @param inPoint the argument of type {@code Point3D}
+     * @param result the argument of type {@code JCORefOut<Point3D>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Transform3D.TryTransform" target="_top">.NET documentation</a>
+     */
     public boolean TryTransform(Point3D inPoint, JCORefOut<Point3D> result) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -172,6 +184,23 @@ public class Transform3D extends system.windows.media.media3d.GeneralTransform3D
         }
     }
 
+    /**
+     * Invokes the .NET member TransformNewTransform3D.
+     *
+     * @param point the argument of type {@code Point3D}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Transform3D.TransformNewTransform3D" target="_top">.NET documentation</a>
+     */
     public Point3D TransformNewTransform3D(Point3D point) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +216,14 @@ public class Transform3D extends system.windows.media.media3d.GeneralTransform3D
         }
     }
 
+    /**
+     * Invokes the .NET member Transform.
+     *
+     * @param point the argument of type {@code Point4D}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Transform3D.Transform" target="_top">.NET documentation</a>
+     */
     public Point4D Transform(Point4D point) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +239,19 @@ public class Transform3D extends system.windows.media.media3d.GeneralTransform3D
         }
     }
 
+    /**
+     * Invokes the .NET member TransformBounds.
+     *
+     * @param rect the argument of type {@code Rect3D}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Transform3D.TransformBounds" target="_top">.NET documentation</a>
+     */
     public Rect3D TransformBounds(Rect3D rect) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -217,6 +267,19 @@ public class Transform3D extends system.windows.media.media3d.GeneralTransform3D
         }
     }
 
+    /**
+     * Invokes the .NET member CloneNewTransform3D.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Transform3D.CloneNewTransform3D" target="_top">.NET documentation</a>
+     */
     public Transform3D CloneNewTransform3D() throws Throwable, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -232,6 +295,23 @@ public class Transform3D extends system.windows.media.media3d.GeneralTransform3D
         }
     }
 
+    /**
+     * Invokes the .NET member CloneCurrentValueNewTransform3D.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Transform3D.CloneCurrentValueNewTransform3D" target="_top">.NET documentation</a>
+     */
     public Transform3D CloneCurrentValueNewTransform3D() throws Throwable, system.InvalidOperationException, system.security.SecurityException, system.io.IOException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -247,6 +327,14 @@ public class Transform3D extends system.windows.media.media3d.GeneralTransform3D
         }
     }
 
+    /**
+     * Invokes the .NET member Transform.
+     *
+     * @param vector the argument of type {@code Vector3D}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Transform3D.Transform" target="_top">.NET documentation</a>
+     */
     public Vector3D Transform(Vector3D vector) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -262,6 +350,13 @@ public class Transform3D extends system.windows.media.media3d.GeneralTransform3D
         }
     }
 
+    /**
+     * Invokes the .NET member Transform.
+     *
+     * @param points the argument of type {@code Point3D[]}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Transform3D.Transform" target="_top">.NET documentation</a>
+     */
     public void Transform(Point3D[] points) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -272,6 +367,13 @@ public class Transform3D extends system.windows.media.media3d.GeneralTransform3D
         }
     }
 
+    /**
+     * Invokes the .NET member Transform.
+     *
+     * @param points the argument of type {@code Point4D[]}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Transform3D.Transform" target="_top">.NET documentation</a>
+     */
     public void Transform(Point4D[] points) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -282,6 +384,13 @@ public class Transform3D extends system.windows.media.media3d.GeneralTransform3D
         }
     }
 
+    /**
+     * Invokes the .NET member Transform.
+     *
+     * @param vectors the argument of type {@code Vector3D[]}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Transform3D.Transform" target="_top">.NET documentation</a>
+     */
     public void Transform(Vector3D[] vectors) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -296,6 +405,13 @@ public class Transform3D extends system.windows.media.media3d.GeneralTransform3D
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsAffine.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Transform3D.IsAffine" target="_top">.NET documentation</a>
+     */
     public boolean getIsAffine() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -310,6 +426,13 @@ public class Transform3D extends system.windows.media.media3d.GeneralTransform3D
         }
     }
 
+    /**
+     * Gets the value of the .NET property Value.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Transform3D.Value" target="_top">.NET documentation</a>
+     */
     public Matrix3D getValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -325,6 +448,21 @@ public class Transform3D extends system.windows.media.media3d.GeneralTransform3D
         }
     }
 
+    /**
+     * Gets the value of the .NET property Identity.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Transform3D.Identity" target="_top">.NET documentation</a>
+     */
     public static Transform3D getIdentity() throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

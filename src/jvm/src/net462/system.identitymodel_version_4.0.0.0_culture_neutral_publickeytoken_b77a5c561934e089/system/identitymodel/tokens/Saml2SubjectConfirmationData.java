@@ -102,7 +102,10 @@ public class Saml2SubjectConfirmationData extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Saml2SubjectConfirmationData(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,12 @@ public class Saml2SubjectConfirmationData extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.Saml2SubjectConfirmationData.-ctor" target="_top">.NET documentation</a>
+     */
     public Saml2SubjectConfirmationData() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +176,13 @@ public class Saml2SubjectConfirmationData extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property KeyIdentifiers.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.Saml2SubjectConfirmationData.KeyIdentifiers" target="_top">.NET documentation</a>
+     */
     public Collection_1 getKeyIdentifiers() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +198,13 @@ public class Saml2SubjectConfirmationData extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property InResponseTo.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.Saml2SubjectConfirmationData.InResponseTo" target="_top">.NET documentation</a>
+     */
     public Saml2Id getInResponseTo() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +220,13 @@ public class Saml2SubjectConfirmationData extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property InResponseTo.
+     *
+     * @param InResponseTo the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.Saml2SubjectConfirmationData.InResponseTo" target="_top">.NET documentation</a>
+     */
     public void setInResponseTo(Saml2Id InResponseTo) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +237,13 @@ public class Saml2SubjectConfirmationData extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NotBefore.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.Saml2SubjectConfirmationData.NotBefore" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getNotBefore() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -222,6 +259,18 @@ public class Saml2SubjectConfirmationData extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property NotBefore.
+     *
+     * @param NotBefore the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.Saml2SubjectConfirmationData.NotBefore" target="_top">.NET documentation</a>
+     */
     public void setNotBefore(Nullable_1 NotBefore) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentNullException, system.OverflowException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -232,6 +281,13 @@ public class Saml2SubjectConfirmationData extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NotOnOrAfter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.Saml2SubjectConfirmationData.NotOnOrAfter" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getNotOnOrAfter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -247,6 +303,18 @@ public class Saml2SubjectConfirmationData extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property NotOnOrAfter.
+     *
+     * @param NotOnOrAfter the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.Saml2SubjectConfirmationData.NotOnOrAfter" target="_top">.NET documentation</a>
+     */
     public void setNotOnOrAfter(Nullable_1 NotOnOrAfter) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentNullException, system.OverflowException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -257,6 +325,13 @@ public class Saml2SubjectConfirmationData extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Address.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.Saml2SubjectConfirmationData.Address" target="_top">.NET documentation</a>
+     */
     public java.lang.String getAddress() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -271,6 +346,13 @@ public class Saml2SubjectConfirmationData extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Address.
+     *
+     * @param Address the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.Saml2SubjectConfirmationData.Address" target="_top">.NET documentation</a>
+     */
     public void setAddress(java.lang.String Address) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -281,6 +363,13 @@ public class Saml2SubjectConfirmationData extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Recipient.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.Saml2SubjectConfirmationData.Recipient" target="_top">.NET documentation</a>
+     */
     public Uri getRecipient() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -296,6 +385,28 @@ public class Saml2SubjectConfirmationData extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Recipient.
+     *
+     * @param Recipient the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.Saml2SubjectConfirmationData.Recipient" target="_top">.NET documentation</a>
+     */
     public void setRecipient(Uri Recipient) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

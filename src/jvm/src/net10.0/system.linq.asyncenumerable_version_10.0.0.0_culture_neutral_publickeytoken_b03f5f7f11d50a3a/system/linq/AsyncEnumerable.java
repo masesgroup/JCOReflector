@@ -115,7 +115,10 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public AsyncEnumerable(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -168,6 +171,27 @@ public class AsyncEnumerable extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CountBy.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @param keyComparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.CountBy" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> IAsyncEnumerable_1 CountBy(IAsyncEnumerable_1 source, Func_2 keySelector, IEqualityComparer_1 keyComparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -183,6 +207,27 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CountBy.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param keySelector the argument of type {@code Func_3}
+     * @param keyComparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.CountBy" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> IAsyncEnumerable_1 CountBy(IAsyncEnumerable_1 source, Func_3 keySelector, IEqualityComparer_1 keyComparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -198,6 +243,30 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AggregateBy.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param <TAccumulate> the type of the generic argument TAccumulate
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @param seedSelector the argument of type {@code Func_2}
+     * @param func the argument of type {@code Func_3}
+     * @param keyComparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.AggregateBy" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TAccumulate extends IJCOBridgeReflected> IAsyncEnumerable_1 AggregateBy(IAsyncEnumerable_1 source, Func_2 keySelector, Func_2 seedSelector, Func_3 func, IEqualityComparer_1 keyComparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -213,6 +282,30 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AggregateBy.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param <TAccumulate> the type of the generic argument TAccumulate
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @param seed the argument of type {@code TAccumulate}
+     * @param func the argument of type {@code Func_3}
+     * @param keyComparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.AggregateBy" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TAccumulate extends IJCOBridgeReflected> IAsyncEnumerable_1 AggregateBy(IAsyncEnumerable_1 source, Func_2 keySelector, TAccumulate seed, Func_3 func, IEqualityComparer_1 keyComparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -228,6 +321,30 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AggregateBy.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param <TAccumulate> the type of the generic argument TAccumulate
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param keySelector the argument of type {@code Func_3}
+     * @param seedSelector the argument of type {@code Func_3}
+     * @param func the argument of type {@code Func_4}
+     * @param keyComparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.AggregateBy" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TAccumulate extends IJCOBridgeReflected> IAsyncEnumerable_1 AggregateBy(IAsyncEnumerable_1 source, Func_3 keySelector, Func_3 seedSelector, Func_4 func, IEqualityComparer_1 keyComparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -243,6 +360,30 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AggregateBy.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param <TAccumulate> the type of the generic argument TAccumulate
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param keySelector the argument of type {@code Func_3}
+     * @param seed the argument of type {@code TAccumulate}
+     * @param func the argument of type {@code Func_4}
+     * @param keyComparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.AggregateBy" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TAccumulate extends IJCOBridgeReflected> IAsyncEnumerable_1 AggregateBy(IAsyncEnumerable_1 source, Func_3 keySelector, TAccumulate seed, Func_4 func, IEqualityComparer_1 keyComparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -258,6 +399,25 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Range.
+     *
+     * @param start the argument of type {@code int}
+     * @param count the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.Range" target="_top">.NET documentation</a>
+     */
     public static IAsyncEnumerable_1 Range(int start, int count) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -273,6 +433,29 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GroupBy.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param <TElement> the type of the generic argument TElement
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @param elementSelector the argument of type {@code Func_2}
+     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.GroupBy" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TElement extends IJCOBridgeReflected> IAsyncEnumerable_1 GroupBy(IAsyncEnumerable_1 source, Func_2 keySelector, Func_2 elementSelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -288,6 +471,29 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GroupBy.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param <TElement> the type of the generic argument TElement
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param keySelector the argument of type {@code Func_3}
+     * @param elementSelector the argument of type {@code Func_3}
+     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.GroupBy" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TElement extends IJCOBridgeReflected> IAsyncEnumerable_1 GroupBy(IAsyncEnumerable_1 source, Func_3 keySelector, Func_3 elementSelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -303,6 +509,27 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GroupBy.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.GroupBy" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> IAsyncEnumerable_1 GroupBy(IAsyncEnumerable_1 source, Func_2 keySelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -318,6 +545,27 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GroupBy.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param keySelector the argument of type {@code Func_3}
+     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.GroupBy" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> IAsyncEnumerable_1 GroupBy(IAsyncEnumerable_1 source, Func_3 keySelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -333,6 +581,24 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Index.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.Index" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> IAsyncEnumerable_1 Index(IAsyncEnumerable_1 source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -348,6 +614,26 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Zip.
+     *
+     * @param <TFirst> the type of the generic argument TFirst
+     * @param <TSecond> the type of the generic argument TSecond
+     * @param first the argument of type {@code IAsyncEnumerable_1}
+     * @param second the argument of type {@code IAsyncEnumerable_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.Zip" target="_top">.NET documentation</a>
+     */
     public static <TFirst extends IJCOBridgeReflected, TSecond extends IJCOBridgeReflected> IAsyncEnumerable_1 Zip(IAsyncEnumerable_1 first, IAsyncEnumerable_1 second) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -363,6 +649,28 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Zip.
+     *
+     * @param <TFirst> the type of the generic argument TFirst
+     * @param <TSecond> the type of the generic argument TSecond
+     * @param <TThird> the type of the generic argument TThird
+     * @param first the argument of type {@code IAsyncEnumerable_1}
+     * @param second the argument of type {@code IAsyncEnumerable_1}
+     * @param third the argument of type {@code IAsyncEnumerable_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.Zip" target="_top">.NET documentation</a>
+     */
     public static <TFirst extends IJCOBridgeReflected, TSecond extends IJCOBridgeReflected, TThird extends IJCOBridgeReflected> IAsyncEnumerable_1 Zip(IAsyncEnumerable_1 first, IAsyncEnumerable_1 second, IAsyncEnumerable_1 third) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -378,6 +686,26 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member InfiniteSequence.
+     *
+     * @param <T> the type of the generic argument T
+     * @param start the argument of type {@code T}
+     * @param step the argument of type {@code T}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.InfiniteSequence" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> IAsyncEnumerable_1 InfiniteSequence(T start, T step) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -393,6 +721,27 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Sequence.
+     *
+     * @param <T> the type of the generic argument T
+     * @param start the argument of type {@code T}
+     * @param endInclusive the argument of type {@code T}
+     * @param step the argument of type {@code T}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.Sequence" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> IAsyncEnumerable_1 Sequence(T start, T endInclusive, T step) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -408,6 +757,24 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Cast.
+     *
+     * @param <TResult> the type of the generic argument TResult
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.Cast" target="_top">.NET documentation</a>
+     */
     public static <TResult extends IJCOBridgeReflected> IAsyncEnumerable_1 Cast(IAsyncEnumerable_1 source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -423,6 +790,14 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Empty.
+     *
+     * @param <TResult> the type of the generic argument TResult
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.Empty" target="_top">.NET documentation</a>
+     */
     public static <TResult extends IJCOBridgeReflected> IAsyncEnumerable_1 Empty() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -438,6 +813,31 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GroupBy.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param <TElement> the type of the generic argument TElement
+     * @param <TResult> the type of the generic argument TResult
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @param elementSelector the argument of type {@code Func_2}
+     * @param resultSelector the argument of type {@code Func_3}
+     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.GroupBy" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TElement extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> IAsyncEnumerable_1 GroupBy(IAsyncEnumerable_1 source, Func_2 keySelector, Func_2 elementSelector, Func_3 resultSelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -453,6 +853,31 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GroupBy.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param <TElement> the type of the generic argument TElement
+     * @param <TResult> the type of the generic argument TResult
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param keySelector the argument of type {@code Func_3}
+     * @param elementSelector the argument of type {@code Func_3}
+     * @param resultSelector the argument of type {@code Func_4}
+     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.GroupBy" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TElement extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> IAsyncEnumerable_1 GroupBy(IAsyncEnumerable_1 source, Func_3 keySelector, Func_3 elementSelector, Func_4 resultSelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -468,6 +893,29 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GroupBy.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param <TResult> the type of the generic argument TResult
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @param resultSelector the argument of type {@code Func_3}
+     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.GroupBy" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> IAsyncEnumerable_1 GroupBy(IAsyncEnumerable_1 source, Func_2 keySelector, Func_3 resultSelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -483,6 +931,29 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GroupBy.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param <TResult> the type of the generic argument TResult
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param keySelector the argument of type {@code Func_3}
+     * @param resultSelector the argument of type {@code Func_4}
+     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.GroupBy" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> IAsyncEnumerable_1 GroupBy(IAsyncEnumerable_1 source, Func_3 keySelector, Func_4 resultSelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -498,6 +969,32 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GroupJoin.
+     *
+     * @param <TOuter> the type of the generic argument TOuter
+     * @param <TInner> the type of the generic argument TInner
+     * @param <TKey> the type of the generic argument TKey
+     * @param <TResult> the type of the generic argument TResult
+     * @param outer the argument of type {@code IAsyncEnumerable_1}
+     * @param inner the argument of type {@code IAsyncEnumerable_1}
+     * @param outerKeySelector the argument of type {@code Func_2}
+     * @param innerKeySelector the argument of type {@code Func_2}
+     * @param resultSelector the argument of type {@code Func_3}
+     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.GroupJoin" target="_top">.NET documentation</a>
+     */
     public static <TOuter extends IJCOBridgeReflected, TInner extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> IAsyncEnumerable_1 GroupJoin(IAsyncEnumerable_1 outer, IAsyncEnumerable_1 inner, Func_2 outerKeySelector, Func_2 innerKeySelector, Func_3 resultSelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -513,6 +1010,32 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GroupJoin.
+     *
+     * @param <TOuter> the type of the generic argument TOuter
+     * @param <TInner> the type of the generic argument TInner
+     * @param <TKey> the type of the generic argument TKey
+     * @param <TResult> the type of the generic argument TResult
+     * @param outer the argument of type {@code IAsyncEnumerable_1}
+     * @param inner the argument of type {@code IAsyncEnumerable_1}
+     * @param outerKeySelector the argument of type {@code Func_3}
+     * @param innerKeySelector the argument of type {@code Func_3}
+     * @param resultSelector the argument of type {@code Func_4}
+     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.GroupJoin" target="_top">.NET documentation</a>
+     */
     public static <TOuter extends IJCOBridgeReflected, TInner extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> IAsyncEnumerable_1 GroupJoin(IAsyncEnumerable_1 outer, IAsyncEnumerable_1 inner, Func_3 outerKeySelector, Func_3 innerKeySelector, Func_4 resultSelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -528,6 +1051,32 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Join.
+     *
+     * @param <TOuter> the type of the generic argument TOuter
+     * @param <TInner> the type of the generic argument TInner
+     * @param <TKey> the type of the generic argument TKey
+     * @param <TResult> the type of the generic argument TResult
+     * @param outer the argument of type {@code IAsyncEnumerable_1}
+     * @param inner the argument of type {@code IAsyncEnumerable_1}
+     * @param outerKeySelector the argument of type {@code Func_2}
+     * @param innerKeySelector the argument of type {@code Func_2}
+     * @param resultSelector the argument of type {@code Func_3}
+     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.Join" target="_top">.NET documentation</a>
+     */
     public static <TOuter extends IJCOBridgeReflected, TInner extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> IAsyncEnumerable_1 Join(IAsyncEnumerable_1 outer, IAsyncEnumerable_1 inner, Func_2 outerKeySelector, Func_2 innerKeySelector, Func_3 resultSelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -543,6 +1092,32 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Join.
+     *
+     * @param <TOuter> the type of the generic argument TOuter
+     * @param <TInner> the type of the generic argument TInner
+     * @param <TKey> the type of the generic argument TKey
+     * @param <TResult> the type of the generic argument TResult
+     * @param outer the argument of type {@code IAsyncEnumerable_1}
+     * @param inner the argument of type {@code IAsyncEnumerable_1}
+     * @param outerKeySelector the argument of type {@code Func_3}
+     * @param innerKeySelector the argument of type {@code Func_3}
+     * @param resultSelector the argument of type {@code Func_4}
+     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.Join" target="_top">.NET documentation</a>
+     */
     public static <TOuter extends IJCOBridgeReflected, TInner extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> IAsyncEnumerable_1 Join(IAsyncEnumerable_1 outer, IAsyncEnumerable_1 inner, Func_3 outerKeySelector, Func_3 innerKeySelector, Func_4 resultSelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -558,6 +1133,32 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LeftJoin.
+     *
+     * @param <TOuter> the type of the generic argument TOuter
+     * @param <TInner> the type of the generic argument TInner
+     * @param <TKey> the type of the generic argument TKey
+     * @param <TResult> the type of the generic argument TResult
+     * @param outer the argument of type {@code IAsyncEnumerable_1}
+     * @param inner the argument of type {@code IAsyncEnumerable_1}
+     * @param outerKeySelector the argument of type {@code Func_2}
+     * @param innerKeySelector the argument of type {@code Func_2}
+     * @param resultSelector the argument of type {@code Func_3}
+     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.LeftJoin" target="_top">.NET documentation</a>
+     */
     public static <TOuter extends IJCOBridgeReflected, TInner extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> IAsyncEnumerable_1 LeftJoin(IAsyncEnumerable_1 outer, IAsyncEnumerable_1 inner, Func_2 outerKeySelector, Func_2 innerKeySelector, Func_3 resultSelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -573,6 +1174,32 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LeftJoin.
+     *
+     * @param <TOuter> the type of the generic argument TOuter
+     * @param <TInner> the type of the generic argument TInner
+     * @param <TKey> the type of the generic argument TKey
+     * @param <TResult> the type of the generic argument TResult
+     * @param outer the argument of type {@code IAsyncEnumerable_1}
+     * @param inner the argument of type {@code IAsyncEnumerable_1}
+     * @param outerKeySelector the argument of type {@code Func_3}
+     * @param innerKeySelector the argument of type {@code Func_3}
+     * @param resultSelector the argument of type {@code Func_4}
+     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.LeftJoin" target="_top">.NET documentation</a>
+     */
     public static <TOuter extends IJCOBridgeReflected, TInner extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> IAsyncEnumerable_1 LeftJoin(IAsyncEnumerable_1 outer, IAsyncEnumerable_1 inner, Func_3 outerKeySelector, Func_3 innerKeySelector, Func_4 resultSelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -588,6 +1215,24 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member OfType.
+     *
+     * @param <TResult> the type of the generic argument TResult
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.OfType" target="_top">.NET documentation</a>
+     */
     public static <TResult extends IJCOBridgeReflected> IAsyncEnumerable_1 OfType(IAsyncEnumerable_1 source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -603,6 +1248,25 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Repeat.
+     *
+     * @param <TResult> the type of the generic argument TResult
+     * @param element the argument of type {@code TResult}
+     * @param count the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.Repeat" target="_top">.NET documentation</a>
+     */
     public static <TResult extends IJCOBridgeReflected> IAsyncEnumerable_1 Repeat(TResult element, int count) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -618,6 +1282,32 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RightJoin.
+     *
+     * @param <TOuter> the type of the generic argument TOuter
+     * @param <TInner> the type of the generic argument TInner
+     * @param <TKey> the type of the generic argument TKey
+     * @param <TResult> the type of the generic argument TResult
+     * @param outer the argument of type {@code IAsyncEnumerable_1}
+     * @param inner the argument of type {@code IAsyncEnumerable_1}
+     * @param outerKeySelector the argument of type {@code Func_2}
+     * @param innerKeySelector the argument of type {@code Func_2}
+     * @param resultSelector the argument of type {@code Func_3}
+     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.RightJoin" target="_top">.NET documentation</a>
+     */
     public static <TOuter extends IJCOBridgeReflected, TInner extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> IAsyncEnumerable_1 RightJoin(IAsyncEnumerable_1 outer, IAsyncEnumerable_1 inner, Func_2 outerKeySelector, Func_2 innerKeySelector, Func_3 resultSelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -633,6 +1323,32 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RightJoin.
+     *
+     * @param <TOuter> the type of the generic argument TOuter
+     * @param <TInner> the type of the generic argument TInner
+     * @param <TKey> the type of the generic argument TKey
+     * @param <TResult> the type of the generic argument TResult
+     * @param outer the argument of type {@code IAsyncEnumerable_1}
+     * @param inner the argument of type {@code IAsyncEnumerable_1}
+     * @param outerKeySelector the argument of type {@code Func_3}
+     * @param innerKeySelector the argument of type {@code Func_3}
+     * @param resultSelector the argument of type {@code Func_4}
+     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.RightJoin" target="_top">.NET documentation</a>
+     */
     public static <TOuter extends IJCOBridgeReflected, TInner extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> IAsyncEnumerable_1 RightJoin(IAsyncEnumerable_1 outer, IAsyncEnumerable_1 inner, Func_3 outerKeySelector, Func_3 innerKeySelector, Func_4 resultSelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -648,6 +1364,26 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Select.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TResult> the type of the generic argument TResult
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param selector the argument of type {@code Func_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.Select" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> IAsyncEnumerable_1 Select(IAsyncEnumerable_1 source, Func_2 selector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -663,6 +1399,26 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Select.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TResult> the type of the generic argument TResult
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param selector the argument of type {@code Func_3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.Select" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> IAsyncEnumerable_1 Select(IAsyncEnumerable_1 source, Func_3 selector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -678,6 +1434,26 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Select.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TResult> the type of the generic argument TResult
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param selector the argument of type {@code Func_4}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.Select" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> IAsyncEnumerable_1 Select(IAsyncEnumerable_1 source, Func_4 selector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -693,6 +1469,28 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SelectMany.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TCollection> the type of the generic argument TCollection
+     * @param <TResult> the type of the generic argument TResult
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param collectionSelector the argument of type {@code Func_2}
+     * @param resultSelector the argument of type {@code Func_3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.SelectMany" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TCollection extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> IAsyncEnumerable_1 SelectMany(IAsyncEnumerable_1 source, Func_2 collectionSelector, Func_3 resultSelector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -708,6 +1506,28 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SelectMany.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TCollection> the type of the generic argument TCollection
+     * @param <TResult> the type of the generic argument TResult
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param collectionSelector the argument of type {@code Func_2}
+     * @param resultSelector the argument of type {@code Func_4}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.SelectMany" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TCollection extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> IAsyncEnumerable_1 SelectMany(IAsyncEnumerable_1 source, Func_2 collectionSelector, Func_4 resultSelector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -723,6 +1543,28 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SelectMany.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TCollection> the type of the generic argument TCollection
+     * @param <TResult> the type of the generic argument TResult
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param collectionSelector the argument of type {@code Func_3}
+     * @param resultSelector the argument of type {@code Func_4}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.SelectMany" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TCollection extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> IAsyncEnumerable_1 SelectMany(IAsyncEnumerable_1 source, Func_3 collectionSelector, Func_4 resultSelector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -738,6 +1580,28 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SelectMany.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TCollection> the type of the generic argument TCollection
+     * @param <TResult> the type of the generic argument TResult
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param collectionSelector the argument of type {@code Func_3}
+     * @param resultSelector the argument of type {@code Func_3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.SelectMany" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TCollection extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> IAsyncEnumerable_1 SelectMany(IAsyncEnumerable_1 source, Func_3 collectionSelector, Func_3 resultSelector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -753,6 +1617,28 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SelectMany.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TCollection> the type of the generic argument TCollection
+     * @param <TResult> the type of the generic argument TResult
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param collectionSelector the argument of type {@code Func_4}
+     * @param resultSelector the argument of type {@code Func_4}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.SelectMany" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TCollection extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> IAsyncEnumerable_1 SelectMany(IAsyncEnumerable_1 source, Func_4 collectionSelector, Func_4 resultSelector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -768,6 +1654,26 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SelectMany.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TResult> the type of the generic argument TResult
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param selector the argument of type {@code Func_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.SelectMany" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> IAsyncEnumerable_1 SelectMany(IAsyncEnumerable_1 source, Func_2 selector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -783,6 +1689,26 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SelectMany.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TResult> the type of the generic argument TResult
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param selector the argument of type {@code Func_3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.SelectMany" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> IAsyncEnumerable_1 SelectMany(IAsyncEnumerable_1 source, Func_3 selector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -798,6 +1724,26 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SelectMany.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TResult> the type of the generic argument TResult
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param selector the argument of type {@code Func_4}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.SelectMany" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> IAsyncEnumerable_1 SelectMany(IAsyncEnumerable_1 source, Func_4 selector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -813,6 +1759,28 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Zip.
+     *
+     * @param <TFirst> the type of the generic argument TFirst
+     * @param <TSecond> the type of the generic argument TSecond
+     * @param <TResult> the type of the generic argument TResult
+     * @param first the argument of type {@code IAsyncEnumerable_1}
+     * @param second the argument of type {@code IAsyncEnumerable_1}
+     * @param resultSelector the argument of type {@code Func_3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.Zip" target="_top">.NET documentation</a>
+     */
     public static <TFirst extends IJCOBridgeReflected, TSecond extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> IAsyncEnumerable_1 Zip(IAsyncEnumerable_1 first, IAsyncEnumerable_1 second, Func_3 resultSelector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -828,6 +1796,28 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Zip.
+     *
+     * @param <TFirst> the type of the generic argument TFirst
+     * @param <TSecond> the type of the generic argument TSecond
+     * @param <TResult> the type of the generic argument TResult
+     * @param first the argument of type {@code IAsyncEnumerable_1}
+     * @param second the argument of type {@code IAsyncEnumerable_1}
+     * @param resultSelector the argument of type {@code Func_4}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.Zip" target="_top">.NET documentation</a>
+     */
     public static <TFirst extends IJCOBridgeReflected, TSecond extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> IAsyncEnumerable_1 Zip(IAsyncEnumerable_1 first, IAsyncEnumerable_1 second, Func_4 resultSelector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -843,6 +1833,25 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Chunk.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param size the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.Chunk" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> IAsyncEnumerable_1 Chunk(IAsyncEnumerable_1 source, int size) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -858,6 +1867,25 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Append.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param element the argument of type {@code TSource}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.Append" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> IAsyncEnumerable_1 Append(IAsyncEnumerable_1 source, TSource element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -873,6 +1901,25 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Concat.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param first the argument of type {@code IAsyncEnumerable_1}
+     * @param second the argument of type {@code IAsyncEnumerable_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.Concat" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> IAsyncEnumerable_1 Concat(IAsyncEnumerable_1 first, IAsyncEnumerable_1 second) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -888,6 +1935,25 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DefaultIfEmpty.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param defaultValue the argument of type {@code TSource}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.DefaultIfEmpty" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> IAsyncEnumerable_1 DefaultIfEmpty(IAsyncEnumerable_1 source, TSource defaultValue) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -903,6 +1969,20 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DefaultIfEmpty.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.DefaultIfEmpty" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> IAsyncEnumerable_1 DefaultIfEmpty(IAsyncEnumerable_1 source) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -918,6 +1998,25 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Distinct.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.Distinct" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> IAsyncEnumerable_1 Distinct(IAsyncEnumerable_1 source, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -933,6 +2032,27 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DistinctBy.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.DistinctBy" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> IAsyncEnumerable_1 DistinctBy(IAsyncEnumerable_1 source, Func_2 keySelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -948,6 +2068,27 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DistinctBy.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param keySelector the argument of type {@code Func_3}
+     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.DistinctBy" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> IAsyncEnumerable_1 DistinctBy(IAsyncEnumerable_1 source, Func_3 keySelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -963,6 +2104,26 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Except.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param first the argument of type {@code IAsyncEnumerable_1}
+     * @param second the argument of type {@code IAsyncEnumerable_1}
+     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.Except" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> IAsyncEnumerable_1 Except(IAsyncEnumerable_1 first, IAsyncEnumerable_1 second, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -978,6 +2139,28 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ExceptBy.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param first the argument of type {@code IAsyncEnumerable_1}
+     * @param second the argument of type {@code IAsyncEnumerable_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.ExceptBy" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> IAsyncEnumerable_1 ExceptBy(IAsyncEnumerable_1 first, IAsyncEnumerable_1 second, Func_2 keySelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -993,6 +2176,28 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ExceptBy.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param first the argument of type {@code IAsyncEnumerable_1}
+     * @param second the argument of type {@code IAsyncEnumerable_1}
+     * @param keySelector the argument of type {@code Func_3}
+     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.ExceptBy" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> IAsyncEnumerable_1 ExceptBy(IAsyncEnumerable_1 first, IAsyncEnumerable_1 second, Func_3 keySelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1008,6 +2213,26 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Intersect.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param first the argument of type {@code IAsyncEnumerable_1}
+     * @param second the argument of type {@code IAsyncEnumerable_1}
+     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.Intersect" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> IAsyncEnumerable_1 Intersect(IAsyncEnumerable_1 first, IAsyncEnumerable_1 second, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1023,6 +2248,28 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IntersectBy.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param first the argument of type {@code IAsyncEnumerable_1}
+     * @param second the argument of type {@code IAsyncEnumerable_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.IntersectBy" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> IAsyncEnumerable_1 IntersectBy(IAsyncEnumerable_1 first, IAsyncEnumerable_1 second, Func_2 keySelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1038,6 +2285,28 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IntersectBy.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param first the argument of type {@code IAsyncEnumerable_1}
+     * @param second the argument of type {@code IAsyncEnumerable_1}
+     * @param keySelector the argument of type {@code Func_3}
+     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.IntersectBy" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> IAsyncEnumerable_1 IntersectBy(IAsyncEnumerable_1 first, IAsyncEnumerable_1 second, Func_3 keySelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1053,6 +2322,25 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Prepend.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param element the argument of type {@code TSource}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.Prepend" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> IAsyncEnumerable_1 Prepend(IAsyncEnumerable_1 source, TSource element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1068,6 +2356,24 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Reverse.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.Reverse" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> IAsyncEnumerable_1 Reverse(IAsyncEnumerable_1 source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1083,6 +2389,24 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Shuffle.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.Shuffle" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> IAsyncEnumerable_1 Shuffle(IAsyncEnumerable_1 source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1098,6 +2422,25 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Skip.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param count the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.Skip" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> IAsyncEnumerable_1 Skip(IAsyncEnumerable_1 source, int count) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1113,6 +2456,25 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SkipLast.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param count the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.SkipLast" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> IAsyncEnumerable_1 SkipLast(IAsyncEnumerable_1 source, int count) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1128,6 +2490,25 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SkipWhile.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param predicate the argument of type {@code Func_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.SkipWhile" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> IAsyncEnumerable_1 SkipWhile(IAsyncEnumerable_1 source, Func_2 predicate) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1143,6 +2524,25 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SkipWhile.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param predicate the argument of type {@code Func_3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.SkipWhile" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> IAsyncEnumerable_1 SkipWhile(IAsyncEnumerable_1 source, Func_3 predicate) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1158,6 +2558,25 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SkipWhile.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param predicate the argument of type {@code Func_4}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.SkipWhile" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> IAsyncEnumerable_1 SkipWhile(IAsyncEnumerable_1 source, Func_4 predicate) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1173,6 +2592,25 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Take.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param count the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.Take" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> IAsyncEnumerable_1 Take(IAsyncEnumerable_1 source, int count) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1188,6 +2626,25 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Take.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param range the argument of type {@code Range}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.Take" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> IAsyncEnumerable_1 Take(IAsyncEnumerable_1 source, Range range) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1203,6 +2660,25 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member TakeLast.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param count the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.TakeLast" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> IAsyncEnumerable_1 TakeLast(IAsyncEnumerable_1 source, int count) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1218,6 +2694,25 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member TakeWhile.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param predicate the argument of type {@code Func_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.TakeWhile" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> IAsyncEnumerable_1 TakeWhile(IAsyncEnumerable_1 source, Func_2 predicate) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1233,6 +2728,25 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member TakeWhile.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param predicate the argument of type {@code Func_3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.TakeWhile" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> IAsyncEnumerable_1 TakeWhile(IAsyncEnumerable_1 source, Func_3 predicate) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1248,6 +2762,25 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member TakeWhile.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param predicate the argument of type {@code Func_4}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.TakeWhile" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> IAsyncEnumerable_1 TakeWhile(IAsyncEnumerable_1 source, Func_4 predicate) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1263,6 +2796,24 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToAsyncEnumerable.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IEnumerable_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.ToAsyncEnumerable" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> IAsyncEnumerable_1 ToAsyncEnumerable(IEnumerable_1 source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1278,6 +2829,26 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Union.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param first the argument of type {@code IAsyncEnumerable_1}
+     * @param second the argument of type {@code IAsyncEnumerable_1}
+     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.Union" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> IAsyncEnumerable_1 Union(IAsyncEnumerable_1 first, IAsyncEnumerable_1 second, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1293,6 +2864,28 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member UnionBy.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param first the argument of type {@code IAsyncEnumerable_1}
+     * @param second the argument of type {@code IAsyncEnumerable_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.UnionBy" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> IAsyncEnumerable_1 UnionBy(IAsyncEnumerable_1 first, IAsyncEnumerable_1 second, Func_2 keySelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1308,6 +2901,28 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member UnionBy.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param first the argument of type {@code IAsyncEnumerable_1}
+     * @param second the argument of type {@code IAsyncEnumerable_1}
+     * @param keySelector the argument of type {@code Func_3}
+     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.UnionBy" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> IAsyncEnumerable_1 UnionBy(IAsyncEnumerable_1 first, IAsyncEnumerable_1 second, Func_3 keySelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1323,6 +2938,25 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Where.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param predicate the argument of type {@code Func_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.Where" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> IAsyncEnumerable_1 Where(IAsyncEnumerable_1 source, Func_2 predicate) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1338,6 +2972,25 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Where.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param predicate the argument of type {@code Func_3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.Where" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> IAsyncEnumerable_1 Where(IAsyncEnumerable_1 source, Func_3 predicate) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1353,6 +3006,25 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Where.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param predicate the argument of type {@code Func_4}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.Where" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> IAsyncEnumerable_1 Where(IAsyncEnumerable_1 source, Func_4 predicate) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1368,6 +3040,21 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Order.
+     *
+     * @param <T> the type of the generic argument T
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param comparer the argument of type {@code IComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.Order" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> IOrderedAsyncEnumerable_1 Order(IAsyncEnumerable_1 source, IComparer_1 comparer) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1383,6 +3070,21 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member OrderDescending.
+     *
+     * @param <T> the type of the generic argument T
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param comparer the argument of type {@code IComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.OrderDescending" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> IOrderedAsyncEnumerable_1 OrderDescending(IAsyncEnumerable_1 source, IComparer_1 comparer) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1398,6 +3100,27 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member OrderBy.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @param comparer the argument of type {@code IComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.OrderBy" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> IOrderedAsyncEnumerable_1 OrderBy(IAsyncEnumerable_1 source, Func_2 keySelector, IComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1413,6 +3136,27 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member OrderBy.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param keySelector the argument of type {@code Func_3}
+     * @param comparer the argument of type {@code IComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.OrderBy" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> IOrderedAsyncEnumerable_1 OrderBy(IAsyncEnumerable_1 source, Func_3 keySelector, IComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1428,6 +3172,27 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member OrderByDescending.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @param comparer the argument of type {@code IComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.OrderByDescending" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> IOrderedAsyncEnumerable_1 OrderByDescending(IAsyncEnumerable_1 source, Func_2 keySelector, IComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1443,6 +3208,27 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member OrderByDescending.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param keySelector the argument of type {@code Func_3}
+     * @param comparer the argument of type {@code IComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.OrderByDescending" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> IOrderedAsyncEnumerable_1 OrderByDescending(IAsyncEnumerable_1 source, Func_3 keySelector, IComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1458,6 +3244,27 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ThenBy.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param source the argument of type {@code IOrderedAsyncEnumerable_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @param comparer the argument of type {@code IComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.ThenBy" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> IOrderedAsyncEnumerable_1 ThenBy(IOrderedAsyncEnumerable_1 source, Func_2 keySelector, IComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1473,6 +3280,27 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ThenBy.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param source the argument of type {@code IOrderedAsyncEnumerable_1}
+     * @param keySelector the argument of type {@code Func_3}
+     * @param comparer the argument of type {@code IComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.ThenBy" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> IOrderedAsyncEnumerable_1 ThenBy(IOrderedAsyncEnumerable_1 source, Func_3 keySelector, IComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1488,6 +3316,27 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ThenByDescending.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param source the argument of type {@code IOrderedAsyncEnumerable_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @param comparer the argument of type {@code IComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.ThenByDescending" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> IOrderedAsyncEnumerable_1 ThenByDescending(IOrderedAsyncEnumerable_1 source, Func_2 keySelector, IComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1503,6 +3352,27 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ThenByDescending.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param source the argument of type {@code IOrderedAsyncEnumerable_1}
+     * @param keySelector the argument of type {@code Func_3}
+     * @param comparer the argument of type {@code IComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.ThenByDescending" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> IOrderedAsyncEnumerable_1 ThenByDescending(IOrderedAsyncEnumerable_1 source, Func_3 keySelector, IComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1518,6 +3388,26 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AllAsync.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param predicate the argument of type {@code Func_2}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.AllAsync" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ValueTask_1 AllAsync(IAsyncEnumerable_1 source, Func_2 predicate, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1533,6 +3423,26 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AllAsync.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param predicate the argument of type {@code Func_3}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.AllAsync" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ValueTask_1 AllAsync(IAsyncEnumerable_1 source, Func_3 predicate, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1548,6 +3458,26 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AnyAsync.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param predicate the argument of type {@code Func_2}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.AnyAsync" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ValueTask_1 AnyAsync(IAsyncEnumerable_1 source, Func_2 predicate, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1563,6 +3493,26 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AnyAsync.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param predicate the argument of type {@code Func_3}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.AnyAsync" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ValueTask_1 AnyAsync(IAsyncEnumerable_1 source, Func_3 predicate, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1578,6 +3528,25 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AnyAsync.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.AnyAsync" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ValueTask_1 AnyAsync(IAsyncEnumerable_1 source, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1593,6 +3562,27 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ContainsAsync.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param value the argument of type {@code TSource}
+     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.ContainsAsync" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ValueTask_1 ContainsAsync(IAsyncEnumerable_1 source, TSource value, IEqualityComparer_1 comparer, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1608,6 +3598,27 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SequenceEqualAsync.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param first the argument of type {@code IAsyncEnumerable_1}
+     * @param second the argument of type {@code IAsyncEnumerable_1}
+     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.SequenceEqualAsync" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ValueTask_1 SequenceEqualAsync(IAsyncEnumerable_1 first, IAsyncEnumerable_1 second, IEqualityComparer_1 comparer, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1623,6 +3634,30 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToDictionaryAsync.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param <TElement> the type of the generic argument TElement
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @param elementSelector the argument of type {@code Func_2}
+     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.ToDictionaryAsync" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TElement extends IJCOBridgeReflected> ValueTask_1 ToDictionaryAsync(IAsyncEnumerable_1 source, Func_2 keySelector, Func_2 elementSelector, IEqualityComparer_1 comparer, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1638,6 +3673,30 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToDictionaryAsync.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param <TElement> the type of the generic argument TElement
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param keySelector the argument of type {@code Func_3}
+     * @param elementSelector the argument of type {@code Func_3}
+     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.ToDictionaryAsync" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TElement extends IJCOBridgeReflected> ValueTask_1 ToDictionaryAsync(IAsyncEnumerable_1 source, Func_3 keySelector, Func_3 elementSelector, IEqualityComparer_1 comparer, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1653,6 +3712,28 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToDictionaryAsync.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.ToDictionaryAsync" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> ValueTask_1 ToDictionaryAsync(IAsyncEnumerable_1 source, Func_2 keySelector, IEqualityComparer_1 comparer, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1668,6 +3749,28 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToDictionaryAsync.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param keySelector the argument of type {@code Func_3}
+     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.ToDictionaryAsync" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> ValueTask_1 ToDictionaryAsync(IAsyncEnumerable_1 source, Func_3 keySelector, IEqualityComparer_1 comparer, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1683,6 +3786,27 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToDictionaryAsync.
+     *
+     * @param <TKey> the type of the generic argument TKey
+     * @param <TValue> the type of the generic argument TValue
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.ToDictionaryAsync" target="_top">.NET documentation</a>
+     */
     public static <TKey extends IJCOBridgeReflected, TValue extends IJCOBridgeReflected> ValueTask_1 ToDictionaryAsync(IAsyncEnumerable_1 source, IEqualityComparer_1 comparer, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1698,6 +3822,26 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToHashSetAsync.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.ToHashSetAsync" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ValueTask_1 ToHashSetAsync(IAsyncEnumerable_1 source, IEqualityComparer_1 comparer, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1713,6 +3857,25 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToListAsync.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.ToListAsync" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ValueTask_1 ToListAsync(IAsyncEnumerable_1 source, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1728,6 +3891,24 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AverageAsync.
+     *
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.AverageAsync" target="_top">.NET documentation</a>
+     */
     public static ValueTask_1 AverageAsync(IAsyncEnumerable_1 source, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1743,6 +3924,24 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SumAsync.
+     *
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.SumAsync" target="_top">.NET documentation</a>
+     */
     public static ValueTask_1 SumAsync(IAsyncEnumerable_1 source, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1758,6 +3957,26 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CountAsync.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param predicate the argument of type {@code Func_2}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.CountAsync" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ValueTask_1 CountAsync(IAsyncEnumerable_1 source, Func_2 predicate, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1773,6 +3992,26 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CountAsync.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param predicate the argument of type {@code Func_3}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.CountAsync" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ValueTask_1 CountAsync(IAsyncEnumerable_1 source, Func_3 predicate, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1788,6 +4027,25 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CountAsync.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.CountAsync" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ValueTask_1 CountAsync(IAsyncEnumerable_1 source, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1803,6 +4061,26 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LongCountAsync.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param predicate the argument of type {@code Func_2}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.LongCountAsync" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ValueTask_1 LongCountAsync(IAsyncEnumerable_1 source, Func_2 predicate, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1818,6 +4096,26 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LongCountAsync.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param predicate the argument of type {@code Func_3}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.LongCountAsync" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ValueTask_1 LongCountAsync(IAsyncEnumerable_1 source, Func_3 predicate, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1833,6 +4131,25 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LongCountAsync.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.LongCountAsync" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ValueTask_1 LongCountAsync(IAsyncEnumerable_1 source, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1848,6 +4165,30 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToLookupAsync.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param <TElement> the type of the generic argument TElement
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @param elementSelector the argument of type {@code Func_2}
+     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.ToLookupAsync" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TElement extends IJCOBridgeReflected> ValueTask_1 ToLookupAsync(IAsyncEnumerable_1 source, Func_2 keySelector, Func_2 elementSelector, IEqualityComparer_1 comparer, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1863,6 +4204,30 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToLookupAsync.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param <TElement> the type of the generic argument TElement
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param keySelector the argument of type {@code Func_3}
+     * @param elementSelector the argument of type {@code Func_3}
+     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.ToLookupAsync" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TElement extends IJCOBridgeReflected> ValueTask_1 ToLookupAsync(IAsyncEnumerable_1 source, Func_3 keySelector, Func_3 elementSelector, IEqualityComparer_1 comparer, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1878,6 +4243,28 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToLookupAsync.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.ToLookupAsync" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> ValueTask_1 ToLookupAsync(IAsyncEnumerable_1 source, Func_2 keySelector, IEqualityComparer_1 comparer, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1893,6 +4280,28 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToLookupAsync.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param keySelector the argument of type {@code Func_3}
+     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.ToLookupAsync" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> ValueTask_1 ToLookupAsync(IAsyncEnumerable_1 source, Func_3 keySelector, IEqualityComparer_1 comparer, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1908,6 +4317,28 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AggregateAsync.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TAccumulate> the type of the generic argument TAccumulate
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param seed the argument of type {@code TAccumulate}
+     * @param func the argument of type {@code Func_3}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.AggregateAsync" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TAccumulate extends IJCOBridgeReflected> ValueTask_1 AggregateAsync(IAsyncEnumerable_1 source, TAccumulate seed, Func_3 func, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1923,6 +4354,28 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AggregateAsync.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TAccumulate> the type of the generic argument TAccumulate
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param seed the argument of type {@code TAccumulate}
+     * @param func the argument of type {@code Func_4}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.AggregateAsync" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TAccumulate extends IJCOBridgeReflected> ValueTask_1 AggregateAsync(IAsyncEnumerable_1 source, TAccumulate seed, Func_4 func, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1938,6 +4391,30 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AggregateAsync.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TAccumulate> the type of the generic argument TAccumulate
+     * @param <TResult> the type of the generic argument TResult
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param seed the argument of type {@code TAccumulate}
+     * @param func the argument of type {@code Func_3}
+     * @param resultSelector the argument of type {@code Func_2}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.AggregateAsync" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TAccumulate extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> ValueTask_1 AggregateAsync(IAsyncEnumerable_1 source, TAccumulate seed, Func_3 func, Func_2 resultSelector, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1953,6 +4430,30 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AggregateAsync.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TAccumulate> the type of the generic argument TAccumulate
+     * @param <TResult> the type of the generic argument TResult
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param seed the argument of type {@code TAccumulate}
+     * @param func the argument of type {@code Func_4}
+     * @param resultSelector the argument of type {@code Func_3}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.AggregateAsync" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TAccumulate extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> ValueTask_1 AggregateAsync(IAsyncEnumerable_1 source, TAccumulate seed, Func_4 func, Func_3 resultSelector, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1968,6 +4469,25 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToArrayAsync.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.ToArrayAsync" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ValueTask_1 ToArrayAsync(IAsyncEnumerable_1 source, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1983,6 +4503,26 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AggregateAsync.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param func the argument of type {@code Func_3}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.AggregateAsync" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ValueTask_1 AggregateAsync(IAsyncEnumerable_1 source, Func_3 func, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1998,6 +4538,26 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AggregateAsync.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param func the argument of type {@code Func_4}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.AggregateAsync" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ValueTask_1 AggregateAsync(IAsyncEnumerable_1 source, Func_4 func, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2013,6 +4573,26 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ElementAtAsync.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param index the argument of type {@code int}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.ElementAtAsync" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ValueTask_1 ElementAtAsync(IAsyncEnumerable_1 source, int index, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2028,6 +4608,23 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ElementAtAsync.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param index the argument of type {@code Index}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.ElementAtAsync" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ValueTask_1 ElementAtAsync(IAsyncEnumerable_1 source, Index index, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2043,6 +4640,26 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ElementAtOrDefaultAsync.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param index the argument of type {@code int}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.ElementAtOrDefaultAsync" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ValueTask_1 ElementAtOrDefaultAsync(IAsyncEnumerable_1 source, int index, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2058,6 +4675,23 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ElementAtOrDefaultAsync.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param index the argument of type {@code Index}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.ElementAtOrDefaultAsync" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ValueTask_1 ElementAtOrDefaultAsync(IAsyncEnumerable_1 source, Index index, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2073,6 +4707,26 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member FirstAsync.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param predicate the argument of type {@code Func_2}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.FirstAsync" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ValueTask_1 FirstAsync(IAsyncEnumerable_1 source, Func_2 predicate, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2088,6 +4742,26 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member FirstAsync.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param predicate the argument of type {@code Func_3}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.FirstAsync" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ValueTask_1 FirstAsync(IAsyncEnumerable_1 source, Func_3 predicate, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2103,6 +4777,25 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member FirstAsync.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.FirstAsync" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ValueTask_1 FirstAsync(IAsyncEnumerable_1 source, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2118,6 +4811,23 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member FirstOrDefaultAsync.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param predicate the argument of type {@code Func_2}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.FirstOrDefaultAsync" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ValueTask_1 FirstOrDefaultAsync(IAsyncEnumerable_1 source, Func_2 predicate, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2133,6 +4843,27 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member FirstOrDefaultAsync.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param predicate the argument of type {@code Func_2}
+     * @param defaultValue the argument of type {@code TSource}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.FirstOrDefaultAsync" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ValueTask_1 FirstOrDefaultAsync(IAsyncEnumerable_1 source, Func_2 predicate, TSource defaultValue, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2148,6 +4879,23 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member FirstOrDefaultAsync.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param predicate the argument of type {@code Func_3}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.FirstOrDefaultAsync" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ValueTask_1 FirstOrDefaultAsync(IAsyncEnumerable_1 source, Func_3 predicate, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2163,6 +4911,27 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member FirstOrDefaultAsync.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param predicate the argument of type {@code Func_3}
+     * @param defaultValue the argument of type {@code TSource}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.FirstOrDefaultAsync" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ValueTask_1 FirstOrDefaultAsync(IAsyncEnumerable_1 source, Func_3 predicate, TSource defaultValue, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2178,6 +4947,22 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member FirstOrDefaultAsync.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.FirstOrDefaultAsync" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ValueTask_1 FirstOrDefaultAsync(IAsyncEnumerable_1 source, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2193,6 +4978,26 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member FirstOrDefaultAsync.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param defaultValue the argument of type {@code TSource}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.FirstOrDefaultAsync" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ValueTask_1 FirstOrDefaultAsync(IAsyncEnumerable_1 source, TSource defaultValue, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2208,6 +5013,26 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LastAsync.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param predicate the argument of type {@code Func_2}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.LastAsync" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ValueTask_1 LastAsync(IAsyncEnumerable_1 source, Func_2 predicate, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2223,6 +5048,26 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LastAsync.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param predicate the argument of type {@code Func_3}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.LastAsync" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ValueTask_1 LastAsync(IAsyncEnumerable_1 source, Func_3 predicate, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2238,6 +5083,25 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LastAsync.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.LastAsync" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ValueTask_1 LastAsync(IAsyncEnumerable_1 source, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2253,6 +5117,23 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LastOrDefaultAsync.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param predicate the argument of type {@code Func_2}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.LastOrDefaultAsync" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ValueTask_1 LastOrDefaultAsync(IAsyncEnumerable_1 source, Func_2 predicate, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2268,6 +5149,27 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LastOrDefaultAsync.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param predicate the argument of type {@code Func_2}
+     * @param defaultValue the argument of type {@code TSource}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.LastOrDefaultAsync" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ValueTask_1 LastOrDefaultAsync(IAsyncEnumerable_1 source, Func_2 predicate, TSource defaultValue, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2283,6 +5185,23 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LastOrDefaultAsync.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param predicate the argument of type {@code Func_3}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.LastOrDefaultAsync" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ValueTask_1 LastOrDefaultAsync(IAsyncEnumerable_1 source, Func_3 predicate, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2298,6 +5217,27 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LastOrDefaultAsync.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param predicate the argument of type {@code Func_3}
+     * @param defaultValue the argument of type {@code TSource}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.LastOrDefaultAsync" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ValueTask_1 LastOrDefaultAsync(IAsyncEnumerable_1 source, Func_3 predicate, TSource defaultValue, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2313,6 +5253,22 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LastOrDefaultAsync.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.LastOrDefaultAsync" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ValueTask_1 LastOrDefaultAsync(IAsyncEnumerable_1 source, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2328,6 +5284,26 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LastOrDefaultAsync.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param defaultValue the argument of type {@code TSource}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.LastOrDefaultAsync" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ValueTask_1 LastOrDefaultAsync(IAsyncEnumerable_1 source, TSource defaultValue, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2343,6 +5319,26 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member MaxAsync.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param comparer the argument of type {@code IComparer_1}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.MaxAsync" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ValueTask_1 MaxAsync(IAsyncEnumerable_1 source, IComparer_1 comparer, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2358,6 +5354,28 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member MaxByAsync.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @param comparer the argument of type {@code IComparer_1}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.MaxByAsync" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> ValueTask_1 MaxByAsync(IAsyncEnumerable_1 source, Func_2 keySelector, IComparer_1 comparer, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2373,6 +5391,28 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member MaxByAsync.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param keySelector the argument of type {@code Func_3}
+     * @param comparer the argument of type {@code IComparer_1}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.MaxByAsync" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> ValueTask_1 MaxByAsync(IAsyncEnumerable_1 source, Func_3 keySelector, IComparer_1 comparer, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2388,6 +5428,26 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member MinAsync.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param comparer the argument of type {@code IComparer_1}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.MinAsync" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ValueTask_1 MinAsync(IAsyncEnumerable_1 source, IComparer_1 comparer, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2403,6 +5463,28 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member MinByAsync.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @param comparer the argument of type {@code IComparer_1}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.MinByAsync" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> ValueTask_1 MinByAsync(IAsyncEnumerable_1 source, Func_2 keySelector, IComparer_1 comparer, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2418,6 +5500,28 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member MinByAsync.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TKey> the type of the generic argument TKey
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param keySelector the argument of type {@code Func_3}
+     * @param comparer the argument of type {@code IComparer_1}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.MinByAsync" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> ValueTask_1 MinByAsync(IAsyncEnumerable_1 source, Func_3 keySelector, IComparer_1 comparer, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2433,6 +5537,26 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SingleAsync.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param predicate the argument of type {@code Func_2}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.SingleAsync" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ValueTask_1 SingleAsync(IAsyncEnumerable_1 source, Func_2 predicate, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2448,6 +5572,26 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SingleAsync.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param predicate the argument of type {@code Func_3}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.SingleAsync" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ValueTask_1 SingleAsync(IAsyncEnumerable_1 source, Func_3 predicate, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2463,6 +5607,25 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SingleAsync.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.SingleAsync" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ValueTask_1 SingleAsync(IAsyncEnumerable_1 source, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2478,6 +5641,23 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SingleOrDefaultAsync.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param predicate the argument of type {@code Func_2}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.SingleOrDefaultAsync" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ValueTask_1 SingleOrDefaultAsync(IAsyncEnumerable_1 source, Func_2 predicate, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2493,6 +5673,27 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SingleOrDefaultAsync.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param predicate the argument of type {@code Func_2}
+     * @param defaultValue the argument of type {@code TSource}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.SingleOrDefaultAsync" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ValueTask_1 SingleOrDefaultAsync(IAsyncEnumerable_1 source, Func_2 predicate, TSource defaultValue, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2508,6 +5709,23 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SingleOrDefaultAsync.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param predicate the argument of type {@code Func_3}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.SingleOrDefaultAsync" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ValueTask_1 SingleOrDefaultAsync(IAsyncEnumerable_1 source, Func_3 predicate, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2523,6 +5741,27 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SingleOrDefaultAsync.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param predicate the argument of type {@code Func_3}
+     * @param defaultValue the argument of type {@code TSource}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.SingleOrDefaultAsync" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ValueTask_1 SingleOrDefaultAsync(IAsyncEnumerable_1 source, Func_3 predicate, TSource defaultValue, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2538,6 +5777,22 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SingleOrDefaultAsync.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.SingleOrDefaultAsync" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ValueTask_1 SingleOrDefaultAsync(IAsyncEnumerable_1 source, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2553,6 +5808,26 @@ public class AsyncEnumerable extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SingleOrDefaultAsync.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param defaultValue the argument of type {@code TSource}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.SingleOrDefaultAsync" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected> ValueTask_1 SingleOrDefaultAsync(IAsyncEnumerable_1 source, TSource defaultValue, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

@@ -101,7 +101,10 @@ public class ConfigurationConverterBase extends system.componentmodel.TypeConver
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ConfigurationConverterBase(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,15 @@ public class ConfigurationConverterBase extends system.componentmodel.TypeConver
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CanConvertFrom.
+     *
+     * @param ctx the argument of type {@code ITypeDescriptorContext}
+     * @param type the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.ConfigurationConverterBase.CanConvertFrom" target="_top">.NET documentation</a>
+     */
     public boolean CanConvertFrom(ITypeDescriptorContext ctx, NetType type) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -168,6 +180,15 @@ public class ConfigurationConverterBase extends system.componentmodel.TypeConver
         }
     }
 
+    /**
+     * Invokes the .NET member CanConvertTo.
+     *
+     * @param ctx the argument of type {@code ITypeDescriptorContext}
+     * @param type the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.ConfigurationConverterBase.CanConvertTo" target="_top">.NET documentation</a>
+     */
     public boolean CanConvertTo(ITypeDescriptorContext ctx, NetType type) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

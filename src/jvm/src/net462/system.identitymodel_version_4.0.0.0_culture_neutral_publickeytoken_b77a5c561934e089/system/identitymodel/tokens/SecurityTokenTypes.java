@@ -98,7 +98,10 @@ public class SecurityTokenTypes extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SecurityTokenTypes(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,13 @@ public class SecurityTokenTypes extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Kerberos.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SecurityTokenTypes.Kerberos" target="_top">.NET documentation</a>
+     */
     public static java.lang.String getKerberos() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -169,6 +179,13 @@ public class SecurityTokenTypes extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Rsa.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SecurityTokenTypes.Rsa" target="_top">.NET documentation</a>
+     */
     public static java.lang.String getRsa() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -183,6 +200,13 @@ public class SecurityTokenTypes extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Saml.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SecurityTokenTypes.Saml" target="_top">.NET documentation</a>
+     */
     public static java.lang.String getSaml() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -197,6 +221,13 @@ public class SecurityTokenTypes extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UserName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SecurityTokenTypes.UserName" target="_top">.NET documentation</a>
+     */
     public static java.lang.String getUserName() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -211,6 +242,13 @@ public class SecurityTokenTypes extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property X509Certificate.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SecurityTokenTypes.X509Certificate" target="_top">.NET documentation</a>
+     */
     public static java.lang.String getX509Certificate() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

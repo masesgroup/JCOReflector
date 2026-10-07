@@ -100,7 +100,10 @@ public class ListSortDescription extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ListSortDescription(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,14 @@ public class ListSortDescription extends NetObject  {
     public ListSortDescription() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param property the argument of type {@code PropertyDescriptor}
+     * @param direction the argument of type {@code ListSortDirection}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ListSortDescription.-ctor" target="_top">.NET documentation</a>
+     */
     public ListSortDescription(PropertyDescriptor property, ListSortDirection direction) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +180,13 @@ public class ListSortDescription extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property SortDirection.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ListSortDescription.SortDirection" target="_top">.NET documentation</a>
+     */
     public ListSortDirection getSortDirection() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +202,13 @@ public class ListSortDescription extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SortDirection.
+     *
+     * @param SortDirection the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ListSortDescription.SortDirection" target="_top">.NET documentation</a>
+     */
     public void setSortDirection(ListSortDirection SortDirection) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +219,13 @@ public class ListSortDescription extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PropertyDescriptor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ListSortDescription.PropertyDescriptor" target="_top">.NET documentation</a>
+     */
     public PropertyDescriptor getPropertyDescriptor() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -209,6 +241,13 @@ public class ListSortDescription extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PropertyDescriptor.
+     *
+     * @param PropertyDescriptor the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ListSortDescription.PropertyDescriptor" target="_top">.NET documentation</a>
+     */
     public void setPropertyDescriptor(PropertyDescriptor PropertyDescriptor) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

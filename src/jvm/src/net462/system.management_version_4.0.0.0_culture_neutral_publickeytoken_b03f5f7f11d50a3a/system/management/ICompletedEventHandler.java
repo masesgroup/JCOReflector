@@ -52,5 +52,11 @@ import system.management.CompletedEventArgs;
  * @version 2.0.0.0
  */
 public interface ICompletedEventHandler {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param sender the .NET argument of type {@code System.Object}
+     * @param e the .NET argument of type {@code System.Management.CompletedEventArgs}
+     */
     public void Invoke(NetObject sender, CompletedEventArgs e);
 }

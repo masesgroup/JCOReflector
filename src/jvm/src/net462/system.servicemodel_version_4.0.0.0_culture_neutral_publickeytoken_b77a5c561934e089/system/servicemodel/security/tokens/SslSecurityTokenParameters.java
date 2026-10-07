@@ -99,7 +99,10 @@ public class SslSecurityTokenParameters extends system.servicemodel.security.tok
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SslSecurityTokenParameters(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class SslSecurityTokenParameters extends system.servicemodel.security.tok
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.SslSecurityTokenParameters.-ctor" target="_top">.NET documentation</a>
+     */
     public SslSecurityTokenParameters() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -156,6 +165,13 @@ public class SslSecurityTokenParameters extends system.servicemodel.security.tok
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param requireClientCertificate the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.SslSecurityTokenParameters.-ctor" target="_top">.NET documentation</a>
+     */
     public SslSecurityTokenParameters(boolean requireClientCertificate) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -166,6 +182,14 @@ public class SslSecurityTokenParameters extends system.servicemodel.security.tok
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param requireClientCertificate the argument of type {@code boolean}
+     * @param requireCancellation the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.SslSecurityTokenParameters.-ctor" target="_top">.NET documentation</a>
+     */
     public SslSecurityTokenParameters(boolean requireClientCertificate, boolean requireCancellation) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -184,6 +208,13 @@ public class SslSecurityTokenParameters extends system.servicemodel.security.tok
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property RequireCancellation.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.SslSecurityTokenParameters.RequireCancellation" target="_top">.NET documentation</a>
+     */
     public boolean getRequireCancellation() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +229,13 @@ public class SslSecurityTokenParameters extends system.servicemodel.security.tok
         }
     }
 
+    /**
+     * Sets the value of the .NET property RequireCancellation.
+     *
+     * @param RequireCancellation the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.SslSecurityTokenParameters.RequireCancellation" target="_top">.NET documentation</a>
+     */
     public void setRequireCancellation(boolean RequireCancellation) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +246,13 @@ public class SslSecurityTokenParameters extends system.servicemodel.security.tok
         }
     }
 
+    /**
+     * Gets the value of the .NET property RequireClientCertificate.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.SslSecurityTokenParameters.RequireClientCertificate" target="_top">.NET documentation</a>
+     */
     public boolean getRequireClientCertificate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -222,6 +267,13 @@ public class SslSecurityTokenParameters extends system.servicemodel.security.tok
         }
     }
 
+    /**
+     * Sets the value of the .NET property RequireClientCertificate.
+     *
+     * @param RequireClientCertificate the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.SslSecurityTokenParameters.RequireClientCertificate" target="_top">.NET documentation</a>
+     */
     public void setRequireClientCertificate(boolean RequireClientCertificate) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -102,7 +102,10 @@ public class WebPermissionAttribute extends system.security.permissions.CodeAcce
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public WebPermissionAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,13 @@ public class WebPermissionAttribute extends system.security.permissions.CodeAcce
     public WebPermissionAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param action the argument of type {@code SecurityAction}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.WebPermissionAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public WebPermissionAttribute(SecurityAction action) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +177,13 @@ public class WebPermissionAttribute extends system.security.permissions.CodeAcce
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CreatePermission.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.WebPermissionAttribute.CreatePermission" target="_top">.NET documentation</a>
+     */
     public IPermission CreatePermission() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -186,6 +203,13 @@ public class WebPermissionAttribute extends system.security.permissions.CodeAcce
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Accept.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.WebPermissionAttribute.Accept" target="_top">.NET documentation</a>
+     */
     public java.lang.String getAccept() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +224,13 @@ public class WebPermissionAttribute extends system.security.permissions.CodeAcce
         }
     }
 
+    /**
+     * Sets the value of the .NET property Accept.
+     *
+     * @param Accept the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.WebPermissionAttribute.Accept" target="_top">.NET documentation</a>
+     */
     public void setAccept(java.lang.String Accept) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -210,6 +241,13 @@ public class WebPermissionAttribute extends system.security.permissions.CodeAcce
         }
     }
 
+    /**
+     * Gets the value of the .NET property AcceptPattern.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.WebPermissionAttribute.AcceptPattern" target="_top">.NET documentation</a>
+     */
     public java.lang.String getAcceptPattern() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -224,6 +262,13 @@ public class WebPermissionAttribute extends system.security.permissions.CodeAcce
         }
     }
 
+    /**
+     * Sets the value of the .NET property AcceptPattern.
+     *
+     * @param AcceptPattern the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.WebPermissionAttribute.AcceptPattern" target="_top">.NET documentation</a>
+     */
     public void setAcceptPattern(java.lang.String AcceptPattern) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -234,6 +279,13 @@ public class WebPermissionAttribute extends system.security.permissions.CodeAcce
         }
     }
 
+    /**
+     * Gets the value of the .NET property Connect.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.WebPermissionAttribute.Connect" target="_top">.NET documentation</a>
+     */
     public java.lang.String getConnect() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -248,6 +300,13 @@ public class WebPermissionAttribute extends system.security.permissions.CodeAcce
         }
     }
 
+    /**
+     * Sets the value of the .NET property Connect.
+     *
+     * @param Connect the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.WebPermissionAttribute.Connect" target="_top">.NET documentation</a>
+     */
     public void setConnect(java.lang.String Connect) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -258,6 +317,13 @@ public class WebPermissionAttribute extends system.security.permissions.CodeAcce
         }
     }
 
+    /**
+     * Gets the value of the .NET property ConnectPattern.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.WebPermissionAttribute.ConnectPattern" target="_top">.NET documentation</a>
+     */
     public java.lang.String getConnectPattern() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -272,6 +338,13 @@ public class WebPermissionAttribute extends system.security.permissions.CodeAcce
         }
     }
 
+    /**
+     * Sets the value of the .NET property ConnectPattern.
+     *
+     * @param ConnectPattern the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.WebPermissionAttribute.ConnectPattern" target="_top">.NET documentation</a>
+     */
     public void setConnectPattern(java.lang.String ConnectPattern) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

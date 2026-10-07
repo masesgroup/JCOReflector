@@ -98,7 +98,10 @@ public class ISerializationSurrogateProviderImplementation extends NetObject imp
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ISerializationSurrogateProviderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -140,6 +143,15 @@ public class ISerializationSurrogateProviderImplementation extends NetObject imp
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetDeserializedObject.
+     *
+     * @param obj the argument of type {@code NetObject}
+     * @param targetType the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.ISerializationSurrogateProvider.GetDeserializedObject" target="_top">.NET documentation</a>
+     */
     public NetObject GetDeserializedObject(NetObject obj, NetType targetType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -155,6 +167,15 @@ public class ISerializationSurrogateProviderImplementation extends NetObject imp
         }
     }
 
+    /**
+     * Invokes the .NET member GetObjectToSerialize.
+     *
+     * @param obj the argument of type {@code NetObject}
+     * @param targetType the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.ISerializationSurrogateProvider.GetObjectToSerialize" target="_top">.NET documentation</a>
+     */
     public NetObject GetObjectToSerialize(NetObject obj, NetType targetType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -170,6 +191,14 @@ public class ISerializationSurrogateProviderImplementation extends NetObject imp
         }
     }
 
+    /**
+     * Invokes the .NET member GetSurrogateType.
+     *
+     * @param type the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.ISerializationSurrogateProvider.GetSurrogateType" target="_top">.NET documentation</a>
+     */
     public NetType GetSurrogateType(NetType type) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

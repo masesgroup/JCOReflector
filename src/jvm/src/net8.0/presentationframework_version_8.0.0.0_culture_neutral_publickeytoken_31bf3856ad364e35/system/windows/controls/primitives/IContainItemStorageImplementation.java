@@ -99,7 +99,10 @@ public class IContainItemStorageImplementation extends NetObject implements ICon
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IContainItemStorageImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -141,6 +144,15 @@ public class IContainItemStorageImplementation extends NetObject implements ICon
 
     // Methods section
     
+    /**
+     * Invokes the .NET member ReadItemValue.
+     *
+     * @param item the argument of type {@code NetObject}
+     * @param dp the argument of type {@code DependencyProperty}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.IContainItemStorage.ReadItemValue" target="_top">.NET documentation</a>
+     */
     public NetObject ReadItemValue(NetObject item, DependencyProperty dp) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -156,6 +168,12 @@ public class IContainItemStorageImplementation extends NetObject implements ICon
         }
     }
 
+    /**
+     * Invokes the .NET member Clear.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.IContainItemStorage.Clear" target="_top">.NET documentation</a>
+     */
     public void Clear() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -166,6 +184,14 @@ public class IContainItemStorageImplementation extends NetObject implements ICon
         }
     }
 
+    /**
+     * Invokes the .NET member ClearItemValue.
+     *
+     * @param item the argument of type {@code NetObject}
+     * @param dp the argument of type {@code DependencyProperty}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.IContainItemStorage.ClearItemValue" target="_top">.NET documentation</a>
+     */
     public void ClearItemValue(NetObject item, DependencyProperty dp) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -176,6 +202,13 @@ public class IContainItemStorageImplementation extends NetObject implements ICon
         }
     }
 
+    /**
+     * Invokes the .NET member ClearValue.
+     *
+     * @param dp the argument of type {@code DependencyProperty}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.IContainItemStorage.ClearValue" target="_top">.NET documentation</a>
+     */
     public void ClearValue(DependencyProperty dp) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -186,6 +219,15 @@ public class IContainItemStorageImplementation extends NetObject implements ICon
         }
     }
 
+    /**
+     * Invokes the .NET member StoreItemValue.
+     *
+     * @param item the argument of type {@code NetObject}
+     * @param dp the argument of type {@code DependencyProperty}
+     * @param value the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.IContainItemStorage.StoreItemValue" target="_top">.NET documentation</a>
+     */
     public void StoreItemValue(NetObject item, DependencyProperty dp, NetObject value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

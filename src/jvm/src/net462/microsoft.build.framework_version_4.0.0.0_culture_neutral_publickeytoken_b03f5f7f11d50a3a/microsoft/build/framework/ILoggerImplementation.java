@@ -101,7 +101,10 @@ public class ILoggerImplementation extends NetObject implements ILogger {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ILoggerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -143,6 +146,13 @@ public class ILoggerImplementation extends NetObject implements ILogger {
 
     // Methods section
     
+    /**
+     * Invokes the .NET member Initialize.
+     *
+     * @param eventSource the argument of type {@code IEventSource}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.ILogger.Initialize" target="_top">.NET documentation</a>
+     */
     public void Initialize(IEventSource eventSource) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -153,6 +163,12 @@ public class ILoggerImplementation extends NetObject implements ILogger {
         }
     }
 
+    /**
+     * Invokes the .NET member Shutdown.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.ILogger.Shutdown" target="_top">.NET documentation</a>
+     */
     public void Shutdown() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -167,6 +183,13 @@ public class ILoggerImplementation extends NetObject implements ILogger {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Verbosity.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.ILogger.Verbosity" target="_top">.NET documentation</a>
+     */
     public LoggerVerbosity getVerbosity() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +205,13 @@ public class ILoggerImplementation extends NetObject implements ILogger {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Verbosity.
+     *
+     * @param Verbosity the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.ILogger.Verbosity" target="_top">.NET documentation</a>
+     */
     public void setVerbosity(LoggerVerbosity Verbosity) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -192,6 +222,13 @@ public class ILoggerImplementation extends NetObject implements ILogger {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Parameters.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.ILogger.Parameters" target="_top">.NET documentation</a>
+     */
     public java.lang.String getParameters() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,6 +243,13 @@ public class ILoggerImplementation extends NetObject implements ILogger {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Parameters.
+     *
+     * @param Parameters the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.ILogger.Parameters" target="_top">.NET documentation</a>
+     */
     public void setParameters(java.lang.String Parameters) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

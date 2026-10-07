@@ -53,5 +53,12 @@ import system.web.HttpValidationStatus;
  * @version 2.0.0.0
  */
 public interface IHttpCacheValidateHandler {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param context the .NET argument of type {@code System.Web.HttpContext}
+     * @param data the .NET argument of type {@code System.Object}
+     * @param validationStatus the .NET argument of type {@code System.Web.HttpValidationStatus&}
+     */
     public void Invoke(HttpContext context, NetObject data, HttpValidationStatus validationStatus);
 }

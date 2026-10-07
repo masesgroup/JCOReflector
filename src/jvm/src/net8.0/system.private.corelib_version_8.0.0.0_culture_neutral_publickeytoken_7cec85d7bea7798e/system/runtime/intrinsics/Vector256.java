@@ -108,7 +108,10 @@ public class Vector256 extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Vector256(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -161,6 +164,18 @@ public class Vector256 extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member EqualsAll.
+     *
+     * @param <T> the type of the generic argument T
+     * @param left the argument of type {@code Vector256_1}
+     * @param right the argument of type {@code Vector256_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.EqualsAll" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> boolean EqualsAll(Vector256_1 left, Vector256_1 right) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -175,6 +190,19 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member EqualsAny.
+     *
+     * @param <T> the type of the generic argument T
+     * @param left the argument of type {@code Vector256_1}
+     * @param right the argument of type {@code Vector256_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.EqualsAny" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> boolean EqualsAny(Vector256_1 left, Vector256_1 right) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -189,6 +217,19 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GreaterThanAll.
+     *
+     * @param <T> the type of the generic argument T
+     * @param left the argument of type {@code Vector256_1}
+     * @param right the argument of type {@code Vector256_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.GreaterThanAll" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> boolean GreaterThanAll(Vector256_1 left, Vector256_1 right) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -203,6 +244,19 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GreaterThanAny.
+     *
+     * @param <T> the type of the generic argument T
+     * @param left the argument of type {@code Vector256_1}
+     * @param right the argument of type {@code Vector256_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.GreaterThanAny" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> boolean GreaterThanAny(Vector256_1 left, Vector256_1 right) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -217,6 +271,19 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GreaterThanOrEqualAll.
+     *
+     * @param <T> the type of the generic argument T
+     * @param left the argument of type {@code Vector256_1}
+     * @param right the argument of type {@code Vector256_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.GreaterThanOrEqualAll" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> boolean GreaterThanOrEqualAll(Vector256_1 left, Vector256_1 right) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -231,6 +298,19 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GreaterThanOrEqualAny.
+     *
+     * @param <T> the type of the generic argument T
+     * @param left the argument of type {@code Vector256_1}
+     * @param right the argument of type {@code Vector256_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.GreaterThanOrEqualAny" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> boolean GreaterThanOrEqualAny(Vector256_1 left, Vector256_1 right) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -245,6 +325,19 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LessThanAll.
+     *
+     * @param <T> the type of the generic argument T
+     * @param left the argument of type {@code Vector256_1}
+     * @param right the argument of type {@code Vector256_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.LessThanAll" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> boolean LessThanAll(Vector256_1 left, Vector256_1 right) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -259,6 +352,19 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LessThanAny.
+     *
+     * @param <T> the type of the generic argument T
+     * @param left the argument of type {@code Vector256_1}
+     * @param right the argument of type {@code Vector256_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.LessThanAny" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> boolean LessThanAny(Vector256_1 left, Vector256_1 right) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -273,6 +379,19 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LessThanOrEqualAll.
+     *
+     * @param <T> the type of the generic argument T
+     * @param left the argument of type {@code Vector256_1}
+     * @param right the argument of type {@code Vector256_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.LessThanOrEqualAll" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> boolean LessThanOrEqualAll(Vector256_1 left, Vector256_1 right) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -287,6 +406,19 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LessThanOrEqualAny.
+     *
+     * @param <T> the type of the generic argument T
+     * @param left the argument of type {@code Vector256_1}
+     * @param right the argument of type {@code Vector256_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.LessThanOrEqualAny" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> boolean LessThanOrEqualAny(Vector256_1 left, Vector256_1 right) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -301,6 +433,23 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AsVector.
+     *
+     * @param <T> the type of the generic argument T
+     * @param value the argument of type {@code Vector256_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.AsVector" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector_1 AsVector(Vector256_1 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -316,6 +465,23 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetLower.
+     *
+     * @param <T> the type of the generic argument T
+     * @param vector the argument of type {@code Vector256_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.GetLower" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector128_1 GetLower(Vector256_1 vector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -331,6 +497,23 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetUpper.
+     *
+     * @param <T> the type of the generic argument T
+     * @param vector the argument of type {@code Vector256_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.GetUpper" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector128_1 GetUpper(Vector256_1 vector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -346,6 +529,20 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AsByte.
+     *
+     * @param <T> the type of the generic argument T
+     * @param vector the argument of type {@code Vector256_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.AsByte" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector256_1 AsByte(Vector256_1 vector) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -361,6 +558,47 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param e0 the argument of type {@code byte}
+     * @param e1 the argument of type {@code byte}
+     * @param e2 the argument of type {@code byte}
+     * @param e3 the argument of type {@code byte}
+     * @param e4 the argument of type {@code byte}
+     * @param e5 the argument of type {@code byte}
+     * @param e6 the argument of type {@code byte}
+     * @param e7 the argument of type {@code byte}
+     * @param e8 the argument of type {@code byte}
+     * @param e9 the argument of type {@code byte}
+     * @param e10 the argument of type {@code byte}
+     * @param e11 the argument of type {@code byte}
+     * @param e12 the argument of type {@code byte}
+     * @param e13 the argument of type {@code byte}
+     * @param e14 the argument of type {@code byte}
+     * @param e15 the argument of type {@code byte}
+     * @param e16 the argument of type {@code byte}
+     * @param e17 the argument of type {@code byte}
+     * @param e18 the argument of type {@code byte}
+     * @param e19 the argument of type {@code byte}
+     * @param e20 the argument of type {@code byte}
+     * @param e21 the argument of type {@code byte}
+     * @param e22 the argument of type {@code byte}
+     * @param e23 the argument of type {@code byte}
+     * @param e24 the argument of type {@code byte}
+     * @param e25 the argument of type {@code byte}
+     * @param e26 the argument of type {@code byte}
+     * @param e27 the argument of type {@code byte}
+     * @param e28 the argument of type {@code byte}
+     * @param e29 the argument of type {@code byte}
+     * @param e30 the argument of type {@code byte}
+     * @param e31 the argument of type {@code byte}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.Create" target="_top">.NET documentation</a>
+     */
     public static Vector256_1 Create(byte e0, byte e1, byte e2, byte e3, byte e4, byte e5, byte e6, byte e7, byte e8, byte e9, byte e10, byte e11, byte e12, byte e13, byte e14, byte e15, byte e16, byte e17, byte e18, byte e19, byte e20, byte e21, byte e22, byte e23, byte e24, byte e25, byte e26, byte e27, byte e28, byte e29, byte e30, byte e31) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -376,6 +614,17 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param value the argument of type {@code byte}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.Create" target="_top">.NET documentation</a>
+     */
     public static Vector256_1 Create(byte value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -391,6 +640,18 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param lower the argument of type {@code Vector128_1}
+     * @param upper the argument of type {@code Vector128_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.Create" target="_top">.NET documentation</a>
+     */
     public static Vector256_1 Create(Vector128_1 lower, Vector128_1 upper) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -406,6 +667,16 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateScalar.
+     *
+     * @param value the argument of type {@code byte}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.CreateScalar" target="_top">.NET documentation</a>
+     */
     public static Vector256_1 CreateScalar(byte value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -421,6 +692,19 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateScalarUnsafe.
+     *
+     * @param value the argument of type {@code byte}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.CreateScalarUnsafe" target="_top">.NET documentation</a>
+     */
     public static Vector256_1 CreateScalarUnsafe(byte value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -436,6 +720,20 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Narrow.
+     *
+     * @param lower the argument of type {@code Vector256_1}
+     * @param upper the argument of type {@code Vector256_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.Narrow" target="_top">.NET documentation</a>
+     */
     public static Vector256_1 Narrow(Vector256_1 lower, Vector256_1 upper) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -451,6 +749,18 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ShiftLeft.
+     *
+     * @param vector the argument of type {@code Vector256_1}
+     * @param shiftCount the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.ShiftLeft" target="_top">.NET documentation</a>
+     */
     public static Vector256_1 ShiftLeft(Vector256_1 vector, int shiftCount) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -466,6 +776,18 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ShiftRightLogical.
+     *
+     * @param vector the argument of type {@code Vector256_1}
+     * @param shiftCount the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.ShiftRightLogical" target="_top">.NET documentation</a>
+     */
     public static Vector256_1 ShiftRightLogical(Vector256_1 vector, int shiftCount) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -481,6 +803,25 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Shuffle.
+     *
+     * @param vector the argument of type {@code Vector256_1}
+     * @param indices the argument of type {@code Vector256_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.Shuffle" target="_top">.NET documentation</a>
+     */
     public static Vector256_1 Shuffle(Vector256_1 vector, Vector256_1 indices) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -496,6 +837,20 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AsDouble.
+     *
+     * @param <T> the type of the generic argument T
+     * @param vector the argument of type {@code Vector256_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.AsDouble" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector256_1 AsDouble(Vector256_1 vector) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -511,6 +866,19 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Ceiling.
+     *
+     * @param vector the argument of type {@code Vector256_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.Ceiling" target="_top">.NET documentation</a>
+     */
     public static Vector256_1 Ceiling(Vector256_1 vector) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -526,6 +894,17 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ConvertToDouble.
+     *
+     * @param vector the argument of type {@code Vector256_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.ConvertToDouble" target="_top">.NET documentation</a>
+     */
     public static Vector256_1 ConvertToDouble(Vector256_1 vector) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -541,6 +920,20 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param e0 the argument of type {@code double}
+     * @param e1 the argument of type {@code double}
+     * @param e2 the argument of type {@code double}
+     * @param e3 the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.Create" target="_top">.NET documentation</a>
+     */
     public static Vector256_1 Create(double e0, double e1, double e2, double e3) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -556,6 +949,17 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param value the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.Create" target="_top">.NET documentation</a>
+     */
     public static Vector256_1 Create(double value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -571,6 +975,16 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateScalar.
+     *
+     * @param value the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.CreateScalar" target="_top">.NET documentation</a>
+     */
     public static Vector256_1 CreateScalar(double value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -586,6 +1000,19 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateScalarUnsafe.
+     *
+     * @param value the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.CreateScalarUnsafe" target="_top">.NET documentation</a>
+     */
     public static Vector256_1 CreateScalarUnsafe(double value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -601,6 +1028,19 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Floor.
+     *
+     * @param vector the argument of type {@code Vector256_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.Floor" target="_top">.NET documentation</a>
+     */
     public static Vector256_1 Floor(Vector256_1 vector) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -616,6 +1056,19 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member WidenLower.
+     *
+     * @param source the argument of type {@code Vector256_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.WidenLower" target="_top">.NET documentation</a>
+     */
     public static Vector256_1 WidenLower(Vector256_1 source) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -631,6 +1084,19 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member WidenUpper.
+     *
+     * @param source the argument of type {@code Vector256_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.WidenUpper" target="_top">.NET documentation</a>
+     */
     public static Vector256_1 WidenUpper(Vector256_1 source) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -646,6 +1112,20 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AsInt16.
+     *
+     * @param <T> the type of the generic argument T
+     * @param vector the argument of type {@code Vector256_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.AsInt16" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector256_1 AsInt16(Vector256_1 vector) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -661,6 +1141,31 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param e0 the argument of type {@code short}
+     * @param e1 the argument of type {@code short}
+     * @param e2 the argument of type {@code short}
+     * @param e3 the argument of type {@code short}
+     * @param e4 the argument of type {@code short}
+     * @param e5 the argument of type {@code short}
+     * @param e6 the argument of type {@code short}
+     * @param e7 the argument of type {@code short}
+     * @param e8 the argument of type {@code short}
+     * @param e9 the argument of type {@code short}
+     * @param e10 the argument of type {@code short}
+     * @param e11 the argument of type {@code short}
+     * @param e12 the argument of type {@code short}
+     * @param e13 the argument of type {@code short}
+     * @param e14 the argument of type {@code short}
+     * @param e15 the argument of type {@code short}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.Create" target="_top">.NET documentation</a>
+     */
     public static Vector256_1 Create(short e0, short e1, short e2, short e3, short e4, short e5, short e6, short e7, short e8, short e9, short e10, short e11, short e12, short e13, short e14, short e15) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -676,6 +1181,17 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param value the argument of type {@code short}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.Create" target="_top">.NET documentation</a>
+     */
     public static Vector256_1 Create(short value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -691,6 +1207,16 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateScalar.
+     *
+     * @param value the argument of type {@code short}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.CreateScalar" target="_top">.NET documentation</a>
+     */
     public static Vector256_1 CreateScalar(short value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -706,6 +1232,19 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateScalarUnsafe.
+     *
+     * @param value the argument of type {@code short}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.CreateScalarUnsafe" target="_top">.NET documentation</a>
+     */
     public static Vector256_1 CreateScalarUnsafe(short value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -721,6 +1260,18 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ShiftRightArithmetic.
+     *
+     * @param vector the argument of type {@code Vector256_1}
+     * @param shiftCount the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.ShiftRightArithmetic" target="_top">.NET documentation</a>
+     */
     public static Vector256_1 ShiftRightArithmetic(Vector256_1 vector, int shiftCount) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -736,6 +1287,20 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AsInt32.
+     *
+     * @param <T> the type of the generic argument T
+     * @param vector the argument of type {@code Vector256_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.AsInt32" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector256_1 AsInt32(Vector256_1 vector) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -751,6 +1316,19 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ConvertToInt32.
+     *
+     * @param vector the argument of type {@code Vector256_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.ConvertToInt32" target="_top">.NET documentation</a>
+     */
     public static Vector256_1 ConvertToInt32(Vector256_1 vector) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -766,6 +1344,23 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param e0 the argument of type {@code int}
+     * @param e1 the argument of type {@code int}
+     * @param e2 the argument of type {@code int}
+     * @param e3 the argument of type {@code int}
+     * @param e4 the argument of type {@code int}
+     * @param e5 the argument of type {@code int}
+     * @param e6 the argument of type {@code int}
+     * @param e7 the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.Create" target="_top">.NET documentation</a>
+     */
     public static Vector256_1 Create(int e0, int e1, int e2, int e3, int e4, int e5, int e6, int e7) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -781,6 +1376,17 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param value the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.Create" target="_top">.NET documentation</a>
+     */
     public static Vector256_1 Create(int value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -796,6 +1402,16 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateScalar.
+     *
+     * @param value the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.CreateScalar" target="_top">.NET documentation</a>
+     */
     public static Vector256_1 CreateScalar(int value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -811,6 +1427,19 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateScalarUnsafe.
+     *
+     * @param value the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.CreateScalarUnsafe" target="_top">.NET documentation</a>
+     */
     public static Vector256_1 CreateScalarUnsafe(int value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -826,6 +1455,20 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AsInt64.
+     *
+     * @param <T> the type of the generic argument T
+     * @param vector the argument of type {@code Vector256_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.AsInt64" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector256_1 AsInt64(Vector256_1 vector) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -841,6 +1484,19 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ConvertToInt64.
+     *
+     * @param vector the argument of type {@code Vector256_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.ConvertToInt64" target="_top">.NET documentation</a>
+     */
     public static Vector256_1 ConvertToInt64(Vector256_1 vector) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -856,6 +1512,20 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param e0 the argument of type {@code long}
+     * @param e1 the argument of type {@code long}
+     * @param e2 the argument of type {@code long}
+     * @param e3 the argument of type {@code long}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.Create" target="_top">.NET documentation</a>
+     */
     public static Vector256_1 Create(long e0, long e1, long e2, long e3) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -871,6 +1541,17 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param value the argument of type {@code long}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.Create" target="_top">.NET documentation</a>
+     */
     public static Vector256_1 Create(long value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -886,6 +1567,16 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateScalar.
+     *
+     * @param value the argument of type {@code long}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.CreateScalar" target="_top">.NET documentation</a>
+     */
     public static Vector256_1 CreateScalar(long value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -901,6 +1592,19 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateScalarUnsafe.
+     *
+     * @param value the argument of type {@code long}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.CreateScalarUnsafe" target="_top">.NET documentation</a>
+     */
     public static Vector256_1 CreateScalarUnsafe(long value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -916,6 +1620,20 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AsNInt.
+     *
+     * @param <T> the type of the generic argument T
+     * @param vector the argument of type {@code Vector256_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.AsNInt" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector256_1 AsNInt(Vector256_1 vector) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -931,6 +1649,20 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AsSByte.
+     *
+     * @param <T> the type of the generic argument T
+     * @param vector the argument of type {@code Vector256_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.AsSByte" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector256_1 AsSByte(Vector256_1 vector) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -946,6 +1678,47 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param e0 the argument of type {@code SByte}
+     * @param e1 the argument of type {@code SByte}
+     * @param e2 the argument of type {@code SByte}
+     * @param e3 the argument of type {@code SByte}
+     * @param e4 the argument of type {@code SByte}
+     * @param e5 the argument of type {@code SByte}
+     * @param e6 the argument of type {@code SByte}
+     * @param e7 the argument of type {@code SByte}
+     * @param e8 the argument of type {@code SByte}
+     * @param e9 the argument of type {@code SByte}
+     * @param e10 the argument of type {@code SByte}
+     * @param e11 the argument of type {@code SByte}
+     * @param e12 the argument of type {@code SByte}
+     * @param e13 the argument of type {@code SByte}
+     * @param e14 the argument of type {@code SByte}
+     * @param e15 the argument of type {@code SByte}
+     * @param e16 the argument of type {@code SByte}
+     * @param e17 the argument of type {@code SByte}
+     * @param e18 the argument of type {@code SByte}
+     * @param e19 the argument of type {@code SByte}
+     * @param e20 the argument of type {@code SByte}
+     * @param e21 the argument of type {@code SByte}
+     * @param e22 the argument of type {@code SByte}
+     * @param e23 the argument of type {@code SByte}
+     * @param e24 the argument of type {@code SByte}
+     * @param e25 the argument of type {@code SByte}
+     * @param e26 the argument of type {@code SByte}
+     * @param e27 the argument of type {@code SByte}
+     * @param e28 the argument of type {@code SByte}
+     * @param e29 the argument of type {@code SByte}
+     * @param e30 the argument of type {@code SByte}
+     * @param e31 the argument of type {@code SByte}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.Create" target="_top">.NET documentation</a>
+     */
     public static Vector256_1 Create(SByte e0, SByte e1, SByte e2, SByte e3, SByte e4, SByte e5, SByte e6, SByte e7, SByte e8, SByte e9, SByte e10, SByte e11, SByte e12, SByte e13, SByte e14, SByte e15, SByte e16, SByte e17, SByte e18, SByte e19, SByte e20, SByte e21, SByte e22, SByte e23, SByte e24, SByte e25, SByte e26, SByte e27, SByte e28, SByte e29, SByte e30, SByte e31) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -961,6 +1734,17 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param value the argument of type {@code SByte}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.Create" target="_top">.NET documentation</a>
+     */
     public static Vector256_1 Create(SByte value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -976,6 +1760,16 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateScalar.
+     *
+     * @param value the argument of type {@code SByte}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.CreateScalar" target="_top">.NET documentation</a>
+     */
     public static Vector256_1 CreateScalar(SByte value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -991,6 +1785,19 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateScalarUnsafe.
+     *
+     * @param value the argument of type {@code SByte}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.CreateScalarUnsafe" target="_top">.NET documentation</a>
+     */
     public static Vector256_1 CreateScalarUnsafe(SByte value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1006,6 +1813,20 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AsSingle.
+     *
+     * @param <T> the type of the generic argument T
+     * @param vector the argument of type {@code Vector256_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.AsSingle" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector256_1 AsSingle(Vector256_1 vector) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1021,6 +1842,19 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ConvertToSingle.
+     *
+     * @param vector the argument of type {@code Vector256_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.ConvertToSingle" target="_top">.NET documentation</a>
+     */
     public static Vector256_1 ConvertToSingle(Vector256_1 vector) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1036,6 +1870,23 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param e0 the argument of type {@code Single}
+     * @param e1 the argument of type {@code Single}
+     * @param e2 the argument of type {@code Single}
+     * @param e3 the argument of type {@code Single}
+     * @param e4 the argument of type {@code Single}
+     * @param e5 the argument of type {@code Single}
+     * @param e6 the argument of type {@code Single}
+     * @param e7 the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.Create" target="_top">.NET documentation</a>
+     */
     public static Vector256_1 Create(Single e0, Single e1, Single e2, Single e3, Single e4, Single e5, Single e6, Single e7) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1051,6 +1902,17 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param value the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.Create" target="_top">.NET documentation</a>
+     */
     public static Vector256_1 Create(Single value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1066,6 +1928,16 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateScalar.
+     *
+     * @param value the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.CreateScalar" target="_top">.NET documentation</a>
+     */
     public static Vector256_1 CreateScalar(Single value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1081,6 +1953,19 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateScalarUnsafe.
+     *
+     * @param value the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.CreateScalarUnsafe" target="_top">.NET documentation</a>
+     */
     public static Vector256_1 CreateScalarUnsafe(Single value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1096,6 +1981,20 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AsUInt16.
+     *
+     * @param <T> the type of the generic argument T
+     * @param vector the argument of type {@code Vector256_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.AsUInt16" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector256_1 AsUInt16(Vector256_1 vector) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1111,6 +2010,31 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param e0 the argument of type {@code UInt16}
+     * @param e1 the argument of type {@code UInt16}
+     * @param e2 the argument of type {@code UInt16}
+     * @param e3 the argument of type {@code UInt16}
+     * @param e4 the argument of type {@code UInt16}
+     * @param e5 the argument of type {@code UInt16}
+     * @param e6 the argument of type {@code UInt16}
+     * @param e7 the argument of type {@code UInt16}
+     * @param e8 the argument of type {@code UInt16}
+     * @param e9 the argument of type {@code UInt16}
+     * @param e10 the argument of type {@code UInt16}
+     * @param e11 the argument of type {@code UInt16}
+     * @param e12 the argument of type {@code UInt16}
+     * @param e13 the argument of type {@code UInt16}
+     * @param e14 the argument of type {@code UInt16}
+     * @param e15 the argument of type {@code UInt16}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.Create" target="_top">.NET documentation</a>
+     */
     public static Vector256_1 Create(UInt16 e0, UInt16 e1, UInt16 e2, UInt16 e3, UInt16 e4, UInt16 e5, UInt16 e6, UInt16 e7, UInt16 e8, UInt16 e9, UInt16 e10, UInt16 e11, UInt16 e12, UInt16 e13, UInt16 e14, UInt16 e15) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1126,6 +2050,17 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param value the argument of type {@code UInt16}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.Create" target="_top">.NET documentation</a>
+     */
     public static Vector256_1 Create(UInt16 value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1141,6 +2076,16 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateScalar.
+     *
+     * @param value the argument of type {@code UInt16}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.CreateScalar" target="_top">.NET documentation</a>
+     */
     public static Vector256_1 CreateScalar(UInt16 value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1156,6 +2101,19 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateScalarUnsafe.
+     *
+     * @param value the argument of type {@code UInt16}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.CreateScalarUnsafe" target="_top">.NET documentation</a>
+     */
     public static Vector256_1 CreateScalarUnsafe(UInt16 value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1171,6 +2129,20 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AsUInt32.
+     *
+     * @param <T> the type of the generic argument T
+     * @param vector the argument of type {@code Vector256_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.AsUInt32" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector256_1 AsUInt32(Vector256_1 vector) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1186,6 +2158,19 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ConvertToUInt32.
+     *
+     * @param vector the argument of type {@code Vector256_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.ConvertToUInt32" target="_top">.NET documentation</a>
+     */
     public static Vector256_1 ConvertToUInt32(Vector256_1 vector) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1201,6 +2186,23 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param e0 the argument of type {@code UInt32}
+     * @param e1 the argument of type {@code UInt32}
+     * @param e2 the argument of type {@code UInt32}
+     * @param e3 the argument of type {@code UInt32}
+     * @param e4 the argument of type {@code UInt32}
+     * @param e5 the argument of type {@code UInt32}
+     * @param e6 the argument of type {@code UInt32}
+     * @param e7 the argument of type {@code UInt32}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.Create" target="_top">.NET documentation</a>
+     */
     public static Vector256_1 Create(UInt32 e0, UInt32 e1, UInt32 e2, UInt32 e3, UInt32 e4, UInt32 e5, UInt32 e6, UInt32 e7) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1216,6 +2218,17 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param value the argument of type {@code UInt32}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.Create" target="_top">.NET documentation</a>
+     */
     public static Vector256_1 Create(UInt32 value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1231,6 +2244,16 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateScalar.
+     *
+     * @param value the argument of type {@code UInt32}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.CreateScalar" target="_top">.NET documentation</a>
+     */
     public static Vector256_1 CreateScalar(UInt32 value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1246,6 +2269,19 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateScalarUnsafe.
+     *
+     * @param value the argument of type {@code UInt32}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.CreateScalarUnsafe" target="_top">.NET documentation</a>
+     */
     public static Vector256_1 CreateScalarUnsafe(UInt32 value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1261,6 +2297,20 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AsUInt64.
+     *
+     * @param <T> the type of the generic argument T
+     * @param vector the argument of type {@code Vector256_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.AsUInt64" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector256_1 AsUInt64(Vector256_1 vector) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1276,6 +2326,19 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ConvertToUInt64.
+     *
+     * @param vector the argument of type {@code Vector256_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.ConvertToUInt64" target="_top">.NET documentation</a>
+     */
     public static Vector256_1 ConvertToUInt64(Vector256_1 vector) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1291,6 +2354,20 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param e0 the argument of type {@code UInt64}
+     * @param e1 the argument of type {@code UInt64}
+     * @param e2 the argument of type {@code UInt64}
+     * @param e3 the argument of type {@code UInt64}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.Create" target="_top">.NET documentation</a>
+     */
     public static Vector256_1 Create(UInt64 e0, UInt64 e1, UInt64 e2, UInt64 e3) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1306,6 +2383,17 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param value the argument of type {@code UInt64}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.Create" target="_top">.NET documentation</a>
+     */
     public static Vector256_1 Create(UInt64 value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1321,6 +2409,16 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateScalar.
+     *
+     * @param value the argument of type {@code UInt64}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.CreateScalar" target="_top">.NET documentation</a>
+     */
     public static Vector256_1 CreateScalar(UInt64 value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1336,6 +2434,19 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateScalarUnsafe.
+     *
+     * @param value the argument of type {@code UInt64}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.CreateScalarUnsafe" target="_top">.NET documentation</a>
+     */
     public static Vector256_1 CreateScalarUnsafe(UInt64 value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1351,6 +2462,20 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AsNUInt.
+     *
+     * @param <T> the type of the generic argument T
+     * @param vector the argument of type {@code Vector256_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.AsNUInt" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector256_1 AsNUInt(Vector256_1 vector) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1366,6 +2491,21 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Abs.
+     *
+     * @param <T> the type of the generic argument T
+     * @param vector the argument of type {@code Vector256_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.Abs" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector256_1 Abs(Vector256_1 vector) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1381,6 +2521,19 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param <T> the type of the generic argument T
+     * @param left the argument of type {@code Vector256_1}
+     * @param right the argument of type {@code Vector256_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.Add" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector256_1 Add(Vector256_1 left, Vector256_1 right) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1396,6 +2549,19 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AndNot.
+     *
+     * @param <T> the type of the generic argument T
+     * @param left the argument of type {@code Vector256_1}
+     * @param right the argument of type {@code Vector256_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.AndNot" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector256_1 AndNot(Vector256_1 left, Vector256_1 right) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1411,6 +2577,23 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AsVector256.
+     *
+     * @param <T> the type of the generic argument T
+     * @param value the argument of type {@code Vector_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.AsVector256" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector256_1 AsVector256(Vector_1 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1426,6 +2609,18 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member BitwiseAnd.
+     *
+     * @param <T> the type of the generic argument T
+     * @param left the argument of type {@code Vector256_1}
+     * @param right the argument of type {@code Vector256_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.BitwiseAnd" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector256_1 BitwiseAnd(Vector256_1 left, Vector256_1 right) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1441,6 +2636,18 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member BitwiseOr.
+     *
+     * @param <T> the type of the generic argument T
+     * @param left the argument of type {@code Vector256_1}
+     * @param right the argument of type {@code Vector256_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.BitwiseOr" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector256_1 BitwiseOr(Vector256_1 left, Vector256_1 right) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1456,6 +2663,20 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ConditionalSelect.
+     *
+     * @param <T> the type of the generic argument T
+     * @param condition the argument of type {@code Vector256_1}
+     * @param left the argument of type {@code Vector256_1}
+     * @param right the argument of type {@code Vector256_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.ConditionalSelect" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector256_1 ConditionalSelect(Vector256_1 condition, Vector256_1 left, Vector256_1 right) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1471,6 +2692,20 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param <T> the type of the generic argument T
+     * @param value the argument of type {@code T}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.Create" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector256_1 Create(T value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1486,6 +2721,19 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param <T> the type of the generic argument T
+     * @param values the argument of type {@code T[]}
+     * @param index the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.Create" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector256_1 Create(T[] values, int index) throws Throwable, system.NotSupportedException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1501,6 +2749,18 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param <T> the type of the generic argument T
+     * @param values the argument of type {@code T[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.Create" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector256_1 Create(T[] values) throws Throwable, system.NotSupportedException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1516,6 +2776,17 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateScalar.
+     *
+     * @param <T> the type of the generic argument T
+     * @param value the argument of type {@code T}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.CreateScalar" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector256_1 CreateScalar(T value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1531,6 +2802,23 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateScalarUnsafe.
+     *
+     * @param <T> the type of the generic argument T
+     * @param value the argument of type {@code T}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.CreateScalarUnsafe" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector256_1 CreateScalarUnsafe(T value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1546,6 +2834,19 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Divide.
+     *
+     * @param <T> the type of the generic argument T
+     * @param left the argument of type {@code Vector256_1}
+     * @param right the argument of type {@code Vector256_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.Divide" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector256_1 Divide(Vector256_1 left, Vector256_1 right) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1561,6 +2862,19 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Divide.
+     *
+     * @param <T> the type of the generic argument T
+     * @param left the argument of type {@code Vector256_1}
+     * @param right the argument of type {@code T}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.Divide" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector256_1 Divide(Vector256_1 left, T right) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1576,6 +2890,21 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Equals.
+     *
+     * @param <T> the type of the generic argument T
+     * @param left the argument of type {@code Vector256_1}
+     * @param right the argument of type {@code Vector256_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.Equals" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector256_1 Equals(Vector256_1 left, Vector256_1 right) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1591,6 +2920,21 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GreaterThan.
+     *
+     * @param <T> the type of the generic argument T
+     * @param left the argument of type {@code Vector256_1}
+     * @param right the argument of type {@code Vector256_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.GreaterThan" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector256_1 GreaterThan(Vector256_1 left, Vector256_1 right) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1606,6 +2950,21 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GreaterThanOrEqual.
+     *
+     * @param <T> the type of the generic argument T
+     * @param left the argument of type {@code Vector256_1}
+     * @param right the argument of type {@code Vector256_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.GreaterThanOrEqual" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector256_1 GreaterThanOrEqual(Vector256_1 left, Vector256_1 right) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1621,6 +2980,21 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LessThan.
+     *
+     * @param <T> the type of the generic argument T
+     * @param left the argument of type {@code Vector256_1}
+     * @param right the argument of type {@code Vector256_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.LessThan" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector256_1 LessThan(Vector256_1 left, Vector256_1 right) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1636,6 +3010,21 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LessThanOrEqual.
+     *
+     * @param <T> the type of the generic argument T
+     * @param left the argument of type {@code Vector256_1}
+     * @param right the argument of type {@code Vector256_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.LessThanOrEqual" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector256_1 LessThanOrEqual(Vector256_1 left, Vector256_1 right) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1651,6 +3040,23 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LoadUnsafe.
+     *
+     * @param <T> the type of the generic argument T
+     * @param source the argument of type {@code JCORefOut<T>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.LoadUnsafe" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector256_1 LoadUnsafe(JCORefOut<T> source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1666,6 +3072,21 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Max.
+     *
+     * @param <T> the type of the generic argument T
+     * @param left the argument of type {@code Vector256_1}
+     * @param right the argument of type {@code Vector256_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.Max" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector256_1 Max(Vector256_1 left, Vector256_1 right) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1681,6 +3102,21 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Min.
+     *
+     * @param <T> the type of the generic argument T
+     * @param left the argument of type {@code Vector256_1}
+     * @param right the argument of type {@code Vector256_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.Min" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector256_1 Min(Vector256_1 left, Vector256_1 right) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1696,6 +3132,19 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Multiply.
+     *
+     * @param <T> the type of the generic argument T
+     * @param left the argument of type {@code Vector256_1}
+     * @param right the argument of type {@code Vector256_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.Multiply" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector256_1 Multiply(Vector256_1 left, Vector256_1 right) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1711,6 +3160,19 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Multiply.
+     *
+     * @param <T> the type of the generic argument T
+     * @param left the argument of type {@code Vector256_1}
+     * @param right the argument of type {@code T}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.Multiply" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector256_1 Multiply(Vector256_1 left, T right) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1726,6 +3188,18 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Multiply.
+     *
+     * @param <T> the type of the generic argument T
+     * @param left the argument of type {@code T}
+     * @param right the argument of type {@code Vector256_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.Multiply" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector256_1 Multiply(T left, Vector256_1 right) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1741,6 +3215,17 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Negate.
+     *
+     * @param <T> the type of the generic argument T
+     * @param vector the argument of type {@code Vector256_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.Negate" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector256_1 Negate(Vector256_1 vector) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1756,6 +3241,17 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member OnesComplement.
+     *
+     * @param <T> the type of the generic argument T
+     * @param vector the argument of type {@code Vector256_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.OnesComplement" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector256_1 OnesComplement(Vector256_1 vector) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1771,6 +3267,20 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Sqrt.
+     *
+     * @param <T> the type of the generic argument T
+     * @param vector the argument of type {@code Vector256_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.Sqrt" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector256_1 Sqrt(Vector256_1 vector) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1786,6 +3296,19 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Subtract.
+     *
+     * @param <T> the type of the generic argument T
+     * @param left the argument of type {@code Vector256_1}
+     * @param right the argument of type {@code Vector256_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.Subtract" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector256_1 Subtract(Vector256_1 left, Vector256_1 right) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1801,6 +3324,20 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member WithElement.
+     *
+     * @param <T> the type of the generic argument T
+     * @param vector the argument of type {@code Vector256_1}
+     * @param index the argument of type {@code int}
+     * @param value the argument of type {@code T}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.WithElement" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector256_1 WithElement(Vector256_1 vector, int index, T value) throws Throwable, system.NotSupportedException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1816,6 +3353,24 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member WithLower.
+     *
+     * @param <T> the type of the generic argument T
+     * @param vector the argument of type {@code Vector256_1}
+     * @param value the argument of type {@code Vector128_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.WithLower" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector256_1 WithLower(Vector256_1 vector, Vector128_1 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1831,6 +3386,24 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member WithUpper.
+     *
+     * @param <T> the type of the generic argument T
+     * @param vector the argument of type {@code Vector256_1}
+     * @param value the argument of type {@code Vector128_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.WithUpper" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector256_1 WithUpper(Vector256_1 vector, Vector128_1 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1846,6 +3419,18 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Xor.
+     *
+     * @param <T> the type of the generic argument T
+     * @param left the argument of type {@code Vector256_1}
+     * @param right the argument of type {@code Vector256_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.Xor" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector256_1 Xor(Vector256_1 left, Vector256_1 right) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1861,6 +3446,24 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member As.
+     *
+     * @param <TFrom> the type of the generic argument TFrom
+     * @param <TTo> the type of the generic argument TTo
+     * @param vector the argument of type {@code Vector256_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.As" target="_top">.NET documentation</a>
+     */
     public static <TFrom extends IJCOBridgeReflected, TTo extends IJCOBridgeReflected> Vector256_1 As(Vector256_1 vector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1876,6 +3479,23 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToVector512.
+     *
+     * @param <T> the type of the generic argument T
+     * @param vector the argument of type {@code Vector256_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.ToVector512" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector512_1 ToVector512(Vector256_1 vector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1891,6 +3511,23 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToVector512Unsafe.
+     *
+     * @param <T> the type of the generic argument T
+     * @param vector the argument of type {@code Vector256_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.ToVector512Unsafe" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> Vector512_1 ToVector512Unsafe(Vector256_1 vector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1906,6 +3543,17 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Widen.
+     *
+     * @param source the argument of type {@code Vector256_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.Widen" target="_top">.NET documentation</a>
+     */
     public static ValueTuple_2 Widen(Vector256_1 source) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1921,6 +3569,18 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ExtractMostSignificantBits.
+     *
+     * @param <T> the type of the generic argument T
+     * @param vector the argument of type {@code Vector256_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.ExtractMostSignificantBits" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> UInt32 ExtractMostSignificantBits(Vector256_1 vector) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1936,6 +3596,24 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CopyTo.
+     *
+     * @param <T> the type of the generic argument T
+     * @param vector the argument of type {@code Vector256_1}
+     * @param destination the argument of type {@code T[]}
+     * @param startIndex the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.CopyTo" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> void CopyTo(Vector256_1 vector, T[] destination, int startIndex) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1946,6 +3624,18 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CopyTo.
+     *
+     * @param <T> the type of the generic argument T
+     * @param vector the argument of type {@code Vector256_1}
+     * @param destination the argument of type {@code T[]}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.CopyTo" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> void CopyTo(Vector256_1 vector, T[] destination) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1956,6 +3646,23 @@ public class Vector256 extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member StoreUnsafe.
+     *
+     * @param <T> the type of the generic argument T
+     * @param source the argument of type {@code Vector256_1}
+     * @param destination the argument of type {@code JCORefOut<T>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.StoreUnsafe" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> void StoreUnsafe(Vector256_1 source, JCORefOut<T> destination) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1970,6 +3677,13 @@ public class Vector256 extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsHardwareAccelerated.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Intrinsics.Vector256.IsHardwareAccelerated" target="_top">.NET documentation</a>
+     */
     public static boolean getIsHardwareAccelerated() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

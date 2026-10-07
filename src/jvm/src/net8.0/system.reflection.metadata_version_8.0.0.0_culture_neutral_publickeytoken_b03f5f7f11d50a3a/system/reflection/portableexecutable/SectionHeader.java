@@ -101,7 +101,10 @@ public class SectionHeader extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SectionHeader(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -160,6 +163,13 @@ public class SectionHeader extends system.ValueType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property PointerToLineNumbers.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.SectionHeader.PointerToLineNumbers" target="_top">.NET documentation</a>
+     */
     public int getPointerToLineNumbers() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +210,13 @@ public class SectionHeader extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PointerToRawData.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.SectionHeader.PointerToRawData" target="_top">.NET documentation</a>
+     */
     public int getPointerToRawData() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -240,6 +257,13 @@ public class SectionHeader extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PointerToRelocations.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.SectionHeader.PointerToRelocations" target="_top">.NET documentation</a>
+     */
     public int getPointerToRelocations() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -280,6 +304,13 @@ public class SectionHeader extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SizeOfRawData.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.SectionHeader.SizeOfRawData" target="_top">.NET documentation</a>
+     */
     public int getSizeOfRawData() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -320,6 +351,13 @@ public class SectionHeader extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property VirtualAddress.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.SectionHeader.VirtualAddress" target="_top">.NET documentation</a>
+     */
     public int getVirtualAddress() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -360,6 +398,13 @@ public class SectionHeader extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property VirtualSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.SectionHeader.VirtualSize" target="_top">.NET documentation</a>
+     */
     public int getVirtualSize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -400,6 +445,13 @@ public class SectionHeader extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SectionCharacteristics.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.SectionHeader.SectionCharacteristics" target="_top">.NET documentation</a>
+     */
     public SectionCharacteristics getSectionCharacteristics() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -415,6 +467,13 @@ public class SectionHeader extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.SectionHeader.Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -429,6 +488,13 @@ public class SectionHeader extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NumberOfLineNumbers.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.SectionHeader.NumberOfLineNumbers" target="_top">.NET documentation</a>
+     */
     public UInt16 getNumberOfLineNumbers() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -444,6 +510,13 @@ public class SectionHeader extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NumberOfRelocations.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.SectionHeader.NumberOfRelocations" target="_top">.NET documentation</a>
+     */
     public UInt16 getNumberOfRelocations() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -99,7 +99,10 @@ public class RegistrationConfig extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public RegistrationConfig(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class RegistrationConfig extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.RegistrationConfig.-ctor" target="_top">.NET documentation</a>
+     */
     public RegistrationConfig() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +173,13 @@ public class RegistrationConfig extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property InstallationFlags.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.RegistrationConfig.InstallationFlags" target="_top">.NET documentation</a>
+     */
     public InstallationFlags getInstallationFlags() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -179,6 +195,13 @@ public class RegistrationConfig extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property InstallationFlags.
+     *
+     * @param InstallationFlags the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.RegistrationConfig.InstallationFlags" target="_top">.NET documentation</a>
+     */
     public void setInstallationFlags(InstallationFlags InstallationFlags) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +212,13 @@ public class RegistrationConfig extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Application.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.RegistrationConfig.Application" target="_top">.NET documentation</a>
+     */
     public java.lang.String getApplication() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +233,13 @@ public class RegistrationConfig extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Application.
+     *
+     * @param Application the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.RegistrationConfig.Application" target="_top">.NET documentation</a>
+     */
     public void setApplication(java.lang.String Application) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -213,6 +250,13 @@ public class RegistrationConfig extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ApplicationRootDirectory.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.RegistrationConfig.ApplicationRootDirectory" target="_top">.NET documentation</a>
+     */
     public java.lang.String getApplicationRootDirectory() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -227,6 +271,13 @@ public class RegistrationConfig extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ApplicationRootDirectory.
+     *
+     * @param ApplicationRootDirectory the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.RegistrationConfig.ApplicationRootDirectory" target="_top">.NET documentation</a>
+     */
     public void setApplicationRootDirectory(java.lang.String ApplicationRootDirectory) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -237,6 +288,13 @@ public class RegistrationConfig extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AssemblyFile.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.RegistrationConfig.AssemblyFile" target="_top">.NET documentation</a>
+     */
     public java.lang.String getAssemblyFile() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -251,6 +309,13 @@ public class RegistrationConfig extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AssemblyFile.
+     *
+     * @param AssemblyFile the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.RegistrationConfig.AssemblyFile" target="_top">.NET documentation</a>
+     */
     public void setAssemblyFile(java.lang.String AssemblyFile) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -261,6 +326,13 @@ public class RegistrationConfig extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Partition.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.RegistrationConfig.Partition" target="_top">.NET documentation</a>
+     */
     public java.lang.String getPartition() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -275,6 +347,13 @@ public class RegistrationConfig extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Partition.
+     *
+     * @param Partition the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.RegistrationConfig.Partition" target="_top">.NET documentation</a>
+     */
     public void setPartition(java.lang.String Partition) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -285,6 +364,13 @@ public class RegistrationConfig extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TypeLibrary.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.RegistrationConfig.TypeLibrary" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTypeLibrary() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -299,6 +385,13 @@ public class RegistrationConfig extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TypeLibrary.
+     *
+     * @param TypeLibrary the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.RegistrationConfig.TypeLibrary" target="_top">.NET documentation</a>
+     */
     public void setTypeLibrary(java.lang.String TypeLibrary) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

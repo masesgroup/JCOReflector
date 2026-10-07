@@ -100,7 +100,10 @@ public class FormViewModeEventArgs extends system.componentmodel.CancelEventArgs
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public FormViewModeEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,14 @@ public class FormViewModeEventArgs extends system.componentmodel.CancelEventArgs
     public FormViewModeEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param mode the argument of type {@code FormViewMode}
+     * @param cancelingEdit the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.FormViewModeEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public FormViewModeEventArgs(FormViewMode mode, boolean cancelingEdit) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +180,13 @@ public class FormViewModeEventArgs extends system.componentmodel.CancelEventArgs
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CancelingEdit.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.FormViewModeEventArgs.CancelingEdit" target="_top">.NET documentation</a>
+     */
     public boolean getCancelingEdit() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +201,13 @@ public class FormViewModeEventArgs extends system.componentmodel.CancelEventArgs
         }
     }
 
+    /**
+     * Gets the value of the .NET property NewMode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.FormViewModeEventArgs.NewMode" target="_top">.NET documentation</a>
+     */
     public FormViewMode getNewMode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +223,13 @@ public class FormViewModeEventArgs extends system.componentmodel.CancelEventArgs
         }
     }
 
+    /**
+     * Sets the value of the .NET property NewMode.
+     *
+     * @param NewMode the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.FormViewModeEventArgs.NewMode" target="_top">.NET documentation</a>
+     */
     public void setNewMode(FormViewMode NewMode) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

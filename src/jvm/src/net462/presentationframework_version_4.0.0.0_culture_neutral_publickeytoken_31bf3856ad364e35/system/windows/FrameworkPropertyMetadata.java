@@ -103,7 +103,10 @@ public class FrameworkPropertyMetadata extends system.windows.UIPropertyMetadata
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public FrameworkPropertyMetadata(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,12 @@ public class FrameworkPropertyMetadata extends system.windows.UIPropertyMetadata
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.FrameworkPropertyMetadata.-ctor" target="_top">.NET documentation</a>
+     */
     public FrameworkPropertyMetadata() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -160,6 +169,19 @@ public class FrameworkPropertyMetadata extends system.windows.UIPropertyMetadata
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param defaultValue the argument of type {@code NetObject}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.FrameworkPropertyMetadata.-ctor" target="_top">.NET documentation</a>
+     */
     public FrameworkPropertyMetadata(NetObject defaultValue) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +192,20 @@ public class FrameworkPropertyMetadata extends system.windows.UIPropertyMetadata
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param defaultValue the argument of type {@code NetObject}
+     * @param flags the argument of type {@code FrameworkPropertyMetadataOptions}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.FrameworkPropertyMetadata.-ctor" target="_top">.NET documentation</a>
+     */
     public FrameworkPropertyMetadata(NetObject defaultValue, FrameworkPropertyMetadataOptions flags) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
@@ -180,6 +216,21 @@ public class FrameworkPropertyMetadata extends system.windows.UIPropertyMetadata
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param defaultValue the argument of type {@code NetObject}
+     * @param flags the argument of type {@code FrameworkPropertyMetadataOptions}
+     * @param propertyChangedCallback the argument of type {@code PropertyChangedCallback}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.FrameworkPropertyMetadata.-ctor" target="_top">.NET documentation</a>
+     */
     public FrameworkPropertyMetadata(NetObject defaultValue, FrameworkPropertyMetadataOptions flags, PropertyChangedCallback propertyChangedCallback) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
@@ -190,6 +241,22 @@ public class FrameworkPropertyMetadata extends system.windows.UIPropertyMetadata
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param defaultValue the argument of type {@code NetObject}
+     * @param flags the argument of type {@code FrameworkPropertyMetadataOptions}
+     * @param propertyChangedCallback the argument of type {@code PropertyChangedCallback}
+     * @param coerceValueCallback the argument of type {@code CoerceValueCallback}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.FrameworkPropertyMetadata.-ctor" target="_top">.NET documentation</a>
+     */
     public FrameworkPropertyMetadata(NetObject defaultValue, FrameworkPropertyMetadataOptions flags, PropertyChangedCallback propertyChangedCallback, CoerceValueCallback coerceValueCallback) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
@@ -200,6 +267,23 @@ public class FrameworkPropertyMetadata extends system.windows.UIPropertyMetadata
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param defaultValue the argument of type {@code NetObject}
+     * @param flags the argument of type {@code FrameworkPropertyMetadataOptions}
+     * @param propertyChangedCallback the argument of type {@code PropertyChangedCallback}
+     * @param coerceValueCallback the argument of type {@code CoerceValueCallback}
+     * @param isAnimationProhibited the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.FrameworkPropertyMetadata.-ctor" target="_top">.NET documentation</a>
+     */
     public FrameworkPropertyMetadata(NetObject defaultValue, FrameworkPropertyMetadataOptions flags, PropertyChangedCallback propertyChangedCallback, CoerceValueCallback coerceValueCallback, boolean isAnimationProhibited) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
@@ -210,6 +294,28 @@ public class FrameworkPropertyMetadata extends system.windows.UIPropertyMetadata
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param defaultValue the argument of type {@code NetObject}
+     * @param flags the argument of type {@code FrameworkPropertyMetadataOptions}
+     * @param propertyChangedCallback the argument of type {@code PropertyChangedCallback}
+     * @param coerceValueCallback the argument of type {@code CoerceValueCallback}
+     * @param isAnimationProhibited the argument of type {@code boolean}
+     * @param defaultUpdateSourceTrigger the argument of type {@code UpdateSourceTrigger}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.FrameworkPropertyMetadata.-ctor" target="_top">.NET documentation</a>
+     */
     public FrameworkPropertyMetadata(NetObject defaultValue, FrameworkPropertyMetadataOptions flags, PropertyChangedCallback propertyChangedCallback, CoerceValueCallback coerceValueCallback, boolean isAnimationProhibited, UpdateSourceTrigger defaultUpdateSourceTrigger) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.componentmodel.InvalidEnumArgumentException {
         try {
             // add reference to assemblyName.dll file
@@ -220,6 +326,20 @@ public class FrameworkPropertyMetadata extends system.windows.UIPropertyMetadata
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param defaultValue the argument of type {@code NetObject}
+     * @param propertyChangedCallback the argument of type {@code PropertyChangedCallback}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.FrameworkPropertyMetadata.-ctor" target="_top">.NET documentation</a>
+     */
     public FrameworkPropertyMetadata(NetObject defaultValue, PropertyChangedCallback propertyChangedCallback) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
@@ -230,6 +350,21 @@ public class FrameworkPropertyMetadata extends system.windows.UIPropertyMetadata
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param defaultValue the argument of type {@code NetObject}
+     * @param propertyChangedCallback the argument of type {@code PropertyChangedCallback}
+     * @param coerceValueCallback the argument of type {@code CoerceValueCallback}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.FrameworkPropertyMetadata.-ctor" target="_top">.NET documentation</a>
+     */
     public FrameworkPropertyMetadata(NetObject defaultValue, PropertyChangedCallback propertyChangedCallback, CoerceValueCallback coerceValueCallback) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
@@ -240,6 +375,19 @@ public class FrameworkPropertyMetadata extends system.windows.UIPropertyMetadata
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param propertyChangedCallback the argument of type {@code PropertyChangedCallback}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.FrameworkPropertyMetadata.-ctor" target="_top">.NET documentation</a>
+     */
     public FrameworkPropertyMetadata(PropertyChangedCallback propertyChangedCallback) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
@@ -250,6 +398,20 @@ public class FrameworkPropertyMetadata extends system.windows.UIPropertyMetadata
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param propertyChangedCallback the argument of type {@code PropertyChangedCallback}
+     * @param coerceValueCallback the argument of type {@code CoerceValueCallback}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.FrameworkPropertyMetadata.-ctor" target="_top">.NET documentation</a>
+     */
     public FrameworkPropertyMetadata(PropertyChangedCallback propertyChangedCallback, CoerceValueCallback coerceValueCallback) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
@@ -268,6 +430,13 @@ public class FrameworkPropertyMetadata extends system.windows.UIPropertyMetadata
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AffectsArrange.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.FrameworkPropertyMetadata.AffectsArrange" target="_top">.NET documentation</a>
+     */
     public boolean getAffectsArrange() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -282,6 +451,24 @@ public class FrameworkPropertyMetadata extends system.windows.UIPropertyMetadata
         }
     }
 
+    /**
+     * Sets the value of the .NET property AffectsArrange.
+     *
+     * @param AffectsArrange the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.FrameworkPropertyMetadata.AffectsArrange" target="_top">.NET documentation</a>
+     */
     public void setAffectsArrange(boolean AffectsArrange) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -292,6 +479,13 @@ public class FrameworkPropertyMetadata extends system.windows.UIPropertyMetadata
         }
     }
 
+    /**
+     * Gets the value of the .NET property AffectsMeasure.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.FrameworkPropertyMetadata.AffectsMeasure" target="_top">.NET documentation</a>
+     */
     public boolean getAffectsMeasure() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -306,6 +500,24 @@ public class FrameworkPropertyMetadata extends system.windows.UIPropertyMetadata
         }
     }
 
+    /**
+     * Sets the value of the .NET property AffectsMeasure.
+     *
+     * @param AffectsMeasure the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.FrameworkPropertyMetadata.AffectsMeasure" target="_top">.NET documentation</a>
+     */
     public void setAffectsMeasure(boolean AffectsMeasure) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -316,6 +528,13 @@ public class FrameworkPropertyMetadata extends system.windows.UIPropertyMetadata
         }
     }
 
+    /**
+     * Gets the value of the .NET property AffectsParentArrange.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.FrameworkPropertyMetadata.AffectsParentArrange" target="_top">.NET documentation</a>
+     */
     public boolean getAffectsParentArrange() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -330,6 +549,24 @@ public class FrameworkPropertyMetadata extends system.windows.UIPropertyMetadata
         }
     }
 
+    /**
+     * Sets the value of the .NET property AffectsParentArrange.
+     *
+     * @param AffectsParentArrange the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.FrameworkPropertyMetadata.AffectsParentArrange" target="_top">.NET documentation</a>
+     */
     public void setAffectsParentArrange(boolean AffectsParentArrange) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -340,6 +577,13 @@ public class FrameworkPropertyMetadata extends system.windows.UIPropertyMetadata
         }
     }
 
+    /**
+     * Gets the value of the .NET property AffectsParentMeasure.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.FrameworkPropertyMetadata.AffectsParentMeasure" target="_top">.NET documentation</a>
+     */
     public boolean getAffectsParentMeasure() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -354,6 +598,24 @@ public class FrameworkPropertyMetadata extends system.windows.UIPropertyMetadata
         }
     }
 
+    /**
+     * Sets the value of the .NET property AffectsParentMeasure.
+     *
+     * @param AffectsParentMeasure the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.FrameworkPropertyMetadata.AffectsParentMeasure" target="_top">.NET documentation</a>
+     */
     public void setAffectsParentMeasure(boolean AffectsParentMeasure) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -364,6 +626,13 @@ public class FrameworkPropertyMetadata extends system.windows.UIPropertyMetadata
         }
     }
 
+    /**
+     * Gets the value of the .NET property AffectsRender.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.FrameworkPropertyMetadata.AffectsRender" target="_top">.NET documentation</a>
+     */
     public boolean getAffectsRender() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -378,6 +647,24 @@ public class FrameworkPropertyMetadata extends system.windows.UIPropertyMetadata
         }
     }
 
+    /**
+     * Sets the value of the .NET property AffectsRender.
+     *
+     * @param AffectsRender the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.FrameworkPropertyMetadata.AffectsRender" target="_top">.NET documentation</a>
+     */
     public void setAffectsRender(boolean AffectsRender) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -388,6 +675,13 @@ public class FrameworkPropertyMetadata extends system.windows.UIPropertyMetadata
         }
     }
 
+    /**
+     * Gets the value of the .NET property BindsTwoWayByDefault.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault" target="_top">.NET documentation</a>
+     */
     public boolean getBindsTwoWayByDefault() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -402,6 +696,24 @@ public class FrameworkPropertyMetadata extends system.windows.UIPropertyMetadata
         }
     }
 
+    /**
+     * Sets the value of the .NET property BindsTwoWayByDefault.
+     *
+     * @param BindsTwoWayByDefault the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault" target="_top">.NET documentation</a>
+     */
     public void setBindsTwoWayByDefault(boolean BindsTwoWayByDefault) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -412,6 +724,13 @@ public class FrameworkPropertyMetadata extends system.windows.UIPropertyMetadata
         }
     }
 
+    /**
+     * Gets the value of the .NET property Inherits.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.FrameworkPropertyMetadata.Inherits" target="_top">.NET documentation</a>
+     */
     public boolean getInherits() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -426,6 +745,24 @@ public class FrameworkPropertyMetadata extends system.windows.UIPropertyMetadata
         }
     }
 
+    /**
+     * Sets the value of the .NET property Inherits.
+     *
+     * @param Inherits the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.FrameworkPropertyMetadata.Inherits" target="_top">.NET documentation</a>
+     */
     public void setInherits(boolean Inherits) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -436,6 +773,13 @@ public class FrameworkPropertyMetadata extends system.windows.UIPropertyMetadata
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsDataBindingAllowed.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.FrameworkPropertyMetadata.IsDataBindingAllowed" target="_top">.NET documentation</a>
+     */
     public boolean getIsDataBindingAllowed() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -450,6 +794,13 @@ public class FrameworkPropertyMetadata extends system.windows.UIPropertyMetadata
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsNotDataBindable.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.FrameworkPropertyMetadata.IsNotDataBindable" target="_top">.NET documentation</a>
+     */
     public boolean getIsNotDataBindable() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -464,6 +815,24 @@ public class FrameworkPropertyMetadata extends system.windows.UIPropertyMetadata
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsNotDataBindable.
+     *
+     * @param IsNotDataBindable the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.FrameworkPropertyMetadata.IsNotDataBindable" target="_top">.NET documentation</a>
+     */
     public void setIsNotDataBindable(boolean IsNotDataBindable) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -474,6 +843,13 @@ public class FrameworkPropertyMetadata extends system.windows.UIPropertyMetadata
         }
     }
 
+    /**
+     * Gets the value of the .NET property Journal.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.FrameworkPropertyMetadata.Journal" target="_top">.NET documentation</a>
+     */
     public boolean getJournal() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -488,6 +864,24 @@ public class FrameworkPropertyMetadata extends system.windows.UIPropertyMetadata
         }
     }
 
+    /**
+     * Sets the value of the .NET property Journal.
+     *
+     * @param Journal the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.FrameworkPropertyMetadata.Journal" target="_top">.NET documentation</a>
+     */
     public void setJournal(boolean Journal) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -498,6 +892,13 @@ public class FrameworkPropertyMetadata extends system.windows.UIPropertyMetadata
         }
     }
 
+    /**
+     * Gets the value of the .NET property OverridesInheritanceBehavior.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.FrameworkPropertyMetadata.OverridesInheritanceBehavior" target="_top">.NET documentation</a>
+     */
     public boolean getOverridesInheritanceBehavior() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -512,6 +913,24 @@ public class FrameworkPropertyMetadata extends system.windows.UIPropertyMetadata
         }
     }
 
+    /**
+     * Sets the value of the .NET property OverridesInheritanceBehavior.
+     *
+     * @param OverridesInheritanceBehavior the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.FrameworkPropertyMetadata.OverridesInheritanceBehavior" target="_top">.NET documentation</a>
+     */
     public void setOverridesInheritanceBehavior(boolean OverridesInheritanceBehavior) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -522,6 +941,13 @@ public class FrameworkPropertyMetadata extends system.windows.UIPropertyMetadata
         }
     }
 
+    /**
+     * Gets the value of the .NET property SubPropertiesDoNotAffectRender.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.FrameworkPropertyMetadata.SubPropertiesDoNotAffectRender" target="_top">.NET documentation</a>
+     */
     public boolean getSubPropertiesDoNotAffectRender() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -536,6 +962,24 @@ public class FrameworkPropertyMetadata extends system.windows.UIPropertyMetadata
         }
     }
 
+    /**
+     * Sets the value of the .NET property SubPropertiesDoNotAffectRender.
+     *
+     * @param SubPropertiesDoNotAffectRender the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.FrameworkPropertyMetadata.SubPropertiesDoNotAffectRender" target="_top">.NET documentation</a>
+     */
     public void setSubPropertiesDoNotAffectRender(boolean SubPropertiesDoNotAffectRender) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -546,6 +990,13 @@ public class FrameworkPropertyMetadata extends system.windows.UIPropertyMetadata
         }
     }
 
+    /**
+     * Gets the value of the .NET property DefaultUpdateSourceTrigger.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.FrameworkPropertyMetadata.DefaultUpdateSourceTrigger" target="_top">.NET documentation</a>
+     */
     public UpdateSourceTrigger getDefaultUpdateSourceTrigger() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -561,6 +1012,26 @@ public class FrameworkPropertyMetadata extends system.windows.UIPropertyMetadata
         }
     }
 
+    /**
+     * Sets the value of the .NET property DefaultUpdateSourceTrigger.
+     *
+     * @param DefaultUpdateSourceTrigger the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.FrameworkPropertyMetadata.DefaultUpdateSourceTrigger" target="_top">.NET documentation</a>
+     */
     public void setDefaultUpdateSourceTrigger(UpdateSourceTrigger DefaultUpdateSourceTrigger) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -101,7 +101,10 @@ public class XpsSignatureDefinition extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XpsSignatureDefinition(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class XpsSignatureDefinition extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.XpsSignatureDefinition.-ctor" target="_top">.NET documentation</a>
+     */
     public XpsSignatureDefinition() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -166,6 +175,13 @@ public class XpsSignatureDefinition extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property HasBeenModified.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.XpsSignatureDefinition.HasBeenModified" target="_top">.NET documentation</a>
+     */
     public boolean getHasBeenModified() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +196,13 @@ public class XpsSignatureDefinition extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property HasBeenModified.
+     *
+     * @param HasBeenModified the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.XpsSignatureDefinition.HasBeenModified" target="_top">.NET documentation</a>
+     */
     public void setHasBeenModified(boolean HasBeenModified) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +213,13 @@ public class XpsSignatureDefinition extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Culture.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.XpsSignatureDefinition.Culture" target="_top">.NET documentation</a>
+     */
     public CultureInfo getCulture() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +235,13 @@ public class XpsSignatureDefinition extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Culture.
+     *
+     * @param Culture the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.XpsSignatureDefinition.Culture" target="_top">.NET documentation</a>
+     */
     public void setCulture(CultureInfo Culture) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +252,13 @@ public class XpsSignatureDefinition extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SignBy.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.XpsSignatureDefinition.SignBy" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getSignBy() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -230,6 +274,13 @@ public class XpsSignatureDefinition extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SignBy.
+     *
+     * @param SignBy the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.XpsSignatureDefinition.SignBy" target="_top">.NET documentation</a>
+     */
     public void setSignBy(Nullable_1 SignBy) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -240,6 +291,13 @@ public class XpsSignatureDefinition extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SpotId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.XpsSignatureDefinition.SpotId" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getSpotId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -255,6 +313,13 @@ public class XpsSignatureDefinition extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SpotId.
+     *
+     * @param SpotId the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.XpsSignatureDefinition.SpotId" target="_top">.NET documentation</a>
+     */
     public void setSpotId(Nullable_1 SpotId) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -265,6 +330,13 @@ public class XpsSignatureDefinition extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Intent.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.XpsSignatureDefinition.Intent" target="_top">.NET documentation</a>
+     */
     public java.lang.String getIntent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -279,6 +351,13 @@ public class XpsSignatureDefinition extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Intent.
+     *
+     * @param Intent the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.XpsSignatureDefinition.Intent" target="_top">.NET documentation</a>
+     */
     public void setIntent(java.lang.String Intent) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -289,6 +368,13 @@ public class XpsSignatureDefinition extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RequestedSigner.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.XpsSignatureDefinition.RequestedSigner" target="_top">.NET documentation</a>
+     */
     public java.lang.String getRequestedSigner() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -303,6 +389,13 @@ public class XpsSignatureDefinition extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RequestedSigner.
+     *
+     * @param RequestedSigner the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.XpsSignatureDefinition.RequestedSigner" target="_top">.NET documentation</a>
+     */
     public void setRequestedSigner(java.lang.String RequestedSigner) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -313,6 +406,13 @@ public class XpsSignatureDefinition extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SigningLocale.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.XpsSignatureDefinition.SigningLocale" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSigningLocale() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -327,6 +427,13 @@ public class XpsSignatureDefinition extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SigningLocale.
+     *
+     * @param SigningLocale the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.XpsSignatureDefinition.SigningLocale" target="_top">.NET documentation</a>
+     */
     public void setSigningLocale(java.lang.String SigningLocale) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -337,6 +444,13 @@ public class XpsSignatureDefinition extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SpotLocation.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.XpsSignatureDefinition.SpotLocation" target="_top">.NET documentation</a>
+     */
     public SpotLocation getSpotLocation() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -352,6 +466,13 @@ public class XpsSignatureDefinition extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SpotLocation.
+     *
+     * @param SpotLocation the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.XpsSignatureDefinition.SpotLocation" target="_top">.NET documentation</a>
+     */
     public void setSpotLocation(SpotLocation SpotLocation) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

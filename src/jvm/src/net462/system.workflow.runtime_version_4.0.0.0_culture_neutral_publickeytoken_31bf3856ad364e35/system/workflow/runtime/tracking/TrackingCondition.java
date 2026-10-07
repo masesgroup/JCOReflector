@@ -99,7 +99,10 @@ public class TrackingCondition extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TrackingCondition(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,13 @@ public class TrackingCondition extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Member.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.TrackingCondition.Member" target="_top">.NET documentation</a>
+     */
     public java.lang.String getMember() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -170,6 +180,13 @@ public class TrackingCondition extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Member.
+     *
+     * @param Member the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.TrackingCondition.Member" target="_top">.NET documentation</a>
+     */
     public void setMember(java.lang.String Member) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +197,13 @@ public class TrackingCondition extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Value.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.TrackingCondition.Value" target="_top">.NET documentation</a>
+     */
     public java.lang.String getValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +218,13 @@ public class TrackingCondition extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Value.
+     *
+     * @param Value the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.TrackingCondition.Value" target="_top">.NET documentation</a>
+     */
     public void setValue(java.lang.String Value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +235,13 @@ public class TrackingCondition extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Operator.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.TrackingCondition.Operator" target="_top">.NET documentation</a>
+     */
     public ComparisonOperator getOperator() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -219,6 +257,13 @@ public class TrackingCondition extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Operator.
+     *
+     * @param Operator the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.TrackingCondition.Operator" target="_top">.NET documentation</a>
+     */
     public void setOperator(ComparisonOperator Operator) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

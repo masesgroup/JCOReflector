@@ -104,7 +104,10 @@ public class UnvalidatedRequestValuesWrapper extends system.web.UnvalidatedReque
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public UnvalidatedRequestValuesWrapper(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,14 @@ public class UnvalidatedRequestValuesWrapper extends system.web.UnvalidatedReque
     public UnvalidatedRequestValuesWrapper() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param requestValues the argument of type {@code UnvalidatedRequestValues}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UnvalidatedRequestValuesWrapper.-ctor" target="_top">.NET documentation</a>
+     */
     public UnvalidatedRequestValuesWrapper(UnvalidatedRequestValues requestValues) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file

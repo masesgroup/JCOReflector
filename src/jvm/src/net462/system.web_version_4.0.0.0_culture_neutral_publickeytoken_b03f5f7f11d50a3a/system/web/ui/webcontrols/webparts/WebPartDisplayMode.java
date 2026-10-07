@@ -99,7 +99,10 @@ public class WebPartDisplayMode extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public WebPartDisplayMode(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,15 @@ public class WebPartDisplayMode extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member IsEnabled.
+     *
+     * @param webPartManager the argument of type {@code WebPartManager}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartDisplayMode.IsEnabled" target="_top">.NET documentation</a>
+     */
     public boolean IsEnabled(WebPartManager webPartManager) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -170,6 +182,13 @@ public class WebPartDisplayMode extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AllowPageDesign.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartDisplayMode.AllowPageDesign" target="_top">.NET documentation</a>
+     */
     public boolean getAllowPageDesign() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +203,13 @@ public class WebPartDisplayMode extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AssociatedWithToolZone.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartDisplayMode.AssociatedWithToolZone" target="_top">.NET documentation</a>
+     */
     public boolean getAssociatedWithToolZone() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +224,13 @@ public class WebPartDisplayMode extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RequiresPersonalization.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartDisplayMode.RequiresPersonalization" target="_top">.NET documentation</a>
+     */
     public boolean getRequiresPersonalization() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -212,6 +245,13 @@ public class WebPartDisplayMode extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ShowHiddenWebParts.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartDisplayMode.ShowHiddenWebParts" target="_top">.NET documentation</a>
+     */
     public boolean getShowHiddenWebParts() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -226,6 +266,13 @@ public class WebPartDisplayMode extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartDisplayMode.Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

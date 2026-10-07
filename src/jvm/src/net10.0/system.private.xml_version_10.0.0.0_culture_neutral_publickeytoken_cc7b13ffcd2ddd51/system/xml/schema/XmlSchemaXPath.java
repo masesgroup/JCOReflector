@@ -99,7 +99,10 @@ public class XmlSchemaXPath extends system.xml.schema.XmlSchemaAnnotated  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XmlSchemaXPath(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class XmlSchemaXPath extends system.xml.schema.XmlSchemaAnnotated  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaXPath.-ctor" target="_top">.NET documentation</a>
+     */
     public XmlSchemaXPath() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +173,13 @@ public class XmlSchemaXPath extends system.xml.schema.XmlSchemaAnnotated  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property XPath.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaXPath.XPath" target="_top">.NET documentation</a>
+     */
     public java.lang.String getXPath() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,6 +194,13 @@ public class XmlSchemaXPath extends system.xml.schema.XmlSchemaAnnotated  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property XPath.
+     *
+     * @param XPath the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaXPath.XPath" target="_top">.NET documentation</a>
+     */
     public void setXPath(java.lang.String XPath) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

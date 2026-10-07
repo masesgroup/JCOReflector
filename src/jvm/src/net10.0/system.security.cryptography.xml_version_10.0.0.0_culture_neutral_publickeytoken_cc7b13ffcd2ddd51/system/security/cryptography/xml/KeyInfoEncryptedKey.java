@@ -101,7 +101,10 @@ public class KeyInfoEncryptedKey extends system.security.cryptography.xml.KeyInf
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public KeyInfoEncryptedKey(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class KeyInfoEncryptedKey extends system.security.cryptography.xml.KeyInf
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Xml.KeyInfoEncryptedKey.-ctor" target="_top">.NET documentation</a>
+     */
     public KeyInfoEncryptedKey() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -158,6 +167,13 @@ public class KeyInfoEncryptedKey extends system.security.cryptography.xml.KeyInf
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param encryptedKey the argument of type {@code EncryptedKey}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Xml.KeyInfoEncryptedKey.-ctor" target="_top">.NET documentation</a>
+     */
     public KeyInfoEncryptedKey(EncryptedKey encryptedKey) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -172,6 +188,22 @@ public class KeyInfoEncryptedKey extends system.security.cryptography.xml.KeyInf
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetXml.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Xml.KeyInfoEncryptedKey.GetXml" target="_top">.NET documentation</a>
+     */
     public XmlElement GetXml() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +219,13 @@ public class KeyInfoEncryptedKey extends system.security.cryptography.xml.KeyInf
         }
     }
 
+    /**
+     * Invokes the .NET member LoadXml.
+     *
+     * @param value the argument of type {@code XmlElement}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Xml.KeyInfoEncryptedKey.LoadXml" target="_top">.NET documentation</a>
+     */
     public void LoadXml(XmlElement value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +240,13 @@ public class KeyInfoEncryptedKey extends system.security.cryptography.xml.KeyInf
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property EncryptedKey.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Xml.KeyInfoEncryptedKey.EncryptedKey" target="_top">.NET documentation</a>
+     */
     public EncryptedKey getEncryptedKey() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +262,13 @@ public class KeyInfoEncryptedKey extends system.security.cryptography.xml.KeyInf
         }
     }
 
+    /**
+     * Sets the value of the .NET property EncryptedKey.
+     *
+     * @param EncryptedKey the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Xml.KeyInfoEncryptedKey.EncryptedKey" target="_top">.NET documentation</a>
+     */
     public void setEncryptedKey(EncryptedKey EncryptedKey) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

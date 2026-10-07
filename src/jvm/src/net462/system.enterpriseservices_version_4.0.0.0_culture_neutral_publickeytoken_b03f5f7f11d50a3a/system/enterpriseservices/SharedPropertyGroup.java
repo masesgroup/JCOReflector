@@ -99,7 +99,10 @@ public class SharedPropertyGroup extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SharedPropertyGroup(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,15 @@ public class SharedPropertyGroup extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CreateProperty.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param fExists the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicBoolean>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.SharedPropertyGroup.CreateProperty" target="_top">.NET documentation</a>
+     */
     public SharedProperty CreateProperty(java.lang.String name, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> fExists) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -169,6 +181,15 @@ public class SharedPropertyGroup extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreatePropertyByPosition.
+     *
+     * @param position the argument of type {@code int}
+     * @param fExists the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicBoolean>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.SharedPropertyGroup.CreatePropertyByPosition" target="_top">.NET documentation</a>
+     */
     public SharedProperty CreatePropertyByPosition(int position, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> fExists) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +205,14 @@ public class SharedPropertyGroup extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Property.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.SharedPropertyGroup.Property" target="_top">.NET documentation</a>
+     */
     public SharedProperty Property(java.lang.String name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -199,6 +228,14 @@ public class SharedPropertyGroup extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member PropertyByPosition.
+     *
+     * @param position the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.SharedPropertyGroup.PropertyByPosition" target="_top">.NET documentation</a>
+     */
     public SharedProperty PropertyByPosition(int position) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

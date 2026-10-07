@@ -98,7 +98,10 @@ public class MetaHeader extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public MetaHeader(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -145,6 +148,12 @@ public class MetaHeader extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.MetaHeader.-ctor" target="_top">.NET documentation</a>
+     */
     public MetaHeader() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -163,6 +172,13 @@ public class MetaHeader extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property HeaderSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.MetaHeader.HeaderSize" target="_top">.NET documentation</a>
+     */
     public short getHeaderSize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +219,13 @@ public class MetaHeader extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property HeaderSize.
+     *
+     * @param HeaderSize the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.MetaHeader.HeaderSize" target="_top">.NET documentation</a>
+     */
     public void setHeaderSize(short HeaderSize) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -213,6 +236,13 @@ public class MetaHeader extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NoObjects.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.MetaHeader.NoObjects" target="_top">.NET documentation</a>
+     */
     public short getNoObjects() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -253,6 +283,13 @@ public class MetaHeader extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property NoObjects.
+     *
+     * @param NoObjects the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.MetaHeader.NoObjects" target="_top">.NET documentation</a>
+     */
     public void setNoObjects(short NoObjects) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -263,6 +300,13 @@ public class MetaHeader extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NoParameters.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.MetaHeader.NoParameters" target="_top">.NET documentation</a>
+     */
     public short getNoParameters() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -303,6 +347,13 @@ public class MetaHeader extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property NoParameters.
+     *
+     * @param NoParameters the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.MetaHeader.NoParameters" target="_top">.NET documentation</a>
+     */
     public void setNoParameters(short NoParameters) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -313,6 +364,13 @@ public class MetaHeader extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Type.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.MetaHeader.Type" target="_top">.NET documentation</a>
+     */
     public short getType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -353,6 +411,13 @@ public class MetaHeader extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Type.
+     *
+     * @param Type the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.MetaHeader.Type" target="_top">.NET documentation</a>
+     */
     public void setType(short Type) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -363,6 +428,13 @@ public class MetaHeader extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Version.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.MetaHeader.Version" target="_top">.NET documentation</a>
+     */
     public short getVersion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -403,6 +475,13 @@ public class MetaHeader extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Version.
+     *
+     * @param Version the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.MetaHeader.Version" target="_top">.NET documentation</a>
+     */
     public void setVersion(short Version) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -413,6 +492,13 @@ public class MetaHeader extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MaxRecord.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.MetaHeader.MaxRecord" target="_top">.NET documentation</a>
+     */
     public int getMaxRecord() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -453,6 +539,13 @@ public class MetaHeader extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MaxRecord.
+     *
+     * @param MaxRecord the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.MetaHeader.MaxRecord" target="_top">.NET documentation</a>
+     */
     public void setMaxRecord(int MaxRecord) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -463,6 +556,13 @@ public class MetaHeader extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Size.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.MetaHeader.Size" target="_top">.NET documentation</a>
+     */
     public int getSize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -503,6 +603,13 @@ public class MetaHeader extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Size.
+     *
+     * @param Size the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.MetaHeader.Size" target="_top">.NET documentation</a>
+     */
     public void setSize(int Size) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -106,7 +106,10 @@ public class AnnotationStore extends NetObject implements AutoCloseable {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public AnnotationStore(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -159,6 +162,13 @@ public class AnnotationStore extends NetObject implements AutoCloseable {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetAnnotations.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Annotations.Storage.AnnotationStore.GetAnnotations" target="_top">.NET documentation</a>
+     */
     public IList_1 GetAnnotations() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -174,6 +184,14 @@ public class AnnotationStore extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member GetAnnotations.
+     *
+     * @param anchorLocator the argument of type {@code ContentLocator}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Annotations.Storage.AnnotationStore.GetAnnotations" target="_top">.NET documentation</a>
+     */
     public IList_1 GetAnnotations(ContentLocator anchorLocator) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +207,14 @@ public class AnnotationStore extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member DeleteAnnotation.
+     *
+     * @param annotationId the argument of type {@code Guid}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Annotations.Storage.AnnotationStore.DeleteAnnotation" target="_top">.NET documentation</a>
+     */
     public Annotation DeleteAnnotation(Guid annotationId) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +230,14 @@ public class AnnotationStore extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member GetAnnotation.
+     *
+     * @param annotationId the argument of type {@code Guid}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Annotations.Storage.AnnotationStore.GetAnnotation" target="_top">.NET documentation</a>
+     */
     public Annotation GetAnnotation(Guid annotationId) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -219,6 +253,13 @@ public class AnnotationStore extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member AddAnnotation.
+     *
+     * @param newAnnotation the argument of type {@code Annotation}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Annotations.Storage.AnnotationStore.AddAnnotation" target="_top">.NET documentation</a>
+     */
     public void AddAnnotation(Annotation newAnnotation) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -229,6 +270,14 @@ public class AnnotationStore extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member Dispose.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Annotations.Storage.AnnotationStore.Dispose" target="_top">.NET documentation</a>
+     */
     public void Dispose() throws Throwable, system.ArgumentException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -239,6 +288,12 @@ public class AnnotationStore extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member Flush.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Annotations.Storage.AnnotationStore.Flush" target="_top">.NET documentation</a>
+     */
     public void Flush() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -266,6 +321,13 @@ public class AnnotationStore extends NetObject implements AutoCloseable {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AutoFlush.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Annotations.Storage.AnnotationStore.AutoFlush" target="_top">.NET documentation</a>
+     */
     public boolean getAutoFlush() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -280,6 +342,13 @@ public class AnnotationStore extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AutoFlush.
+     *
+     * @param AutoFlush the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Annotations.Storage.AnnotationStore.AutoFlush" target="_top">.NET documentation</a>
+     */
     public void setAutoFlush(boolean AutoFlush) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -295,6 +364,13 @@ public class AnnotationStore extends NetObject implements AutoCloseable {
     // Instance Events section
     
 
+    /**
+     * Invokes the .NET member addAuthorChanged.
+     *
+     * @param handler the argument of type {@code AnnotationAuthorChangedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addAuthorChanged(AnnotationAuthorChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -305,6 +381,13 @@ public class AnnotationStore extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member removeAuthorChanged.
+     *
+     * @param handler the argument of type {@code AnnotationAuthorChangedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeAuthorChanged(AnnotationAuthorChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -315,6 +398,13 @@ public class AnnotationStore extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member addAnchorChanged.
+     *
+     * @param handler the argument of type {@code AnnotationResourceChangedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addAnchorChanged(AnnotationResourceChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -325,6 +415,13 @@ public class AnnotationStore extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member removeAnchorChanged.
+     *
+     * @param handler the argument of type {@code AnnotationResourceChangedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeAnchorChanged(AnnotationResourceChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -335,6 +432,13 @@ public class AnnotationStore extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member addCargoChanged.
+     *
+     * @param handler the argument of type {@code AnnotationResourceChangedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addCargoChanged(AnnotationResourceChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -345,6 +449,13 @@ public class AnnotationStore extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member removeCargoChanged.
+     *
+     * @param handler the argument of type {@code AnnotationResourceChangedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeCargoChanged(AnnotationResourceChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -355,6 +466,13 @@ public class AnnotationStore extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member addStoreContentChanged.
+     *
+     * @param handler the argument of type {@code StoreContentChangedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addStoreContentChanged(StoreContentChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -365,6 +483,13 @@ public class AnnotationStore extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member removeStoreContentChanged.
+     *
+     * @param handler the argument of type {@code StoreContentChangedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeStoreContentChanged(StoreContentChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

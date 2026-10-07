@@ -100,7 +100,10 @@ public class GeneratedRegexAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public GeneratedRegexAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,16 @@ public class GeneratedRegexAttribute extends system.Attribute  {
     public GeneratedRegexAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param pattern the argument of type {@code java.lang.String}
+     * @param options the argument of type {@code RegexOptions}
+     * @param matchTimeoutMilliseconds the argument of type {@code int}
+     * @param cultureName the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.RegularExpressions.GeneratedRegexAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public GeneratedRegexAttribute(java.lang.String pattern, RegexOptions options, int matchTimeoutMilliseconds, java.lang.String cultureName) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -160,6 +173,15 @@ public class GeneratedRegexAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param pattern the argument of type {@code java.lang.String}
+     * @param options the argument of type {@code RegexOptions}
+     * @param matchTimeoutMilliseconds the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.RegularExpressions.GeneratedRegexAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public GeneratedRegexAttribute(java.lang.String pattern, RegexOptions options, int matchTimeoutMilliseconds) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +192,15 @@ public class GeneratedRegexAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param pattern the argument of type {@code java.lang.String}
+     * @param options the argument of type {@code RegexOptions}
+     * @param cultureName the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.RegularExpressions.GeneratedRegexAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public GeneratedRegexAttribute(java.lang.String pattern, RegexOptions options, java.lang.String cultureName) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -180,6 +211,14 @@ public class GeneratedRegexAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param pattern the argument of type {@code java.lang.String}
+     * @param options the argument of type {@code RegexOptions}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.RegularExpressions.GeneratedRegexAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public GeneratedRegexAttribute(java.lang.String pattern, RegexOptions options) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -190,6 +229,13 @@ public class GeneratedRegexAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param pattern the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.RegularExpressions.GeneratedRegexAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public GeneratedRegexAttribute(java.lang.String pattern) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -209,6 +255,13 @@ public class GeneratedRegexAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property MatchTimeoutMilliseconds.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.RegularExpressions.GeneratedRegexAttribute.MatchTimeoutMilliseconds" target="_top">.NET documentation</a>
+     */
     public int getMatchTimeoutMilliseconds() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -249,6 +302,13 @@ public class GeneratedRegexAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CultureName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.RegularExpressions.GeneratedRegexAttribute.CultureName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getCultureName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -263,6 +323,13 @@ public class GeneratedRegexAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Pattern.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.RegularExpressions.GeneratedRegexAttribute.Pattern" target="_top">.NET documentation</a>
+     */
     public java.lang.String getPattern() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -277,6 +344,13 @@ public class GeneratedRegexAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Options.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.RegularExpressions.GeneratedRegexAttribute.Options" target="_top">.NET documentation</a>
+     */
     public RegexOptions getOptions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

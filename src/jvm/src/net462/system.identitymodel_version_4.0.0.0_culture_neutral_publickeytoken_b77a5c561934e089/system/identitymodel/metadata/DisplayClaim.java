@@ -99,7 +99,10 @@ public class DisplayClaim extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DisplayClaim(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,19 @@ public class DisplayClaim extends NetObject  {
     public DisplayClaim() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param claimType the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.DisplayClaim.-ctor" target="_top">.NET documentation</a>
+     */
     public DisplayClaim(java.lang.String claimType) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
@@ -159,6 +175,21 @@ public class DisplayClaim extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param claimType the argument of type {@code java.lang.String}
+     * @param displayTag the argument of type {@code java.lang.String}
+     * @param description the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.DisplayClaim.-ctor" target="_top">.NET documentation</a>
+     */
     public DisplayClaim(java.lang.String claimType, java.lang.String displayTag, java.lang.String description) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +200,28 @@ public class DisplayClaim extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param claimType the argument of type {@code java.lang.String}
+     * @param displayTag the argument of type {@code java.lang.String}
+     * @param description the argument of type {@code java.lang.String}
+     * @param displayValue the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.DisplayClaim.-ctor" target="_top">.NET documentation</a>
+     */
     public DisplayClaim(java.lang.String claimType, java.lang.String displayTag, java.lang.String description, java.lang.String displayValue) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
@@ -179,6 +232,28 @@ public class DisplayClaim extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param claimType the argument of type {@code java.lang.String}
+     * @param displayTag the argument of type {@code java.lang.String}
+     * @param description the argument of type {@code java.lang.String}
+     * @param displayValue the argument of type {@code java.lang.String}
+     * @param optional the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.DisplayClaim.-ctor" target="_top">.NET documentation</a>
+     */
     public DisplayClaim(java.lang.String claimType, java.lang.String displayTag, java.lang.String description, java.lang.String displayValue, boolean optional) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
@@ -194,6 +269,19 @@ public class DisplayClaim extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CreateDisplayClaimFromClaimType.
+     *
+     * @param claimType the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.DisplayClaim.CreateDisplayClaimFromClaimType" target="_top">.NET documentation</a>
+     */
     public static DisplayClaim CreateDisplayClaimFromClaimType(java.lang.String claimType) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -213,6 +301,13 @@ public class DisplayClaim extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Optional.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.DisplayClaim.Optional" target="_top">.NET documentation</a>
+     */
     public boolean getOptional() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -227,6 +322,13 @@ public class DisplayClaim extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Optional.
+     *
+     * @param Optional the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.DisplayClaim.Optional" target="_top">.NET documentation</a>
+     */
     public void setOptional(boolean Optional) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -237,6 +339,13 @@ public class DisplayClaim extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property WriteOptionalAttribute.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.DisplayClaim.WriteOptionalAttribute" target="_top">.NET documentation</a>
+     */
     public boolean getWriteOptionalAttribute() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -251,6 +360,13 @@ public class DisplayClaim extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property WriteOptionalAttribute.
+     *
+     * @param WriteOptionalAttribute the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.DisplayClaim.WriteOptionalAttribute" target="_top">.NET documentation</a>
+     */
     public void setWriteOptionalAttribute(boolean WriteOptionalAttribute) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -261,6 +377,13 @@ public class DisplayClaim extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ClaimType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.DisplayClaim.ClaimType" target="_top">.NET documentation</a>
+     */
     public java.lang.String getClaimType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -275,6 +398,13 @@ public class DisplayClaim extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Description.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.DisplayClaim.Description" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDescription() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -289,6 +419,13 @@ public class DisplayClaim extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Description.
+     *
+     * @param Description the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.DisplayClaim.Description" target="_top">.NET documentation</a>
+     */
     public void setDescription(java.lang.String Description) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -299,6 +436,13 @@ public class DisplayClaim extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DisplayTag.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.DisplayClaim.DisplayTag" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDisplayTag() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -313,6 +457,13 @@ public class DisplayClaim extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DisplayTag.
+     *
+     * @param DisplayTag the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.DisplayClaim.DisplayTag" target="_top">.NET documentation</a>
+     */
     public void setDisplayTag(java.lang.String DisplayTag) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -323,6 +474,13 @@ public class DisplayClaim extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DisplayValue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.DisplayClaim.DisplayValue" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDisplayValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -337,6 +495,13 @@ public class DisplayClaim extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DisplayValue.
+     *
+     * @param DisplayValue the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.DisplayClaim.DisplayValue" target="_top">.NET documentation</a>
+     */
     public void setDisplayValue(java.lang.String DisplayValue) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

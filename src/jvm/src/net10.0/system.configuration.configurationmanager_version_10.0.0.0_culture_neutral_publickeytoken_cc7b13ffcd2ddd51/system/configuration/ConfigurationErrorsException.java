@@ -109,7 +109,9 @@ public class ConfigurationErrorsException extends system.configuration.Configura
         super();
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
      */
     public ConfigurationErrorsException(java.lang.Object instance) {
         super(instance);
@@ -170,6 +172,16 @@ public class ConfigurationErrorsException extends system.configuration.Configura
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param message the argument of type {@code java.lang.String}
+     * @param inner the argument of type {@code NetException}
+     * @param filename the argument of type {@code java.lang.String}
+     * @param line the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.ConfigurationErrorsException.-ctor" target="_top">.NET documentation</a>
+     */
     public ConfigurationErrorsException(java.lang.String message, NetException inner, java.lang.String filename, int line) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -180,6 +192,15 @@ public class ConfigurationErrorsException extends system.configuration.Configura
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param message the argument of type {@code java.lang.String}
+     * @param inner the argument of type {@code NetException}
+     * @param node the argument of type {@code XmlNode}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.ConfigurationErrorsException.-ctor" target="_top">.NET documentation</a>
+     */
     public ConfigurationErrorsException(java.lang.String message, NetException inner, XmlNode node) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -190,6 +211,15 @@ public class ConfigurationErrorsException extends system.configuration.Configura
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param message the argument of type {@code java.lang.String}
+     * @param inner the argument of type {@code NetException}
+     * @param reader the argument of type {@code XmlReader}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.ConfigurationErrorsException.-ctor" target="_top">.NET documentation</a>
+     */
     public ConfigurationErrorsException(java.lang.String message, NetException inner, XmlReader reader) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -200,6 +230,15 @@ public class ConfigurationErrorsException extends system.configuration.Configura
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param message the argument of type {@code java.lang.String}
+     * @param filename the argument of type {@code java.lang.String}
+     * @param line the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.ConfigurationErrorsException.-ctor" target="_top">.NET documentation</a>
+     */
     public ConfigurationErrorsException(java.lang.String message, java.lang.String filename, int line) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -210,6 +249,14 @@ public class ConfigurationErrorsException extends system.configuration.Configura
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param message the argument of type {@code java.lang.String}
+     * @param node the argument of type {@code XmlNode}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.ConfigurationErrorsException.-ctor" target="_top">.NET documentation</a>
+     */
     public ConfigurationErrorsException(java.lang.String message, XmlNode node) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -220,6 +267,14 @@ public class ConfigurationErrorsException extends system.configuration.Configura
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param message the argument of type {@code java.lang.String}
+     * @param reader the argument of type {@code XmlReader}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.ConfigurationErrorsException.-ctor" target="_top">.NET documentation</a>
+     */
     public ConfigurationErrorsException(java.lang.String message, XmlReader reader) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -234,6 +289,14 @@ public class ConfigurationErrorsException extends system.configuration.Configura
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetLineNumber.
+     *
+     * @param node the argument of type {@code XmlNode}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.ConfigurationErrorsException.GetLineNumber" target="_top">.NET documentation</a>
+     */
     public static int GetLineNumber(XmlNode node) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -274,6 +337,14 @@ public class ConfigurationErrorsException extends system.configuration.Configura
         }
     }
 
+    /**
+     * Invokes the .NET member GetLineNumber.
+     *
+     * @param reader the argument of type {@code XmlReader}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.ConfigurationErrorsException.GetLineNumber" target="_top">.NET documentation</a>
+     */
     public static int GetLineNumber(XmlReader reader) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -314,6 +385,14 @@ public class ConfigurationErrorsException extends system.configuration.Configura
         }
     }
 
+    /**
+     * Invokes the .NET member GetFilename.
+     *
+     * @param node the argument of type {@code XmlNode}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.ConfigurationErrorsException.GetFilename" target="_top">.NET documentation</a>
+     */
     public static java.lang.String GetFilename(XmlNode node) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -328,6 +407,14 @@ public class ConfigurationErrorsException extends system.configuration.Configura
         }
     }
 
+    /**
+     * Invokes the .NET member GetFilename.
+     *
+     * @param reader the argument of type {@code XmlReader}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.ConfigurationErrorsException.GetFilename" target="_top">.NET documentation</a>
+     */
     public static java.lang.String GetFilename(XmlReader reader) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -342,6 +429,24 @@ public class ConfigurationErrorsException extends system.configuration.Configura
         }
     }
 
+    /**
+     * Invokes the .NET member GetObjectData.
+     *
+     * @param info the argument of type {@code SerializationInfo}
+     * @param context the argument of type {@code StreamingContext}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.runtime.serialization.SerializationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.ConfigurationErrorsException.GetObjectData" target="_top">.NET documentation</a>
+     */
     public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException, system.runtime.serialization.SerializationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -356,6 +461,23 @@ public class ConfigurationErrorsException extends system.configuration.Configura
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Errors.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.ConfigurationErrorsException.Errors" target="_top">.NET documentation</a>
+     */
     public ICollection getErrors() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

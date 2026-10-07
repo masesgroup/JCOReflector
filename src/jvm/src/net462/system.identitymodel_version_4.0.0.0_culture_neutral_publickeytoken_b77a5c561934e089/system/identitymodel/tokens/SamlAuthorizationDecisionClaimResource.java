@@ -99,7 +99,10 @@ public class SamlAuthorizationDecisionClaimResource extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SamlAuthorizationDecisionClaimResource(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,27 @@ public class SamlAuthorizationDecisionClaimResource extends NetObject  {
     public SamlAuthorizationDecisionClaimResource() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param resource the argument of type {@code java.lang.String}
+     * @param accessDecision the argument of type {@code SamlAccessDecision}
+     * @param actionNamespace the argument of type {@code java.lang.String}
+     * @param actionName the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SamlAuthorizationDecisionClaimResource.-ctor" target="_top">.NET documentation</a>
+     */
     public SamlAuthorizationDecisionClaimResource(java.lang.String resource, SamlAccessDecision accessDecision, java.lang.String actionNamespace, java.lang.String actionName) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +192,13 @@ public class SamlAuthorizationDecisionClaimResource extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AccessDecision.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SamlAuthorizationDecisionClaimResource.AccessDecision" target="_top">.NET documentation</a>
+     */
     public SamlAccessDecision getAccessDecision() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +214,13 @@ public class SamlAuthorizationDecisionClaimResource extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ActionName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SamlAuthorizationDecisionClaimResource.ActionName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getActionName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +235,13 @@ public class SamlAuthorizationDecisionClaimResource extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ActionNamespace.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SamlAuthorizationDecisionClaimResource.ActionNamespace" target="_top">.NET documentation</a>
+     */
     public java.lang.String getActionNamespace() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -211,6 +256,13 @@ public class SamlAuthorizationDecisionClaimResource extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Resource.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SamlAuthorizationDecisionClaimResource.Resource" target="_top">.NET documentation</a>
+     */
     public java.lang.String getResource() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

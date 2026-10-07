@@ -101,7 +101,10 @@ public class IReceiveMarkupExtensionImplementation extends NetObject implements 
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IReceiveMarkupExtensionImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -143,6 +146,15 @@ public class IReceiveMarkupExtensionImplementation extends NetObject implements 
 
     // Methods section
     
+    /**
+     * Invokes the .NET member ReceiveMarkupExtension.
+     *
+     * @param property the argument of type {@code java.lang.String}
+     * @param markupExtension the argument of type {@code MarkupExtension}
+     * @param serviceProvider the argument of type {@code IServiceProvider}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.IReceiveMarkupExtension.ReceiveMarkupExtension" target="_top">.NET documentation</a>
+     */
     public void ReceiveMarkupExtension(java.lang.String property, MarkupExtension markupExtension, IServiceProvider serviceProvider) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

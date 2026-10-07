@@ -107,7 +107,10 @@ public class ToolboxService extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ToolboxService(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -160,6 +163,30 @@ public class ToolboxService extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetToolboxItems.
+     *
+     * @param a the argument of type {@code Assembly}
+     * @param newCodeBase the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Design.ToolboxService.GetToolboxItems" target="_top">.NET documentation</a>
+     */
     public static ICollection GetToolboxItems(Assembly a, java.lang.String newCodeBase) throws Throwable, system.ArgumentNullException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.TypeLoadException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NotSupportedException, system.io.FileNotFoundException, system.NullReferenceException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -175,6 +202,26 @@ public class ToolboxService extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetToolboxItems.
+     *
+     * @param a the argument of type {@code Assembly}
+     * @param newCodeBase the argument of type {@code java.lang.String}
+     * @param throwOnError the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Design.ToolboxService.GetToolboxItems" target="_top">.NET documentation</a>
+     */
     public static ICollection GetToolboxItems(Assembly a, java.lang.String newCodeBase, boolean throwOnError) throws Throwable, system.ArgumentNullException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.io.FileNotFoundException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -190,6 +237,36 @@ public class ToolboxService extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetToolboxItems.
+     *
+     * @param an the argument of type {@code AssemblyName}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.reflection.ReflectionTypeLoadException if the .NET member raises it
+     * @throws system.runtime.serialization.SerializationException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Design.ToolboxService.GetToolboxItems" target="_top">.NET documentation</a>
+     */
     public static ICollection GetToolboxItems(AssemblyName an) throws Throwable, system.ArgumentNullException, system.FormatException, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.NullReferenceException, system.IndexOutOfRangeException, system.TypeLoadException, system.ArgumentOutOfRangeException, system.OverflowException, system.threading.WaitHandleCannotBeOpenedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException, system.UriFormatException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.reflection.ReflectionTypeLoadException, system.runtime.serialization.SerializationException, system.UnauthorizedAccessException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -205,6 +282,44 @@ public class ToolboxService extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetToolboxItems.
+     *
+     * @param an the argument of type {@code AssemblyName}
+     * @param throwOnError the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.MemberAccessException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.reflection.ReflectionTypeLoadException if the .NET member raises it
+     * @throws system.runtime.serialization.SerializationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Design.ToolboxService.GetToolboxItems" target="_top">.NET documentation</a>
+     */
     public static ICollection GetToolboxItems(AssemblyName an, boolean throwOnError) throws Throwable, system.ArgumentNullException, system.FormatException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotImplementedException, system.NullReferenceException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OverflowException, system.ObjectDisposedException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.resources.MissingManifestResourceException, system.security.SecurityException, system.MemberAccessException, system.UriFormatException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.reflection.ReflectionTypeLoadException, system.runtime.serialization.SerializationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -220,6 +335,28 @@ public class ToolboxService extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetToolboxItem.
+     *
+     * @param toolType the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Design.ToolboxService.GetToolboxItem" target="_top">.NET documentation</a>
+     */
     public static ToolboxItem GetToolboxItem(NetType toolType) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.security.SecurityException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.FormatException, system.NotSupportedException, system.io.IOException, system.io.FileNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -235,6 +372,34 @@ public class ToolboxService extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetToolboxItem.
+     *
+     * @param toolType the argument of type {@code NetType}
+     * @param nonPublic the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Design.ToolboxService.GetToolboxItem" target="_top">.NET documentation</a>
+     */
     public static ToolboxItem GetToolboxItem(NetType toolType, boolean nonPublic) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.NotSupportedException, system.InvalidCastException, system.NullReferenceException, system.FormatException, system.configuration.ConfigurationErrorsException, system.io.FileNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -250,6 +415,16 @@ public class ToolboxService extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member UnloadToolboxItems.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.CannotUnloadAppDomainException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Design.ToolboxService.UnloadToolboxItems" target="_top">.NET documentation</a>
+     */
     public static void UnloadToolboxItems() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NullReferenceException, system.CannotUnloadAppDomainException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -263,8 +438,14 @@ public class ToolboxService extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIToolboxService method available in IToolboxService to obtain an object with an invocable method
+     *
+     * @param serializedObject the argument of type {@code NetObject}
+     * @param filterAttributes the argument of type {@code ICollection}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Design.IToolboxService.IsSupported" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public boolean IsSupported(NetObject serializedObject, ICollection filterAttributes) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
     }
@@ -272,8 +453,14 @@ public class ToolboxService extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIToolboxService method available in IToolboxService to obtain an object with an invocable method
+     *
+     * @param serializedObject the argument of type {@code NetObject}
+     * @param host the argument of type {@code IDesignerHost}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Design.IToolboxService.IsSupported" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public boolean IsSupported(NetObject serializedObject, IDesignerHost host) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
     }
@@ -281,8 +468,13 @@ public class ToolboxService extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIToolboxService method available in IToolboxService to obtain an object with an invocable method
+     *
+     * @param serializedObject the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Design.IToolboxService.IsToolboxItem" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public boolean IsToolboxItem(NetObject serializedObject) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
     }
@@ -290,8 +482,14 @@ public class ToolboxService extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIToolboxService method available in IToolboxService to obtain an object with an invocable method
+     *
+     * @param serializedObject the argument of type {@code NetObject}
+     * @param host the argument of type {@code IDesignerHost}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Design.IToolboxService.IsToolboxItem" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public boolean IsToolboxItem(NetObject serializedObject, IDesignerHost host) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
     }
@@ -299,8 +497,12 @@ public class ToolboxService extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIToolboxService method available in IToolboxService to obtain an object with an invocable method
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Design.IToolboxService.SetCursor" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public boolean SetCursor() throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
     }
@@ -308,8 +510,13 @@ public class ToolboxService extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIToolboxService method available in IToolboxService to obtain an object with an invocable method
+     *
+     * @param serializedObject the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Design.IToolboxService.DeserializeToolboxItem" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public ToolboxItem DeserializeToolboxItem(NetObject serializedObject) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
     }
@@ -317,8 +524,14 @@ public class ToolboxService extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIToolboxService method available in IToolboxService to obtain an object with an invocable method
+     *
+     * @param serializedObject the argument of type {@code NetObject}
+     * @param host the argument of type {@code IDesignerHost}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Design.IToolboxService.DeserializeToolboxItem" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public ToolboxItem DeserializeToolboxItem(NetObject serializedObject, IDesignerHost host) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
     }
@@ -326,8 +539,12 @@ public class ToolboxService extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIToolboxService method available in IToolboxService to obtain an object with an invocable method
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Design.IToolboxService.GetSelectedToolboxItem" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public ToolboxItem GetSelectedToolboxItem() throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
     }
@@ -335,8 +552,13 @@ public class ToolboxService extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIToolboxService method available in IToolboxService to obtain an object with an invocable method
+     *
+     * @param host the argument of type {@code IDesignerHost}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Design.IToolboxService.GetSelectedToolboxItem" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public ToolboxItem GetSelectedToolboxItem(IDesignerHost host) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
     }
@@ -344,8 +566,12 @@ public class ToolboxService extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIToolboxService method available in IToolboxService to obtain an object with an invocable method
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Design.IToolboxService.GetToolboxItems" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public ToolboxItemCollection GetToolboxItems() throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
     }
@@ -353,8 +579,13 @@ public class ToolboxService extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIToolboxService method available in IToolboxService to obtain an object with an invocable method
+     *
+     * @param host the argument of type {@code IDesignerHost}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Design.IToolboxService.GetToolboxItems" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public ToolboxItemCollection GetToolboxItems(IDesignerHost host) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
     }
@@ -362,8 +593,13 @@ public class ToolboxService extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIToolboxService method available in IToolboxService to obtain an object with an invocable method
+     *
+     * @param category the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Design.IToolboxService.GetToolboxItems" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public ToolboxItemCollection GetToolboxItems(java.lang.String category) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
     }
@@ -371,8 +607,14 @@ public class ToolboxService extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIToolboxService method available in IToolboxService to obtain an object with an invocable method
+     *
+     * @param category the argument of type {@code java.lang.String}
+     * @param host the argument of type {@code IDesignerHost}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Design.IToolboxService.GetToolboxItems" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public ToolboxItemCollection GetToolboxItems(java.lang.String category, IDesignerHost host) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
     }
@@ -380,8 +622,13 @@ public class ToolboxService extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIToolboxService method available in IToolboxService to obtain an object with an invocable method
+     *
+     * @param toolboxItem the argument of type {@code ToolboxItem}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Design.IToolboxService.SerializeToolboxItem" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public NetObject SerializeToolboxItem(ToolboxItem toolboxItem) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
     }
@@ -389,8 +636,13 @@ public class ToolboxService extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIToolboxService method available in IToolboxService to obtain an object with an invocable method
+     *
+     * @param creator the argument of type {@code ToolboxItemCreatorCallback}
+     * @param format the argument of type {@code java.lang.String}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Design.IToolboxService.AddCreator" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void AddCreator(ToolboxItemCreatorCallback creator, java.lang.String format) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
     }
@@ -398,8 +650,14 @@ public class ToolboxService extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIToolboxService method available in IToolboxService to obtain an object with an invocable method
+     *
+     * @param creator the argument of type {@code ToolboxItemCreatorCallback}
+     * @param format the argument of type {@code java.lang.String}
+     * @param host the argument of type {@code IDesignerHost}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Design.IToolboxService.AddCreator" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void AddCreator(ToolboxItemCreatorCallback creator, java.lang.String format, IDesignerHost host) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
     }
@@ -407,8 +665,13 @@ public class ToolboxService extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIToolboxService method available in IToolboxService to obtain an object with an invocable method
+     *
+     * @param toolboxItem the argument of type {@code ToolboxItem}
+     * @param host the argument of type {@code IDesignerHost}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Design.IToolboxService.AddLinkedToolboxItem" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void AddLinkedToolboxItem(ToolboxItem toolboxItem, IDesignerHost host) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
     }
@@ -416,8 +679,14 @@ public class ToolboxService extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIToolboxService method available in IToolboxService to obtain an object with an invocable method
+     *
+     * @param toolboxItem the argument of type {@code ToolboxItem}
+     * @param category the argument of type {@code java.lang.String}
+     * @param host the argument of type {@code IDesignerHost}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Design.IToolboxService.AddLinkedToolboxItem" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void AddLinkedToolboxItem(ToolboxItem toolboxItem, java.lang.String category, IDesignerHost host) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
     }
@@ -425,8 +694,12 @@ public class ToolboxService extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIToolboxService method available in IToolboxService to obtain an object with an invocable method
+     *
+     * @param toolboxItem the argument of type {@code ToolboxItem}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Design.IToolboxService.AddToolboxItem" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void AddToolboxItem(ToolboxItem toolboxItem) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
     }
@@ -434,8 +707,13 @@ public class ToolboxService extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIToolboxService method available in IToolboxService to obtain an object with an invocable method
+     *
+     * @param toolboxItem the argument of type {@code ToolboxItem}
+     * @param category the argument of type {@code java.lang.String}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Design.IToolboxService.AddToolboxItem" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void AddToolboxItem(ToolboxItem toolboxItem, java.lang.String category) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
     }
@@ -443,8 +721,11 @@ public class ToolboxService extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIToolboxService method available in IToolboxService to obtain an object with an invocable method
+     *
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Design.IToolboxService.Refresh" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void Refresh() throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
     }
@@ -452,8 +733,12 @@ public class ToolboxService extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIToolboxService method available in IToolboxService to obtain an object with an invocable method
+     *
+     * @param format the argument of type {@code java.lang.String}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Design.IToolboxService.RemoveCreator" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void RemoveCreator(java.lang.String format) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
     }
@@ -461,8 +746,13 @@ public class ToolboxService extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIToolboxService method available in IToolboxService to obtain an object with an invocable method
+     *
+     * @param format the argument of type {@code java.lang.String}
+     * @param host the argument of type {@code IDesignerHost}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Design.IToolboxService.RemoveCreator" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void RemoveCreator(java.lang.String format, IDesignerHost host) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
     }
@@ -470,8 +760,12 @@ public class ToolboxService extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIToolboxService method available in IToolboxService to obtain an object with an invocable method
+     *
+     * @param toolboxItem the argument of type {@code ToolboxItem}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Design.IToolboxService.RemoveToolboxItem" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void RemoveToolboxItem(ToolboxItem toolboxItem) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
     }
@@ -479,8 +773,13 @@ public class ToolboxService extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIToolboxService method available in IToolboxService to obtain an object with an invocable method
+     *
+     * @param toolboxItem the argument of type {@code ToolboxItem}
+     * @param category the argument of type {@code java.lang.String}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Design.IToolboxService.RemoveToolboxItem" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void RemoveToolboxItem(ToolboxItem toolboxItem, java.lang.String category) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
     }
@@ -488,8 +787,11 @@ public class ToolboxService extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIToolboxService method available in IToolboxService to obtain an object with an invocable method
+     *
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Design.IToolboxService.SelectedToolboxItemUsed" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void SelectedToolboxItemUsed() throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
     }
@@ -497,8 +799,12 @@ public class ToolboxService extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIToolboxService method available in IToolboxService to obtain an object with an invocable method
+     *
+     * @param toolboxItem the argument of type {@code ToolboxItem}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Design.IToolboxService.SetSelectedToolboxItem" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void SetSelectedToolboxItem(ToolboxItem toolboxItem) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
     }
@@ -506,8 +812,14 @@ public class ToolboxService extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIComponentDiscoveryService method available in IComponentDiscoveryService to obtain an object with an invocable method
+     *
+     * @param designerHost the argument of type {@code IDesignerHost}
+     * @param baseType the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IComponentDiscoveryService.GetComponentTypes" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public ICollection GetComponentTypes(IDesignerHost designerHost, NetType baseType) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIComponentDiscoveryService to obtain the full interface.");
     }

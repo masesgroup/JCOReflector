@@ -101,7 +101,10 @@ public class InvokeCompletedEventArgs extends system.componentmodel.AsyncComplet
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public InvokeCompletedEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -160,6 +163,13 @@ public class InvokeCompletedEventArgs extends system.componentmodel.AsyncComplet
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Outputs.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.InvokeCompletedEventArgs.Outputs" target="_top">.NET documentation</a>
+     */
     public IDictionary_2 getOutputs() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -175,6 +185,13 @@ public class InvokeCompletedEventArgs extends system.componentmodel.AsyncComplet
         }
     }
 
+    /**
+     * Sets the value of the .NET property Outputs.
+     *
+     * @param Outputs the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.InvokeCompletedEventArgs.Outputs" target="_top">.NET documentation</a>
+     */
     public void setOutputs(IDictionary_2 Outputs) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

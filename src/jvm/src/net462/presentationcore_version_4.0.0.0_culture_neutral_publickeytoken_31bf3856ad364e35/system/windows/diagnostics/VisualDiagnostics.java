@@ -99,7 +99,10 @@ public class VisualDiagnostics extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public VisualDiagnostics(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,17 @@ public class VisualDiagnostics extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetXamlSourceInfo.
+     *
+     * @param obj the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Diagnostics.VisualDiagnostics.GetXamlSourceInfo" target="_top">.NET documentation</a>
+     */
     public static XamlSourceInfo GetXamlSourceInfo(NetObject obj) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -167,6 +181,12 @@ public class VisualDiagnostics extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DisableVisualTreeChanged.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Diagnostics.VisualDiagnostics.DisableVisualTreeChanged" target="_top">.NET documentation</a>
+     */
     public static void DisableVisualTreeChanged() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -177,6 +197,20 @@ public class VisualDiagnostics extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member EnableVisualTreeChanged.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Diagnostics.VisualDiagnostics.EnableVisualTreeChanged" target="_top">.NET documentation</a>
+     */
     public static void EnableVisualTreeChanged() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

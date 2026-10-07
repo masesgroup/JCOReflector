@@ -98,7 +98,10 @@ public class HtmlString extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public HtmlString(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,13 @@ public class HtmlString extends NetObject  {
     public HtmlString() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param value the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HtmlString.-ctor" target="_top">.NET documentation</a>
+     */
     public HtmlString(java.lang.String value) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -163,6 +173,13 @@ public class HtmlString extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ToHtmlString.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HtmlString.ToHtmlString" target="_top">.NET documentation</a>
+     */
     public java.lang.String ToHtmlString() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

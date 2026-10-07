@@ -100,7 +100,10 @@ public class __ComObject extends system.MarshalByRefObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public __ComObject(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -158,8 +161,14 @@ public class __ComObject extends system.MarshalByRefObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIDynamicInterfaceCastable method available in IDynamicInterfaceCastable to obtain an object with an invocable method
+     *
+     * @param interfaceType the argument of type {@code RuntimeTypeHandle}
+     * @param throwIfNotImplemented the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.IDynamicInterfaceCastable.IsInterfaceImplemented" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public boolean IsInterfaceImplemented(RuntimeTypeHandle interfaceType, boolean throwIfNotImplemented) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDynamicInterfaceCastable to obtain the full interface.");
     }
@@ -167,8 +176,13 @@ public class __ComObject extends system.MarshalByRefObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIDynamicInterfaceCastable method available in IDynamicInterfaceCastable to obtain an object with an invocable method
+     *
+     * @param interfaceType the argument of type {@code RuntimeTypeHandle}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.IDynamicInterfaceCastable.GetInterfaceImplementation" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public RuntimeTypeHandle GetInterfaceImplementation(RuntimeTypeHandle interfaceType) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDynamicInterfaceCastable to obtain the full interface.");
     }

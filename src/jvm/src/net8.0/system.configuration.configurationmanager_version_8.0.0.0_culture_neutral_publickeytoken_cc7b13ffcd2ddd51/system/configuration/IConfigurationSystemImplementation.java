@@ -98,7 +98,10 @@ public class IConfigurationSystemImplementation extends NetObject implements ICo
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IConfigurationSystemImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -140,6 +143,14 @@ public class IConfigurationSystemImplementation extends NetObject implements ICo
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetConfig.
+     *
+     * @param configKey the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.IConfigurationSystem.GetConfig" target="_top">.NET documentation</a>
+     */
     public NetObject GetConfig(java.lang.String configKey) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -155,6 +166,12 @@ public class IConfigurationSystemImplementation extends NetObject implements ICo
         }
     }
 
+    /**
+     * Invokes the .NET member Init.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.IConfigurationSystem.Init" target="_top">.NET documentation</a>
+     */
     public void Init() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

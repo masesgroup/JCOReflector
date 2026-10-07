@@ -101,7 +101,10 @@ public class CreateInstanceBinder extends system.dynamic.DynamicMetaObjectBinder
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CreateInstanceBinder(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,26 @@ public class CreateInstanceBinder extends system.dynamic.DynamicMetaObjectBinder
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Bind.
+     *
+     * @param target the argument of type {@code DynamicMetaObject}
+     * @param args the argument of type {@code DynamicMetaObject[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Dynamic.CreateInstanceBinder.Bind" target="_top">.NET documentation</a>
+     */
     public DynamicMetaObject Bind(DynamicMetaObject target, DynamicMetaObject[] args) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -169,6 +192,15 @@ public class CreateInstanceBinder extends system.dynamic.DynamicMetaObjectBinder
         }
     }
 
+    /**
+     * Invokes the .NET member FallbackCreateInstance.
+     *
+     * @param target the argument of type {@code DynamicMetaObject}
+     * @param args the argument of type {@code DynamicMetaObject[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Dynamic.CreateInstanceBinder.FallbackCreateInstance" target="_top">.NET documentation</a>
+     */
     public DynamicMetaObject FallbackCreateInstance(DynamicMetaObject target, DynamicMetaObject[] args) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +216,16 @@ public class CreateInstanceBinder extends system.dynamic.DynamicMetaObjectBinder
         }
     }
 
+    /**
+     * Invokes the .NET member FallbackCreateInstance.
+     *
+     * @param target the argument of type {@code DynamicMetaObject}
+     * @param args the argument of type {@code DynamicMetaObject[]}
+     * @param errorSuggestion the argument of type {@code DynamicMetaObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Dynamic.CreateInstanceBinder.FallbackCreateInstance" target="_top">.NET documentation</a>
+     */
     public DynamicMetaObject FallbackCreateInstance(DynamicMetaObject target, DynamicMetaObject[] args, DynamicMetaObject errorSuggestion) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +245,13 @@ public class CreateInstanceBinder extends system.dynamic.DynamicMetaObjectBinder
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CallInfo.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Dynamic.CreateInstanceBinder.CallInfo" target="_top">.NET documentation</a>
+     */
     public CallInfo getCallInfo() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

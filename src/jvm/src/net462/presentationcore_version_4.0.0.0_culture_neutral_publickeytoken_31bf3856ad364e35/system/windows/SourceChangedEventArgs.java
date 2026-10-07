@@ -102,7 +102,10 @@ public class SourceChangedEventArgs extends system.windows.RoutedEventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SourceChangedEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,14 @@ public class SourceChangedEventArgs extends system.windows.RoutedEventArgs  {
     public SourceChangedEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param oldSource the argument of type {@code PresentationSource}
+     * @param newSource the argument of type {@code PresentationSource}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.SourceChangedEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public SourceChangedEventArgs(PresentationSource oldSource, PresentationSource newSource) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -162,6 +173,16 @@ public class SourceChangedEventArgs extends system.windows.RoutedEventArgs  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param oldSource the argument of type {@code PresentationSource}
+     * @param newSource the argument of type {@code PresentationSource}
+     * @param element the argument of type {@code IInputElement}
+     * @param oldParent the argument of type {@code IInputElement}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.SourceChangedEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public SourceChangedEventArgs(PresentationSource oldSource, PresentationSource newSource, IInputElement element, IInputElement oldParent) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -181,6 +202,13 @@ public class SourceChangedEventArgs extends system.windows.RoutedEventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Element.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.SourceChangedEventArgs.Element" target="_top">.NET documentation</a>
+     */
     public IInputElement getElement() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -196,6 +224,13 @@ public class SourceChangedEventArgs extends system.windows.RoutedEventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OldParent.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.SourceChangedEventArgs.OldParent" target="_top">.NET documentation</a>
+     */
     public IInputElement getOldParent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -211,6 +246,17 @@ public class SourceChangedEventArgs extends system.windows.RoutedEventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NewSource.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.SourceChangedEventArgs.NewSource" target="_top">.NET documentation</a>
+     */
     public PresentationSource getNewSource() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -226,6 +272,17 @@ public class SourceChangedEventArgs extends system.windows.RoutedEventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OldSource.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.SourceChangedEventArgs.OldSource" target="_top">.NET documentation</a>
+     */
     public PresentationSource getOldSource() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

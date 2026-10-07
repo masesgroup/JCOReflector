@@ -107,7 +107,10 @@ public class IDataAdapterImplementation extends NetObject implements IDataAdapte
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IDataAdapterImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,14 @@ public class IDataAdapterImplementation extends NetObject implements IDataAdapte
 
     // Methods section
     
+    /**
+     * Invokes the .NET member Fill.
+     *
+     * @param dataSet the argument of type {@code DataSet}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDataAdapter.Fill" target="_top">.NET documentation</a>
+     */
     public int Fill(DataSet dataSet) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +200,14 @@ public class IDataAdapterImplementation extends NetObject implements IDataAdapte
         }
     }
 
+    /**
+     * Invokes the .NET member Update.
+     *
+     * @param dataSet the argument of type {@code DataSet}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDataAdapter.Update" target="_top">.NET documentation</a>
+     */
     public int Update(DataSet dataSet) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -229,6 +248,15 @@ public class IDataAdapterImplementation extends NetObject implements IDataAdapte
         }
     }
 
+    /**
+     * Invokes the .NET member FillSchema.
+     *
+     * @param dataSet the argument of type {@code DataSet}
+     * @param schemaType the argument of type {@code SchemaType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDataAdapter.FillSchema" target="_top">.NET documentation</a>
+     */
     public DataTable[] FillSchema(DataSet dataSet, SchemaType schemaType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -250,6 +278,13 @@ public class IDataAdapterImplementation extends NetObject implements IDataAdapte
         }
     }
 
+    /**
+     * Invokes the .NET member GetFillParameters.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDataAdapter.GetFillParameters" target="_top">.NET documentation</a>
+     */
     public IDataParameter[] GetFillParameters() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -275,6 +310,13 @@ public class IDataAdapterImplementation extends NetObject implements IDataAdapte
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property TableMappings.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDataAdapter.TableMappings" target="_top">.NET documentation</a>
+     */
     public ITableMappingCollection getTableMappings() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -290,6 +332,13 @@ public class IDataAdapterImplementation extends NetObject implements IDataAdapte
         }
     }
 
+    /**
+     * Gets the value of the .NET property MissingMappingAction.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDataAdapter.MissingMappingAction" target="_top">.NET documentation</a>
+     */
     public MissingMappingAction getMissingMappingAction() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -305,6 +354,13 @@ public class IDataAdapterImplementation extends NetObject implements IDataAdapte
         }
     }
 
+    /**
+     * Sets the value of the .NET property MissingMappingAction.
+     *
+     * @param MissingMappingAction the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDataAdapter.MissingMappingAction" target="_top">.NET documentation</a>
+     */
     public void setMissingMappingAction(MissingMappingAction MissingMappingAction) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -315,6 +371,13 @@ public class IDataAdapterImplementation extends NetObject implements IDataAdapte
         }
     }
 
+    /**
+     * Gets the value of the .NET property MissingSchemaAction.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDataAdapter.MissingSchemaAction" target="_top">.NET documentation</a>
+     */
     public MissingSchemaAction getMissingSchemaAction() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -330,6 +393,13 @@ public class IDataAdapterImplementation extends NetObject implements IDataAdapte
         }
     }
 
+    /**
+     * Sets the value of the .NET property MissingSchemaAction.
+     *
+     * @param MissingSchemaAction the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDataAdapter.MissingSchemaAction" target="_top">.NET documentation</a>
+     */
     public void setMissingSchemaAction(MissingSchemaAction MissingSchemaAction) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

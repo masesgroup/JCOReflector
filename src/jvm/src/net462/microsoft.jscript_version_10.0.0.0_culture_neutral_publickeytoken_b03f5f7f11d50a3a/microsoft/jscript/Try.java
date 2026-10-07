@@ -100,7 +100,10 @@ public class Try extends microsoft.jscript.AST  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Try(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,22 @@ public class Try extends microsoft.jscript.AST  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member JScriptExceptionValue.
+     *
+     * @param e the argument of type {@code NetObject}
+     * @param engine the argument of type {@code VsaEngine}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Try.JScriptExceptionValue" target="_top">.NET documentation</a>
+     */
     public static NetObject JScriptExceptionValue(NetObject e, VsaEngine engine) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -170,6 +189,23 @@ public class Try extends microsoft.jscript.AST  {
         }
     }
 
+    /**
+     * Invokes the .NET member PushHandlerScope.
+     *
+     * @param engine the argument of type {@code VsaEngine}
+     * @param id the argument of type {@code java.lang.String}
+     * @param scopeId the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Try.PushHandlerScope" target="_top">.NET documentation</a>
+     */
     public static void PushHandlerScope(VsaEngine engine, java.lang.String id, int scopeId) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

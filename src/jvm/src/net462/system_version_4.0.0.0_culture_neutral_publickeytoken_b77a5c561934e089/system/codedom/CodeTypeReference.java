@@ -103,7 +103,10 @@ public class CodeTypeReference extends system.codedom.CodeObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CodeTypeReference(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,12 @@ public class CodeTypeReference extends system.codedom.CodeObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeTypeReference.-ctor" target="_top">.NET documentation</a>
+     */
     public CodeTypeReference() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -160,6 +169,17 @@ public class CodeTypeReference extends system.codedom.CodeObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param typeParameter the argument of type {@code CodeTypeParameter}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeTypeReference.-ctor" target="_top">.NET documentation</a>
+     */
     public CodeTypeReference(CodeTypeParameter typeParameter) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +190,14 @@ public class CodeTypeReference extends system.codedom.CodeObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param arrayType the argument of type {@code CodeTypeReference}
+     * @param rank the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeTypeReference.-ctor" target="_top">.NET documentation</a>
+     */
     public CodeTypeReference(CodeTypeReference arrayType, int rank) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -180,6 +208,17 @@ public class CodeTypeReference extends system.codedom.CodeObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param typeName the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeTypeReference.-ctor" target="_top">.NET documentation</a>
+     */
     public CodeTypeReference(java.lang.String typeName) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
@@ -190,6 +229,18 @@ public class CodeTypeReference extends system.codedom.CodeObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param baseType the argument of type {@code java.lang.String}
+     * @param rank the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeTypeReference.-ctor" target="_top">.NET documentation</a>
+     */
     public CodeTypeReference(java.lang.String baseType, int rank) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
@@ -200,6 +251,18 @@ public class CodeTypeReference extends system.codedom.CodeObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param typeName the argument of type {@code java.lang.String}
+     * @param typeArguments the argument of type {@code CodeTypeReference...}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeTypeReference.-ctor" target="_top">.NET documentation</a>
+     */
     public CodeTypeReference(java.lang.String typeName, CodeTypeReference... typeArguments) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
@@ -210,6 +273,19 @@ public class CodeTypeReference extends system.codedom.CodeObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param typeName the argument of type {@code java.lang.String}
+     * @param codeTypeReferenceOption the argument of type {@code CodeTypeReferenceOptions}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeTypeReference.-ctor" target="_top">.NET documentation</a>
+     */
     public CodeTypeReference(java.lang.String typeName, CodeTypeReferenceOptions codeTypeReferenceOption) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
@@ -220,6 +296,16 @@ public class CodeTypeReference extends system.codedom.CodeObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param type the argument of type {@code NetType}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeTypeReference.-ctor" target="_top">.NET documentation</a>
+     */
     public CodeTypeReference(NetType type) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.IndexOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -230,6 +316,17 @@ public class CodeTypeReference extends system.codedom.CodeObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param type the argument of type {@code NetType}
+     * @param codeTypeReferenceOption the argument of type {@code CodeTypeReferenceOptions}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeTypeReference.-ctor" target="_top">.NET documentation</a>
+     */
     public CodeTypeReference(NetType type, CodeTypeReferenceOptions codeTypeReferenceOption) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.IndexOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -248,6 +345,13 @@ public class CodeTypeReference extends system.codedom.CodeObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ArrayRank.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeTypeReference.ArrayRank" target="_top">.NET documentation</a>
+     */
     public int getArrayRank() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -288,6 +392,13 @@ public class CodeTypeReference extends system.codedom.CodeObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ArrayRank.
+     *
+     * @param ArrayRank the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeTypeReference.ArrayRank" target="_top">.NET documentation</a>
+     */
     public void setArrayRank(int ArrayRank) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -298,6 +409,13 @@ public class CodeTypeReference extends system.codedom.CodeObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ArrayElementType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeTypeReference.ArrayElementType" target="_top">.NET documentation</a>
+     */
     public CodeTypeReference getArrayElementType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -313,6 +431,13 @@ public class CodeTypeReference extends system.codedom.CodeObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ArrayElementType.
+     *
+     * @param ArrayElementType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeTypeReference.ArrayElementType" target="_top">.NET documentation</a>
+     */
     public void setArrayElementType(CodeTypeReference ArrayElementType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -323,6 +448,13 @@ public class CodeTypeReference extends system.codedom.CodeObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TypeArguments.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeTypeReference.TypeArguments" target="_top">.NET documentation</a>
+     */
     public CodeTypeReferenceCollection getTypeArguments() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -338,6 +470,13 @@ public class CodeTypeReference extends system.codedom.CodeObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Options.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeTypeReference.Options" target="_top">.NET documentation</a>
+     */
     public CodeTypeReferenceOptions getOptions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -353,6 +492,13 @@ public class CodeTypeReference extends system.codedom.CodeObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Options.
+     *
+     * @param Options the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeTypeReference.Options" target="_top">.NET documentation</a>
+     */
     public void setOptions(CodeTypeReferenceOptions Options) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -363,6 +509,20 @@ public class CodeTypeReference extends system.codedom.CodeObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property BaseType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeTypeReference.BaseType" target="_top">.NET documentation</a>
+     */
     public java.lang.String getBaseType() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -377,6 +537,17 @@ public class CodeTypeReference extends system.codedom.CodeObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property BaseType.
+     *
+     * @param BaseType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeTypeReference.BaseType" target="_top">.NET documentation</a>
+     */
     public void setBaseType(java.lang.String BaseType) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

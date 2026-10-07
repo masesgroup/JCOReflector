@@ -104,7 +104,10 @@ public class TypedTableBaseExtensions extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TypedTableBaseExtensions(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,26 @@ public class TypedTableBaseExtensions extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Select.
+     *
+     * @param <TRow> the type of the generic argument TRow
+     * @param <S> the type of the generic argument S
+     * @param source the argument of type {@code TypedTableBase_1}
+     * @param selector the argument of type {@code Func_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.TypedTableBaseExtensions.Select" target="_top">.NET documentation</a>
+     */
     public static <TRow extends IJCOBridgeReflected, S extends IJCOBridgeReflected> EnumerableRowCollection_1 Select(TypedTableBase_1 source, Func_2 selector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -172,6 +195,24 @@ public class TypedTableBaseExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AsEnumerable.
+     *
+     * @param <TRow> the type of the generic argument TRow
+     * @param source the argument of type {@code TypedTableBase_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.TypedTableBaseExtensions.AsEnumerable" target="_top">.NET documentation</a>
+     */
     public static <TRow extends IJCOBridgeReflected> EnumerableRowCollection_1 AsEnumerable(TypedTableBase_1 source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -187,6 +228,25 @@ public class TypedTableBaseExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Where.
+     *
+     * @param <TRow> the type of the generic argument TRow
+     * @param source the argument of type {@code TypedTableBase_1}
+     * @param predicate the argument of type {@code Func_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.TypedTableBaseExtensions.Where" target="_top">.NET documentation</a>
+     */
     public static <TRow extends IJCOBridgeReflected> EnumerableRowCollection_1 Where(TypedTableBase_1 source, Func_2 predicate) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -202,6 +262,27 @@ public class TypedTableBaseExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member OrderBy.
+     *
+     * @param <TRow> the type of the generic argument TRow
+     * @param <TKey> the type of the generic argument TKey
+     * @param source the argument of type {@code TypedTableBase_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @param comparer the argument of type {@code IComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.TypedTableBaseExtensions.OrderBy" target="_top">.NET documentation</a>
+     */
     public static <TRow extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> OrderedEnumerableRowCollection_1 OrderBy(TypedTableBase_1 source, Func_2 keySelector, IComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -217,6 +298,26 @@ public class TypedTableBaseExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member OrderBy.
+     *
+     * @param <TRow> the type of the generic argument TRow
+     * @param <TKey> the type of the generic argument TKey
+     * @param source the argument of type {@code TypedTableBase_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.TypedTableBaseExtensions.OrderBy" target="_top">.NET documentation</a>
+     */
     public static <TRow extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> OrderedEnumerableRowCollection_1 OrderBy(TypedTableBase_1 source, Func_2 keySelector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -232,6 +333,27 @@ public class TypedTableBaseExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member OrderByDescending.
+     *
+     * @param <TRow> the type of the generic argument TRow
+     * @param <TKey> the type of the generic argument TKey
+     * @param source the argument of type {@code TypedTableBase_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @param comparer the argument of type {@code IComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.TypedTableBaseExtensions.OrderByDescending" target="_top">.NET documentation</a>
+     */
     public static <TRow extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> OrderedEnumerableRowCollection_1 OrderByDescending(TypedTableBase_1 source, Func_2 keySelector, IComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -247,6 +369,26 @@ public class TypedTableBaseExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member OrderByDescending.
+     *
+     * @param <TRow> the type of the generic argument TRow
+     * @param <TKey> the type of the generic argument TKey
+     * @param source the argument of type {@code TypedTableBase_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.TypedTableBaseExtensions.OrderByDescending" target="_top">.NET documentation</a>
+     */
     public static <TRow extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> OrderedEnumerableRowCollection_1 OrderByDescending(TypedTableBase_1 source, Func_2 keySelector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

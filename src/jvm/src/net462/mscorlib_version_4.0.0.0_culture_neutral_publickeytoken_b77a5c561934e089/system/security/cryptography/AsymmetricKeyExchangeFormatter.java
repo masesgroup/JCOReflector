@@ -99,7 +99,10 @@ public class AsymmetricKeyExchangeFormatter extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public AsymmetricKeyExchangeFormatter(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,14 @@ public class AsymmetricKeyExchangeFormatter extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CreateKeyExchange.
+     *
+     * @param data the argument of type {@code byte[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.AsymmetricKeyExchangeFormatter.CreateKeyExchange" target="_top">.NET documentation</a>
+     */
     public byte[] CreateKeyExchange(byte[] data) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -175,6 +186,14 @@ public class AsymmetricKeyExchangeFormatter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateKeyExchange.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.AsymmetricKeyExchangeFormatter.CreateKeyExchange" target="_top">.NET documentation</a>
+     */
     public byte[] CreateKeyExchange(JCORefOut dupParam0) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +217,15 @@ public class AsymmetricKeyExchangeFormatter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateKeyExchange.
+     *
+     * @param data the argument of type {@code byte[]}
+     * @param symAlgType the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.AsymmetricKeyExchangeFormatter.CreateKeyExchange" target="_top">.NET documentation</a>
+     */
     public byte[] CreateKeyExchange(byte[] data, NetType symAlgType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -221,6 +249,15 @@ public class AsymmetricKeyExchangeFormatter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateKeyExchange.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.AsymmetricKeyExchangeFormatter.CreateKeyExchange" target="_top">.NET documentation</a>
+     */
     public byte[] CreateKeyExchange(JCORefOut dupParam0, NetType dupParam1) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -244,6 +281,13 @@ public class AsymmetricKeyExchangeFormatter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetKey.
+     *
+     * @param key the argument of type {@code AsymmetricAlgorithm}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.AsymmetricKeyExchangeFormatter.SetKey" target="_top">.NET documentation</a>
+     */
     public void SetKey(AsymmetricAlgorithm key) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -258,6 +302,13 @@ public class AsymmetricKeyExchangeFormatter extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Parameters.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.AsymmetricKeyExchangeFormatter.Parameters" target="_top">.NET documentation</a>
+     */
     public java.lang.String getParameters() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -103,7 +103,10 @@ public class SspiSecurityToken extends system.identitymodel.tokens.SecurityToken
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SspiSecurityToken(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,23 @@ public class SspiSecurityToken extends system.identitymodel.tokens.SecurityToken
     public SspiSecurityToken() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param networkCredential the argument of type {@code NetworkCredential}
+     * @param extractGroupsForWindowsAccounts the argument of type {@code boolean}
+     * @param allowUnauthenticatedCallers the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.SspiSecurityToken.-ctor" target="_top">.NET documentation</a>
+     */
     public SspiSecurityToken(NetworkCredential networkCredential, boolean extractGroupsForWindowsAccounts, boolean allowUnauthenticatedCallers) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -163,6 +183,23 @@ public class SspiSecurityToken extends system.identitymodel.tokens.SecurityToken
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param impersonationLevel the argument of type {@code TokenImpersonationLevel}
+     * @param allowNtlm the argument of type {@code boolean}
+     * @param networkCredential the argument of type {@code NetworkCredential}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.SspiSecurityToken.-ctor" target="_top">.NET documentation</a>
+     */
     public SspiSecurityToken(TokenImpersonationLevel impersonationLevel, boolean allowNtlm, NetworkCredential networkCredential) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -182,6 +219,13 @@ public class SspiSecurityToken extends system.identitymodel.tokens.SecurityToken
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AllowNtlm.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.SspiSecurityToken.AllowNtlm" target="_top">.NET documentation</a>
+     */
     public boolean getAllowNtlm() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -196,6 +240,13 @@ public class SspiSecurityToken extends system.identitymodel.tokens.SecurityToken
         }
     }
 
+    /**
+     * Gets the value of the .NET property AllowUnauthenticatedCallers.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.SspiSecurityToken.AllowUnauthenticatedCallers" target="_top">.NET documentation</a>
+     */
     public boolean getAllowUnauthenticatedCallers() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -210,6 +261,13 @@ public class SspiSecurityToken extends system.identitymodel.tokens.SecurityToken
         }
     }
 
+    /**
+     * Gets the value of the .NET property ExtractGroupsForWindowsAccounts.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.SspiSecurityToken.ExtractGroupsForWindowsAccounts" target="_top">.NET documentation</a>
+     */
     public boolean getExtractGroupsForWindowsAccounts() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -224,6 +282,13 @@ public class SspiSecurityToken extends system.identitymodel.tokens.SecurityToken
         }
     }
 
+    /**
+     * Gets the value of the .NET property NetworkCredential.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.SspiSecurityToken.NetworkCredential" target="_top">.NET documentation</a>
+     */
     public NetworkCredential getNetworkCredential() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -239,6 +304,13 @@ public class SspiSecurityToken extends system.identitymodel.tokens.SecurityToken
         }
     }
 
+    /**
+     * Gets the value of the .NET property ImpersonationLevel.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.SspiSecurityToken.ImpersonationLevel" target="_top">.NET documentation</a>
+     */
     public TokenImpersonationLevel getImpersonationLevel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

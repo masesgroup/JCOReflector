@@ -103,7 +103,10 @@ public class AuditRule_1<T extends IJCOBridgeReflected> extends system.security.
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public AuditRule_1(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,21 @@ public class AuditRule_1<T extends IJCOBridgeReflected> extends system.security.
     public AuditRule_1() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param identity the argument of type {@code IdentityReference}
+     * @param rights the argument of type {@code T}
+     * @param flags the argument of type {@code AuditFlags}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.AuditRule-1.-ctor" target="_top">.NET documentation</a>
+     */
     public AuditRule_1(IdentityReference identity, T rights, AuditFlags flags) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +183,24 @@ public class AuditRule_1<T extends IJCOBridgeReflected> extends system.security.
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param identity the argument of type {@code IdentityReference}
+     * @param rights the argument of type {@code T}
+     * @param inheritanceFlags the argument of type {@code InheritanceFlags}
+     * @param propagationFlags the argument of type {@code PropagationFlags}
+     * @param flags the argument of type {@code AuditFlags}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.AuditRule-1.-ctor" target="_top">.NET documentation</a>
+     */
     public AuditRule_1(IdentityReference identity, T rights, InheritanceFlags inheritanceFlags, PropagationFlags propagationFlags, AuditFlags flags) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
@@ -177,6 +213,21 @@ public class AuditRule_1<T extends IJCOBridgeReflected> extends system.security.
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param identity the argument of type {@code java.lang.String}
+     * @param rights the argument of type {@code T}
+     * @param flags the argument of type {@code AuditFlags}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.AuditRule-1.-ctor" target="_top">.NET documentation</a>
+     */
     public AuditRule_1(java.lang.String identity, T rights, AuditFlags flags) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         try {
             // add reference to assemblyName.dll file
@@ -189,6 +240,23 @@ public class AuditRule_1<T extends IJCOBridgeReflected> extends system.security.
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param identity the argument of type {@code java.lang.String}
+     * @param rights the argument of type {@code T}
+     * @param inheritanceFlags the argument of type {@code InheritanceFlags}
+     * @param propagationFlags the argument of type {@code PropagationFlags}
+     * @param flags the argument of type {@code AuditFlags}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.AuditRule-1.-ctor" target="_top">.NET documentation</a>
+     */
     public AuditRule_1(java.lang.String identity, T rights, InheritanceFlags inheritanceFlags, PropagationFlags propagationFlags, AuditFlags flags) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         try {
             // add reference to assemblyName.dll file
@@ -210,6 +278,13 @@ public class AuditRule_1<T extends IJCOBridgeReflected> extends system.security.
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Rights.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.AuditRule-1.Rights" target="_top">.NET documentation</a>
+     */
     public T getRights() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

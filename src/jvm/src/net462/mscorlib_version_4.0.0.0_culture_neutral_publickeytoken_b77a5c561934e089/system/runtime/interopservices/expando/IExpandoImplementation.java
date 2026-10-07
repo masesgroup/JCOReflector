@@ -108,7 +108,10 @@ public class IExpandoImplementation extends NetObject implements IExpando {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IExpandoImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,21 @@ public class IExpandoImplementation extends NetObject implements IExpando {
 
     // Methods section
     
+    /**
+     * Invokes the .NET member InvokeMember.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param invokeAttr the argument of type {@code BindingFlags}
+     * @param binder the argument of type {@code Binder}
+     * @param target the argument of type {@code NetObject}
+     * @param args the argument of type {@code NetObject[]}
+     * @param modifiers the argument of type {@code ParameterModifier[]}
+     * @param culture the argument of type {@code CultureInfo}
+     * @param namedParameters the argument of type {@code java.lang.String[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Expando.IExpando.InvokeMember" target="_top">.NET documentation</a>
+     */
     public NetObject InvokeMember(java.lang.String name, BindingFlags invokeAttr, Binder binder, NetObject target, NetObject[] args, ParameterModifier[] modifiers, CultureInfo culture, java.lang.String[] namedParameters) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -165,6 +183,21 @@ public class IExpandoImplementation extends NetObject implements IExpando {
         }
     }
 
+    /**
+     * Invokes the .NET member InvokeMember.
+     *
+     * @param dupParam0 the argument of type {@code java.lang.String}
+     * @param dupParam1 the argument of type {@code BindingFlags}
+     * @param dupParam2 the argument of type {@code Binder}
+     * @param dupParam3 the argument of type {@code NetObject}
+     * @param dupParam4 the argument of type {@code NetObject[]}
+     * @param dupParam5 the argument of type {@code ParameterModifier[]}
+     * @param dupParam6 the argument of type {@code CultureInfo}
+     * @param dupParam7 the argument of type {@code JCORefOut}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Expando.IExpando.InvokeMember" target="_top">.NET documentation</a>
+     */
     public NetObject InvokeMember(java.lang.String dupParam0, BindingFlags dupParam1, Binder dupParam2, NetObject dupParam3, NetObject[] dupParam4, ParameterModifier[] dupParam5, CultureInfo dupParam6, JCORefOut dupParam7) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +213,14 @@ public class IExpandoImplementation extends NetObject implements IExpando {
         }
     }
 
+    /**
+     * Invokes the .NET member AddField.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Expando.IExpando.AddField" target="_top">.NET documentation</a>
+     */
     public FieldInfo AddField(java.lang.String name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -195,6 +236,15 @@ public class IExpandoImplementation extends NetObject implements IExpando {
         }
     }
 
+    /**
+     * Invokes the .NET member GetField.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param bindingAttr the argument of type {@code BindingFlags}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Expando.IExpando.GetField" target="_top">.NET documentation</a>
+     */
     public FieldInfo GetField(java.lang.String name, BindingFlags bindingAttr) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -210,6 +260,14 @@ public class IExpandoImplementation extends NetObject implements IExpando {
         }
     }
 
+    /**
+     * Invokes the .NET member GetFields.
+     *
+     * @param bindingAttr the argument of type {@code BindingFlags}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Expando.IExpando.GetFields" target="_top">.NET documentation</a>
+     */
     public FieldInfo[] GetFields(BindingFlags bindingAttr) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -231,6 +289,15 @@ public class IExpandoImplementation extends NetObject implements IExpando {
         }
     }
 
+    /**
+     * Invokes the .NET member GetMember.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param bindingAttr the argument of type {@code BindingFlags}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Expando.IExpando.GetMember" target="_top">.NET documentation</a>
+     */
     public MemberInfo[] GetMember(java.lang.String name, BindingFlags bindingAttr) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -252,6 +319,14 @@ public class IExpandoImplementation extends NetObject implements IExpando {
         }
     }
 
+    /**
+     * Invokes the .NET member GetMembers.
+     *
+     * @param bindingAttr the argument of type {@code BindingFlags}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Expando.IExpando.GetMembers" target="_top">.NET documentation</a>
+     */
     public MemberInfo[] GetMembers(BindingFlags bindingAttr) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -273,6 +348,15 @@ public class IExpandoImplementation extends NetObject implements IExpando {
         }
     }
 
+    /**
+     * Invokes the .NET member GetMethod.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param bindingAttr the argument of type {@code BindingFlags}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Expando.IExpando.GetMethod" target="_top">.NET documentation</a>
+     */
     public MethodInfo GetMethod(java.lang.String name, BindingFlags bindingAttr) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -288,6 +372,18 @@ public class IExpandoImplementation extends NetObject implements IExpando {
         }
     }
 
+    /**
+     * Invokes the .NET member GetMethod.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param bindingAttr the argument of type {@code BindingFlags}
+     * @param binder the argument of type {@code Binder}
+     * @param types the argument of type {@code NetType[]}
+     * @param modifiers the argument of type {@code ParameterModifier[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Expando.IExpando.GetMethod" target="_top">.NET documentation</a>
+     */
     public MethodInfo GetMethod(java.lang.String name, BindingFlags bindingAttr, Binder binder, NetType[] types, ParameterModifier[] modifiers) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -303,6 +399,14 @@ public class IExpandoImplementation extends NetObject implements IExpando {
         }
     }
 
+    /**
+     * Invokes the .NET member GetMethods.
+     *
+     * @param bindingAttr the argument of type {@code BindingFlags}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Expando.IExpando.GetMethods" target="_top">.NET documentation</a>
+     */
     public MethodInfo[] GetMethods(BindingFlags bindingAttr) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -324,6 +428,14 @@ public class IExpandoImplementation extends NetObject implements IExpando {
         }
     }
 
+    /**
+     * Invokes the .NET member AddProperty.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Expando.IExpando.AddProperty" target="_top">.NET documentation</a>
+     */
     public PropertyInfo AddProperty(java.lang.String name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -339,6 +451,15 @@ public class IExpandoImplementation extends NetObject implements IExpando {
         }
     }
 
+    /**
+     * Invokes the .NET member GetProperty.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param bindingAttr the argument of type {@code BindingFlags}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Expando.IExpando.GetProperty" target="_top">.NET documentation</a>
+     */
     public PropertyInfo GetProperty(java.lang.String name, BindingFlags bindingAttr) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -354,6 +475,19 @@ public class IExpandoImplementation extends NetObject implements IExpando {
         }
     }
 
+    /**
+     * Invokes the .NET member GetProperty.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param bindingAttr the argument of type {@code BindingFlags}
+     * @param binder the argument of type {@code Binder}
+     * @param returnType the argument of type {@code NetType}
+     * @param types the argument of type {@code NetType[]}
+     * @param modifiers the argument of type {@code ParameterModifier[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Expando.IExpando.GetProperty" target="_top">.NET documentation</a>
+     */
     public PropertyInfo GetProperty(java.lang.String name, BindingFlags bindingAttr, Binder binder, NetType returnType, NetType[] types, ParameterModifier[] modifiers) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -369,6 +503,14 @@ public class IExpandoImplementation extends NetObject implements IExpando {
         }
     }
 
+    /**
+     * Invokes the .NET member GetProperties.
+     *
+     * @param bindingAttr the argument of type {@code BindingFlags}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Expando.IExpando.GetProperties" target="_top">.NET documentation</a>
+     */
     public PropertyInfo[] GetProperties(BindingFlags bindingAttr) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -390,6 +532,13 @@ public class IExpandoImplementation extends NetObject implements IExpando {
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveMember.
+     *
+     * @param m the argument of type {@code MemberInfo}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Expando.IExpando.RemoveMember" target="_top">.NET documentation</a>
+     */
     public void RemoveMember(MemberInfo m) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -404,6 +553,13 @@ public class IExpandoImplementation extends NetObject implements IExpando {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property UnderlyingSystemType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Expando.IExpando.UnderlyingSystemType" target="_top">.NET documentation</a>
+     */
     public NetType getUnderlyingSystemType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -101,7 +101,10 @@ public class DebugInfoGenerator extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DebugInfoGenerator(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,13 @@ public class DebugInfoGenerator extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CreatePdbGenerator.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.DebugInfoGenerator.CreatePdbGenerator" target="_top">.NET documentation</a>
+     */
     public static DebugInfoGenerator CreatePdbGenerator() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -169,6 +179,15 @@ public class DebugInfoGenerator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member MarkSequencePoint.
+     *
+     * @param method the argument of type {@code LambdaExpression}
+     * @param ilOffset the argument of type {@code int}
+     * @param sequencePoint the argument of type {@code DebugInfoExpression}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.DebugInfoGenerator.MarkSequencePoint" target="_top">.NET documentation</a>
+     */
     public void MarkSequencePoint(LambdaExpression method, int ilOffset, DebugInfoExpression sequencePoint) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

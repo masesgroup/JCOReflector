@@ -100,7 +100,10 @@ public class SerializerWriterCollator extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SerializerWriterCollator(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,12 @@ public class SerializerWriterCollator extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member BeginBatchWrite.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Documents.Serialization.SerializerWriterCollator.BeginBatchWrite" target="_top">.NET documentation</a>
+     */
     public void BeginBatchWrite() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -163,6 +172,12 @@ public class SerializerWriterCollator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Cancel.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Documents.Serialization.SerializerWriterCollator.Cancel" target="_top">.NET documentation</a>
+     */
     public void Cancel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -173,6 +188,12 @@ public class SerializerWriterCollator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CancelAsync.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Documents.Serialization.SerializerWriterCollator.CancelAsync" target="_top">.NET documentation</a>
+     */
     public void CancelAsync() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +204,12 @@ public class SerializerWriterCollator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member EndBatchWrite.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Documents.Serialization.SerializerWriterCollator.EndBatchWrite" target="_top">.NET documentation</a>
+     */
     public void EndBatchWrite() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +220,14 @@ public class SerializerWriterCollator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Write.
+     *
+     * @param visual the argument of type {@code Visual}
+     * @param printTicket the argument of type {@code PrintTicket}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Documents.Serialization.SerializerWriterCollator.Write" target="_top">.NET documentation</a>
+     */
     public void Write(Visual visual, PrintTicket printTicket) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +238,13 @@ public class SerializerWriterCollator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Write.
+     *
+     * @param visual the argument of type {@code Visual}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Documents.Serialization.SerializerWriterCollator.Write" target="_top">.NET documentation</a>
+     */
     public void Write(Visual visual) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -213,6 +255,14 @@ public class SerializerWriterCollator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member WriteAsync.
+     *
+     * @param visual the argument of type {@code Visual}
+     * @param userState the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Documents.Serialization.SerializerWriterCollator.WriteAsync" target="_top">.NET documentation</a>
+     */
     public void WriteAsync(Visual visual, NetObject userState) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -223,6 +273,15 @@ public class SerializerWriterCollator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member WriteAsync.
+     *
+     * @param visual the argument of type {@code Visual}
+     * @param printTicket the argument of type {@code PrintTicket}
+     * @param userState the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Documents.Serialization.SerializerWriterCollator.WriteAsync" target="_top">.NET documentation</a>
+     */
     public void WriteAsync(Visual visual, PrintTicket printTicket, NetObject userState) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -233,6 +292,14 @@ public class SerializerWriterCollator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member WriteAsync.
+     *
+     * @param visual the argument of type {@code Visual}
+     * @param printTicket the argument of type {@code PrintTicket}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Documents.Serialization.SerializerWriterCollator.WriteAsync" target="_top">.NET documentation</a>
+     */
     public void WriteAsync(Visual visual, PrintTicket printTicket) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -243,6 +310,13 @@ public class SerializerWriterCollator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member WriteAsync.
+     *
+     * @param visual the argument of type {@code Visual}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Documents.Serialization.SerializerWriterCollator.WriteAsync" target="_top">.NET documentation</a>
+     */
     public void WriteAsync(Visual visual) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

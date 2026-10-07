@@ -99,7 +99,10 @@ public class MathObject extends microsoft.jscript.JSObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public MathObject(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,14 @@ public class MathObject extends microsoft.jscript.JSObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member abs.
+     *
+     * @param d the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.MathObject.abs" target="_top">.NET documentation</a>
+     */
     public static double abs(double d) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -194,6 +205,14 @@ public class MathObject extends microsoft.jscript.JSObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member acos.
+     *
+     * @param x the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.MathObject.acos" target="_top">.NET documentation</a>
+     */
     public static double acos(double x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -234,6 +253,14 @@ public class MathObject extends microsoft.jscript.JSObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member asin.
+     *
+     * @param x the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.MathObject.asin" target="_top">.NET documentation</a>
+     */
     public static double asin(double x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -274,6 +301,14 @@ public class MathObject extends microsoft.jscript.JSObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member atan.
+     *
+     * @param x the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.MathObject.atan" target="_top">.NET documentation</a>
+     */
     public static double atan(double x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -314,6 +349,15 @@ public class MathObject extends microsoft.jscript.JSObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member atan2.
+     *
+     * @param dy the argument of type {@code double}
+     * @param dx the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.MathObject.atan2" target="_top">.NET documentation</a>
+     */
     public static double atan2(double dy, double dx) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -354,6 +398,14 @@ public class MathObject extends microsoft.jscript.JSObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ceil.
+     *
+     * @param x the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.MathObject.ceil" target="_top">.NET documentation</a>
+     */
     public static double ceil(double x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -394,6 +446,14 @@ public class MathObject extends microsoft.jscript.JSObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member cos.
+     *
+     * @param x the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.MathObject.cos" target="_top">.NET documentation</a>
+     */
     public static double cos(double x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -434,6 +494,14 @@ public class MathObject extends microsoft.jscript.JSObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member exp.
+     *
+     * @param x the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.MathObject.exp" target="_top">.NET documentation</a>
+     */
     public static double exp(double x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -474,6 +542,14 @@ public class MathObject extends microsoft.jscript.JSObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member floor.
+     *
+     * @param x the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.MathObject.floor" target="_top">.NET documentation</a>
+     */
     public static double floor(double x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -514,6 +590,14 @@ public class MathObject extends microsoft.jscript.JSObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member log.
+     *
+     * @param x the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.MathObject.log" target="_top">.NET documentation</a>
+     */
     public static double log(double x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -554,6 +638,29 @@ public class MathObject extends microsoft.jscript.JSObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member max.
+     *
+     * @param x the argument of type {@code NetObject}
+     * @param y the argument of type {@code NetObject}
+     * @param args the argument of type {@code NetObject...}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.ArithmeticException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.MathObject.max" target="_top">.NET documentation</a>
+     */
     public static double max(NetObject x, NetObject y, NetObject... args) throws Throwable, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, microsoft.jscript.JScriptException, system.IndexOutOfRangeException, system.ArgumentNullException, system.MissingMethodException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.FormatException, system.OverflowException, system.ArithmeticException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -594,6 +701,29 @@ public class MathObject extends microsoft.jscript.JSObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member min.
+     *
+     * @param x the argument of type {@code NetObject}
+     * @param y the argument of type {@code NetObject}
+     * @param args the argument of type {@code NetObject...}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.ArithmeticException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.MathObject.min" target="_top">.NET documentation</a>
+     */
     public static double min(NetObject x, NetObject y, NetObject... args) throws Throwable, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, microsoft.jscript.JScriptException, system.IndexOutOfRangeException, system.ArgumentNullException, system.MissingMethodException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.FormatException, system.OverflowException, system.ArithmeticException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -634,6 +764,16 @@ public class MathObject extends microsoft.jscript.JSObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member pow.
+     *
+     * @param dx the argument of type {@code double}
+     * @param dy the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArithmeticException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.MathObject.pow" target="_top">.NET documentation</a>
+     */
     public static double pow(double dx, double dy) throws Throwable, system.ArithmeticException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -674,6 +814,13 @@ public class MathObject extends microsoft.jscript.JSObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member random.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.MathObject.random" target="_top">.NET documentation</a>
+     */
     public static double random() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -714,6 +861,14 @@ public class MathObject extends microsoft.jscript.JSObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member round.
+     *
+     * @param d the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.MathObject.round" target="_top">.NET documentation</a>
+     */
     public static double round(double d) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -754,6 +909,14 @@ public class MathObject extends microsoft.jscript.JSObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member sin.
+     *
+     * @param x the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.MathObject.sin" target="_top">.NET documentation</a>
+     */
     public static double sin(double x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -794,6 +957,14 @@ public class MathObject extends microsoft.jscript.JSObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member sqrt.
+     *
+     * @param x the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.MathObject.sqrt" target="_top">.NET documentation</a>
+     */
     public static double sqrt(double x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -834,6 +1005,14 @@ public class MathObject extends microsoft.jscript.JSObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member tan.
+     *
+     * @param x the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.MathObject.tan" target="_top">.NET documentation</a>
+     */
     public static double tan(double x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

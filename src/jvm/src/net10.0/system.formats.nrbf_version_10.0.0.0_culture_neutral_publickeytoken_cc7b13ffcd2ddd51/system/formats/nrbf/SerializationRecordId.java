@@ -100,7 +100,10 @@ public class SerializationRecordId extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SerializationRecordId(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,14 @@ public class SerializationRecordId extends system.ValueType  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Equals.
+     *
+     * @param other the argument of type {@code SerializationRecordId}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Formats.Nrbf.SerializationRecordId.Equals" target="_top">.NET documentation</a>
+     */
     public boolean Equals(SerializationRecordId other) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

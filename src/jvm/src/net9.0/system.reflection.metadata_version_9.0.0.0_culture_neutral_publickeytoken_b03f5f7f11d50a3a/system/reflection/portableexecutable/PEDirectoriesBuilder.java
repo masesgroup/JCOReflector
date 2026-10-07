@@ -99,7 +99,10 @@ public class PEDirectoriesBuilder extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PEDirectoriesBuilder(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class PEDirectoriesBuilder extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.PEDirectoriesBuilder.-ctor" target="_top">.NET documentation</a>
+     */
     public PEDirectoriesBuilder() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +173,13 @@ public class PEDirectoriesBuilder extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AddressOfEntryPoint.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.PEDirectoriesBuilder.AddressOfEntryPoint" target="_top">.NET documentation</a>
+     */
     public int getAddressOfEntryPoint() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +220,13 @@ public class PEDirectoriesBuilder extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AddressOfEntryPoint.
+     *
+     * @param AddressOfEntryPoint the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.PEDirectoriesBuilder.AddressOfEntryPoint" target="_top">.NET documentation</a>
+     */
     public void setAddressOfEntryPoint(int AddressOfEntryPoint) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -214,6 +237,13 @@ public class PEDirectoriesBuilder extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property BaseRelocationTable.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.PEDirectoriesBuilder.BaseRelocationTable" target="_top">.NET documentation</a>
+     */
     public DirectoryEntry getBaseRelocationTable() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -229,6 +259,13 @@ public class PEDirectoriesBuilder extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property BaseRelocationTable.
+     *
+     * @param BaseRelocationTable the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.PEDirectoriesBuilder.BaseRelocationTable" target="_top">.NET documentation</a>
+     */
     public void setBaseRelocationTable(DirectoryEntry BaseRelocationTable) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -239,6 +276,13 @@ public class PEDirectoriesBuilder extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property BoundImportTable.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.PEDirectoriesBuilder.BoundImportTable" target="_top">.NET documentation</a>
+     */
     public DirectoryEntry getBoundImportTable() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -254,6 +298,13 @@ public class PEDirectoriesBuilder extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property BoundImportTable.
+     *
+     * @param BoundImportTable the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.PEDirectoriesBuilder.BoundImportTable" target="_top">.NET documentation</a>
+     */
     public void setBoundImportTable(DirectoryEntry BoundImportTable) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -264,6 +315,13 @@ public class PEDirectoriesBuilder extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CopyrightTable.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.PEDirectoriesBuilder.CopyrightTable" target="_top">.NET documentation</a>
+     */
     public DirectoryEntry getCopyrightTable() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -279,6 +337,13 @@ public class PEDirectoriesBuilder extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CopyrightTable.
+     *
+     * @param CopyrightTable the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.PEDirectoriesBuilder.CopyrightTable" target="_top">.NET documentation</a>
+     */
     public void setCopyrightTable(DirectoryEntry CopyrightTable) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -289,6 +354,13 @@ public class PEDirectoriesBuilder extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CorHeaderTable.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.PEDirectoriesBuilder.CorHeaderTable" target="_top">.NET documentation</a>
+     */
     public DirectoryEntry getCorHeaderTable() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -304,6 +376,13 @@ public class PEDirectoriesBuilder extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CorHeaderTable.
+     *
+     * @param CorHeaderTable the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.PEDirectoriesBuilder.CorHeaderTable" target="_top">.NET documentation</a>
+     */
     public void setCorHeaderTable(DirectoryEntry CorHeaderTable) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -314,6 +393,13 @@ public class PEDirectoriesBuilder extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DebugTable.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.PEDirectoriesBuilder.DebugTable" target="_top">.NET documentation</a>
+     */
     public DirectoryEntry getDebugTable() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -329,6 +415,13 @@ public class PEDirectoriesBuilder extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DebugTable.
+     *
+     * @param DebugTable the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.PEDirectoriesBuilder.DebugTable" target="_top">.NET documentation</a>
+     */
     public void setDebugTable(DirectoryEntry DebugTable) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -339,6 +432,13 @@ public class PEDirectoriesBuilder extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DelayImportTable.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.PEDirectoriesBuilder.DelayImportTable" target="_top">.NET documentation</a>
+     */
     public DirectoryEntry getDelayImportTable() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -354,6 +454,13 @@ public class PEDirectoriesBuilder extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DelayImportTable.
+     *
+     * @param DelayImportTable the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.PEDirectoriesBuilder.DelayImportTable" target="_top">.NET documentation</a>
+     */
     public void setDelayImportTable(DirectoryEntry DelayImportTable) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -364,6 +471,13 @@ public class PEDirectoriesBuilder extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ExceptionTable.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.PEDirectoriesBuilder.ExceptionTable" target="_top">.NET documentation</a>
+     */
     public DirectoryEntry getExceptionTable() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -379,6 +493,13 @@ public class PEDirectoriesBuilder extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ExceptionTable.
+     *
+     * @param ExceptionTable the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.PEDirectoriesBuilder.ExceptionTable" target="_top">.NET documentation</a>
+     */
     public void setExceptionTable(DirectoryEntry ExceptionTable) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -389,6 +510,13 @@ public class PEDirectoriesBuilder extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ExportTable.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.PEDirectoriesBuilder.ExportTable" target="_top">.NET documentation</a>
+     */
     public DirectoryEntry getExportTable() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -404,6 +532,13 @@ public class PEDirectoriesBuilder extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ExportTable.
+     *
+     * @param ExportTable the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.PEDirectoriesBuilder.ExportTable" target="_top">.NET documentation</a>
+     */
     public void setExportTable(DirectoryEntry ExportTable) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -414,6 +549,13 @@ public class PEDirectoriesBuilder extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property GlobalPointerTable.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.PEDirectoriesBuilder.GlobalPointerTable" target="_top">.NET documentation</a>
+     */
     public DirectoryEntry getGlobalPointerTable() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -429,6 +571,13 @@ public class PEDirectoriesBuilder extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property GlobalPointerTable.
+     *
+     * @param GlobalPointerTable the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.PEDirectoriesBuilder.GlobalPointerTable" target="_top">.NET documentation</a>
+     */
     public void setGlobalPointerTable(DirectoryEntry GlobalPointerTable) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -439,6 +588,13 @@ public class PEDirectoriesBuilder extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ImportAddressTable.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.PEDirectoriesBuilder.ImportAddressTable" target="_top">.NET documentation</a>
+     */
     public DirectoryEntry getImportAddressTable() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -454,6 +610,13 @@ public class PEDirectoriesBuilder extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ImportAddressTable.
+     *
+     * @param ImportAddressTable the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.PEDirectoriesBuilder.ImportAddressTable" target="_top">.NET documentation</a>
+     */
     public void setImportAddressTable(DirectoryEntry ImportAddressTable) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -464,6 +627,13 @@ public class PEDirectoriesBuilder extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ImportTable.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.PEDirectoriesBuilder.ImportTable" target="_top">.NET documentation</a>
+     */
     public DirectoryEntry getImportTable() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -479,6 +649,13 @@ public class PEDirectoriesBuilder extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ImportTable.
+     *
+     * @param ImportTable the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.PEDirectoriesBuilder.ImportTable" target="_top">.NET documentation</a>
+     */
     public void setImportTable(DirectoryEntry ImportTable) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -489,6 +666,13 @@ public class PEDirectoriesBuilder extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LoadConfigTable.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.PEDirectoriesBuilder.LoadConfigTable" target="_top">.NET documentation</a>
+     */
     public DirectoryEntry getLoadConfigTable() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -504,6 +688,13 @@ public class PEDirectoriesBuilder extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property LoadConfigTable.
+     *
+     * @param LoadConfigTable the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.PEDirectoriesBuilder.LoadConfigTable" target="_top">.NET documentation</a>
+     */
     public void setLoadConfigTable(DirectoryEntry LoadConfigTable) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -514,6 +705,13 @@ public class PEDirectoriesBuilder extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ResourceTable.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.PEDirectoriesBuilder.ResourceTable" target="_top">.NET documentation</a>
+     */
     public DirectoryEntry getResourceTable() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -529,6 +727,13 @@ public class PEDirectoriesBuilder extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ResourceTable.
+     *
+     * @param ResourceTable the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.PEDirectoriesBuilder.ResourceTable" target="_top">.NET documentation</a>
+     */
     public void setResourceTable(DirectoryEntry ResourceTable) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -539,6 +744,13 @@ public class PEDirectoriesBuilder extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ThreadLocalStorageTable.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.PEDirectoriesBuilder.ThreadLocalStorageTable" target="_top">.NET documentation</a>
+     */
     public DirectoryEntry getThreadLocalStorageTable() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -554,6 +766,13 @@ public class PEDirectoriesBuilder extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ThreadLocalStorageTable.
+     *
+     * @param ThreadLocalStorageTable the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.PEDirectoriesBuilder.ThreadLocalStorageTable" target="_top">.NET documentation</a>
+     */
     public void setThreadLocalStorageTable(DirectoryEntry ThreadLocalStorageTable) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

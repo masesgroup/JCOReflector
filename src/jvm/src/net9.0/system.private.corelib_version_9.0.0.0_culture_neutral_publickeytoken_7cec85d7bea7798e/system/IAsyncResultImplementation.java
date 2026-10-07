@@ -99,7 +99,10 @@ public class IAsyncResultImplementation extends NetObject implements IAsyncResul
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IAsyncResultImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -145,6 +148,13 @@ public class IAsyncResultImplementation extends NetObject implements IAsyncResul
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CompletedSynchronously.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IAsyncResult.CompletedSynchronously" target="_top">.NET documentation</a>
+     */
     public boolean getCompletedSynchronously() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -159,6 +169,13 @@ public class IAsyncResultImplementation extends NetObject implements IAsyncResul
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsCompleted.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IAsyncResult.IsCompleted" target="_top">.NET documentation</a>
+     */
     public boolean getIsCompleted() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -173,6 +190,13 @@ public class IAsyncResultImplementation extends NetObject implements IAsyncResul
         }
     }
 
+    /**
+     * Gets the value of the .NET property AsyncState.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IAsyncResult.AsyncState" target="_top">.NET documentation</a>
+     */
     public NetObject getAsyncState() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +212,13 @@ public class IAsyncResultImplementation extends NetObject implements IAsyncResul
         }
     }
 
+    /**
+     * Gets the value of the .NET property AsyncWaitHandle.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IAsyncResult.AsyncWaitHandle" target="_top">.NET documentation</a>
+     */
     public WaitHandle getAsyncWaitHandle() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

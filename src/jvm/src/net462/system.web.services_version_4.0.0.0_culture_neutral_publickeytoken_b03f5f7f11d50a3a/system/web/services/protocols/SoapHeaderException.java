@@ -105,7 +105,9 @@ public class SoapHeaderException extends system.web.services.protocols.SoapExcep
         super();
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
      */
     public SoapHeaderException(java.lang.Object instance) {
         super(instance);
@@ -166,6 +168,14 @@ public class SoapHeaderException extends system.web.services.protocols.SoapExcep
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param message the argument of type {@code java.lang.String}
+     * @param code the argument of type {@code XmlQualifiedName}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapHeaderException.-ctor" target="_top">.NET documentation</a>
+     */
     public SoapHeaderException(java.lang.String message, XmlQualifiedName code) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -176,6 +186,15 @@ public class SoapHeaderException extends system.web.services.protocols.SoapExcep
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param message the argument of type {@code java.lang.String}
+     * @param code the argument of type {@code XmlQualifiedName}
+     * @param innerException the argument of type {@code NetException}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapHeaderException.-ctor" target="_top">.NET documentation</a>
+     */
     public SoapHeaderException(java.lang.String message, XmlQualifiedName code, NetException innerException) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -186,6 +205,15 @@ public class SoapHeaderException extends system.web.services.protocols.SoapExcep
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param message the argument of type {@code java.lang.String}
+     * @param code the argument of type {@code XmlQualifiedName}
+     * @param actor the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapHeaderException.-ctor" target="_top">.NET documentation</a>
+     */
     public SoapHeaderException(java.lang.String message, XmlQualifiedName code, java.lang.String actor) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -196,6 +224,16 @@ public class SoapHeaderException extends system.web.services.protocols.SoapExcep
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param message the argument of type {@code java.lang.String}
+     * @param code the argument of type {@code XmlQualifiedName}
+     * @param actor the argument of type {@code java.lang.String}
+     * @param innerException the argument of type {@code NetException}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapHeaderException.-ctor" target="_top">.NET documentation</a>
+     */
     public SoapHeaderException(java.lang.String message, XmlQualifiedName code, java.lang.String actor, NetException innerException) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -206,6 +244,19 @@ public class SoapHeaderException extends system.web.services.protocols.SoapExcep
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param message the argument of type {@code java.lang.String}
+     * @param code the argument of type {@code XmlQualifiedName}
+     * @param actor the argument of type {@code java.lang.String}
+     * @param role the argument of type {@code java.lang.String}
+     * @param lang the argument of type {@code java.lang.String}
+     * @param subCode the argument of type {@code SoapFaultSubCode}
+     * @param innerException the argument of type {@code NetException}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapHeaderException.-ctor" target="_top">.NET documentation</a>
+     */
     public SoapHeaderException(java.lang.String message, XmlQualifiedName code, java.lang.String actor, java.lang.String role, java.lang.String lang, SoapFaultSubCode subCode, NetException innerException) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -216,6 +267,18 @@ public class SoapHeaderException extends system.web.services.protocols.SoapExcep
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param message the argument of type {@code java.lang.String}
+     * @param code the argument of type {@code XmlQualifiedName}
+     * @param actor the argument of type {@code java.lang.String}
+     * @param role the argument of type {@code java.lang.String}
+     * @param subCode the argument of type {@code SoapFaultSubCode}
+     * @param innerException the argument of type {@code NetException}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapHeaderException.-ctor" target="_top">.NET documentation</a>
+     */
     public SoapHeaderException(java.lang.String message, XmlQualifiedName code, java.lang.String actor, java.lang.String role, SoapFaultSubCode subCode, NetException innerException) throws Throwable {
         try {
             // add reference to assemblyName.dll file

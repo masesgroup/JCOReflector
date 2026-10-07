@@ -100,7 +100,10 @@ public class ExportFactory_2<T extends IJCOBridgeReflected, TMetadata extends IJ
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ExportFactory_2(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,15 @@ public class ExportFactory_2<T extends IJCOBridgeReflected, TMetadata extends IJ
     public ExportFactory_2() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param exportLifetimeContextCreator the argument of type {@code Func_1}
+     * @param metadata the argument of type {@code TMetadata}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.ExportFactory-2.-ctor" target="_top">.NET documentation</a>
+     */
     public ExportFactory_2(Func_1 exportLifetimeContextCreator, TMetadata metadata) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -171,6 +183,13 @@ public class ExportFactory_2<T extends IJCOBridgeReflected, TMetadata extends IJ
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Metadata.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.ExportFactory-2.Metadata" target="_top">.NET documentation</a>
+     */
     public TMetadata getMetadata() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

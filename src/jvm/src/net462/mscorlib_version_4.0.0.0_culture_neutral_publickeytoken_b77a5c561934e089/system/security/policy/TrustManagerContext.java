@@ -100,7 +100,10 @@ public class TrustManagerContext extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TrustManagerContext(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class TrustManagerContext extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.TrustManagerContext.-ctor" target="_top">.NET documentation</a>
+     */
     public TrustManagerContext() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -157,6 +166,13 @@ public class TrustManagerContext extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param uiContext the argument of type {@code TrustManagerUIContext}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.TrustManagerContext.-ctor" target="_top">.NET documentation</a>
+     */
     public TrustManagerContext(TrustManagerUIContext uiContext) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -175,6 +191,13 @@ public class TrustManagerContext extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IgnorePersistedDecision.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.TrustManagerContext.IgnorePersistedDecision" target="_top">.NET documentation</a>
+     */
     public boolean getIgnorePersistedDecision() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +212,13 @@ public class TrustManagerContext extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IgnorePersistedDecision.
+     *
+     * @param IgnorePersistedDecision the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.TrustManagerContext.IgnorePersistedDecision" target="_top">.NET documentation</a>
+     */
     public void setIgnorePersistedDecision(boolean IgnorePersistedDecision) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -199,6 +229,13 @@ public class TrustManagerContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property KeepAlive.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.TrustManagerContext.KeepAlive" target="_top">.NET documentation</a>
+     */
     public boolean getKeepAlive() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -213,6 +250,13 @@ public class TrustManagerContext extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property KeepAlive.
+     *
+     * @param KeepAlive the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.TrustManagerContext.KeepAlive" target="_top">.NET documentation</a>
+     */
     public void setKeepAlive(boolean KeepAlive) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -223,6 +267,13 @@ public class TrustManagerContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NoPrompt.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.TrustManagerContext.NoPrompt" target="_top">.NET documentation</a>
+     */
     public boolean getNoPrompt() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -237,6 +288,13 @@ public class TrustManagerContext extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property NoPrompt.
+     *
+     * @param NoPrompt the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.TrustManagerContext.NoPrompt" target="_top">.NET documentation</a>
+     */
     public void setNoPrompt(boolean NoPrompt) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -247,6 +305,13 @@ public class TrustManagerContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Persist.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.TrustManagerContext.Persist" target="_top">.NET documentation</a>
+     */
     public boolean getPersist() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -261,6 +326,13 @@ public class TrustManagerContext extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Persist.
+     *
+     * @param Persist the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.TrustManagerContext.Persist" target="_top">.NET documentation</a>
+     */
     public void setPersist(boolean Persist) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -271,6 +343,13 @@ public class TrustManagerContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PreviousApplicationIdentity.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.TrustManagerContext.PreviousApplicationIdentity" target="_top">.NET documentation</a>
+     */
     public ApplicationIdentity getPreviousApplicationIdentity() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -286,6 +365,13 @@ public class TrustManagerContext extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PreviousApplicationIdentity.
+     *
+     * @param PreviousApplicationIdentity the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.TrustManagerContext.PreviousApplicationIdentity" target="_top">.NET documentation</a>
+     */
     public void setPreviousApplicationIdentity(ApplicationIdentity PreviousApplicationIdentity) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -296,6 +382,13 @@ public class TrustManagerContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UIContext.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.TrustManagerContext.UIContext" target="_top">.NET documentation</a>
+     */
     public TrustManagerUIContext getUIContext() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -311,6 +404,13 @@ public class TrustManagerContext extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property UIContext.
+     *
+     * @param UIContext the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.TrustManagerContext.UIContext" target="_top">.NET documentation</a>
+     */
     public void setUIContext(TrustManagerUIContext UIContext) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

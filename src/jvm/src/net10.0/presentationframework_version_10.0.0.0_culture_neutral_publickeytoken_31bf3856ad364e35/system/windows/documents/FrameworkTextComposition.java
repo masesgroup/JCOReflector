@@ -99,7 +99,10 @@ public class FrameworkTextComposition extends system.windows.input.TextCompositi
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public FrameworkTextComposition(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,12 @@ public class FrameworkTextComposition extends system.windows.input.TextCompositi
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Complete.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Documents.FrameworkTextComposition.Complete" target="_top">.NET documentation</a>
+     */
     public void Complete() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -168,6 +177,13 @@ public class FrameworkTextComposition extends system.windows.input.TextCompositi
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CompositionLength.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Documents.FrameworkTextComposition.CompositionLength" target="_top">.NET documentation</a>
+     */
     public int getCompositionLength() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +224,13 @@ public class FrameworkTextComposition extends system.windows.input.TextCompositi
         }
     }
 
+    /**
+     * Gets the value of the .NET property CompositionOffset.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Documents.FrameworkTextComposition.CompositionOffset" target="_top">.NET documentation</a>
+     */
     public int getCompositionOffset() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -248,6 +271,13 @@ public class FrameworkTextComposition extends system.windows.input.TextCompositi
         }
     }
 
+    /**
+     * Gets the value of the .NET property ResultLength.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Documents.FrameworkTextComposition.ResultLength" target="_top">.NET documentation</a>
+     */
     public int getResultLength() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -288,6 +318,13 @@ public class FrameworkTextComposition extends system.windows.input.TextCompositi
         }
     }
 
+    /**
+     * Gets the value of the .NET property ResultOffset.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Documents.FrameworkTextComposition.ResultOffset" target="_top">.NET documentation</a>
+     */
     public int getResultOffset() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

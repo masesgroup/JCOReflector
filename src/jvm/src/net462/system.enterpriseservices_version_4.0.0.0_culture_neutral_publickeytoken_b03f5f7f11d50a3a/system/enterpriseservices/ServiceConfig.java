@@ -110,7 +110,10 @@ public class ServiceConfig extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ServiceConfig(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,15 @@ public class ServiceConfig extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ServiceConfig.-ctor" target="_top">.NET documentation</a>
+     */
     public ServiceConfig() throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
@@ -175,6 +187,13 @@ public class ServiceConfig extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property COMTIIntrinsicsEnabled.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ServiceConfig.COMTIIntrinsicsEnabled" target="_top">.NET documentation</a>
+     */
     public boolean getCOMTIIntrinsicsEnabled() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +208,13 @@ public class ServiceConfig extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property COMTIIntrinsicsEnabled.
+     *
+     * @param COMTIIntrinsicsEnabled the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ServiceConfig.COMTIIntrinsicsEnabled" target="_top">.NET documentation</a>
+     */
     public void setCOMTIIntrinsicsEnabled(boolean COMTIIntrinsicsEnabled) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -199,6 +225,13 @@ public class ServiceConfig extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IISIntrinsicsEnabled.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ServiceConfig.IISIntrinsicsEnabled" target="_top">.NET documentation</a>
+     */
     public boolean getIISIntrinsicsEnabled() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -213,6 +246,13 @@ public class ServiceConfig extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IISIntrinsicsEnabled.
+     *
+     * @param IISIntrinsicsEnabled the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ServiceConfig.IISIntrinsicsEnabled" target="_top">.NET documentation</a>
+     */
     public void setIISIntrinsicsEnabled(boolean IISIntrinsicsEnabled) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -223,6 +263,13 @@ public class ServiceConfig extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TrackingEnabled.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ServiceConfig.TrackingEnabled" target="_top">.NET documentation</a>
+     */
     public boolean getTrackingEnabled() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -237,6 +284,13 @@ public class ServiceConfig extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TrackingEnabled.
+     *
+     * @param TrackingEnabled the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ServiceConfig.TrackingEnabled" target="_top">.NET documentation</a>
+     */
     public void setTrackingEnabled(boolean TrackingEnabled) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -247,6 +301,13 @@ public class ServiceConfig extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TransactionTimeout.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ServiceConfig.TransactionTimeout" target="_top">.NET documentation</a>
+     */
     public int getTransactionTimeout() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -287,6 +348,13 @@ public class ServiceConfig extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TransactionTimeout.
+     *
+     * @param TransactionTimeout the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ServiceConfig.TransactionTimeout" target="_top">.NET documentation</a>
+     */
     public void setTransactionTimeout(int TransactionTimeout) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -297,6 +365,13 @@ public class ServiceConfig extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Binding.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ServiceConfig.Binding" target="_top">.NET documentation</a>
+     */
     public BindingOption getBinding() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -312,6 +387,13 @@ public class ServiceConfig extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Binding.
+     *
+     * @param Binding the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ServiceConfig.Binding" target="_top">.NET documentation</a>
+     */
     public void setBinding(BindingOption Binding) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -322,6 +404,13 @@ public class ServiceConfig extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Inheritance.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ServiceConfig.Inheritance" target="_top">.NET documentation</a>
+     */
     public InheritanceOption getInheritance() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -337,6 +426,24 @@ public class ServiceConfig extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Inheritance.
+     *
+     * @param Inheritance the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ServiceConfig.Inheritance" target="_top">.NET documentation</a>
+     */
     public void setInheritance(InheritanceOption Inheritance) throws Throwable, system.NotImplementedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -347,6 +454,13 @@ public class ServiceConfig extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property BringYourOwnTransaction.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ServiceConfig.BringYourOwnTransaction" target="_top">.NET documentation</a>
+     */
     public ITransaction getBringYourOwnTransaction() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -362,6 +476,13 @@ public class ServiceConfig extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property BringYourOwnTransaction.
+     *
+     * @param BringYourOwnTransaction the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ServiceConfig.BringYourOwnTransaction" target="_top">.NET documentation</a>
+     */
     public void setBringYourOwnTransaction(ITransaction BringYourOwnTransaction) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -372,6 +493,13 @@ public class ServiceConfig extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PartitionOption.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ServiceConfig.PartitionOption" target="_top">.NET documentation</a>
+     */
     public PartitionOption getPartitionOption() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -387,6 +515,13 @@ public class ServiceConfig extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PartitionOption.
+     *
+     * @param PartitionOption the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ServiceConfig.PartitionOption" target="_top">.NET documentation</a>
+     */
     public void setPartitionOption(PartitionOption PartitionOption) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -397,6 +532,13 @@ public class ServiceConfig extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SxsOption.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ServiceConfig.SxsOption" target="_top">.NET documentation</a>
+     */
     public SxsOption getSxsOption() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -412,6 +554,13 @@ public class ServiceConfig extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SxsOption.
+     *
+     * @param SxsOption the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ServiceConfig.SxsOption" target="_top">.NET documentation</a>
+     */
     public void setSxsOption(SxsOption SxsOption) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -422,6 +571,13 @@ public class ServiceConfig extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Synchronization.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ServiceConfig.Synchronization" target="_top">.NET documentation</a>
+     */
     public SynchronizationOption getSynchronization() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -437,6 +593,13 @@ public class ServiceConfig extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Synchronization.
+     *
+     * @param Synchronization the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ServiceConfig.Synchronization" target="_top">.NET documentation</a>
+     */
     public void setSynchronization(SynchronizationOption Synchronization) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -447,6 +610,13 @@ public class ServiceConfig extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ThreadPool.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ServiceConfig.ThreadPool" target="_top">.NET documentation</a>
+     */
     public ThreadPoolOption getThreadPool() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -462,6 +632,13 @@ public class ServiceConfig extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ThreadPool.
+     *
+     * @param ThreadPool the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ServiceConfig.ThreadPool" target="_top">.NET documentation</a>
+     */
     public void setThreadPool(ThreadPoolOption ThreadPool) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -472,6 +649,13 @@ public class ServiceConfig extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsolationLevel.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ServiceConfig.IsolationLevel" target="_top">.NET documentation</a>
+     */
     public TransactionIsolationLevel getIsolationLevel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -487,6 +671,13 @@ public class ServiceConfig extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsolationLevel.
+     *
+     * @param IsolationLevel the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ServiceConfig.IsolationLevel" target="_top">.NET documentation</a>
+     */
     public void setIsolationLevel(TransactionIsolationLevel IsolationLevel) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -497,6 +688,13 @@ public class ServiceConfig extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Transaction.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ServiceConfig.Transaction" target="_top">.NET documentation</a>
+     */
     public TransactionOption getTransaction() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -512,6 +710,13 @@ public class ServiceConfig extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Transaction.
+     *
+     * @param Transaction the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ServiceConfig.Transaction" target="_top">.NET documentation</a>
+     */
     public void setTransaction(TransactionOption Transaction) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -522,6 +727,13 @@ public class ServiceConfig extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PartitionId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ServiceConfig.PartitionId" target="_top">.NET documentation</a>
+     */
     public Guid getPartitionId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -537,6 +749,16 @@ public class ServiceConfig extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PartitionId.
+     *
+     * @param PartitionId the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ServiceConfig.PartitionId" target="_top">.NET documentation</a>
+     */
     public void setPartitionId(Guid PartitionId) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -547,6 +769,13 @@ public class ServiceConfig extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SxsDirectory.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ServiceConfig.SxsDirectory" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSxsDirectory() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -561,6 +790,16 @@ public class ServiceConfig extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SxsDirectory.
+     *
+     * @param SxsDirectory the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ServiceConfig.SxsDirectory" target="_top">.NET documentation</a>
+     */
     public void setSxsDirectory(java.lang.String SxsDirectory) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -571,6 +810,13 @@ public class ServiceConfig extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SxsName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ServiceConfig.SxsName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSxsName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -585,6 +831,16 @@ public class ServiceConfig extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SxsName.
+     *
+     * @param SxsName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ServiceConfig.SxsName" target="_top">.NET documentation</a>
+     */
     public void setSxsName(java.lang.String SxsName) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -595,6 +851,13 @@ public class ServiceConfig extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TipUrl.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ServiceConfig.TipUrl" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTipUrl() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -609,6 +872,16 @@ public class ServiceConfig extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TipUrl.
+     *
+     * @param TipUrl the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ServiceConfig.TipUrl" target="_top">.NET documentation</a>
+     */
     public void setTipUrl(java.lang.String TipUrl) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -619,6 +892,13 @@ public class ServiceConfig extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TrackingAppName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ServiceConfig.TrackingAppName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTrackingAppName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -633,6 +913,16 @@ public class ServiceConfig extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TrackingAppName.
+     *
+     * @param TrackingAppName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ServiceConfig.TrackingAppName" target="_top">.NET documentation</a>
+     */
     public void setTrackingAppName(java.lang.String TrackingAppName) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -643,6 +933,13 @@ public class ServiceConfig extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TrackingComponentName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ServiceConfig.TrackingComponentName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTrackingComponentName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -657,6 +954,16 @@ public class ServiceConfig extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TrackingComponentName.
+     *
+     * @param TrackingComponentName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ServiceConfig.TrackingComponentName" target="_top">.NET documentation</a>
+     */
     public void setTrackingComponentName(java.lang.String TrackingComponentName) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -667,6 +974,13 @@ public class ServiceConfig extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TransactionDescription.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ServiceConfig.TransactionDescription" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTransactionDescription() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -681,6 +995,16 @@ public class ServiceConfig extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TransactionDescription.
+     *
+     * @param TransactionDescription the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ServiceConfig.TransactionDescription" target="_top">.NET documentation</a>
+     */
     public void setTransactionDescription(java.lang.String TransactionDescription) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -691,6 +1015,38 @@ public class ServiceConfig extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property BringYourOwnSystemTransaction.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.reflection.AmbiguousMatchException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.transactions.TransactionException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.transactions.TransactionManagerCommunicationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ServiceConfig.BringYourOwnSystemTransaction" target="_top">.NET documentation</a>
+     */
     public Transaction getBringYourOwnSystemTransaction() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.reflection.AmbiguousMatchException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.transactions.TransactionException, system.OverflowException, system.transactions.TransactionManagerCommunicationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -706,6 +1062,30 @@ public class ServiceConfig extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property BringYourOwnSystemTransaction.
+     *
+     * @param BringYourOwnSystemTransaction the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.transactions.TransactionPromotionException if the .NET member raises it
+     * @throws system.transactions.TransactionException if the .NET member raises it
+     * @throws system.transactions.TransactionInDoubtException if the .NET member raises it
+     * @throws system.transactions.TransactionManagerCommunicationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ServiceConfig.BringYourOwnSystemTransaction" target="_top">.NET documentation</a>
+     */
     public void setBringYourOwnSystemTransaction(Transaction BringYourOwnSystemTransaction) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.transactions.TransactionPromotionException, system.transactions.TransactionException, system.transactions.TransactionInDoubtException, system.transactions.TransactionManagerCommunicationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

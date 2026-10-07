@@ -101,7 +101,10 @@ public class DataGridColumnReorderingEventArgs extends system.windows.controls.D
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DataGridColumnReorderingEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,13 @@ public class DataGridColumnReorderingEventArgs extends system.windows.controls.D
     public DataGridColumnReorderingEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param dataGridColumn the argument of type {@code DataGridColumn}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.DataGridColumnReorderingEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public DataGridColumnReorderingEventArgs(DataGridColumn dataGridColumn) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +180,13 @@ public class DataGridColumnReorderingEventArgs extends system.windows.controls.D
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Cancel.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.DataGridColumnReorderingEventArgs.Cancel" target="_top">.NET documentation</a>
+     */
     public boolean getCancel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +201,13 @@ public class DataGridColumnReorderingEventArgs extends system.windows.controls.D
         }
     }
 
+    /**
+     * Sets the value of the .NET property Cancel.
+     *
+     * @param Cancel the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.DataGridColumnReorderingEventArgs.Cancel" target="_top">.NET documentation</a>
+     */
     public void setCancel(boolean Cancel) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +218,13 @@ public class DataGridColumnReorderingEventArgs extends system.windows.controls.D
         }
     }
 
+    /**
+     * Gets the value of the .NET property DragIndicator.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.DataGridColumnReorderingEventArgs.DragIndicator" target="_top">.NET documentation</a>
+     */
     public Control getDragIndicator() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -209,6 +240,13 @@ public class DataGridColumnReorderingEventArgs extends system.windows.controls.D
         }
     }
 
+    /**
+     * Sets the value of the .NET property DragIndicator.
+     *
+     * @param DragIndicator the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.DataGridColumnReorderingEventArgs.DragIndicator" target="_top">.NET documentation</a>
+     */
     public void setDragIndicator(Control DragIndicator) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -219,6 +257,13 @@ public class DataGridColumnReorderingEventArgs extends system.windows.controls.D
         }
     }
 
+    /**
+     * Gets the value of the .NET property DropLocationIndicator.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.DataGridColumnReorderingEventArgs.DropLocationIndicator" target="_top">.NET documentation</a>
+     */
     public Control getDropLocationIndicator() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -234,6 +279,13 @@ public class DataGridColumnReorderingEventArgs extends system.windows.controls.D
         }
     }
 
+    /**
+     * Sets the value of the .NET property DropLocationIndicator.
+     *
+     * @param DropLocationIndicator the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.DataGridColumnReorderingEventArgs.DropLocationIndicator" target="_top">.NET documentation</a>
+     */
     public void setDropLocationIndicator(Control DropLocationIndicator) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

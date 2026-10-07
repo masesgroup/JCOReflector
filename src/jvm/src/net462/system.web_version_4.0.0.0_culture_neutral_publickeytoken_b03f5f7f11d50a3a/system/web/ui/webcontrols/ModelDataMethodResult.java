@@ -99,7 +99,10 @@ public class ModelDataMethodResult extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ModelDataMethodResult(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,15 @@ public class ModelDataMethodResult extends NetObject  {
     public ModelDataMethodResult() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param returnValue the argument of type {@code NetObject}
+     * @param outputParameters the argument of type {@code OrderedDictionary}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ModelDataMethodResult.-ctor" target="_top">.NET documentation</a>
+     */
     public ModelDataMethodResult(NetObject returnValue, OrderedDictionary outputParameters) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +180,13 @@ public class ModelDataMethodResult extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property OutputParameters.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ModelDataMethodResult.OutputParameters" target="_top">.NET documentation</a>
+     */
     public OrderedDictionary getOutputParameters() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +202,13 @@ public class ModelDataMethodResult extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ReturnValue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ModelDataMethodResult.ReturnValue" target="_top">.NET documentation</a>
+     */
     public NetObject getReturnValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +224,13 @@ public class ModelDataMethodResult extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ReturnValue.
+     *
+     * @param ReturnValue the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ModelDataMethodResult.ReturnValue" target="_top">.NET documentation</a>
+     */
     public void setReturnValue(NetObject ReturnValue) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

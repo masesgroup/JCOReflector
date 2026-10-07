@@ -101,7 +101,10 @@ public class PropertyReference_2<TOperand extends IJCOBridgeReflected, TResult e
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PropertyReference_2(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class PropertyReference_2<TOperand extends IJCOBridgeReflected, TResult e
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Expressions.PropertyReference-2.-ctor" target="_top">.NET documentation</a>
+     */
     public PropertyReference_2() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +177,13 @@ public class PropertyReference_2<TOperand extends IJCOBridgeReflected, TResult e
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Operand.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Expressions.PropertyReference-2.Operand" target="_top">.NET documentation</a>
+     */
     public InArgument_1 getOperand() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +199,13 @@ public class PropertyReference_2<TOperand extends IJCOBridgeReflected, TResult e
         }
     }
 
+    /**
+     * Sets the value of the .NET property Operand.
+     *
+     * @param Operand the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Expressions.PropertyReference-2.Operand" target="_top">.NET documentation</a>
+     */
     public void setOperand(InArgument_1 Operand) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +216,13 @@ public class PropertyReference_2<TOperand extends IJCOBridgeReflected, TResult e
         }
     }
 
+    /**
+     * Gets the value of the .NET property PropertyName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Expressions.PropertyReference-2.PropertyName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getPropertyName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +237,13 @@ public class PropertyReference_2<TOperand extends IJCOBridgeReflected, TResult e
         }
     }
 
+    /**
+     * Sets the value of the .NET property PropertyName.
+     *
+     * @param PropertyName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Expressions.PropertyReference-2.PropertyName" target="_top">.NET documentation</a>
+     */
     public void setPropertyName(java.lang.String PropertyName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

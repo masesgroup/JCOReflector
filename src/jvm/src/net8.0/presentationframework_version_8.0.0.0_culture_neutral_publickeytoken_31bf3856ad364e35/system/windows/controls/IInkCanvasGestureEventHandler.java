@@ -52,5 +52,11 @@ import system.windows.controls.InkCanvasGestureEventArgs;
  * @version 2.0.0.0
  */
 public interface IInkCanvasGestureEventHandler {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param sender the .NET argument of type {@code System.Object}
+     * @param e the .NET argument of type {@code System.Windows.Controls.InkCanvasGestureEventArgs}
+     */
     public void Invoke(NetObject sender, InkCanvasGestureEventArgs e);
 }

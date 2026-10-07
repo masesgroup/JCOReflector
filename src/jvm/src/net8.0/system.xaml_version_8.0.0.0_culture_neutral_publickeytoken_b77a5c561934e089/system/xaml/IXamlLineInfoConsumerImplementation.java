@@ -98,7 +98,10 @@ public class IXamlLineInfoConsumerImplementation extends NetObject implements IX
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IXamlLineInfoConsumerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -140,6 +143,14 @@ public class IXamlLineInfoConsumerImplementation extends NetObject implements IX
 
     // Methods section
     
+    /**
+     * Invokes the .NET member SetLineInfo.
+     *
+     * @param lineNumber the argument of type {@code int}
+     * @param linePosition the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.IXamlLineInfoConsumer.SetLineInfo" target="_top">.NET documentation</a>
+     */
     public void SetLineInfo(int lineNumber, int linePosition) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -154,6 +165,13 @@ public class IXamlLineInfoConsumerImplementation extends NetObject implements IX
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ShouldProvideLineInfo.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.IXamlLineInfoConsumer.ShouldProvideLineInfo" target="_top">.NET documentation</a>
+     */
     public boolean getShouldProvideLineInfo() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

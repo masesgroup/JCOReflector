@@ -98,7 +98,10 @@ public class TextEmbeddedObjectMetrics extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TextEmbeddedObjectMetrics(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,15 @@ public class TextEmbeddedObjectMetrics extends NetObject  {
     public TextEmbeddedObjectMetrics() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param width the argument of type {@code double}
+     * @param height the argument of type {@code double}
+     * @param baseline the argument of type {@code double}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextEmbeddedObjectMetrics.-ctor" target="_top">.NET documentation</a>
+     */
     public TextEmbeddedObjectMetrics(double width, double height, double baseline) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +179,13 @@ public class TextEmbeddedObjectMetrics extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Baseline.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextEmbeddedObjectMetrics.Baseline" target="_top">.NET documentation</a>
+     */
     public double getBaseline() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +226,13 @@ public class TextEmbeddedObjectMetrics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Height.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextEmbeddedObjectMetrics.Height" target="_top">.NET documentation</a>
+     */
     public double getHeight() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -247,6 +273,13 @@ public class TextEmbeddedObjectMetrics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Width.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextEmbeddedObjectMetrics.Width" target="_top">.NET documentation</a>
+     */
     public double getWidth() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -101,7 +101,10 @@ public class DbGeometry extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DbGeometry(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,15 @@ public class DbGeometry extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Contains.
+     *
+     * @param other the argument of type {@code DbGeometry}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeometry.Contains" target="_top">.NET documentation</a>
+     */
     public boolean Contains(DbGeometry other) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -170,6 +182,15 @@ public class DbGeometry extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Crosses.
+     *
+     * @param other the argument of type {@code DbGeometry}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeometry.Crosses" target="_top">.NET documentation</a>
+     */
     public boolean Crosses(DbGeometry other) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +205,15 @@ public class DbGeometry extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Disjoint.
+     *
+     * @param other the argument of type {@code DbGeometry}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeometry.Disjoint" target="_top">.NET documentation</a>
+     */
     public boolean Disjoint(DbGeometry other) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +228,15 @@ public class DbGeometry extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Intersects.
+     *
+     * @param other the argument of type {@code DbGeometry}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeometry.Intersects" target="_top">.NET documentation</a>
+     */
     public boolean Intersects(DbGeometry other) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -212,6 +251,15 @@ public class DbGeometry extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Overlaps.
+     *
+     * @param other the argument of type {@code DbGeometry}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeometry.Overlaps" target="_top">.NET documentation</a>
+     */
     public boolean Overlaps(DbGeometry other) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -226,6 +274,16 @@ public class DbGeometry extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Relate.
+     *
+     * @param other the argument of type {@code DbGeometry}
+     * @param matrix the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeometry.Relate" target="_top">.NET documentation</a>
+     */
     public boolean Relate(DbGeometry other, java.lang.String matrix) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -240,6 +298,15 @@ public class DbGeometry extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SpatialEquals.
+     *
+     * @param other the argument of type {@code DbGeometry}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeometry.SpatialEquals" target="_top">.NET documentation</a>
+     */
     public boolean SpatialEquals(DbGeometry other) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -254,6 +321,15 @@ public class DbGeometry extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Touches.
+     *
+     * @param other the argument of type {@code DbGeometry}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeometry.Touches" target="_top">.NET documentation</a>
+     */
     public boolean Touches(DbGeometry other) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -268,6 +344,15 @@ public class DbGeometry extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Within.
+     *
+     * @param other the argument of type {@code DbGeometry}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeometry.Within" target="_top">.NET documentation</a>
+     */
     public boolean Within(DbGeometry other) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -282,6 +367,13 @@ public class DbGeometry extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AsBinary.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeometry.AsBinary" target="_top">.NET documentation</a>
+     */
     public byte[] AsBinary() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -305,6 +397,16 @@ public class DbGeometry extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Buffer.
+     *
+     * @param distance the argument of type {@code Nullable_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeometry.Buffer" target="_top">.NET documentation</a>
+     */
     public DbGeometry Buffer(Nullable_1 distance) throws Throwable, system.ArgumentNullException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -320,6 +422,15 @@ public class DbGeometry extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Difference.
+     *
+     * @param other the argument of type {@code DbGeometry}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeometry.Difference" target="_top">.NET documentation</a>
+     */
     public DbGeometry Difference(DbGeometry other) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -335,6 +446,14 @@ public class DbGeometry extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ElementAt.
+     *
+     * @param index the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeometry.ElementAt" target="_top">.NET documentation</a>
+     */
     public DbGeometry ElementAt(int index) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -350,6 +469,15 @@ public class DbGeometry extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member FromBinary.
+     *
+     * @param wellKnownBinary the argument of type {@code byte[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeometry.FromBinary" target="_top">.NET documentation</a>
+     */
     public static DbGeometry FromBinary(byte[] wellKnownBinary) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -365,6 +493,15 @@ public class DbGeometry extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member FromBinary.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeometry.FromBinary" target="_top">.NET documentation</a>
+     */
     public static DbGeometry FromBinary(JCORefOut dupParam0) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -380,6 +517,16 @@ public class DbGeometry extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member FromBinary.
+     *
+     * @param wellKnownBinary the argument of type {@code byte[]}
+     * @param coordinateSystemId the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeometry.FromBinary" target="_top">.NET documentation</a>
+     */
     public static DbGeometry FromBinary(byte[] wellKnownBinary, int coordinateSystemId) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -395,6 +542,16 @@ public class DbGeometry extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member FromBinary.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeometry.FromBinary" target="_top">.NET documentation</a>
+     */
     public static DbGeometry FromBinary(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -410,6 +567,15 @@ public class DbGeometry extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member FromGml.
+     *
+     * @param geometryMarkup the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeometry.FromGml" target="_top">.NET documentation</a>
+     */
     public static DbGeometry FromGml(java.lang.String geometryMarkup) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -425,6 +591,16 @@ public class DbGeometry extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member FromGml.
+     *
+     * @param geometryMarkup the argument of type {@code java.lang.String}
+     * @param coordinateSystemId the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeometry.FromGml" target="_top">.NET documentation</a>
+     */
     public static DbGeometry FromGml(java.lang.String geometryMarkup, int coordinateSystemId) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -440,6 +616,15 @@ public class DbGeometry extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member FromText.
+     *
+     * @param wellKnownText the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeometry.FromText" target="_top">.NET documentation</a>
+     */
     public static DbGeometry FromText(java.lang.String wellKnownText) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -455,6 +640,16 @@ public class DbGeometry extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member FromText.
+     *
+     * @param wellKnownText the argument of type {@code java.lang.String}
+     * @param coordinateSystemId the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeometry.FromText" target="_top">.NET documentation</a>
+     */
     public static DbGeometry FromText(java.lang.String wellKnownText, int coordinateSystemId) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -470,6 +665,16 @@ public class DbGeometry extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GeometryCollectionFromBinary.
+     *
+     * @param geometryCollectionWellKnownBinary the argument of type {@code byte[]}
+     * @param coordinateSystemId the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeometry.GeometryCollectionFromBinary" target="_top">.NET documentation</a>
+     */
     public static DbGeometry GeometryCollectionFromBinary(byte[] geometryCollectionWellKnownBinary, int coordinateSystemId) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -485,6 +690,16 @@ public class DbGeometry extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GeometryCollectionFromBinary.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeometry.GeometryCollectionFromBinary" target="_top">.NET documentation</a>
+     */
     public static DbGeometry GeometryCollectionFromBinary(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -500,6 +715,16 @@ public class DbGeometry extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GeometryCollectionFromText.
+     *
+     * @param geometryCollectionWellKnownText the argument of type {@code java.lang.String}
+     * @param coordinateSystemId the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeometry.GeometryCollectionFromText" target="_top">.NET documentation</a>
+     */
     public static DbGeometry GeometryCollectionFromText(java.lang.String geometryCollectionWellKnownText, int coordinateSystemId) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -515,6 +740,14 @@ public class DbGeometry extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member InteriorRingAt.
+     *
+     * @param index the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeometry.InteriorRingAt" target="_top">.NET documentation</a>
+     */
     public DbGeometry InteriorRingAt(int index) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -530,6 +763,15 @@ public class DbGeometry extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Intersection.
+     *
+     * @param other the argument of type {@code DbGeometry}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeometry.Intersection" target="_top">.NET documentation</a>
+     */
     public DbGeometry Intersection(DbGeometry other) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -545,6 +787,16 @@ public class DbGeometry extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LineFromBinary.
+     *
+     * @param lineWellKnownBinary the argument of type {@code byte[]}
+     * @param coordinateSystemId the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeometry.LineFromBinary" target="_top">.NET documentation</a>
+     */
     public static DbGeometry LineFromBinary(byte[] lineWellKnownBinary, int coordinateSystemId) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -560,6 +812,16 @@ public class DbGeometry extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LineFromBinary.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeometry.LineFromBinary" target="_top">.NET documentation</a>
+     */
     public static DbGeometry LineFromBinary(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -575,6 +837,16 @@ public class DbGeometry extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LineFromText.
+     *
+     * @param lineWellKnownText the argument of type {@code java.lang.String}
+     * @param coordinateSystemId the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeometry.LineFromText" target="_top">.NET documentation</a>
+     */
     public static DbGeometry LineFromText(java.lang.String lineWellKnownText, int coordinateSystemId) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -590,6 +862,16 @@ public class DbGeometry extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member MultiLineFromBinary.
+     *
+     * @param multiLineWellKnownBinary the argument of type {@code byte[]}
+     * @param coordinateSystemId the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeometry.MultiLineFromBinary" target="_top">.NET documentation</a>
+     */
     public static DbGeometry MultiLineFromBinary(byte[] multiLineWellKnownBinary, int coordinateSystemId) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -605,6 +887,16 @@ public class DbGeometry extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member MultiLineFromBinary.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeometry.MultiLineFromBinary" target="_top">.NET documentation</a>
+     */
     public static DbGeometry MultiLineFromBinary(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -620,6 +912,16 @@ public class DbGeometry extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member MultiLineFromText.
+     *
+     * @param multiLineWellKnownText the argument of type {@code java.lang.String}
+     * @param coordinateSystemId the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeometry.MultiLineFromText" target="_top">.NET documentation</a>
+     */
     public static DbGeometry MultiLineFromText(java.lang.String multiLineWellKnownText, int coordinateSystemId) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -635,6 +937,16 @@ public class DbGeometry extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member MultiPointFromBinary.
+     *
+     * @param multiPointWellKnownBinary the argument of type {@code byte[]}
+     * @param coordinateSystemId the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeometry.MultiPointFromBinary" target="_top">.NET documentation</a>
+     */
     public static DbGeometry MultiPointFromBinary(byte[] multiPointWellKnownBinary, int coordinateSystemId) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -650,6 +962,16 @@ public class DbGeometry extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member MultiPointFromBinary.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeometry.MultiPointFromBinary" target="_top">.NET documentation</a>
+     */
     public static DbGeometry MultiPointFromBinary(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -665,6 +987,16 @@ public class DbGeometry extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member MultiPointFromText.
+     *
+     * @param multiPointWellKnownText the argument of type {@code java.lang.String}
+     * @param coordinateSystemId the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeometry.MultiPointFromText" target="_top">.NET documentation</a>
+     */
     public static DbGeometry MultiPointFromText(java.lang.String multiPointWellKnownText, int coordinateSystemId) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -680,6 +1012,16 @@ public class DbGeometry extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member MultiPolygonFromBinary.
+     *
+     * @param multiPolygonWellKnownBinary the argument of type {@code byte[]}
+     * @param coordinateSystemId the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeometry.MultiPolygonFromBinary" target="_top">.NET documentation</a>
+     */
     public static DbGeometry MultiPolygonFromBinary(byte[] multiPolygonWellKnownBinary, int coordinateSystemId) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -695,6 +1037,16 @@ public class DbGeometry extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member MultiPolygonFromBinary.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeometry.MultiPolygonFromBinary" target="_top">.NET documentation</a>
+     */
     public static DbGeometry MultiPolygonFromBinary(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -710,6 +1062,16 @@ public class DbGeometry extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member MultiPolygonFromText.
+     *
+     * @param multiPolygonWellKnownText the argument of type {@code java.lang.String}
+     * @param coordinateSystemId the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeometry.MultiPolygonFromText" target="_top">.NET documentation</a>
+     */
     public static DbGeometry MultiPolygonFromText(java.lang.String multiPolygonWellKnownText, int coordinateSystemId) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -725,6 +1087,14 @@ public class DbGeometry extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member PointAt.
+     *
+     * @param index the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeometry.PointAt" target="_top">.NET documentation</a>
+     */
     public DbGeometry PointAt(int index) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -740,6 +1110,16 @@ public class DbGeometry extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member PointFromBinary.
+     *
+     * @param pointWellKnownBinary the argument of type {@code byte[]}
+     * @param coordinateSystemId the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeometry.PointFromBinary" target="_top">.NET documentation</a>
+     */
     public static DbGeometry PointFromBinary(byte[] pointWellKnownBinary, int coordinateSystemId) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -755,6 +1135,16 @@ public class DbGeometry extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member PointFromBinary.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeometry.PointFromBinary" target="_top">.NET documentation</a>
+     */
     public static DbGeometry PointFromBinary(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -770,6 +1160,16 @@ public class DbGeometry extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member PointFromText.
+     *
+     * @param pointWellKnownText the argument of type {@code java.lang.String}
+     * @param coordinateSystemId the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeometry.PointFromText" target="_top">.NET documentation</a>
+     */
     public static DbGeometry PointFromText(java.lang.String pointWellKnownText, int coordinateSystemId) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -785,6 +1185,16 @@ public class DbGeometry extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member PolygonFromBinary.
+     *
+     * @param polygonWellKnownBinary the argument of type {@code byte[]}
+     * @param coordinateSystemId the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeometry.PolygonFromBinary" target="_top">.NET documentation</a>
+     */
     public static DbGeometry PolygonFromBinary(byte[] polygonWellKnownBinary, int coordinateSystemId) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -800,6 +1210,16 @@ public class DbGeometry extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member PolygonFromBinary.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeometry.PolygonFromBinary" target="_top">.NET documentation</a>
+     */
     public static DbGeometry PolygonFromBinary(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -815,6 +1235,16 @@ public class DbGeometry extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member PolygonFromText.
+     *
+     * @param polygonWellKnownText the argument of type {@code java.lang.String}
+     * @param coordinateSystemId the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeometry.PolygonFromText" target="_top">.NET documentation</a>
+     */
     public static DbGeometry PolygonFromText(java.lang.String polygonWellKnownText, int coordinateSystemId) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -830,6 +1260,15 @@ public class DbGeometry extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SymmetricDifference.
+     *
+     * @param other the argument of type {@code DbGeometry}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeometry.SymmetricDifference" target="_top">.NET documentation</a>
+     */
     public DbGeometry SymmetricDifference(DbGeometry other) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -845,6 +1284,15 @@ public class DbGeometry extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Union.
+     *
+     * @param other the argument of type {@code DbGeometry}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeometry.Union" target="_top">.NET documentation</a>
+     */
     public DbGeometry Union(DbGeometry other) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -860,6 +1308,15 @@ public class DbGeometry extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Distance.
+     *
+     * @param other the argument of type {@code DbGeometry}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeometry.Distance" target="_top">.NET documentation</a>
+     */
     public Nullable_1 Distance(DbGeometry other) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -875,6 +1332,13 @@ public class DbGeometry extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AsGml.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeometry.AsGml" target="_top">.NET documentation</a>
+     */
     public java.lang.String AsGml() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -889,6 +1353,13 @@ public class DbGeometry extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AsText.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeometry.AsText" target="_top">.NET documentation</a>
+     */
     public java.lang.String AsText() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -907,6 +1378,13 @@ public class DbGeometry extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsEmpty.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeometry.IsEmpty" target="_top">.NET documentation</a>
+     */
     public boolean getIsEmpty() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -921,6 +1399,13 @@ public class DbGeometry extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsSimple.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeometry.IsSimple" target="_top">.NET documentation</a>
+     */
     public boolean getIsSimple() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -935,6 +1420,13 @@ public class DbGeometry extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsValid.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeometry.IsValid" target="_top">.NET documentation</a>
+     */
     public boolean getIsValid() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -949,6 +1441,13 @@ public class DbGeometry extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CoordinateSystemId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeometry.CoordinateSystemId" target="_top">.NET documentation</a>
+     */
     public int getCoordinateSystemId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -989,6 +1488,13 @@ public class DbGeometry extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DefaultCoordinateSystemId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeometry.DefaultCoordinateSystemId" target="_top">.NET documentation</a>
+     */
     public static int getDefaultCoordinateSystemId() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1029,6 +1535,13 @@ public class DbGeometry extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Dimension.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeometry.Dimension" target="_top">.NET documentation</a>
+     */
     public int getDimension() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1069,6 +1582,13 @@ public class DbGeometry extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Boundary.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeometry.Boundary" target="_top">.NET documentation</a>
+     */
     public DbGeometry getBoundary() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1084,6 +1604,13 @@ public class DbGeometry extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Centroid.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeometry.Centroid" target="_top">.NET documentation</a>
+     */
     public DbGeometry getCentroid() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1099,6 +1626,13 @@ public class DbGeometry extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ConvexHull.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeometry.ConvexHull" target="_top">.NET documentation</a>
+     */
     public DbGeometry getConvexHull() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1114,6 +1648,13 @@ public class DbGeometry extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EndPoint.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeometry.EndPoint" target="_top">.NET documentation</a>
+     */
     public DbGeometry getEndPoint() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1129,6 +1670,13 @@ public class DbGeometry extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Envelope.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeometry.Envelope" target="_top">.NET documentation</a>
+     */
     public DbGeometry getEnvelope() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1144,6 +1692,13 @@ public class DbGeometry extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ExteriorRing.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeometry.ExteriorRing" target="_top">.NET documentation</a>
+     */
     public DbGeometry getExteriorRing() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1159,6 +1714,13 @@ public class DbGeometry extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PointOnSurface.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeometry.PointOnSurface" target="_top">.NET documentation</a>
+     */
     public DbGeometry getPointOnSurface() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1174,6 +1736,13 @@ public class DbGeometry extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StartPoint.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeometry.StartPoint" target="_top">.NET documentation</a>
+     */
     public DbGeometry getStartPoint() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1189,6 +1758,13 @@ public class DbGeometry extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property WellKnownValue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeometry.WellKnownValue" target="_top">.NET documentation</a>
+     */
     public DbGeometryWellKnownValue getWellKnownValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1204,6 +1780,22 @@ public class DbGeometry extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property WellKnownValue.
+     *
+     * @param WellKnownValue the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeometry.WellKnownValue" target="_top">.NET documentation</a>
+     */
     public void setWellKnownValue(DbGeometryWellKnownValue WellKnownValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1214,6 +1806,13 @@ public class DbGeometry extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsClosed.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeometry.IsClosed" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getIsClosed() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1229,6 +1828,13 @@ public class DbGeometry extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsRing.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeometry.IsRing" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getIsRing() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1244,6 +1850,13 @@ public class DbGeometry extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Area.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeometry.Area" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getArea() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1259,6 +1872,13 @@ public class DbGeometry extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Elevation.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeometry.Elevation" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getElevation() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1274,6 +1894,13 @@ public class DbGeometry extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Length.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeometry.Length" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getLength() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1289,6 +1916,13 @@ public class DbGeometry extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Measure.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeometry.Measure" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getMeasure() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1304,6 +1938,13 @@ public class DbGeometry extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property XCoordinate.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeometry.XCoordinate" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getXCoordinate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1319,6 +1960,13 @@ public class DbGeometry extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property YCoordinate.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeometry.YCoordinate" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getYCoordinate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1334,6 +1982,13 @@ public class DbGeometry extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ElementCount.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeometry.ElementCount" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getElementCount() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1349,6 +2004,13 @@ public class DbGeometry extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property InteriorRingCount.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeometry.InteriorRingCount" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getInteriorRingCount() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1364,6 +2026,13 @@ public class DbGeometry extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PointCount.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeometry.PointCount" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getPointCount() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1379,6 +2048,13 @@ public class DbGeometry extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ProviderValue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeometry.ProviderValue" target="_top">.NET documentation</a>
+     */
     public NetObject getProviderValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1394,6 +2070,13 @@ public class DbGeometry extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SpatialTypeName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeometry.SpatialTypeName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSpatialTypeName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

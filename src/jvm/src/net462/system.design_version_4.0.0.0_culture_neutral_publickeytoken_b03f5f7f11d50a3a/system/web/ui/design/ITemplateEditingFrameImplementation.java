@@ -102,7 +102,10 @@ public class ITemplateEditingFrameImplementation extends NetObject implements IT
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ITemplateEditingFrameImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -144,6 +147,13 @@ public class ITemplateEditingFrameImplementation extends NetObject implements IT
 
     // Methods section
     
+    /**
+     * Invokes the .NET member Close.
+     *
+     * @param saveChanges the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.ITemplateEditingFrame.Close" target="_top">.NET documentation</a>
+     */
     public void Close(boolean saveChanges) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -154,6 +164,12 @@ public class ITemplateEditingFrameImplementation extends NetObject implements IT
         }
     }
 
+    /**
+     * Invokes the .NET member Dispose.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.ITemplateEditingFrame.Dispose" target="_top">.NET documentation</a>
+     */
     public void Dispose() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -164,6 +180,12 @@ public class ITemplateEditingFrameImplementation extends NetObject implements IT
         }
     }
 
+    /**
+     * Invokes the .NET member Open.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.ITemplateEditingFrame.Open" target="_top">.NET documentation</a>
+     */
     public void Open() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -174,6 +196,14 @@ public class ITemplateEditingFrameImplementation extends NetObject implements IT
         }
     }
 
+    /**
+     * Invokes the .NET member Resize.
+     *
+     * @param width the argument of type {@code int}
+     * @param height the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.ITemplateEditingFrame.Resize" target="_top">.NET documentation</a>
+     */
     public void Resize(int width, int height) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +214,12 @@ public class ITemplateEditingFrameImplementation extends NetObject implements IT
         }
     }
 
+    /**
+     * Invokes the .NET member Save.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.ITemplateEditingFrame.Save" target="_top">.NET documentation</a>
+     */
     public void Save() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +230,13 @@ public class ITemplateEditingFrameImplementation extends NetObject implements IT
         }
     }
 
+    /**
+     * Invokes the .NET member UpdateControlName.
+     *
+     * @param newName the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.ITemplateEditingFrame.UpdateControlName" target="_top">.NET documentation</a>
+     */
     public void UpdateControlName(java.lang.String newName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +251,13 @@ public class ITemplateEditingFrameImplementation extends NetObject implements IT
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property InitialHeight.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.ITemplateEditingFrame.InitialHeight" target="_top">.NET documentation</a>
+     */
     public int getInitialHeight() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -248,6 +298,13 @@ public class ITemplateEditingFrameImplementation extends NetObject implements IT
         }
     }
 
+    /**
+     * Sets the value of the .NET property InitialHeight.
+     *
+     * @param InitialHeight the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.ITemplateEditingFrame.InitialHeight" target="_top">.NET documentation</a>
+     */
     public void setInitialHeight(int InitialHeight) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -258,6 +315,13 @@ public class ITemplateEditingFrameImplementation extends NetObject implements IT
         }
     }
 
+    /**
+     * Gets the value of the .NET property InitialWidth.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.ITemplateEditingFrame.InitialWidth" target="_top">.NET documentation</a>
+     */
     public int getInitialWidth() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -298,6 +362,13 @@ public class ITemplateEditingFrameImplementation extends NetObject implements IT
         }
     }
 
+    /**
+     * Sets the value of the .NET property InitialWidth.
+     *
+     * @param InitialWidth the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.ITemplateEditingFrame.InitialWidth" target="_top">.NET documentation</a>
+     */
     public void setInitialWidth(int InitialWidth) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -308,6 +379,13 @@ public class ITemplateEditingFrameImplementation extends NetObject implements IT
         }
     }
 
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.ITemplateEditingFrame.Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -322,6 +400,13 @@ public class ITemplateEditingFrameImplementation extends NetObject implements IT
         }
     }
 
+    /**
+     * Gets the value of the .NET property TemplateNames.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.ITemplateEditingFrame.TemplateNames" target="_top">.NET documentation</a>
+     */
     public java.lang.String[] getTemplateNames() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -345,6 +430,13 @@ public class ITemplateEditingFrameImplementation extends NetObject implements IT
         }
     }
 
+    /**
+     * Gets the value of the .NET property Verb.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.ITemplateEditingFrame.Verb" target="_top">.NET documentation</a>
+     */
     public TemplateEditingVerb getVerb() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -360,6 +452,13 @@ public class ITemplateEditingFrameImplementation extends NetObject implements IT
         }
     }
 
+    /**
+     * Sets the value of the .NET property Verb.
+     *
+     * @param Verb the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.ITemplateEditingFrame.Verb" target="_top">.NET documentation</a>
+     */
     public void setVerb(TemplateEditingVerb Verb) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -370,6 +469,13 @@ public class ITemplateEditingFrameImplementation extends NetObject implements IT
         }
     }
 
+    /**
+     * Gets the value of the .NET property ControlStyle.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.ITemplateEditingFrame.ControlStyle" target="_top">.NET documentation</a>
+     */
     public Style getControlStyle() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -385,6 +491,13 @@ public class ITemplateEditingFrameImplementation extends NetObject implements IT
         }
     }
 
+    /**
+     * Gets the value of the .NET property TemplateStyles.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.ITemplateEditingFrame.TemplateStyles" target="_top">.NET documentation</a>
+     */
     public final Style[] getTemplateStyles() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

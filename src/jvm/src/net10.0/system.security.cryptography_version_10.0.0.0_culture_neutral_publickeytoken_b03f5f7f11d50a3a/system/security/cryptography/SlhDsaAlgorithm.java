@@ -99,7 +99,10 @@ public class SlhDsaAlgorithm extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SlhDsaAlgorithm(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,16 @@ public class SlhDsaAlgorithm extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Equals.
+     *
+     * @param other the argument of type {@code SlhDsaAlgorithm}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.SlhDsaAlgorithm.Equals" target="_top">.NET documentation</a>
+     */
     public boolean Equals(SlhDsaAlgorithm other) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -172,6 +185,13 @@ public class SlhDsaAlgorithm extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property PrivateKeySizeInBytes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.SlhDsaAlgorithm.PrivateKeySizeInBytes" target="_top">.NET documentation</a>
+     */
     public int getPrivateKeySizeInBytes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -212,6 +232,13 @@ public class SlhDsaAlgorithm extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PublicKeySizeInBytes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.SlhDsaAlgorithm.PublicKeySizeInBytes" target="_top">.NET documentation</a>
+     */
     public int getPublicKeySizeInBytes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -252,6 +279,13 @@ public class SlhDsaAlgorithm extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SignatureSizeInBytes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.SlhDsaAlgorithm.SignatureSizeInBytes" target="_top">.NET documentation</a>
+     */
     public int getSignatureSizeInBytes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -292,6 +326,13 @@ public class SlhDsaAlgorithm extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SlhDsaSha2_128f.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.SlhDsaAlgorithm.SlhDsaSha2_128f" target="_top">.NET documentation</a>
+     */
     public static SlhDsaAlgorithm getSlhDsaSha2_128f() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -307,6 +348,13 @@ public class SlhDsaAlgorithm extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SlhDsaSha2_128s.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.SlhDsaAlgorithm.SlhDsaSha2_128s" target="_top">.NET documentation</a>
+     */
     public static SlhDsaAlgorithm getSlhDsaSha2_128s() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -322,6 +370,13 @@ public class SlhDsaAlgorithm extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SlhDsaSha2_192f.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.SlhDsaAlgorithm.SlhDsaSha2_192f" target="_top">.NET documentation</a>
+     */
     public static SlhDsaAlgorithm getSlhDsaSha2_192f() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -337,6 +392,13 @@ public class SlhDsaAlgorithm extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SlhDsaSha2_192s.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.SlhDsaAlgorithm.SlhDsaSha2_192s" target="_top">.NET documentation</a>
+     */
     public static SlhDsaAlgorithm getSlhDsaSha2_192s() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -352,6 +414,13 @@ public class SlhDsaAlgorithm extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SlhDsaSha2_256f.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.SlhDsaAlgorithm.SlhDsaSha2_256f" target="_top">.NET documentation</a>
+     */
     public static SlhDsaAlgorithm getSlhDsaSha2_256f() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -367,6 +436,13 @@ public class SlhDsaAlgorithm extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SlhDsaSha2_256s.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.SlhDsaAlgorithm.SlhDsaSha2_256s" target="_top">.NET documentation</a>
+     */
     public static SlhDsaAlgorithm getSlhDsaSha2_256s() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -382,6 +458,13 @@ public class SlhDsaAlgorithm extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SlhDsaShake128f.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.SlhDsaAlgorithm.SlhDsaShake128f" target="_top">.NET documentation</a>
+     */
     public static SlhDsaAlgorithm getSlhDsaShake128f() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -397,6 +480,13 @@ public class SlhDsaAlgorithm extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SlhDsaShake128s.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.SlhDsaAlgorithm.SlhDsaShake128s" target="_top">.NET documentation</a>
+     */
     public static SlhDsaAlgorithm getSlhDsaShake128s() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -412,6 +502,13 @@ public class SlhDsaAlgorithm extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SlhDsaShake192f.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.SlhDsaAlgorithm.SlhDsaShake192f" target="_top">.NET documentation</a>
+     */
     public static SlhDsaAlgorithm getSlhDsaShake192f() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -427,6 +524,13 @@ public class SlhDsaAlgorithm extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SlhDsaShake192s.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.SlhDsaAlgorithm.SlhDsaShake192s" target="_top">.NET documentation</a>
+     */
     public static SlhDsaAlgorithm getSlhDsaShake192s() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -442,6 +546,13 @@ public class SlhDsaAlgorithm extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SlhDsaShake256f.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.SlhDsaAlgorithm.SlhDsaShake256f" target="_top">.NET documentation</a>
+     */
     public static SlhDsaAlgorithm getSlhDsaShake256f() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -457,6 +568,13 @@ public class SlhDsaAlgorithm extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SlhDsaShake256s.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.SlhDsaAlgorithm.SlhDsaShake256s" target="_top">.NET documentation</a>
+     */
     public static SlhDsaAlgorithm getSlhDsaShake256s() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -472,6 +590,13 @@ public class SlhDsaAlgorithm extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.SlhDsaAlgorithm.Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

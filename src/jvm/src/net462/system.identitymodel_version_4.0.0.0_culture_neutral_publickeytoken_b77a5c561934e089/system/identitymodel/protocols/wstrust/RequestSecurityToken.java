@@ -107,7 +107,10 @@ public class RequestSecurityToken extends system.identitymodel.protocols.wstrust
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public RequestSecurityToken(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,22 @@ public class RequestSecurityToken extends system.identitymodel.protocols.wstrust
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.RequestSecurityToken.-ctor" target="_top">.NET documentation</a>
+     */
     public RequestSecurityToken() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +183,23 @@ public class RequestSecurityToken extends system.identitymodel.protocols.wstrust
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param requestType the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.RequestSecurityToken.-ctor" target="_top">.NET documentation</a>
+     */
     public RequestSecurityToken(java.lang.String requestType) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
@@ -174,6 +210,25 @@ public class RequestSecurityToken extends system.identitymodel.protocols.wstrust
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param requestType the argument of type {@code java.lang.String}
+     * @param keyType the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.RequestSecurityToken.-ctor" target="_top">.NET documentation</a>
+     */
     public RequestSecurityToken(java.lang.String requestType, java.lang.String keyType) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
@@ -192,6 +247,13 @@ public class RequestSecurityToken extends system.identitymodel.protocols.wstrust
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AdditionalContext.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.RequestSecurityToken.AdditionalContext" target="_top">.NET documentation</a>
+     */
     public AdditionalContext getAdditionalContext() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +269,13 @@ public class RequestSecurityToken extends system.identitymodel.protocols.wstrust
         }
     }
 
+    /**
+     * Sets the value of the .NET property AdditionalContext.
+     *
+     * @param AdditionalContext the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.RequestSecurityToken.AdditionalContext" target="_top">.NET documentation</a>
+     */
     public void setAdditionalContext(AdditionalContext AdditionalContext) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -217,6 +286,13 @@ public class RequestSecurityToken extends system.identitymodel.protocols.wstrust
         }
     }
 
+    /**
+     * Gets the value of the .NET property Issuer.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.RequestSecurityToken.Issuer" target="_top">.NET documentation</a>
+     */
     public EndpointReference getIssuer() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -232,6 +308,13 @@ public class RequestSecurityToken extends system.identitymodel.protocols.wstrust
         }
     }
 
+    /**
+     * Sets the value of the .NET property Issuer.
+     *
+     * @param Issuer the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.RequestSecurityToken.Issuer" target="_top">.NET documentation</a>
+     */
     public void setIssuer(EndpointReference Issuer) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -242,6 +325,13 @@ public class RequestSecurityToken extends system.identitymodel.protocols.wstrust
         }
     }
 
+    /**
+     * Gets the value of the .NET property Participants.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.RequestSecurityToken.Participants" target="_top">.NET documentation</a>
+     */
     public Participants getParticipants() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -257,6 +347,13 @@ public class RequestSecurityToken extends system.identitymodel.protocols.wstrust
         }
     }
 
+    /**
+     * Sets the value of the .NET property Participants.
+     *
+     * @param Participants the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.RequestSecurityToken.Participants" target="_top">.NET documentation</a>
+     */
     public void setParticipants(Participants Participants) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -267,6 +364,13 @@ public class RequestSecurityToken extends system.identitymodel.protocols.wstrust
         }
     }
 
+    /**
+     * Gets the value of the .NET property Renewing.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.RequestSecurityToken.Renewing" target="_top">.NET documentation</a>
+     */
     public Renewing getRenewing() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -282,6 +386,13 @@ public class RequestSecurityToken extends system.identitymodel.protocols.wstrust
         }
     }
 
+    /**
+     * Sets the value of the .NET property Renewing.
+     *
+     * @param Renewing the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.RequestSecurityToken.Renewing" target="_top">.NET documentation</a>
+     */
     public void setRenewing(Renewing Renewing) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -292,6 +403,13 @@ public class RequestSecurityToken extends system.identitymodel.protocols.wstrust
         }
     }
 
+    /**
+     * Gets the value of the .NET property Claims.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.RequestSecurityToken.Claims" target="_top">.NET documentation</a>
+     */
     public RequestClaimCollection getClaims() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -307,6 +425,13 @@ public class RequestSecurityToken extends system.identitymodel.protocols.wstrust
         }
     }
 
+    /**
+     * Gets the value of the .NET property SecondaryParameters.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.RequestSecurityToken.SecondaryParameters" target="_top">.NET documentation</a>
+     */
     public RequestSecurityToken getSecondaryParameters() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -322,6 +447,13 @@ public class RequestSecurityToken extends system.identitymodel.protocols.wstrust
         }
     }
 
+    /**
+     * Sets the value of the .NET property SecondaryParameters.
+     *
+     * @param SecondaryParameters the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.RequestSecurityToken.SecondaryParameters" target="_top">.NET documentation</a>
+     */
     public void setSecondaryParameters(RequestSecurityToken SecondaryParameters) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -332,6 +464,13 @@ public class RequestSecurityToken extends system.identitymodel.protocols.wstrust
         }
     }
 
+    /**
+     * Gets the value of the .NET property ActAs.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.RequestSecurityToken.ActAs" target="_top">.NET documentation</a>
+     */
     public SecurityTokenElement getActAs() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -347,6 +486,13 @@ public class RequestSecurityToken extends system.identitymodel.protocols.wstrust
         }
     }
 
+    /**
+     * Sets the value of the .NET property ActAs.
+     *
+     * @param ActAs the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.RequestSecurityToken.ActAs" target="_top">.NET documentation</a>
+     */
     public void setActAs(SecurityTokenElement ActAs) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -357,6 +503,13 @@ public class RequestSecurityToken extends system.identitymodel.protocols.wstrust
         }
     }
 
+    /**
+     * Gets the value of the .NET property CancelTarget.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.RequestSecurityToken.CancelTarget" target="_top">.NET documentation</a>
+     */
     public SecurityTokenElement getCancelTarget() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -372,6 +525,13 @@ public class RequestSecurityToken extends system.identitymodel.protocols.wstrust
         }
     }
 
+    /**
+     * Sets the value of the .NET property CancelTarget.
+     *
+     * @param CancelTarget the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.RequestSecurityToken.CancelTarget" target="_top">.NET documentation</a>
+     */
     public void setCancelTarget(SecurityTokenElement CancelTarget) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -382,6 +542,13 @@ public class RequestSecurityToken extends system.identitymodel.protocols.wstrust
         }
     }
 
+    /**
+     * Gets the value of the .NET property DelegateTo.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.RequestSecurityToken.DelegateTo" target="_top">.NET documentation</a>
+     */
     public SecurityTokenElement getDelegateTo() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -397,6 +564,13 @@ public class RequestSecurityToken extends system.identitymodel.protocols.wstrust
         }
     }
 
+    /**
+     * Sets the value of the .NET property DelegateTo.
+     *
+     * @param DelegateTo the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.RequestSecurityToken.DelegateTo" target="_top">.NET documentation</a>
+     */
     public void setDelegateTo(SecurityTokenElement DelegateTo) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -407,6 +581,13 @@ public class RequestSecurityToken extends system.identitymodel.protocols.wstrust
         }
     }
 
+    /**
+     * Gets the value of the .NET property Encryption.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.RequestSecurityToken.Encryption" target="_top">.NET documentation</a>
+     */
     public SecurityTokenElement getEncryption() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -422,6 +603,13 @@ public class RequestSecurityToken extends system.identitymodel.protocols.wstrust
         }
     }
 
+    /**
+     * Sets the value of the .NET property Encryption.
+     *
+     * @param Encryption the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.RequestSecurityToken.Encryption" target="_top">.NET documentation</a>
+     */
     public void setEncryption(SecurityTokenElement Encryption) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -432,6 +620,13 @@ public class RequestSecurityToken extends system.identitymodel.protocols.wstrust
         }
     }
 
+    /**
+     * Gets the value of the .NET property OnBehalfOf.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.RequestSecurityToken.OnBehalfOf" target="_top">.NET documentation</a>
+     */
     public SecurityTokenElement getOnBehalfOf() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -447,6 +642,13 @@ public class RequestSecurityToken extends system.identitymodel.protocols.wstrust
         }
     }
 
+    /**
+     * Sets the value of the .NET property OnBehalfOf.
+     *
+     * @param OnBehalfOf the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.RequestSecurityToken.OnBehalfOf" target="_top">.NET documentation</a>
+     */
     public void setOnBehalfOf(SecurityTokenElement OnBehalfOf) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -457,6 +659,13 @@ public class RequestSecurityToken extends system.identitymodel.protocols.wstrust
         }
     }
 
+    /**
+     * Gets the value of the .NET property ProofEncryption.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.RequestSecurityToken.ProofEncryption" target="_top">.NET documentation</a>
+     */
     public SecurityTokenElement getProofEncryption() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -472,6 +681,13 @@ public class RequestSecurityToken extends system.identitymodel.protocols.wstrust
         }
     }
 
+    /**
+     * Sets the value of the .NET property ProofEncryption.
+     *
+     * @param ProofEncryption the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.RequestSecurityToken.ProofEncryption" target="_top">.NET documentation</a>
+     */
     public void setProofEncryption(SecurityTokenElement ProofEncryption) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -482,6 +698,13 @@ public class RequestSecurityToken extends system.identitymodel.protocols.wstrust
         }
     }
 
+    /**
+     * Gets the value of the .NET property RenewTarget.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.RequestSecurityToken.RenewTarget" target="_top">.NET documentation</a>
+     */
     public SecurityTokenElement getRenewTarget() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -497,6 +720,13 @@ public class RequestSecurityToken extends system.identitymodel.protocols.wstrust
         }
     }
 
+    /**
+     * Sets the value of the .NET property RenewTarget.
+     *
+     * @param RenewTarget the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.RequestSecurityToken.RenewTarget" target="_top">.NET documentation</a>
+     */
     public void setRenewTarget(SecurityTokenElement RenewTarget) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -507,6 +737,13 @@ public class RequestSecurityToken extends system.identitymodel.protocols.wstrust
         }
     }
 
+    /**
+     * Gets the value of the .NET property ValidateTarget.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.RequestSecurityToken.ValidateTarget" target="_top">.NET documentation</a>
+     */
     public SecurityTokenElement getValidateTarget() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -522,6 +759,13 @@ public class RequestSecurityToken extends system.identitymodel.protocols.wstrust
         }
     }
 
+    /**
+     * Sets the value of the .NET property ValidateTarget.
+     *
+     * @param ValidateTarget the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.RequestSecurityToken.ValidateTarget" target="_top">.NET documentation</a>
+     */
     public void setValidateTarget(SecurityTokenElement ValidateTarget) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -532,6 +776,13 @@ public class RequestSecurityToken extends system.identitymodel.protocols.wstrust
         }
     }
 
+    /**
+     * Gets the value of the .NET property Delegatable.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.RequestSecurityToken.Delegatable" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getDelegatable() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -547,6 +798,13 @@ public class RequestSecurityToken extends system.identitymodel.protocols.wstrust
         }
     }
 
+    /**
+     * Sets the value of the .NET property Delegatable.
+     *
+     * @param Delegatable the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.RequestSecurityToken.Delegatable" target="_top">.NET documentation</a>
+     */
     public void setDelegatable(Nullable_1 Delegatable) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -557,6 +815,13 @@ public class RequestSecurityToken extends system.identitymodel.protocols.wstrust
         }
     }
 
+    /**
+     * Gets the value of the .NET property Forwardable.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.RequestSecurityToken.Forwardable" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getForwardable() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -572,6 +837,13 @@ public class RequestSecurityToken extends system.identitymodel.protocols.wstrust
         }
     }
 
+    /**
+     * Sets the value of the .NET property Forwardable.
+     *
+     * @param Forwardable the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.RequestSecurityToken.Forwardable" target="_top">.NET documentation</a>
+     */
     public void setForwardable(Nullable_1 Forwardable) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -582,6 +854,13 @@ public class RequestSecurityToken extends system.identitymodel.protocols.wstrust
         }
     }
 
+    /**
+     * Gets the value of the .NET property ComputedKeyAlgorithm.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.RequestSecurityToken.ComputedKeyAlgorithm" target="_top">.NET documentation</a>
+     */
     public java.lang.String getComputedKeyAlgorithm() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -596,6 +875,13 @@ public class RequestSecurityToken extends system.identitymodel.protocols.wstrust
         }
     }
 
+    /**
+     * Sets the value of the .NET property ComputedKeyAlgorithm.
+     *
+     * @param ComputedKeyAlgorithm the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.RequestSecurityToken.ComputedKeyAlgorithm" target="_top">.NET documentation</a>
+     */
     public void setComputedKeyAlgorithm(java.lang.String ComputedKeyAlgorithm) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

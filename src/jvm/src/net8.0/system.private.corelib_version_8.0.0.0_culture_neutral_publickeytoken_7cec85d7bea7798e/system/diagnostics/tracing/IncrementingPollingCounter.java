@@ -102,7 +102,10 @@ public class IncrementingPollingCounter extends system.diagnostics.tracing.Diagn
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IncrementingPollingCounter(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,24 @@ public class IncrementingPollingCounter extends system.diagnostics.tracing.Diagn
     public IncrementingPollingCounter() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param eventSource the argument of type {@code EventSource}
+     * @param totalValueProvider the argument of type {@code Func_1}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Tracing.IncrementingPollingCounter.-ctor" target="_top">.NET documentation</a>
+     */
     public IncrementingPollingCounter(java.lang.String name, EventSource eventSource, Func_1 totalValueProvider) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.threading.AbandonedMutexException, system.MulticastNotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -171,6 +192,13 @@ public class IncrementingPollingCounter extends system.diagnostics.tracing.Diagn
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property DisplayRateTimeScale.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Tracing.IncrementingPollingCounter.DisplayRateTimeScale" target="_top">.NET documentation</a>
+     */
     public TimeSpan getDisplayRateTimeScale() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -186,6 +214,13 @@ public class IncrementingPollingCounter extends system.diagnostics.tracing.Diagn
         }
     }
 
+    /**
+     * Sets the value of the .NET property DisplayRateTimeScale.
+     *
+     * @param DisplayRateTimeScale the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Tracing.IncrementingPollingCounter.DisplayRateTimeScale" target="_top">.NET documentation</a>
+     */
     public void setDisplayRateTimeScale(TimeSpan DisplayRateTimeScale) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

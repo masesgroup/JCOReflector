@@ -99,7 +99,10 @@ public class BuildEventContext extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public BuildEventContext(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,16 @@ public class BuildEventContext extends NetObject  {
     public BuildEventContext() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param nodeId the argument of type {@code int}
+     * @param targetId the argument of type {@code int}
+     * @param projectContextId the argument of type {@code int}
+     * @param taskId the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.BuildEventContext.-ctor" target="_top">.NET documentation</a>
+     */
     public BuildEventContext(int nodeId, int targetId, int projectContextId, int taskId) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -159,6 +172,17 @@ public class BuildEventContext extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param nodeId the argument of type {@code int}
+     * @param projectInstanceId the argument of type {@code int}
+     * @param projectContextId the argument of type {@code int}
+     * @param targetId the argument of type {@code int}
+     * @param taskId the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.BuildEventContext.-ctor" target="_top">.NET documentation</a>
+     */
     public BuildEventContext(int nodeId, int projectInstanceId, int projectContextId, int targetId, int taskId) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +193,18 @@ public class BuildEventContext extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param submissionId the argument of type {@code int}
+     * @param nodeId the argument of type {@code int}
+     * @param projectInstanceId the argument of type {@code int}
+     * @param projectContextId the argument of type {@code int}
+     * @param targetId the argument of type {@code int}
+     * @param taskId the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.BuildEventContext.-ctor" target="_top">.NET documentation</a>
+     */
     public BuildEventContext(int submissionId, int nodeId, int projectInstanceId, int projectContextId, int targetId, int taskId) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -188,6 +224,13 @@ public class BuildEventContext extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property NodeId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.BuildEventContext.NodeId" target="_top">.NET documentation</a>
+     */
     public int getNodeId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -228,6 +271,13 @@ public class BuildEventContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ProjectContextId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.BuildEventContext.ProjectContextId" target="_top">.NET documentation</a>
+     */
     public int getProjectContextId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -268,6 +318,13 @@ public class BuildEventContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ProjectInstanceId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.BuildEventContext.ProjectInstanceId" target="_top">.NET documentation</a>
+     */
     public int getProjectInstanceId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -308,6 +365,13 @@ public class BuildEventContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SubmissionId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.BuildEventContext.SubmissionId" target="_top">.NET documentation</a>
+     */
     public int getSubmissionId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -348,6 +412,13 @@ public class BuildEventContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TargetId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.BuildEventContext.TargetId" target="_top">.NET documentation</a>
+     */
     public int getTargetId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -388,6 +459,13 @@ public class BuildEventContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TaskId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.BuildEventContext.TaskId" target="_top">.NET documentation</a>
+     */
     public int getTaskId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -428,6 +506,13 @@ public class BuildEventContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property BuildRequestId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.BuildEventContext.BuildRequestId" target="_top">.NET documentation</a>
+     */
     public long getBuildRequestId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -468,6 +553,13 @@ public class BuildEventContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Invalid.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.BuildEventContext.Invalid" target="_top">.NET documentation</a>
+     */
     public static BuildEventContext getInvalid() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

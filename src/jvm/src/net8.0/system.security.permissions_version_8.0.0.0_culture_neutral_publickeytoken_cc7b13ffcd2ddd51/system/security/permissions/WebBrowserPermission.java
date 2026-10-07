@@ -104,7 +104,10 @@ public class WebBrowserPermission extends system.security.CodeAccessPermission  
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public WebBrowserPermission(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,12 @@ public class WebBrowserPermission extends system.security.CodeAccessPermission  
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.WebBrowserPermission.-ctor" target="_top">.NET documentation</a>
+     */
     public WebBrowserPermission() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -161,6 +170,13 @@ public class WebBrowserPermission extends system.security.CodeAccessPermission  
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param state the argument of type {@code PermissionState}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.WebBrowserPermission.-ctor" target="_top">.NET documentation</a>
+     */
     public WebBrowserPermission(PermissionState state) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -171,6 +187,13 @@ public class WebBrowserPermission extends system.security.CodeAccessPermission  
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param webBrowserPermissionLevel the argument of type {@code WebBrowserPermissionLevel}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.WebBrowserPermission.-ctor" target="_top">.NET documentation</a>
+     */
     public WebBrowserPermission(WebBrowserPermissionLevel webBrowserPermissionLevel) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -185,6 +208,14 @@ public class WebBrowserPermission extends system.security.CodeAccessPermission  
     
     // Methods section
     
+    /**
+     * Invokes the .NET member IsSubsetOf.
+     *
+     * @param target the argument of type {@code IPermission}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.WebBrowserPermission.IsSubsetOf" target="_top">.NET documentation</a>
+     */
     public boolean IsSubsetOf(IPermission target) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -199,6 +230,13 @@ public class WebBrowserPermission extends system.security.CodeAccessPermission  
         }
     }
 
+    /**
+     * Invokes the .NET member IsUnrestricted.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.WebBrowserPermission.IsUnrestricted" target="_top">.NET documentation</a>
+     */
     public boolean IsUnrestricted() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -213,6 +251,13 @@ public class WebBrowserPermission extends system.security.CodeAccessPermission  
         }
     }
 
+    /**
+     * Invokes the .NET member Copy.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.WebBrowserPermission.Copy" target="_top">.NET documentation</a>
+     */
     public IPermission Copy() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -228,6 +273,14 @@ public class WebBrowserPermission extends system.security.CodeAccessPermission  
         }
     }
 
+    /**
+     * Invokes the .NET member Intersect.
+     *
+     * @param target the argument of type {@code IPermission}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.WebBrowserPermission.Intersect" target="_top">.NET documentation</a>
+     */
     public IPermission Intersect(IPermission target) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -243,6 +296,14 @@ public class WebBrowserPermission extends system.security.CodeAccessPermission  
         }
     }
 
+    /**
+     * Invokes the .NET member Union.
+     *
+     * @param target the argument of type {@code IPermission}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.WebBrowserPermission.Union" target="_top">.NET documentation</a>
+     */
     public IPermission Union(IPermission target) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -258,6 +319,13 @@ public class WebBrowserPermission extends system.security.CodeAccessPermission  
         }
     }
 
+    /**
+     * Invokes the .NET member ToXml.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.WebBrowserPermission.ToXml" target="_top">.NET documentation</a>
+     */
     public SecurityElement ToXml() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -273,6 +341,13 @@ public class WebBrowserPermission extends system.security.CodeAccessPermission  
         }
     }
 
+    /**
+     * Invokes the .NET member FromXml.
+     *
+     * @param securityElement the argument of type {@code SecurityElement}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.WebBrowserPermission.FromXml" target="_top">.NET documentation</a>
+     */
     public void FromXml(SecurityElement securityElement) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -287,6 +362,13 @@ public class WebBrowserPermission extends system.security.CodeAccessPermission  
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Level.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.WebBrowserPermission.Level" target="_top">.NET documentation</a>
+     */
     public WebBrowserPermissionLevel getLevel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -302,6 +384,13 @@ public class WebBrowserPermission extends system.security.CodeAccessPermission  
         }
     }
 
+    /**
+     * Sets the value of the .NET property Level.
+     *
+     * @param Level the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.WebBrowserPermission.Level" target="_top">.NET documentation</a>
+     */
     public void setLevel(WebBrowserPermissionLevel Level) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

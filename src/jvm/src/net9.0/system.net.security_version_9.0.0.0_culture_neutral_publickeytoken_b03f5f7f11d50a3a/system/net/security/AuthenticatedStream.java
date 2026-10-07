@@ -100,7 +100,10 @@ public class AuthenticatedStream extends system.io.Stream  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public AuthenticatedStream(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,23 @@ public class AuthenticatedStream extends system.io.Stream  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member DisposeAsync.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.threading.tasks.TaskSchedulerException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Security.AuthenticatedStream.DisposeAsync" target="_top">.NET documentation</a>
+     */
     public ValueTask DisposeAsync() throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.threading.tasks.TaskSchedulerException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -172,6 +192,13 @@ public class AuthenticatedStream extends system.io.Stream  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsAuthenticated.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Security.AuthenticatedStream.IsAuthenticated" target="_top">.NET documentation</a>
+     */
     public boolean getIsAuthenticated() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -186,6 +213,13 @@ public class AuthenticatedStream extends system.io.Stream  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsEncrypted.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Security.AuthenticatedStream.IsEncrypted" target="_top">.NET documentation</a>
+     */
     public boolean getIsEncrypted() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +234,13 @@ public class AuthenticatedStream extends system.io.Stream  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsMutuallyAuthenticated.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Security.AuthenticatedStream.IsMutuallyAuthenticated" target="_top">.NET documentation</a>
+     */
     public boolean getIsMutuallyAuthenticated() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -214,6 +255,13 @@ public class AuthenticatedStream extends system.io.Stream  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsServer.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Security.AuthenticatedStream.IsServer" target="_top">.NET documentation</a>
+     */
     public boolean getIsServer() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -228,6 +276,13 @@ public class AuthenticatedStream extends system.io.Stream  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsSigned.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Security.AuthenticatedStream.IsSigned" target="_top">.NET documentation</a>
+     */
     public boolean getIsSigned() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -242,6 +297,13 @@ public class AuthenticatedStream extends system.io.Stream  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LeaveInnerStreamOpen.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Security.AuthenticatedStream.LeaveInnerStreamOpen" target="_top">.NET documentation</a>
+     */
     public boolean getLeaveInnerStreamOpen() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

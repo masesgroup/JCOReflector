@@ -53,5 +53,13 @@ import system.net.ServicePoint;
  * @version 2.0.0.0
  */
 public interface IBindIPEndPoint {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param servicePoint the .NET argument of type {@code System.Net.ServicePoint}
+     * @param remoteEndPoint the .NET argument of type {@code System.Net.IPEndPoint}
+     * @param retryCount the .NET argument of type {@code System.Int32}
+     * @return the value returned to the CLR
+     */
     public IPEndPoint Invoke(ServicePoint servicePoint, IPEndPoint remoteEndPoint, int retryCount);
 }

@@ -101,7 +101,10 @@ public class BitOperations extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public BitOperations(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,14 @@ public class BitOperations extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member IsPow2.
+     *
+     * @param value the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.BitOperations.IsPow2" target="_top">.NET documentation</a>
+     */
     public static boolean IsPow2(int value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -168,6 +179,14 @@ public class BitOperations extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsPow2.
+     *
+     * @param value the argument of type {@code long}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.BitOperations.IsPow2" target="_top">.NET documentation</a>
+     */
     public static boolean IsPow2(long value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -182,6 +201,14 @@ public class BitOperations extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsPow2.
+     *
+     * @param value the argument of type {@code UInt32}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.BitOperations.IsPow2" target="_top">.NET documentation</a>
+     */
     public static boolean IsPow2(UInt32 value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -196,6 +223,14 @@ public class BitOperations extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsPow2.
+     *
+     * @param value the argument of type {@code UInt64}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.BitOperations.IsPow2" target="_top">.NET documentation</a>
+     */
     public static boolean IsPow2(UInt64 value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -210,6 +245,20 @@ public class BitOperations extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LeadingZeroCount.
+     *
+     * @param value the argument of type {@code UInt32}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.BitOperations.LeadingZeroCount" target="_top">.NET documentation</a>
+     */
     public static int LeadingZeroCount(UInt32 value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -250,6 +299,17 @@ public class BitOperations extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LeadingZeroCount.
+     *
+     * @param value the argument of type {@code UInt64}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.BitOperations.LeadingZeroCount" target="_top">.NET documentation</a>
+     */
     public static int LeadingZeroCount(UInt64 value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -290,6 +350,20 @@ public class BitOperations extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Log2.
+     *
+     * @param value the argument of type {@code UInt32}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.BitOperations.Log2" target="_top">.NET documentation</a>
+     */
     public static int Log2(UInt32 value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -330,6 +404,17 @@ public class BitOperations extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Log2.
+     *
+     * @param value the argument of type {@code UInt64}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.BitOperations.Log2" target="_top">.NET documentation</a>
+     */
     public static int Log2(UInt64 value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -370,6 +455,14 @@ public class BitOperations extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member PopCount.
+     *
+     * @param value the argument of type {@code UInt32}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.BitOperations.PopCount" target="_top">.NET documentation</a>
+     */
     public static int PopCount(UInt32 value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -410,6 +503,14 @@ public class BitOperations extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member PopCount.
+     *
+     * @param value the argument of type {@code UInt64}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.BitOperations.PopCount" target="_top">.NET documentation</a>
+     */
     public static int PopCount(UInt64 value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -450,6 +551,19 @@ public class BitOperations extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member TrailingZeroCount.
+     *
+     * @param value the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.BitOperations.TrailingZeroCount" target="_top">.NET documentation</a>
+     */
     public static int TrailingZeroCount(int value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -490,6 +604,17 @@ public class BitOperations extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member TrailingZeroCount.
+     *
+     * @param value the argument of type {@code long}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.BitOperations.TrailingZeroCount" target="_top">.NET documentation</a>
+     */
     public static int TrailingZeroCount(long value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -530,6 +655,23 @@ public class BitOperations extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member TrailingZeroCount.
+     *
+     * @param value the argument of type {@code UInt32}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.BitOperations.TrailingZeroCount" target="_top">.NET documentation</a>
+     */
     public static int TrailingZeroCount(UInt32 value) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -570,6 +712,19 @@ public class BitOperations extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member TrailingZeroCount.
+     *
+     * @param value the argument of type {@code UInt64}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.BitOperations.TrailingZeroCount" target="_top">.NET documentation</a>
+     */
     public static int TrailingZeroCount(UInt64 value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -610,6 +765,16 @@ public class BitOperations extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Crc32C.
+     *
+     * @param crc the argument of type {@code UInt32}
+     * @param data the argument of type {@code byte}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.BitOperations.Crc32C" target="_top">.NET documentation</a>
+     */
     public static UInt32 Crc32C(UInt32 crc, byte data) throws Throwable, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -625,6 +790,16 @@ public class BitOperations extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Crc32C.
+     *
+     * @param crc the argument of type {@code UInt32}
+     * @param data the argument of type {@code UInt16}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.BitOperations.Crc32C" target="_top">.NET documentation</a>
+     */
     public static UInt32 Crc32C(UInt32 crc, UInt16 data) throws Throwable, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -640,6 +815,16 @@ public class BitOperations extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Crc32C.
+     *
+     * @param crc the argument of type {@code UInt32}
+     * @param data the argument of type {@code UInt32}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.BitOperations.Crc32C" target="_top">.NET documentation</a>
+     */
     public static UInt32 Crc32C(UInt32 crc, UInt32 data) throws Throwable, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -655,6 +840,16 @@ public class BitOperations extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Crc32C.
+     *
+     * @param crc the argument of type {@code UInt32}
+     * @param data the argument of type {@code UInt64}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.BitOperations.Crc32C" target="_top">.NET documentation</a>
+     */
     public static UInt32 Crc32C(UInt32 crc, UInt64 data) throws Throwable, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -670,6 +865,15 @@ public class BitOperations extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RotateLeft.
+     *
+     * @param value the argument of type {@code UInt32}
+     * @param offset the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.BitOperations.RotateLeft" target="_top">.NET documentation</a>
+     */
     public static UInt32 RotateLeft(UInt32 value, int offset) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -685,6 +889,15 @@ public class BitOperations extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RotateRight.
+     *
+     * @param value the argument of type {@code UInt32}
+     * @param offset the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.BitOperations.RotateRight" target="_top">.NET documentation</a>
+     */
     public static UInt32 RotateRight(UInt32 value, int offset) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -700,6 +913,17 @@ public class BitOperations extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RoundUpToPowerOf2.
+     *
+     * @param value the argument of type {@code UInt32}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.BitOperations.RoundUpToPowerOf2" target="_top">.NET documentation</a>
+     */
     public static UInt32 RoundUpToPowerOf2(UInt32 value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -715,6 +939,15 @@ public class BitOperations extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RotateLeft.
+     *
+     * @param value the argument of type {@code UInt64}
+     * @param offset the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.BitOperations.RotateLeft" target="_top">.NET documentation</a>
+     */
     public static UInt64 RotateLeft(UInt64 value, int offset) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -730,6 +963,15 @@ public class BitOperations extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RotateRight.
+     *
+     * @param value the argument of type {@code UInt64}
+     * @param offset the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.BitOperations.RotateRight" target="_top">.NET documentation</a>
+     */
     public static UInt64 RotateRight(UInt64 value, int offset) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -745,6 +987,18 @@ public class BitOperations extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RoundUpToPowerOf2.
+     *
+     * @param value the argument of type {@code UInt64}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.BitOperations.RoundUpToPowerOf2" target="_top">.NET documentation</a>
+     */
     public static UInt64 RoundUpToPowerOf2(UInt64 value) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

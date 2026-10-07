@@ -104,7 +104,10 @@ public class IXpsFixedDocumentSequenceWriterImplementation extends NetObject imp
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IXpsFixedDocumentSequenceWriterImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,13 @@ public class IXpsFixedDocumentSequenceWriterImplementation extends NetObject imp
 
     // Methods section
     
+    /**
+     * Invokes the .NET member AddFixedDocument.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.IXpsFixedDocumentSequenceWriter.AddFixedDocument" target="_top">.NET documentation</a>
+     */
     public IXpsFixedDocumentWriter AddFixedDocument() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -161,6 +171,14 @@ public class IXpsFixedDocumentSequenceWriterImplementation extends NetObject imp
         }
     }
 
+    /**
+     * Invokes the .NET member AddThumbnail.
+     *
+     * @param imageType the argument of type {@code XpsImageType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.IXpsFixedDocumentSequenceWriter.AddThumbnail" target="_top">.NET documentation</a>
+     */
     public XpsThumbnail AddThumbnail(XpsImageType imageType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -176,6 +194,12 @@ public class IXpsFixedDocumentSequenceWriterImplementation extends NetObject imp
         }
     }
 
+    /**
+     * Invokes the .NET member Commit.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.IXpsFixedDocumentSequenceWriter.Commit" target="_top">.NET documentation</a>
+     */
     public void Commit() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +214,13 @@ public class IXpsFixedDocumentSequenceWriterImplementation extends NetObject imp
     
     // Properties section
     
+    /**
+     * Sets the value of the .NET property PrintTicket.
+     *
+     * @param PrintTicket the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.IXpsFixedDocumentSequenceWriter.PrintTicket" target="_top">.NET documentation</a>
+     */
     public void setPrintTicket(PrintTicket PrintTicket) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +231,13 @@ public class IXpsFixedDocumentSequenceWriterImplementation extends NetObject imp
         }
     }
 
+    /**
+     * Gets the value of the .NET property Uri.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.IXpsFixedDocumentSequenceWriter.Uri" target="_top">.NET documentation</a>
+     */
     public Uri getUri() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

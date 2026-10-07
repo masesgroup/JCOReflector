@@ -98,7 +98,10 @@ public class ClaimTypes extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ClaimTypes(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,13 @@ public class ClaimTypes extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Anonymous.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Claims.ClaimTypes.Anonymous" target="_top">.NET documentation</a>
+     */
     public static java.lang.String getAnonymous() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -169,6 +179,13 @@ public class ClaimTypes extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Authentication.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Claims.ClaimTypes.Authentication" target="_top">.NET documentation</a>
+     */
     public static java.lang.String getAuthentication() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -183,6 +200,13 @@ public class ClaimTypes extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AuthorizationDecision.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Claims.ClaimTypes.AuthorizationDecision" target="_top">.NET documentation</a>
+     */
     public static java.lang.String getAuthorizationDecision() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -197,6 +221,13 @@ public class ClaimTypes extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Country.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Claims.ClaimTypes.Country" target="_top">.NET documentation</a>
+     */
     public static java.lang.String getCountry() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -211,6 +242,13 @@ public class ClaimTypes extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DateOfBirth.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Claims.ClaimTypes.DateOfBirth" target="_top">.NET documentation</a>
+     */
     public static java.lang.String getDateOfBirth() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -225,6 +263,13 @@ public class ClaimTypes extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DenyOnlySid.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Claims.ClaimTypes.DenyOnlySid" target="_top">.NET documentation</a>
+     */
     public static java.lang.String getDenyOnlySid() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -239,6 +284,13 @@ public class ClaimTypes extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Dns.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Claims.ClaimTypes.Dns" target="_top">.NET documentation</a>
+     */
     public static java.lang.String getDns() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -253,6 +305,13 @@ public class ClaimTypes extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Email.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Claims.ClaimTypes.Email" target="_top">.NET documentation</a>
+     */
     public static java.lang.String getEmail() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -267,6 +326,13 @@ public class ClaimTypes extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Gender.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Claims.ClaimTypes.Gender" target="_top">.NET documentation</a>
+     */
     public static java.lang.String getGender() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -281,6 +347,13 @@ public class ClaimTypes extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property GivenName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Claims.ClaimTypes.GivenName" target="_top">.NET documentation</a>
+     */
     public static java.lang.String getGivenName() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -295,6 +368,13 @@ public class ClaimTypes extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Hash.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Claims.ClaimTypes.Hash" target="_top">.NET documentation</a>
+     */
     public static java.lang.String getHash() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -309,6 +389,13 @@ public class ClaimTypes extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property HomePhone.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Claims.ClaimTypes.HomePhone" target="_top">.NET documentation</a>
+     */
     public static java.lang.String getHomePhone() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -323,6 +410,13 @@ public class ClaimTypes extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Locality.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Claims.ClaimTypes.Locality" target="_top">.NET documentation</a>
+     */
     public static java.lang.String getLocality() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -337,6 +431,13 @@ public class ClaimTypes extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MobilePhone.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Claims.ClaimTypes.MobilePhone" target="_top">.NET documentation</a>
+     */
     public static java.lang.String getMobilePhone() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -351,6 +452,13 @@ public class ClaimTypes extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Claims.ClaimTypes.Name" target="_top">.NET documentation</a>
+     */
     public static java.lang.String getName() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -365,6 +473,13 @@ public class ClaimTypes extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NameIdentifier.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Claims.ClaimTypes.NameIdentifier" target="_top">.NET documentation</a>
+     */
     public static java.lang.String getNameIdentifier() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -379,6 +494,13 @@ public class ClaimTypes extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OtherPhone.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Claims.ClaimTypes.OtherPhone" target="_top">.NET documentation</a>
+     */
     public static java.lang.String getOtherPhone() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -393,6 +515,13 @@ public class ClaimTypes extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PostalCode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Claims.ClaimTypes.PostalCode" target="_top">.NET documentation</a>
+     */
     public static java.lang.String getPostalCode() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -407,6 +536,13 @@ public class ClaimTypes extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PPID.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Claims.ClaimTypes.PPID" target="_top">.NET documentation</a>
+     */
     public static java.lang.String getPPID() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -421,6 +557,13 @@ public class ClaimTypes extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Rsa.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Claims.ClaimTypes.Rsa" target="_top">.NET documentation</a>
+     */
     public static java.lang.String getRsa() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -435,6 +578,13 @@ public class ClaimTypes extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Sid.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Claims.ClaimTypes.Sid" target="_top">.NET documentation</a>
+     */
     public static java.lang.String getSid() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -449,6 +599,13 @@ public class ClaimTypes extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Spn.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Claims.ClaimTypes.Spn" target="_top">.NET documentation</a>
+     */
     public static java.lang.String getSpn() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -463,6 +620,13 @@ public class ClaimTypes extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StateOrProvince.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Claims.ClaimTypes.StateOrProvince" target="_top">.NET documentation</a>
+     */
     public static java.lang.String getStateOrProvince() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -477,6 +641,13 @@ public class ClaimTypes extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StreetAddress.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Claims.ClaimTypes.StreetAddress" target="_top">.NET documentation</a>
+     */
     public static java.lang.String getStreetAddress() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -491,6 +662,13 @@ public class ClaimTypes extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Surname.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Claims.ClaimTypes.Surname" target="_top">.NET documentation</a>
+     */
     public static java.lang.String getSurname() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -505,6 +683,13 @@ public class ClaimTypes extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property System.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Claims.ClaimTypes.System" target="_top">.NET documentation</a>
+     */
     public static java.lang.String getSystem() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -519,6 +704,13 @@ public class ClaimTypes extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Thumbprint.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Claims.ClaimTypes.Thumbprint" target="_top">.NET documentation</a>
+     */
     public static java.lang.String getThumbprint() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -533,6 +725,13 @@ public class ClaimTypes extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Upn.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Claims.ClaimTypes.Upn" target="_top">.NET documentation</a>
+     */
     public static java.lang.String getUpn() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -547,6 +746,13 @@ public class ClaimTypes extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Uri.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Claims.ClaimTypes.Uri" target="_top">.NET documentation</a>
+     */
     public static java.lang.String getUri() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -561,6 +767,13 @@ public class ClaimTypes extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Webpage.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Claims.ClaimTypes.Webpage" target="_top">.NET documentation</a>
+     */
     public static java.lang.String getWebpage() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -575,6 +788,13 @@ public class ClaimTypes extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property X500DistinguishedName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Claims.ClaimTypes.X500DistinguishedName" target="_top">.NET documentation</a>
+     */
     public static java.lang.String getX500DistinguishedName() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

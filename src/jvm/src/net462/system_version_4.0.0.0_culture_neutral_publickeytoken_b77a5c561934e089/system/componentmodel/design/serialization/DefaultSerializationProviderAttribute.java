@@ -99,7 +99,10 @@ public class DefaultSerializationProviderAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DefaultSerializationProviderAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,14 @@ public class DefaultSerializationProviderAttribute extends system.Attribute  {
     public DefaultSerializationProviderAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param providerTypeName the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.DefaultSerializationProviderAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public DefaultSerializationProviderAttribute(java.lang.String providerTypeName) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -159,6 +170,14 @@ public class DefaultSerializationProviderAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param providerType the argument of type {@code NetType}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.DefaultSerializationProviderAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public DefaultSerializationProviderAttribute(NetType providerType) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -178,6 +197,13 @@ public class DefaultSerializationProviderAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ProviderTypeName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.DefaultSerializationProviderAttribute.ProviderTypeName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getProviderTypeName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

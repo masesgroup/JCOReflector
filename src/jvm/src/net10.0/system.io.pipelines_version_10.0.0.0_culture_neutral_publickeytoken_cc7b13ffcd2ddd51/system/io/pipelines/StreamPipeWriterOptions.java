@@ -99,7 +99,10 @@ public class StreamPipeWriterOptions extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public StreamPipeWriterOptions(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,24 @@ public class StreamPipeWriterOptions extends NetObject  {
     public StreamPipeWriterOptions() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param pool the argument of type {@code MemoryPool_1}
+     * @param minimumBufferSize the argument of type {@code int}
+     * @param leaveOpen the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Pipelines.StreamPipeWriterOptions.-ctor" target="_top">.NET documentation</a>
+     */
     public StreamPipeWriterOptions(MemoryPool_1 pool, int minimumBufferSize, boolean leaveOpen) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +189,13 @@ public class StreamPipeWriterOptions extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property LeaveOpen.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Pipelines.StreamPipeWriterOptions.LeaveOpen" target="_top">.NET documentation</a>
+     */
     public boolean getLeaveOpen() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +210,13 @@ public class StreamPipeWriterOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MinimumBufferSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Pipelines.StreamPipeWriterOptions.MinimumBufferSize" target="_top">.NET documentation</a>
+     */
     public int getMinimumBufferSize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -222,6 +257,13 @@ public class StreamPipeWriterOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Pool.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Pipelines.StreamPipeWriterOptions.Pool" target="_top">.NET documentation</a>
+     */
     public MemoryPool_1 getPool() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

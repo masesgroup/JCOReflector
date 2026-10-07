@@ -103,7 +103,10 @@ public class XmlSortKeyAccumulator extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XmlSortKeyAccumulator(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -158,6 +161,14 @@ public class XmlSortKeyAccumulator extends system.ValueType  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member AddDateTimeSortKey.
+     *
+     * @param collation the argument of type {@code XmlCollation}
+     * @param value the argument of type {@code DateTime}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlSortKeyAccumulator.AddDateTimeSortKey" target="_top">.NET documentation</a>
+     */
     public void AddDateTimeSortKey(XmlCollation collation, DateTime value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -168,6 +179,15 @@ public class XmlSortKeyAccumulator extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddDecimalSortKey.
+     *
+     * @param collation the argument of type {@code XmlCollation}
+     * @param value the argument of type {@code Decimal}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlSortKeyAccumulator.AddDecimalSortKey" target="_top">.NET documentation</a>
+     */
     public void AddDecimalSortKey(XmlCollation collation, Decimal value) throws Throwable, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,6 +198,14 @@ public class XmlSortKeyAccumulator extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddDoubleSortKey.
+     *
+     * @param collation the argument of type {@code XmlCollation}
+     * @param value the argument of type {@code double}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlSortKeyAccumulator.AddDoubleSortKey" target="_top">.NET documentation</a>
+     */
     public void AddDoubleSortKey(XmlCollation collation, double value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +216,13 @@ public class XmlSortKeyAccumulator extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddEmptySortKey.
+     *
+     * @param collation the argument of type {@code XmlCollation}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlSortKeyAccumulator.AddEmptySortKey" target="_top">.NET documentation</a>
+     */
     public void AddEmptySortKey(XmlCollation collation) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +233,14 @@ public class XmlSortKeyAccumulator extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddIntegerSortKey.
+     *
+     * @param collation the argument of type {@code XmlCollation}
+     * @param value the argument of type {@code long}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlSortKeyAccumulator.AddIntegerSortKey" target="_top">.NET documentation</a>
+     */
     public void AddIntegerSortKey(XmlCollation collation, long value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +251,14 @@ public class XmlSortKeyAccumulator extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddIntSortKey.
+     *
+     * @param collation the argument of type {@code XmlCollation}
+     * @param value the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlSortKeyAccumulator.AddIntSortKey" target="_top">.NET documentation</a>
+     */
     public void AddIntSortKey(XmlCollation collation, int value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -218,6 +269,20 @@ public class XmlSortKeyAccumulator extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddStringSortKey.
+     *
+     * @param collation the argument of type {@code XmlCollation}
+     * @param value the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlSortKeyAccumulator.AddStringSortKey" target="_top">.NET documentation</a>
+     */
     public void AddStringSortKey(XmlCollation collation, java.lang.String value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -228,6 +293,12 @@ public class XmlSortKeyAccumulator extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlSortKeyAccumulator.Create" target="_top">.NET documentation</a>
+     */
     public void Create() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -238,6 +309,12 @@ public class XmlSortKeyAccumulator extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member FinishSortKeys.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlSortKeyAccumulator.FinishSortKeys" target="_top">.NET documentation</a>
+     */
     public void FinishSortKeys() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -252,6 +329,13 @@ public class XmlSortKeyAccumulator extends system.ValueType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Keys.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlSortKeyAccumulator.Keys" target="_top">.NET documentation</a>
+     */
     public Array getKeys() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

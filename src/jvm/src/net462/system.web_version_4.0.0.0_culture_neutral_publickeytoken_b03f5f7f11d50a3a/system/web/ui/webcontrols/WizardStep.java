@@ -99,7 +99,10 @@ public class WizardStep extends system.web.ui.webcontrols.WizardStepBase  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public WizardStep(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class WizardStep extends system.web.ui.webcontrols.WizardStepBase  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WizardStep.-ctor" target="_top">.NET documentation</a>
+     */
     public WizardStep() throws Throwable {
         try {
             // add reference to assemblyName.dll file

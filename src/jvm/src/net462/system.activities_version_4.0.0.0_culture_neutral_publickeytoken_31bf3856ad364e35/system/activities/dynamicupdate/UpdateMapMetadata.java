@@ -100,7 +100,10 @@ public class UpdateMapMetadata extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public UpdateMapMetadata(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,19 @@ public class UpdateMapMetadata extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member IsReferenceToImportedChild.
+     *
+     * @param childActivity the argument of type {@code Activity}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.UpdateMapMetadata.IsReferenceToImportedChild" target="_top">.NET documentation</a>
+     */
     public boolean IsReferenceToImportedChild(Activity childActivity) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -169,6 +185,19 @@ public class UpdateMapMetadata extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetMatch.
+     *
+     * @param updatedChild the argument of type {@code Activity}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.UpdateMapMetadata.GetMatch" target="_top">.NET documentation</a>
+     */
     public Activity GetMatch(Activity updatedChild) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +213,19 @@ public class UpdateMapMetadata extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetMatch.
+     *
+     * @param updatedVariable the argument of type {@code Variable}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.UpdateMapMetadata.GetMatch" target="_top">.NET documentation</a>
+     */
     public Variable GetMatch(Variable updatedVariable) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -199,6 +241,19 @@ public class UpdateMapMetadata extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddMatch.
+     *
+     * @param updatedChild the argument of type {@code Activity}
+     * @param originalChild the argument of type {@code Activity}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.UpdateMapMetadata.AddMatch" target="_top">.NET documentation</a>
+     */
     public void AddMatch(Activity updatedChild, Activity originalChild) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -209,6 +264,19 @@ public class UpdateMapMetadata extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddMatch.
+     *
+     * @param updatedVariable the argument of type {@code Variable}
+     * @param originalVariable the argument of type {@code Variable}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.UpdateMapMetadata.AddMatch" target="_top">.NET documentation</a>
+     */
     public void AddMatch(Variable updatedVariable, Variable originalVariable) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -219,6 +287,17 @@ public class UpdateMapMetadata extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AllowUpdateInsideThisActivity.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.UpdateMapMetadata.AllowUpdateInsideThisActivity" target="_top">.NET documentation</a>
+     */
     public void AllowUpdateInsideThisActivity() throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -229,6 +308,18 @@ public class UpdateMapMetadata extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DisallowUpdateInsideThisActivity.
+     *
+     * @param reason the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.UpdateMapMetadata.DisallowUpdateInsideThisActivity" target="_top">.NET documentation</a>
+     */
     public void DisallowUpdateInsideThisActivity(java.lang.String reason) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

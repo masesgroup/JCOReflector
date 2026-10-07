@@ -100,7 +100,10 @@ public class DataGridTextBox extends system.windows.forms.TextBox  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DataGridTextBox(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,23 @@ public class DataGridTextBox extends system.windows.forms.TextBox  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridTextBox.-ctor" target="_top">.NET documentation</a>
+     */
     public DataGridTextBox() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.InvalidCastException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -161,6 +181,13 @@ public class DataGridTextBox extends system.windows.forms.TextBox  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member SetDataGrid.
+     *
+     * @param parentGrid the argument of type {@code DataGrid}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridTextBox.SetDataGrid" target="_top">.NET documentation</a>
+     */
     public void SetDataGrid(DataGrid parentGrid) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -175,6 +202,13 @@ public class DataGridTextBox extends system.windows.forms.TextBox  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsInEditOrNavigateMode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridTextBox.IsInEditOrNavigateMode" target="_top">.NET documentation</a>
+     */
     public boolean getIsInEditOrNavigateMode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +223,13 @@ public class DataGridTextBox extends system.windows.forms.TextBox  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsInEditOrNavigateMode.
+     *
+     * @param IsInEditOrNavigateMode the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridTextBox.IsInEditOrNavigateMode" target="_top">.NET documentation</a>
+     */
     public void setIsInEditOrNavigateMode(boolean IsInEditOrNavigateMode) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

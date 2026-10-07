@@ -100,7 +100,10 @@ public class IJSVsaSiteImplementation extends NetObject implements IJSVsaSite {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IJSVsaSiteImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -142,6 +145,14 @@ public class IJSVsaSiteImplementation extends NetObject implements IJSVsaSite {
 
     // Methods section
     
+    /**
+     * Invokes the .NET member OnCompilerError.
+     *
+     * @param error the argument of type {@code IJSVsaError}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.IJSVsaSite.OnCompilerError" target="_top">.NET documentation</a>
+     */
     public boolean OnCompilerError(IJSVsaError error) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -156,6 +167,15 @@ public class IJSVsaSiteImplementation extends NetObject implements IJSVsaSite {
         }
     }
 
+    /**
+     * Invokes the .NET member GetEventSourceInstance.
+     *
+     * @param itemName the argument of type {@code java.lang.String}
+     * @param eventSourceName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.IJSVsaSite.GetEventSourceInstance" target="_top">.NET documentation</a>
+     */
     public NetObject GetEventSourceInstance(java.lang.String itemName, java.lang.String eventSourceName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -171,6 +191,14 @@ public class IJSVsaSiteImplementation extends NetObject implements IJSVsaSite {
         }
     }
 
+    /**
+     * Invokes the .NET member GetGlobalInstance.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.IJSVsaSite.GetGlobalInstance" target="_top">.NET documentation</a>
+     */
     public NetObject GetGlobalInstance(java.lang.String name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -186,6 +214,14 @@ public class IJSVsaSiteImplementation extends NetObject implements IJSVsaSite {
         }
     }
 
+    /**
+     * Invokes the .NET member GetCompiledState.
+     *
+     * @param pe the argument of type {@code JCORefOut}
+     * @param debugInfo the argument of type {@code JCORefOut}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.IJSVsaSite.GetCompiledState" target="_top">.NET documentation</a>
+     */
     public void GetCompiledState(JCORefOut pe, JCORefOut debugInfo) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -196,6 +232,14 @@ public class IJSVsaSiteImplementation extends NetObject implements IJSVsaSite {
         }
     }
 
+    /**
+     * Invokes the .NET member Notify.
+     *
+     * @param notify the argument of type {@code java.lang.String}
+     * @param info the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.IJSVsaSite.Notify" target="_top">.NET documentation</a>
+     */
     public void Notify(java.lang.String notify, NetObject info) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

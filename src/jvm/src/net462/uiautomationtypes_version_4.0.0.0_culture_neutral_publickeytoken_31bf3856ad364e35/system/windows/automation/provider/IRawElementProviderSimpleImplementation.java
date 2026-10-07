@@ -101,7 +101,10 @@ public class IRawElementProviderSimpleImplementation extends NetObject implement
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IRawElementProviderSimpleImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -143,6 +146,14 @@ public class IRawElementProviderSimpleImplementation extends NetObject implement
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetPatternProvider.
+     *
+     * @param patternId the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.IRawElementProviderSimple.GetPatternProvider" target="_top">.NET documentation</a>
+     */
     public NetObject GetPatternProvider(int patternId) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -158,6 +169,14 @@ public class IRawElementProviderSimpleImplementation extends NetObject implement
         }
     }
 
+    /**
+     * Invokes the .NET member GetPropertyValue.
+     *
+     * @param propertyId the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.IRawElementProviderSimple.GetPropertyValue" target="_top">.NET documentation</a>
+     */
     public NetObject GetPropertyValue(int propertyId) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -177,6 +196,13 @@ public class IRawElementProviderSimpleImplementation extends NetObject implement
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property HostRawElementProvider.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.IRawElementProviderSimple.HostRawElementProvider" target="_top">.NET documentation</a>
+     */
     public IRawElementProviderSimple getHostRawElementProvider() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -192,6 +218,13 @@ public class IRawElementProviderSimpleImplementation extends NetObject implement
         }
     }
 
+    /**
+     * Gets the value of the .NET property ProviderOptions.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.IRawElementProviderSimple.ProviderOptions" target="_top">.NET documentation</a>
+     */
     public ProviderOptions getProviderOptions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

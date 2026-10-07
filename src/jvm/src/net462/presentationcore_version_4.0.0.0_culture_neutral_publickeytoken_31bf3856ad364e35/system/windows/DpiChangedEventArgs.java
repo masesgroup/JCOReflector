@@ -100,7 +100,10 @@ public class DpiChangedEventArgs extends system.windows.RoutedEventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DpiChangedEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -159,6 +162,13 @@ public class DpiChangedEventArgs extends system.windows.RoutedEventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property NewDpi.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.DpiChangedEventArgs.NewDpi" target="_top">.NET documentation</a>
+     */
     public DpiScale getNewDpi() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -174,6 +184,13 @@ public class DpiChangedEventArgs extends system.windows.RoutedEventArgs  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property NewDpi.
+     *
+     * @param NewDpi the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.DpiChangedEventArgs.NewDpi" target="_top">.NET documentation</a>
+     */
     public void setNewDpi(DpiScale NewDpi) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +201,13 @@ public class DpiChangedEventArgs extends system.windows.RoutedEventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OldDpi.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.DpiChangedEventArgs.OldDpi" target="_top">.NET documentation</a>
+     */
     public DpiScale getOldDpi() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -199,6 +223,13 @@ public class DpiChangedEventArgs extends system.windows.RoutedEventArgs  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property OldDpi.
+     *
+     * @param OldDpi the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.DpiChangedEventArgs.OldDpi" target="_top">.NET documentation</a>
+     */
     public void setOldDpi(DpiScale OldDpi) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

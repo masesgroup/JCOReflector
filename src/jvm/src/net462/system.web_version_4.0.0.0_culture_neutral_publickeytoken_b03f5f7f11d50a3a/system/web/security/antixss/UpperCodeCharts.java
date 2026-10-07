@@ -114,7 +114,9 @@ public class UpperCodeCharts extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
      */
     public UpperCodeCharts(java.lang.Object instance) {
         super(instance);
@@ -198,18 +200,50 @@ public class UpperCodeCharts extends NetObject  {
 
     // Flags management section
 
+    /**
+     * Invokes the .NET member add.
+     *
+     * @param val the argument of type {@code UpperCodeCharts}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public final UpperCodeCharts add(UpperCodeCharts val) throws Throwable {
         return new UpperCodeCharts(NetEnum.add(classInstance, val.classInstance));
     }
 
+    /**
+     * Invokes the .NET member remove.
+     *
+     * @param val the argument of type {@code UpperCodeCharts}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public final UpperCodeCharts remove(UpperCodeCharts val) throws Throwable {
         return new UpperCodeCharts(NetEnum.remove(classInstance, val.classInstance));
     }
 
+    /**
+     * Invokes the .NET member is.
+     *
+     * @param val the argument of type {@code UpperCodeCharts}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public final boolean is(UpperCodeCharts val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
+    /**
+     * Invokes the .NET member has.
+     *
+     * @param val the argument of type {@code UpperCodeCharts}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public final boolean has(UpperCodeCharts val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }

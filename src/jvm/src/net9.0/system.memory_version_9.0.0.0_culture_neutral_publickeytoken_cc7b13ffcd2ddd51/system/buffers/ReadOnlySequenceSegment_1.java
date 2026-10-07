@@ -100,7 +100,10 @@ public class ReadOnlySequenceSegment_1<T extends IJCOBridgeReflected> extends Ne
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ReadOnlySequenceSegment_1(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,13 @@ public class ReadOnlySequenceSegment_1<T extends IJCOBridgeReflected> extends Ne
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property RunningIndex.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Buffers.ReadOnlySequenceSegment-1.RunningIndex" target="_top">.NET documentation</a>
+     */
     public long getRunningIndex() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +207,13 @@ public class ReadOnlySequenceSegment_1<T extends IJCOBridgeReflected> extends Ne
         }
     }
 
+    /**
+     * Sets the value of the .NET property RunningIndex.
+     *
+     * @param RunningIndex the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Buffers.ReadOnlySequenceSegment-1.RunningIndex" target="_top">.NET documentation</a>
+     */
     public void setRunningIndex(long RunningIndex) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +224,13 @@ public class ReadOnlySequenceSegment_1<T extends IJCOBridgeReflected> extends Ne
         }
     }
 
+    /**
+     * Gets the value of the .NET property Next.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Buffers.ReadOnlySequenceSegment-1.Next" target="_top">.NET documentation</a>
+     */
     public ReadOnlySequenceSegment_1 getNext() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -222,6 +246,13 @@ public class ReadOnlySequenceSegment_1<T extends IJCOBridgeReflected> extends Ne
         }
     }
 
+    /**
+     * Sets the value of the .NET property Next.
+     *
+     * @param Next the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Buffers.ReadOnlySequenceSegment-1.Next" target="_top">.NET documentation</a>
+     */
     public void setNext(ReadOnlySequenceSegment_1 Next) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -232,6 +263,13 @@ public class ReadOnlySequenceSegment_1<T extends IJCOBridgeReflected> extends Ne
         }
     }
 
+    /**
+     * Gets the value of the .NET property Memory.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Buffers.ReadOnlySequenceSegment-1.Memory" target="_top">.NET documentation</a>
+     */
     public ReadOnlyMemory_1 getMemory() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -247,6 +285,13 @@ public class ReadOnlySequenceSegment_1<T extends IJCOBridgeReflected> extends Ne
         }
     }
 
+    /**
+     * Sets the value of the .NET property Memory.
+     *
+     * @param Memory the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Buffers.ReadOnlySequenceSegment-1.Memory" target="_top">.NET documentation</a>
+     */
     public void setMemory(ReadOnlyMemory_1 Memory) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -100,7 +100,10 @@ public class BaseVsaStartup extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public BaseVsaStartup(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,13 @@ public class BaseVsaStartup extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member SetSite.
+     *
+     * @param site the argument of type {@code IJSVsaSite}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.BaseVsaStartup.SetSite" target="_top">.NET documentation</a>
+     */
     public void SetSite(IJSVsaSite site) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -163,6 +173,12 @@ public class BaseVsaStartup extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Shutdown.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.BaseVsaStartup.Shutdown" target="_top">.NET documentation</a>
+     */
     public void Shutdown() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -173,6 +189,12 @@ public class BaseVsaStartup extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Startup.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.BaseVsaStartup.Startup" target="_top">.NET documentation</a>
+     */
     public void Startup() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -103,7 +103,10 @@ public class FunctionDeclaration extends microsoft.jscript.AST  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public FunctionDeclaration(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -158,6 +161,31 @@ public class FunctionDeclaration extends microsoft.jscript.AST  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member JScriptFunctionDeclaration.
+     *
+     * @param handle the argument of type {@code RuntimeTypeHandle}
+     * @param name the argument of type {@code java.lang.String}
+     * @param method_name the argument of type {@code java.lang.String}
+     * @param formal_parameters the argument of type {@code java.lang.String[]}
+     * @param fields the argument of type {@code JSLocalField[]}
+     * @param must_save_stack_locals the argument of type {@code boolean}
+     * @param hasArgumentsObject the argument of type {@code boolean}
+     * @param text the argument of type {@code java.lang.String}
+     * @param declaringObject the argument of type {@code NetObject}
+     * @param engine the argument of type {@code VsaEngine}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.FunctionDeclaration.JScriptFunctionDeclaration" target="_top">.NET documentation</a>
+     */
     public static Closure JScriptFunctionDeclaration(RuntimeTypeHandle handle, java.lang.String name, java.lang.String method_name, java.lang.String[] formal_parameters, JSLocalField[] fields, boolean must_save_stack_locals, boolean hasArgumentsObject, java.lang.String text, NetObject declaringObject, VsaEngine engine) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -173,6 +201,31 @@ public class FunctionDeclaration extends microsoft.jscript.AST  {
         }
     }
 
+    /**
+     * Invokes the .NET member JScriptFunctionDeclaration.
+     *
+     * @param dupParam0 the argument of type {@code RuntimeTypeHandle}
+     * @param dupParam1 the argument of type {@code java.lang.String}
+     * @param dupParam2 the argument of type {@code java.lang.String}
+     * @param dupParam3 the argument of type {@code JCORefOut}
+     * @param dupParam4 the argument of type {@code JSLocalField[]}
+     * @param dupParam5 the argument of type {@code boolean}
+     * @param dupParam6 the argument of type {@code boolean}
+     * @param dupParam7 the argument of type {@code java.lang.String}
+     * @param dupParam8 the argument of type {@code NetObject}
+     * @param dupParam9 the argument of type {@code VsaEngine}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.FunctionDeclaration.JScriptFunctionDeclaration" target="_top">.NET documentation</a>
+     */
     public static Closure JScriptFunctionDeclaration(RuntimeTypeHandle dupParam0, java.lang.String dupParam1, java.lang.String dupParam2, JCORefOut dupParam3, JSLocalField[] dupParam4, boolean dupParam5, boolean dupParam6, java.lang.String dupParam7, NetObject dupParam8, VsaEngine dupParam9) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

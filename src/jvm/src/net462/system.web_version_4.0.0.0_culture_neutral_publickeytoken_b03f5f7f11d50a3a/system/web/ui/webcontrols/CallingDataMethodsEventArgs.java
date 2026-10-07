@@ -99,7 +99,10 @@ public class CallingDataMethodsEventArgs extends system.EventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CallingDataMethodsEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class CallingDataMethodsEventArgs extends system.EventArgs  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.CallingDataMethodsEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public CallingDataMethodsEventArgs() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +173,13 @@ public class CallingDataMethodsEventArgs extends system.EventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property DataMethodsObject.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.CallingDataMethodsEventArgs.DataMethodsObject" target="_top">.NET documentation</a>
+     */
     public NetObject getDataMethodsObject() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -179,6 +195,13 @@ public class CallingDataMethodsEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DataMethodsObject.
+     *
+     * @param DataMethodsObject the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.CallingDataMethodsEventArgs.DataMethodsObject" target="_top">.NET documentation</a>
+     */
     public void setDataMethodsObject(NetObject DataMethodsObject) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +212,13 @@ public class CallingDataMethodsEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DataMethodsType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.CallingDataMethodsEventArgs.DataMethodsType" target="_top">.NET documentation</a>
+     */
     public NetType getDataMethodsType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +234,13 @@ public class CallingDataMethodsEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DataMethodsType.
+     *
+     * @param DataMethodsType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.CallingDataMethodsEventArgs.DataMethodsType" target="_top">.NET documentation</a>
+     */
     public void setDataMethodsType(NetType DataMethodsType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

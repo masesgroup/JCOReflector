@@ -104,7 +104,10 @@ public class SignatureHelper extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SignatureHelper(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -159,6 +162,15 @@ public class SignatureHelper extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetSignature.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.SignatureHelper.GetSignature" target="_top">.NET documentation</a>
+     */
     public byte[] GetSignature() throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +194,16 @@ public class SignatureHelper extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetFieldSigHelper.
+     *
+     * @param mod the argument of type {@code Module}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.SignatureHelper.GetFieldSigHelper" target="_top">.NET documentation</a>
+     */
     public static SignatureHelper GetFieldSigHelper(Module mod) throws Throwable, system.ArgumentException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -197,6 +219,15 @@ public class SignatureHelper extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetLocalVarSigHelper.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.SignatureHelper.GetLocalVarSigHelper" target="_top">.NET documentation</a>
+     */
     public static SignatureHelper GetLocalVarSigHelper() throws Throwable, system.ArgumentException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -212,6 +243,16 @@ public class SignatureHelper extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetLocalVarSigHelper.
+     *
+     * @param mod the argument of type {@code Module}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.SignatureHelper.GetLocalVarSigHelper" target="_top">.NET documentation</a>
+     */
     public static SignatureHelper GetLocalVarSigHelper(Module mod) throws Throwable, system.ArgumentException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -227,6 +268,20 @@ public class SignatureHelper extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetMethodSigHelper.
+     *
+     * @param callingConvention the argument of type {@code CallingConventions}
+     * @param returnType the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.SignatureHelper.GetMethodSigHelper" target="_top">.NET documentation</a>
+     */
     public static SignatureHelper GetMethodSigHelper(CallingConventions callingConvention, NetType returnType) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -242,6 +297,20 @@ public class SignatureHelper extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetMethodSigHelper.
+     *
+     * @param mod the argument of type {@code Module}
+     * @param callingConvention the argument of type {@code CallingConventions}
+     * @param returnType the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.SignatureHelper.GetMethodSigHelper" target="_top">.NET documentation</a>
+     */
     public static SignatureHelper GetMethodSigHelper(Module mod, CallingConventions callingConvention, NetType returnType) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -257,6 +326,21 @@ public class SignatureHelper extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetMethodSigHelper.
+     *
+     * @param mod the argument of type {@code Module}
+     * @param unmanagedCallConv the argument of type {@code CallingConvention}
+     * @param returnType the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.SignatureHelper.GetMethodSigHelper" target="_top">.NET documentation</a>
+     */
     public static SignatureHelper GetMethodSigHelper(Module mod, CallingConvention unmanagedCallConv, NetType returnType) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.NotImplementedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -272,6 +356,20 @@ public class SignatureHelper extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetMethodSigHelper.
+     *
+     * @param mod the argument of type {@code Module}
+     * @param returnType the argument of type {@code NetType}
+     * @param parameterTypes the argument of type {@code NetType[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.SignatureHelper.GetMethodSigHelper" target="_top">.NET documentation</a>
+     */
     public static SignatureHelper GetMethodSigHelper(Module mod, NetType returnType, NetType[] parameterTypes) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -287,6 +385,19 @@ public class SignatureHelper extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetMethodSigHelper.
+     *
+     * @param unmanagedCallingConvention the argument of type {@code CallingConvention}
+     * @param returnType the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.SignatureHelper.GetMethodSigHelper" target="_top">.NET documentation</a>
+     */
     public static SignatureHelper GetMethodSigHelper(CallingConvention unmanagedCallingConvention, NetType returnType) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -302,6 +413,21 @@ public class SignatureHelper extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetPropertySigHelper.
+     *
+     * @param mod the argument of type {@code Module}
+     * @param returnType the argument of type {@code NetType}
+     * @param parameterTypes the argument of type {@code NetType[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.SignatureHelper.GetPropertySigHelper" target="_top">.NET documentation</a>
+     */
     public static SignatureHelper GetPropertySigHelper(Module mod, NetType returnType, NetType[] parameterTypes) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -317,6 +443,19 @@ public class SignatureHelper extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddArgument.
+     *
+     * @param clsArgument the argument of type {@code NetType}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.SignatureHelper.AddArgument" target="_top">.NET documentation</a>
+     */
     public void AddArgument(NetType clsArgument) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -327,6 +466,19 @@ public class SignatureHelper extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddArgument.
+     *
+     * @param argument the argument of type {@code NetType}
+     * @param pinned the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.SignatureHelper.AddArgument" target="_top">.NET documentation</a>
+     */
     public void AddArgument(NetType argument, boolean pinned) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.NotSupportedException, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -337,6 +489,21 @@ public class SignatureHelper extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddArgument.
+     *
+     * @param argument the argument of type {@code NetType}
+     * @param requiredCustomModifiers the argument of type {@code NetType[]}
+     * @param optionalCustomModifiers the argument of type {@code NetType[]}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.SignatureHelper.AddArgument" target="_top">.NET documentation</a>
+     */
     public void AddArgument(NetType argument, NetType[] requiredCustomModifiers, NetType[] optionalCustomModifiers) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -347,6 +514,13 @@ public class SignatureHelper extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddSentinel.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.SignatureHelper.AddSentinel" target="_top">.NET documentation</a>
+     */
     public void AddSentinel() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -360,8 +534,12 @@ public class SignatureHelper extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static To_SignatureHelper method available in _SignatureHelper to obtain an object with an invocable method
+     *
+     * @param pcTInfo the argument of type {@code JCORefOut<UInt32>}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._SignatureHelper.GetTypeInfoCount" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void GetTypeInfoCount(JCORefOut<UInt32> pcTInfo) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_SignatureHelper to obtain the full interface.");
     }

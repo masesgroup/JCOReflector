@@ -98,7 +98,10 @@ public class IStyleConnectorImplementation extends NetObject implements IStyleCo
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IStyleConnectorImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -140,6 +143,14 @@ public class IStyleConnectorImplementation extends NetObject implements IStyleCo
 
     // Methods section
     
+    /**
+     * Invokes the .NET member Connect.
+     *
+     * @param connectionId the argument of type {@code int}
+     * @param target the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.IStyleConnector.Connect" target="_top">.NET documentation</a>
+     */
     public void Connect(int connectionId, NetObject target) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

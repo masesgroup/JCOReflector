@@ -101,7 +101,10 @@ public class TextCompositionEventArgs extends system.windows.input.InputEventArg
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TextCompositionEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,15 @@ public class TextCompositionEventArgs extends system.windows.input.InputEventArg
     public TextCompositionEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param inputDevice the argument of type {@code InputDevice}
+     * @param composition the argument of type {@code TextComposition}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.TextCompositionEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public TextCompositionEventArgs(InputDevice inputDevice, TextComposition composition) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +182,13 @@ public class TextCompositionEventArgs extends system.windows.input.InputEventArg
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ControlText.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.TextCompositionEventArgs.ControlText" target="_top">.NET documentation</a>
+     */
     public java.lang.String getControlText() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +203,13 @@ public class TextCompositionEventArgs extends system.windows.input.InputEventArg
         }
     }
 
+    /**
+     * Gets the value of the .NET property SystemText.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.TextCompositionEventArgs.SystemText" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSystemText() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +224,13 @@ public class TextCompositionEventArgs extends system.windows.input.InputEventArg
         }
     }
 
+    /**
+     * Gets the value of the .NET property Text.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.TextCompositionEventArgs.Text" target="_top">.NET documentation</a>
+     */
     public java.lang.String getText() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -212,6 +245,13 @@ public class TextCompositionEventArgs extends system.windows.input.InputEventArg
         }
     }
 
+    /**
+     * Gets the value of the .NET property TextComposition.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.TextCompositionEventArgs.TextComposition" target="_top">.NET documentation</a>
+     */
     public TextComposition getTextComposition() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

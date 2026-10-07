@@ -100,7 +100,10 @@ public class EncoderReplacementFallbackBuffer extends system.text.EncoderFallbac
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public EncoderReplacementFallbackBuffer(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,14 @@ public class EncoderReplacementFallbackBuffer extends system.text.EncoderFallbac
     public EncoderReplacementFallbackBuffer() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param fallback the argument of type {@code EncoderReplacementFallback}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.EncoderReplacementFallbackBuffer.-ctor" target="_top">.NET documentation</a>
+     */
     public EncoderReplacementFallbackBuffer(EncoderReplacementFallback fallback) throws Throwable, system.IndexOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +176,27 @@ public class EncoderReplacementFallbackBuffer extends system.text.EncoderFallbac
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Fallback.
+     *
+     * @param charUnknownHigh the argument of type {@code char}
+     * @param charUnknownLow the argument of type {@code char}
+     * @param index the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.EncoderReplacementFallbackBuffer.Fallback" target="_top">.NET documentation</a>
+     */
     public boolean Fallback(char charUnknownHigh, char charUnknownLow, int index) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -179,6 +211,24 @@ public class EncoderReplacementFallbackBuffer extends system.text.EncoderFallbac
         }
     }
 
+    /**
+     * Invokes the .NET member Fallback.
+     *
+     * @param charUnknown the argument of type {@code char}
+     * @param index the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.EncoderReplacementFallbackBuffer.Fallback" target="_top">.NET documentation</a>
+     */
     public boolean Fallback(char charUnknown, int index) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +243,13 @@ public class EncoderReplacementFallbackBuffer extends system.text.EncoderFallbac
         }
     }
 
+    /**
+     * Invokes the .NET member MovePrevious.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.EncoderReplacementFallbackBuffer.MovePrevious" target="_top">.NET documentation</a>
+     */
     public boolean MovePrevious() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +264,13 @@ public class EncoderReplacementFallbackBuffer extends system.text.EncoderFallbac
         }
     }
 
+    /**
+     * Invokes the .NET member GetNextChar.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.EncoderReplacementFallbackBuffer.GetNextChar" target="_top">.NET documentation</a>
+     */
     public char GetNextChar() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -221,6 +285,12 @@ public class EncoderReplacementFallbackBuffer extends system.text.EncoderFallbac
         }
     }
 
+    /**
+     * Invokes the .NET member Reset.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.EncoderReplacementFallbackBuffer.Reset" target="_top">.NET documentation</a>
+     */
     public void Reset() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

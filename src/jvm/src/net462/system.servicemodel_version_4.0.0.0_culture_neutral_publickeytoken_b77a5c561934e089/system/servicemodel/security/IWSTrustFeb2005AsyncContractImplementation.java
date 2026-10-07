@@ -102,7 +102,10 @@ public class IWSTrustFeb2005AsyncContractImplementation extends NetObject implem
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IWSTrustFeb2005AsyncContractImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -144,6 +147,16 @@ public class IWSTrustFeb2005AsyncContractImplementation extends NetObject implem
 
     // Methods section
     
+    /**
+     * Invokes the .NET member BeginTrustFeb2005Cancel.
+     *
+     * @param request the argument of type {@code Message}
+     * @param callback the argument of type {@code AsyncCallback}
+     * @param state the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.IWSTrustFeb2005AsyncContract.BeginTrustFeb2005Cancel" target="_top">.NET documentation</a>
+     */
     public IAsyncResult BeginTrustFeb2005Cancel(Message request, AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -159,6 +172,16 @@ public class IWSTrustFeb2005AsyncContractImplementation extends NetObject implem
         }
     }
 
+    /**
+     * Invokes the .NET member BeginTrustFeb2005CancelResponse.
+     *
+     * @param request the argument of type {@code Message}
+     * @param callback the argument of type {@code AsyncCallback}
+     * @param state the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.IWSTrustFeb2005AsyncContract.BeginTrustFeb2005CancelResponse" target="_top">.NET documentation</a>
+     */
     public IAsyncResult BeginTrustFeb2005CancelResponse(Message request, AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -174,6 +197,16 @@ public class IWSTrustFeb2005AsyncContractImplementation extends NetObject implem
         }
     }
 
+    /**
+     * Invokes the .NET member BeginTrustFeb2005Issue.
+     *
+     * @param request the argument of type {@code Message}
+     * @param callback the argument of type {@code AsyncCallback}
+     * @param state the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.IWSTrustFeb2005AsyncContract.BeginTrustFeb2005Issue" target="_top">.NET documentation</a>
+     */
     public IAsyncResult BeginTrustFeb2005Issue(Message request, AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +222,16 @@ public class IWSTrustFeb2005AsyncContractImplementation extends NetObject implem
         }
     }
 
+    /**
+     * Invokes the .NET member BeginTrustFeb2005IssueResponse.
+     *
+     * @param request the argument of type {@code Message}
+     * @param callback the argument of type {@code AsyncCallback}
+     * @param state the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.IWSTrustFeb2005AsyncContract.BeginTrustFeb2005IssueResponse" target="_top">.NET documentation</a>
+     */
     public IAsyncResult BeginTrustFeb2005IssueResponse(Message request, AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +247,16 @@ public class IWSTrustFeb2005AsyncContractImplementation extends NetObject implem
         }
     }
 
+    /**
+     * Invokes the .NET member BeginTrustFeb2005Renew.
+     *
+     * @param request the argument of type {@code Message}
+     * @param callback the argument of type {@code AsyncCallback}
+     * @param state the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.IWSTrustFeb2005AsyncContract.BeginTrustFeb2005Renew" target="_top">.NET documentation</a>
+     */
     public IAsyncResult BeginTrustFeb2005Renew(Message request, AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -219,6 +272,16 @@ public class IWSTrustFeb2005AsyncContractImplementation extends NetObject implem
         }
     }
 
+    /**
+     * Invokes the .NET member BeginTrustFeb2005RenewResponse.
+     *
+     * @param request the argument of type {@code Message}
+     * @param callback the argument of type {@code AsyncCallback}
+     * @param state the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.IWSTrustFeb2005AsyncContract.BeginTrustFeb2005RenewResponse" target="_top">.NET documentation</a>
+     */
     public IAsyncResult BeginTrustFeb2005RenewResponse(Message request, AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -234,6 +297,16 @@ public class IWSTrustFeb2005AsyncContractImplementation extends NetObject implem
         }
     }
 
+    /**
+     * Invokes the .NET member BeginTrustFeb2005Validate.
+     *
+     * @param request the argument of type {@code Message}
+     * @param callback the argument of type {@code AsyncCallback}
+     * @param state the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.IWSTrustFeb2005AsyncContract.BeginTrustFeb2005Validate" target="_top">.NET documentation</a>
+     */
     public IAsyncResult BeginTrustFeb2005Validate(Message request, AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -249,6 +322,16 @@ public class IWSTrustFeb2005AsyncContractImplementation extends NetObject implem
         }
     }
 
+    /**
+     * Invokes the .NET member BeginTrustFeb2005ValidateResponse.
+     *
+     * @param request the argument of type {@code Message}
+     * @param callback the argument of type {@code AsyncCallback}
+     * @param state the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.IWSTrustFeb2005AsyncContract.BeginTrustFeb2005ValidateResponse" target="_top">.NET documentation</a>
+     */
     public IAsyncResult BeginTrustFeb2005ValidateResponse(Message request, AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -264,6 +347,14 @@ public class IWSTrustFeb2005AsyncContractImplementation extends NetObject implem
         }
     }
 
+    /**
+     * Invokes the .NET member EndTrustFeb2005Cancel.
+     *
+     * @param ar the argument of type {@code IAsyncResult}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.IWSTrustFeb2005AsyncContract.EndTrustFeb2005Cancel" target="_top">.NET documentation</a>
+     */
     public Message EndTrustFeb2005Cancel(IAsyncResult ar) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -279,6 +370,14 @@ public class IWSTrustFeb2005AsyncContractImplementation extends NetObject implem
         }
     }
 
+    /**
+     * Invokes the .NET member EndTrustFeb2005CancelResponse.
+     *
+     * @param ar the argument of type {@code IAsyncResult}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.IWSTrustFeb2005AsyncContract.EndTrustFeb2005CancelResponse" target="_top">.NET documentation</a>
+     */
     public Message EndTrustFeb2005CancelResponse(IAsyncResult ar) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -294,6 +393,14 @@ public class IWSTrustFeb2005AsyncContractImplementation extends NetObject implem
         }
     }
 
+    /**
+     * Invokes the .NET member EndTrustFeb2005Issue.
+     *
+     * @param ar the argument of type {@code IAsyncResult}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.IWSTrustFeb2005AsyncContract.EndTrustFeb2005Issue" target="_top">.NET documentation</a>
+     */
     public Message EndTrustFeb2005Issue(IAsyncResult ar) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -309,6 +416,14 @@ public class IWSTrustFeb2005AsyncContractImplementation extends NetObject implem
         }
     }
 
+    /**
+     * Invokes the .NET member EndTrustFeb2005IssueResponse.
+     *
+     * @param ar the argument of type {@code IAsyncResult}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.IWSTrustFeb2005AsyncContract.EndTrustFeb2005IssueResponse" target="_top">.NET documentation</a>
+     */
     public Message EndTrustFeb2005IssueResponse(IAsyncResult ar) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -324,6 +439,14 @@ public class IWSTrustFeb2005AsyncContractImplementation extends NetObject implem
         }
     }
 
+    /**
+     * Invokes the .NET member EndTrustFeb2005Renew.
+     *
+     * @param ar the argument of type {@code IAsyncResult}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.IWSTrustFeb2005AsyncContract.EndTrustFeb2005Renew" target="_top">.NET documentation</a>
+     */
     public Message EndTrustFeb2005Renew(IAsyncResult ar) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -339,6 +462,14 @@ public class IWSTrustFeb2005AsyncContractImplementation extends NetObject implem
         }
     }
 
+    /**
+     * Invokes the .NET member EndTrustFeb2005RenewResponse.
+     *
+     * @param ar the argument of type {@code IAsyncResult}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.IWSTrustFeb2005AsyncContract.EndTrustFeb2005RenewResponse" target="_top">.NET documentation</a>
+     */
     public Message EndTrustFeb2005RenewResponse(IAsyncResult ar) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -354,6 +485,14 @@ public class IWSTrustFeb2005AsyncContractImplementation extends NetObject implem
         }
     }
 
+    /**
+     * Invokes the .NET member EndTrustFeb2005Validate.
+     *
+     * @param ar the argument of type {@code IAsyncResult}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.IWSTrustFeb2005AsyncContract.EndTrustFeb2005Validate" target="_top">.NET documentation</a>
+     */
     public Message EndTrustFeb2005Validate(IAsyncResult ar) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -369,6 +508,14 @@ public class IWSTrustFeb2005AsyncContractImplementation extends NetObject implem
         }
     }
 
+    /**
+     * Invokes the .NET member EndTrustFeb2005ValidateResponse.
+     *
+     * @param ar the argument of type {@code IAsyncResult}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.IWSTrustFeb2005AsyncContract.EndTrustFeb2005ValidateResponse" target="_top">.NET documentation</a>
+     */
     public Message EndTrustFeb2005ValidateResponse(IAsyncResult ar) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

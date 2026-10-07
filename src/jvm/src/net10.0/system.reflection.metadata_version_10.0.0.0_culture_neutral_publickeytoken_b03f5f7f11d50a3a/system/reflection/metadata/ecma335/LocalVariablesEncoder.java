@@ -101,7 +101,10 @@ public class LocalVariablesEncoder extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public LocalVariablesEncoder(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,13 @@ public class LocalVariablesEncoder extends system.ValueType  {
     public LocalVariablesEncoder() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param builder the argument of type {@code BlobBuilder}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.LocalVariablesEncoder.-ctor" target="_top">.NET documentation</a>
+     */
     public LocalVariablesEncoder(BlobBuilder builder) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -166,6 +176,13 @@ public class LocalVariablesEncoder extends system.ValueType  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member AddVariable.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.LocalVariablesEncoder.AddVariable" target="_top">.NET documentation</a>
+     */
     public LocalVariableTypeEncoder AddVariable() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -185,6 +202,13 @@ public class LocalVariablesEncoder extends system.ValueType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Builder.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.LocalVariablesEncoder.Builder" target="_top">.NET documentation</a>
+     */
     public BlobBuilder getBuilder() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

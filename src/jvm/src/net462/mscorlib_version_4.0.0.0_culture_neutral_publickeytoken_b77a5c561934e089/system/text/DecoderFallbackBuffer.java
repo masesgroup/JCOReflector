@@ -98,7 +98,10 @@ public class DecoderFallbackBuffer extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DecoderFallbackBuffer(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,15 @@ public class DecoderFallbackBuffer extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Fallback.
+     *
+     * @param bytesUnknown the argument of type {@code byte[]}
+     * @param index the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.DecoderFallbackBuffer.Fallback" target="_top">.NET documentation</a>
+     */
     public boolean Fallback(byte[] bytesUnknown, int index) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -165,6 +177,15 @@ public class DecoderFallbackBuffer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Fallback.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.DecoderFallbackBuffer.Fallback" target="_top">.NET documentation</a>
+     */
     public boolean Fallback(JCORefOut dupParam0, int dupParam1) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -179,6 +200,13 @@ public class DecoderFallbackBuffer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member MovePrevious.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.DecoderFallbackBuffer.MovePrevious" target="_top">.NET documentation</a>
+     */
     public boolean MovePrevious() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +221,13 @@ public class DecoderFallbackBuffer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetNextChar.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.DecoderFallbackBuffer.GetNextChar" target="_top">.NET documentation</a>
+     */
     public char GetNextChar() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +242,12 @@ public class DecoderFallbackBuffer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Reset.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.DecoderFallbackBuffer.Reset" target="_top">.NET documentation</a>
+     */
     public void Reset() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -221,6 +262,13 @@ public class DecoderFallbackBuffer extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Remaining.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.DecoderFallbackBuffer.Remaining" target="_top">.NET documentation</a>
+     */
     public int getRemaining() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

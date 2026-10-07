@@ -105,7 +105,10 @@ public class WSTrustMessage extends system.identitymodel.OpenObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public WSTrustMessage(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -162,6 +165,13 @@ public class WSTrustMessage extends system.identitymodel.OpenObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AllowPostdating.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.WSTrustMessage.AllowPostdating" target="_top">.NET documentation</a>
+     */
     public boolean getAllowPostdating() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -176,6 +186,13 @@ public class WSTrustMessage extends system.identitymodel.OpenObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AllowPostdating.
+     *
+     * @param AllowPostdating the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.WSTrustMessage.AllowPostdating" target="_top">.NET documentation</a>
+     */
     public void setAllowPostdating(boolean AllowPostdating) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -186,6 +203,13 @@ public class WSTrustMessage extends system.identitymodel.OpenObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property BinaryExchange.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.WSTrustMessage.BinaryExchange" target="_top">.NET documentation</a>
+     */
     public BinaryExchange getBinaryExchange() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +225,13 @@ public class WSTrustMessage extends system.identitymodel.OpenObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property BinaryExchange.
+     *
+     * @param BinaryExchange the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.WSTrustMessage.BinaryExchange" target="_top">.NET documentation</a>
+     */
     public void setBinaryExchange(BinaryExchange BinaryExchange) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -211,6 +242,13 @@ public class WSTrustMessage extends system.identitymodel.OpenObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AppliesTo.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.WSTrustMessage.AppliesTo" target="_top">.NET documentation</a>
+     */
     public EndpointReference getAppliesTo() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -226,6 +264,13 @@ public class WSTrustMessage extends system.identitymodel.OpenObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AppliesTo.
+     *
+     * @param AppliesTo the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.WSTrustMessage.AppliesTo" target="_top">.NET documentation</a>
+     */
     public void setAppliesTo(EndpointReference AppliesTo) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -236,6 +281,13 @@ public class WSTrustMessage extends system.identitymodel.OpenObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Entropy.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.WSTrustMessage.Entropy" target="_top">.NET documentation</a>
+     */
     public Entropy getEntropy() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -251,6 +303,13 @@ public class WSTrustMessage extends system.identitymodel.OpenObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Entropy.
+     *
+     * @param Entropy the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.WSTrustMessage.Entropy" target="_top">.NET documentation</a>
+     */
     public void setEntropy(Entropy Entropy) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -261,6 +320,13 @@ public class WSTrustMessage extends system.identitymodel.OpenObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Lifetime.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.WSTrustMessage.Lifetime" target="_top">.NET documentation</a>
+     */
     public Lifetime getLifetime() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -276,6 +342,13 @@ public class WSTrustMessage extends system.identitymodel.OpenObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Lifetime.
+     *
+     * @param Lifetime the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.WSTrustMessage.Lifetime" target="_top">.NET documentation</a>
+     */
     public void setLifetime(Lifetime Lifetime) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -286,6 +359,13 @@ public class WSTrustMessage extends system.identitymodel.OpenObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UseKey.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.WSTrustMessage.UseKey" target="_top">.NET documentation</a>
+     */
     public UseKey getUseKey() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -301,6 +381,13 @@ public class WSTrustMessage extends system.identitymodel.OpenObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property UseKey.
+     *
+     * @param UseKey the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.WSTrustMessage.UseKey" target="_top">.NET documentation</a>
+     */
     public void setUseKey(UseKey UseKey) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -311,6 +398,13 @@ public class WSTrustMessage extends system.identitymodel.OpenObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property KeySizeInBits.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.WSTrustMessage.KeySizeInBits" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getKeySizeInBits() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -326,6 +420,24 @@ public class WSTrustMessage extends system.identitymodel.OpenObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property KeySizeInBits.
+     *
+     * @param KeySizeInBits the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.WSTrustMessage.KeySizeInBits" target="_top">.NET documentation</a>
+     */
     public void setKeySizeInBits(Nullable_1 KeySizeInBits) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -336,6 +448,13 @@ public class WSTrustMessage extends system.identitymodel.OpenObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AuthenticationType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.WSTrustMessage.AuthenticationType" target="_top">.NET documentation</a>
+     */
     public java.lang.String getAuthenticationType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -350,6 +469,13 @@ public class WSTrustMessage extends system.identitymodel.OpenObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AuthenticationType.
+     *
+     * @param AuthenticationType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.WSTrustMessage.AuthenticationType" target="_top">.NET documentation</a>
+     */
     public void setAuthenticationType(java.lang.String AuthenticationType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -360,6 +486,13 @@ public class WSTrustMessage extends system.identitymodel.OpenObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CanonicalizationAlgorithm.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.WSTrustMessage.CanonicalizationAlgorithm" target="_top">.NET documentation</a>
+     */
     public java.lang.String getCanonicalizationAlgorithm() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -374,6 +507,13 @@ public class WSTrustMessage extends system.identitymodel.OpenObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CanonicalizationAlgorithm.
+     *
+     * @param CanonicalizationAlgorithm the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.WSTrustMessage.CanonicalizationAlgorithm" target="_top">.NET documentation</a>
+     */
     public void setCanonicalizationAlgorithm(java.lang.String CanonicalizationAlgorithm) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -384,6 +524,13 @@ public class WSTrustMessage extends system.identitymodel.OpenObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Context.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.WSTrustMessage.Context" target="_top">.NET documentation</a>
+     */
     public java.lang.String getContext() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -398,6 +545,13 @@ public class WSTrustMessage extends system.identitymodel.OpenObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Context.
+     *
+     * @param Context the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.WSTrustMessage.Context" target="_top">.NET documentation</a>
+     */
     public void setContext(java.lang.String Context) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -408,6 +562,13 @@ public class WSTrustMessage extends system.identitymodel.OpenObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EncryptionAlgorithm.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.WSTrustMessage.EncryptionAlgorithm" target="_top">.NET documentation</a>
+     */
     public java.lang.String getEncryptionAlgorithm() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -422,6 +583,13 @@ public class WSTrustMessage extends system.identitymodel.OpenObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property EncryptionAlgorithm.
+     *
+     * @param EncryptionAlgorithm the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.WSTrustMessage.EncryptionAlgorithm" target="_top">.NET documentation</a>
+     */
     public void setEncryptionAlgorithm(java.lang.String EncryptionAlgorithm) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -432,6 +600,13 @@ public class WSTrustMessage extends system.identitymodel.OpenObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EncryptWith.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.WSTrustMessage.EncryptWith" target="_top">.NET documentation</a>
+     */
     public java.lang.String getEncryptWith() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -446,6 +621,24 @@ public class WSTrustMessage extends system.identitymodel.OpenObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property EncryptWith.
+     *
+     * @param EncryptWith the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.WSTrustMessage.EncryptWith" target="_top">.NET documentation</a>
+     */
     public void setEncryptWith(java.lang.String EncryptWith) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -456,6 +649,13 @@ public class WSTrustMessage extends system.identitymodel.OpenObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property KeyType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.WSTrustMessage.KeyType" target="_top">.NET documentation</a>
+     */
     public java.lang.String getKeyType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -470,6 +670,13 @@ public class WSTrustMessage extends system.identitymodel.OpenObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property KeyType.
+     *
+     * @param KeyType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.WSTrustMessage.KeyType" target="_top">.NET documentation</a>
+     */
     public void setKeyType(java.lang.String KeyType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -480,6 +687,13 @@ public class WSTrustMessage extends system.identitymodel.OpenObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property KeyWrapAlgorithm.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.WSTrustMessage.KeyWrapAlgorithm" target="_top">.NET documentation</a>
+     */
     public java.lang.String getKeyWrapAlgorithm() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -494,6 +708,13 @@ public class WSTrustMessage extends system.identitymodel.OpenObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property KeyWrapAlgorithm.
+     *
+     * @param KeyWrapAlgorithm the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.WSTrustMessage.KeyWrapAlgorithm" target="_top">.NET documentation</a>
+     */
     public void setKeyWrapAlgorithm(java.lang.String KeyWrapAlgorithm) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -504,6 +725,13 @@ public class WSTrustMessage extends system.identitymodel.OpenObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ReplyTo.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.WSTrustMessage.ReplyTo" target="_top">.NET documentation</a>
+     */
     public java.lang.String getReplyTo() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -518,6 +746,13 @@ public class WSTrustMessage extends system.identitymodel.OpenObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ReplyTo.
+     *
+     * @param ReplyTo the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.WSTrustMessage.ReplyTo" target="_top">.NET documentation</a>
+     */
     public void setReplyTo(java.lang.String ReplyTo) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -528,6 +763,13 @@ public class WSTrustMessage extends system.identitymodel.OpenObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RequestType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.WSTrustMessage.RequestType" target="_top">.NET documentation</a>
+     */
     public java.lang.String getRequestType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -542,6 +784,13 @@ public class WSTrustMessage extends system.identitymodel.OpenObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RequestType.
+     *
+     * @param RequestType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.WSTrustMessage.RequestType" target="_top">.NET documentation</a>
+     */
     public void setRequestType(java.lang.String RequestType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -552,6 +801,13 @@ public class WSTrustMessage extends system.identitymodel.OpenObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SignatureAlgorithm.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.WSTrustMessage.SignatureAlgorithm" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSignatureAlgorithm() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -566,6 +822,13 @@ public class WSTrustMessage extends system.identitymodel.OpenObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SignatureAlgorithm.
+     *
+     * @param SignatureAlgorithm the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.WSTrustMessage.SignatureAlgorithm" target="_top">.NET documentation</a>
+     */
     public void setSignatureAlgorithm(java.lang.String SignatureAlgorithm) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -576,6 +839,13 @@ public class WSTrustMessage extends system.identitymodel.OpenObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SignWith.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.WSTrustMessage.SignWith" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSignWith() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -590,6 +860,24 @@ public class WSTrustMessage extends system.identitymodel.OpenObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SignWith.
+     *
+     * @param SignWith the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.WSTrustMessage.SignWith" target="_top">.NET documentation</a>
+     */
     public void setSignWith(java.lang.String SignWith) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -600,6 +888,13 @@ public class WSTrustMessage extends system.identitymodel.OpenObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TokenType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.WSTrustMessage.TokenType" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTokenType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -614,6 +909,13 @@ public class WSTrustMessage extends system.identitymodel.OpenObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TokenType.
+     *
+     * @param TokenType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.WSTrustMessage.TokenType" target="_top">.NET documentation</a>
+     */
     public void setTokenType(java.lang.String TokenType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

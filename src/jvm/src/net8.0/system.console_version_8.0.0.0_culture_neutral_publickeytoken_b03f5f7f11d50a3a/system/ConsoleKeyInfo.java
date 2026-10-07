@@ -102,7 +102,10 @@ public class ConsoleKeyInfo extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ConsoleKeyInfo(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,24 @@ public class ConsoleKeyInfo extends system.ValueType  {
     public ConsoleKeyInfo() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param keyChar the argument of type {@code char}
+     * @param key the argument of type {@code ConsoleKey}
+     * @param shift the argument of type {@code boolean}
+     * @param alt the argument of type {@code boolean}
+     * @param control the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ConsoleKeyInfo.-ctor" target="_top">.NET documentation</a>
+     */
     public ConsoleKeyInfo(char keyChar, ConsoleKey key, boolean shift, boolean alt, boolean control) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +188,14 @@ public class ConsoleKeyInfo extends system.ValueType  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Equals.
+     *
+     * @param obj the argument of type {@code ConsoleKeyInfo}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ConsoleKeyInfo.Equals" target="_top">.NET documentation</a>
+     */
     public boolean Equals(ConsoleKeyInfo obj) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -185,6 +214,13 @@ public class ConsoleKeyInfo extends system.ValueType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property KeyChar.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ConsoleKeyInfo.KeyChar" target="_top">.NET documentation</a>
+     */
     public char getKeyChar() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -199,6 +235,13 @@ public class ConsoleKeyInfo extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Key.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ConsoleKeyInfo.Key" target="_top">.NET documentation</a>
+     */
     public ConsoleKey getKey() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -214,6 +257,13 @@ public class ConsoleKeyInfo extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Modifiers.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ConsoleKeyInfo.Modifiers" target="_top">.NET documentation</a>
+     */
     public ConsoleModifiers getModifiers() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -101,7 +101,10 @@ public class DataObjectExtensions extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DataObjectExtensions(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,26 @@ public class DataObjectExtensions extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member TryGetData.
+     *
+     * @param <T> the type of the generic argument T
+     * @param dataObject the argument of type {@code IDataObject}
+     * @param format the argument of type {@code java.lang.String}
+     * @param autoConvert the argument of type {@code boolean}
+     * @param data the argument of type {@code JCORefOut<T>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataObjectExtensions.TryGetData" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> boolean TryGetData(IDataObject dataObject, java.lang.String format, boolean autoConvert, JCORefOut<T> data) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -168,6 +191,27 @@ public class DataObjectExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member TryGetData.
+     *
+     * @param <T> the type of the generic argument T
+     * @param dataObject the argument of type {@code IDataObject}
+     * @param format the argument of type {@code java.lang.String}
+     * @param resolver the argument of type {@code Func_2}
+     * @param autoConvert the argument of type {@code boolean}
+     * @param data the argument of type {@code JCORefOut<T>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataObjectExtensions.TryGetData" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> boolean TryGetData(IDataObject dataObject, java.lang.String format, Func_2 resolver, boolean autoConvert, JCORefOut<T> data) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -182,6 +226,25 @@ public class DataObjectExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member TryGetData.
+     *
+     * @param <T> the type of the generic argument T
+     * @param dataObject the argument of type {@code IDataObject}
+     * @param format the argument of type {@code java.lang.String}
+     * @param data the argument of type {@code JCORefOut<T>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataObjectExtensions.TryGetData" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> boolean TryGetData(IDataObject dataObject, java.lang.String format, JCORefOut<T> data) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -196,6 +259,24 @@ public class DataObjectExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member TryGetData.
+     *
+     * @param <T> the type of the generic argument T
+     * @param dataObject the argument of type {@code IDataObject}
+     * @param data the argument of type {@code JCORefOut<T>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataObjectExtensions.TryGetData" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> boolean TryGetData(IDataObject dataObject, JCORefOut<T> data) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

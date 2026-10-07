@@ -102,7 +102,10 @@ public class XamlBuildProvider extends system.web.compilation.BuildProvider  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XamlBuildProvider(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,12 @@ public class XamlBuildProvider extends system.web.compilation.BuildProvider  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.Hosting.XamlBuildProvider.-ctor" target="_top">.NET documentation</a>
+     */
     public XamlBuildProvider() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -163,6 +172,30 @@ public class XamlBuildProvider extends system.web.compilation.BuildProvider  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetGeneratedType.
+     *
+     * @param results the argument of type {@code CompilerResults}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.xaml.XamlSchemaException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.Hosting.XamlBuildProvider.GetGeneratedType" target="_top">.NET documentation</a>
+     */
     public NetType GetGeneratedType(CompilerResults results) throws Throwable, system.web.HttpException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.xml.XmlException, system.FormatException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.xaml.XamlSchemaException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,6 +211,14 @@ public class XamlBuildProvider extends system.web.compilation.BuildProvider  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetResultFlags.
+     *
+     * @param results the argument of type {@code CompilerResults}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.Hosting.XamlBuildProvider.GetResultFlags" target="_top">.NET documentation</a>
+     */
     public BuildProviderResultFlags GetResultFlags(CompilerResults results) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +234,29 @@ public class XamlBuildProvider extends system.web.compilation.BuildProvider  {
         }
     }
 
+    /**
+     * Invokes the .NET member GenerateCode.
+     *
+     * @param assemblyBuilder the argument of type {@code AssemblyBuilder}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.xaml.XamlSchemaException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.Hosting.XamlBuildProvider.GenerateCode" target="_top">.NET documentation</a>
+     */
     public void GenerateCode(AssemblyBuilder assemblyBuilder) throws Throwable, system.web.HttpException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.xml.XmlException, system.FormatException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.xaml.XamlSchemaException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

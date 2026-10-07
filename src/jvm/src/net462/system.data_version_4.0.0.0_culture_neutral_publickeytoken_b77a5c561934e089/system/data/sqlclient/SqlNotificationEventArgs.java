@@ -102,7 +102,10 @@ public class SqlNotificationEventArgs extends system.EventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SqlNotificationEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,15 @@ public class SqlNotificationEventArgs extends system.EventArgs  {
     public SqlNotificationEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param type the argument of type {@code SqlNotificationType}
+     * @param info the argument of type {@code SqlNotificationInfo}
+     * @param source the argument of type {@code SqlNotificationSource}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlNotificationEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public SqlNotificationEventArgs(SqlNotificationType type, SqlNotificationInfo info, SqlNotificationSource source) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -171,6 +183,13 @@ public class SqlNotificationEventArgs extends system.EventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Info.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlNotificationEventArgs.Info" target="_top">.NET documentation</a>
+     */
     public SqlNotificationInfo getInfo() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -186,6 +205,13 @@ public class SqlNotificationEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Source.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlNotificationEventArgs.Source" target="_top">.NET documentation</a>
+     */
     public SqlNotificationSource getSource() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +227,13 @@ public class SqlNotificationEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Type.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlNotificationEventArgs.Type" target="_top">.NET documentation</a>
+     */
     public SqlNotificationType getType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

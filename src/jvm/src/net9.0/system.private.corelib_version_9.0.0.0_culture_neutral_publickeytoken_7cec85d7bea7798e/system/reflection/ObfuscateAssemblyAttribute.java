@@ -99,7 +99,10 @@ public class ObfuscateAssemblyAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ObfuscateAssemblyAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,13 @@ public class ObfuscateAssemblyAttribute extends system.Attribute  {
     public ObfuscateAssemblyAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param assemblyIsPrivate the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.ObfuscateAssemblyAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public ObfuscateAssemblyAttribute(boolean assemblyIsPrivate) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +178,13 @@ public class ObfuscateAssemblyAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AssemblyIsPrivate.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.ObfuscateAssemblyAttribute.AssemblyIsPrivate" target="_top">.NET documentation</a>
+     */
     public boolean getAssemblyIsPrivate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +199,13 @@ public class ObfuscateAssemblyAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StripAfterObfuscation.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.ObfuscateAssemblyAttribute.StripAfterObfuscation" target="_top">.NET documentation</a>
+     */
     public boolean getStripAfterObfuscation() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -196,6 +220,13 @@ public class ObfuscateAssemblyAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property StripAfterObfuscation.
+     *
+     * @param StripAfterObfuscation the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.ObfuscateAssemblyAttribute.StripAfterObfuscation" target="_top">.NET documentation</a>
+     */
     public void setStripAfterObfuscation(boolean StripAfterObfuscation) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

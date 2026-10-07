@@ -100,7 +100,10 @@ public class HandledMouseEventArgs extends system.windows.forms.MouseEventArgs  
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public HandledMouseEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,18 @@ public class HandledMouseEventArgs extends system.windows.forms.MouseEventArgs  
     public HandledMouseEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param button the argument of type {@code MouseButtons}
+     * @param clicks the argument of type {@code int}
+     * @param x the argument of type {@code int}
+     * @param y the argument of type {@code int}
+     * @param delta the argument of type {@code int}
+     * @param defaultHandledValue the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.HandledMouseEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public HandledMouseEventArgs(MouseButtons button, int clicks, int x, int y, int delta, boolean defaultHandledValue) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -160,6 +175,17 @@ public class HandledMouseEventArgs extends system.windows.forms.MouseEventArgs  
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param button the argument of type {@code MouseButtons}
+     * @param clicks the argument of type {@code int}
+     * @param x the argument of type {@code int}
+     * @param y the argument of type {@code int}
+     * @param delta the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.HandledMouseEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public HandledMouseEventArgs(MouseButtons button, int clicks, int x, int y, int delta) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -179,6 +205,13 @@ public class HandledMouseEventArgs extends system.windows.forms.MouseEventArgs  
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Handled.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.HandledMouseEventArgs.Handled" target="_top">.NET documentation</a>
+     */
     public boolean getHandled() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +226,13 @@ public class HandledMouseEventArgs extends system.windows.forms.MouseEventArgs  
         }
     }
 
+    /**
+     * Sets the value of the .NET property Handled.
+     *
+     * @param Handled the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.HandledMouseEventArgs.Handled" target="_top">.NET documentation</a>
+     */
     public void setHandled(boolean Handled) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

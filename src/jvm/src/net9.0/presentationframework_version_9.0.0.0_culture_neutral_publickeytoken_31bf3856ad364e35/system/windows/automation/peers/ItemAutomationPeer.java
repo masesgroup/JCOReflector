@@ -101,7 +101,10 @@ public class ItemAutomationPeer extends system.windows.automation.peers.Automati
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ItemAutomationPeer(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,21 @@ public class ItemAutomationPeer extends system.windows.automation.peers.Automati
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetPattern.
+     *
+     * @param patternInterface the argument of type {@code PatternInterface}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Peers.ItemAutomationPeer.GetPattern" target="_top">.NET documentation</a>
+     */
     public NetObject GetPattern(PatternInterface patternInterface) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -172,8 +190,11 @@ public class ItemAutomationPeer extends system.windows.automation.peers.Automati
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIVirtualizedItemProvider method available in IVirtualizedItemProvider to obtain an object with an invocable method
+     *
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.IVirtualizedItemProvider.Realize" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void Realize() throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIVirtualizedItemProvider to obtain the full interface.");
     }
@@ -182,6 +203,18 @@ public class ItemAutomationPeer extends system.windows.automation.peers.Automati
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Item.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Peers.ItemAutomationPeer.Item" target="_top">.NET documentation</a>
+     */
     public NetObject getItem() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +230,17 @@ public class ItemAutomationPeer extends system.windows.automation.peers.Automati
         }
     }
 
+    /**
+     * Sets the value of the .NET property Item.
+     *
+     * @param Item the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Peers.ItemAutomationPeer.Item" target="_top">.NET documentation</a>
+     */
     public void setItem(NetObject Item) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +251,13 @@ public class ItemAutomationPeer extends system.windows.automation.peers.Automati
         }
     }
 
+    /**
+     * Gets the value of the .NET property ItemsControlAutomationPeer.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Peers.ItemAutomationPeer.ItemsControlAutomationPeer" target="_top">.NET documentation</a>
+     */
     public ItemsControlAutomationPeer getItemsControlAutomationPeer() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -222,6 +273,13 @@ public class ItemAutomationPeer extends system.windows.automation.peers.Automati
         }
     }
 
+    /**
+     * Sets the value of the .NET property ItemsControlAutomationPeer.
+     *
+     * @param ItemsControlAutomationPeer the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Peers.ItemAutomationPeer.ItemsControlAutomationPeer" target="_top">.NET documentation</a>
+     */
     public void setItemsControlAutomationPeer(ItemsControlAutomationPeer ItemsControlAutomationPeer) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

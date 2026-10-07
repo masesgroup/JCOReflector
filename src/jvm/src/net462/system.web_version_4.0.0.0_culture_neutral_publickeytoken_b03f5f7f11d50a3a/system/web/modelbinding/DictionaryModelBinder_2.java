@@ -100,7 +100,10 @@ public class DictionaryModelBinder_2<TKey extends IJCOBridgeReflected, TValue ex
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DictionaryModelBinder_2(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class DictionaryModelBinder_2<TKey extends IJCOBridgeReflected, TValue ex
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.DictionaryModelBinder-2.-ctor" target="_top">.NET documentation</a>
+     */
     public DictionaryModelBinder_2() throws Throwable {
         try {
             // add reference to assemblyName.dll file

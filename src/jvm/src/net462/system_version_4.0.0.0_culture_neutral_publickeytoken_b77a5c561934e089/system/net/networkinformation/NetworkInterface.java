@@ -106,7 +106,10 @@ public class NetworkInterface extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public NetworkInterface(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -159,6 +162,30 @@ public class NetworkInterface extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetIsNetworkAvailable.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.net.networkinformation.NetworkInformationException if the .NET member raises it
+     * @throws system.net.sockets.SocketException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.NetworkInterface.GetIsNetworkAvailable" target="_top">.NET documentation</a>
+     */
     public static boolean GetIsNetworkAvailable() throws Throwable, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.net.networkinformation.NetworkInformationException, system.net.sockets.SocketException, system.NotImplementedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.InvalidCastException, system.MulticastNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -173,6 +200,15 @@ public class NetworkInterface extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Supports.
+     *
+     * @param networkInterfaceComponent the argument of type {@code NetworkInterfaceComponent}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.NetworkInterface.Supports" target="_top">.NET documentation</a>
+     */
     public boolean Supports(NetworkInterfaceComponent networkInterfaceComponent) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +223,14 @@ public class NetworkInterface extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetIPProperties.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.NetworkInterface.GetIPProperties" target="_top">.NET documentation</a>
+     */
     public IPInterfaceProperties GetIPProperties() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +246,14 @@ public class NetworkInterface extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetIPStatistics.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.NetworkInterface.GetIPStatistics" target="_top">.NET documentation</a>
+     */
     public IPInterfaceStatistics GetIPStatistics() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -217,6 +269,14 @@ public class NetworkInterface extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetIPv4Statistics.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.NetworkInterface.GetIPv4Statistics" target="_top">.NET documentation</a>
+     */
     public IPv4InterfaceStatistics GetIPv4Statistics() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -232,6 +292,26 @@ public class NetworkInterface extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetAllNetworkInterfaces.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.net.networkinformation.NetworkInformationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.net.sockets.SocketException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.NetworkInterface.GetAllNetworkInterfaces" target="_top">.NET documentation</a>
+     */
     public static NetworkInterface[] GetAllNetworkInterfaces() throws Throwable, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.net.networkinformation.NetworkInformationException, system.resources.MissingManifestResourceException, system.net.sockets.SocketException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -253,6 +333,14 @@ public class NetworkInterface extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetPhysicalAddress.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.NetworkInterface.GetPhysicalAddress" target="_top">.NET documentation</a>
+     */
     public PhysicalAddress GetPhysicalAddress() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -272,6 +360,14 @@ public class NetworkInterface extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsReceiveOnly.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.NetworkInterface.IsReceiveOnly" target="_top">.NET documentation</a>
+     */
     public boolean getIsReceiveOnly() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -286,6 +382,14 @@ public class NetworkInterface extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SupportsMulticast.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.NetworkInterface.SupportsMulticast" target="_top">.NET documentation</a>
+     */
     public boolean getSupportsMulticast() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -300,6 +404,19 @@ public class NetworkInterface extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IPv6LoopbackInterfaceIndex.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.net.sockets.SocketException if the .NET member raises it
+     * @throws system.net.networkinformation.NetworkInformationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.NetworkInterface.IPv6LoopbackInterfaceIndex" target="_top">.NET documentation</a>
+     */
     public static int getIPv6LoopbackInterfaceIndex() throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.net.sockets.SocketException, system.net.networkinformation.NetworkInformationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -340,6 +457,19 @@ public class NetworkInterface extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LoopbackInterfaceIndex.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.net.sockets.SocketException if the .NET member raises it
+     * @throws system.net.networkinformation.NetworkInformationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.NetworkInterface.LoopbackInterfaceIndex" target="_top">.NET documentation</a>
+     */
     public static int getLoopbackInterfaceIndex() throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.net.sockets.SocketException, system.net.networkinformation.NetworkInformationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -380,6 +510,14 @@ public class NetworkInterface extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Speed.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.NetworkInterface.Speed" target="_top">.NET documentation</a>
+     */
     public long getSpeed() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -420,6 +558,14 @@ public class NetworkInterface extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NetworkInterfaceType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.NetworkInterface.NetworkInterfaceType" target="_top">.NET documentation</a>
+     */
     public NetworkInterfaceType getNetworkInterfaceType() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -435,6 +581,14 @@ public class NetworkInterface extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OperationalStatus.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.NetworkInterface.OperationalStatus" target="_top">.NET documentation</a>
+     */
     public OperationalStatus getOperationalStatus() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -450,6 +604,14 @@ public class NetworkInterface extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Description.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.NetworkInterface.Description" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDescription() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -464,6 +626,14 @@ public class NetworkInterface extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Id.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.NetworkInterface.Id" target="_top">.NET documentation</a>
+     */
     public java.lang.String getId() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -478,6 +648,14 @@ public class NetworkInterface extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.NetworkInterface.Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getName() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

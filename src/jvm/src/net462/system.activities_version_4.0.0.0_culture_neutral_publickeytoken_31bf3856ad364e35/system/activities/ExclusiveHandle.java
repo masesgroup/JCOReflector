@@ -102,7 +102,10 @@ public class ExclusiveHandle extends system.activities.Handle  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ExclusiveHandle(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,12 @@ public class ExclusiveHandle extends system.activities.Handle  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ExclusiveHandle.-ctor" target="_top">.NET documentation</a>
+     */
     public ExclusiveHandle() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -163,6 +172,21 @@ public class ExclusiveHandle extends system.activities.Handle  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member RegisterBookmarkScope.
+     *
+     * @param context the argument of type {@code NativeActivityContext}
+     * @param bookmarkScopeHandle the argument of type {@code BookmarkScopeHandle}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ExclusiveHandle.RegisterBookmarkScope" target="_top">.NET documentation</a>
+     */
     public void RegisterBookmarkScope(NativeActivityContext context, BookmarkScopeHandle bookmarkScopeHandle) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -173,6 +197,20 @@ public class ExclusiveHandle extends system.activities.Handle  {
         }
     }
 
+    /**
+     * Invokes the .NET member Reinitialize.
+     *
+     * @param context the argument of type {@code NativeActivityContext}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ExclusiveHandle.Reinitialize" target="_top">.NET documentation</a>
+     */
     public void Reinitialize(NativeActivityContext context) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +225,14 @@ public class ExclusiveHandle extends system.activities.Handle  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property RegisteredBookmarkScopes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ExclusiveHandle.RegisteredBookmarkScopes" target="_top">.NET documentation</a>
+     */
     public ReadOnlyCollection_1 getRegisteredBookmarkScopes() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

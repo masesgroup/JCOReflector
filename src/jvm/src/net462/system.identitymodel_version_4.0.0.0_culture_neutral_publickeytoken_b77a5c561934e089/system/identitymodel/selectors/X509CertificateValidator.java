@@ -102,7 +102,10 @@ public class X509CertificateValidator extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public X509CertificateValidator(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,26 @@ public class X509CertificateValidator extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CreateChainTrustValidator.
+     *
+     * @param useMachineContext the argument of type {@code boolean}
+     * @param chainPolicy the argument of type {@code X509ChainPolicy}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Selectors.X509CertificateValidator.CreateChainTrustValidator" target="_top">.NET documentation</a>
+     */
     public static X509CertificateValidator CreateChainTrustValidator(boolean useMachineContext, X509ChainPolicy chainPolicy) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -170,6 +193,26 @@ public class X509CertificateValidator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreatePeerOrChainTrustValidator.
+     *
+     * @param useMachineContext the argument of type {@code boolean}
+     * @param chainPolicy the argument of type {@code X509ChainPolicy}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Selectors.X509CertificateValidator.CreatePeerOrChainTrustValidator" target="_top">.NET documentation</a>
+     */
     public static X509CertificateValidator CreatePeerOrChainTrustValidator(boolean useMachineContext, X509ChainPolicy chainPolicy) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -185,6 +228,28 @@ public class X509CertificateValidator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LoadCustomConfiguration.
+     *
+     * @param nodelist the argument of type {@code XmlNodeList}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Selectors.X509CertificateValidator.LoadCustomConfiguration" target="_top">.NET documentation</a>
+     */
     public void LoadCustomConfiguration(XmlNodeList nodelist) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -195,6 +260,13 @@ public class X509CertificateValidator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Validate.
+     *
+     * @param certificate the argument of type {@code X509Certificate2}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Selectors.X509CertificateValidator.Validate" target="_top">.NET documentation</a>
+     */
     public void Validate(X509Certificate2 certificate) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -209,6 +281,13 @@ public class X509CertificateValidator extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ChainTrust.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Selectors.X509CertificateValidator.ChainTrust" target="_top">.NET documentation</a>
+     */
     public static X509CertificateValidator getChainTrust() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -224,6 +303,13 @@ public class X509CertificateValidator extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property None.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Selectors.X509CertificateValidator.None" target="_top">.NET documentation</a>
+     */
     public static X509CertificateValidator getNone() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -239,6 +325,13 @@ public class X509CertificateValidator extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PeerOrChainTrust.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Selectors.X509CertificateValidator.PeerOrChainTrust" target="_top">.NET documentation</a>
+     */
     public static X509CertificateValidator getPeerOrChainTrust() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -254,6 +347,13 @@ public class X509CertificateValidator extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PeerTrust.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Selectors.X509CertificateValidator.PeerTrust" target="_top">.NET documentation</a>
+     */
     public static X509CertificateValidator getPeerTrust() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

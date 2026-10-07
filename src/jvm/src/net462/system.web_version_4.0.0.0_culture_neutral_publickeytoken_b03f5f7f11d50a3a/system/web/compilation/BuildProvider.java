@@ -104,7 +104,10 @@ public class BuildProvider extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public BuildProvider(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,14 @@ public class BuildProvider extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetCustomString.
+     *
+     * @param results the argument of type {@code CompilerResults}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Compilation.BuildProvider.GetCustomString" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetCustomString(CompilerResults results) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -171,6 +182,14 @@ public class BuildProvider extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetGeneratedType.
+     *
+     * @param results the argument of type {@code CompilerResults}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Compilation.BuildProvider.GetGeneratedType" target="_top">.NET documentation</a>
+     */
     public NetType GetGeneratedType(CompilerResults results) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -186,6 +205,14 @@ public class BuildProvider extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetResultFlags.
+     *
+     * @param results the argument of type {@code CompilerResults}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Compilation.BuildProvider.GetResultFlags" target="_top">.NET documentation</a>
+     */
     public BuildProviderResultFlags GetResultFlags(CompilerResults results) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +228,13 @@ public class BuildProvider extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GenerateCode.
+     *
+     * @param assemblyBuilder the argument of type {@code AssemblyBuilder}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Compilation.BuildProvider.GenerateCode" target="_top">.NET documentation</a>
+     */
     public void GenerateCode(AssemblyBuilder assemblyBuilder) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -211,6 +245,13 @@ public class BuildProvider extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ProcessCompileErrors.
+     *
+     * @param results the argument of type {@code CompilerResults}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Compilation.BuildProvider.ProcessCompileErrors" target="_top">.NET documentation</a>
+     */
     public void ProcessCompileErrors(CompilerResults results) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -221,6 +262,25 @@ public class BuildProvider extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RegisterBuildProvider.
+     *
+     * @param extension the argument of type {@code java.lang.String}
+     * @param providerType the argument of type {@code NetType}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Compilation.BuildProvider.RegisterBuildProvider" target="_top">.NET documentation</a>
+     */
     public static void RegisterBuildProvider(java.lang.String extension, NetType providerType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -235,6 +295,19 @@ public class BuildProvider extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property VirtualPathDependencies.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Compilation.BuildProvider.VirtualPathDependencies" target="_top">.NET documentation</a>
+     */
     public ICollection getVirtualPathDependencies() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.web.HttpException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -250,6 +323,13 @@ public class BuildProvider extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CodeCompilerType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Compilation.BuildProvider.CodeCompilerType" target="_top">.NET documentation</a>
+     */
     public CompilerType getCodeCompilerType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

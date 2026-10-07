@@ -99,7 +99,10 @@ public class CodeComment extends system.codedom.CodeObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CodeComment(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class CodeComment extends system.codedom.CodeObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeComment.-ctor" target="_top">.NET documentation</a>
+     */
     public CodeComment() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -156,6 +165,14 @@ public class CodeComment extends system.codedom.CodeObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param text the argument of type {@code java.lang.String}
+     * @param docComment the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeComment.-ctor" target="_top">.NET documentation</a>
+     */
     public CodeComment(java.lang.String text, boolean docComment) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -166,6 +183,13 @@ public class CodeComment extends system.codedom.CodeObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param text the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeComment.-ctor" target="_top">.NET documentation</a>
+     */
     public CodeComment(java.lang.String text) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -184,6 +208,13 @@ public class CodeComment extends system.codedom.CodeObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property DocComment.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeComment.DocComment" target="_top">.NET documentation</a>
+     */
     public boolean getDocComment() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +229,13 @@ public class CodeComment extends system.codedom.CodeObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DocComment.
+     *
+     * @param DocComment the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeComment.DocComment" target="_top">.NET documentation</a>
+     */
     public void setDocComment(boolean DocComment) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +246,13 @@ public class CodeComment extends system.codedom.CodeObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Text.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeComment.Text" target="_top">.NET documentation</a>
+     */
     public java.lang.String getText() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -222,6 +267,13 @@ public class CodeComment extends system.codedom.CodeObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Text.
+     *
+     * @param Text the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeComment.Text" target="_top">.NET documentation</a>
+     */
     public void setText(java.lang.String Text) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

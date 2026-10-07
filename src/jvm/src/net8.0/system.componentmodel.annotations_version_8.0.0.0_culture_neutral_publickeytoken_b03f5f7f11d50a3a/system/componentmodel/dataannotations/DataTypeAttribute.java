@@ -101,7 +101,10 @@ public class DataTypeAttribute extends system.componentmodel.dataannotations.Val
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DataTypeAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,18 @@ public class DataTypeAttribute extends system.componentmodel.dataannotations.Val
     public DataTypeAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param dataType the argument of type {@code DataType}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.DataAnnotations.DataTypeAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public DataTypeAttribute(DataType dataType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
@@ -161,6 +176,15 @@ public class DataTypeAttribute extends system.componentmodel.dataannotations.Val
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param customDataType the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.DataAnnotations.DataTypeAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public DataTypeAttribute(java.lang.String customDataType) throws Throwable, system.ArgumentException, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
@@ -176,6 +200,20 @@ public class DataTypeAttribute extends system.componentmodel.dataannotations.Val
     
     // Methods section
     
+    /**
+     * Invokes the .NET member IsValid.
+     *
+     * @param value the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.DataAnnotations.DataTypeAttribute.IsValid" target="_top">.NET documentation</a>
+     */
     public boolean IsValid(NetObject value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +228,19 @@ public class DataTypeAttribute extends system.componentmodel.dataannotations.Val
         }
     }
 
+    /**
+     * Invokes the .NET member GetDataTypeName.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.DataAnnotations.DataTypeAttribute.GetDataTypeName" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetDataTypeName() throws Throwable, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +259,13 @@ public class DataTypeAttribute extends system.componentmodel.dataannotations.Val
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property DataType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.DataAnnotations.DataTypeAttribute.DataType" target="_top">.NET documentation</a>
+     */
     public DataType getDataType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -223,6 +281,13 @@ public class DataTypeAttribute extends system.componentmodel.dataannotations.Val
         }
     }
 
+    /**
+     * Gets the value of the .NET property DisplayFormat.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.DataAnnotations.DataTypeAttribute.DisplayFormat" target="_top">.NET documentation</a>
+     */
     public DisplayFormatAttribute getDisplayFormat() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -238,6 +303,13 @@ public class DataTypeAttribute extends system.componentmodel.dataannotations.Val
         }
     }
 
+    /**
+     * Sets the value of the .NET property DisplayFormat.
+     *
+     * @param DisplayFormat the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.DataAnnotations.DataTypeAttribute.DisplayFormat" target="_top">.NET documentation</a>
+     */
     public void setDisplayFormat(DisplayFormatAttribute DisplayFormat) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -248,6 +320,13 @@ public class DataTypeAttribute extends system.componentmodel.dataannotations.Val
         }
     }
 
+    /**
+     * Gets the value of the .NET property CustomDataType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.DataAnnotations.DataTypeAttribute.CustomDataType" target="_top">.NET documentation</a>
+     */
     public java.lang.String getCustomDataType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -99,7 +99,10 @@ public class ConnectionPoint extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ConnectionPoint(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,14 @@ public class ConnectionPoint extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetEnabled.
+     *
+     * @param control the argument of type {@code Control}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.ConnectionPoint.GetEnabled" target="_top">.NET documentation</a>
+     */
     public boolean GetEnabled(Control control) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -170,6 +181,13 @@ public class ConnectionPoint extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AllowsMultipleConnections.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.ConnectionPoint.AllowsMultipleConnections" target="_top">.NET documentation</a>
+     */
     public boolean getAllowsMultipleConnections() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +202,13 @@ public class ConnectionPoint extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DisplayName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.ConnectionPoint.DisplayName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDisplayName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +223,13 @@ public class ConnectionPoint extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ID.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.ConnectionPoint.ID" target="_top">.NET documentation</a>
+     */
     public java.lang.String getID() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -212,6 +244,13 @@ public class ConnectionPoint extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ControlType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.ConnectionPoint.ControlType" target="_top">.NET documentation</a>
+     */
     public NetType getControlType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -227,6 +266,13 @@ public class ConnectionPoint extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property InterfaceType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.ConnectionPoint.InterfaceType" target="_top">.NET documentation</a>
+     */
     public NetType getInterfaceType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

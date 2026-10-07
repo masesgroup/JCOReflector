@@ -100,7 +100,10 @@ public class WebBrowserNavigatingEventArgs extends system.componentmodel.CancelE
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public WebBrowserNavigatingEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,14 @@ public class WebBrowserNavigatingEventArgs extends system.componentmodel.CancelE
     public WebBrowserNavigatingEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param url the argument of type {@code Uri}
+     * @param targetFrameName the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.WebBrowserNavigatingEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public WebBrowserNavigatingEventArgs(Uri url, java.lang.String targetFrameName) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +180,13 @@ public class WebBrowserNavigatingEventArgs extends system.componentmodel.CancelE
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property TargetFrameName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.WebBrowserNavigatingEventArgs.TargetFrameName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTargetFrameName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +201,13 @@ public class WebBrowserNavigatingEventArgs extends system.componentmodel.CancelE
         }
     }
 
+    /**
+     * Gets the value of the .NET property Url.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.WebBrowserNavigatingEventArgs.Url" target="_top">.NET documentation</a>
+     */
     public Uri getUrl() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

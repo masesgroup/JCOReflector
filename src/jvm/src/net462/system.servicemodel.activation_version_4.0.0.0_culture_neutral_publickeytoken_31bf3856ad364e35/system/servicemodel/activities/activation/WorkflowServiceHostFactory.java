@@ -101,7 +101,10 @@ public class WorkflowServiceHostFactory extends system.servicemodel.activation.S
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public WorkflowServiceHostFactory(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class WorkflowServiceHostFactory extends system.servicemodel.activation.S
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Activation.WorkflowServiceHostFactory.-ctor" target="_top">.NET documentation</a>
+     */
     public WorkflowServiceHostFactory() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -162,6 +171,39 @@ public class WorkflowServiceHostFactory extends system.servicemodel.activation.S
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CreateServiceHost.
+     *
+     * @param constructorString the argument of type {@code java.lang.String}
+     * @param baseAddresses the argument of type {@code Uri[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.web.HttpCompileException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.xaml.XamlSchemaException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.xaml.XamlException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Activation.WorkflowServiceHostFactory.CreateServiceHost" target="_top">.NET documentation</a>
+     */
     public ServiceHostBase CreateServiceHost(java.lang.String constructorString, Uri[] baseAddresses) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException, system.OutOfMemoryException, system.UriFormatException, system.web.HttpCompileException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.threading.ThreadAbortException, system.security.SecurityException, system.OverflowException, system.xml.XmlException, system.NotImplementedException, system.xaml.XamlSchemaException, system.collections.generic.KeyNotFoundException, system.xaml.XamlException, system.FormatException, system.globalization.CultureNotFoundException, system.TypeLoadException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

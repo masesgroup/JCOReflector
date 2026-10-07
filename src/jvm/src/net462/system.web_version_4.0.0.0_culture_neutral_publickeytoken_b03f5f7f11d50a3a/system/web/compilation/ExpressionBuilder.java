@@ -101,7 +101,10 @@ public class ExpressionBuilder extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ExpressionBuilder(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,16 @@ public class ExpressionBuilder extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetCodeExpression.
+     *
+     * @param entry the argument of type {@code BoundPropertyEntry}
+     * @param parsedData the argument of type {@code NetObject}
+     * @param context the argument of type {@code ExpressionBuilderContext}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Compilation.ExpressionBuilder.GetCodeExpression" target="_top">.NET documentation</a>
+     */
     public CodeExpression GetCodeExpression(BoundPropertyEntry entry, NetObject parsedData, ExpressionBuilderContext context) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -169,6 +182,17 @@ public class ExpressionBuilder extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member EvaluateExpression.
+     *
+     * @param target the argument of type {@code NetObject}
+     * @param entry the argument of type {@code BoundPropertyEntry}
+     * @param parsedData the argument of type {@code NetObject}
+     * @param context the argument of type {@code ExpressionBuilderContext}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Compilation.ExpressionBuilder.EvaluateExpression" target="_top">.NET documentation</a>
+     */
     public NetObject EvaluateExpression(NetObject target, BoundPropertyEntry entry, NetObject parsedData, ExpressionBuilderContext context) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +208,16 @@ public class ExpressionBuilder extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ParseExpression.
+     *
+     * @param expression the argument of type {@code java.lang.String}
+     * @param propertyType the argument of type {@code NetType}
+     * @param context the argument of type {@code ExpressionBuilderContext}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Compilation.ExpressionBuilder.ParseExpression" target="_top">.NET documentation</a>
+     */
     public NetObject ParseExpression(java.lang.String expression, NetType propertyType, ExpressionBuilderContext context) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +237,13 @@ public class ExpressionBuilder extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property SupportsEvaluate.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Compilation.ExpressionBuilder.SupportsEvaluate" target="_top">.NET documentation</a>
+     */
     public boolean getSupportsEvaluate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

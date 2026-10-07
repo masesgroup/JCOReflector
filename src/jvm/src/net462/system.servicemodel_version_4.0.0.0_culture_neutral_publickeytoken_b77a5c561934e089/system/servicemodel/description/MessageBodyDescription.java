@@ -100,7 +100,10 @@ public class MessageBodyDescription extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public MessageBodyDescription(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,13 @@ public class MessageBodyDescription extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.MessageBodyDescription.-ctor" target="_top">.NET documentation</a>
+     */
     public MessageBodyDescription() throws Throwable, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +175,13 @@ public class MessageBodyDescription extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ReturnValue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.MessageBodyDescription.ReturnValue" target="_top">.NET documentation</a>
+     */
     public MessagePartDescription getReturnValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +197,13 @@ public class MessageBodyDescription extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ReturnValue.
+     *
+     * @param ReturnValue the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.MessageBodyDescription.ReturnValue" target="_top">.NET documentation</a>
+     */
     public void setReturnValue(MessagePartDescription ReturnValue) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +214,13 @@ public class MessageBodyDescription extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Parts.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.MessageBodyDescription.Parts" target="_top">.NET documentation</a>
+     */
     public MessagePartDescriptionCollection getParts() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +236,21 @@ public class MessageBodyDescription extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property WrapperName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.MessageBodyDescription.WrapperName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getWrapperName() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -219,6 +265,23 @@ public class MessageBodyDescription extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property WrapperName.
+     *
+     * @param WrapperName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.MessageBodyDescription.WrapperName" target="_top">.NET documentation</a>
+     */
     public void setWrapperName(java.lang.String WrapperName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -229,6 +292,13 @@ public class MessageBodyDescription extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property WrapperNamespace.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.MessageBodyDescription.WrapperNamespace" target="_top">.NET documentation</a>
+     */
     public java.lang.String getWrapperNamespace() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -243,6 +313,13 @@ public class MessageBodyDescription extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property WrapperNamespace.
+     *
+     * @param WrapperNamespace the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.MessageBodyDescription.WrapperNamespace" target="_top">.NET documentation</a>
+     */
     public void setWrapperNamespace(java.lang.String WrapperNamespace) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

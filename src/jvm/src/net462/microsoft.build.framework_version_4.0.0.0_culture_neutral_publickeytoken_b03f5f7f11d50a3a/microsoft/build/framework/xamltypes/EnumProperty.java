@@ -100,7 +100,10 @@ public class EnumProperty extends microsoft.build.framework.xamltypes.BaseProper
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public EnumProperty(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class EnumProperty extends microsoft.build.framework.xamltypes.BaseProper
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.EnumProperty.-ctor" target="_top">.NET documentation</a>
+     */
     public EnumProperty() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -161,6 +170,12 @@ public class EnumProperty extends microsoft.build.framework.xamltypes.BaseProper
     
     // Methods section
     
+    /**
+     * Invokes the .NET member EndInit.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.EnumProperty.EndInit" target="_top">.NET documentation</a>
+     */
     public void EndInit() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -175,6 +190,13 @@ public class EnumProperty extends microsoft.build.framework.xamltypes.BaseProper
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AdmissibleValues.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.EnumProperty.AdmissibleValues" target="_top">.NET documentation</a>
+     */
     public List_1 getAdmissibleValues() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +212,13 @@ public class EnumProperty extends microsoft.build.framework.xamltypes.BaseProper
         }
     }
 
+    /**
+     * Sets the value of the .NET property AdmissibleValues.
+     *
+     * @param AdmissibleValues the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.EnumProperty.AdmissibleValues" target="_top">.NET documentation</a>
+     */
     public void setAdmissibleValues(List_1 AdmissibleValues) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

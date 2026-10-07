@@ -106,7 +106,10 @@ public class NFloat extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public NFloat(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,13 @@ public class NFloat extends system.ValueType  {
     public NFloat() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param value the argument of type {@code double}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.-ctor" target="_top">.NET documentation</a>
+     */
     public NFloat(double value) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -166,6 +176,13 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param value the argument of type {@code Single}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.-ctor" target="_top">.NET documentation</a>
+     */
     public NFloat(Single value) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -181,6 +198,14 @@ public class NFloat extends system.ValueType  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Equals.
+     *
+     * @param other the argument of type {@code NFloat}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.Equals" target="_top">.NET documentation</a>
+     */
     public boolean Equals(NFloat other) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -195,6 +220,16 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsEvenInteger.
+     *
+     * @param value the argument of type {@code NFloat}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.IsEvenInteger" target="_top">.NET documentation</a>
+     */
     public static boolean IsEvenInteger(NFloat value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -209,6 +244,17 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsFinite.
+     *
+     * @param value the argument of type {@code NFloat}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.IsFinite" target="_top">.NET documentation</a>
+     */
     public static boolean IsFinite(NFloat value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -223,6 +269,17 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsInfinity.
+     *
+     * @param value the argument of type {@code NFloat}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.IsInfinity" target="_top">.NET documentation</a>
+     */
     public static boolean IsInfinity(NFloat value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -237,6 +294,16 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsInteger.
+     *
+     * @param value the argument of type {@code NFloat}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.IsInteger" target="_top">.NET documentation</a>
+     */
     public static boolean IsInteger(NFloat value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -251,6 +318,14 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsNaN.
+     *
+     * @param value the argument of type {@code NFloat}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.IsNaN" target="_top">.NET documentation</a>
+     */
     public static boolean IsNaN(NFloat value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -265,6 +340,17 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsNegative.
+     *
+     * @param value the argument of type {@code NFloat}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.IsNegative" target="_top">.NET documentation</a>
+     */
     public static boolean IsNegative(NFloat value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -279,6 +365,14 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsNegativeInfinity.
+     *
+     * @param value the argument of type {@code NFloat}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.IsNegativeInfinity" target="_top">.NET documentation</a>
+     */
     public static boolean IsNegativeInfinity(NFloat value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -293,6 +387,17 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsNormal.
+     *
+     * @param value the argument of type {@code NFloat}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.IsNormal" target="_top">.NET documentation</a>
+     */
     public static boolean IsNormal(NFloat value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -307,6 +412,16 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsOddInteger.
+     *
+     * @param value the argument of type {@code NFloat}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.IsOddInteger" target="_top">.NET documentation</a>
+     */
     public static boolean IsOddInteger(NFloat value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -321,6 +436,17 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsPositive.
+     *
+     * @param value the argument of type {@code NFloat}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.IsPositive" target="_top">.NET documentation</a>
+     */
     public static boolean IsPositive(NFloat value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -335,6 +461,14 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsPositiveInfinity.
+     *
+     * @param value the argument of type {@code NFloat}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.IsPositiveInfinity" target="_top">.NET documentation</a>
+     */
     public static boolean IsPositiveInfinity(NFloat value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -349,6 +483,17 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsPow2.
+     *
+     * @param value the argument of type {@code NFloat}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.IsPow2" target="_top">.NET documentation</a>
+     */
     public static boolean IsPow2(NFloat value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -363,6 +508,14 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsRealNumber.
+     *
+     * @param value the argument of type {@code NFloat}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.IsRealNumber" target="_top">.NET documentation</a>
+     */
     public static boolean IsRealNumber(NFloat value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -377,6 +530,17 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsSubnormal.
+     *
+     * @param value the argument of type {@code NFloat}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.IsSubnormal" target="_top">.NET documentation</a>
+     */
     public static boolean IsSubnormal(NFloat value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -391,6 +555,29 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member TryParse.
+     *
+     * @param s the argument of type {@code java.lang.String}
+     * @param style the argument of type {@code NumberStyles}
+     * @param provider the argument of type {@code IFormatProvider}
+     * @param result the argument of type {@code JCORefOut<NFloat>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.TryParse" target="_top">.NET documentation</a>
+     */
     public static boolean TryParse(java.lang.String s, NumberStyles style, IFormatProvider provider, JCORefOut<NFloat> result) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.NullReferenceException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -405,6 +592,26 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member TryParse.
+     *
+     * @param s the argument of type {@code java.lang.String}
+     * @param provider the argument of type {@code IFormatProvider}
+     * @param result the argument of type {@code JCORefOut<NFloat>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.TryParse" target="_top">.NET documentation</a>
+     */
     public static boolean TryParse(java.lang.String s, IFormatProvider provider, JCORefOut<NFloat> result) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.NullReferenceException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -419,6 +626,27 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member TryParse.
+     *
+     * @param s the argument of type {@code java.lang.String}
+     * @param result the argument of type {@code JCORefOut<NFloat>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.TryParse" target="_top">.NET documentation</a>
+     */
     public static boolean TryParse(java.lang.String s, JCORefOut<NFloat> result) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.NullReferenceException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -433,6 +661,25 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member CompareTo.
+     *
+     * @param obj the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.CompareTo" target="_top">.NET documentation</a>
+     */
     public int CompareTo(NetObject obj) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -473,6 +720,14 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member CompareTo.
+     *
+     * @param other the argument of type {@code NFloat}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.CompareTo" target="_top">.NET documentation</a>
+     */
     public int CompareTo(NFloat other) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -513,6 +768,18 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member ILogB.
+     *
+     * @param x the argument of type {@code NFloat}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.ILogB" target="_top">.NET documentation</a>
+     */
     public static int ILogB(NFloat x) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -553,6 +820,25 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Sign.
+     *
+     * @param value the argument of type {@code NFloat}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArithmeticException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.Sign" target="_top">.NET documentation</a>
+     */
     public static int Sign(NFloat value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.ArithmeticException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -593,6 +879,16 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Abs.
+     *
+     * @param value the argument of type {@code NFloat}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.Abs" target="_top">.NET documentation</a>
+     */
     public static NFloat Abs(NFloat value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -608,6 +904,14 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Acos.
+     *
+     * @param x the argument of type {@code NFloat}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.Acos" target="_top">.NET documentation</a>
+     */
     public static NFloat Acos(NFloat x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -623,6 +927,14 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Acosh.
+     *
+     * @param x the argument of type {@code NFloat}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.Acosh" target="_top">.NET documentation</a>
+     */
     public static NFloat Acosh(NFloat x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -638,6 +950,14 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member AcosPi.
+     *
+     * @param x the argument of type {@code NFloat}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.AcosPi" target="_top">.NET documentation</a>
+     */
     public static NFloat AcosPi(NFloat x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -653,6 +973,14 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Asin.
+     *
+     * @param x the argument of type {@code NFloat}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.Asin" target="_top">.NET documentation</a>
+     */
     public static NFloat Asin(NFloat x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -668,6 +996,14 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Asinh.
+     *
+     * @param x the argument of type {@code NFloat}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.Asinh" target="_top">.NET documentation</a>
+     */
     public static NFloat Asinh(NFloat x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -683,6 +1019,14 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member AsinPi.
+     *
+     * @param x the argument of type {@code NFloat}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.AsinPi" target="_top">.NET documentation</a>
+     */
     public static NFloat AsinPi(NFloat x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -698,6 +1042,14 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Atan.
+     *
+     * @param x the argument of type {@code NFloat}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.Atan" target="_top">.NET documentation</a>
+     */
     public static NFloat Atan(NFloat x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -713,6 +1065,15 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Atan2.
+     *
+     * @param y the argument of type {@code NFloat}
+     * @param x the argument of type {@code NFloat}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.Atan2" target="_top">.NET documentation</a>
+     */
     public static NFloat Atan2(NFloat y, NFloat x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -728,6 +1089,15 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Atan2Pi.
+     *
+     * @param y the argument of type {@code NFloat}
+     * @param x the argument of type {@code NFloat}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.Atan2Pi" target="_top">.NET documentation</a>
+     */
     public static NFloat Atan2Pi(NFloat y, NFloat x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -743,6 +1113,14 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Atanh.
+     *
+     * @param x the argument of type {@code NFloat}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.Atanh" target="_top">.NET documentation</a>
+     */
     public static NFloat Atanh(NFloat x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -758,6 +1136,14 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member AtanPi.
+     *
+     * @param x the argument of type {@code NFloat}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.AtanPi" target="_top">.NET documentation</a>
+     */
     public static NFloat AtanPi(NFloat x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -773,6 +1159,16 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member BitDecrement.
+     *
+     * @param x the argument of type {@code NFloat}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.BitDecrement" target="_top">.NET documentation</a>
+     */
     public static NFloat BitDecrement(NFloat x) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -788,6 +1184,16 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member BitIncrement.
+     *
+     * @param x the argument of type {@code NFloat}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.BitIncrement" target="_top">.NET documentation</a>
+     */
     public static NFloat BitIncrement(NFloat x) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -803,6 +1209,14 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Cbrt.
+     *
+     * @param x the argument of type {@code NFloat}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.Cbrt" target="_top">.NET documentation</a>
+     */
     public static NFloat Cbrt(NFloat x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -818,6 +1232,14 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Ceiling.
+     *
+     * @param x the argument of type {@code NFloat}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.Ceiling" target="_top">.NET documentation</a>
+     */
     public static NFloat Ceiling(NFloat x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -833,6 +1255,26 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Clamp.
+     *
+     * @param value the argument of type {@code NFloat}
+     * @param min the argument of type {@code NFloat}
+     * @param max the argument of type {@code NFloat}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.Clamp" target="_top">.NET documentation</a>
+     */
     public static NFloat Clamp(NFloat value, NFloat min, NFloat max) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -848,6 +1290,17 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member CopySign.
+     *
+     * @param value the argument of type {@code NFloat}
+     * @param sign the argument of type {@code NFloat}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.CopySign" target="_top">.NET documentation</a>
+     */
     public static NFloat CopySign(NFloat value, NFloat sign) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -863,6 +1316,14 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Cos.
+     *
+     * @param x the argument of type {@code NFloat}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.Cos" target="_top">.NET documentation</a>
+     */
     public static NFloat Cos(NFloat x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -878,6 +1339,14 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Cosh.
+     *
+     * @param x the argument of type {@code NFloat}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.Cosh" target="_top">.NET documentation</a>
+     */
     public static NFloat Cosh(NFloat x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -893,6 +1362,16 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member CosPi.
+     *
+     * @param x the argument of type {@code NFloat}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.CosPi" target="_top">.NET documentation</a>
+     */
     public static NFloat CosPi(NFloat x) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -908,6 +1387,19 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateChecked.
+     *
+     * @param <TOther> the type of the generic argument TOther
+     * @param value the argument of type {@code TOther}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.CreateChecked" target="_top">.NET documentation</a>
+     */
     public static <TOther extends IJCOBridgeReflected> NFloat CreateChecked(TOther value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -923,6 +1415,19 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateSaturating.
+     *
+     * @param <TOther> the type of the generic argument TOther
+     * @param value the argument of type {@code TOther}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.CreateSaturating" target="_top">.NET documentation</a>
+     */
     public static <TOther extends IJCOBridgeReflected> NFloat CreateSaturating(TOther value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -938,6 +1443,19 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateTruncating.
+     *
+     * @param <TOther> the type of the generic argument TOther
+     * @param value the argument of type {@code TOther}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.CreateTruncating" target="_top">.NET documentation</a>
+     */
     public static <TOther extends IJCOBridgeReflected> NFloat CreateTruncating(TOther value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -953,6 +1471,14 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member DegreesToRadians.
+     *
+     * @param degrees the argument of type {@code NFloat}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.DegreesToRadians" target="_top">.NET documentation</a>
+     */
     public static NFloat DegreesToRadians(NFloat degrees) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -968,6 +1494,14 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Exp.
+     *
+     * @param x the argument of type {@code NFloat}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.Exp" target="_top">.NET documentation</a>
+     */
     public static NFloat Exp(NFloat x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -983,6 +1517,14 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Exp10.
+     *
+     * @param x the argument of type {@code NFloat}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.Exp10" target="_top">.NET documentation</a>
+     */
     public static NFloat Exp10(NFloat x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -998,6 +1540,14 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Exp10M1.
+     *
+     * @param x the argument of type {@code NFloat}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.Exp10M1" target="_top">.NET documentation</a>
+     */
     public static NFloat Exp10M1(NFloat x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1013,6 +1563,14 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Exp2.
+     *
+     * @param x the argument of type {@code NFloat}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.Exp2" target="_top">.NET documentation</a>
+     */
     public static NFloat Exp2(NFloat x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1028,6 +1586,14 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Exp2M1.
+     *
+     * @param x the argument of type {@code NFloat}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.Exp2M1" target="_top">.NET documentation</a>
+     */
     public static NFloat Exp2M1(NFloat x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1043,6 +1609,14 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member ExpM1.
+     *
+     * @param x the argument of type {@code NFloat}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.ExpM1" target="_top">.NET documentation</a>
+     */
     public static NFloat ExpM1(NFloat x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1058,6 +1632,14 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Floor.
+     *
+     * @param x the argument of type {@code NFloat}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.Floor" target="_top">.NET documentation</a>
+     */
     public static NFloat Floor(NFloat x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1073,6 +1655,16 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member FusedMultiplyAdd.
+     *
+     * @param left the argument of type {@code NFloat}
+     * @param right the argument of type {@code NFloat}
+     * @param addend the argument of type {@code NFloat}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.FusedMultiplyAdd" target="_top">.NET documentation</a>
+     */
     public static NFloat FusedMultiplyAdd(NFloat left, NFloat right, NFloat addend) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1088,6 +1680,17 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Hypot.
+     *
+     * @param x the argument of type {@code NFloat}
+     * @param y the argument of type {@code NFloat}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.Hypot" target="_top">.NET documentation</a>
+     */
     public static NFloat Hypot(NFloat x, NFloat y) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1103,6 +1706,18 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Ieee754Remainder.
+     *
+     * @param left the argument of type {@code NFloat}
+     * @param right the argument of type {@code NFloat}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArithmeticException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.Ieee754Remainder" target="_top">.NET documentation</a>
+     */
     public static NFloat Ieee754Remainder(NFloat left, NFloat right) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.ArithmeticException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1118,6 +1733,16 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Lerp.
+     *
+     * @param value1 the argument of type {@code NFloat}
+     * @param value2 the argument of type {@code NFloat}
+     * @param amount the argument of type {@code NFloat}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.Lerp" target="_top">.NET documentation</a>
+     */
     public static NFloat Lerp(NFloat value1, NFloat value2, NFloat amount) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1133,6 +1758,15 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Log.
+     *
+     * @param x the argument of type {@code NFloat}
+     * @param newBase the argument of type {@code NFloat}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.Log" target="_top">.NET documentation</a>
+     */
     public static NFloat Log(NFloat x, NFloat newBase) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1148,6 +1782,14 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Log.
+     *
+     * @param x the argument of type {@code NFloat}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.Log" target="_top">.NET documentation</a>
+     */
     public static NFloat Log(NFloat x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1163,6 +1805,14 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Log10.
+     *
+     * @param x the argument of type {@code NFloat}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.Log10" target="_top">.NET documentation</a>
+     */
     public static NFloat Log10(NFloat x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1178,6 +1828,14 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Log10P1.
+     *
+     * @param x the argument of type {@code NFloat}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.Log10P1" target="_top">.NET documentation</a>
+     */
     public static NFloat Log10P1(NFloat x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1193,6 +1851,14 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Log2.
+     *
+     * @param value the argument of type {@code NFloat}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.Log2" target="_top">.NET documentation</a>
+     */
     public static NFloat Log2(NFloat value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1208,6 +1874,14 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Log2P1.
+     *
+     * @param x the argument of type {@code NFloat}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.Log2P1" target="_top">.NET documentation</a>
+     */
     public static NFloat Log2P1(NFloat x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1223,6 +1897,14 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member LogP1.
+     *
+     * @param x the argument of type {@code NFloat}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.LogP1" target="_top">.NET documentation</a>
+     */
     public static NFloat LogP1(NFloat x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1238,6 +1920,17 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Max.
+     *
+     * @param x the argument of type {@code NFloat}
+     * @param y the argument of type {@code NFloat}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.Max" target="_top">.NET documentation</a>
+     */
     public static NFloat Max(NFloat x, NFloat y) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1253,6 +1946,17 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member MaxMagnitude.
+     *
+     * @param x the argument of type {@code NFloat}
+     * @param y the argument of type {@code NFloat}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.MaxMagnitude" target="_top">.NET documentation</a>
+     */
     public static NFloat MaxMagnitude(NFloat x, NFloat y) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1268,6 +1972,17 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member MaxMagnitudeNumber.
+     *
+     * @param x the argument of type {@code NFloat}
+     * @param y the argument of type {@code NFloat}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.MaxMagnitudeNumber" target="_top">.NET documentation</a>
+     */
     public static NFloat MaxMagnitudeNumber(NFloat x, NFloat y) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1283,6 +1998,17 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member MaxNumber.
+     *
+     * @param x the argument of type {@code NFloat}
+     * @param y the argument of type {@code NFloat}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.MaxNumber" target="_top">.NET documentation</a>
+     */
     public static NFloat MaxNumber(NFloat x, NFloat y) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1298,6 +2024,17 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Min.
+     *
+     * @param x the argument of type {@code NFloat}
+     * @param y the argument of type {@code NFloat}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.Min" target="_top">.NET documentation</a>
+     */
     public static NFloat Min(NFloat x, NFloat y) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1313,6 +2050,17 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member MinMagnitude.
+     *
+     * @param x the argument of type {@code NFloat}
+     * @param y the argument of type {@code NFloat}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.MinMagnitude" target="_top">.NET documentation</a>
+     */
     public static NFloat MinMagnitude(NFloat x, NFloat y) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1328,6 +2076,17 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member MinMagnitudeNumber.
+     *
+     * @param x the argument of type {@code NFloat}
+     * @param y the argument of type {@code NFloat}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.MinMagnitudeNumber" target="_top">.NET documentation</a>
+     */
     public static NFloat MinMagnitudeNumber(NFloat x, NFloat y) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1343,6 +2102,17 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member MinNumber.
+     *
+     * @param x the argument of type {@code NFloat}
+     * @param y the argument of type {@code NFloat}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.MinNumber" target="_top">.NET documentation</a>
+     */
     public static NFloat MinNumber(NFloat x, NFloat y) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1358,6 +2128,16 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member MultiplyAddEstimate.
+     *
+     * @param left the argument of type {@code NFloat}
+     * @param right the argument of type {@code NFloat}
+     * @param addend the argument of type {@code NFloat}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.MultiplyAddEstimate" target="_top">.NET documentation</a>
+     */
     public static NFloat MultiplyAddEstimate(NFloat left, NFloat right, NFloat addend) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1373,6 +2153,28 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Parse.
+     *
+     * @param s the argument of type {@code java.lang.String}
+     * @param style the argument of type {@code NumberStyles}
+     * @param provider the argument of type {@code IFormatProvider}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.Parse" target="_top">.NET documentation</a>
+     */
     public static NFloat Parse(java.lang.String s, NumberStyles style, IFormatProvider provider) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.OverflowException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1388,6 +2190,26 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Parse.
+     *
+     * @param s the argument of type {@code java.lang.String}
+     * @param style the argument of type {@code NumberStyles}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.Parse" target="_top">.NET documentation</a>
+     */
     public static NFloat Parse(java.lang.String s, NumberStyles style) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.NullReferenceException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OverflowException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1403,6 +2225,26 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Parse.
+     *
+     * @param s the argument of type {@code java.lang.String}
+     * @param provider the argument of type {@code IFormatProvider}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.Parse" target="_top">.NET documentation</a>
+     */
     public static NFloat Parse(java.lang.String s, IFormatProvider provider) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.NullReferenceException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OverflowException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1418,6 +2260,25 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Parse.
+     *
+     * @param s the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.Parse" target="_top">.NET documentation</a>
+     */
     public static NFloat Parse(java.lang.String s) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.NullReferenceException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OverflowException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1433,6 +2294,15 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Pow.
+     *
+     * @param x the argument of type {@code NFloat}
+     * @param y the argument of type {@code NFloat}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.Pow" target="_top">.NET documentation</a>
+     */
     public static NFloat Pow(NFloat x, NFloat y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1448,6 +2318,14 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member RadiansToDegrees.
+     *
+     * @param radians the argument of type {@code NFloat}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.RadiansToDegrees" target="_top">.NET documentation</a>
+     */
     public static NFloat RadiansToDegrees(NFloat radians) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1463,6 +2341,14 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member ReciprocalEstimate.
+     *
+     * @param x the argument of type {@code NFloat}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.ReciprocalEstimate" target="_top">.NET documentation</a>
+     */
     public static NFloat ReciprocalEstimate(NFloat x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1478,6 +2364,14 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member ReciprocalSqrtEstimate.
+     *
+     * @param x the argument of type {@code NFloat}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.ReciprocalSqrtEstimate" target="_top">.NET documentation</a>
+     */
     public static NFloat ReciprocalSqrtEstimate(NFloat x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1493,6 +2387,17 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member RootN.
+     *
+     * @param x the argument of type {@code NFloat}
+     * @param n the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.RootN" target="_top">.NET documentation</a>
+     */
     public static NFloat RootN(NFloat x, int n) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1508,6 +2413,26 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Round.
+     *
+     * @param x the argument of type {@code NFloat}
+     * @param digits the argument of type {@code int}
+     * @param mode the argument of type {@code MidpointRounding}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.Round" target="_top">.NET documentation</a>
+     */
     public static NFloat Round(NFloat x, int digits, MidpointRounding mode) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1523,6 +2448,21 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Round.
+     *
+     * @param x the argument of type {@code NFloat}
+     * @param digits the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.Round" target="_top">.NET documentation</a>
+     */
     public static NFloat Round(NFloat x, int digits) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1538,6 +2478,23 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Round.
+     *
+     * @param x the argument of type {@code NFloat}
+     * @param mode the argument of type {@code MidpointRounding}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.Round" target="_top">.NET documentation</a>
+     */
     public static NFloat Round(NFloat x, MidpointRounding mode) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1553,6 +2510,16 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Round.
+     *
+     * @param x the argument of type {@code NFloat}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.Round" target="_top">.NET documentation</a>
+     */
     public static NFloat Round(NFloat x) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1568,6 +2535,17 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member ScaleB.
+     *
+     * @param x the argument of type {@code NFloat}
+     * @param n the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.ScaleB" target="_top">.NET documentation</a>
+     */
     public static NFloat ScaleB(NFloat x, int n) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1583,6 +2561,14 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Sin.
+     *
+     * @param x the argument of type {@code NFloat}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.Sin" target="_top">.NET documentation</a>
+     */
     public static NFloat Sin(NFloat x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1598,6 +2584,14 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Sinh.
+     *
+     * @param x the argument of type {@code NFloat}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.Sinh" target="_top">.NET documentation</a>
+     */
     public static NFloat Sinh(NFloat x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1613,6 +2607,16 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member SinPi.
+     *
+     * @param x the argument of type {@code NFloat}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.SinPi" target="_top">.NET documentation</a>
+     */
     public static NFloat SinPi(NFloat x) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1628,6 +2632,14 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Sqrt.
+     *
+     * @param x the argument of type {@code NFloat}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.Sqrt" target="_top">.NET documentation</a>
+     */
     public static NFloat Sqrt(NFloat x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1643,6 +2655,14 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Tan.
+     *
+     * @param x the argument of type {@code NFloat}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.Tan" target="_top">.NET documentation</a>
+     */
     public static NFloat Tan(NFloat x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1658,6 +2678,14 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Tanh.
+     *
+     * @param x the argument of type {@code NFloat}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.Tanh" target="_top">.NET documentation</a>
+     */
     public static NFloat Tanh(NFloat x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1673,6 +2701,16 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member TanPi.
+     *
+     * @param x the argument of type {@code NFloat}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.TanPi" target="_top">.NET documentation</a>
+     */
     public static NFloat TanPi(NFloat x) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1688,6 +2726,14 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Truncate.
+     *
+     * @param x the argument of type {@code NFloat}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.Truncate" target="_top">.NET documentation</a>
+     */
     public static NFloat Truncate(NFloat x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1703,6 +2749,22 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToString.
+     *
+     * @param provider the argument of type {@code IFormatProvider}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.ToString" target="_top">.NET documentation</a>
+     */
     public java.lang.String ToString(IFormatProvider provider) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.NotSupportedException, system.FormatException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1717,6 +2779,23 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToString.
+     *
+     * @param format the argument of type {@code java.lang.String}
+     * @param provider the argument of type {@code IFormatProvider}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.ToString" target="_top">.NET documentation</a>
+     */
     public java.lang.String ToString(java.lang.String format, IFormatProvider provider) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.NotSupportedException, system.FormatException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1731,6 +2810,25 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToString.
+     *
+     * @param format the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.TypeInitializationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.ToString" target="_top">.NET documentation</a>
+     */
     public java.lang.String ToString(java.lang.String format) throws Throwable, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.TypeInitializationException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1745,6 +2843,14 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member SinCos.
+     *
+     * @param x the argument of type {@code NFloat}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.SinCos" target="_top">.NET documentation</a>
+     */
     public static ValueTuple_2 SinCos(NFloat x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1760,6 +2866,16 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member SinCosPi.
+     *
+     * @param x the argument of type {@code NFloat}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.SinCosPi" target="_top">.NET documentation</a>
+     */
     public static ValueTuple_2 SinCosPi(NFloat x) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1778,8 +2894,13 @@ public class NFloat extends system.ValueType  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToINumberBase_1 method available in INumberBase_1 to obtain an object with an invocable method
+     *
+     * @param value the argument of type {@code NFloat}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.INumberBase-1.IsCanonical" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public static boolean IsCanonical(NFloat value) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToINumberBase_1 to obtain the full interface.");
     }
@@ -1787,8 +2908,13 @@ public class NFloat extends system.ValueType  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToINumberBase_1 method available in INumberBase_1 to obtain an object with an invocable method
+     *
+     * @param value the argument of type {@code NFloat}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.INumberBase-1.IsComplexNumber" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public static boolean IsComplexNumber(NFloat value) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToINumberBase_1 to obtain the full interface.");
     }
@@ -1796,8 +2922,13 @@ public class NFloat extends system.ValueType  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToINumberBase_1 method available in INumberBase_1 to obtain an object with an invocable method
+     *
+     * @param value the argument of type {@code NFloat}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.INumberBase-1.IsImaginaryNumber" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public static boolean IsImaginaryNumber(NFloat value) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToINumberBase_1 to obtain the full interface.");
     }
@@ -1805,8 +2936,13 @@ public class NFloat extends system.ValueType  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToINumberBase_1 method available in INumberBase_1 to obtain an object with an invocable method
+     *
+     * @param value the argument of type {@code NFloat}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.INumberBase-1.IsZero" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public static boolean IsZero(NFloat value) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToINumberBase_1 to obtain the full interface.");
     }
@@ -1814,8 +2950,12 @@ public class NFloat extends system.ValueType  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIFloatingPoint_1 method available in IFloatingPoint_1 to obtain an object with an invocable method
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.IFloatingPoint-1.GetExponentByteCount" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public int GetExponentByteCount() throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIFloatingPoint_1 to obtain the full interface.");
     }
@@ -1823,8 +2963,12 @@ public class NFloat extends system.ValueType  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIFloatingPoint_1 method available in IFloatingPoint_1 to obtain an object with an invocable method
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.IFloatingPoint-1.GetExponentShortestBitLength" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public int GetExponentShortestBitLength() throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIFloatingPoint_1 to obtain the full interface.");
     }
@@ -1832,8 +2976,12 @@ public class NFloat extends system.ValueType  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIFloatingPoint_1 method available in IFloatingPoint_1 to obtain an object with an invocable method
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.IFloatingPoint-1.GetSignificandBitLength" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public int GetSignificandBitLength() throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIFloatingPoint_1 to obtain the full interface.");
     }
@@ -1841,8 +2989,12 @@ public class NFloat extends system.ValueType  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIFloatingPoint_1 method available in IFloatingPoint_1 to obtain an object with an invocable method
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.IFloatingPoint-1.GetSignificandByteCount" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public int GetSignificandByteCount() throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIFloatingPoint_1 to obtain the full interface.");
     }
@@ -1850,8 +3002,22 @@ public class NFloat extends system.ValueType  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIFloatingPoint_1 method available in IFloatingPoint_1 to obtain an object with an invocable method
+     *
+     * @param destination the argument of type {@code byte[]}
+     * @param startIndex the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.IFloatingPoint-1.WriteExponentBigEndian" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public int WriteExponentBigEndian(byte[] destination, int startIndex) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIFloatingPoint_1 to obtain the full interface.");
     }
@@ -1859,8 +3025,22 @@ public class NFloat extends system.ValueType  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToMETHOD_INTERFACE_NAME method available in METHOD_INTERFACE_NAME to obtain an object with an invocable method
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.IFloatingPoint-1.WriteExponentBigEndian" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public int WriteExponentBigEndian(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToMETHOD_INTERFACE_NAME to obtain the full interface.");
     }
@@ -1868,8 +3048,18 @@ public class NFloat extends system.ValueType  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIFloatingPoint_1 method available in IFloatingPoint_1 to obtain an object with an invocable method
+     *
+     * @param destination the argument of type {@code byte[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.IFloatingPoint-1.WriteExponentBigEndian" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public int WriteExponentBigEndian(byte[] destination) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIFloatingPoint_1 to obtain the full interface.");
     }
@@ -1877,8 +3067,18 @@ public class NFloat extends system.ValueType  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToMETHOD_INTERFACE_NAME method available in METHOD_INTERFACE_NAME to obtain an object with an invocable method
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.IFloatingPoint-1.WriteExponentBigEndian" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public int WriteExponentBigEndian(JCORefOut dupParam0) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToMETHOD_INTERFACE_NAME to obtain the full interface.");
     }
@@ -1886,8 +3086,22 @@ public class NFloat extends system.ValueType  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIFloatingPoint_1 method available in IFloatingPoint_1 to obtain an object with an invocable method
+     *
+     * @param destination the argument of type {@code byte[]}
+     * @param startIndex the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.IFloatingPoint-1.WriteExponentLittleEndian" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public int WriteExponentLittleEndian(byte[] destination, int startIndex) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIFloatingPoint_1 to obtain the full interface.");
     }
@@ -1895,8 +3109,22 @@ public class NFloat extends system.ValueType  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToMETHOD_INTERFACE_NAME method available in METHOD_INTERFACE_NAME to obtain an object with an invocable method
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.IFloatingPoint-1.WriteExponentLittleEndian" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public int WriteExponentLittleEndian(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToMETHOD_INTERFACE_NAME to obtain the full interface.");
     }
@@ -1904,8 +3132,18 @@ public class NFloat extends system.ValueType  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIFloatingPoint_1 method available in IFloatingPoint_1 to obtain an object with an invocable method
+     *
+     * @param destination the argument of type {@code byte[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.IFloatingPoint-1.WriteExponentLittleEndian" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public int WriteExponentLittleEndian(byte[] destination) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIFloatingPoint_1 to obtain the full interface.");
     }
@@ -1913,8 +3151,18 @@ public class NFloat extends system.ValueType  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToMETHOD_INTERFACE_NAME method available in METHOD_INTERFACE_NAME to obtain an object with an invocable method
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.IFloatingPoint-1.WriteExponentLittleEndian" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public int WriteExponentLittleEndian(JCORefOut dupParam0) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToMETHOD_INTERFACE_NAME to obtain the full interface.");
     }
@@ -1922,8 +3170,22 @@ public class NFloat extends system.ValueType  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIFloatingPoint_1 method available in IFloatingPoint_1 to obtain an object with an invocable method
+     *
+     * @param destination the argument of type {@code byte[]}
+     * @param startIndex the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.IFloatingPoint-1.WriteSignificandBigEndian" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public int WriteSignificandBigEndian(byte[] destination, int startIndex) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIFloatingPoint_1 to obtain the full interface.");
     }
@@ -1931,8 +3193,22 @@ public class NFloat extends system.ValueType  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToMETHOD_INTERFACE_NAME method available in METHOD_INTERFACE_NAME to obtain an object with an invocable method
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.IFloatingPoint-1.WriteSignificandBigEndian" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public int WriteSignificandBigEndian(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToMETHOD_INTERFACE_NAME to obtain the full interface.");
     }
@@ -1940,8 +3216,18 @@ public class NFloat extends system.ValueType  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIFloatingPoint_1 method available in IFloatingPoint_1 to obtain an object with an invocable method
+     *
+     * @param destination the argument of type {@code byte[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.IFloatingPoint-1.WriteSignificandBigEndian" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public int WriteSignificandBigEndian(byte[] destination) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIFloatingPoint_1 to obtain the full interface.");
     }
@@ -1949,8 +3235,18 @@ public class NFloat extends system.ValueType  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToMETHOD_INTERFACE_NAME method available in METHOD_INTERFACE_NAME to obtain an object with an invocable method
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.IFloatingPoint-1.WriteSignificandBigEndian" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public int WriteSignificandBigEndian(JCORefOut dupParam0) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToMETHOD_INTERFACE_NAME to obtain the full interface.");
     }
@@ -1958,8 +3254,22 @@ public class NFloat extends system.ValueType  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIFloatingPoint_1 method available in IFloatingPoint_1 to obtain an object with an invocable method
+     *
+     * @param destination the argument of type {@code byte[]}
+     * @param startIndex the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.IFloatingPoint-1.WriteSignificandLittleEndian" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public int WriteSignificandLittleEndian(byte[] destination, int startIndex) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIFloatingPoint_1 to obtain the full interface.");
     }
@@ -1967,8 +3277,22 @@ public class NFloat extends system.ValueType  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToMETHOD_INTERFACE_NAME method available in METHOD_INTERFACE_NAME to obtain an object with an invocable method
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.IFloatingPoint-1.WriteSignificandLittleEndian" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public int WriteSignificandLittleEndian(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToMETHOD_INTERFACE_NAME to obtain the full interface.");
     }
@@ -1976,8 +3300,18 @@ public class NFloat extends system.ValueType  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIFloatingPoint_1 method available in IFloatingPoint_1 to obtain an object with an invocable method
+     *
+     * @param destination the argument of type {@code byte[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.IFloatingPoint-1.WriteSignificandLittleEndian" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public int WriteSignificandLittleEndian(byte[] destination) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIFloatingPoint_1 to obtain the full interface.");
     }
@@ -1985,8 +3319,18 @@ public class NFloat extends system.ValueType  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToMETHOD_INTERFACE_NAME method available in METHOD_INTERFACE_NAME to obtain an object with an invocable method
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.IFloatingPoint-1.WriteSignificandLittleEndian" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public int WriteSignificandLittleEndian(JCORefOut dupParam0) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToMETHOD_INTERFACE_NAME to obtain the full interface.");
     }
@@ -1995,6 +3339,13 @@ public class NFloat extends system.ValueType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Value.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.Value" target="_top">.NET documentation</a>
+     */
     public double getValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2035,6 +3386,13 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Size.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.Size" target="_top">.NET documentation</a>
+     */
     public static int getSize() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2075,6 +3433,13 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property E.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.E" target="_top">.NET documentation</a>
+     */
     public static NFloat getE() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2090,6 +3455,13 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Epsilon.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.Epsilon" target="_top">.NET documentation</a>
+     */
     public static NFloat getEpsilon() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2105,6 +3477,13 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MaxValue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.MaxValue" target="_top">.NET documentation</a>
+     */
     public static NFloat getMaxValue() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2120,6 +3499,13 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MinValue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.MinValue" target="_top">.NET documentation</a>
+     */
     public static NFloat getMinValue() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2135,6 +3521,13 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NaN.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.NaN" target="_top">.NET documentation</a>
+     */
     public static NFloat getNaN() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2150,6 +3543,13 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NegativeInfinity.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.NegativeInfinity" target="_top">.NET documentation</a>
+     */
     public static NFloat getNegativeInfinity() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2165,6 +3565,13 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NegativeZero.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.NegativeZero" target="_top">.NET documentation</a>
+     */
     public static NFloat getNegativeZero() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2180,6 +3587,13 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Pi.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.Pi" target="_top">.NET documentation</a>
+     */
     public static NFloat getPi() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2195,6 +3609,13 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PositiveInfinity.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.PositiveInfinity" target="_top">.NET documentation</a>
+     */
     public static NFloat getPositiveInfinity() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -2210,6 +3631,13 @@ public class NFloat extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Tau.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.Tau" target="_top">.NET documentation</a>
+     */
     public static NFloat getTau() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

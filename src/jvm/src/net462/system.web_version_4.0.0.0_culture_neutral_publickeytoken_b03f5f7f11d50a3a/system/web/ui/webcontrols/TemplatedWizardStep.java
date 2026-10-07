@@ -102,7 +102,10 @@ public class TemplatedWizardStep extends system.web.ui.webcontrols.WizardStepBas
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TemplatedWizardStep(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,12 @@ public class TemplatedWizardStep extends system.web.ui.webcontrols.WizardStepBas
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.TemplatedWizardStep.-ctor" target="_top">.NET documentation</a>
+     */
     public TemplatedWizardStep() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +176,13 @@ public class TemplatedWizardStep extends system.web.ui.webcontrols.WizardStepBas
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ContentTemplateContainer.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.TemplatedWizardStep.ContentTemplateContainer" target="_top">.NET documentation</a>
+     */
     public Control getContentTemplateContainer() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +198,13 @@ public class TemplatedWizardStep extends system.web.ui.webcontrols.WizardStepBas
         }
     }
 
+    /**
+     * Sets the value of the .NET property ContentTemplateContainer.
+     *
+     * @param ContentTemplateContainer the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.TemplatedWizardStep.ContentTemplateContainer" target="_top">.NET documentation</a>
+     */
     public void setContentTemplateContainer(Control ContentTemplateContainer) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -192,6 +215,13 @@ public class TemplatedWizardStep extends system.web.ui.webcontrols.WizardStepBas
         }
     }
 
+    /**
+     * Gets the value of the .NET property CustomNavigationTemplateContainer.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.TemplatedWizardStep.CustomNavigationTemplateContainer" target="_top">.NET documentation</a>
+     */
     public Control getCustomNavigationTemplateContainer() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +237,13 @@ public class TemplatedWizardStep extends system.web.ui.webcontrols.WizardStepBas
         }
     }
 
+    /**
+     * Sets the value of the .NET property CustomNavigationTemplateContainer.
+     *
+     * @param CustomNavigationTemplateContainer the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.TemplatedWizardStep.CustomNavigationTemplateContainer" target="_top">.NET documentation</a>
+     */
     public void setCustomNavigationTemplateContainer(Control CustomNavigationTemplateContainer) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -217,6 +254,13 @@ public class TemplatedWizardStep extends system.web.ui.webcontrols.WizardStepBas
         }
     }
 
+    /**
+     * Gets the value of the .NET property ContentTemplate.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.TemplatedWizardStep.ContentTemplate" target="_top">.NET documentation</a>
+     */
     public ITemplate getContentTemplate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -232,6 +276,21 @@ public class TemplatedWizardStep extends system.web.ui.webcontrols.WizardStepBas
         }
     }
 
+    /**
+     * Sets the value of the .NET property ContentTemplate.
+     *
+     * @param ContentTemplate the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.TemplatedWizardStep.ContentTemplate" target="_top">.NET documentation</a>
+     */
     public void setContentTemplate(ITemplate ContentTemplate) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -242,6 +301,13 @@ public class TemplatedWizardStep extends system.web.ui.webcontrols.WizardStepBas
         }
     }
 
+    /**
+     * Gets the value of the .NET property CustomNavigationTemplate.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.TemplatedWizardStep.CustomNavigationTemplate" target="_top">.NET documentation</a>
+     */
     public ITemplate getCustomNavigationTemplate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -257,6 +323,21 @@ public class TemplatedWizardStep extends system.web.ui.webcontrols.WizardStepBas
         }
     }
 
+    /**
+     * Sets the value of the .NET property CustomNavigationTemplate.
+     *
+     * @param CustomNavigationTemplate the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.TemplatedWizardStep.CustomNavigationTemplate" target="_top">.NET documentation</a>
+     */
     public void setCustomNavigationTemplate(ITemplate CustomNavigationTemplate) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

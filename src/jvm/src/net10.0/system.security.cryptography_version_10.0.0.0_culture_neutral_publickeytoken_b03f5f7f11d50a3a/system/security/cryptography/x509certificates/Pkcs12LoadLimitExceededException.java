@@ -103,7 +103,9 @@ public class Pkcs12LoadLimitExceededException extends system.security.cryptograp
         super();
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
      */
     public Pkcs12LoadLimitExceededException(java.lang.Object instance) {
         super(instance);

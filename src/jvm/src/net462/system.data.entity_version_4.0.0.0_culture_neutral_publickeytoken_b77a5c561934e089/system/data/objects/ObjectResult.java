@@ -101,7 +101,10 @@ public class ObjectResult extends NetObjectEnumerable implements AutoCloseable {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ObjectResult(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,14 @@ public class ObjectResult extends NetObjectEnumerable implements AutoCloseable {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetNextResult.
+     *
+     * @param <TElement> the type of the generic argument TElement
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectResult.GetNextResult" target="_top">.NET documentation</a>
+     */
     public <TElement extends IJCOBridgeReflected> ObjectResult_1 GetNextResult() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -169,6 +180,12 @@ public class ObjectResult extends NetObjectEnumerable implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member Dispose.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectResult.Dispose" target="_top">.NET documentation</a>
+     */
     public void Dispose() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,8 +199,12 @@ public class ObjectResult extends NetObjectEnumerable implements AutoCloseable {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIListSource method available in IListSource to obtain an object with an invocable method
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.IListSource.GetList" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public IList GetList() throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIListSource to obtain the full interface.");
     }
@@ -205,6 +226,13 @@ public class ObjectResult extends NetObjectEnumerable implements AutoCloseable {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ElementType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectResult.ElementType" target="_top">.NET documentation</a>
+     */
     public NetType getElementType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

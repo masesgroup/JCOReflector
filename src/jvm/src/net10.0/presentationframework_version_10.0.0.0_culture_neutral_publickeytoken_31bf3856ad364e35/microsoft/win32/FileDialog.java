@@ -100,7 +100,10 @@ public class FileDialog extends microsoft.win32.CommonItemDialog  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public FileDialog(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,12 @@ public class FileDialog extends microsoft.win32.CommonItemDialog  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Reset.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Win32.FileDialog.Reset" target="_top">.NET documentation</a>
+     */
     public void Reset() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -167,6 +176,13 @@ public class FileDialog extends microsoft.win32.CommonItemDialog  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AddExtension.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Win32.FileDialog.AddExtension" target="_top">.NET documentation</a>
+     */
     public boolean getAddExtension() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -181,6 +197,13 @@ public class FileDialog extends microsoft.win32.CommonItemDialog  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AddExtension.
+     *
+     * @param AddExtension the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Win32.FileDialog.AddExtension" target="_top">.NET documentation</a>
+     */
     public void setAddExtension(boolean AddExtension) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -191,6 +214,13 @@ public class FileDialog extends microsoft.win32.CommonItemDialog  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CheckFileExists.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Win32.FileDialog.CheckFileExists" target="_top">.NET documentation</a>
+     */
     public boolean getCheckFileExists() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +235,13 @@ public class FileDialog extends microsoft.win32.CommonItemDialog  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CheckFileExists.
+     *
+     * @param CheckFileExists the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Win32.FileDialog.CheckFileExists" target="_top">.NET documentation</a>
+     */
     public void setCheckFileExists(boolean CheckFileExists) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +252,13 @@ public class FileDialog extends microsoft.win32.CommonItemDialog  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CheckPathExists.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Win32.FileDialog.CheckPathExists" target="_top">.NET documentation</a>
+     */
     public boolean getCheckPathExists() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -229,6 +273,13 @@ public class FileDialog extends microsoft.win32.CommonItemDialog  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CheckPathExists.
+     *
+     * @param CheckPathExists the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Win32.FileDialog.CheckPathExists" target="_top">.NET documentation</a>
+     */
     public void setCheckPathExists(boolean CheckPathExists) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -239,6 +290,13 @@ public class FileDialog extends microsoft.win32.CommonItemDialog  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RestoreDirectory.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Win32.FileDialog.RestoreDirectory" target="_top">.NET documentation</a>
+     */
     public boolean getRestoreDirectory() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -253,6 +311,13 @@ public class FileDialog extends microsoft.win32.CommonItemDialog  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RestoreDirectory.
+     *
+     * @param RestoreDirectory the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Win32.FileDialog.RestoreDirectory" target="_top">.NET documentation</a>
+     */
     public void setRestoreDirectory(boolean RestoreDirectory) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -263,6 +328,13 @@ public class FileDialog extends microsoft.win32.CommonItemDialog  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FilterIndex.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Win32.FileDialog.FilterIndex" target="_top">.NET documentation</a>
+     */
     public int getFilterIndex() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -303,6 +375,13 @@ public class FileDialog extends microsoft.win32.CommonItemDialog  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property FilterIndex.
+     *
+     * @param FilterIndex the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Win32.FileDialog.FilterIndex" target="_top">.NET documentation</a>
+     */
     public void setFilterIndex(int FilterIndex) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -313,6 +392,13 @@ public class FileDialog extends microsoft.win32.CommonItemDialog  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DefaultExt.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Win32.FileDialog.DefaultExt" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDefaultExt() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -327,6 +413,20 @@ public class FileDialog extends microsoft.win32.CommonItemDialog  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DefaultExt.
+     *
+     * @param DefaultExt the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Win32.FileDialog.DefaultExt" target="_top">.NET documentation</a>
+     */
     public void setDefaultExt(java.lang.String DefaultExt) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -337,6 +437,13 @@ public class FileDialog extends microsoft.win32.CommonItemDialog  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FileName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Win32.FileDialog.FileName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getFileName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -351,6 +458,13 @@ public class FileDialog extends microsoft.win32.CommonItemDialog  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property FileName.
+     *
+     * @param FileName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Win32.FileDialog.FileName" target="_top">.NET documentation</a>
+     */
     public void setFileName(java.lang.String FileName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -361,6 +475,13 @@ public class FileDialog extends microsoft.win32.CommonItemDialog  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Filter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Win32.FileDialog.Filter" target="_top">.NET documentation</a>
+     */
     public java.lang.String getFilter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -375,6 +496,19 @@ public class FileDialog extends microsoft.win32.CommonItemDialog  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Filter.
+     *
+     * @param Filter the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Win32.FileDialog.Filter" target="_top">.NET documentation</a>
+     */
     public void setFilter(java.lang.String Filter) throws Throwable, system.NotSupportedException, system.ArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -385,6 +519,18 @@ public class FileDialog extends microsoft.win32.CommonItemDialog  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SafeFileName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Win32.FileDialog.SafeFileName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSafeFileName() throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -399,6 +545,14 @@ public class FileDialog extends microsoft.win32.CommonItemDialog  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FileNames.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Win32.FileDialog.FileNames" target="_top">.NET documentation</a>
+     */
     public java.lang.String[] getFileNames() throws Throwable, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -422,6 +576,18 @@ public class FileDialog extends microsoft.win32.CommonItemDialog  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SafeFileNames.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Win32.FileDialog.SafeFileNames" target="_top">.NET documentation</a>
+     */
     public java.lang.String[] getSafeFileNames() throws Throwable, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -450,6 +616,13 @@ public class FileDialog extends microsoft.win32.CommonItemDialog  {
     // Instance Events section
     
 
+    /**
+     * Invokes the .NET member addFileOk.
+     *
+     * @param handler the argument of type {@code CancelEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addFileOk(CancelEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -460,6 +633,13 @@ public class FileDialog extends microsoft.win32.CommonItemDialog  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeFileOk.
+     *
+     * @param handler the argument of type {@code CancelEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeFileOk(CancelEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

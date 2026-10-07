@@ -98,7 +98,10 @@ public class CodeLinePragma extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CodeLinePragma(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -145,6 +148,12 @@ public class CodeLinePragma extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeLinePragma.-ctor" target="_top">.NET documentation</a>
+     */
     public CodeLinePragma() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -155,6 +164,14 @@ public class CodeLinePragma extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param fileName the argument of type {@code java.lang.String}
+     * @param lineNumber the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeLinePragma.-ctor" target="_top">.NET documentation</a>
+     */
     public CodeLinePragma(java.lang.String fileName, int lineNumber) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -173,6 +190,13 @@ public class CodeLinePragma extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property LineNumber.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeLinePragma.LineNumber" target="_top">.NET documentation</a>
+     */
     public int getLineNumber() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -213,6 +237,13 @@ public class CodeLinePragma extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property LineNumber.
+     *
+     * @param LineNumber the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeLinePragma.LineNumber" target="_top">.NET documentation</a>
+     */
     public void setLineNumber(int LineNumber) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -223,6 +254,13 @@ public class CodeLinePragma extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FileName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeLinePragma.FileName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getFileName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -237,6 +275,13 @@ public class CodeLinePragma extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property FileName.
+     *
+     * @param FileName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeLinePragma.FileName" target="_top">.NET documentation</a>
+     */
     public void setFileName(java.lang.String FileName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

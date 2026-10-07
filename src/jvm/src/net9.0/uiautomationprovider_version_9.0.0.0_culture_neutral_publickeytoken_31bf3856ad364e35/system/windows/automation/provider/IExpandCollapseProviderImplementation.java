@@ -99,7 +99,10 @@ public class IExpandCollapseProviderImplementation extends NetObject implements 
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IExpandCollapseProviderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -141,6 +144,12 @@ public class IExpandCollapseProviderImplementation extends NetObject implements 
 
     // Methods section
     
+    /**
+     * Invokes the .NET member Collapse.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.IExpandCollapseProvider.Collapse" target="_top">.NET documentation</a>
+     */
     public void Collapse() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -151,6 +160,12 @@ public class IExpandCollapseProviderImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member Expand.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.IExpandCollapseProvider.Expand" target="_top">.NET documentation</a>
+     */
     public void Expand() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -165,6 +180,13 @@ public class IExpandCollapseProviderImplementation extends NetObject implements 
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ExpandCollapseState.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.IExpandCollapseProvider.ExpandCollapseState" target="_top">.NET documentation</a>
+     */
     public ExpandCollapseState getExpandCollapseState() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -107,7 +107,10 @@ public class RadioButtonRenderer extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public RadioButtonRenderer(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -160,6 +163,22 @@ public class RadioButtonRenderer extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member IsBackgroundPartiallyTransparent.
+     *
+     * @param state the argument of type {@code RadioButtonState}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.RadioButtonRenderer.IsBackgroundPartiallyTransparent" target="_top">.NET documentation</a>
+     */
     public static boolean IsBackgroundPartiallyTransparent(RadioButtonState state) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.threading.AbandonedMutexException, system.runtime.interopservices.ExternalException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -174,6 +193,31 @@ public class RadioButtonRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetGlyphSize.
+     *
+     * @param g the argument of type {@code Graphics}
+     * @param state the argument of type {@code RadioButtonState}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.RadioButtonRenderer.GetGlyphSize" target="_top">.NET documentation</a>
+     */
     public static Size GetGlyphSize(Graphics g, RadioButtonState state) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.Win32Exception, system.collections.generic.KeyNotFoundException, system.threading.AbandonedMutexException, system.runtime.interopservices.ExternalException, system.componentmodel.InvalidEnumArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -189,6 +233,26 @@ public class RadioButtonRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DrawParentBackground.
+     *
+     * @param g the argument of type {@code Graphics}
+     * @param bounds the argument of type {@code Rectangle}
+     * @param childControl the argument of type {@code Control}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.RadioButtonRenderer.DrawParentBackground" target="_top">.NET documentation</a>
+     */
     public static void DrawParentBackground(Graphics g, Rectangle bounds, Control childControl) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.threading.AbandonedMutexException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -199,6 +263,30 @@ public class RadioButtonRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DrawRadioButton.
+     *
+     * @param g the argument of type {@code Graphics}
+     * @param glyphLocation the argument of type {@code Point}
+     * @param textBounds the argument of type {@code Rectangle}
+     * @param radioButtonText the argument of type {@code java.lang.String}
+     * @param font the argument of type {@code Font}
+     * @param focused the argument of type {@code boolean}
+     * @param state the argument of type {@code RadioButtonState}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.RadioButtonRenderer.DrawRadioButton" target="_top">.NET documentation</a>
+     */
     public static void DrawRadioButton(Graphics g, Point glyphLocation, Rectangle textBounds, java.lang.String radioButtonText, Font font, boolean focused, RadioButtonState state) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.runtime.interopservices.ExternalException, system.componentmodel.InvalidEnumArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -209,6 +297,32 @@ public class RadioButtonRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DrawRadioButton.
+     *
+     * @param g the argument of type {@code Graphics}
+     * @param glyphLocation the argument of type {@code Point}
+     * @param textBounds the argument of type {@code Rectangle}
+     * @param radioButtonText the argument of type {@code java.lang.String}
+     * @param font the argument of type {@code Font}
+     * @param image the argument of type {@code Image}
+     * @param imageBounds the argument of type {@code Rectangle}
+     * @param focused the argument of type {@code boolean}
+     * @param state the argument of type {@code RadioButtonState}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.RadioButtonRenderer.DrawRadioButton" target="_top">.NET documentation</a>
+     */
     public static void DrawRadioButton(Graphics g, Point glyphLocation, Rectangle textBounds, java.lang.String radioButtonText, Font font, Image image, Rectangle imageBounds, boolean focused, RadioButtonState state) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.runtime.interopservices.ExternalException, system.componentmodel.InvalidEnumArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -219,6 +333,32 @@ public class RadioButtonRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DrawRadioButton.
+     *
+     * @param g the argument of type {@code Graphics}
+     * @param glyphLocation the argument of type {@code Point}
+     * @param textBounds the argument of type {@code Rectangle}
+     * @param radioButtonText the argument of type {@code java.lang.String}
+     * @param font the argument of type {@code Font}
+     * @param flags the argument of type {@code TextFormatFlags}
+     * @param focused the argument of type {@code boolean}
+     * @param state the argument of type {@code RadioButtonState}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.RadioButtonRenderer.DrawRadioButton" target="_top">.NET documentation</a>
+     */
     public static void DrawRadioButton(Graphics g, Point glyphLocation, Rectangle textBounds, java.lang.String radioButtonText, Font font, TextFormatFlags flags, boolean focused, RadioButtonState state) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.Win32Exception, system.collections.generic.KeyNotFoundException, system.runtime.interopservices.ExternalException, system.componentmodel.InvalidEnumArgumentException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -229,6 +369,34 @@ public class RadioButtonRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DrawRadioButton.
+     *
+     * @param g the argument of type {@code Graphics}
+     * @param glyphLocation the argument of type {@code Point}
+     * @param textBounds the argument of type {@code Rectangle}
+     * @param radioButtonText the argument of type {@code java.lang.String}
+     * @param font the argument of type {@code Font}
+     * @param flags the argument of type {@code TextFormatFlags}
+     * @param image the argument of type {@code Image}
+     * @param imageBounds the argument of type {@code Rectangle}
+     * @param focused the argument of type {@code boolean}
+     * @param state the argument of type {@code RadioButtonState}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.RadioButtonRenderer.DrawRadioButton" target="_top">.NET documentation</a>
+     */
     public static void DrawRadioButton(Graphics g, Point glyphLocation, Rectangle textBounds, java.lang.String radioButtonText, Font font, TextFormatFlags flags, Image image, Rectangle imageBounds, boolean focused, RadioButtonState state) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.Win32Exception, system.collections.generic.KeyNotFoundException, system.runtime.interopservices.ExternalException, system.componentmodel.InvalidEnumArgumentException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -239,6 +407,26 @@ public class RadioButtonRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DrawRadioButton.
+     *
+     * @param g the argument of type {@code Graphics}
+     * @param glyphLocation the argument of type {@code Point}
+     * @param state the argument of type {@code RadioButtonState}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.RadioButtonRenderer.DrawRadioButton" target="_top">.NET documentation</a>
+     */
     public static void DrawRadioButton(Graphics g, Point glyphLocation, RadioButtonState state) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.componentmodel.Win32Exception, system.runtime.interopservices.ExternalException, system.componentmodel.InvalidEnumArgumentException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -253,6 +441,13 @@ public class RadioButtonRenderer extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property RenderMatchingApplicationState.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.RadioButtonRenderer.RenderMatchingApplicationState" target="_top">.NET documentation</a>
+     */
     public static boolean getRenderMatchingApplicationState() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -267,6 +462,13 @@ public class RadioButtonRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RenderMatchingApplicationState.
+     *
+     * @param RenderMatchingApplicationState the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.RadioButtonRenderer.RenderMatchingApplicationState" target="_top">.NET documentation</a>
+     */
     public static void setRenderMatchingApplicationState(boolean RenderMatchingApplicationState) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

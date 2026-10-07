@@ -99,7 +99,10 @@ public class SerializeAbsoluteContext extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SerializeAbsoluteContext(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class SerializeAbsoluteContext extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.SerializeAbsoluteContext.-ctor" target="_top">.NET documentation</a>
+     */
     public SerializeAbsoluteContext() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -156,6 +165,13 @@ public class SerializeAbsoluteContext extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param member the argument of type {@code MemberDescriptor}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.SerializeAbsoluteContext.-ctor" target="_top">.NET documentation</a>
+     */
     public SerializeAbsoluteContext(MemberDescriptor member) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +186,14 @@ public class SerializeAbsoluteContext extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ShouldSerialize.
+     *
+     * @param member the argument of type {@code MemberDescriptor}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.SerializeAbsoluteContext.ShouldSerialize" target="_top">.NET documentation</a>
+     */
     public boolean ShouldSerialize(MemberDescriptor member) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +212,13 @@ public class SerializeAbsoluteContext extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Member.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.SerializeAbsoluteContext.Member" target="_top">.NET documentation</a>
+     */
     public MemberDescriptor getMember() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

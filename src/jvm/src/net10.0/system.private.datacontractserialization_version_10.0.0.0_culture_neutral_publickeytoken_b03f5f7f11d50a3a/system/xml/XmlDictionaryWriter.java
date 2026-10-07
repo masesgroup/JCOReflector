@@ -117,7 +117,10 @@ public class XmlDictionaryWriter extends system.xml.XmlWriter  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XmlDictionaryWriter(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -170,6 +173,16 @@ public class XmlDictionaryWriter extends system.xml.XmlWriter  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member WriteBase64Async.
+     *
+     * @param buffer the argument of type {@code byte[]}
+     * @param index the argument of type {@code int}
+     * @param count the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlDictionaryWriter.WriteBase64Async" target="_top">.NET documentation</a>
+     */
     public Task WriteBase64Async(byte[] buffer, int index, int count) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -185,6 +198,16 @@ public class XmlDictionaryWriter extends system.xml.XmlWriter  {
         }
     }
 
+    /**
+     * Invokes the .NET member WriteBase64Async.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code int}
+     * @param dupParam2 the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlDictionaryWriter.WriteBase64Async" target="_top">.NET documentation</a>
+     */
     public Task WriteBase64Async(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +223,20 @@ public class XmlDictionaryWriter extends system.xml.XmlWriter  {
         }
     }
 
+    /**
+     * Invokes the .NET member WriteValueAsync.
+     *
+     * @param value the argument of type {@code IStreamProvider}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlDictionaryWriter.WriteValueAsync" target="_top">.NET documentation</a>
+     */
     public Task WriteValueAsync(IStreamProvider value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.xml.XmlException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +252,20 @@ public class XmlDictionaryWriter extends system.xml.XmlWriter  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateBinaryWriter.
+     *
+     * @param stream the argument of type {@code Stream}
+     * @param dictionary the argument of type {@code IXmlDictionary}
+     * @param session the argument of type {@code XmlBinaryWriterSession}
+     * @param ownsStream the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlDictionaryWriter.CreateBinaryWriter" target="_top">.NET documentation</a>
+     */
     public static XmlDictionaryWriter CreateBinaryWriter(Stream stream, IXmlDictionary dictionary, XmlBinaryWriterSession session, boolean ownsStream) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -230,6 +281,19 @@ public class XmlDictionaryWriter extends system.xml.XmlWriter  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateBinaryWriter.
+     *
+     * @param stream the argument of type {@code Stream}
+     * @param dictionary the argument of type {@code IXmlDictionary}
+     * @param session the argument of type {@code XmlBinaryWriterSession}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlDictionaryWriter.CreateBinaryWriter" target="_top">.NET documentation</a>
+     */
     public static XmlDictionaryWriter CreateBinaryWriter(Stream stream, IXmlDictionary dictionary, XmlBinaryWriterSession session) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -245,6 +309,18 @@ public class XmlDictionaryWriter extends system.xml.XmlWriter  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateBinaryWriter.
+     *
+     * @param stream the argument of type {@code Stream}
+     * @param dictionary the argument of type {@code IXmlDictionary}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlDictionaryWriter.CreateBinaryWriter" target="_top">.NET documentation</a>
+     */
     public static XmlDictionaryWriter CreateBinaryWriter(Stream stream, IXmlDictionary dictionary) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -260,6 +336,17 @@ public class XmlDictionaryWriter extends system.xml.XmlWriter  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateBinaryWriter.
+     *
+     * @param stream the argument of type {@code Stream}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlDictionaryWriter.CreateBinaryWriter" target="_top">.NET documentation</a>
+     */
     public static XmlDictionaryWriter CreateBinaryWriter(Stream stream) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -275,6 +362,23 @@ public class XmlDictionaryWriter extends system.xml.XmlWriter  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateDictionaryWriter.
+     *
+     * @param writer the argument of type {@code XmlWriter}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlDictionaryWriter.CreateDictionaryWriter" target="_top">.NET documentation</a>
+     */
     public static XmlDictionaryWriter CreateDictionaryWriter(XmlWriter writer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -290,6 +394,29 @@ public class XmlDictionaryWriter extends system.xml.XmlWriter  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateMtomWriter.
+     *
+     * @param stream the argument of type {@code Stream}
+     * @param encoding the argument of type {@code Encoding}
+     * @param maxSizeInBytes the argument of type {@code int}
+     * @param startInfo the argument of type {@code java.lang.String}
+     * @param boundary the argument of type {@code java.lang.String}
+     * @param startUri the argument of type {@code java.lang.String}
+     * @param writeMessageHeaders the argument of type {@code boolean}
+     * @param ownsStream the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlDictionaryWriter.CreateMtomWriter" target="_top">.NET documentation</a>
+     */
     public static XmlDictionaryWriter CreateMtomWriter(Stream stream, Encoding encoding, int maxSizeInBytes, java.lang.String startInfo, java.lang.String boundary, java.lang.String startUri, boolean writeMessageHeaders, boolean ownsStream) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -305,6 +432,25 @@ public class XmlDictionaryWriter extends system.xml.XmlWriter  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateMtomWriter.
+     *
+     * @param stream the argument of type {@code Stream}
+     * @param encoding the argument of type {@code Encoding}
+     * @param maxSizeInBytes the argument of type {@code int}
+     * @param startInfo the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlDictionaryWriter.CreateMtomWriter" target="_top">.NET documentation</a>
+     */
     public static XmlDictionaryWriter CreateMtomWriter(Stream stream, Encoding encoding, int maxSizeInBytes, java.lang.String startInfo) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -320,6 +466,28 @@ public class XmlDictionaryWriter extends system.xml.XmlWriter  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateTextWriter.
+     *
+     * @param stream the argument of type {@code Stream}
+     * @param encoding the argument of type {@code Encoding}
+     * @param ownsStream the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlDictionaryWriter.CreateTextWriter" target="_top">.NET documentation</a>
+     */
     public static XmlDictionaryWriter CreateTextWriter(Stream stream, Encoding encoding, boolean ownsStream) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.NotSupportedException, system.ArgumentException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ObjectDisposedException, system.xml.XmlException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -335,6 +503,26 @@ public class XmlDictionaryWriter extends system.xml.XmlWriter  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateTextWriter.
+     *
+     * @param stream the argument of type {@code Stream}
+     * @param encoding the argument of type {@code Encoding}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlDictionaryWriter.CreateTextWriter" target="_top">.NET documentation</a>
+     */
     public static XmlDictionaryWriter CreateTextWriter(Stream stream, Encoding encoding) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.NotSupportedException, system.ArgumentException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.xml.XmlException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -350,6 +538,25 @@ public class XmlDictionaryWriter extends system.xml.XmlWriter  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateTextWriter.
+     *
+     * @param stream the argument of type {@code Stream}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlDictionaryWriter.CreateTextWriter" target="_top">.NET documentation</a>
+     */
     public static XmlDictionaryWriter CreateTextWriter(Stream stream) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.NotSupportedException, system.ArgumentException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.xml.XmlException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -365,6 +572,12 @@ public class XmlDictionaryWriter extends system.xml.XmlWriter  {
         }
     }
 
+    /**
+     * Invokes the .NET member Close.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlDictionaryWriter.Close" target="_top">.NET documentation</a>
+     */
     public void Close() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -375,6 +588,21 @@ public class XmlDictionaryWriter extends system.xml.XmlWriter  {
         }
     }
 
+    /**
+     * Invokes the .NET member EndCanonicalization.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlDictionaryWriter.EndCanonicalization" target="_top">.NET documentation</a>
+     */
     public void EndCanonicalization() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -385,6 +613,24 @@ public class XmlDictionaryWriter extends system.xml.XmlWriter  {
         }
     }
 
+    /**
+     * Invokes the .NET member StartCanonicalization.
+     *
+     * @param stream the argument of type {@code Stream}
+     * @param includeComments the argument of type {@code boolean}
+     * @param inclusivePrefixes the argument of type {@code java.lang.String[]}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlDictionaryWriter.StartCanonicalization" target="_top">.NET documentation</a>
+     */
     public void StartCanonicalization(Stream stream, boolean includeComments, java.lang.String[] inclusivePrefixes) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -395,6 +641,24 @@ public class XmlDictionaryWriter extends system.xml.XmlWriter  {
         }
     }
 
+    /**
+     * Invokes the .NET member StartCanonicalization.
+     *
+     * @param dupParam0 the argument of type {@code Stream}
+     * @param dupParam1 the argument of type {@code boolean}
+     * @param dupParam2 the argument of type {@code JCORefOut}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlDictionaryWriter.StartCanonicalization" target="_top">.NET documentation</a>
+     */
     public void StartCanonicalization(Stream dupParam0, boolean dupParam1, JCORefOut dupParam2) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -405,6 +669,26 @@ public class XmlDictionaryWriter extends system.xml.XmlWriter  {
         }
     }
 
+    /**
+     * Invokes the .NET member WriteArray.
+     *
+     * @param prefix the argument of type {@code java.lang.String}
+     * @param localName the argument of type {@code java.lang.String}
+     * @param namespaceUri the argument of type {@code java.lang.String}
+     * @param array the argument of type {@code boolean[]}
+     * @param offset the argument of type {@code int}
+     * @param count the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlDictionaryWriter.WriteArray" target="_top">.NET documentation</a>
+     */
     public void WriteArray(java.lang.String prefix, java.lang.String localName, java.lang.String namespaceUri, boolean[] array, int offset, int count) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -415,6 +699,26 @@ public class XmlDictionaryWriter extends system.xml.XmlWriter  {
         }
     }
 
+    /**
+     * Invokes the .NET member WriteArray.
+     *
+     * @param dupParam0 the argument of type {@code java.lang.String}
+     * @param dupParam1 the argument of type {@code java.lang.String}
+     * @param dupParam2 the argument of type {@code java.lang.String}
+     * @param dupParam3 the argument of type {@code JCORefOut}
+     * @param dupParam4 the argument of type {@code int}
+     * @param dupParam5 the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlDictionaryWriter.WriteArray" target="_top">.NET documentation</a>
+     */
     public void WriteArray(java.lang.String dupParam0, java.lang.String dupParam1, java.lang.String dupParam2, JCORefOut dupParam3, int dupParam4, int dupParam5) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -425,6 +729,28 @@ public class XmlDictionaryWriter extends system.xml.XmlWriter  {
         }
     }
 
+    /**
+     * Invokes the .NET member WriteArray.
+     *
+     * @param prefix the argument of type {@code java.lang.String}
+     * @param localName the argument of type {@code java.lang.String}
+     * @param namespaceUri the argument of type {@code java.lang.String}
+     * @param array the argument of type {@code double[]}
+     * @param offset the argument of type {@code int}
+     * @param count the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlDictionaryWriter.WriteArray" target="_top">.NET documentation</a>
+     */
     public void WriteArray(java.lang.String prefix, java.lang.String localName, java.lang.String namespaceUri, double[] array, int offset, int count) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.NullReferenceException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -435,6 +761,27 @@ public class XmlDictionaryWriter extends system.xml.XmlWriter  {
         }
     }
 
+    /**
+     * Invokes the .NET member WriteArray.
+     *
+     * @param prefix the argument of type {@code java.lang.String}
+     * @param localName the argument of type {@code java.lang.String}
+     * @param namespaceUri the argument of type {@code java.lang.String}
+     * @param array the argument of type {@code short[]}
+     * @param offset the argument of type {@code int}
+     * @param count the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlDictionaryWriter.WriteArray" target="_top">.NET documentation</a>
+     */
     public void WriteArray(java.lang.String prefix, java.lang.String localName, java.lang.String namespaceUri, short[] array, int offset, int count) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -445,6 +792,27 @@ public class XmlDictionaryWriter extends system.xml.XmlWriter  {
         }
     }
 
+    /**
+     * Invokes the .NET member WriteArray.
+     *
+     * @param prefix the argument of type {@code java.lang.String}
+     * @param localName the argument of type {@code java.lang.String}
+     * @param namespaceUri the argument of type {@code java.lang.String}
+     * @param array the argument of type {@code int[]}
+     * @param offset the argument of type {@code int}
+     * @param count the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlDictionaryWriter.WriteArray" target="_top">.NET documentation</a>
+     */
     public void WriteArray(java.lang.String prefix, java.lang.String localName, java.lang.String namespaceUri, int[] array, int offset, int count) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -455,6 +823,27 @@ public class XmlDictionaryWriter extends system.xml.XmlWriter  {
         }
     }
 
+    /**
+     * Invokes the .NET member WriteArray.
+     *
+     * @param prefix the argument of type {@code java.lang.String}
+     * @param localName the argument of type {@code java.lang.String}
+     * @param namespaceUri the argument of type {@code java.lang.String}
+     * @param array the argument of type {@code long[]}
+     * @param offset the argument of type {@code int}
+     * @param count the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlDictionaryWriter.WriteArray" target="_top">.NET documentation</a>
+     */
     public void WriteArray(java.lang.String prefix, java.lang.String localName, java.lang.String namespaceUri, long[] array, int offset, int count) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -465,6 +854,28 @@ public class XmlDictionaryWriter extends system.xml.XmlWriter  {
         }
     }
 
+    /**
+     * Invokes the .NET member WriteArray.
+     *
+     * @param prefix the argument of type {@code java.lang.String}
+     * @param localName the argument of type {@code java.lang.String}
+     * @param namespaceUri the argument of type {@code java.lang.String}
+     * @param array the argument of type {@code Single[]}
+     * @param offset the argument of type {@code int}
+     * @param count the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlDictionaryWriter.WriteArray" target="_top">.NET documentation</a>
+     */
     public void WriteArray(java.lang.String prefix, java.lang.String localName, java.lang.String namespaceUri, Single[] array, int offset, int count) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.NullReferenceException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -475,6 +886,27 @@ public class XmlDictionaryWriter extends system.xml.XmlWriter  {
         }
     }
 
+    /**
+     * Invokes the .NET member WriteArray.
+     *
+     * @param prefix the argument of type {@code java.lang.String}
+     * @param localName the argument of type {@code java.lang.String}
+     * @param namespaceUri the argument of type {@code java.lang.String}
+     * @param array the argument of type {@code DateTime[]}
+     * @param offset the argument of type {@code int}
+     * @param count the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlDictionaryWriter.WriteArray" target="_top">.NET documentation</a>
+     */
     public void WriteArray(java.lang.String prefix, java.lang.String localName, java.lang.String namespaceUri, DateTime[] array, int offset, int count) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -485,6 +917,28 @@ public class XmlDictionaryWriter extends system.xml.XmlWriter  {
         }
     }
 
+    /**
+     * Invokes the .NET member WriteArray.
+     *
+     * @param prefix the argument of type {@code java.lang.String}
+     * @param localName the argument of type {@code java.lang.String}
+     * @param namespaceUri the argument of type {@code java.lang.String}
+     * @param array the argument of type {@code Decimal[]}
+     * @param offset the argument of type {@code int}
+     * @param count the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlDictionaryWriter.WriteArray" target="_top">.NET documentation</a>
+     */
     public void WriteArray(java.lang.String prefix, java.lang.String localName, java.lang.String namespaceUri, Decimal[] array, int offset, int count) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.NullReferenceException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -495,6 +949,26 @@ public class XmlDictionaryWriter extends system.xml.XmlWriter  {
         }
     }
 
+    /**
+     * Invokes the .NET member WriteArray.
+     *
+     * @param prefix the argument of type {@code java.lang.String}
+     * @param localName the argument of type {@code java.lang.String}
+     * @param namespaceUri the argument of type {@code java.lang.String}
+     * @param array the argument of type {@code Guid[]}
+     * @param offset the argument of type {@code int}
+     * @param count the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlDictionaryWriter.WriteArray" target="_top">.NET documentation</a>
+     */
     public void WriteArray(java.lang.String prefix, java.lang.String localName, java.lang.String namespaceUri, Guid[] array, int offset, int count) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -505,6 +979,26 @@ public class XmlDictionaryWriter extends system.xml.XmlWriter  {
         }
     }
 
+    /**
+     * Invokes the .NET member WriteArray.
+     *
+     * @param prefix the argument of type {@code java.lang.String}
+     * @param localName the argument of type {@code java.lang.String}
+     * @param namespaceUri the argument of type {@code java.lang.String}
+     * @param array the argument of type {@code TimeSpan[]}
+     * @param offset the argument of type {@code int}
+     * @param count the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlDictionaryWriter.WriteArray" target="_top">.NET documentation</a>
+     */
     public void WriteArray(java.lang.String prefix, java.lang.String localName, java.lang.String namespaceUri, TimeSpan[] array, int offset, int count) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -515,6 +1009,25 @@ public class XmlDictionaryWriter extends system.xml.XmlWriter  {
         }
     }
 
+    /**
+     * Invokes the .NET member WriteArray.
+     *
+     * @param prefix the argument of type {@code java.lang.String}
+     * @param localName the argument of type {@code XmlDictionaryString}
+     * @param namespaceUri the argument of type {@code XmlDictionaryString}
+     * @param array the argument of type {@code boolean[]}
+     * @param offset the argument of type {@code int}
+     * @param count the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlDictionaryWriter.WriteArray" target="_top">.NET documentation</a>
+     */
     public void WriteArray(java.lang.String prefix, XmlDictionaryString localName, XmlDictionaryString namespaceUri, boolean[] array, int offset, int count) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -525,6 +1038,25 @@ public class XmlDictionaryWriter extends system.xml.XmlWriter  {
         }
     }
 
+    /**
+     * Invokes the .NET member WriteArray.
+     *
+     * @param dupParam0 the argument of type {@code java.lang.String}
+     * @param dupParam1 the argument of type {@code XmlDictionaryString}
+     * @param dupParam2 the argument of type {@code XmlDictionaryString}
+     * @param dupParam3 the argument of type {@code JCORefOut}
+     * @param dupParam4 the argument of type {@code int}
+     * @param dupParam5 the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlDictionaryWriter.WriteArray" target="_top">.NET documentation</a>
+     */
     public void WriteArray(java.lang.String dupParam0, XmlDictionaryString dupParam1, XmlDictionaryString dupParam2, JCORefOut dupParam3, int dupParam4, int dupParam5) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -535,6 +1067,26 @@ public class XmlDictionaryWriter extends system.xml.XmlWriter  {
         }
     }
 
+    /**
+     * Invokes the .NET member WriteArray.
+     *
+     * @param prefix the argument of type {@code java.lang.String}
+     * @param localName the argument of type {@code XmlDictionaryString}
+     * @param namespaceUri the argument of type {@code XmlDictionaryString}
+     * @param array the argument of type {@code double[]}
+     * @param offset the argument of type {@code int}
+     * @param count the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlDictionaryWriter.WriteArray" target="_top">.NET documentation</a>
+     */
     public void WriteArray(java.lang.String prefix, XmlDictionaryString localName, XmlDictionaryString namespaceUri, double[] array, int offset, int count) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.NullReferenceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -545,6 +1097,25 @@ public class XmlDictionaryWriter extends system.xml.XmlWriter  {
         }
     }
 
+    /**
+     * Invokes the .NET member WriteArray.
+     *
+     * @param prefix the argument of type {@code java.lang.String}
+     * @param localName the argument of type {@code XmlDictionaryString}
+     * @param namespaceUri the argument of type {@code XmlDictionaryString}
+     * @param array the argument of type {@code short[]}
+     * @param offset the argument of type {@code int}
+     * @param count the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlDictionaryWriter.WriteArray" target="_top">.NET documentation</a>
+     */
     public void WriteArray(java.lang.String prefix, XmlDictionaryString localName, XmlDictionaryString namespaceUri, short[] array, int offset, int count) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -555,6 +1126,25 @@ public class XmlDictionaryWriter extends system.xml.XmlWriter  {
         }
     }
 
+    /**
+     * Invokes the .NET member WriteArray.
+     *
+     * @param prefix the argument of type {@code java.lang.String}
+     * @param localName the argument of type {@code XmlDictionaryString}
+     * @param namespaceUri the argument of type {@code XmlDictionaryString}
+     * @param array the argument of type {@code int[]}
+     * @param offset the argument of type {@code int}
+     * @param count the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlDictionaryWriter.WriteArray" target="_top">.NET documentation</a>
+     */
     public void WriteArray(java.lang.String prefix, XmlDictionaryString localName, XmlDictionaryString namespaceUri, int[] array, int offset, int count) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -565,6 +1155,25 @@ public class XmlDictionaryWriter extends system.xml.XmlWriter  {
         }
     }
 
+    /**
+     * Invokes the .NET member WriteArray.
+     *
+     * @param prefix the argument of type {@code java.lang.String}
+     * @param localName the argument of type {@code XmlDictionaryString}
+     * @param namespaceUri the argument of type {@code XmlDictionaryString}
+     * @param array the argument of type {@code long[]}
+     * @param offset the argument of type {@code int}
+     * @param count the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlDictionaryWriter.WriteArray" target="_top">.NET documentation</a>
+     */
     public void WriteArray(java.lang.String prefix, XmlDictionaryString localName, XmlDictionaryString namespaceUri, long[] array, int offset, int count) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -575,6 +1184,26 @@ public class XmlDictionaryWriter extends system.xml.XmlWriter  {
         }
     }
 
+    /**
+     * Invokes the .NET member WriteArray.
+     *
+     * @param prefix the argument of type {@code java.lang.String}
+     * @param localName the argument of type {@code XmlDictionaryString}
+     * @param namespaceUri the argument of type {@code XmlDictionaryString}
+     * @param array the argument of type {@code Single[]}
+     * @param offset the argument of type {@code int}
+     * @param count the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlDictionaryWriter.WriteArray" target="_top">.NET documentation</a>
+     */
     public void WriteArray(java.lang.String prefix, XmlDictionaryString localName, XmlDictionaryString namespaceUri, Single[] array, int offset, int count) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.NullReferenceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -585,6 +1214,26 @@ public class XmlDictionaryWriter extends system.xml.XmlWriter  {
         }
     }
 
+    /**
+     * Invokes the .NET member WriteArray.
+     *
+     * @param prefix the argument of type {@code java.lang.String}
+     * @param localName the argument of type {@code XmlDictionaryString}
+     * @param namespaceUri the argument of type {@code XmlDictionaryString}
+     * @param array the argument of type {@code DateTime[]}
+     * @param offset the argument of type {@code int}
+     * @param count the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlDictionaryWriter.WriteArray" target="_top">.NET documentation</a>
+     */
     public void WriteArray(java.lang.String prefix, XmlDictionaryString localName, XmlDictionaryString namespaceUri, DateTime[] array, int offset, int count) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -595,6 +1244,27 @@ public class XmlDictionaryWriter extends system.xml.XmlWriter  {
         }
     }
 
+    /**
+     * Invokes the .NET member WriteArray.
+     *
+     * @param prefix the argument of type {@code java.lang.String}
+     * @param localName the argument of type {@code XmlDictionaryString}
+     * @param namespaceUri the argument of type {@code XmlDictionaryString}
+     * @param array the argument of type {@code Decimal[]}
+     * @param offset the argument of type {@code int}
+     * @param count the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlDictionaryWriter.WriteArray" target="_top">.NET documentation</a>
+     */
     public void WriteArray(java.lang.String prefix, XmlDictionaryString localName, XmlDictionaryString namespaceUri, Decimal[] array, int offset, int count) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.NullReferenceException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -605,6 +1275,25 @@ public class XmlDictionaryWriter extends system.xml.XmlWriter  {
         }
     }
 
+    /**
+     * Invokes the .NET member WriteArray.
+     *
+     * @param prefix the argument of type {@code java.lang.String}
+     * @param localName the argument of type {@code XmlDictionaryString}
+     * @param namespaceUri the argument of type {@code XmlDictionaryString}
+     * @param array the argument of type {@code Guid[]}
+     * @param offset the argument of type {@code int}
+     * @param count the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlDictionaryWriter.WriteArray" target="_top">.NET documentation</a>
+     */
     public void WriteArray(java.lang.String prefix, XmlDictionaryString localName, XmlDictionaryString namespaceUri, Guid[] array, int offset, int count) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -615,6 +1304,25 @@ public class XmlDictionaryWriter extends system.xml.XmlWriter  {
         }
     }
 
+    /**
+     * Invokes the .NET member WriteArray.
+     *
+     * @param prefix the argument of type {@code java.lang.String}
+     * @param localName the argument of type {@code XmlDictionaryString}
+     * @param namespaceUri the argument of type {@code XmlDictionaryString}
+     * @param array the argument of type {@code TimeSpan[]}
+     * @param offset the argument of type {@code int}
+     * @param count the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlDictionaryWriter.WriteArray" target="_top">.NET documentation</a>
+     */
     public void WriteArray(java.lang.String prefix, XmlDictionaryString localName, XmlDictionaryString namespaceUri, TimeSpan[] array, int offset, int count) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -625,6 +1333,16 @@ public class XmlDictionaryWriter extends system.xml.XmlWriter  {
         }
     }
 
+    /**
+     * Invokes the .NET member WriteAttributeString.
+     *
+     * @param prefix the argument of type {@code java.lang.String}
+     * @param localName the argument of type {@code XmlDictionaryString}
+     * @param namespaceUri the argument of type {@code XmlDictionaryString}
+     * @param value the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlDictionaryWriter.WriteAttributeString" target="_top">.NET documentation</a>
+     */
     public void WriteAttributeString(java.lang.String prefix, XmlDictionaryString localName, XmlDictionaryString namespaceUri, java.lang.String value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -635,6 +1353,15 @@ public class XmlDictionaryWriter extends system.xml.XmlWriter  {
         }
     }
 
+    /**
+     * Invokes the .NET member WriteAttributeString.
+     *
+     * @param localName the argument of type {@code XmlDictionaryString}
+     * @param namespaceUri the argument of type {@code XmlDictionaryString}
+     * @param value the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlDictionaryWriter.WriteAttributeString" target="_top">.NET documentation</a>
+     */
     public void WriteAttributeString(XmlDictionaryString localName, XmlDictionaryString namespaceUri, java.lang.String value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -645,6 +1372,16 @@ public class XmlDictionaryWriter extends system.xml.XmlWriter  {
         }
     }
 
+    /**
+     * Invokes the .NET member WriteElementString.
+     *
+     * @param prefix the argument of type {@code java.lang.String}
+     * @param localName the argument of type {@code XmlDictionaryString}
+     * @param namespaceUri the argument of type {@code XmlDictionaryString}
+     * @param value the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlDictionaryWriter.WriteElementString" target="_top">.NET documentation</a>
+     */
     public void WriteElementString(java.lang.String prefix, XmlDictionaryString localName, XmlDictionaryString namespaceUri, java.lang.String value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -655,6 +1392,15 @@ public class XmlDictionaryWriter extends system.xml.XmlWriter  {
         }
     }
 
+    /**
+     * Invokes the .NET member WriteElementString.
+     *
+     * @param localName the argument of type {@code XmlDictionaryString}
+     * @param namespaceUri the argument of type {@code XmlDictionaryString}
+     * @param value the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlDictionaryWriter.WriteElementString" target="_top">.NET documentation</a>
+     */
     public void WriteElementString(XmlDictionaryString localName, XmlDictionaryString namespaceUri, java.lang.String value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -665,6 +1411,24 @@ public class XmlDictionaryWriter extends system.xml.XmlWriter  {
         }
     }
 
+    /**
+     * Invokes the .NET member WriteNode.
+     *
+     * @param reader the argument of type {@code XmlDictionaryReader}
+     * @param defattr the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlDictionaryWriter.WriteNode" target="_top">.NET documentation</a>
+     */
     public void WriteNode(XmlDictionaryReader reader, boolean defattr) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -675,6 +1439,23 @@ public class XmlDictionaryWriter extends system.xml.XmlWriter  {
         }
     }
 
+    /**
+     * Invokes the .NET member WriteNode.
+     *
+     * @param reader the argument of type {@code XmlReader}
+     * @param defattr the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlDictionaryWriter.WriteNode" target="_top">.NET documentation</a>
+     */
     public void WriteNode(XmlReader reader, boolean defattr) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.FormatException, system.xml.XmlException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -685,6 +1466,23 @@ public class XmlDictionaryWriter extends system.xml.XmlWriter  {
         }
     }
 
+    /**
+     * Invokes the .NET member WriteQualifiedName.
+     *
+     * @param localName the argument of type {@code XmlDictionaryString}
+     * @param namespaceUri the argument of type {@code XmlDictionaryString}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlDictionaryWriter.WriteQualifiedName" target="_top">.NET documentation</a>
+     */
     public void WriteQualifiedName(XmlDictionaryString localName, XmlDictionaryString namespaceUri) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -695,6 +1493,15 @@ public class XmlDictionaryWriter extends system.xml.XmlWriter  {
         }
     }
 
+    /**
+     * Invokes the .NET member WriteStartAttribute.
+     *
+     * @param prefix the argument of type {@code java.lang.String}
+     * @param localName the argument of type {@code XmlDictionaryString}
+     * @param namespaceUri the argument of type {@code XmlDictionaryString}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlDictionaryWriter.WriteStartAttribute" target="_top">.NET documentation</a>
+     */
     public void WriteStartAttribute(java.lang.String prefix, XmlDictionaryString localName, XmlDictionaryString namespaceUri) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -705,6 +1512,14 @@ public class XmlDictionaryWriter extends system.xml.XmlWriter  {
         }
     }
 
+    /**
+     * Invokes the .NET member WriteStartAttribute.
+     *
+     * @param localName the argument of type {@code XmlDictionaryString}
+     * @param namespaceUri the argument of type {@code XmlDictionaryString}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlDictionaryWriter.WriteStartAttribute" target="_top">.NET documentation</a>
+     */
     public void WriteStartAttribute(XmlDictionaryString localName, XmlDictionaryString namespaceUri) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -715,6 +1530,15 @@ public class XmlDictionaryWriter extends system.xml.XmlWriter  {
         }
     }
 
+    /**
+     * Invokes the .NET member WriteStartElement.
+     *
+     * @param prefix the argument of type {@code java.lang.String}
+     * @param localName the argument of type {@code XmlDictionaryString}
+     * @param namespaceUri the argument of type {@code XmlDictionaryString}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlDictionaryWriter.WriteStartElement" target="_top">.NET documentation</a>
+     */
     public void WriteStartElement(java.lang.String prefix, XmlDictionaryString localName, XmlDictionaryString namespaceUri) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -725,6 +1549,14 @@ public class XmlDictionaryWriter extends system.xml.XmlWriter  {
         }
     }
 
+    /**
+     * Invokes the .NET member WriteStartElement.
+     *
+     * @param localName the argument of type {@code XmlDictionaryString}
+     * @param namespaceUri the argument of type {@code XmlDictionaryString}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlDictionaryWriter.WriteStartElement" target="_top">.NET documentation</a>
+     */
     public void WriteStartElement(XmlDictionaryString localName, XmlDictionaryString namespaceUri) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -735,6 +1567,13 @@ public class XmlDictionaryWriter extends system.xml.XmlWriter  {
         }
     }
 
+    /**
+     * Invokes the .NET member WriteString.
+     *
+     * @param value the argument of type {@code XmlDictionaryString}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlDictionaryWriter.WriteString" target="_top">.NET documentation</a>
+     */
     public void WriteString(XmlDictionaryString value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -745,6 +1584,14 @@ public class XmlDictionaryWriter extends system.xml.XmlWriter  {
         }
     }
 
+    /**
+     * Invokes the .NET member WriteValue.
+     *
+     * @param value the argument of type {@code Guid}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlDictionaryWriter.WriteValue" target="_top">.NET documentation</a>
+     */
     public void WriteValue(Guid value) throws Throwable, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -755,6 +1602,15 @@ public class XmlDictionaryWriter extends system.xml.XmlWriter  {
         }
     }
 
+    /**
+     * Invokes the .NET member WriteValue.
+     *
+     * @param value the argument of type {@code TimeSpan}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlDictionaryWriter.WriteValue" target="_top">.NET documentation</a>
+     */
     public void WriteValue(TimeSpan value) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -765,6 +1621,25 @@ public class XmlDictionaryWriter extends system.xml.XmlWriter  {
         }
     }
 
+    /**
+     * Invokes the .NET member WriteValue.
+     *
+     * @param value the argument of type {@code IStreamProvider}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlDictionaryWriter.WriteValue" target="_top">.NET documentation</a>
+     */
     public void WriteValue(IStreamProvider value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException, system.OutOfMemoryException, system.xml.XmlException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -775,6 +1650,22 @@ public class XmlDictionaryWriter extends system.xml.XmlWriter  {
         }
     }
 
+    /**
+     * Invokes the .NET member WriteValue.
+     *
+     * @param value the argument of type {@code UniqueId}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlDictionaryWriter.WriteValue" target="_top">.NET documentation</a>
+     */
     public void WriteValue(UniqueId value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -785,6 +1676,13 @@ public class XmlDictionaryWriter extends system.xml.XmlWriter  {
         }
     }
 
+    /**
+     * Invokes the .NET member WriteValue.
+     *
+     * @param value the argument of type {@code XmlDictionaryString}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlDictionaryWriter.WriteValue" target="_top">.NET documentation</a>
+     */
     public void WriteValue(XmlDictionaryString value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -795,6 +1693,14 @@ public class XmlDictionaryWriter extends system.xml.XmlWriter  {
         }
     }
 
+    /**
+     * Invokes the .NET member WriteXmlAttribute.
+     *
+     * @param localName the argument of type {@code java.lang.String}
+     * @param value the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlDictionaryWriter.WriteXmlAttribute" target="_top">.NET documentation</a>
+     */
     public void WriteXmlAttribute(java.lang.String localName, java.lang.String value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -805,6 +1711,14 @@ public class XmlDictionaryWriter extends system.xml.XmlWriter  {
         }
     }
 
+    /**
+     * Invokes the .NET member WriteXmlAttribute.
+     *
+     * @param localName the argument of type {@code XmlDictionaryString}
+     * @param value the argument of type {@code XmlDictionaryString}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlDictionaryWriter.WriteXmlAttribute" target="_top">.NET documentation</a>
+     */
     public void WriteXmlAttribute(XmlDictionaryString localName, XmlDictionaryString value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -815,6 +1729,26 @@ public class XmlDictionaryWriter extends system.xml.XmlWriter  {
         }
     }
 
+    /**
+     * Invokes the .NET member WriteXmlnsAttribute.
+     *
+     * @param prefix the argument of type {@code java.lang.String}
+     * @param namespaceUri the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlDictionaryWriter.WriteXmlnsAttribute" target="_top">.NET documentation</a>
+     */
     public void WriteXmlnsAttribute(java.lang.String prefix, java.lang.String namespaceUri) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OverflowException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -825,6 +1759,23 @@ public class XmlDictionaryWriter extends system.xml.XmlWriter  {
         }
     }
 
+    /**
+     * Invokes the .NET member WriteXmlnsAttribute.
+     *
+     * @param prefix the argument of type {@code java.lang.String}
+     * @param namespaceUri the argument of type {@code XmlDictionaryString}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlDictionaryWriter.WriteXmlnsAttribute" target="_top">.NET documentation</a>
+     */
     public void WriteXmlnsAttribute(java.lang.String prefix, XmlDictionaryString namespaceUri) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.OverflowException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -839,6 +1790,13 @@ public class XmlDictionaryWriter extends system.xml.XmlWriter  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CanCanonicalize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlDictionaryWriter.CanCanonicalize" target="_top">.NET documentation</a>
+     */
     public boolean getCanCanonicalize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

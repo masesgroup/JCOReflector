@@ -103,7 +103,10 @@ public class UnicastIPAddressInformation extends system.net.networkinformation.I
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public UnicastIPAddressInformation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -160,6 +163,14 @@ public class UnicastIPAddressInformation extends system.net.networkinformation.I
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property PrefixLength.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.UnicastIPAddressInformation.PrefixLength" target="_top">.NET documentation</a>
+     */
     public int getPrefixLength() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +211,13 @@ public class UnicastIPAddressInformation extends system.net.networkinformation.I
         }
     }
 
+    /**
+     * Gets the value of the .NET property AddressPreferredLifetime.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.UnicastIPAddressInformation.AddressPreferredLifetime" target="_top">.NET documentation</a>
+     */
     public long getAddressPreferredLifetime() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -240,6 +258,13 @@ public class UnicastIPAddressInformation extends system.net.networkinformation.I
         }
     }
 
+    /**
+     * Gets the value of the .NET property AddressValidLifetime.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.UnicastIPAddressInformation.AddressValidLifetime" target="_top">.NET documentation</a>
+     */
     public long getAddressValidLifetime() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -280,6 +305,13 @@ public class UnicastIPAddressInformation extends system.net.networkinformation.I
         }
     }
 
+    /**
+     * Gets the value of the .NET property DhcpLeaseLifetime.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.UnicastIPAddressInformation.DhcpLeaseLifetime" target="_top">.NET documentation</a>
+     */
     public long getDhcpLeaseLifetime() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -320,6 +352,13 @@ public class UnicastIPAddressInformation extends system.net.networkinformation.I
         }
     }
 
+    /**
+     * Gets the value of the .NET property IPv4Mask.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.UnicastIPAddressInformation.IPv4Mask" target="_top">.NET documentation</a>
+     */
     public IPAddress getIPv4Mask() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -335,6 +374,13 @@ public class UnicastIPAddressInformation extends system.net.networkinformation.I
         }
     }
 
+    /**
+     * Gets the value of the .NET property DuplicateAddressDetectionState.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.UnicastIPAddressInformation.DuplicateAddressDetectionState" target="_top">.NET documentation</a>
+     */
     public DuplicateAddressDetectionState getDuplicateAddressDetectionState() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -350,6 +396,13 @@ public class UnicastIPAddressInformation extends system.net.networkinformation.I
         }
     }
 
+    /**
+     * Gets the value of the .NET property PrefixOrigin.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.UnicastIPAddressInformation.PrefixOrigin" target="_top">.NET documentation</a>
+     */
     public PrefixOrigin getPrefixOrigin() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -365,6 +418,13 @@ public class UnicastIPAddressInformation extends system.net.networkinformation.I
         }
     }
 
+    /**
+     * Gets the value of the .NET property SuffixOrigin.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.UnicastIPAddressInformation.SuffixOrigin" target="_top">.NET documentation</a>
+     */
     public SuffixOrigin getSuffixOrigin() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

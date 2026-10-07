@@ -54,5 +54,12 @@ import system.componentmodel.PropertyDescriptor;
  * @version 2.0.0.0
  */
 public interface IPropertyValueUIHandler {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param context the .NET argument of type {@code System.ComponentModel.ITypeDescriptorContext}
+     * @param propDesc the .NET argument of type {@code System.ComponentModel.PropertyDescriptor}
+     * @param valueUIItemList the .NET argument of type {@code System.Collections.ArrayList}
+     */
     public void Invoke(ITypeDescriptorContext context, PropertyDescriptor propDesc, NetArrayList valueUIItemList);
 }

@@ -98,7 +98,10 @@ public class IModalServiceImplementation extends NetObject implements IModalServ
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IModalServiceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -140,6 +143,13 @@ public class IModalServiceImplementation extends NetObject implements IModalServ
 
     // Methods section
     
+    /**
+     * Invokes the .NET member SetModalState.
+     *
+     * @param isModal the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.IModalService.SetModalState" target="_top">.NET documentation</a>
+     */
     public void SetModalState(boolean isModal) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

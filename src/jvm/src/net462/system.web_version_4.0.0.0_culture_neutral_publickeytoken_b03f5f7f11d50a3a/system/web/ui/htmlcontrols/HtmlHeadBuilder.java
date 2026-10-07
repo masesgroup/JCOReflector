@@ -101,7 +101,10 @@ public class HtmlHeadBuilder extends system.web.ui.ControlBuilder  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public HtmlHeadBuilder(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class HtmlHeadBuilder extends system.web.ui.ControlBuilder  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.HtmlControls.HtmlHeadBuilder.-ctor" target="_top">.NET documentation</a>
+     */
     public HtmlHeadBuilder() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -162,6 +171,13 @@ public class HtmlHeadBuilder extends system.web.ui.ControlBuilder  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member AllowWhitespaceLiterals.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.HtmlControls.HtmlHeadBuilder.AllowWhitespaceLiterals" target="_top">.NET documentation</a>
+     */
     public boolean AllowWhitespaceLiterals() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -176,6 +192,23 @@ public class HtmlHeadBuilder extends system.web.ui.ControlBuilder  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetChildControlType.
+     *
+     * @param tagName the argument of type {@code java.lang.String}
+     * @param attribs the argument of type {@code IDictionary}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.HtmlControls.HtmlHeadBuilder.GetChildControlType" target="_top">.NET documentation</a>
+     */
     public NetType GetChildControlType(java.lang.String tagName, IDictionary attribs) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

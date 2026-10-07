@@ -99,7 +99,10 @@ public class HostedTransportConfiguration extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public HostedTransportConfiguration(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,14 @@ public class HostedTransportConfiguration extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetBaseAddresses.
+     *
+     * @param virtualPath the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activation.HostedTransportConfiguration.GetBaseAddresses" target="_top">.NET documentation</a>
+     */
     public Uri[] GetBaseAddresses(java.lang.String virtualPath) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

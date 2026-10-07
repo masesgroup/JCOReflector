@@ -103,7 +103,9 @@ public class ZLibException extends system.io.IOException {
         super();
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
      */
     public ZLibException(java.lang.Object instance) {
         super(instance);
@@ -164,6 +166,16 @@ public class ZLibException extends system.io.IOException {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param message the argument of type {@code java.lang.String}
+     * @param zlibErrorContext the argument of type {@code java.lang.String}
+     * @param zlibErrorCode the argument of type {@code int}
+     * @param zlibErrorMessage the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Compression.ZLibException.-ctor" target="_top">.NET documentation</a>
+     */
     public ZLibException(java.lang.String message, java.lang.String zlibErrorContext, int zlibErrorCode, java.lang.String zlibErrorMessage) throws Throwable {
         try {
             // add reference to assemblyName.dll file

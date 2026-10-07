@@ -98,7 +98,10 @@ public class PingOptions extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PingOptions(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -145,6 +148,12 @@ public class PingOptions extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.PingOptions.-ctor" target="_top">.NET documentation</a>
+     */
     public PingOptions() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -155,6 +164,15 @@ public class PingOptions extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param ttl the argument of type {@code int}
+     * @param dontFragment the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.PingOptions.-ctor" target="_top">.NET documentation</a>
+     */
     public PingOptions(int ttl, boolean dontFragment) throws Throwable, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -173,6 +191,13 @@ public class PingOptions extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property DontFragment.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.PingOptions.DontFragment" target="_top">.NET documentation</a>
+     */
     public boolean getDontFragment() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +212,13 @@ public class PingOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DontFragment.
+     *
+     * @param DontFragment the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.PingOptions.DontFragment" target="_top">.NET documentation</a>
+     */
     public void setDontFragment(boolean DontFragment) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +229,13 @@ public class PingOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Ttl.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.PingOptions.Ttl" target="_top">.NET documentation</a>
+     */
     public int getTtl() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -237,6 +276,14 @@ public class PingOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Ttl.
+     *
+     * @param Ttl the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.PingOptions.Ttl" target="_top">.NET documentation</a>
+     */
     public void setTtl(int Ttl) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

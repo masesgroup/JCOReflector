@@ -101,7 +101,10 @@ public class WorkflowParameterBindingCollection extends system.collections.objec
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public WorkflowParameterBindingCollection(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,15 @@ public class WorkflowParameterBindingCollection extends system.collections.objec
     public WorkflowParameterBindingCollection() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param ownerActivity the argument of type {@code Activity}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.WorkflowParameterBindingCollection.-ctor" target="_top">.NET documentation</a>
+     */
     public WorkflowParameterBindingCollection(Activity ownerActivity) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -166,6 +178,16 @@ public class WorkflowParameterBindingCollection extends system.collections.objec
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetItem.
+     *
+     * @param key the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.WorkflowParameterBindingCollection.GetItem" target="_top">.NET documentation</a>
+     */
     public WorkflowParameterBinding GetItem(java.lang.String key) throws Throwable, system.ArgumentNullException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

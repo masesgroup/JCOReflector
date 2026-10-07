@@ -99,7 +99,10 @@ public class XmlSchemaNotation extends system.xml.schema.XmlSchemaAnnotated  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XmlSchemaNotation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class XmlSchemaNotation extends system.xml.schema.XmlSchemaAnnotated  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaNotation.-ctor" target="_top">.NET documentation</a>
+     */
     public XmlSchemaNotation() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +173,13 @@ public class XmlSchemaNotation extends system.xml.schema.XmlSchemaAnnotated  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaNotation.Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,6 +194,13 @@ public class XmlSchemaNotation extends system.xml.schema.XmlSchemaAnnotated  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Name.
+     *
+     * @param Name the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaNotation.Name" target="_top">.NET documentation</a>
+     */
     public void setName(java.lang.String Name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +211,13 @@ public class XmlSchemaNotation extends system.xml.schema.XmlSchemaAnnotated  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Public.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaNotation.Public" target="_top">.NET documentation</a>
+     */
     public java.lang.String getPublic() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +232,13 @@ public class XmlSchemaNotation extends system.xml.schema.XmlSchemaAnnotated  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Public.
+     *
+     * @param Public the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaNotation.Public" target="_top">.NET documentation</a>
+     */
     public void setPublic(java.lang.String Public) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -212,6 +249,13 @@ public class XmlSchemaNotation extends system.xml.schema.XmlSchemaAnnotated  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property System.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaNotation.System" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSystem() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -226,6 +270,13 @@ public class XmlSchemaNotation extends system.xml.schema.XmlSchemaAnnotated  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property System.
+     *
+     * @param System the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaNotation.System" target="_top">.NET documentation</a>
+     */
     public void setSystem(java.lang.String System) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

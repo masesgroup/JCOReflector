@@ -160,7 +160,10 @@ public class FaultCallback extends JCVoidDelegate implements IJCVoidEventEmit, I
         callerInstance = instance;
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public FaultCallback(java.lang.Object instance) throws Throwable {
         super(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
@@ -182,6 +185,15 @@ public class FaultCallback extends JCVoidDelegate implements IJCVoidEventEmit, I
         return JCOBridgeInstance.translateException(ne);
     }
 
+    /**
+     * Invokes the .NET member DynamicInvoke.
+     *
+     * @param faultContext the argument of type {@code NativeActivityFaultContext}
+     * @param propagatedException the argument of type {@code NetException}
+     * @param propagatedFrom the argument of type {@code ActivityInstance}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Delegate.DynamicInvoke" target="_top">.NET documentation</a>
+     */
     public void DynamicInvoke(NativeActivityFaultContext faultContext, NetException propagatedException, ActivityInstance propagatedFrom) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,7 +205,11 @@ public class FaultCallback extends JCVoidDelegate implements IJCVoidEventEmit, I
     }
 
     /**
-     * Methods invoked in JVM when an event is raised in CLR 
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param faultContext the .NET argument of type {@code System.Activities.NativeActivityFaultContext}
+     * @param propagatedException the .NET argument of type {@code System.Exception}
+     * @param propagatedFrom the .NET argument of type {@code System.Activities.ActivityInstance}
      */
     public void Invoke(NativeActivityFaultContext faultContext, NetException propagatedException, ActivityInstance propagatedFrom) {
     }

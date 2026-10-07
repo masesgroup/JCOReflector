@@ -99,7 +99,10 @@ public class ExceptionDispatchInfo extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ExceptionDispatchInfo(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,15 @@ public class ExceptionDispatchInfo extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Capture.
+     *
+     * @param source the argument of type {@code NetException}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.ExceptionServices.ExceptionDispatchInfo.Capture" target="_top">.NET documentation</a>
+     */
     public static ExceptionDispatchInfo Capture(NetException source) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -169,6 +181,13 @@ public class ExceptionDispatchInfo extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Throw.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw" target="_top">.NET documentation</a>
+     */
     public void Throw() throws Throwable, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +202,13 @@ public class ExceptionDispatchInfo extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property SourceException.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.ExceptionServices.ExceptionDispatchInfo.SourceException" target="_top">.NET documentation</a>
+     */
     public NetException getSourceException() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

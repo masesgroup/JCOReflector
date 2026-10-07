@@ -105,7 +105,10 @@ public class IComNativeDescriptorHandlerImplementation extends NetObject impleme
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IComNativeDescriptorHandlerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,14 @@ public class IComNativeDescriptorHandlerImplementation extends NetObject impleme
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetAttributes.
+     *
+     * @param component the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.IComNativeDescriptorHandler.GetAttributes" target="_top">.NET documentation</a>
+     */
     public AttributeCollection GetAttributes(NetObject component) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -162,6 +173,14 @@ public class IComNativeDescriptorHandlerImplementation extends NetObject impleme
         }
     }
 
+    /**
+     * Invokes the .NET member GetDefaultEvent.
+     *
+     * @param component the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.IComNativeDescriptorHandler.GetDefaultEvent" target="_top">.NET documentation</a>
+     */
     public EventDescriptor GetDefaultEvent(NetObject component) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -177,6 +196,15 @@ public class IComNativeDescriptorHandlerImplementation extends NetObject impleme
         }
     }
 
+    /**
+     * Invokes the .NET member GetEvents.
+     *
+     * @param component the argument of type {@code NetObject}
+     * @param attributes the argument of type {@code Attribute[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.IComNativeDescriptorHandler.GetEvents" target="_top">.NET documentation</a>
+     */
     public EventDescriptorCollection GetEvents(NetObject component, Attribute[] attributes) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -192,6 +220,14 @@ public class IComNativeDescriptorHandlerImplementation extends NetObject impleme
         }
     }
 
+    /**
+     * Invokes the .NET member GetEvents.
+     *
+     * @param component the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.IComNativeDescriptorHandler.GetEvents" target="_top">.NET documentation</a>
+     */
     public EventDescriptorCollection GetEvents(NetObject component) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +243,14 @@ public class IComNativeDescriptorHandlerImplementation extends NetObject impleme
         }
     }
 
+    /**
+     * Invokes the .NET member GetDefaultProperty.
+     *
+     * @param component the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.IComNativeDescriptorHandler.GetDefaultProperty" target="_top">.NET documentation</a>
+     */
     public PropertyDescriptor GetDefaultProperty(NetObject component) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -222,6 +266,15 @@ public class IComNativeDescriptorHandlerImplementation extends NetObject impleme
         }
     }
 
+    /**
+     * Invokes the .NET member GetProperties.
+     *
+     * @param component the argument of type {@code NetObject}
+     * @param attributes the argument of type {@code Attribute[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.IComNativeDescriptorHandler.GetProperties" target="_top">.NET documentation</a>
+     */
     public PropertyDescriptorCollection GetProperties(NetObject component, Attribute[] attributes) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -237,6 +290,14 @@ public class IComNativeDescriptorHandlerImplementation extends NetObject impleme
         }
     }
 
+    /**
+     * Invokes the .NET member GetConverter.
+     *
+     * @param component the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.IComNativeDescriptorHandler.GetConverter" target="_top">.NET documentation</a>
+     */
     public TypeConverter GetConverter(NetObject component) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -252,6 +313,15 @@ public class IComNativeDescriptorHandlerImplementation extends NetObject impleme
         }
     }
 
+    /**
+     * Invokes the .NET member GetEditor.
+     *
+     * @param component the argument of type {@code NetObject}
+     * @param baseEditorType the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.IComNativeDescriptorHandler.GetEditor" target="_top">.NET documentation</a>
+     */
     public NetObject GetEditor(NetObject component, NetType baseEditorType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -267,6 +337,16 @@ public class IComNativeDescriptorHandlerImplementation extends NetObject impleme
         }
     }
 
+    /**
+     * Invokes the .NET member GetPropertyValue.
+     *
+     * @param component the argument of type {@code NetObject}
+     * @param dispid the argument of type {@code int}
+     * @param success the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicBoolean>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.IComNativeDescriptorHandler.GetPropertyValue" target="_top">.NET documentation</a>
+     */
     public NetObject GetPropertyValue(NetObject component, int dispid, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> success) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -282,6 +362,16 @@ public class IComNativeDescriptorHandlerImplementation extends NetObject impleme
         }
     }
 
+    /**
+     * Invokes the .NET member GetPropertyValue.
+     *
+     * @param component the argument of type {@code NetObject}
+     * @param propertyName the argument of type {@code java.lang.String}
+     * @param success the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicBoolean>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.IComNativeDescriptorHandler.GetPropertyValue" target="_top">.NET documentation</a>
+     */
     public NetObject GetPropertyValue(NetObject component, java.lang.String propertyName, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> success) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -297,6 +387,14 @@ public class IComNativeDescriptorHandlerImplementation extends NetObject impleme
         }
     }
 
+    /**
+     * Invokes the .NET member GetClassName.
+     *
+     * @param component the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.IComNativeDescriptorHandler.GetClassName" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetClassName(NetObject component) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -311,6 +409,14 @@ public class IComNativeDescriptorHandlerImplementation extends NetObject impleme
         }
     }
 
+    /**
+     * Invokes the .NET member GetName.
+     *
+     * @param component the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.IComNativeDescriptorHandler.GetName" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetName(NetObject component) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

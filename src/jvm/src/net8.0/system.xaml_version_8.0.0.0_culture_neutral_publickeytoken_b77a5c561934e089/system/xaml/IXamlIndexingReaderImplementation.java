@@ -98,7 +98,10 @@ public class IXamlIndexingReaderImplementation extends NetObject implements IXam
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IXamlIndexingReaderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -144,6 +147,13 @@ public class IXamlIndexingReaderImplementation extends NetObject implements IXam
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Count.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.IXamlIndexingReader.Count" target="_top">.NET documentation</a>
+     */
     public int getCount() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +194,13 @@ public class IXamlIndexingReaderImplementation extends NetObject implements IXam
         }
     }
 
+    /**
+     * Gets the value of the .NET property CurrentIndex.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.IXamlIndexingReader.CurrentIndex" target="_top">.NET documentation</a>
+     */
     public int getCurrentIndex() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -224,6 +241,13 @@ public class IXamlIndexingReaderImplementation extends NetObject implements IXam
         }
     }
 
+    /**
+     * Sets the value of the .NET property CurrentIndex.
+     *
+     * @param CurrentIndex the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.IXamlIndexingReader.CurrentIndex" target="_top">.NET documentation</a>
+     */
     public void setCurrentIndex(int CurrentIndex) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

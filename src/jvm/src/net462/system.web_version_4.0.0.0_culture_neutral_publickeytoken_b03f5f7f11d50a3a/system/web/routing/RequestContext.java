@@ -100,7 +100,10 @@ public class RequestContext extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public RequestContext(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class RequestContext extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Routing.RequestContext.-ctor" target="_top">.NET documentation</a>
+     */
     public RequestContext() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -157,6 +166,15 @@ public class RequestContext extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param httpContext the argument of type {@code HttpContextBase}
+     * @param routeData the argument of type {@code RouteData}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Routing.RequestContext.-ctor" target="_top">.NET documentation</a>
+     */
     public RequestContext(HttpContextBase httpContext, RouteData routeData) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -175,6 +193,13 @@ public class RequestContext extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property HttpContext.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Routing.RequestContext.HttpContext" target="_top">.NET documentation</a>
+     */
     public HttpContextBase getHttpContext() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +215,13 @@ public class RequestContext extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property HttpContext.
+     *
+     * @param HttpContext the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Routing.RequestContext.HttpContext" target="_top">.NET documentation</a>
+     */
     public void setHttpContext(HttpContextBase HttpContext) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +232,13 @@ public class RequestContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RouteData.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Routing.RequestContext.RouteData" target="_top">.NET documentation</a>
+     */
     public RouteData getRouteData() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +254,13 @@ public class RequestContext extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RouteData.
+     *
+     * @param RouteData the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Routing.RequestContext.RouteData" target="_top">.NET documentation</a>
+     */
     public void setRouteData(RouteData RouteData) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

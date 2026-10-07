@@ -101,7 +101,10 @@ public class SqlColumnEncryptionEnclaveProvider extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SqlColumnEncryptionEnclaveProvider(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,13 @@ public class SqlColumnEncryptionEnclaveProvider extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetAttestationParameters.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlColumnEncryptionEnclaveProvider.GetAttestationParameters" target="_top">.NET documentation</a>
+     */
     public SqlEnclaveAttestationParameters GetAttestationParameters() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -169,6 +179,18 @@ public class SqlColumnEncryptionEnclaveProvider extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateEnclaveSession.
+     *
+     * @param enclaveAttestationInfo the argument of type {@code byte[]}
+     * @param clientDiffieHellmanKey the argument of type {@code ECDiffieHellmanCng}
+     * @param attestationUrl the argument of type {@code java.lang.String}
+     * @param servername the argument of type {@code java.lang.String}
+     * @param sqlEnclaveSession the argument of type {@code JCORefOut<SqlEnclaveSession>}
+     * @param counter the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicLong>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlColumnEncryptionEnclaveProvider.CreateEnclaveSession" target="_top">.NET documentation</a>
+     */
     public void CreateEnclaveSession(byte[] enclaveAttestationInfo, ECDiffieHellmanCng clientDiffieHellmanKey, java.lang.String attestationUrl, java.lang.String servername, JCORefOut<SqlEnclaveSession> sqlEnclaveSession, JCORefOut<java.util.concurrent.atomic.AtomicLong> counter) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -179,6 +201,16 @@ public class SqlColumnEncryptionEnclaveProvider extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetEnclaveSession.
+     *
+     * @param serverName the argument of type {@code java.lang.String}
+     * @param attestationUrl the argument of type {@code java.lang.String}
+     * @param sqlEnclaveSession the argument of type {@code JCORefOut<SqlEnclaveSession>}
+     * @param counter the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicLong>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlColumnEncryptionEnclaveProvider.GetEnclaveSession" target="_top">.NET documentation</a>
+     */
     public void GetEnclaveSession(java.lang.String serverName, java.lang.String attestationUrl, JCORefOut<SqlEnclaveSession> sqlEnclaveSession, JCORefOut<java.util.concurrent.atomic.AtomicLong> counter) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +221,15 @@ public class SqlColumnEncryptionEnclaveProvider extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member InvalidateEnclaveSession.
+     *
+     * @param serverName the argument of type {@code java.lang.String}
+     * @param enclaveAttestationUrl the argument of type {@code java.lang.String}
+     * @param enclaveSession the argument of type {@code SqlEnclaveSession}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlColumnEncryptionEnclaveProvider.InvalidateEnclaveSession" target="_top">.NET documentation</a>
+     */
     public void InvalidateEnclaveSession(java.lang.String serverName, java.lang.String enclaveAttestationUrl, SqlEnclaveSession enclaveSession) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

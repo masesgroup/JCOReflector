@@ -101,7 +101,10 @@ public class IRawElementProviderAdviseEventsImplementation extends NetObject imp
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IRawElementProviderAdviseEventsImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -143,6 +146,14 @@ public class IRawElementProviderAdviseEventsImplementation extends NetObject imp
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetPatternProvider.
+     *
+     * @param patternId the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.IRawElementProviderAdviseEvents.GetPatternProvider" target="_top">.NET documentation</a>
+     */
     public NetObject GetPatternProvider(int patternId) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -158,6 +169,14 @@ public class IRawElementProviderAdviseEventsImplementation extends NetObject imp
         }
     }
 
+    /**
+     * Invokes the .NET member GetPropertyValue.
+     *
+     * @param propertyId the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.IRawElementProviderAdviseEvents.GetPropertyValue" target="_top">.NET documentation</a>
+     */
     public NetObject GetPropertyValue(int propertyId) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -173,6 +192,14 @@ public class IRawElementProviderAdviseEventsImplementation extends NetObject imp
         }
     }
 
+    /**
+     * Invokes the .NET member AdviseEventAdded.
+     *
+     * @param eventId the argument of type {@code int}
+     * @param properties the argument of type {@code int[]}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.IRawElementProviderAdviseEvents.AdviseEventAdded" target="_top">.NET documentation</a>
+     */
     public void AdviseEventAdded(int eventId, int[] properties) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +210,14 @@ public class IRawElementProviderAdviseEventsImplementation extends NetObject imp
         }
     }
 
+    /**
+     * Invokes the .NET member AdviseEventAdded.
+     *
+     * @param dupParam0 the argument of type {@code int}
+     * @param dupParam1 the argument of type {@code JCORefOut}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.IRawElementProviderAdviseEvents.AdviseEventAdded" target="_top">.NET documentation</a>
+     */
     public void AdviseEventAdded(int dupParam0, JCORefOut dupParam1) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +228,14 @@ public class IRawElementProviderAdviseEventsImplementation extends NetObject imp
         }
     }
 
+    /**
+     * Invokes the .NET member AdviseEventRemoved.
+     *
+     * @param eventId the argument of type {@code int}
+     * @param properties the argument of type {@code int[]}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.IRawElementProviderAdviseEvents.AdviseEventRemoved" target="_top">.NET documentation</a>
+     */
     public void AdviseEventRemoved(int eventId, int[] properties) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +246,14 @@ public class IRawElementProviderAdviseEventsImplementation extends NetObject imp
         }
     }
 
+    /**
+     * Invokes the .NET member AdviseEventRemoved.
+     *
+     * @param dupParam0 the argument of type {@code int}
+     * @param dupParam1 the argument of type {@code JCORefOut}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.IRawElementProviderAdviseEvents.AdviseEventRemoved" target="_top">.NET documentation</a>
+     */
     public void AdviseEventRemoved(int dupParam0, JCORefOut dupParam1) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -217,6 +268,13 @@ public class IRawElementProviderAdviseEventsImplementation extends NetObject imp
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property HostRawElementProvider.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.IRawElementProviderAdviseEvents.HostRawElementProvider" target="_top">.NET documentation</a>
+     */
     public IRawElementProviderSimple getHostRawElementProvider() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -232,6 +290,13 @@ public class IRawElementProviderAdviseEventsImplementation extends NetObject imp
         }
     }
 
+    /**
+     * Gets the value of the .NET property ProviderOptions.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.IRawElementProviderAdviseEvents.ProviderOptions" target="_top">.NET documentation</a>
+     */
     public ProviderOptions getProviderOptions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

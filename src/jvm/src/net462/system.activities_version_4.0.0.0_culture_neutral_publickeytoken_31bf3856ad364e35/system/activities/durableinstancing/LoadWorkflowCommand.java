@@ -99,7 +99,10 @@ public class LoadWorkflowCommand extends system.runtime.durableinstancing.Instan
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public LoadWorkflowCommand(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,20 @@ public class LoadWorkflowCommand extends system.runtime.durableinstancing.Instan
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DurableInstancing.LoadWorkflowCommand.-ctor" target="_top">.NET documentation</a>
+     */
     public LoadWorkflowCommand() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.MulticastNotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +181,13 @@ public class LoadWorkflowCommand extends system.runtime.durableinstancing.Instan
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AcceptUninitializedInstance.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DurableInstancing.LoadWorkflowCommand.AcceptUninitializedInstance" target="_top">.NET documentation</a>
+     */
     public boolean getAcceptUninitializedInstance() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,6 +202,13 @@ public class LoadWorkflowCommand extends system.runtime.durableinstancing.Instan
         }
     }
 
+    /**
+     * Sets the value of the .NET property AcceptUninitializedInstance.
+     *
+     * @param AcceptUninitializedInstance the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DurableInstancing.LoadWorkflowCommand.AcceptUninitializedInstance" target="_top">.NET documentation</a>
+     */
     public void setAcceptUninitializedInstance(boolean AcceptUninitializedInstance) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -100,7 +100,10 @@ public class ArrayWithOffset extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ArrayWithOffset(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,14 @@ public class ArrayWithOffset extends system.ValueType  {
     public ArrayWithOffset() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param array the argument of type {@code NetObject}
+     * @param offset the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ArrayWithOffset.-ctor" target="_top">.NET documentation</a>
+     */
     public ArrayWithOffset(NetObject array, int offset) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +176,14 @@ public class ArrayWithOffset extends system.ValueType  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Equals.
+     *
+     * @param obj the argument of type {@code ArrayWithOffset}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ArrayWithOffset.Equals" target="_top">.NET documentation</a>
+     */
     public boolean Equals(ArrayWithOffset obj) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -179,6 +198,13 @@ public class ArrayWithOffset extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetOffset.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ArrayWithOffset.GetOffset" target="_top">.NET documentation</a>
+     */
     public int GetOffset() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -219,6 +245,13 @@ public class ArrayWithOffset extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetArray.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ArrayWithOffset.GetArray" target="_top">.NET documentation</a>
+     */
     public NetObject GetArray() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

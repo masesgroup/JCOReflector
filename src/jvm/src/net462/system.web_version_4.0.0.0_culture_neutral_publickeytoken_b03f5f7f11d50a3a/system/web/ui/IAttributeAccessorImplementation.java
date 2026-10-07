@@ -98,7 +98,10 @@ public class IAttributeAccessorImplementation extends NetObject implements IAttr
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IAttributeAccessorImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -140,6 +143,14 @@ public class IAttributeAccessorImplementation extends NetObject implements IAttr
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetAttribute.
+     *
+     * @param key the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.IAttributeAccessor.GetAttribute" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetAttribute(java.lang.String key) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -154,6 +165,14 @@ public class IAttributeAccessorImplementation extends NetObject implements IAttr
         }
     }
 
+    /**
+     * Invokes the .NET member SetAttribute.
+     *
+     * @param key the argument of type {@code java.lang.String}
+     * @param value the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.IAttributeAccessor.SetAttribute" target="_top">.NET documentation</a>
+     */
     public void SetAttribute(java.lang.String key, java.lang.String value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

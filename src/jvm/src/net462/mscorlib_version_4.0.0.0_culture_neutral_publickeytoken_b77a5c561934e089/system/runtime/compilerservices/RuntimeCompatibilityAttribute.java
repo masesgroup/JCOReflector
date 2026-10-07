@@ -99,7 +99,10 @@ public class RuntimeCompatibilityAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public RuntimeCompatibilityAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class RuntimeCompatibilityAttribute extends system.Attribute  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.RuntimeCompatibilityAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public RuntimeCompatibilityAttribute() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +173,13 @@ public class RuntimeCompatibilityAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property WrapNonExceptionThrows.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.RuntimeCompatibilityAttribute.WrapNonExceptionThrows" target="_top">.NET documentation</a>
+     */
     public boolean getWrapNonExceptionThrows() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,6 +194,13 @@ public class RuntimeCompatibilityAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property WrapNonExceptionThrows.
+     *
+     * @param WrapNonExceptionThrows the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.RuntimeCompatibilityAttribute.WrapNonExceptionThrows" target="_top">.NET documentation</a>
+     */
     public void setWrapNonExceptionThrows(boolean WrapNonExceptionThrows) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

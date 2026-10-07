@@ -99,7 +99,10 @@ public class IClientOperationSelectorImplementation extends NetObject implements
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IClientOperationSelectorImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -141,6 +144,15 @@ public class IClientOperationSelectorImplementation extends NetObject implements
 
     // Methods section
     
+    /**
+     * Invokes the .NET member SelectOperation.
+     *
+     * @param method the argument of type {@code MethodBase}
+     * @param parameters the argument of type {@code NetObject[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.IClientOperationSelector.SelectOperation" target="_top">.NET documentation</a>
+     */
     public java.lang.String SelectOperation(MethodBase method, NetObject[] parameters) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -159,6 +171,13 @@ public class IClientOperationSelectorImplementation extends NetObject implements
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AreParametersRequiredForSelection.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.IClientOperationSelector.AreParametersRequiredForSelection" target="_top">.NET documentation</a>
+     */
     public boolean getAreParametersRequiredForSelection() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

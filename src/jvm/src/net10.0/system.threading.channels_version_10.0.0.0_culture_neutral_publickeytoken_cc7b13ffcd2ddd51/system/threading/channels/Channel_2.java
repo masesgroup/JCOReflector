@@ -100,7 +100,10 @@ public class Channel_2<TWrite extends IJCOBridgeReflected, TRead extends IJCOBri
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Channel_2(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,13 @@ public class Channel_2<TWrite extends IJCOBridgeReflected, TRead extends IJCOBri
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Reader.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Channels.Channel-2.Reader" target="_top">.NET documentation</a>
+     */
     public ChannelReader_1 getReader() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -172,6 +182,13 @@ public class Channel_2<TWrite extends IJCOBridgeReflected, TRead extends IJCOBri
         }
     }
 
+    /**
+     * Sets the value of the .NET property Reader.
+     *
+     * @param Reader the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Channels.Channel-2.Reader" target="_top">.NET documentation</a>
+     */
     public void setReader(ChannelReader_1 Reader) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +199,13 @@ public class Channel_2<TWrite extends IJCOBridgeReflected, TRead extends IJCOBri
         }
     }
 
+    /**
+     * Gets the value of the .NET property Writer.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Channels.Channel-2.Writer" target="_top">.NET documentation</a>
+     */
     public ChannelWriter_1 getWriter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +221,13 @@ public class Channel_2<TWrite extends IJCOBridgeReflected, TRead extends IJCOBri
         }
     }
 
+    /**
+     * Sets the value of the .NET property Writer.
+     *
+     * @param Writer the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Channels.Channel-2.Writer" target="_top">.NET documentation</a>
+     */
     public void setWriter(ChannelWriter_1 Writer) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

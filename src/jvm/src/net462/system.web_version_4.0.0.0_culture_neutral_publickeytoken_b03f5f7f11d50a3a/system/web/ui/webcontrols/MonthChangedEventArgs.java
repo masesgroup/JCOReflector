@@ -99,7 +99,10 @@ public class MonthChangedEventArgs extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public MonthChangedEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,14 @@ public class MonthChangedEventArgs extends NetObject  {
     public MonthChangedEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param newDate the argument of type {@code DateTime}
+     * @param previousDate the argument of type {@code DateTime}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.MonthChangedEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public MonthChangedEventArgs(DateTime newDate, DateTime previousDate) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +179,13 @@ public class MonthChangedEventArgs extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property NewDate.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.MonthChangedEventArgs.NewDate" target="_top">.NET documentation</a>
+     */
     public DateTime getNewDate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +201,13 @@ public class MonthChangedEventArgs extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PreviousDate.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.MonthChangedEventArgs.PreviousDate" target="_top">.NET documentation</a>
+     */
     public DateTime getPreviousDate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

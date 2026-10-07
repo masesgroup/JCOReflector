@@ -102,7 +102,10 @@ public class DesignerActionMethodItem extends system.componentmodel.design.Desig
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DesignerActionMethodItem(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,24 @@ public class DesignerActionMethodItem extends system.componentmodel.design.Desig
     public DesignerActionMethodItem() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param actionList the argument of type {@code DesignerActionList}
+     * @param memberName the argument of type {@code java.lang.String}
+     * @param displayName the argument of type {@code java.lang.String}
+     * @param includeAsDesignerVerb the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.text.regularexpressions.RegexParseException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.DesignerActionMethodItem.-ctor" target="_top">.NET documentation</a>
+     */
     public DesignerActionMethodItem(DesignerActionList actionList, java.lang.String memberName, java.lang.String displayName, boolean includeAsDesignerVerb) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.text.regularexpressions.RegexParseException, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
@@ -162,6 +183,25 @@ public class DesignerActionMethodItem extends system.componentmodel.design.Desig
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param actionList the argument of type {@code DesignerActionList}
+     * @param memberName the argument of type {@code java.lang.String}
+     * @param displayName the argument of type {@code java.lang.String}
+     * @param category the argument of type {@code java.lang.String}
+     * @param includeAsDesignerVerb the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.text.regularexpressions.RegexParseException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.DesignerActionMethodItem.-ctor" target="_top">.NET documentation</a>
+     */
     public DesignerActionMethodItem(DesignerActionList actionList, java.lang.String memberName, java.lang.String displayName, java.lang.String category, boolean includeAsDesignerVerb) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.text.regularexpressions.RegexParseException, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
@@ -172,6 +212,28 @@ public class DesignerActionMethodItem extends system.componentmodel.design.Desig
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param actionList the argument of type {@code DesignerActionList}
+     * @param memberName the argument of type {@code java.lang.String}
+     * @param displayName the argument of type {@code java.lang.String}
+     * @param category the argument of type {@code java.lang.String}
+     * @param description the argument of type {@code java.lang.String}
+     * @param includeAsDesignerVerb the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.text.regularexpressions.RegexParseException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.DesignerActionMethodItem.-ctor" target="_top">.NET documentation</a>
+     */
     public DesignerActionMethodItem(DesignerActionList actionList, java.lang.String memberName, java.lang.String displayName, java.lang.String category, java.lang.String description, boolean includeAsDesignerVerb) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.NullReferenceException, system.IndexOutOfRangeException, system.text.regularexpressions.RegexParseException, system.ArrayTypeMismatchException {
         try {
             // add reference to assemblyName.dll file
@@ -182,6 +244,25 @@ public class DesignerActionMethodItem extends system.componentmodel.design.Desig
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param actionList the argument of type {@code DesignerActionList}
+     * @param memberName the argument of type {@code java.lang.String}
+     * @param displayName the argument of type {@code java.lang.String}
+     * @param category the argument of type {@code java.lang.String}
+     * @param description the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.text.regularexpressions.RegexParseException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.DesignerActionMethodItem.-ctor" target="_top">.NET documentation</a>
+     */
     public DesignerActionMethodItem(DesignerActionList actionList, java.lang.String memberName, java.lang.String displayName, java.lang.String category, java.lang.String description) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.text.regularexpressions.RegexParseException, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
@@ -192,6 +273,24 @@ public class DesignerActionMethodItem extends system.componentmodel.design.Desig
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param actionList the argument of type {@code DesignerActionList}
+     * @param memberName the argument of type {@code java.lang.String}
+     * @param displayName the argument of type {@code java.lang.String}
+     * @param category the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.text.regularexpressions.RegexParseException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.DesignerActionMethodItem.-ctor" target="_top">.NET documentation</a>
+     */
     public DesignerActionMethodItem(DesignerActionList actionList, java.lang.String memberName, java.lang.String displayName, java.lang.String category) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.text.regularexpressions.RegexParseException, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
@@ -202,6 +301,23 @@ public class DesignerActionMethodItem extends system.componentmodel.design.Desig
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param actionList the argument of type {@code DesignerActionList}
+     * @param memberName the argument of type {@code java.lang.String}
+     * @param displayName the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.text.regularexpressions.RegexParseException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.DesignerActionMethodItem.-ctor" target="_top">.NET documentation</a>
+     */
     public DesignerActionMethodItem(DesignerActionList actionList, java.lang.String memberName, java.lang.String displayName) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.text.regularexpressions.RegexParseException, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
@@ -217,6 +333,21 @@ public class DesignerActionMethodItem extends system.componentmodel.design.Desig
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Invoke.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.DesignerActionMethodItem.Invoke" target="_top">.NET documentation</a>
+     */
     public void Invoke() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -231,6 +362,13 @@ public class DesignerActionMethodItem extends system.componentmodel.design.Desig
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IncludeAsDesignerVerb.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.DesignerActionMethodItem.IncludeAsDesignerVerb" target="_top">.NET documentation</a>
+     */
     public boolean getIncludeAsDesignerVerb() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -245,6 +383,13 @@ public class DesignerActionMethodItem extends system.componentmodel.design.Desig
         }
     }
 
+    /**
+     * Gets the value of the .NET property RelatedComponent.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.DesignerActionMethodItem.RelatedComponent" target="_top">.NET documentation</a>
+     */
     public IComponent getRelatedComponent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -260,6 +405,13 @@ public class DesignerActionMethodItem extends system.componentmodel.design.Desig
         }
     }
 
+    /**
+     * Sets the value of the .NET property RelatedComponent.
+     *
+     * @param RelatedComponent the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.DesignerActionMethodItem.RelatedComponent" target="_top">.NET documentation</a>
+     */
     public void setRelatedComponent(IComponent RelatedComponent) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -270,6 +422,13 @@ public class DesignerActionMethodItem extends system.componentmodel.design.Desig
         }
     }
 
+    /**
+     * Gets the value of the .NET property MemberName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.DesignerActionMethodItem.MemberName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getMemberName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

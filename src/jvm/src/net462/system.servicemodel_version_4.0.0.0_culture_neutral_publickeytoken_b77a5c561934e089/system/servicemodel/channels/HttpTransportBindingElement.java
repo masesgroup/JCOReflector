@@ -118,7 +118,10 @@ public class HttpTransportBindingElement extends system.servicemodel.channels.Tr
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public HttpTransportBindingElement(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -165,6 +168,12 @@ public class HttpTransportBindingElement extends system.servicemodel.channels.Tr
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.HttpTransportBindingElement.-ctor" target="_top">.NET documentation</a>
+     */
     public HttpTransportBindingElement() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -179,6 +188,15 @@ public class HttpTransportBindingElement extends system.servicemodel.channels.Tr
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CanBuildChannelFactory.
+     *
+     * @param <TChannel> the type of the generic argument TChannel
+     * @param context the argument of type {@code BindingContext}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.HttpTransportBindingElement.CanBuildChannelFactory" target="_top">.NET documentation</a>
+     */
     public <TChannel extends IJCOBridgeReflected> boolean CanBuildChannelFactory(BindingContext context) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +211,15 @@ public class HttpTransportBindingElement extends system.servicemodel.channels.Tr
         }
     }
 
+    /**
+     * Invokes the .NET member CanBuildChannelListener.
+     *
+     * @param <TChannel> the type of the generic argument TChannel
+     * @param context the argument of type {@code BindingContext}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.HttpTransportBindingElement.CanBuildChannelListener" target="_top">.NET documentation</a>
+     */
     public <TChannel extends IJCOBridgeReflected> boolean CanBuildChannelListener(BindingContext context) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +234,13 @@ public class HttpTransportBindingElement extends system.servicemodel.channels.Tr
         }
     }
 
+    /**
+     * Invokes the .NET member ShouldSerializeExtendedProtectionPolicy.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.HttpTransportBindingElement.ShouldSerializeExtendedProtectionPolicy" target="_top">.NET documentation</a>
+     */
     public boolean ShouldSerializeExtendedProtectionPolicy() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -221,6 +255,13 @@ public class HttpTransportBindingElement extends system.servicemodel.channels.Tr
         }
     }
 
+    /**
+     * Invokes the .NET member ShouldSerializeMessageHandlerFactory.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.HttpTransportBindingElement.ShouldSerializeMessageHandlerFactory" target="_top">.NET documentation</a>
+     */
     public boolean ShouldSerializeMessageHandlerFactory() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -235,6 +276,13 @@ public class HttpTransportBindingElement extends system.servicemodel.channels.Tr
         }
     }
 
+    /**
+     * Invokes the .NET member ShouldSerializeWebSocketSettings.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.HttpTransportBindingElement.ShouldSerializeWebSocketSettings" target="_top">.NET documentation</a>
+     */
     public boolean ShouldSerializeWebSocketSettings() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -249,6 +297,21 @@ public class HttpTransportBindingElement extends system.servicemodel.channels.Tr
         }
     }
 
+    /**
+     * Invokes the .NET member Clone.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.HttpTransportBindingElement.Clone" target="_top">.NET documentation</a>
+     */
     public BindingElement Clone() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.UriFormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -264,6 +327,29 @@ public class HttpTransportBindingElement extends system.servicemodel.channels.Tr
         }
     }
 
+    /**
+     * Invokes the .NET member BuildChannelFactory.
+     *
+     * @param <TChannel> the type of the generic argument TChannel
+     * @param context the argument of type {@code BindingContext}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.HttpTransportBindingElement.BuildChannelFactory" target="_top">.NET documentation</a>
+     */
     public <TChannel extends IJCOBridgeReflected> IChannelFactory_1 BuildChannelFactory(BindingContext context) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationErrorsException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -279,6 +365,38 @@ public class HttpTransportBindingElement extends system.servicemodel.channels.Tr
         }
     }
 
+    /**
+     * Invokes the .NET member BuildChannelListener.
+     *
+     * @param <TChannel> the type of the generic argument TChannel
+     * @param context the argument of type {@code BindingContext}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.net.sockets.SocketException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.AccessViolationException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.HttpTransportBindingElement.BuildChannelListener" target="_top">.NET documentation</a>
+     */
     public <TChannel extends IJCOBridgeReflected> IChannelListener_1 BuildChannelListener(BindingContext context) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.net.sockets.SocketException, system.MissingMethodException, system.reflection.TargetInvocationException, system.AccessViolationException, system.UriFormatException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.configuration.ConfigurationException, system.InvalidCastException, system.configuration.ConfigurationErrorsException, system.NullReferenceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -297,8 +415,13 @@ public class HttpTransportBindingElement extends system.servicemodel.channels.Tr
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIWsdlExportExtension method available in IWsdlExportExtension to obtain an object with an invocable method
+     *
+     * @param exporter the argument of type {@code WsdlExporter}
+     * @param context the argument of type {@code WsdlContractConversionContext}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.IWsdlExportExtension.ExportContract" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void ExportContract(WsdlExporter exporter, WsdlContractConversionContext context) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIWsdlExportExtension to obtain the full interface.");
     }
@@ -306,8 +429,13 @@ public class HttpTransportBindingElement extends system.servicemodel.channels.Tr
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIWsdlExportExtension method available in IWsdlExportExtension to obtain an object with an invocable method
+     *
+     * @param exporter the argument of type {@code WsdlExporter}
+     * @param context the argument of type {@code WsdlEndpointConversionContext}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void ExportEndpoint(WsdlExporter exporter, WsdlEndpointConversionContext context) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIWsdlExportExtension to obtain the full interface.");
     }
@@ -315,8 +443,13 @@ public class HttpTransportBindingElement extends system.servicemodel.channels.Tr
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIPolicyExportExtension method available in IPolicyExportExtension to obtain an object with an invocable method
+     *
+     * @param exporter the argument of type {@code MetadataExporter}
+     * @param context the argument of type {@code PolicyConversionContext}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.IPolicyExportExtension.ExportPolicy" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void ExportPolicy(MetadataExporter exporter, PolicyConversionContext context) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPolicyExportExtension to obtain the full interface.");
     }
@@ -325,6 +458,13 @@ public class HttpTransportBindingElement extends system.servicemodel.channels.Tr
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AllowCookies.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.HttpTransportBindingElement.AllowCookies" target="_top">.NET documentation</a>
+     */
     public boolean getAllowCookies() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -339,6 +479,13 @@ public class HttpTransportBindingElement extends system.servicemodel.channels.Tr
         }
     }
 
+    /**
+     * Sets the value of the .NET property AllowCookies.
+     *
+     * @param AllowCookies the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.HttpTransportBindingElement.AllowCookies" target="_top">.NET documentation</a>
+     */
     public void setAllowCookies(boolean AllowCookies) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -349,6 +496,13 @@ public class HttpTransportBindingElement extends system.servicemodel.channels.Tr
         }
     }
 
+    /**
+     * Gets the value of the .NET property BypassProxyOnLocal.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.HttpTransportBindingElement.BypassProxyOnLocal" target="_top">.NET documentation</a>
+     */
     public boolean getBypassProxyOnLocal() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -363,6 +517,13 @@ public class HttpTransportBindingElement extends system.servicemodel.channels.Tr
         }
     }
 
+    /**
+     * Sets the value of the .NET property BypassProxyOnLocal.
+     *
+     * @param BypassProxyOnLocal the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.HttpTransportBindingElement.BypassProxyOnLocal" target="_top">.NET documentation</a>
+     */
     public void setBypassProxyOnLocal(boolean BypassProxyOnLocal) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -373,6 +534,13 @@ public class HttpTransportBindingElement extends system.servicemodel.channels.Tr
         }
     }
 
+    /**
+     * Gets the value of the .NET property DecompressionEnabled.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.HttpTransportBindingElement.DecompressionEnabled" target="_top">.NET documentation</a>
+     */
     public boolean getDecompressionEnabled() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -387,6 +555,13 @@ public class HttpTransportBindingElement extends system.servicemodel.channels.Tr
         }
     }
 
+    /**
+     * Sets the value of the .NET property DecompressionEnabled.
+     *
+     * @param DecompressionEnabled the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.HttpTransportBindingElement.DecompressionEnabled" target="_top">.NET documentation</a>
+     */
     public void setDecompressionEnabled(boolean DecompressionEnabled) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -397,6 +572,13 @@ public class HttpTransportBindingElement extends system.servicemodel.channels.Tr
         }
     }
 
+    /**
+     * Gets the value of the .NET property KeepAliveEnabled.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.HttpTransportBindingElement.KeepAliveEnabled" target="_top">.NET documentation</a>
+     */
     public boolean getKeepAliveEnabled() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -411,6 +593,13 @@ public class HttpTransportBindingElement extends system.servicemodel.channels.Tr
         }
     }
 
+    /**
+     * Sets the value of the .NET property KeepAliveEnabled.
+     *
+     * @param KeepAliveEnabled the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.HttpTransportBindingElement.KeepAliveEnabled" target="_top">.NET documentation</a>
+     */
     public void setKeepAliveEnabled(boolean KeepAliveEnabled) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -421,6 +610,13 @@ public class HttpTransportBindingElement extends system.servicemodel.channels.Tr
         }
     }
 
+    /**
+     * Gets the value of the .NET property UnsafeConnectionNtlmAuthentication.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.HttpTransportBindingElement.UnsafeConnectionNtlmAuthentication" target="_top">.NET documentation</a>
+     */
     public boolean getUnsafeConnectionNtlmAuthentication() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -435,6 +631,13 @@ public class HttpTransportBindingElement extends system.servicemodel.channels.Tr
         }
     }
 
+    /**
+     * Sets the value of the .NET property UnsafeConnectionNtlmAuthentication.
+     *
+     * @param UnsafeConnectionNtlmAuthentication the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.HttpTransportBindingElement.UnsafeConnectionNtlmAuthentication" target="_top">.NET documentation</a>
+     */
     public void setUnsafeConnectionNtlmAuthentication(boolean UnsafeConnectionNtlmAuthentication) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -445,6 +648,13 @@ public class HttpTransportBindingElement extends system.servicemodel.channels.Tr
         }
     }
 
+    /**
+     * Gets the value of the .NET property UseDefaultWebProxy.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.HttpTransportBindingElement.UseDefaultWebProxy" target="_top">.NET documentation</a>
+     */
     public boolean getUseDefaultWebProxy() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -459,6 +669,13 @@ public class HttpTransportBindingElement extends system.servicemodel.channels.Tr
         }
     }
 
+    /**
+     * Sets the value of the .NET property UseDefaultWebProxy.
+     *
+     * @param UseDefaultWebProxy the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.HttpTransportBindingElement.UseDefaultWebProxy" target="_top">.NET documentation</a>
+     */
     public void setUseDefaultWebProxy(boolean UseDefaultWebProxy) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -469,6 +686,13 @@ public class HttpTransportBindingElement extends system.servicemodel.channels.Tr
         }
     }
 
+    /**
+     * Gets the value of the .NET property MaxBufferSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.HttpTransportBindingElement.MaxBufferSize" target="_top">.NET documentation</a>
+     */
     public int getMaxBufferSize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -509,6 +733,28 @@ public class HttpTransportBindingElement extends system.servicemodel.channels.Tr
         }
     }
 
+    /**
+     * Sets the value of the .NET property MaxBufferSize.
+     *
+     * @param MaxBufferSize the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.HttpTransportBindingElement.MaxBufferSize" target="_top">.NET documentation</a>
+     */
     public void setMaxBufferSize(int MaxBufferSize) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -519,6 +765,13 @@ public class HttpTransportBindingElement extends system.servicemodel.channels.Tr
         }
     }
 
+    /**
+     * Gets the value of the .NET property MaxPendingAccepts.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.HttpTransportBindingElement.MaxPendingAccepts" target="_top">.NET documentation</a>
+     */
     public int getMaxPendingAccepts() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -559,6 +812,28 @@ public class HttpTransportBindingElement extends system.servicemodel.channels.Tr
         }
     }
 
+    /**
+     * Sets the value of the .NET property MaxPendingAccepts.
+     *
+     * @param MaxPendingAccepts the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.HttpTransportBindingElement.MaxPendingAccepts" target="_top">.NET documentation</a>
+     */
     public void setMaxPendingAccepts(int MaxPendingAccepts) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -569,6 +844,13 @@ public class HttpTransportBindingElement extends system.servicemodel.channels.Tr
         }
     }
 
+    /**
+     * Gets the value of the .NET property AuthenticationScheme.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.HttpTransportBindingElement.AuthenticationScheme" target="_top">.NET documentation</a>
+     */
     public AuthenticationSchemes getAuthenticationScheme() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -584,6 +866,13 @@ public class HttpTransportBindingElement extends system.servicemodel.channels.Tr
         }
     }
 
+    /**
+     * Sets the value of the .NET property AuthenticationScheme.
+     *
+     * @param AuthenticationScheme the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.HttpTransportBindingElement.AuthenticationScheme" target="_top">.NET documentation</a>
+     */
     public void setAuthenticationScheme(AuthenticationSchemes AuthenticationScheme) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -594,6 +883,13 @@ public class HttpTransportBindingElement extends system.servicemodel.channels.Tr
         }
     }
 
+    /**
+     * Gets the value of the .NET property ProxyAuthenticationScheme.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.HttpTransportBindingElement.ProxyAuthenticationScheme" target="_top">.NET documentation</a>
+     */
     public AuthenticationSchemes getProxyAuthenticationScheme() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -609,6 +905,28 @@ public class HttpTransportBindingElement extends system.servicemodel.channels.Tr
         }
     }
 
+    /**
+     * Sets the value of the .NET property ProxyAuthenticationScheme.
+     *
+     * @param ProxyAuthenticationScheme the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.HttpTransportBindingElement.ProxyAuthenticationScheme" target="_top">.NET documentation</a>
+     */
     public void setProxyAuthenticationScheme(AuthenticationSchemes ProxyAuthenticationScheme) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -619,6 +937,13 @@ public class HttpTransportBindingElement extends system.servicemodel.channels.Tr
         }
     }
 
+    /**
+     * Gets the value of the .NET property ExtendedProtectionPolicy.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.HttpTransportBindingElement.ExtendedProtectionPolicy" target="_top">.NET documentation</a>
+     */
     public ExtendedProtectionPolicy getExtendedProtectionPolicy() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -634,6 +959,33 @@ public class HttpTransportBindingElement extends system.servicemodel.channels.Tr
         }
     }
 
+    /**
+     * Sets the value of the .NET property ExtendedProtectionPolicy.
+     *
+     * @param ExtendedProtectionPolicy the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.HttpTransportBindingElement.ExtendedProtectionPolicy" target="_top">.NET documentation</a>
+     */
     public void setExtendedProtectionPolicy(ExtendedProtectionPolicy ExtendedProtectionPolicy) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.PlatformNotSupportedException, system.NotSupportedException, system.componentmodel.Win32Exception, system.InvalidCastException, system.configuration.ConfigurationErrorsException, system.MissingMethodException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -644,6 +996,13 @@ public class HttpTransportBindingElement extends system.servicemodel.channels.Tr
         }
     }
 
+    /**
+     * Gets the value of the .NET property MessageHandlerFactory.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.HttpTransportBindingElement.MessageHandlerFactory" target="_top">.NET documentation</a>
+     */
     public HttpMessageHandlerFactory getMessageHandlerFactory() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -659,6 +1018,13 @@ public class HttpTransportBindingElement extends system.servicemodel.channels.Tr
         }
     }
 
+    /**
+     * Sets the value of the .NET property MessageHandlerFactory.
+     *
+     * @param MessageHandlerFactory the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.HttpTransportBindingElement.MessageHandlerFactory" target="_top">.NET documentation</a>
+     */
     public void setMessageHandlerFactory(HttpMessageHandlerFactory MessageHandlerFactory) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -669,6 +1035,13 @@ public class HttpTransportBindingElement extends system.servicemodel.channels.Tr
         }
     }
 
+    /**
+     * Gets the value of the .NET property WebSocketSettings.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.HttpTransportBindingElement.WebSocketSettings" target="_top">.NET documentation</a>
+     */
     public WebSocketTransportSettings getWebSocketSettings() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -684,6 +1057,24 @@ public class HttpTransportBindingElement extends system.servicemodel.channels.Tr
         }
     }
 
+    /**
+     * Sets the value of the .NET property WebSocketSettings.
+     *
+     * @param WebSocketSettings the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.HttpTransportBindingElement.WebSocketSettings" target="_top">.NET documentation</a>
+     */
     public void setWebSocketSettings(WebSocketTransportSettings WebSocketSettings) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -694,6 +1085,13 @@ public class HttpTransportBindingElement extends system.servicemodel.channels.Tr
         }
     }
 
+    /**
+     * Gets the value of the .NET property HostNameComparisonMode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.HttpTransportBindingElement.HostNameComparisonMode" target="_top">.NET documentation</a>
+     */
     public HostNameComparisonMode getHostNameComparisonMode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -709,6 +1107,30 @@ public class HttpTransportBindingElement extends system.servicemodel.channels.Tr
         }
     }
 
+    /**
+     * Sets the value of the .NET property HostNameComparisonMode.
+     *
+     * @param HostNameComparisonMode the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.HttpTransportBindingElement.HostNameComparisonMode" target="_top">.NET documentation</a>
+     */
     public void setHostNameComparisonMode(HostNameComparisonMode HostNameComparisonMode) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -719,6 +1141,13 @@ public class HttpTransportBindingElement extends system.servicemodel.channels.Tr
         }
     }
 
+    /**
+     * Gets the value of the .NET property TransferMode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.HttpTransportBindingElement.TransferMode" target="_top">.NET documentation</a>
+     */
     public TransferMode getTransferMode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -734,6 +1163,30 @@ public class HttpTransportBindingElement extends system.servicemodel.channels.Tr
         }
     }
 
+    /**
+     * Sets the value of the .NET property TransferMode.
+     *
+     * @param TransferMode the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.HttpTransportBindingElement.TransferMode" target="_top">.NET documentation</a>
+     */
     public void setTransferMode(TransferMode TransferMode) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -744,6 +1197,13 @@ public class HttpTransportBindingElement extends system.servicemodel.channels.Tr
         }
     }
 
+    /**
+     * Gets the value of the .NET property Realm.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.HttpTransportBindingElement.Realm" target="_top">.NET documentation</a>
+     */
     public java.lang.String getRealm() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -758,6 +1218,24 @@ public class HttpTransportBindingElement extends system.servicemodel.channels.Tr
         }
     }
 
+    /**
+     * Sets the value of the .NET property Realm.
+     *
+     * @param Realm the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.HttpTransportBindingElement.Realm" target="_top">.NET documentation</a>
+     */
     public void setRealm(java.lang.String Realm) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -768,6 +1246,13 @@ public class HttpTransportBindingElement extends system.servicemodel.channels.Tr
         }
     }
 
+    /**
+     * Gets the value of the .NET property RequestInitializationTimeout.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.HttpTransportBindingElement.RequestInitializationTimeout" target="_top">.NET documentation</a>
+     */
     public TimeSpan getRequestInitializationTimeout() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -783,6 +1268,28 @@ public class HttpTransportBindingElement extends system.servicemodel.channels.Tr
         }
     }
 
+    /**
+     * Sets the value of the .NET property RequestInitializationTimeout.
+     *
+     * @param RequestInitializationTimeout the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.HttpTransportBindingElement.RequestInitializationTimeout" target="_top">.NET documentation</a>
+     */
     public void setRequestInitializationTimeout(TimeSpan RequestInitializationTimeout) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -793,6 +1300,13 @@ public class HttpTransportBindingElement extends system.servicemodel.channels.Tr
         }
     }
 
+    /**
+     * Gets the value of the .NET property ProxyAddress.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.HttpTransportBindingElement.ProxyAddress" target="_top">.NET documentation</a>
+     */
     public Uri getProxyAddress() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -808,6 +1322,13 @@ public class HttpTransportBindingElement extends system.servicemodel.channels.Tr
         }
     }
 
+    /**
+     * Sets the value of the .NET property ProxyAddress.
+     *
+     * @param ProxyAddress the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.HttpTransportBindingElement.ProxyAddress" target="_top">.NET documentation</a>
+     */
     public void setProxyAddress(Uri ProxyAddress) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

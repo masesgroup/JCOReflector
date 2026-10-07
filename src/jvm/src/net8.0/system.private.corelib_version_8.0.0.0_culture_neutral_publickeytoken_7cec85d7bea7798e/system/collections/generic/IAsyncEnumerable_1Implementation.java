@@ -101,7 +101,10 @@ public class IAsyncEnumerable_1Implementation<T extends IJCOBridgeReflected> ext
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IAsyncEnumerable_1Implementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -143,6 +146,14 @@ public class IAsyncEnumerable_1Implementation<T extends IJCOBridgeReflected> ext
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetAsyncEnumerator.
+     *
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.IAsyncEnumerable-1.GetAsyncEnumerator" target="_top">.NET documentation</a>
+     */
     public IAsyncEnumerator_1 GetAsyncEnumerator(CancellationToken cancellationToken) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

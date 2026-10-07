@@ -98,7 +98,10 @@ public class PerformanceCounterManager extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PerformanceCounterManager(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -145,6 +148,12 @@ public class PerformanceCounterManager extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.PerformanceCounterManager.-ctor" target="_top">.NET documentation</a>
+     */
     public PerformanceCounterManager() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -162,8 +171,11 @@ public class PerformanceCounterManager extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToICollectData method available in ICollectData to obtain an object with an invocable method
+     *
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.ICollectData.CloseData" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void CloseData() throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICollectData to obtain the full interface.");
     }

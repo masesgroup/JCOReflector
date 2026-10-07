@@ -55,5 +55,15 @@ import system.TimeSpan;
  * @version 2.0.0.0
  */
 public interface ICacheItemUpdateCallback {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param key the .NET argument of type {@code System.String}
+     * @param reason the .NET argument of type {@code System.Web.Caching.CacheItemUpdateReason}
+     * @param expensiveObject the .NET argument of type {@code System.Object&}
+     * @param dependency the .NET argument of type {@code System.Web.Caching.CacheDependency&}
+     * @param absoluteExpiration the .NET argument of type {@code System.DateTime&}
+     * @param slidingExpiration the .NET argument of type {@code System.TimeSpan&}
+     */
     public void Invoke(java.lang.String key, CacheItemUpdateReason reason, NetObject expensiveObject, CacheDependency dependency, DateTime absoluteExpiration, TimeSpan slidingExpiration);
 }

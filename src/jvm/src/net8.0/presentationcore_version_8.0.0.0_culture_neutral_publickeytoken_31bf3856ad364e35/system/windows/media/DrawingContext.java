@@ -114,7 +114,10 @@ public class DrawingContext extends system.windows.threading.DispatcherObject im
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DrawingContext(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -167,6 +170,12 @@ public class DrawingContext extends system.windows.threading.DispatcherObject im
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Close.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.DrawingContext.Close" target="_top">.NET documentation</a>
+     */
     public void Close() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -177,6 +186,13 @@ public class DrawingContext extends system.windows.threading.DispatcherObject im
         }
     }
 
+    /**
+     * Invokes the .NET member DrawDrawing.
+     *
+     * @param drawing the argument of type {@code Drawing}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.DrawingContext.DrawDrawing" target="_top">.NET documentation</a>
+     */
     public void DrawDrawing(Drawing drawing) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +203,17 @@ public class DrawingContext extends system.windows.threading.DispatcherObject im
         }
     }
 
+    /**
+     * Invokes the .NET member DrawEllipse.
+     *
+     * @param brush the argument of type {@code Brush}
+     * @param pen the argument of type {@code Pen}
+     * @param center the argument of type {@code Point}
+     * @param radiusX the argument of type {@code double}
+     * @param radiusY the argument of type {@code double}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.DrawingContext.DrawEllipse" target="_top">.NET documentation</a>
+     */
     public void DrawEllipse(Brush brush, Pen pen, Point center, double radiusX, double radiusY) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +224,20 @@ public class DrawingContext extends system.windows.threading.DispatcherObject im
         }
     }
 
+    /**
+     * Invokes the .NET member DrawEllipse.
+     *
+     * @param brush the argument of type {@code Brush}
+     * @param pen the argument of type {@code Pen}
+     * @param center the argument of type {@code Point}
+     * @param centerAnimations the argument of type {@code AnimationClock}
+     * @param radiusX the argument of type {@code double}
+     * @param radiusXAnimations the argument of type {@code AnimationClock}
+     * @param radiusY the argument of type {@code double}
+     * @param radiusYAnimations the argument of type {@code AnimationClock}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.DrawingContext.DrawEllipse" target="_top">.NET documentation</a>
+     */
     public void DrawEllipse(Brush brush, Pen pen, Point center, AnimationClock centerAnimations, double radiusX, AnimationClock radiusXAnimations, double radiusY, AnimationClock radiusYAnimations) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +248,15 @@ public class DrawingContext extends system.windows.threading.DispatcherObject im
         }
     }
 
+    /**
+     * Invokes the .NET member DrawGeometry.
+     *
+     * @param brush the argument of type {@code Brush}
+     * @param pen the argument of type {@code Pen}
+     * @param geometry the argument of type {@code Geometry}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.DrawingContext.DrawGeometry" target="_top">.NET documentation</a>
+     */
     public void DrawGeometry(Brush brush, Pen pen, Geometry geometry) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -217,6 +267,14 @@ public class DrawingContext extends system.windows.threading.DispatcherObject im
         }
     }
 
+    /**
+     * Invokes the .NET member DrawGlyphRun.
+     *
+     * @param foregroundBrush the argument of type {@code Brush}
+     * @param glyphRun the argument of type {@code GlyphRun}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.DrawingContext.DrawGlyphRun" target="_top">.NET documentation</a>
+     */
     public void DrawGlyphRun(Brush foregroundBrush, GlyphRun glyphRun) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -227,6 +285,15 @@ public class DrawingContext extends system.windows.threading.DispatcherObject im
         }
     }
 
+    /**
+     * Invokes the .NET member DrawImage.
+     *
+     * @param imageSource the argument of type {@code ImageSource}
+     * @param rectangle the argument of type {@code Rect}
+     * @param rectangleAnimations the argument of type {@code AnimationClock}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.DrawingContext.DrawImage" target="_top">.NET documentation</a>
+     */
     public void DrawImage(ImageSource imageSource, Rect rectangle, AnimationClock rectangleAnimations) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -237,6 +304,14 @@ public class DrawingContext extends system.windows.threading.DispatcherObject im
         }
     }
 
+    /**
+     * Invokes the .NET member DrawImage.
+     *
+     * @param imageSource the argument of type {@code ImageSource}
+     * @param rectangle the argument of type {@code Rect}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.DrawingContext.DrawImage" target="_top">.NET documentation</a>
+     */
     public void DrawImage(ImageSource imageSource, Rect rectangle) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -247,6 +322,17 @@ public class DrawingContext extends system.windows.threading.DispatcherObject im
         }
     }
 
+    /**
+     * Invokes the .NET member DrawLine.
+     *
+     * @param pen the argument of type {@code Pen}
+     * @param point0 the argument of type {@code Point}
+     * @param point0Animations the argument of type {@code AnimationClock}
+     * @param point1 the argument of type {@code Point}
+     * @param point1Animations the argument of type {@code AnimationClock}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.DrawingContext.DrawLine" target="_top">.NET documentation</a>
+     */
     public void DrawLine(Pen pen, Point point0, AnimationClock point0Animations, Point point1, AnimationClock point1Animations) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -257,6 +343,15 @@ public class DrawingContext extends system.windows.threading.DispatcherObject im
         }
     }
 
+    /**
+     * Invokes the .NET member DrawLine.
+     *
+     * @param pen the argument of type {@code Pen}
+     * @param point0 the argument of type {@code Point}
+     * @param point1 the argument of type {@code Point}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.DrawingContext.DrawLine" target="_top">.NET documentation</a>
+     */
     public void DrawLine(Pen pen, Point point0, Point point1) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -267,6 +362,16 @@ public class DrawingContext extends system.windows.threading.DispatcherObject im
         }
     }
 
+    /**
+     * Invokes the .NET member DrawRectangle.
+     *
+     * @param brush the argument of type {@code Brush}
+     * @param pen the argument of type {@code Pen}
+     * @param rectangle the argument of type {@code Rect}
+     * @param rectangleAnimations the argument of type {@code AnimationClock}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.DrawingContext.DrawRectangle" target="_top">.NET documentation</a>
+     */
     public void DrawRectangle(Brush brush, Pen pen, Rect rectangle, AnimationClock rectangleAnimations) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -277,6 +382,15 @@ public class DrawingContext extends system.windows.threading.DispatcherObject im
         }
     }
 
+    /**
+     * Invokes the .NET member DrawRectangle.
+     *
+     * @param brush the argument of type {@code Brush}
+     * @param pen the argument of type {@code Pen}
+     * @param rectangle the argument of type {@code Rect}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.DrawingContext.DrawRectangle" target="_top">.NET documentation</a>
+     */
     public void DrawRectangle(Brush brush, Pen pen, Rect rectangle) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -287,6 +401,17 @@ public class DrawingContext extends system.windows.threading.DispatcherObject im
         }
     }
 
+    /**
+     * Invokes the .NET member DrawRoundedRectangle.
+     *
+     * @param brush the argument of type {@code Brush}
+     * @param pen the argument of type {@code Pen}
+     * @param rectangle the argument of type {@code Rect}
+     * @param radiusX the argument of type {@code double}
+     * @param radiusY the argument of type {@code double}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.DrawingContext.DrawRoundedRectangle" target="_top">.NET documentation</a>
+     */
     public void DrawRoundedRectangle(Brush brush, Pen pen, Rect rectangle, double radiusX, double radiusY) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -297,6 +422,20 @@ public class DrawingContext extends system.windows.threading.DispatcherObject im
         }
     }
 
+    /**
+     * Invokes the .NET member DrawRoundedRectangle.
+     *
+     * @param brush the argument of type {@code Brush}
+     * @param pen the argument of type {@code Pen}
+     * @param rectangle the argument of type {@code Rect}
+     * @param rectangleAnimations the argument of type {@code AnimationClock}
+     * @param radiusX the argument of type {@code double}
+     * @param radiusXAnimations the argument of type {@code AnimationClock}
+     * @param radiusY the argument of type {@code double}
+     * @param radiusYAnimations the argument of type {@code AnimationClock}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.DrawingContext.DrawRoundedRectangle" target="_top">.NET documentation</a>
+     */
     public void DrawRoundedRectangle(Brush brush, Pen pen, Rect rectangle, AnimationClock rectangleAnimations, double radiusX, AnimationClock radiusXAnimations, double radiusY, AnimationClock radiusYAnimations) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -307,6 +446,27 @@ public class DrawingContext extends system.windows.threading.DispatcherObject im
         }
     }
 
+    /**
+     * Invokes the .NET member DrawText.
+     *
+     * @param formattedText the argument of type {@code FormattedText}
+     * @param origin the argument of type {@code Point}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.DrawingContext.DrawText" target="_top">.NET documentation</a>
+     */
     public void DrawText(FormattedText formattedText, Point origin) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidCastException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.security.SecurityException, system.io.IOException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -317,6 +477,15 @@ public class DrawingContext extends system.windows.threading.DispatcherObject im
         }
     }
 
+    /**
+     * Invokes the .NET member DrawVideo.
+     *
+     * @param player the argument of type {@code MediaPlayer}
+     * @param rectangle the argument of type {@code Rect}
+     * @param rectangleAnimations the argument of type {@code AnimationClock}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.DrawingContext.DrawVideo" target="_top">.NET documentation</a>
+     */
     public void DrawVideo(MediaPlayer player, Rect rectangle, AnimationClock rectangleAnimations) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -327,6 +496,14 @@ public class DrawingContext extends system.windows.threading.DispatcherObject im
         }
     }
 
+    /**
+     * Invokes the .NET member DrawVideo.
+     *
+     * @param player the argument of type {@code MediaPlayer}
+     * @param rectangle the argument of type {@code Rect}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.DrawingContext.DrawVideo" target="_top">.NET documentation</a>
+     */
     public void DrawVideo(MediaPlayer player, Rect rectangle) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -337,6 +514,12 @@ public class DrawingContext extends system.windows.threading.DispatcherObject im
         }
     }
 
+    /**
+     * Invokes the .NET member Pop.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.DrawingContext.Pop" target="_top">.NET documentation</a>
+     */
     public void Pop() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -347,6 +530,13 @@ public class DrawingContext extends system.windows.threading.DispatcherObject im
         }
     }
 
+    /**
+     * Invokes the .NET member PushClip.
+     *
+     * @param clipGeometry the argument of type {@code Geometry}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.DrawingContext.PushClip" target="_top">.NET documentation</a>
+     */
     public void PushClip(Geometry clipGeometry) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -357,6 +547,14 @@ public class DrawingContext extends system.windows.threading.DispatcherObject im
         }
     }
 
+    /**
+     * Invokes the .NET member PushEffect.
+     *
+     * @param effect the argument of type {@code BitmapEffect}
+     * @param effectInput the argument of type {@code BitmapEffectInput}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.DrawingContext.PushEffect" target="_top">.NET documentation</a>
+     */
     public void PushEffect(BitmapEffect effect, BitmapEffectInput effectInput) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -367,6 +565,13 @@ public class DrawingContext extends system.windows.threading.DispatcherObject im
         }
     }
 
+    /**
+     * Invokes the .NET member PushGuidelineSet.
+     *
+     * @param guidelines the argument of type {@code GuidelineSet}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.DrawingContext.PushGuidelineSet" target="_top">.NET documentation</a>
+     */
     public void PushGuidelineSet(GuidelineSet guidelines) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -377,6 +582,14 @@ public class DrawingContext extends system.windows.threading.DispatcherObject im
         }
     }
 
+    /**
+     * Invokes the .NET member PushOpacity.
+     *
+     * @param opacity the argument of type {@code double}
+     * @param opacityAnimations the argument of type {@code AnimationClock}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.DrawingContext.PushOpacity" target="_top">.NET documentation</a>
+     */
     public void PushOpacity(double opacity, AnimationClock opacityAnimations) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -387,6 +600,13 @@ public class DrawingContext extends system.windows.threading.DispatcherObject im
         }
     }
 
+    /**
+     * Invokes the .NET member PushOpacity.
+     *
+     * @param opacity the argument of type {@code double}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.DrawingContext.PushOpacity" target="_top">.NET documentation</a>
+     */
     public void PushOpacity(double opacity) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -397,6 +617,13 @@ public class DrawingContext extends system.windows.threading.DispatcherObject im
         }
     }
 
+    /**
+     * Invokes the .NET member PushOpacityMask.
+     *
+     * @param opacityMask the argument of type {@code Brush}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.DrawingContext.PushOpacityMask" target="_top">.NET documentation</a>
+     */
     public void PushOpacityMask(Brush opacityMask) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -407,6 +634,13 @@ public class DrawingContext extends system.windows.threading.DispatcherObject im
         }
     }
 
+    /**
+     * Invokes the .NET member PushTransform.
+     *
+     * @param transform the argument of type {@code Transform}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.DrawingContext.PushTransform" target="_top">.NET documentation</a>
+     */
     public void PushTransform(Transform transform) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -420,8 +654,11 @@ public class DrawingContext extends system.windows.threading.DispatcherObject im
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIDisposable method available in IDisposable to obtain an object with an invocable method
+     *
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IDisposable.Dispose" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void Dispose() throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDisposable to obtain the full interface.");
     }

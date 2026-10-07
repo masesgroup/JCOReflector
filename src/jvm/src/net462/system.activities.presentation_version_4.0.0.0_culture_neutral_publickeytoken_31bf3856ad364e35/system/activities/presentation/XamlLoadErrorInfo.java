@@ -98,7 +98,10 @@ public class XamlLoadErrorInfo extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XamlLoadErrorInfo(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,15 @@ public class XamlLoadErrorInfo extends NetObject  {
     public XamlLoadErrorInfo() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param message the argument of type {@code java.lang.String}
+     * @param lineNumber the argument of type {@code int}
+     * @param linePosition the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.XamlLoadErrorInfo.-ctor" target="_top">.NET documentation</a>
+     */
     public XamlLoadErrorInfo(java.lang.String message, int lineNumber, int linePosition) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +179,13 @@ public class XamlLoadErrorInfo extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property LineNumber.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.XamlLoadErrorInfo.LineNumber" target="_top">.NET documentation</a>
+     */
     public int getLineNumber() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +226,13 @@ public class XamlLoadErrorInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property LineNumber.
+     *
+     * @param LineNumber the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.XamlLoadErrorInfo.LineNumber" target="_top">.NET documentation</a>
+     */
     public void setLineNumber(int LineNumber) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -217,6 +243,13 @@ public class XamlLoadErrorInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LinePosition.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.XamlLoadErrorInfo.LinePosition" target="_top">.NET documentation</a>
+     */
     public int getLinePosition() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -257,6 +290,13 @@ public class XamlLoadErrorInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property LinePosition.
+     *
+     * @param LinePosition the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.XamlLoadErrorInfo.LinePosition" target="_top">.NET documentation</a>
+     */
     public void setLinePosition(int LinePosition) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -267,6 +307,13 @@ public class XamlLoadErrorInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FileName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.XamlLoadErrorInfo.FileName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getFileName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -281,6 +328,13 @@ public class XamlLoadErrorInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property FileName.
+     *
+     * @param FileName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.XamlLoadErrorInfo.FileName" target="_top">.NET documentation</a>
+     */
     public void setFileName(java.lang.String FileName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -291,6 +345,13 @@ public class XamlLoadErrorInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Message.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.XamlLoadErrorInfo.Message" target="_top">.NET documentation</a>
+     */
     public java.lang.String getMessage() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -305,6 +366,13 @@ public class XamlLoadErrorInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Message.
+     *
+     * @param Message the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.XamlLoadErrorInfo.Message" target="_top">.NET documentation</a>
+     */
     public void setMessage(java.lang.String Message) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

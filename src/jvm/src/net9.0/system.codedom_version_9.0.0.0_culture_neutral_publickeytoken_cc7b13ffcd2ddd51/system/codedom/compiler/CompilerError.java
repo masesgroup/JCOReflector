@@ -98,7 +98,10 @@ public class CompilerError extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CompilerError(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -145,6 +148,12 @@ public class CompilerError extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.CompilerError.-ctor" target="_top">.NET documentation</a>
+     */
     public CompilerError() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -155,6 +164,17 @@ public class CompilerError extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param fileName the argument of type {@code java.lang.String}
+     * @param line the argument of type {@code int}
+     * @param column the argument of type {@code int}
+     * @param errorNumber the argument of type {@code java.lang.String}
+     * @param errorText the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.CompilerError.-ctor" target="_top">.NET documentation</a>
+     */
     public CompilerError(java.lang.String fileName, int line, int column, java.lang.String errorNumber, java.lang.String errorText) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -173,6 +193,13 @@ public class CompilerError extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsWarning.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.CompilerError.IsWarning" target="_top">.NET documentation</a>
+     */
     public boolean getIsWarning() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +214,13 @@ public class CompilerError extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsWarning.
+     *
+     * @param IsWarning the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.CompilerError.IsWarning" target="_top">.NET documentation</a>
+     */
     public void setIsWarning(boolean IsWarning) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +231,13 @@ public class CompilerError extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Column.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.CompilerError.Column" target="_top">.NET documentation</a>
+     */
     public int getColumn() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -237,6 +278,13 @@ public class CompilerError extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Column.
+     *
+     * @param Column the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.CompilerError.Column" target="_top">.NET documentation</a>
+     */
     public void setColumn(int Column) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -247,6 +295,13 @@ public class CompilerError extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Line.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.CompilerError.Line" target="_top">.NET documentation</a>
+     */
     public int getLine() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -287,6 +342,13 @@ public class CompilerError extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Line.
+     *
+     * @param Line the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.CompilerError.Line" target="_top">.NET documentation</a>
+     */
     public void setLine(int Line) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -297,6 +359,13 @@ public class CompilerError extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ErrorNumber.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.CompilerError.ErrorNumber" target="_top">.NET documentation</a>
+     */
     public java.lang.String getErrorNumber() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -311,6 +380,13 @@ public class CompilerError extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ErrorNumber.
+     *
+     * @param ErrorNumber the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.CompilerError.ErrorNumber" target="_top">.NET documentation</a>
+     */
     public void setErrorNumber(java.lang.String ErrorNumber) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -321,6 +397,13 @@ public class CompilerError extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ErrorText.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.CompilerError.ErrorText" target="_top">.NET documentation</a>
+     */
     public java.lang.String getErrorText() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -335,6 +418,13 @@ public class CompilerError extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ErrorText.
+     *
+     * @param ErrorText the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.CompilerError.ErrorText" target="_top">.NET documentation</a>
+     */
     public void setErrorText(java.lang.String ErrorText) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -345,6 +435,13 @@ public class CompilerError extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FileName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.CompilerError.FileName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getFileName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -359,6 +456,13 @@ public class CompilerError extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property FileName.
+     *
+     * @param FileName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.CompilerError.FileName" target="_top">.NET documentation</a>
+     */
     public void setFileName(java.lang.String FileName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

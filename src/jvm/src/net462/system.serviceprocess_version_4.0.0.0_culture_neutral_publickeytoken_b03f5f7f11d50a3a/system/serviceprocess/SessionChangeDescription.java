@@ -101,7 +101,10 @@ public class SessionChangeDescription extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SessionChangeDescription(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,14 @@ public class SessionChangeDescription extends system.ValueType  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Equals.
+     *
+     * @param changeDescription the argument of type {@code SessionChangeDescription}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceProcess.SessionChangeDescription.Equals" target="_top">.NET documentation</a>
+     */
     public boolean Equals(SessionChangeDescription changeDescription) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -174,6 +185,13 @@ public class SessionChangeDescription extends system.ValueType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property SessionId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceProcess.SessionChangeDescription.SessionId" target="_top">.NET documentation</a>
+     */
     public int getSessionId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -214,6 +232,13 @@ public class SessionChangeDescription extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Reason.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceProcess.SessionChangeDescription.Reason" target="_top">.NET documentation</a>
+     */
     public SessionChangeReason getReason() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

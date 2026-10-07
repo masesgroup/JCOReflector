@@ -103,7 +103,10 @@ public class ServiceControllerPermission extends system.security.permissions.Res
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ServiceControllerPermission(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,12 @@ public class ServiceControllerPermission extends system.security.permissions.Res
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceProcess.ServiceControllerPermission.-ctor" target="_top">.NET documentation</a>
+     */
     public ServiceControllerPermission() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -160,6 +169,13 @@ public class ServiceControllerPermission extends system.security.permissions.Res
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param state the argument of type {@code PermissionState}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceProcess.ServiceControllerPermission.-ctor" target="_top">.NET documentation</a>
+     */
     public ServiceControllerPermission(PermissionState state) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +186,15 @@ public class ServiceControllerPermission extends system.security.permissions.Res
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param permissionAccess the argument of type {@code ServiceControllerPermissionAccess}
+     * @param machineName the argument of type {@code java.lang.String}
+     * @param serviceName the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceProcess.ServiceControllerPermission.-ctor" target="_top">.NET documentation</a>
+     */
     public ServiceControllerPermission(ServiceControllerPermissionAccess permissionAccess, java.lang.String machineName, java.lang.String serviceName) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -180,6 +205,13 @@ public class ServiceControllerPermission extends system.security.permissions.Res
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param permissionAccessEntries the argument of type {@code ServiceControllerPermissionEntry[]}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceProcess.ServiceControllerPermission.-ctor" target="_top">.NET documentation</a>
+     */
     public ServiceControllerPermission(ServiceControllerPermissionEntry[] permissionAccessEntries) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -198,6 +230,13 @@ public class ServiceControllerPermission extends system.security.permissions.Res
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property PermissionEntries.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceProcess.ServiceControllerPermission.PermissionEntries" target="_top">.NET documentation</a>
+     */
     public ServiceControllerPermissionEntryCollection getPermissionEntries() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

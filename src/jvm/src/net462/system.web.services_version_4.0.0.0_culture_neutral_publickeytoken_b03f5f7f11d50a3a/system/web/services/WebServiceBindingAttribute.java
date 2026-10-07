@@ -100,7 +100,10 @@ public class WebServiceBindingAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public WebServiceBindingAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class WebServiceBindingAttribute extends system.Attribute  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.WebServiceBindingAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public WebServiceBindingAttribute() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -157,6 +166,13 @@ public class WebServiceBindingAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.WebServiceBindingAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public WebServiceBindingAttribute(java.lang.String name) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +183,14 @@ public class WebServiceBindingAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param ns the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.WebServiceBindingAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public WebServiceBindingAttribute(java.lang.String name, java.lang.String ns) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -177,6 +201,15 @@ public class WebServiceBindingAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param ns the argument of type {@code java.lang.String}
+     * @param location the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.WebServiceBindingAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public WebServiceBindingAttribute(java.lang.String name, java.lang.String ns, java.lang.String location) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -195,6 +228,13 @@ public class WebServiceBindingAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property EmitConformanceClaims.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.WebServiceBindingAttribute.EmitConformanceClaims" target="_top">.NET documentation</a>
+     */
     public boolean getEmitConformanceClaims() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -209,6 +249,13 @@ public class WebServiceBindingAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property EmitConformanceClaims.
+     *
+     * @param EmitConformanceClaims the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.WebServiceBindingAttribute.EmitConformanceClaims" target="_top">.NET documentation</a>
+     */
     public void setEmitConformanceClaims(boolean EmitConformanceClaims) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -219,6 +266,13 @@ public class WebServiceBindingAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Location.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.WebServiceBindingAttribute.Location" target="_top">.NET documentation</a>
+     */
     public java.lang.String getLocation() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -233,6 +287,13 @@ public class WebServiceBindingAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Location.
+     *
+     * @param Location the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.WebServiceBindingAttribute.Location" target="_top">.NET documentation</a>
+     */
     public void setLocation(java.lang.String Location) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -243,6 +304,13 @@ public class WebServiceBindingAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.WebServiceBindingAttribute.Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -257,6 +325,13 @@ public class WebServiceBindingAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Name.
+     *
+     * @param Name the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.WebServiceBindingAttribute.Name" target="_top">.NET documentation</a>
+     */
     public void setName(java.lang.String Name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -267,6 +342,13 @@ public class WebServiceBindingAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Namespace.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.WebServiceBindingAttribute.Namespace" target="_top">.NET documentation</a>
+     */
     public java.lang.String getNamespace() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -281,6 +363,13 @@ public class WebServiceBindingAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Namespace.
+     *
+     * @param Namespace the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.WebServiceBindingAttribute.Namespace" target="_top">.NET documentation</a>
+     */
     public void setNamespace(java.lang.String Namespace) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -291,6 +380,13 @@ public class WebServiceBindingAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ConformsTo.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.WebServiceBindingAttribute.ConformsTo" target="_top">.NET documentation</a>
+     */
     public WsiProfiles getConformsTo() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -306,6 +402,13 @@ public class WebServiceBindingAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ConformsTo.
+     *
+     * @param ConformsTo the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.WebServiceBindingAttribute.ConformsTo" target="_top">.NET documentation</a>
+     */
     public void setConformsTo(WsiProfiles ConformsTo) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

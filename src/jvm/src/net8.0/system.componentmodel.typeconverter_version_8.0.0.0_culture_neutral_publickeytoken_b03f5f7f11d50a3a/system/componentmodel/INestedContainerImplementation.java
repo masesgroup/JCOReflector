@@ -105,7 +105,10 @@ public class INestedContainerImplementation extends NetObject implements INested
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public INestedContainerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,14 @@ public class INestedContainerImplementation extends NetObject implements INested
 
     // Methods section
     
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param component the argument of type {@code IComponent}
+     * @param name the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.INestedContainer.Add" target="_top">.NET documentation</a>
+     */
     public void Add(IComponent component, java.lang.String name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -157,6 +168,13 @@ public class INestedContainerImplementation extends NetObject implements INested
         }
     }
 
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param component the argument of type {@code IComponent}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.INestedContainer.Add" target="_top">.NET documentation</a>
+     */
     public void Add(IComponent component) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -167,6 +185,12 @@ public class INestedContainerImplementation extends NetObject implements INested
         }
     }
 
+    /**
+     * Invokes the .NET member Dispose.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.INestedContainer.Dispose" target="_top">.NET documentation</a>
+     */
     public void Dispose() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -177,6 +201,13 @@ public class INestedContainerImplementation extends NetObject implements INested
         }
     }
 
+    /**
+     * Invokes the .NET member Remove.
+     *
+     * @param component the argument of type {@code IComponent}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.INestedContainer.Remove" target="_top">.NET documentation</a>
+     */
     public void Remove(IComponent component) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -191,6 +222,13 @@ public class INestedContainerImplementation extends NetObject implements INested
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Components.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.INestedContainer.Components" target="_top">.NET documentation</a>
+     */
     public ComponentCollection getComponents() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,6 +244,13 @@ public class INestedContainerImplementation extends NetObject implements INested
         }
     }
 
+    /**
+     * Gets the value of the .NET property Owner.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.INestedContainer.Owner" target="_top">.NET documentation</a>
+     */
     public IComponent getOwner() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

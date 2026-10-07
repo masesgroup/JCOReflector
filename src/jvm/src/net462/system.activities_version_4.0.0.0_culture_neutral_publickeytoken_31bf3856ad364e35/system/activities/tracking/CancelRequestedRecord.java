@@ -101,7 +101,10 @@ public class CancelRequestedRecord extends system.activities.tracking.TrackingRe
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CancelRequestedRecord(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,23 @@ public class CancelRequestedRecord extends system.activities.tracking.TrackingRe
     public CancelRequestedRecord() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param instanceId the argument of type {@code Guid}
+     * @param recordNumber the argument of type {@code long}
+     * @param activity the argument of type {@code ActivityInfo}
+     * @param child the argument of type {@code ActivityInfo}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.CancelRequestedRecord.-ctor" target="_top">.NET documentation</a>
+     */
     public CancelRequestedRecord(Guid instanceId, long recordNumber, ActivityInfo activity, ActivityInfo child) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +190,13 @@ public class CancelRequestedRecord extends system.activities.tracking.TrackingRe
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Activity.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.CancelRequestedRecord.Activity" target="_top">.NET documentation</a>
+     */
     public ActivityInfo getActivity() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -185,6 +212,13 @@ public class CancelRequestedRecord extends system.activities.tracking.TrackingRe
         }
     }
 
+    /**
+     * Sets the value of the .NET property Activity.
+     *
+     * @param Activity the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.CancelRequestedRecord.Activity" target="_top">.NET documentation</a>
+     */
     public void setActivity(ActivityInfo Activity) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -195,6 +229,13 @@ public class CancelRequestedRecord extends system.activities.tracking.TrackingRe
         }
     }
 
+    /**
+     * Gets the value of the .NET property Child.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.CancelRequestedRecord.Child" target="_top">.NET documentation</a>
+     */
     public ActivityInfo getChild() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -210,6 +251,13 @@ public class CancelRequestedRecord extends system.activities.tracking.TrackingRe
         }
     }
 
+    /**
+     * Sets the value of the .NET property Child.
+     *
+     * @param Child the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.CancelRequestedRecord.Child" target="_top">.NET documentation</a>
+     */
     public void setChild(ActivityInfo Child) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

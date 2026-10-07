@@ -99,7 +99,10 @@ public class AssemblySignatureKeyAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public AssemblySignatureKeyAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,14 @@ public class AssemblySignatureKeyAttribute extends system.Attribute  {
     public AssemblySignatureKeyAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param publicKey the argument of type {@code java.lang.String}
+     * @param countersignature the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.AssemblySignatureKeyAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public AssemblySignatureKeyAttribute(java.lang.String publicKey, java.lang.String countersignature) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +179,13 @@ public class AssemblySignatureKeyAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Countersignature.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.AssemblySignatureKeyAttribute.Countersignature" target="_top">.NET documentation</a>
+     */
     public java.lang.String getCountersignature() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +200,13 @@ public class AssemblySignatureKeyAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PublicKey.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.AssemblySignatureKeyAttribute.PublicKey" target="_top">.NET documentation</a>
+     */
     public java.lang.String getPublicKey() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -100,7 +100,10 @@ public class UrlRoutingHandler extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public UrlRoutingHandler(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,8 +159,12 @@ public class UrlRoutingHandler extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIHttpHandler method available in IHttpHandler to obtain an object with an invocable method
+     *
+     * @param context the argument of type {@code HttpContext}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.IHttpHandler.ProcessRequest" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void ProcessRequest(HttpContext context) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIHttpHandler to obtain the full interface.");
     }
@@ -166,6 +173,13 @@ public class UrlRoutingHandler extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property RouteCollection.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Routing.UrlRoutingHandler.RouteCollection" target="_top">.NET documentation</a>
+     */
     public RouteCollection getRouteCollection() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -181,6 +195,13 @@ public class UrlRoutingHandler extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RouteCollection.
+     *
+     * @param RouteCollection the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Routing.UrlRoutingHandler.RouteCollection" target="_top">.NET documentation</a>
+     */
     public void setRouteCollection(RouteCollection RouteCollection) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

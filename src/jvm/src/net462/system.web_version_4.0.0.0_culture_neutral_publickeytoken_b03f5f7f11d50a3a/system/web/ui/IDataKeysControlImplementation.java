@@ -99,7 +99,10 @@ public class IDataKeysControlImplementation extends NetObject implements IDataKe
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IDataKeysControlImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -145,6 +148,13 @@ public class IDataKeysControlImplementation extends NetObject implements IDataKe
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ClientIDRowSuffix.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.IDataKeysControl.ClientIDRowSuffix" target="_top">.NET documentation</a>
+     */
     public java.lang.String[] getClientIDRowSuffix() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -168,6 +178,13 @@ public class IDataKeysControlImplementation extends NetObject implements IDataKe
         }
     }
 
+    /**
+     * Gets the value of the .NET property ClientIDRowSuffixDataKeys.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.IDataKeysControl.ClientIDRowSuffixDataKeys" target="_top">.NET documentation</a>
+     */
     public DataKeyArray getClientIDRowSuffixDataKeys() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

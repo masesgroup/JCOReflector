@@ -103,7 +103,10 @@ public class ModelService extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ModelService(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,15 @@ public class ModelService extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member FromName.
+     *
+     * @param scope the argument of type {@code ModelItem}
+     * @param name the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Services.ModelService.FromName" target="_top">.NET documentation</a>
+     */
     public ModelItem FromName(ModelItem scope, java.lang.String name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -171,6 +183,16 @@ public class ModelService extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member FromName.
+     *
+     * @param scope the argument of type {@code ModelItem}
+     * @param name the argument of type {@code java.lang.String}
+     * @param comparison the argument of type {@code StringComparison}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Services.ModelService.FromName" target="_top">.NET documentation</a>
+     */
     public ModelItem FromName(ModelItem scope, java.lang.String name, StringComparison comparison) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -186,6 +208,15 @@ public class ModelService extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Find.
+     *
+     * @param startingItem the argument of type {@code ModelItem}
+     * @param match the argument of type {@code Predicate_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Services.ModelService.Find" target="_top">.NET documentation</a>
+     */
     public IEnumerable_1 Find(ModelItem startingItem, Predicate_1 match) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +232,15 @@ public class ModelService extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Find.
+     *
+     * @param startingItem the argument of type {@code ModelItem}
+     * @param type the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Services.ModelService.Find" target="_top">.NET documentation</a>
+     */
     public IEnumerable_1 Find(ModelItem startingItem, NetType type) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -220,6 +260,13 @@ public class ModelService extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Root.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Services.ModelService.Root" target="_top">.NET documentation</a>
+     */
     public ModelItem getRoot() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

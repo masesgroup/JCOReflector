@@ -101,7 +101,10 @@ public class DoubleAnimationBase extends system.windows.media.animation.Animatio
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DoubleAnimationBase(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,19 @@ public class DoubleAnimationBase extends system.windows.media.animation.Animatio
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetCurrentValue.
+     *
+     * @param defaultOriginValue the argument of type {@code double}
+     * @param defaultDestinationValue the argument of type {@code double}
+     * @param animationClock the argument of type {@code AnimationClock}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Animation.DoubleAnimationBase.GetCurrentValue" target="_top">.NET documentation</a>
+     */
     public double GetCurrentValue(double defaultOriginValue, double defaultDestinationValue, AnimationClock animationClock) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +210,25 @@ public class DoubleAnimationBase extends system.windows.media.animation.Animatio
         }
     }
 
+    /**
+     * Invokes the .NET member GetCurrentValue.
+     *
+     * @param defaultOriginValue the argument of type {@code NetObject}
+     * @param defaultDestinationValue the argument of type {@code NetObject}
+     * @param animationClock the argument of type {@code AnimationClock}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Animation.DoubleAnimationBase.GetCurrentValue" target="_top">.NET documentation</a>
+     */
     public NetObject GetCurrentValue(NetObject defaultOriginValue, NetObject defaultDestinationValue, AnimationClock animationClock) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -209,6 +244,18 @@ public class DoubleAnimationBase extends system.windows.media.animation.Animatio
         }
     }
 
+    /**
+     * Invokes the .NET member CloneNewDoubleAnimationBase.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Animation.DoubleAnimationBase.CloneNewDoubleAnimationBase" target="_top">.NET documentation</a>
+     */
     public DoubleAnimationBase CloneNewDoubleAnimationBase() throws Throwable, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

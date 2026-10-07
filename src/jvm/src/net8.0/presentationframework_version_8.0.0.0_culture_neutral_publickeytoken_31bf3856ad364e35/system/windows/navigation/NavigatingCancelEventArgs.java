@@ -103,7 +103,10 @@ public class NavigatingCancelEventArgs extends system.componentmodel.CancelEvent
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public NavigatingCancelEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -162,6 +165,13 @@ public class NavigatingCancelEventArgs extends system.componentmodel.CancelEvent
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsNavigationInitiator.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Navigation.NavigatingCancelEventArgs.IsNavigationInitiator" target="_top">.NET documentation</a>
+     */
     public boolean getIsNavigationInitiator() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -176,6 +186,13 @@ public class NavigatingCancelEventArgs extends system.componentmodel.CancelEvent
         }
     }
 
+    /**
+     * Gets the value of the .NET property WebRequest.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Navigation.NavigatingCancelEventArgs.WebRequest" target="_top">.NET documentation</a>
+     */
     public WebRequest getWebRequest() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -191,6 +208,13 @@ public class NavigatingCancelEventArgs extends system.componentmodel.CancelEvent
         }
     }
 
+    /**
+     * Gets the value of the .NET property Content.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Navigation.NavigatingCancelEventArgs.Content" target="_top">.NET documentation</a>
+     */
     public NetObject getContent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,6 +230,13 @@ public class NavigatingCancelEventArgs extends system.componentmodel.CancelEvent
         }
     }
 
+    /**
+     * Gets the value of the .NET property ExtraData.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Navigation.NavigatingCancelEventArgs.ExtraData" target="_top">.NET documentation</a>
+     */
     public NetObject getExtraData() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -221,6 +252,13 @@ public class NavigatingCancelEventArgs extends system.componentmodel.CancelEvent
         }
     }
 
+    /**
+     * Gets the value of the .NET property Navigator.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Navigation.NavigatingCancelEventArgs.Navigator" target="_top">.NET documentation</a>
+     */
     public NetObject getNavigator() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -236,6 +274,13 @@ public class NavigatingCancelEventArgs extends system.componentmodel.CancelEvent
         }
     }
 
+    /**
+     * Gets the value of the .NET property Uri.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Navigation.NavigatingCancelEventArgs.Uri" target="_top">.NET documentation</a>
+     */
     public Uri getUri() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -251,6 +296,13 @@ public class NavigatingCancelEventArgs extends system.componentmodel.CancelEvent
         }
     }
 
+    /**
+     * Gets the value of the .NET property ContentStateToSave.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Navigation.NavigatingCancelEventArgs.ContentStateToSave" target="_top">.NET documentation</a>
+     */
     public CustomContentState getContentStateToSave() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -266,6 +318,13 @@ public class NavigatingCancelEventArgs extends system.componentmodel.CancelEvent
         }
     }
 
+    /**
+     * Sets the value of the .NET property ContentStateToSave.
+     *
+     * @param ContentStateToSave the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Navigation.NavigatingCancelEventArgs.ContentStateToSave" target="_top">.NET documentation</a>
+     */
     public void setContentStateToSave(CustomContentState ContentStateToSave) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -276,6 +335,13 @@ public class NavigatingCancelEventArgs extends system.componentmodel.CancelEvent
         }
     }
 
+    /**
+     * Gets the value of the .NET property TargetContentState.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Navigation.NavigatingCancelEventArgs.TargetContentState" target="_top">.NET documentation</a>
+     */
     public CustomContentState getTargetContentState() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -291,6 +357,13 @@ public class NavigatingCancelEventArgs extends system.componentmodel.CancelEvent
         }
     }
 
+    /**
+     * Gets the value of the .NET property NavigationMode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Navigation.NavigatingCancelEventArgs.NavigationMode" target="_top">.NET documentation</a>
+     */
     public NavigationMode getNavigationMode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

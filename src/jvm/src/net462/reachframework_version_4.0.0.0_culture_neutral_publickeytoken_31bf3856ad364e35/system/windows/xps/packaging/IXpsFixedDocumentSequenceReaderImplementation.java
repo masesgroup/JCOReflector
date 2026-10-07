@@ -104,7 +104,10 @@ public class IXpsFixedDocumentSequenceReaderImplementation extends NetObject imp
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IXpsFixedDocumentSequenceReaderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,14 @@ public class IXpsFixedDocumentSequenceReaderImplementation extends NetObject imp
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetFixedDocument.
+     *
+     * @param documentSource the argument of type {@code Uri}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.IXpsFixedDocumentSequenceReader.GetFixedDocument" target="_top">.NET documentation</a>
+     */
     public IXpsFixedDocumentReader GetFixedDocument(Uri documentSource) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -165,6 +176,13 @@ public class IXpsFixedDocumentSequenceReaderImplementation extends NetObject imp
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property FixedDocuments.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.IXpsFixedDocumentSequenceReader.FixedDocuments" target="_top">.NET documentation</a>
+     */
     public ReadOnlyCollection_1 getFixedDocuments() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +198,13 @@ public class IXpsFixedDocumentSequenceReaderImplementation extends NetObject imp
         }
     }
 
+    /**
+     * Gets the value of the .NET property PrintTicket.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.IXpsFixedDocumentSequenceReader.PrintTicket" target="_top">.NET documentation</a>
+     */
     public PrintTicket getPrintTicket() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -195,6 +220,13 @@ public class IXpsFixedDocumentSequenceReaderImplementation extends NetObject imp
         }
     }
 
+    /**
+     * Gets the value of the .NET property Uri.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.IXpsFixedDocumentSequenceReader.Uri" target="_top">.NET documentation</a>
+     */
     public Uri getUri() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -210,6 +242,13 @@ public class IXpsFixedDocumentSequenceReaderImplementation extends NetObject imp
         }
     }
 
+    /**
+     * Gets the value of the .NET property Thumbnail.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.IXpsFixedDocumentSequenceReader.Thumbnail" target="_top">.NET documentation</a>
+     */
     public XpsThumbnail getThumbnail() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

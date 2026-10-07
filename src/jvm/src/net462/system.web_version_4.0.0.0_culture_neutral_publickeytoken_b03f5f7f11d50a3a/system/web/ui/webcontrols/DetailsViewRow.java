@@ -101,7 +101,10 @@ public class DetailsViewRow extends system.web.ui.webcontrols.TableRow  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DetailsViewRow(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,15 @@ public class DetailsViewRow extends system.web.ui.webcontrols.TableRow  {
     public DetailsViewRow() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param rowIndex the argument of type {@code int}
+     * @param rowType the argument of type {@code DataControlRowType}
+     * @param rowState the argument of type {@code DataControlRowState}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.DetailsViewRow.-ctor" target="_top">.NET documentation</a>
+     */
     public DetailsViewRow(int rowIndex, DataControlRowType rowType, DataControlRowState rowState) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +182,13 @@ public class DetailsViewRow extends system.web.ui.webcontrols.TableRow  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property RowIndex.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.DetailsViewRow.RowIndex" target="_top">.NET documentation</a>
+     */
     public int getRowIndex() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -210,6 +229,13 @@ public class DetailsViewRow extends system.web.ui.webcontrols.TableRow  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RowState.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.DetailsViewRow.RowState" target="_top">.NET documentation</a>
+     */
     public DataControlRowState getRowState() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -225,6 +251,13 @@ public class DetailsViewRow extends system.web.ui.webcontrols.TableRow  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RowType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.DetailsViewRow.RowType" target="_top">.NET documentation</a>
+     */
     public DataControlRowType getRowType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

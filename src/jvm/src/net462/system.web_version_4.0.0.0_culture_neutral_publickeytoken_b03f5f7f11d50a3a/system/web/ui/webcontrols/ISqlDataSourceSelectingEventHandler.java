@@ -52,5 +52,11 @@ import system.web.ui.webcontrols.SqlDataSourceSelectingEventArgs;
  * @version 2.0.0.0
  */
 public interface ISqlDataSourceSelectingEventHandler {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param sender the .NET argument of type {@code System.Object}
+     * @param e the .NET argument of type {@code System.Web.UI.WebControls.SqlDataSourceSelectingEventArgs}
+     */
     public void Invoke(NetObject sender, SqlDataSourceSelectingEventArgs e);
 }

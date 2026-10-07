@@ -100,7 +100,10 @@ public class ActivityTrackingCondition extends system.workflow.runtime.tracking.
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ActivityTrackingCondition(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class ActivityTrackingCondition extends system.workflow.runtime.tracking.
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.ActivityTrackingCondition.-ctor" target="_top">.NET documentation</a>
+     */
     public ActivityTrackingCondition() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -157,6 +166,15 @@ public class ActivityTrackingCondition extends system.workflow.runtime.tracking.
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param member the argument of type {@code java.lang.String}
+     * @param value the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.ActivityTrackingCondition.-ctor" target="_top">.NET documentation</a>
+     */
     public ActivityTrackingCondition(java.lang.String member, java.lang.String value) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file

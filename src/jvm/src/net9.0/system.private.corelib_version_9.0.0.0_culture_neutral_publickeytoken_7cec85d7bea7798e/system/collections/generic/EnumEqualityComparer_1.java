@@ -101,7 +101,10 @@ public class EnumEqualityComparer_1<T extends IJCOBridgeReflected> extends syste
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public EnumEqualityComparer_1(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class EnumEqualityComparer_1<T extends IJCOBridgeReflected> extends syste
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.EnumEqualityComparer-1.-ctor" target="_top">.NET documentation</a>
+     */
     public EnumEqualityComparer_1() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +173,15 @@ public class EnumEqualityComparer_1<T extends IJCOBridgeReflected> extends syste
     
     // Methods section
     
+    /**
+     * Invokes the .NET member EqualsByKey.
+     *
+     * @param x the argument of type {@code T}
+     * @param y the argument of type {@code T}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.EnumEqualityComparer-1.EqualsByKey" target="_top">.NET documentation</a>
+     */
     public boolean EqualsByKey(T x, T y) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,6 +196,14 @@ public class EnumEqualityComparer_1<T extends IJCOBridgeReflected> extends syste
         }
     }
 
+    /**
+     * Invokes the .NET member GetHashCodeByKey.
+     *
+     * @param obj the argument of type {@code T}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.EnumEqualityComparer-1.GetHashCodeByKey" target="_top">.NET documentation</a>
+     */
     public int GetHashCodeByKey(T obj) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -218,6 +244,17 @@ public class EnumEqualityComparer_1<T extends IJCOBridgeReflected> extends syste
         }
     }
 
+    /**
+     * Invokes the .NET member GetObjectData.
+     *
+     * @param info the argument of type {@code SerializationInfo}
+     * @param context the argument of type {@code StreamingContext}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.EnumEqualityComparer-1.GetObjectData" target="_top">.NET documentation</a>
+     */
     public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

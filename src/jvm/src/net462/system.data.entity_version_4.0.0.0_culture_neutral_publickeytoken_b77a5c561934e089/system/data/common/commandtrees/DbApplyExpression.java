@@ -101,7 +101,10 @@ public class DbApplyExpression extends system.data.common.commandtrees.DbExpress
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DbApplyExpression(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,14 @@ public class DbApplyExpression extends system.data.common.commandtrees.DbExpress
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Accept.
+     *
+     * @param visitor the argument of type {@code DbExpressionVisitor}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbApplyExpression.Accept" target="_top">.NET documentation</a>
+     */
     public void Accept(DbExpressionVisitor visitor) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -170,6 +181,13 @@ public class DbApplyExpression extends system.data.common.commandtrees.DbExpress
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Apply.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbApplyExpression.Apply" target="_top">.NET documentation</a>
+     */
     public DbExpressionBinding getApply() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -185,6 +203,13 @@ public class DbApplyExpression extends system.data.common.commandtrees.DbExpress
         }
     }
 
+    /**
+     * Gets the value of the .NET property Input.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbApplyExpression.Input" target="_top">.NET documentation</a>
+     */
     public DbExpressionBinding getInput() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

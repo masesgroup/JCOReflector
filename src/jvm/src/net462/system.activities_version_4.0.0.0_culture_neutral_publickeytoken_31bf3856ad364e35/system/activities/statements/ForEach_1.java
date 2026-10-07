@@ -101,7 +101,10 @@ public class ForEach_1<T extends IJCOBridgeReflected> extends system.activities.
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ForEach_1(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,13 @@ public class ForEach_1<T extends IJCOBridgeReflected> extends system.activities.
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.ForEach-1.-ctor" target="_top">.NET documentation</a>
+     */
     public ForEach_1() throws Throwable, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +178,13 @@ public class ForEach_1<T extends IJCOBridgeReflected> extends system.activities.
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Body.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.ForEach-1.Body" target="_top">.NET documentation</a>
+     */
     public ActivityAction_1 getBody() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +200,13 @@ public class ForEach_1<T extends IJCOBridgeReflected> extends system.activities.
         }
     }
 
+    /**
+     * Sets the value of the .NET property Body.
+     *
+     * @param Body the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.ForEach-1.Body" target="_top">.NET documentation</a>
+     */
     public void setBody(ActivityAction_1 Body) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +217,13 @@ public class ForEach_1<T extends IJCOBridgeReflected> extends system.activities.
         }
     }
 
+    /**
+     * Gets the value of the .NET property Values.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.ForEach-1.Values" target="_top">.NET documentation</a>
+     */
     public InArgument_1 getValues() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +239,13 @@ public class ForEach_1<T extends IJCOBridgeReflected> extends system.activities.
         }
     }
 
+    /**
+     * Sets the value of the .NET property Values.
+     *
+     * @param Values the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.ForEach-1.Values" target="_top">.NET documentation</a>
+     */
     public void setValues(InArgument_1 Values) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

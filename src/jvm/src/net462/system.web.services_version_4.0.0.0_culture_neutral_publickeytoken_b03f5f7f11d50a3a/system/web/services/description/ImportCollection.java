@@ -100,7 +100,10 @@ public class ImportCollection extends system.web.services.description.ServiceDes
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ImportCollection(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,14 @@ public class ImportCollection extends system.web.services.description.ServiceDes
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Contains.
+     *
+     * @param _import the argument of type {@code Import}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.ImportCollection.Contains" target="_top">.NET documentation</a>
+     */
     public boolean Contains(Import _import) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -169,6 +180,14 @@ public class ImportCollection extends system.web.services.description.ServiceDes
         }
     }
 
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param _import the argument of type {@code Import}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.ImportCollection.Add" target="_top">.NET documentation</a>
+     */
     public int Add(Import _import) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -209,6 +228,14 @@ public class ImportCollection extends system.web.services.description.ServiceDes
         }
     }
 
+    /**
+     * Invokes the .NET member IndexOf.
+     *
+     * @param _import the argument of type {@code Import}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.ImportCollection.IndexOf" target="_top">.NET documentation</a>
+     */
     public int IndexOf(Import _import) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -249,6 +276,14 @@ public class ImportCollection extends system.web.services.description.ServiceDes
         }
     }
 
+    /**
+     * Invokes the .NET member CopyTo.
+     *
+     * @param array the argument of type {@code Import[]}
+     * @param index the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.ImportCollection.CopyTo" target="_top">.NET documentation</a>
+     */
     public void CopyTo(Import[] array, int index) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -259,6 +294,14 @@ public class ImportCollection extends system.web.services.description.ServiceDes
         }
     }
 
+    /**
+     * Invokes the .NET member Insert.
+     *
+     * @param index the argument of type {@code int}
+     * @param _import the argument of type {@code Import}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.ImportCollection.Insert" target="_top">.NET documentation</a>
+     */
     public void Insert(int index, Import _import) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -269,6 +312,13 @@ public class ImportCollection extends system.web.services.description.ServiceDes
         }
     }
 
+    /**
+     * Invokes the .NET member Remove.
+     *
+     * @param _import the argument of type {@code Import}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.ImportCollection.Remove" target="_top">.NET documentation</a>
+     */
     public void Remove(Import _import) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -103,7 +103,10 @@ public class EntityObject extends system.data.objects.dataclasses.StructuralObje
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public EntityObject(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -159,8 +162,12 @@ public class EntityObject extends system.data.objects.dataclasses.StructuralObje
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIEntityWithChangeTracker method available in IEntityWithChangeTracker to obtain an object with an invocable method
+     *
+     * @param changeTracker the argument of type {@code IEntityChangeTracker}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DataClasses.IEntityWithChangeTracker.SetChangeTracker" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void SetChangeTracker(IEntityChangeTracker changeTracker) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEntityWithChangeTracker to obtain the full interface.");
     }
@@ -169,6 +176,13 @@ public class EntityObject extends system.data.objects.dataclasses.StructuralObje
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property EntityKey.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DataClasses.EntityObject.EntityKey" target="_top">.NET documentation</a>
+     */
     public EntityKey getEntityKey() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +198,13 @@ public class EntityObject extends system.data.objects.dataclasses.StructuralObje
         }
     }
 
+    /**
+     * Sets the value of the .NET property EntityKey.
+     *
+     * @param EntityKey the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DataClasses.EntityObject.EntityKey" target="_top">.NET documentation</a>
+     */
     public void setEntityKey(EntityKey EntityKey) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +215,13 @@ public class EntityObject extends system.data.objects.dataclasses.StructuralObje
         }
     }
 
+    /**
+     * Gets the value of the .NET property EntityState.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DataClasses.EntityObject.EntityState" target="_top">.NET documentation</a>
+     */
     public EntityState getEntityState() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -100,7 +100,10 @@ public class HostServices extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public HostServices(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class HostServices extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.CompilerServices.HostServices.-ctor" target="_top">.NET documentation</a>
+     */
     public HostServices() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +174,13 @@ public class HostServices extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property VBHost.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.CompilerServices.HostServices.VBHost" target="_top">.NET documentation</a>
+     */
     public static IVbHost getVBHost() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -180,6 +196,13 @@ public class HostServices extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property VBHost.
+     *
+     * @param VBHost the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.CompilerServices.HostServices.VBHost" target="_top">.NET documentation</a>
+     */
     public static void setVBHost(IVbHost VBHost) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

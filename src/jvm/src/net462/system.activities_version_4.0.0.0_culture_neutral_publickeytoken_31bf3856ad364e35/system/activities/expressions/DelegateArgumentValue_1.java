@@ -101,7 +101,10 @@ public class DelegateArgumentValue_1<T extends IJCOBridgeReflected> extends syst
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DelegateArgumentValue_1(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class DelegateArgumentValue_1<T extends IJCOBridgeReflected> extends syst
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Expressions.DelegateArgumentValue-1.-ctor" target="_top">.NET documentation</a>
+     */
     public DelegateArgumentValue_1() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -160,6 +169,13 @@ public class DelegateArgumentValue_1<T extends IJCOBridgeReflected> extends syst
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param delegateArgument the argument of type {@code DelegateArgument}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Expressions.DelegateArgumentValue-1.-ctor" target="_top">.NET documentation</a>
+     */
     public DelegateArgumentValue_1(DelegateArgument delegateArgument) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -180,6 +196,13 @@ public class DelegateArgumentValue_1<T extends IJCOBridgeReflected> extends syst
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property DelegateArgument.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Expressions.DelegateArgumentValue-1.DelegateArgument" target="_top">.NET documentation</a>
+     */
     public DelegateArgument getDelegateArgument() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -195,6 +218,13 @@ public class DelegateArgumentValue_1<T extends IJCOBridgeReflected> extends syst
         }
     }
 
+    /**
+     * Sets the value of the .NET property DelegateArgument.
+     *
+     * @param DelegateArgument the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Expressions.DelegateArgumentValue-1.DelegateArgument" target="_top">.NET documentation</a>
+     */
     public void setDelegateArgument(DelegateArgument DelegateArgument) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

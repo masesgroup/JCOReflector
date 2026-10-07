@@ -104,7 +104,10 @@ public class StylusPointDescription extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public StylusPointDescription(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,12 @@ public class StylusPointDescription extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.StylusPointDescription.-ctor" target="_top">.NET documentation</a>
+     */
     public StylusPointDescription() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -161,6 +170,24 @@ public class StylusPointDescription extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param stylusPointPropertyInfos the argument of type {@code IEnumerable_1}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.StylusPointDescription.-ctor" target="_top">.NET documentation</a>
+     */
     public StylusPointDescription(IEnumerable_1 stylusPointPropertyInfos) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         try {
             // add reference to assemblyName.dll file
@@ -175,6 +202,16 @@ public class StylusPointDescription extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member AreCompatible.
+     *
+     * @param stylusPointDescription1 the argument of type {@code StylusPointDescription}
+     * @param stylusPointDescription2 the argument of type {@code StylusPointDescription}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.StylusPointDescription.AreCompatible" target="_top">.NET documentation</a>
+     */
     public static boolean AreCompatible(StylusPointDescription stylusPointDescription1, StylusPointDescription stylusPointDescription2) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -189,6 +226,15 @@ public class StylusPointDescription extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member HasProperty.
+     *
+     * @param stylusPointProperty the argument of type {@code StylusPointProperty}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.StylusPointDescription.HasProperty" target="_top">.NET documentation</a>
+     */
     public boolean HasProperty(StylusPointProperty stylusPointProperty) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +249,15 @@ public class StylusPointDescription extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsSubsetOf.
+     *
+     * @param stylusPointDescriptionSuperset the argument of type {@code StylusPointDescription}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.StylusPointDescription.IsSubsetOf" target="_top">.NET documentation</a>
+     */
     public boolean IsSubsetOf(StylusPointDescription stylusPointDescriptionSuperset) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -217,6 +272,14 @@ public class StylusPointDescription extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetStylusPointProperties.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.StylusPointDescription.GetStylusPointProperties" target="_top">.NET documentation</a>
+     */
     public ReadOnlyCollection_1 GetStylusPointProperties() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -232,6 +295,23 @@ public class StylusPointDescription extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetCommonDescription.
+     *
+     * @param stylusPointDescription the argument of type {@code StylusPointDescription}
+     * @param stylusPointDescriptionPreserveInfo the argument of type {@code StylusPointDescription}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.StylusPointDescription.GetCommonDescription" target="_top">.NET documentation</a>
+     */
     public static StylusPointDescription GetCommonDescription(StylusPointDescription stylusPointDescription, StylusPointDescription stylusPointDescriptionPreserveInfo) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -247,6 +327,16 @@ public class StylusPointDescription extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetPropertyInfo.
+     *
+     * @param stylusPointProperty the argument of type {@code StylusPointProperty}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.StylusPointDescription.GetPropertyInfo" target="_top">.NET documentation</a>
+     */
     public StylusPointPropertyInfo GetPropertyInfo(StylusPointProperty stylusPointProperty) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -266,6 +356,13 @@ public class StylusPointDescription extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property PropertyCount.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.StylusPointDescription.PropertyCount" target="_top">.NET documentation</a>
+     */
     public int getPropertyCount() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

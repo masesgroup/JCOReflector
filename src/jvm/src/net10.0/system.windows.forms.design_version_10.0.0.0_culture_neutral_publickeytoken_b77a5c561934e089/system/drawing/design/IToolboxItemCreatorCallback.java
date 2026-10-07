@@ -52,5 +52,12 @@ import system.drawing.design.ToolboxItem;
  * @version 2.0.0.0
  */
 public interface IToolboxItemCreatorCallback {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param serializedObject the .NET argument of type {@code System.Object}
+     * @param format the .NET argument of type {@code System.String}
+     * @return the value returned to the CLR
+     */
     public ToolboxItem Invoke(NetObject serializedObject, java.lang.String format);
 }

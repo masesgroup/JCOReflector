@@ -99,7 +99,10 @@ public class AddressingVersion extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public AddressingVersion(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -158,6 +161,13 @@ public class AddressingVersion extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property None.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.AddressingVersion.None" target="_top">.NET documentation</a>
+     */
     public static AddressingVersion getNone() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -173,6 +183,13 @@ public class AddressingVersion extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property WSAddressing10.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.AddressingVersion.WSAddressing10" target="_top">.NET documentation</a>
+     */
     public static AddressingVersion getWSAddressing10() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -188,6 +205,13 @@ public class AddressingVersion extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property WSAddressingAugust2004.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.AddressingVersion.WSAddressingAugust2004" target="_top">.NET documentation</a>
+     */
     public static AddressingVersion getWSAddressingAugust2004() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

@@ -103,7 +103,10 @@ public class DragEventArgs extends system.EventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DragEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,21 @@ public class DragEventArgs extends system.EventArgs  {
     public DragEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param data the argument of type {@code IDataObject}
+     * @param keyState the argument of type {@code int}
+     * @param x the argument of type {@code int}
+     * @param y the argument of type {@code int}
+     * @param allowedEffect the argument of type {@code DragDropEffects}
+     * @param effect the argument of type {@code DragDropEffects}
+     * @param dropImageType the argument of type {@code DropImageType}
+     * @param message the argument of type {@code java.lang.String}
+     * @param messageReplacementToken the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DragEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public DragEventArgs(IDataObject data, int keyState, int x, int y, DragDropEffects allowedEffect, DragDropEffects effect, DropImageType dropImageType, java.lang.String message, java.lang.String messageReplacementToken) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -163,6 +181,18 @@ public class DragEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param data the argument of type {@code IDataObject}
+     * @param keyState the argument of type {@code int}
+     * @param x the argument of type {@code int}
+     * @param y the argument of type {@code int}
+     * @param allowedEffect the argument of type {@code DragDropEffects}
+     * @param effect the argument of type {@code DragDropEffects}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DragEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public DragEventArgs(IDataObject data, int keyState, int x, int y, DragDropEffects allowedEffect, DragDropEffects effect) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -182,6 +212,13 @@ public class DragEventArgs extends system.EventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property KeyState.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DragEventArgs.KeyState" target="_top">.NET documentation</a>
+     */
     public int getKeyState() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -222,6 +259,13 @@ public class DragEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property X.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DragEventArgs.X" target="_top">.NET documentation</a>
+     */
     public int getX() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -262,6 +306,13 @@ public class DragEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Y.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DragEventArgs.Y" target="_top">.NET documentation</a>
+     */
     public int getY() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -302,6 +353,13 @@ public class DragEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Message.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DragEventArgs.Message" target="_top">.NET documentation</a>
+     */
     public java.lang.String getMessage() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -316,6 +374,13 @@ public class DragEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Message.
+     *
+     * @param Message the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DragEventArgs.Message" target="_top">.NET documentation</a>
+     */
     public void setMessage(java.lang.String Message) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -326,6 +391,13 @@ public class DragEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MessageReplacementToken.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DragEventArgs.MessageReplacementToken" target="_top">.NET documentation</a>
+     */
     public java.lang.String getMessageReplacementToken() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -340,6 +412,13 @@ public class DragEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MessageReplacementToken.
+     *
+     * @param MessageReplacementToken the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DragEventArgs.MessageReplacementToken" target="_top">.NET documentation</a>
+     */
     public void setMessageReplacementToken(java.lang.String MessageReplacementToken) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -350,6 +429,13 @@ public class DragEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AllowedEffect.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DragEventArgs.AllowedEffect" target="_top">.NET documentation</a>
+     */
     public DragDropEffects getAllowedEffect() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -365,6 +451,13 @@ public class DragEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Effect.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DragEventArgs.Effect" target="_top">.NET documentation</a>
+     */
     public DragDropEffects getEffect() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -380,6 +473,13 @@ public class DragEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Effect.
+     *
+     * @param Effect the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DragEventArgs.Effect" target="_top">.NET documentation</a>
+     */
     public void setEffect(DragDropEffects Effect) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -390,6 +490,13 @@ public class DragEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DropImageType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DragEventArgs.DropImageType" target="_top">.NET documentation</a>
+     */
     public DropImageType getDropImageType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -405,6 +512,13 @@ public class DragEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DropImageType.
+     *
+     * @param DropImageType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DragEventArgs.DropImageType" target="_top">.NET documentation</a>
+     */
     public void setDropImageType(DropImageType DropImageType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -415,6 +529,13 @@ public class DragEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Data.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DragEventArgs.Data" target="_top">.NET documentation</a>
+     */
     public IDataObject getData() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

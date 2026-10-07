@@ -103,7 +103,10 @@ public class HostProtectionAttribute extends system.security.permissions.CodeAcc
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public HostProtectionAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,12 @@ public class HostProtectionAttribute extends system.security.permissions.CodeAcc
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.HostProtectionAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public HostProtectionAttribute() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -160,6 +169,14 @@ public class HostProtectionAttribute extends system.security.permissions.CodeAcc
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param action the argument of type {@code SecurityAction}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.HostProtectionAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public HostProtectionAttribute(SecurityAction action) throws Throwable, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
@@ -174,6 +191,20 @@ public class HostProtectionAttribute extends system.security.permissions.CodeAcc
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CreatePermission.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.HostProtectionAttribute.CreatePermission" target="_top">.NET documentation</a>
+     */
     public IPermission CreatePermission() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +224,13 @@ public class HostProtectionAttribute extends system.security.permissions.CodeAcc
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ExternalProcessMgmt.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.HostProtectionAttribute.ExternalProcessMgmt" target="_top">.NET documentation</a>
+     */
     public boolean getExternalProcessMgmt() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +245,13 @@ public class HostProtectionAttribute extends system.security.permissions.CodeAcc
         }
     }
 
+    /**
+     * Sets the value of the .NET property ExternalProcessMgmt.
+     *
+     * @param ExternalProcessMgmt the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.HostProtectionAttribute.ExternalProcessMgmt" target="_top">.NET documentation</a>
+     */
     public void setExternalProcessMgmt(boolean ExternalProcessMgmt) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -217,6 +262,13 @@ public class HostProtectionAttribute extends system.security.permissions.CodeAcc
         }
     }
 
+    /**
+     * Gets the value of the .NET property ExternalThreading.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.HostProtectionAttribute.ExternalThreading" target="_top">.NET documentation</a>
+     */
     public boolean getExternalThreading() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -231,6 +283,13 @@ public class HostProtectionAttribute extends system.security.permissions.CodeAcc
         }
     }
 
+    /**
+     * Sets the value of the .NET property ExternalThreading.
+     *
+     * @param ExternalThreading the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.HostProtectionAttribute.ExternalThreading" target="_top">.NET documentation</a>
+     */
     public void setExternalThreading(boolean ExternalThreading) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -241,6 +300,13 @@ public class HostProtectionAttribute extends system.security.permissions.CodeAcc
         }
     }
 
+    /**
+     * Gets the value of the .NET property MayLeakOnAbort.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.HostProtectionAttribute.MayLeakOnAbort" target="_top">.NET documentation</a>
+     */
     public boolean getMayLeakOnAbort() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -255,6 +321,13 @@ public class HostProtectionAttribute extends system.security.permissions.CodeAcc
         }
     }
 
+    /**
+     * Sets the value of the .NET property MayLeakOnAbort.
+     *
+     * @param MayLeakOnAbort the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.HostProtectionAttribute.MayLeakOnAbort" target="_top">.NET documentation</a>
+     */
     public void setMayLeakOnAbort(boolean MayLeakOnAbort) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -265,6 +338,13 @@ public class HostProtectionAttribute extends system.security.permissions.CodeAcc
         }
     }
 
+    /**
+     * Gets the value of the .NET property SecurityInfrastructure.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.HostProtectionAttribute.SecurityInfrastructure" target="_top">.NET documentation</a>
+     */
     public boolean getSecurityInfrastructure() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -279,6 +359,13 @@ public class HostProtectionAttribute extends system.security.permissions.CodeAcc
         }
     }
 
+    /**
+     * Sets the value of the .NET property SecurityInfrastructure.
+     *
+     * @param SecurityInfrastructure the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.HostProtectionAttribute.SecurityInfrastructure" target="_top">.NET documentation</a>
+     */
     public void setSecurityInfrastructure(boolean SecurityInfrastructure) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -289,6 +376,13 @@ public class HostProtectionAttribute extends system.security.permissions.CodeAcc
         }
     }
 
+    /**
+     * Gets the value of the .NET property SelfAffectingProcessMgmt.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.HostProtectionAttribute.SelfAffectingProcessMgmt" target="_top">.NET documentation</a>
+     */
     public boolean getSelfAffectingProcessMgmt() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -303,6 +397,13 @@ public class HostProtectionAttribute extends system.security.permissions.CodeAcc
         }
     }
 
+    /**
+     * Sets the value of the .NET property SelfAffectingProcessMgmt.
+     *
+     * @param SelfAffectingProcessMgmt the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.HostProtectionAttribute.SelfAffectingProcessMgmt" target="_top">.NET documentation</a>
+     */
     public void setSelfAffectingProcessMgmt(boolean SelfAffectingProcessMgmt) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -313,6 +414,13 @@ public class HostProtectionAttribute extends system.security.permissions.CodeAcc
         }
     }
 
+    /**
+     * Gets the value of the .NET property SelfAffectingThreading.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.HostProtectionAttribute.SelfAffectingThreading" target="_top">.NET documentation</a>
+     */
     public boolean getSelfAffectingThreading() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -327,6 +435,13 @@ public class HostProtectionAttribute extends system.security.permissions.CodeAcc
         }
     }
 
+    /**
+     * Sets the value of the .NET property SelfAffectingThreading.
+     *
+     * @param SelfAffectingThreading the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.HostProtectionAttribute.SelfAffectingThreading" target="_top">.NET documentation</a>
+     */
     public void setSelfAffectingThreading(boolean SelfAffectingThreading) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -337,6 +452,13 @@ public class HostProtectionAttribute extends system.security.permissions.CodeAcc
         }
     }
 
+    /**
+     * Gets the value of the .NET property SharedState.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.HostProtectionAttribute.SharedState" target="_top">.NET documentation</a>
+     */
     public boolean getSharedState() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -351,6 +473,13 @@ public class HostProtectionAttribute extends system.security.permissions.CodeAcc
         }
     }
 
+    /**
+     * Sets the value of the .NET property SharedState.
+     *
+     * @param SharedState the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.HostProtectionAttribute.SharedState" target="_top">.NET documentation</a>
+     */
     public void setSharedState(boolean SharedState) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -361,6 +490,13 @@ public class HostProtectionAttribute extends system.security.permissions.CodeAcc
         }
     }
 
+    /**
+     * Gets the value of the .NET property Synchronization.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.HostProtectionAttribute.Synchronization" target="_top">.NET documentation</a>
+     */
     public boolean getSynchronization() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -375,6 +511,13 @@ public class HostProtectionAttribute extends system.security.permissions.CodeAcc
         }
     }
 
+    /**
+     * Sets the value of the .NET property Synchronization.
+     *
+     * @param Synchronization the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.HostProtectionAttribute.Synchronization" target="_top">.NET documentation</a>
+     */
     public void setSynchronization(boolean Synchronization) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -385,6 +528,13 @@ public class HostProtectionAttribute extends system.security.permissions.CodeAcc
         }
     }
 
+    /**
+     * Gets the value of the .NET property UI.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.HostProtectionAttribute.UI" target="_top">.NET documentation</a>
+     */
     public boolean getUI() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -399,6 +549,13 @@ public class HostProtectionAttribute extends system.security.permissions.CodeAcc
         }
     }
 
+    /**
+     * Sets the value of the .NET property UI.
+     *
+     * @param UI the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.HostProtectionAttribute.UI" target="_top">.NET documentation</a>
+     */
     public void setUI(boolean UI) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -409,6 +566,13 @@ public class HostProtectionAttribute extends system.security.permissions.CodeAcc
         }
     }
 
+    /**
+     * Gets the value of the .NET property Resources.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.HostProtectionAttribute.Resources" target="_top">.NET documentation</a>
+     */
     public HostProtectionResource getResources() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -424,6 +588,13 @@ public class HostProtectionAttribute extends system.security.permissions.CodeAcc
         }
     }
 
+    /**
+     * Sets the value of the .NET property Resources.
+     *
+     * @param Resources the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.HostProtectionAttribute.Resources" target="_top">.NET documentation</a>
+     */
     public void setResources(HostProtectionResource Resources) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

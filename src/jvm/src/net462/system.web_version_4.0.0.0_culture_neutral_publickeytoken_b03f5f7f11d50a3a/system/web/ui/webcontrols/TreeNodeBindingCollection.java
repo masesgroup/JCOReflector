@@ -100,7 +100,10 @@ public class TreeNodeBindingCollection extends system.web.ui.StateManagedCollect
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TreeNodeBindingCollection(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,14 @@ public class TreeNodeBindingCollection extends system.web.ui.StateManagedCollect
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Contains.
+     *
+     * @param binding the argument of type {@code TreeNodeBinding}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.TreeNodeBindingCollection.Contains" target="_top">.NET documentation</a>
+     */
     public boolean Contains(TreeNodeBinding binding) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -169,6 +180,14 @@ public class TreeNodeBindingCollection extends system.web.ui.StateManagedCollect
         }
     }
 
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param binding the argument of type {@code TreeNodeBinding}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.TreeNodeBindingCollection.Add" target="_top">.NET documentation</a>
+     */
     public int Add(TreeNodeBinding binding) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -209,6 +228,14 @@ public class TreeNodeBindingCollection extends system.web.ui.StateManagedCollect
         }
     }
 
+    /**
+     * Invokes the .NET member IndexOf.
+     *
+     * @param binding the argument of type {@code TreeNodeBinding}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.TreeNodeBindingCollection.IndexOf" target="_top">.NET documentation</a>
+     */
     public int IndexOf(TreeNodeBinding binding) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -249,6 +276,15 @@ public class TreeNodeBindingCollection extends system.web.ui.StateManagedCollect
         }
     }
 
+    /**
+     * Invokes the .NET member CopyTo.
+     *
+     * @param bindingArray the argument of type {@code TreeNodeBinding[]}
+     * @param index the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.TreeNodeBindingCollection.CopyTo" target="_top">.NET documentation</a>
+     */
     public void CopyTo(TreeNodeBinding[] bindingArray, int index) throws Throwable, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -259,6 +295,14 @@ public class TreeNodeBindingCollection extends system.web.ui.StateManagedCollect
         }
     }
 
+    /**
+     * Invokes the .NET member Insert.
+     *
+     * @param index the argument of type {@code int}
+     * @param binding the argument of type {@code TreeNodeBinding}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.TreeNodeBindingCollection.Insert" target="_top">.NET documentation</a>
+     */
     public void Insert(int index, TreeNodeBinding binding) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -269,6 +313,13 @@ public class TreeNodeBindingCollection extends system.web.ui.StateManagedCollect
         }
     }
 
+    /**
+     * Invokes the .NET member Remove.
+     *
+     * @param binding the argument of type {@code TreeNodeBinding}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.TreeNodeBindingCollection.Remove" target="_top">.NET documentation</a>
+     */
     public void Remove(TreeNodeBinding binding) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -279,6 +330,13 @@ public class TreeNodeBindingCollection extends system.web.ui.StateManagedCollect
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveAt.
+     *
+     * @param index the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.TreeNodeBindingCollection.RemoveAt" target="_top">.NET documentation</a>
+     */
     public void RemoveAt(int index) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

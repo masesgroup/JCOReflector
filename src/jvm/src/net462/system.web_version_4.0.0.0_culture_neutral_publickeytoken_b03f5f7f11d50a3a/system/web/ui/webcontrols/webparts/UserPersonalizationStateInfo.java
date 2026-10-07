@@ -100,7 +100,10 @@ public class UserPersonalizationStateInfo extends system.web.ui.webcontrols.webp
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public UserPersonalizationStateInfo(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,28 @@ public class UserPersonalizationStateInfo extends system.web.ui.webcontrols.webp
     public UserPersonalizationStateInfo() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param path the argument of type {@code java.lang.String}
+     * @param lastUpdatedDate the argument of type {@code DateTime}
+     * @param size the argument of type {@code int}
+     * @param username the argument of type {@code java.lang.String}
+     * @param lastActivityDate the argument of type {@code DateTime}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidTimeZoneException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.UserPersonalizationStateInfo.-ctor" target="_top">.NET documentation</a>
+     */
     public UserPersonalizationStateInfo(java.lang.String path, DateTime lastUpdatedDate, int size, java.lang.String username, DateTime lastActivityDate) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.InvalidTimeZoneException, system.NotSupportedException, system.OverflowException {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +194,18 @@ public class UserPersonalizationStateInfo extends system.web.ui.webcontrols.webp
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property LastActivityDate.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidTimeZoneException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.UserPersonalizationStateInfo.LastActivityDate" target="_top">.NET documentation</a>
+     */
     public DateTime getLastActivityDate() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +221,13 @@ public class UserPersonalizationStateInfo extends system.web.ui.webcontrols.webp
         }
     }
 
+    /**
+     * Gets the value of the .NET property Username.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.UserPersonalizationStateInfo.Username" target="_top">.NET documentation</a>
+     */
     public java.lang.String getUsername() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

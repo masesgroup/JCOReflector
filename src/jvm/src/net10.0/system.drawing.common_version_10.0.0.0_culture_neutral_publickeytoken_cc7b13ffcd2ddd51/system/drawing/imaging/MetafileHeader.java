@@ -102,7 +102,10 @@ public class MetafileHeader extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public MetafileHeader(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,21 @@ public class MetafileHeader extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member IsDisplay.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.MetafileHeader.IsDisplay" target="_top">.NET documentation</a>
+     */
     public boolean IsDisplay() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -171,6 +189,13 @@ public class MetafileHeader extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsEmf.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.MetafileHeader.IsEmf" target="_top">.NET documentation</a>
+     */
     public boolean IsEmf() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -185,6 +210,13 @@ public class MetafileHeader extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsEmfOrEmfPlus.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.MetafileHeader.IsEmfOrEmfPlus" target="_top">.NET documentation</a>
+     */
     public boolean IsEmfOrEmfPlus() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -199,6 +231,13 @@ public class MetafileHeader extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsEmfPlus.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.MetafileHeader.IsEmfPlus" target="_top">.NET documentation</a>
+     */
     public boolean IsEmfPlus() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -213,6 +252,13 @@ public class MetafileHeader extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsEmfPlusDual.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.MetafileHeader.IsEmfPlusDual" target="_top">.NET documentation</a>
+     */
     public boolean IsEmfPlusDual() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -227,6 +273,13 @@ public class MetafileHeader extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsEmfPlusOnly.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.MetafileHeader.IsEmfPlusOnly" target="_top">.NET documentation</a>
+     */
     public boolean IsEmfPlusOnly() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -241,6 +294,13 @@ public class MetafileHeader extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsWmf.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.MetafileHeader.IsWmf" target="_top">.NET documentation</a>
+     */
     public boolean IsWmf() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -255,6 +315,13 @@ public class MetafileHeader extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsWmfPlaceable.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.MetafileHeader.IsWmfPlaceable" target="_top">.NET documentation</a>
+     */
     public boolean IsWmfPlaceable() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -273,6 +340,13 @@ public class MetafileHeader extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property EmfPlusHeaderSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.MetafileHeader.EmfPlusHeaderSize" target="_top">.NET documentation</a>
+     */
     public int getEmfPlusHeaderSize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -313,6 +387,13 @@ public class MetafileHeader extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LogicalDpiX.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.MetafileHeader.LogicalDpiX" target="_top">.NET documentation</a>
+     */
     public int getLogicalDpiX() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -353,6 +434,13 @@ public class MetafileHeader extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LogicalDpiY.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.MetafileHeader.LogicalDpiY" target="_top">.NET documentation</a>
+     */
     public int getLogicalDpiY() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -393,6 +481,13 @@ public class MetafileHeader extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MetafileSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.MetafileHeader.MetafileSize" target="_top">.NET documentation</a>
+     */
     public int getMetafileSize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -433,6 +528,13 @@ public class MetafileHeader extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Version.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.MetafileHeader.Version" target="_top">.NET documentation</a>
+     */
     public int getVersion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -473,6 +575,13 @@ public class MetafileHeader extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DpiX.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.MetafileHeader.DpiX" target="_top">.NET documentation</a>
+     */
     public Single getDpiX() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -488,6 +597,13 @@ public class MetafileHeader extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DpiY.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.MetafileHeader.DpiY" target="_top">.NET documentation</a>
+     */
     public Single getDpiY() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -503,6 +619,13 @@ public class MetafileHeader extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Type.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.MetafileHeader.Type" target="_top">.NET documentation</a>
+     */
     public MetafileType getType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -518,6 +641,24 @@ public class MetafileHeader extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property WmfHeader.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.MetafileHeader.WmfHeader" target="_top">.NET documentation</a>
+     */
     public MetaHeader getWmfHeader() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.OverflowException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -533,6 +674,13 @@ public class MetafileHeader extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Bounds.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.MetafileHeader.Bounds" target="_top">.NET documentation</a>
+     */
     public Rectangle getBounds() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

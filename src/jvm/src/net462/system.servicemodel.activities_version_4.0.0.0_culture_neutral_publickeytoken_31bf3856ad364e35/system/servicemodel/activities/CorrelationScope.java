@@ -101,7 +101,10 @@ public class CorrelationScope extends system.activities.NativeActivity  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CorrelationScope(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,13 @@ public class CorrelationScope extends system.activities.NativeActivity  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.CorrelationScope.-ctor" target="_top">.NET documentation</a>
+     */
     public CorrelationScope() throws Throwable, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
@@ -162,6 +172,13 @@ public class CorrelationScope extends system.activities.NativeActivity  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ShouldSerializeCorrelatesWith.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.CorrelationScope.ShouldSerializeCorrelatesWith" target="_top">.NET documentation</a>
+     */
     public boolean ShouldSerializeCorrelatesWith() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +197,13 @@ public class CorrelationScope extends system.activities.NativeActivity  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Body.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.CorrelationScope.Body" target="_top">.NET documentation</a>
+     */
     public Activity getBody() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -195,6 +219,13 @@ public class CorrelationScope extends system.activities.NativeActivity  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Body.
+     *
+     * @param Body the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.CorrelationScope.Body" target="_top">.NET documentation</a>
+     */
     public void setBody(Activity Body) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +236,13 @@ public class CorrelationScope extends system.activities.NativeActivity  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CorrelatesWith.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.CorrelationScope.CorrelatesWith" target="_top">.NET documentation</a>
+     */
     public InArgument_1 getCorrelatesWith() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -220,6 +258,13 @@ public class CorrelationScope extends system.activities.NativeActivity  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CorrelatesWith.
+     *
+     * @param CorrelatesWith the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.CorrelationScope.CorrelatesWith" target="_top">.NET documentation</a>
+     */
     public void setCorrelatesWith(InArgument_1 CorrelatesWith) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

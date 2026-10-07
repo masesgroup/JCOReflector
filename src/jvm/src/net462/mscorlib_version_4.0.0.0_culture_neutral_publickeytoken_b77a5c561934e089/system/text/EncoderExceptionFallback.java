@@ -100,7 +100,10 @@ public class EncoderExceptionFallback extends system.text.EncoderFallback  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public EncoderExceptionFallback(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class EncoderExceptionFallback extends system.text.EncoderFallback  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.EncoderExceptionFallback.-ctor" target="_top">.NET documentation</a>
+     */
     public EncoderExceptionFallback() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -161,6 +170,13 @@ public class EncoderExceptionFallback extends system.text.EncoderFallback  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CreateFallbackBuffer.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.EncoderExceptionFallback.CreateFallbackBuffer" target="_top">.NET documentation</a>
+     */
     public EncoderFallbackBuffer CreateFallbackBuffer() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

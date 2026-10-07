@@ -100,7 +100,10 @@ public class MimeFormatter extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public MimeFormatter(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,22 @@ public class MimeFormatter extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetInitializer.
+     *
+     * @param type the argument of type {@code NetType}
+     * @param methodInfo the argument of type {@code LogicalMethodInfo}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.MimeFormatter.GetInitializer" target="_top">.NET documentation</a>
+     */
     public static NetObject GetInitializer(NetType type, LogicalMethodInfo methodInfo) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -168,6 +187,14 @@ public class MimeFormatter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetInitializer.
+     *
+     * @param methodInfo the argument of type {@code LogicalMethodInfo}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.MimeFormatter.GetInitializer" target="_top">.NET documentation</a>
+     */
     public NetObject GetInitializer(LogicalMethodInfo methodInfo) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +210,22 @@ public class MimeFormatter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetInitializers.
+     *
+     * @param type the argument of type {@code NetType}
+     * @param methodInfos the argument of type {@code LogicalMethodInfo[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.MimeFormatter.GetInitializers" target="_top">.NET documentation</a>
+     */
     public static NetObject[] GetInitializers(NetType type, LogicalMethodInfo[] methodInfos) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -204,6 +247,14 @@ public class MimeFormatter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetInitializers.
+     *
+     * @param methodInfos the argument of type {@code LogicalMethodInfo[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.MimeFormatter.GetInitializers" target="_top">.NET documentation</a>
+     */
     public NetObject[] GetInitializers(LogicalMethodInfo[] methodInfos) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -225,6 +276,22 @@ public class MimeFormatter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateInstance.
+     *
+     * @param type the argument of type {@code NetType}
+     * @param initializer the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.MimeFormatter.CreateInstance" target="_top">.NET documentation</a>
+     */
     public static MimeFormatter CreateInstance(NetType type, NetObject initializer) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -240,6 +307,13 @@ public class MimeFormatter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Initialize.
+     *
+     * @param initializer the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.MimeFormatter.Initialize" target="_top">.NET documentation</a>
+     */
     public void Initialize(NetObject initializer) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -98,7 +98,10 @@ public class IDocumentPersistenceServiceImplementation extends NetObject impleme
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IDocumentPersistenceServiceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -140,6 +143,14 @@ public class IDocumentPersistenceServiceImplementation extends NetObject impleme
 
     // Methods section
     
+    /**
+     * Invokes the .NET member Load.
+     *
+     * @param fileName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Hosting.IDocumentPersistenceService.Load" target="_top">.NET documentation</a>
+     */
     public NetObject Load(java.lang.String fileName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -155,6 +166,13 @@ public class IDocumentPersistenceServiceImplementation extends NetObject impleme
         }
     }
 
+    /**
+     * Invokes the .NET member Flush.
+     *
+     * @param documentRoot the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Hosting.IDocumentPersistenceService.Flush" target="_top">.NET documentation</a>
+     */
     public void Flush(NetObject documentRoot) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -165,6 +183,13 @@ public class IDocumentPersistenceServiceImplementation extends NetObject impleme
         }
     }
 
+    /**
+     * Invokes the .NET member OnModelChanged.
+     *
+     * @param documentRoot the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Hosting.IDocumentPersistenceService.OnModelChanged" target="_top">.NET documentation</a>
+     */
     public void OnModelChanged(NetObject documentRoot) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -105,7 +105,9 @@ public class JsonException extends NetException {
         super();
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
      */
     public JsonException(java.lang.Object instance) {
         super(instance);
@@ -166,6 +168,17 @@ public class JsonException extends NetException {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param message the argument of type {@code java.lang.String}
+     * @param path the argument of type {@code java.lang.String}
+     * @param lineNumber the argument of type {@code Nullable_1}
+     * @param bytePositionInLine the argument of type {@code Nullable_1}
+     * @param innerException the argument of type {@code NetException}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonException.-ctor" target="_top">.NET documentation</a>
+     */
     public JsonException(java.lang.String message, java.lang.String path, Nullable_1 lineNumber, Nullable_1 bytePositionInLine, NetException innerException) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -176,6 +189,16 @@ public class JsonException extends NetException {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param message the argument of type {@code java.lang.String}
+     * @param path the argument of type {@code java.lang.String}
+     * @param lineNumber the argument of type {@code Nullable_1}
+     * @param bytePositionInLine the argument of type {@code Nullable_1}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonException.-ctor" target="_top">.NET documentation</a>
+     */
     public JsonException(java.lang.String message, java.lang.String path, Nullable_1 lineNumber, Nullable_1 bytePositionInLine) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -190,6 +213,23 @@ public class JsonException extends NetException {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetObjectData.
+     *
+     * @param info the argument of type {@code SerializationInfo}
+     * @param context the argument of type {@code StreamingContext}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.runtime.serialization.SerializationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonException.GetObjectData" target="_top">.NET documentation</a>
+     */
     public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.runtime.serialization.SerializationException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +244,13 @@ public class JsonException extends NetException {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property BytePositionInLine.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonException.BytePositionInLine" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getBytePositionInLine() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -219,6 +266,13 @@ public class JsonException extends NetException {
         }
     }
 
+    /**
+     * Sets the value of the .NET property BytePositionInLine.
+     *
+     * @param BytePositionInLine the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonException.BytePositionInLine" target="_top">.NET documentation</a>
+     */
     public void setBytePositionInLine(Nullable_1 BytePositionInLine) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -229,6 +283,13 @@ public class JsonException extends NetException {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LineNumber.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonException.LineNumber" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getLineNumber() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -244,6 +305,13 @@ public class JsonException extends NetException {
         }
     }
 
+    /**
+     * Sets the value of the .NET property LineNumber.
+     *
+     * @param LineNumber the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonException.LineNumber" target="_top">.NET documentation</a>
+     */
     public void setLineNumber(Nullable_1 LineNumber) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -254,6 +322,13 @@ public class JsonException extends NetException {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Path.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonException.Path" target="_top">.NET documentation</a>
+     */
     public java.lang.String getPath() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -268,6 +343,13 @@ public class JsonException extends NetException {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Path.
+     *
+     * @param Path the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonException.Path" target="_top">.NET documentation</a>
+     */
     public void setPath(java.lang.String Path) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

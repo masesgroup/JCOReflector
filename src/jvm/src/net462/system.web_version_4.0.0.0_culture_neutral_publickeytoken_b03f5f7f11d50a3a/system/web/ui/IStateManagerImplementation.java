@@ -98,7 +98,10 @@ public class IStateManagerImplementation extends NetObject implements IStateMana
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IStateManagerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -140,6 +143,13 @@ public class IStateManagerImplementation extends NetObject implements IStateMana
 
     // Methods section
     
+    /**
+     * Invokes the .NET member SaveViewState.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.IStateManager.SaveViewState" target="_top">.NET documentation</a>
+     */
     public NetObject SaveViewState() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -155,6 +165,13 @@ public class IStateManagerImplementation extends NetObject implements IStateMana
         }
     }
 
+    /**
+     * Invokes the .NET member LoadViewState.
+     *
+     * @param state the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.IStateManager.LoadViewState" target="_top">.NET documentation</a>
+     */
     public void LoadViewState(NetObject state) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -165,6 +182,12 @@ public class IStateManagerImplementation extends NetObject implements IStateMana
         }
     }
 
+    /**
+     * Invokes the .NET member TrackViewState.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.IStateManager.TrackViewState" target="_top">.NET documentation</a>
+     */
     public void TrackViewState() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -179,6 +202,13 @@ public class IStateManagerImplementation extends NetObject implements IStateMana
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsTrackingViewState.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.IStateManager.IsTrackingViewState" target="_top">.NET documentation</a>
+     */
     public boolean getIsTrackingViewState() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

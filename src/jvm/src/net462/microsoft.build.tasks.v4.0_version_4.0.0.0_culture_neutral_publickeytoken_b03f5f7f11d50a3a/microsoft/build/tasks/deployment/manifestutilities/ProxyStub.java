@@ -98,7 +98,10 @@ public class ProxyStub extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ProxyStub(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -145,6 +148,12 @@ public class ProxyStub extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ProxyStub.-ctor" target="_top">.NET documentation</a>
+     */
     public ProxyStub() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -163,6 +172,13 @@ public class ProxyStub extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property BaseInterface.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ProxyStub.BaseInterface" target="_top">.NET documentation</a>
+     */
     public java.lang.String getBaseInterface() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -177,6 +193,13 @@ public class ProxyStub extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IID.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ProxyStub.IID" target="_top">.NET documentation</a>
+     */
     public java.lang.String getIID() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -191,6 +214,13 @@ public class ProxyStub extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ProxyStub.Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +235,13 @@ public class ProxyStub extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NumMethods.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ProxyStub.NumMethods" target="_top">.NET documentation</a>
+     */
     public java.lang.String getNumMethods() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -219,6 +256,13 @@ public class ProxyStub extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TlbId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ProxyStub.TlbId" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTlbId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -233,6 +277,13 @@ public class ProxyStub extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlBaseInterface.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ProxyStub.XmlBaseInterface" target="_top">.NET documentation</a>
+     */
     public java.lang.String getXmlBaseInterface() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -247,6 +298,13 @@ public class ProxyStub extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property XmlBaseInterface.
+     *
+     * @param XmlBaseInterface the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ProxyStub.XmlBaseInterface" target="_top">.NET documentation</a>
+     */
     public void setXmlBaseInterface(java.lang.String XmlBaseInterface) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -257,6 +315,13 @@ public class ProxyStub extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlIID.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ProxyStub.XmlIID" target="_top">.NET documentation</a>
+     */
     public java.lang.String getXmlIID() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -271,6 +336,13 @@ public class ProxyStub extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property XmlIID.
+     *
+     * @param XmlIID the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ProxyStub.XmlIID" target="_top">.NET documentation</a>
+     */
     public void setXmlIID(java.lang.String XmlIID) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -281,6 +353,13 @@ public class ProxyStub extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ProxyStub.XmlName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getXmlName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -295,6 +374,13 @@ public class ProxyStub extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property XmlName.
+     *
+     * @param XmlName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ProxyStub.XmlName" target="_top">.NET documentation</a>
+     */
     public void setXmlName(java.lang.String XmlName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -305,6 +391,13 @@ public class ProxyStub extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlNumMethods.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ProxyStub.XmlNumMethods" target="_top">.NET documentation</a>
+     */
     public java.lang.String getXmlNumMethods() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -319,6 +412,13 @@ public class ProxyStub extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property XmlNumMethods.
+     *
+     * @param XmlNumMethods the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ProxyStub.XmlNumMethods" target="_top">.NET documentation</a>
+     */
     public void setXmlNumMethods(java.lang.String XmlNumMethods) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -329,6 +429,13 @@ public class ProxyStub extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlTlbId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ProxyStub.XmlTlbId" target="_top">.NET documentation</a>
+     */
     public java.lang.String getXmlTlbId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -343,6 +450,13 @@ public class ProxyStub extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property XmlTlbId.
+     *
+     * @param XmlTlbId the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.ProxyStub.XmlTlbId" target="_top">.NET documentation</a>
+     */
     public void setXmlTlbId(java.lang.String XmlTlbId) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

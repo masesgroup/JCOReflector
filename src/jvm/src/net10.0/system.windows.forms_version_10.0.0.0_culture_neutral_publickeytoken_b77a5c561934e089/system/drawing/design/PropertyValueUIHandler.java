@@ -161,7 +161,10 @@ public class PropertyValueUIHandler extends JCVoidDelegate implements IJCVoidEve
         callerInstance = instance;
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PropertyValueUIHandler(java.lang.Object instance) throws Throwable {
         super(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
@@ -183,6 +186,15 @@ public class PropertyValueUIHandler extends JCVoidDelegate implements IJCVoidEve
         return JCOBridgeInstance.translateException(ne);
     }
 
+    /**
+     * Invokes the .NET member DynamicInvoke.
+     *
+     * @param context the argument of type {@code ITypeDescriptorContext}
+     * @param propDesc the argument of type {@code PropertyDescriptor}
+     * @param valueUIItemList the argument of type {@code NetArrayList}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Delegate.DynamicInvoke" target="_top">.NET documentation</a>
+     */
     public void DynamicInvoke(ITypeDescriptorContext context, PropertyDescriptor propDesc, NetArrayList valueUIItemList) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,7 +206,11 @@ public class PropertyValueUIHandler extends JCVoidDelegate implements IJCVoidEve
     }
 
     /**
-     * Methods invoked in JVM when an event is raised in CLR 
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param context the .NET argument of type {@code System.ComponentModel.ITypeDescriptorContext}
+     * @param propDesc the .NET argument of type {@code System.ComponentModel.PropertyDescriptor}
+     * @param valueUIItemList the .NET argument of type {@code System.Collections.ArrayList}
      */
     public void Invoke(ITypeDescriptorContext context, PropertyDescriptor propDesc, NetArrayList valueUIItemList) {
     }

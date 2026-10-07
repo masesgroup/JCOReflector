@@ -53,5 +53,11 @@ import system.diagnostics.ActivityCreationOptions_1;
  * @version 2.0.0.0
  */
 public interface ISampleActivity_1<T extends IJCOBridgeReflected> {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param options the .NET argument of type {@code System.Diagnostics.ActivityCreationOptions`1[T]&}
+     * @return the value returned to the CLR
+     */
     public ActivitySamplingResult Invoke(ActivityCreationOptions_1 options);
 }

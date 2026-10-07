@@ -99,7 +99,10 @@ public class AsyncLocalValueChangedArgs_1<T extends IJCOBridgeReflected> extends
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public AsyncLocalValueChangedArgs_1(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -158,6 +161,13 @@ public class AsyncLocalValueChangedArgs_1<T extends IJCOBridgeReflected> extends
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ThreadContextChanged.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.AsyncLocalValueChangedArgs-1.ThreadContextChanged" target="_top">.NET documentation</a>
+     */
     public boolean getThreadContextChanged() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -172,6 +182,13 @@ public class AsyncLocalValueChangedArgs_1<T extends IJCOBridgeReflected> extends
         }
     }
 
+    /**
+     * Sets the value of the .NET property ThreadContextChanged.
+     *
+     * @param ThreadContextChanged the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.AsyncLocalValueChangedArgs-1.ThreadContextChanged" target="_top">.NET documentation</a>
+     */
     public void setThreadContextChanged(boolean ThreadContextChanged) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +199,13 @@ public class AsyncLocalValueChangedArgs_1<T extends IJCOBridgeReflected> extends
         }
     }
 
+    /**
+     * Gets the value of the .NET property CurrentValue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.AsyncLocalValueChangedArgs-1.CurrentValue" target="_top">.NET documentation</a>
+     */
     public T getCurrentValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -196,6 +220,13 @@ public class AsyncLocalValueChangedArgs_1<T extends IJCOBridgeReflected> extends
         }
     }
 
+    /**
+     * Sets the value of the .NET property CurrentValue.
+     *
+     * @param CurrentValue the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.AsyncLocalValueChangedArgs-1.CurrentValue" target="_top">.NET documentation</a>
+     */
     public void setCurrentValue(T CurrentValue) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,6 +237,13 @@ public class AsyncLocalValueChangedArgs_1<T extends IJCOBridgeReflected> extends
         }
     }
 
+    /**
+     * Gets the value of the .NET property PreviousValue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.AsyncLocalValueChangedArgs-1.PreviousValue" target="_top">.NET documentation</a>
+     */
     public T getPreviousValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -220,6 +258,13 @@ public class AsyncLocalValueChangedArgs_1<T extends IJCOBridgeReflected> extends
         }
     }
 
+    /**
+     * Sets the value of the .NET property PreviousValue.
+     *
+     * @param PreviousValue the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.AsyncLocalValueChangedArgs-1.PreviousValue" target="_top">.NET documentation</a>
+     */
     public void setPreviousValue(T PreviousValue) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

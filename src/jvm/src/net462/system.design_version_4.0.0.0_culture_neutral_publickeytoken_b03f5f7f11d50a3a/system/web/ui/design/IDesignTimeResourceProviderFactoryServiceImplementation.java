@@ -99,7 +99,10 @@ public class IDesignTimeResourceProviderFactoryServiceImplementation extends Net
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IDesignTimeResourceProviderFactoryServiceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -141,6 +144,13 @@ public class IDesignTimeResourceProviderFactoryServiceImplementation extends Net
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetFactory.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.IDesignTimeResourceProviderFactoryService.GetFactory" target="_top">.NET documentation</a>
+     */
     public DesignTimeResourceProviderFactory GetFactory() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

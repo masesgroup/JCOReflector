@@ -114,7 +114,10 @@ public class XmlQueryRuntime extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XmlQueryRuntime(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -169,6 +172,22 @@ public class XmlQueryRuntime extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member EarlyBoundFunctionExists.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param namespaceUri the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlQueryRuntime.EarlyBoundFunctionExists" target="_top">.NET documentation</a>
+     */
     public boolean EarlyBoundFunctionExists(java.lang.String name, java.lang.String namespaceUri) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +202,18 @@ public class XmlQueryRuntime extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member FindIndex.
+     *
+     * @param context the argument of type {@code XPathNavigator}
+     * @param indexId the argument of type {@code int}
+     * @param index the argument of type {@code JCORefOut<XmlILIndex>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlQueryRuntime.FindIndex" target="_top">.NET documentation</a>
+     */
     public boolean FindIndex(XPathNavigator context, int indexId, JCORefOut<XmlILIndex> index) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +228,14 @@ public class XmlQueryRuntime extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsGlobalComputed.
+     *
+     * @param index the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlQueryRuntime.IsGlobalComputed" target="_top">.NET documentation</a>
+     */
     public boolean IsGlobalComputed(int index) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -211,6 +250,16 @@ public class XmlQueryRuntime extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsQNameEqual.
+     *
+     * @param navigator the argument of type {@code XPathNavigator}
+     * @param indexLocalName the argument of type {@code int}
+     * @param indexNamespaceUri the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlQueryRuntime.IsQNameEqual" target="_top">.NET documentation</a>
+     */
     public boolean IsQNameEqual(XPathNavigator navigator, int indexLocalName, int indexNamespaceUri) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -225,6 +274,15 @@ public class XmlQueryRuntime extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsQNameEqual.
+     *
+     * @param n1 the argument of type {@code XPathNavigator}
+     * @param n2 the argument of type {@code XPathNavigator}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlQueryRuntime.IsQNameEqual" target="_top">.NET documentation</a>
+     */
     public boolean IsQNameEqual(XPathNavigator n1, XPathNavigator n2) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -239,6 +297,17 @@ public class XmlQueryRuntime extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member MatchesXmlType.
+     *
+     * @param seq the argument of type {@code IList_1}
+     * @param indexType the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlQueryRuntime.MatchesXmlType" target="_top">.NET documentation</a>
+     */
     public boolean MatchesXmlType(IList_1 seq, int indexType) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -253,6 +322,15 @@ public class XmlQueryRuntime extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member MatchesXmlType.
+     *
+     * @param seq the argument of type {@code IList_1}
+     * @param code the argument of type {@code XmlTypeCode}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlQueryRuntime.MatchesXmlType" target="_top">.NET documentation</a>
+     */
     public boolean MatchesXmlType(IList_1 seq, XmlTypeCode code) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -267,6 +345,17 @@ public class XmlQueryRuntime extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member MatchesXmlType.
+     *
+     * @param item the argument of type {@code XPathItem}
+     * @param indexType the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlQueryRuntime.MatchesXmlType" target="_top">.NET documentation</a>
+     */
     public boolean MatchesXmlType(XPathItem item, int indexType) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -281,6 +370,15 @@ public class XmlQueryRuntime extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member MatchesXmlType.
+     *
+     * @param item the argument of type {@code XPathItem}
+     * @param code the argument of type {@code XmlTypeCode}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlQueryRuntime.MatchesXmlType" target="_top">.NET documentation</a>
+     */
     public boolean MatchesXmlType(XPathItem item, XmlTypeCode code) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -295,6 +393,16 @@ public class XmlQueryRuntime extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ComparePosition.
+     *
+     * @param navigatorThis the argument of type {@code XPathNavigator}
+     * @param navigatorThat the argument of type {@code XPathNavigator}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlQueryRuntime.ComparePosition" target="_top">.NET documentation</a>
+     */
     public int ComparePosition(XPathNavigator navigatorThis, XPathNavigator navigatorThat) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -335,6 +443,14 @@ public class XmlQueryRuntime extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member OnCurrentNodeChanged.
+     *
+     * @param currentNode the argument of type {@code XPathNavigator}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlQueryRuntime.OnCurrentNodeChanged" target="_top">.NET documentation</a>
+     */
     public static int OnCurrentNodeChanged(XPathNavigator currentNode) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -375,6 +491,23 @@ public class XmlQueryRuntime extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member EndSequenceConstruction.
+     *
+     * @param output the argument of type {@code JCORefOut<XmlQueryOutput>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlQueryRuntime.EndSequenceConstruction" target="_top">.NET documentation</a>
+     */
     public IList_1 EndSequenceConstruction(JCORefOut<XmlQueryOutput> output) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -390,6 +523,19 @@ public class XmlQueryRuntime extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DocOrderDistinct.
+     *
+     * @param seq the argument of type {@code IList_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlQueryRuntime.DocOrderDistinct" target="_top">.NET documentation</a>
+     */
     public IList_1 DocOrderDistinct(IList_1 seq) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -405,6 +551,14 @@ public class XmlQueryRuntime extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DebugGetGlobalValue.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlQueryRuntime.DebugGetGlobalValue" target="_top">.NET documentation</a>
+     */
     public IList DebugGetGlobalValue(java.lang.String name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -420,6 +574,26 @@ public class XmlQueryRuntime extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ChangeTypeXsltArgument.
+     *
+     * @param indexType the argument of type {@code int}
+     * @param value the argument of type {@code NetObject}
+     * @param destinationType the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlQueryRuntime.ChangeTypeXsltArgument" target="_top">.NET documentation</a>
+     */
     public NetObject ChangeTypeXsltArgument(int indexType, NetObject value, NetType destinationType) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.OverflowException, system.InvalidCastException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -435,6 +609,26 @@ public class XmlQueryRuntime extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ChangeTypeXsltResult.
+     *
+     * @param indexType the argument of type {@code int}
+     * @param value the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlQueryRuntime.ChangeTypeXsltResult" target="_top">.NET documentation</a>
+     */
     public NetObject ChangeTypeXsltResult(int indexType, NetObject value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.OverflowException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -450,6 +644,14 @@ public class XmlQueryRuntime extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DebugGetXsltValue.
+     *
+     * @param seq the argument of type {@code IList}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlQueryRuntime.DebugGetXsltValue" target="_top">.NET documentation</a>
+     */
     public NetObject DebugGetXsltValue(IList seq) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -465,6 +667,14 @@ public class XmlQueryRuntime extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetEarlyBoundObject.
+     *
+     * @param index the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlQueryRuntime.GetEarlyBoundObject" target="_top">.NET documentation</a>
+     */
     public NetObject GetEarlyBoundObject(int index) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -480,6 +690,14 @@ public class XmlQueryRuntime extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetGlobalValue.
+     *
+     * @param index the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlQueryRuntime.GetGlobalValue" target="_top">.NET documentation</a>
+     */
     public NetObject GetGlobalValue(int index) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -495,6 +713,23 @@ public class XmlQueryRuntime extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GenerateId.
+     *
+     * @param navigator the argument of type {@code XPathNavigator}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlQueryRuntime.GenerateId" target="_top">.NET documentation</a>
+     */
     public java.lang.String GenerateId(XPathNavigator navigator) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -509,6 +744,14 @@ public class XmlQueryRuntime extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetAtomizedName.
+     *
+     * @param index the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlQueryRuntime.GetAtomizedName" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetAtomizedName(int index) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -523,6 +766,13 @@ public class XmlQueryRuntime extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DebugGetGlobalNames.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlQueryRuntime.DebugGetGlobalNames" target="_top">.NET documentation</a>
+     */
     public java.lang.String[] DebugGetGlobalNames() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -546,6 +796,26 @@ public class XmlQueryRuntime extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ParseTagName.
+     *
+     * @param tagName the argument of type {@code java.lang.String}
+     * @param indexPrefixMappings the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlQueryRuntime.ParseTagName" target="_top">.NET documentation</a>
+     */
     public XmlQualifiedName ParseTagName(java.lang.String tagName, int indexPrefixMappings) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.xml.XmlException, system.NotImplementedException, system.NotSupportedException, system.ObjectDisposedException, system.NullReferenceException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -561,6 +831,25 @@ public class XmlQueryRuntime extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ParseTagName.
+     *
+     * @param tagName the argument of type {@code java.lang.String}
+     * @param ns the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlQueryRuntime.ParseTagName" target="_top">.NET documentation</a>
+     */
     public XmlQualifiedName ParseTagName(java.lang.String tagName, java.lang.String ns) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.xml.XmlException, system.NotImplementedException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -576,6 +865,24 @@ public class XmlQueryRuntime extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member EndRtfConstruction.
+     *
+     * @param output the argument of type {@code JCORefOut<XmlQueryOutput>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlQueryRuntime.EndRtfConstruction" target="_top">.NET documentation</a>
+     */
     public XPathNavigator EndRtfConstruction(JCORefOut<XmlQueryOutput> output) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -591,6 +898,15 @@ public class XmlQueryRuntime extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member TextRtfConstruction.
+     *
+     * @param text the argument of type {@code java.lang.String}
+     * @param baseUri the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlQueryRuntime.TextRtfConstruction" target="_top">.NET documentation</a>
+     */
     public XPathNavigator TextRtfConstruction(java.lang.String text, java.lang.String baseUri) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -606,6 +922,27 @@ public class XmlQueryRuntime extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateCollation.
+     *
+     * @param collation the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlQueryRuntime.CreateCollation" target="_top">.NET documentation</a>
+     */
     public XmlCollation CreateCollation(java.lang.String collation) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.security.SecurityException, system.UriFormatException, system.OutOfMemoryException, system.NotSupportedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -621,6 +958,14 @@ public class XmlQueryRuntime extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetCollation.
+     *
+     * @param index the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlQueryRuntime.GetCollation" target="_top">.NET documentation</a>
+     */
     public XmlCollation GetCollation(int index) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -636,6 +981,14 @@ public class XmlQueryRuntime extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetNameFilter.
+     *
+     * @param index the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlQueryRuntime.GetNameFilter" target="_top">.NET documentation</a>
+     */
     public XmlNavigatorFilter GetNameFilter(int index) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -651,6 +1004,14 @@ public class XmlQueryRuntime extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetTypeFilter.
+     *
+     * @param nodeType the argument of type {@code XPathNodeType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlQueryRuntime.GetTypeFilter" target="_top">.NET documentation</a>
+     */
     public XmlNavigatorFilter GetTypeFilter(XPathNodeType nodeType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -666,6 +1027,16 @@ public class XmlQueryRuntime extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddNewIndex.
+     *
+     * @param context the argument of type {@code XPathNavigator}
+     * @param indexId the argument of type {@code int}
+     * @param index the argument of type {@code XmlILIndex}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlQueryRuntime.AddNewIndex" target="_top">.NET documentation</a>
+     */
     public void AddNewIndex(XPathNavigator context, int indexId, XmlILIndex index) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -676,6 +1047,14 @@ public class XmlQueryRuntime extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DebugSetGlobalValue.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param value the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlQueryRuntime.DebugSetGlobalValue" target="_top">.NET documentation</a>
+     */
     public void DebugSetGlobalValue(java.lang.String name, NetObject value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -686,6 +1065,19 @@ public class XmlQueryRuntime extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SendMessage.
+     *
+     * @param message the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlQueryRuntime.SendMessage" target="_top">.NET documentation</a>
+     */
     public void SendMessage(java.lang.String message) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -696,6 +1088,14 @@ public class XmlQueryRuntime extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetGlobalValue.
+     *
+     * @param index the argument of type {@code int}
+     * @param value the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlQueryRuntime.SetGlobalValue" target="_top">.NET documentation</a>
+     */
     public void SetGlobalValue(int index, NetObject value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -706,6 +1106,16 @@ public class XmlQueryRuntime extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member StartRtfConstruction.
+     *
+     * @param baseUri the argument of type {@code java.lang.String}
+     * @param output the argument of type {@code JCORefOut<XmlQueryOutput>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlQueryRuntime.StartRtfConstruction" target="_top">.NET documentation</a>
+     */
     public void StartRtfConstruction(java.lang.String baseUri, JCORefOut<XmlQueryOutput> output) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -716,6 +1126,15 @@ public class XmlQueryRuntime extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member StartSequenceConstruction.
+     *
+     * @param output the argument of type {@code JCORefOut<XmlQueryOutput>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlQueryRuntime.StartSequenceConstruction" target="_top">.NET documentation</a>
+     */
     public void StartSequenceConstruction(JCORefOut<XmlQueryOutput> output) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -726,6 +1145,22 @@ public class XmlQueryRuntime extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ThrowException.
+     *
+     * @param text the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlQueryRuntime.ThrowException" target="_top">.NET documentation</a>
+     */
     public void ThrowException(java.lang.String text) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -740,6 +1175,13 @@ public class XmlQueryRuntime extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property NameTable.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlQueryRuntime.NameTable" target="_top">.NET documentation</a>
+     */
     public XmlNameTable getNameTable() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -755,6 +1197,13 @@ public class XmlQueryRuntime extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ExternalContext.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlQueryRuntime.ExternalContext" target="_top">.NET documentation</a>
+     */
     public XmlQueryContext getExternalContext() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -770,6 +1219,13 @@ public class XmlQueryRuntime extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Output.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlQueryRuntime.Output" target="_top">.NET documentation</a>
+     */
     public XmlQueryOutput getOutput() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -785,6 +1241,13 @@ public class XmlQueryRuntime extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property XsltFunctions.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlQueryRuntime.XsltFunctions" target="_top">.NET documentation</a>
+     */
     public XsltLibrary getXsltFunctions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

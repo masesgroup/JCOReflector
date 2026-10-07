@@ -103,7 +103,9 @@ public class BadRequestException extends system.identitymodel.RequestException {
         super();
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
      */
     public BadRequestException(java.lang.Object instance) {
         super(instance);

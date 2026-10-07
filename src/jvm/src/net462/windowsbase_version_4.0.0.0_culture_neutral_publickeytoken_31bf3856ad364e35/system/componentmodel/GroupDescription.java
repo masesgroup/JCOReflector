@@ -103,7 +103,10 @@ public class GroupDescription extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public GroupDescription(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,15 @@ public class GroupDescription extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member NamesMatch.
+     *
+     * @param groupName the argument of type {@code NetObject}
+     * @param itemName the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.GroupDescription.NamesMatch" target="_top">.NET documentation</a>
+     */
     public boolean NamesMatch(NetObject groupName, NetObject itemName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -170,6 +182,13 @@ public class GroupDescription extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ShouldSerializeGroupNames.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.GroupDescription.ShouldSerializeGroupNames" target="_top">.NET documentation</a>
+     */
     public boolean ShouldSerializeGroupNames() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +203,13 @@ public class GroupDescription extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ShouldSerializeSortDescriptions.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.GroupDescription.ShouldSerializeSortDescriptions" target="_top">.NET documentation</a>
+     */
     public boolean ShouldSerializeSortDescriptions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +224,16 @@ public class GroupDescription extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GroupNameFromItem.
+     *
+     * @param item the argument of type {@code NetObject}
+     * @param level the argument of type {@code int}
+     * @param culture the argument of type {@code CultureInfo}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.GroupDescription.GroupNameFromItem" target="_top">.NET documentation</a>
+     */
     public NetObject GroupNameFromItem(NetObject item, int level, CultureInfo culture) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -217,6 +253,13 @@ public class GroupDescription extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CustomSort.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.GroupDescription.CustomSort" target="_top">.NET documentation</a>
+     */
     public IComparer getCustomSort() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -232,6 +275,26 @@ public class GroupDescription extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CustomSort.
+     *
+     * @param CustomSort the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.GroupDescription.CustomSort" target="_top">.NET documentation</a>
+     */
     public void setCustomSort(IComparer CustomSort) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.MissingMethodException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -242,6 +305,13 @@ public class GroupDescription extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property GroupNames.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.GroupDescription.GroupNames" target="_top">.NET documentation</a>
+     */
     public ObservableCollection_1 getGroupNames() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -257,6 +327,26 @@ public class GroupDescription extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SortDescriptions.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.GroupDescription.SortDescriptions" target="_top">.NET documentation</a>
+     */
     public SortDescriptionCollection getSortDescriptions() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.MissingMethodException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

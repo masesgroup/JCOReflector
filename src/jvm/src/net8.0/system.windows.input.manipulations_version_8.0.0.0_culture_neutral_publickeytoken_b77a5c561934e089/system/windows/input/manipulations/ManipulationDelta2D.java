@@ -99,7 +99,10 @@ public class ManipulationDelta2D extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ManipulationDelta2D(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -158,6 +161,13 @@ public class ManipulationDelta2D extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ExpansionX.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.Manipulations.ManipulationDelta2D.ExpansionX" target="_top">.NET documentation</a>
+     */
     public Single getExpansionX() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -173,6 +183,13 @@ public class ManipulationDelta2D extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ExpansionY.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.Manipulations.ManipulationDelta2D.ExpansionY" target="_top">.NET documentation</a>
+     */
     public Single getExpansionY() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +205,13 @@ public class ManipulationDelta2D extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Rotation.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.Manipulations.ManipulationDelta2D.Rotation" target="_top">.NET documentation</a>
+     */
     public Single getRotation() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +227,13 @@ public class ManipulationDelta2D extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ScaleX.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.Manipulations.ManipulationDelta2D.ScaleX" target="_top">.NET documentation</a>
+     */
     public Single getScaleX() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -218,6 +249,13 @@ public class ManipulationDelta2D extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ScaleY.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.Manipulations.ManipulationDelta2D.ScaleY" target="_top">.NET documentation</a>
+     */
     public Single getScaleY() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -233,6 +271,13 @@ public class ManipulationDelta2D extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TranslationX.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.Manipulations.ManipulationDelta2D.TranslationX" target="_top">.NET documentation</a>
+     */
     public Single getTranslationX() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -248,6 +293,13 @@ public class ManipulationDelta2D extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TranslationY.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.Manipulations.ManipulationDelta2D.TranslationY" target="_top">.NET documentation</a>
+     */
     public Single getTranslationY() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

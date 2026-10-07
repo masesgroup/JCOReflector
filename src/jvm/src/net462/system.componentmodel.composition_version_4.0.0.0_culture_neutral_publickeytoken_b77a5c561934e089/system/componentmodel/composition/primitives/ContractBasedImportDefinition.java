@@ -107,7 +107,10 @@ public class ContractBasedImportDefinition extends system.componentmodel.composi
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ContractBasedImportDefinition(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,31 @@ public class ContractBasedImportDefinition extends system.componentmodel.composi
     public ContractBasedImportDefinition() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param contractName the argument of type {@code java.lang.String}
+     * @param requiredTypeIdentity the argument of type {@code java.lang.String}
+     * @param requiredMetadata the argument of type {@code IEnumerable_1}
+     * @param cardinality the argument of type {@code ImportCardinality}
+     * @param isRecomposable the argument of type {@code boolean}
+     * @param isPrerequisite the argument of type {@code boolean}
+     * @param requiredCreationPolicy the argument of type {@code CreationPolicy}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.Primitives.ContractBasedImportDefinition.-ctor" target="_top">.NET documentation</a>
+     */
     public ContractBasedImportDefinition(java.lang.String contractName, java.lang.String requiredTypeIdentity, IEnumerable_1 requiredMetadata, ImportCardinality cardinality, boolean isRecomposable, boolean isPrerequisite, CreationPolicy requiredCreationPolicy) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +195,33 @@ public class ContractBasedImportDefinition extends system.componentmodel.composi
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param contractName the argument of type {@code java.lang.String}
+     * @param requiredTypeIdentity the argument of type {@code java.lang.String}
+     * @param requiredMetadata the argument of type {@code IEnumerable_1}
+     * @param cardinality the argument of type {@code ImportCardinality}
+     * @param isRecomposable the argument of type {@code boolean}
+     * @param isPrerequisite the argument of type {@code boolean}
+     * @param requiredCreationPolicy the argument of type {@code CreationPolicy}
+     * @param metadata the argument of type {@code IDictionary_2}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.Primitives.ContractBasedImportDefinition.-ctor" target="_top">.NET documentation</a>
+     */
     public ContractBasedImportDefinition(java.lang.String contractName, java.lang.String requiredTypeIdentity, IEnumerable_1 requiredMetadata, ImportCardinality cardinality, boolean isRecomposable, boolean isPrerequisite, CreationPolicy requiredCreationPolicy, IDictionary_2 metadata) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
@@ -182,6 +237,18 @@ public class ContractBasedImportDefinition extends system.componentmodel.composi
     
     // Methods section
     
+    /**
+     * Invokes the .NET member IsConstraintSatisfiedBy.
+     *
+     * @param exportDefinition the argument of type {@code ExportDefinition}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.Primitives.ContractBasedImportDefinition.IsConstraintSatisfiedBy" target="_top">.NET documentation</a>
+     */
     public boolean IsConstraintSatisfiedBy(ExportDefinition exportDefinition) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +267,26 @@ public class ContractBasedImportDefinition extends system.componentmodel.composi
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property RequiredMetadata.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.Primitives.ContractBasedImportDefinition.RequiredMetadata" target="_top">.NET documentation</a>
+     */
     public IEnumerable_1 getRequiredMetadata() throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +302,13 @@ public class ContractBasedImportDefinition extends system.componentmodel.composi
         }
     }
 
+    /**
+     * Gets the value of the .NET property RequiredCreationPolicy.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.Primitives.ContractBasedImportDefinition.RequiredCreationPolicy" target="_top">.NET documentation</a>
+     */
     public CreationPolicy getRequiredCreationPolicy() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -230,6 +324,13 @@ public class ContractBasedImportDefinition extends system.componentmodel.composi
         }
     }
 
+    /**
+     * Gets the value of the .NET property RequiredTypeIdentity.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.Primitives.ContractBasedImportDefinition.RequiredTypeIdentity" target="_top">.NET documentation</a>
+     */
     public java.lang.String getRequiredTypeIdentity() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

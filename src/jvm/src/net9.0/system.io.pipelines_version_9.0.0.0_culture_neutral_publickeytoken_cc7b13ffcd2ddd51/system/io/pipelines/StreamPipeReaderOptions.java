@@ -99,7 +99,10 @@ public class StreamPipeReaderOptions extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public StreamPipeReaderOptions(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,26 @@ public class StreamPipeReaderOptions extends NetObject  {
     public StreamPipeReaderOptions() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param pool the argument of type {@code MemoryPool_1}
+     * @param bufferSize the argument of type {@code int}
+     * @param minimumReadSize the argument of type {@code int}
+     * @param leaveOpen the argument of type {@code boolean}
+     * @param useZeroByteReads the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Pipelines.StreamPipeReaderOptions.-ctor" target="_top">.NET documentation</a>
+     */
     public StreamPipeReaderOptions(MemoryPool_1 pool, int bufferSize, int minimumReadSize, boolean leaveOpen, boolean useZeroByteReads) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
@@ -159,6 +182,26 @@ public class StreamPipeReaderOptions extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param pool the argument of type {@code MemoryPool_1}
+     * @param bufferSize the argument of type {@code int}
+     * @param minimumReadSize the argument of type {@code int}
+     * @param leaveOpen the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Pipelines.StreamPipeReaderOptions.-ctor" target="_top">.NET documentation</a>
+     */
     public StreamPipeReaderOptions(MemoryPool_1 pool, int bufferSize, int minimumReadSize, boolean leaveOpen) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -178,6 +221,13 @@ public class StreamPipeReaderOptions extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property LeaveOpen.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Pipelines.StreamPipeReaderOptions.LeaveOpen" target="_top">.NET documentation</a>
+     */
     public boolean getLeaveOpen() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -192,6 +242,13 @@ public class StreamPipeReaderOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UseZeroByteReads.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Pipelines.StreamPipeReaderOptions.UseZeroByteReads" target="_top">.NET documentation</a>
+     */
     public boolean getUseZeroByteReads() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,6 +263,13 @@ public class StreamPipeReaderOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property BufferSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Pipelines.StreamPipeReaderOptions.BufferSize" target="_top">.NET documentation</a>
+     */
     public int getBufferSize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -246,6 +310,13 @@ public class StreamPipeReaderOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MinimumReadSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Pipelines.StreamPipeReaderOptions.MinimumReadSize" target="_top">.NET documentation</a>
+     */
     public int getMinimumReadSize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -286,6 +357,13 @@ public class StreamPipeReaderOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Pool.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Pipelines.StreamPipeReaderOptions.Pool" target="_top">.NET documentation</a>
+     */
     public MemoryPool_1 getPool() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -102,7 +102,10 @@ public class EndpointIdentityExtension extends system.windows.markup.MarkupExten
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public EndpointIdentityExtension(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,12 @@ public class EndpointIdentityExtension extends system.windows.markup.MarkupExten
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.EndpointIdentityExtension.-ctor" target="_top">.NET documentation</a>
+     */
     public EndpointIdentityExtension() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -159,6 +168,20 @@ public class EndpointIdentityExtension extends system.windows.markup.MarkupExten
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param identity the argument of type {@code EndpointIdentity}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.EndpointIdentityExtension.-ctor" target="_top">.NET documentation</a>
+     */
     public EndpointIdentityExtension(EndpointIdentity identity) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
@@ -173,6 +196,21 @@ public class EndpointIdentityExtension extends system.windows.markup.MarkupExten
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ProvideValue.
+     *
+     * @param serviceProvider the argument of type {@code IServiceProvider}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.EndpointIdentityExtension.ProvideValue" target="_top">.NET documentation</a>
+     */
     public NetObject ProvideValue(IServiceProvider serviceProvider) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.NullReferenceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -192,6 +230,13 @@ public class EndpointIdentityExtension extends system.windows.markup.MarkupExten
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ClaimResource.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.EndpointIdentityExtension.ClaimResource" target="_top">.NET documentation</a>
+     */
     public NetObject getClaimResource() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +252,13 @@ public class EndpointIdentityExtension extends system.windows.markup.MarkupExten
         }
     }
 
+    /**
+     * Sets the value of the .NET property ClaimResource.
+     *
+     * @param ClaimResource the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.EndpointIdentityExtension.ClaimResource" target="_top">.NET documentation</a>
+     */
     public void setClaimResource(NetObject ClaimResource) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -217,6 +269,13 @@ public class EndpointIdentityExtension extends system.windows.markup.MarkupExten
         }
     }
 
+    /**
+     * Gets the value of the .NET property ClaimRight.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.EndpointIdentityExtension.ClaimRight" target="_top">.NET documentation</a>
+     */
     public java.lang.String getClaimRight() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -231,6 +290,13 @@ public class EndpointIdentityExtension extends system.windows.markup.MarkupExten
         }
     }
 
+    /**
+     * Sets the value of the .NET property ClaimRight.
+     *
+     * @param ClaimRight the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.EndpointIdentityExtension.ClaimRight" target="_top">.NET documentation</a>
+     */
     public void setClaimRight(java.lang.String ClaimRight) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -241,6 +307,13 @@ public class EndpointIdentityExtension extends system.windows.markup.MarkupExten
         }
     }
 
+    /**
+     * Gets the value of the .NET property ClaimType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.EndpointIdentityExtension.ClaimType" target="_top">.NET documentation</a>
+     */
     public java.lang.String getClaimType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -255,6 +328,13 @@ public class EndpointIdentityExtension extends system.windows.markup.MarkupExten
         }
     }
 
+    /**
+     * Sets the value of the .NET property ClaimType.
+     *
+     * @param ClaimType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.EndpointIdentityExtension.ClaimType" target="_top">.NET documentation</a>
+     */
     public void setClaimType(java.lang.String ClaimType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

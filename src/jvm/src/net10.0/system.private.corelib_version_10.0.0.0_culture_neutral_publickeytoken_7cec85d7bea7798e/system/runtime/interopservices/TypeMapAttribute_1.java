@@ -99,7 +99,10 @@ public class TypeMapAttribute_1<TTypeMapGroup extends IJCOBridgeReflected> exten
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TypeMapAttribute_1(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,15 @@ public class TypeMapAttribute_1<TTypeMapGroup extends IJCOBridgeReflected> exten
     public TypeMapAttribute_1() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param value the argument of type {@code java.lang.String}
+     * @param target the argument of type {@code NetType}
+     * @param trimTarget the argument of type {@code NetType}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.TypeMapAttribute-1.-ctor" target="_top">.NET documentation</a>
+     */
     public TypeMapAttribute_1(java.lang.String value, NetType target, NetType trimTarget) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -161,6 +173,14 @@ public class TypeMapAttribute_1<TTypeMapGroup extends IJCOBridgeReflected> exten
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param value the argument of type {@code java.lang.String}
+     * @param target the argument of type {@code NetType}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.TypeMapAttribute-1.-ctor" target="_top">.NET documentation</a>
+     */
     public TypeMapAttribute_1(java.lang.String value, NetType target) throws Throwable {
         try {
             // add reference to assemblyName.dll file

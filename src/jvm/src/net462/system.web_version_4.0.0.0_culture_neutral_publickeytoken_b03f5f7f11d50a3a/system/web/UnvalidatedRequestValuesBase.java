@@ -102,7 +102,10 @@ public class UnvalidatedRequestValuesBase extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public UnvalidatedRequestValuesBase(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -159,6 +162,14 @@ public class UnvalidatedRequestValuesBase extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Form.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UnvalidatedRequestValuesBase.Form" target="_top">.NET documentation</a>
+     */
     public NameValueCollection getForm() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -174,6 +185,14 @@ public class UnvalidatedRequestValuesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Headers.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UnvalidatedRequestValuesBase.Headers" target="_top">.NET documentation</a>
+     */
     public NameValueCollection getHeaders() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +208,14 @@ public class UnvalidatedRequestValuesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property QueryString.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UnvalidatedRequestValuesBase.QueryString" target="_top">.NET documentation</a>
+     */
     public NameValueCollection getQueryString() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +231,14 @@ public class UnvalidatedRequestValuesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Path.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UnvalidatedRequestValuesBase.Path" target="_top">.NET documentation</a>
+     */
     public java.lang.String getPath() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -218,6 +253,14 @@ public class UnvalidatedRequestValuesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PathInfo.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UnvalidatedRequestValuesBase.PathInfo" target="_top">.NET documentation</a>
+     */
     public java.lang.String getPathInfo() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -232,6 +275,14 @@ public class UnvalidatedRequestValuesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RawUrl.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UnvalidatedRequestValuesBase.RawUrl" target="_top">.NET documentation</a>
+     */
     public java.lang.String getRawUrl() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -246,6 +297,14 @@ public class UnvalidatedRequestValuesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Url.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UnvalidatedRequestValuesBase.Url" target="_top">.NET documentation</a>
+     */
     public Uri getUrl() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -261,6 +320,14 @@ public class UnvalidatedRequestValuesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Cookies.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UnvalidatedRequestValuesBase.Cookies" target="_top">.NET documentation</a>
+     */
     public HttpCookieCollection getCookies() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -276,6 +343,14 @@ public class UnvalidatedRequestValuesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Files.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UnvalidatedRequestValuesBase.Files" target="_top">.NET documentation</a>
+     */
     public HttpFileCollectionBase getFiles() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

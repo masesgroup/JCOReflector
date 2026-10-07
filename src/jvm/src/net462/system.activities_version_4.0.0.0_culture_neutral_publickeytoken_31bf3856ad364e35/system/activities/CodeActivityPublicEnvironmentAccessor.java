@@ -103,7 +103,10 @@ public class CodeActivityPublicEnvironmentAccessor extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CodeActivityPublicEnvironmentAccessor(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -158,6 +161,26 @@ public class CodeActivityPublicEnvironmentAccessor extends system.ValueType  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member TryGetAccessToPublicLocation.
+     *
+     * @param publicLocation the argument of type {@code LocationReference}
+     * @param accessDirection the argument of type {@code ArgumentDirection}
+     * @param equivalentLocation the argument of type {@code JCORefOut<LocationReference>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.CodeActivityPublicEnvironmentAccessor.TryGetAccessToPublicLocation" target="_top">.NET documentation</a>
+     */
     public boolean TryGetAccessToPublicLocation(LocationReference publicLocation, ArgumentDirection accessDirection, JCORefOut<LocationReference> equivalentLocation) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -172,6 +195,25 @@ public class CodeActivityPublicEnvironmentAccessor extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member TryGetReferenceToPublicLocation.
+     *
+     * @param publicReference the argument of type {@code LocationReference}
+     * @param equivalentReference the argument of type {@code JCORefOut<LocationReference>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.CodeActivityPublicEnvironmentAccessor.TryGetReferenceToPublicLocation" target="_top">.NET documentation</a>
+     */
     public boolean TryGetReferenceToPublicLocation(LocationReference publicReference, JCORefOut<LocationReference> equivalentReference) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -186,6 +228,19 @@ public class CodeActivityPublicEnvironmentAccessor extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param metadata the argument of type {@code CodeActivityMetadata}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.CodeActivityPublicEnvironmentAccessor.Create" target="_top">.NET documentation</a>
+     */
     public static CodeActivityPublicEnvironmentAccessor Create(CodeActivityMetadata metadata) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -205,6 +260,13 @@ public class CodeActivityPublicEnvironmentAccessor extends system.ValueType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ActivityMetadata.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.CodeActivityPublicEnvironmentAccessor.ActivityMetadata" target="_top">.NET documentation</a>
+     */
     public CodeActivityMetadata getActivityMetadata() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

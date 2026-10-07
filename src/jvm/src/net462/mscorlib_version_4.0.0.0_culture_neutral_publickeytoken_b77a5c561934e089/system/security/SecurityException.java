@@ -113,7 +113,9 @@ public class SecurityException extends system.SystemException {
         super();
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
      */
     public SecurityException(java.lang.Object instance) {
         super(instance);
@@ -174,6 +176,30 @@ public class SecurityException extends system.SystemException {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param message the argument of type {@code java.lang.String}
+     * @param deny the argument of type {@code NetObject}
+     * @param permitOnly the argument of type {@code NetObject}
+     * @param method the argument of type {@code MethodInfo}
+     * @param demanded the argument of type {@code NetObject}
+     * @param permThatFailed the argument of type {@code IPermission}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.runtime.serialization.SerializationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.security.XmlSyntaxException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.SecurityException.-ctor" target="_top">.NET documentation</a>
+     */
     public SecurityException(java.lang.String message, NetObject deny, NetObject permitOnly, MethodInfo method, NetObject demanded, IPermission permThatFailed) throws Throwable, system.security.SecurityException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.runtime.serialization.SerializationException, system.NotImplementedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.security.XmlSyntaxException {
         try {
             // add reference to assemblyName.dll file
@@ -184,6 +210,33 @@ public class SecurityException extends system.SystemException {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param message the argument of type {@code java.lang.String}
+     * @param assemblyName the argument of type {@code AssemblyName}
+     * @param grant the argument of type {@code PermissionSet}
+     * @param refused the argument of type {@code PermissionSet}
+     * @param method the argument of type {@code MethodInfo}
+     * @param action the argument of type {@code SecurityAction}
+     * @param demanded the argument of type {@code NetObject}
+     * @param permThatFailed the argument of type {@code IPermission}
+     * @param evidence the argument of type {@code Evidence}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.runtime.serialization.SerializationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.security.XmlSyntaxException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.SecurityException.-ctor" target="_top">.NET documentation</a>
+     */
     public SecurityException(java.lang.String message, AssemblyName assemblyName, PermissionSet grant, PermissionSet refused, MethodInfo method, SecurityAction action, NetObject demanded, IPermission permThatFailed, Evidence evidence) throws Throwable, system.security.SecurityException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.runtime.serialization.SerializationException, system.NotImplementedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.security.XmlSyntaxException {
         try {
             // add reference to assemblyName.dll file
@@ -194,6 +247,15 @@ public class SecurityException extends system.SystemException {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param message the argument of type {@code java.lang.String}
+     * @param type the argument of type {@code NetType}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.SecurityException.-ctor" target="_top">.NET documentation</a>
+     */
     public SecurityException(java.lang.String message, NetType type) throws Throwable, system.security.SecurityException {
         try {
             // add reference to assemblyName.dll file
@@ -204,6 +266,16 @@ public class SecurityException extends system.SystemException {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param message the argument of type {@code java.lang.String}
+     * @param type the argument of type {@code NetType}
+     * @param state the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.SecurityException.-ctor" target="_top">.NET documentation</a>
+     */
     public SecurityException(java.lang.String message, NetType type, java.lang.String state) throws Throwable, system.security.SecurityException {
         try {
             // add reference to assemblyName.dll file
@@ -218,6 +290,29 @@ public class SecurityException extends system.SystemException {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetObjectData.
+     *
+     * @param info the argument of type {@code SerializationInfo}
+     * @param context the argument of type {@code StreamingContext}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.runtime.serialization.SerializationException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.SecurityException.GetObjectData" target="_top">.NET documentation</a>
+     */
     public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.TypeLoadException, system.NotSupportedException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.NotImplementedException, system.runtime.serialization.SerializationException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -232,6 +327,23 @@ public class SecurityException extends system.SystemException {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Demanded.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.security.XmlSyntaxException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.reflection.TargetParameterCountException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.SecurityException.Demanded" target="_top">.NET documentation</a>
+     */
     public NetObject getDemanded() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.security.XmlSyntaxException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NullReferenceException, system.security.SecurityException, system.reflection.TargetParameterCountException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -247,6 +359,18 @@ public class SecurityException extends system.SystemException {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Demanded.
+     *
+     * @param Demanded the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.SecurityException.Demanded" target="_top">.NET documentation</a>
+     */
     public void setDemanded(NetObject Demanded) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.NullReferenceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -257,6 +381,23 @@ public class SecurityException extends system.SystemException {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DenySetInstance.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.security.XmlSyntaxException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.reflection.TargetParameterCountException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.SecurityException.DenySetInstance" target="_top">.NET documentation</a>
+     */
     public NetObject getDenySetInstance() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.security.XmlSyntaxException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NullReferenceException, system.security.SecurityException, system.reflection.TargetParameterCountException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -272,6 +413,18 @@ public class SecurityException extends system.SystemException {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DenySetInstance.
+     *
+     * @param DenySetInstance the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.SecurityException.DenySetInstance" target="_top">.NET documentation</a>
+     */
     public void setDenySetInstance(NetObject DenySetInstance) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.NullReferenceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -282,6 +435,23 @@ public class SecurityException extends system.SystemException {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PermitOnlySetInstance.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.security.XmlSyntaxException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.reflection.TargetParameterCountException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.SecurityException.PermitOnlySetInstance" target="_top">.NET documentation</a>
+     */
     public NetObject getPermitOnlySetInstance() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.security.XmlSyntaxException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NullReferenceException, system.security.SecurityException, system.reflection.TargetParameterCountException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -297,6 +467,18 @@ public class SecurityException extends system.SystemException {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PermitOnlySetInstance.
+     *
+     * @param PermitOnlySetInstance the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.SecurityException.PermitOnlySetInstance" target="_top">.NET documentation</a>
+     */
     public void setPermitOnlySetInstance(NetObject PermitOnlySetInstance) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.NullReferenceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -307,6 +489,13 @@ public class SecurityException extends system.SystemException {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FailedAssemblyInfo.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.SecurityException.FailedAssemblyInfo" target="_top">.NET documentation</a>
+     */
     public AssemblyName getFailedAssemblyInfo() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -322,6 +511,13 @@ public class SecurityException extends system.SystemException {
         }
     }
 
+    /**
+     * Sets the value of the .NET property FailedAssemblyInfo.
+     *
+     * @param FailedAssemblyInfo the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.SecurityException.FailedAssemblyInfo" target="_top">.NET documentation</a>
+     */
     public void setFailedAssemblyInfo(AssemblyName FailedAssemblyInfo) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -332,6 +528,16 @@ public class SecurityException extends system.SystemException {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Method.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.runtime.serialization.SerializationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.SecurityException.Method" target="_top">.NET documentation</a>
+     */
     public MethodInfo getMethod() throws Throwable, system.ArgumentNullException, system.runtime.serialization.SerializationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -347,6 +553,23 @@ public class SecurityException extends system.SystemException {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Method.
+     *
+     * @param Method the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.runtime.serialization.SerializationException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.SecurityException.Method" target="_top">.NET documentation</a>
+     */
     public void setMethod(MethodInfo Method) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.NotSupportedException, system.runtime.serialization.SerializationException, system.InvalidOperationException, system.security.SecurityException, system.NullReferenceException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -357,6 +580,23 @@ public class SecurityException extends system.SystemException {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FirstPermissionThatFailed.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.security.XmlSyntaxException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.reflection.TargetParameterCountException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.SecurityException.FirstPermissionThatFailed" target="_top">.NET documentation</a>
+     */
     public IPermission getFirstPermissionThatFailed() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.security.XmlSyntaxException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NullReferenceException, system.security.SecurityException, system.reflection.TargetParameterCountException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -372,6 +612,18 @@ public class SecurityException extends system.SystemException {
         }
     }
 
+    /**
+     * Sets the value of the .NET property FirstPermissionThatFailed.
+     *
+     * @param FirstPermissionThatFailed the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.SecurityException.FirstPermissionThatFailed" target="_top">.NET documentation</a>
+     */
     public void setFirstPermissionThatFailed(IPermission FirstPermissionThatFailed) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.NullReferenceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -382,6 +634,13 @@ public class SecurityException extends system.SystemException {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Action.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.SecurityException.Action" target="_top">.NET documentation</a>
+     */
     public SecurityAction getAction() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -397,6 +656,13 @@ public class SecurityException extends system.SystemException {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Action.
+     *
+     * @param Action the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.SecurityException.Action" target="_top">.NET documentation</a>
+     */
     public void setAction(SecurityAction Action) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -407,6 +673,13 @@ public class SecurityException extends system.SystemException {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Zone.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.SecurityException.Zone" target="_top">.NET documentation</a>
+     */
     public SecurityZone getZone() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -422,6 +695,13 @@ public class SecurityException extends system.SystemException {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Zone.
+     *
+     * @param Zone the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.SecurityException.Zone" target="_top">.NET documentation</a>
+     */
     public void setZone(SecurityZone Zone) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -432,6 +712,13 @@ public class SecurityException extends system.SystemException {
         }
     }
 
+    /**
+     * Gets the value of the .NET property GrantedSet.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.SecurityException.GrantedSet" target="_top">.NET documentation</a>
+     */
     public java.lang.String getGrantedSet() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -446,6 +733,13 @@ public class SecurityException extends system.SystemException {
         }
     }
 
+    /**
+     * Sets the value of the .NET property GrantedSet.
+     *
+     * @param GrantedSet the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.SecurityException.GrantedSet" target="_top">.NET documentation</a>
+     */
     public void setGrantedSet(java.lang.String GrantedSet) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -456,6 +750,13 @@ public class SecurityException extends system.SystemException {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PermissionState.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.SecurityException.PermissionState" target="_top">.NET documentation</a>
+     */
     public java.lang.String getPermissionState() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -470,6 +771,13 @@ public class SecurityException extends system.SystemException {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PermissionState.
+     *
+     * @param PermissionState the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.SecurityException.PermissionState" target="_top">.NET documentation</a>
+     */
     public void setPermissionState(java.lang.String PermissionState) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -480,6 +788,13 @@ public class SecurityException extends system.SystemException {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RefusedSet.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.SecurityException.RefusedSet" target="_top">.NET documentation</a>
+     */
     public java.lang.String getRefusedSet() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -494,6 +809,13 @@ public class SecurityException extends system.SystemException {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RefusedSet.
+     *
+     * @param RefusedSet the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.SecurityException.RefusedSet" target="_top">.NET documentation</a>
+     */
     public void setRefusedSet(java.lang.String RefusedSet) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -504,6 +826,13 @@ public class SecurityException extends system.SystemException {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Url.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.SecurityException.Url" target="_top">.NET documentation</a>
+     */
     public java.lang.String getUrl() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -518,6 +847,13 @@ public class SecurityException extends system.SystemException {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Url.
+     *
+     * @param Url the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.SecurityException.Url" target="_top">.NET documentation</a>
+     */
     public void setUrl(java.lang.String Url) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -528,6 +864,23 @@ public class SecurityException extends system.SystemException {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PermissionType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.security.XmlSyntaxException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.reflection.TargetParameterCountException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.SecurityException.PermissionType" target="_top">.NET documentation</a>
+     */
     public NetType getPermissionType() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.security.XmlSyntaxException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NullReferenceException, system.security.SecurityException, system.reflection.TargetParameterCountException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -543,6 +896,13 @@ public class SecurityException extends system.SystemException {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PermissionType.
+     *
+     * @param PermissionType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.SecurityException.PermissionType" target="_top">.NET documentation</a>
+     */
     public void setPermissionType(NetType PermissionType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

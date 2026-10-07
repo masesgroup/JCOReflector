@@ -103,7 +103,10 @@ public class TypeMatchModelBinderProvider extends system.web.modelbinding.ModelB
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TypeMatchModelBinderProvider(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,12 @@ public class TypeMatchModelBinderProvider extends system.web.modelbinding.ModelB
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.TypeMatchModelBinderProvider.-ctor" target="_top">.NET documentation</a>
+     */
     public TypeMatchModelBinderProvider() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +173,22 @@ public class TypeMatchModelBinderProvider extends system.web.modelbinding.ModelB
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetBinder.
+     *
+     * @param modelBindingExecutionContext the argument of type {@code ModelBindingExecutionContext}
+     * @param bindingContext the argument of type {@code ModelBindingContext}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.TypeMatchModelBinderProvider.GetBinder" target="_top">.NET documentation</a>
+     */
     public IModelBinder GetBinder(ModelBindingExecutionContext modelBindingExecutionContext, ModelBindingContext bindingContext) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

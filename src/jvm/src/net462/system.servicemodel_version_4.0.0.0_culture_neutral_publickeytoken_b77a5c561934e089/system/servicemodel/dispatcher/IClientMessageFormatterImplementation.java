@@ -100,7 +100,10 @@ public class IClientMessageFormatterImplementation extends NetObject implements 
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IClientMessageFormatterImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -142,6 +145,15 @@ public class IClientMessageFormatterImplementation extends NetObject implements 
 
     // Methods section
     
+    /**
+     * Invokes the .NET member DeserializeReply.
+     *
+     * @param message the argument of type {@code Message}
+     * @param parameters the argument of type {@code NetObject[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.IClientMessageFormatter.DeserializeReply" target="_top">.NET documentation</a>
+     */
     public NetObject DeserializeReply(Message message, NetObject[] parameters) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -157,6 +169,15 @@ public class IClientMessageFormatterImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member SerializeRequest.
+     *
+     * @param messageVersion the argument of type {@code MessageVersion}
+     * @param parameters the argument of type {@code NetObject[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.IClientMessageFormatter.SerializeRequest" target="_top">.NET documentation</a>
+     */
     public Message SerializeRequest(MessageVersion messageVersion, NetObject[] parameters) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

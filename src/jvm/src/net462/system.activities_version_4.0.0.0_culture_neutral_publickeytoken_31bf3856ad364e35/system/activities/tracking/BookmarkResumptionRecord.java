@@ -101,7 +101,10 @@ public class BookmarkResumptionRecord extends system.activities.tracking.Trackin
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public BookmarkResumptionRecord(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,24 @@ public class BookmarkResumptionRecord extends system.activities.tracking.Trackin
     public BookmarkResumptionRecord() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param instanceId the argument of type {@code Guid}
+     * @param recordNumber the argument of type {@code long}
+     * @param bookmarkScope the argument of type {@code Guid}
+     * @param bookmarkName the argument of type {@code java.lang.String}
+     * @param owner the argument of type {@code ActivityInfo}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.BookmarkResumptionRecord.-ctor" target="_top">.NET documentation</a>
+     */
     public BookmarkResumptionRecord(Guid instanceId, long recordNumber, Guid bookmarkScope, java.lang.String bookmarkName, ActivityInfo owner) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +191,13 @@ public class BookmarkResumptionRecord extends system.activities.tracking.Trackin
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Owner.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.BookmarkResumptionRecord.Owner" target="_top">.NET documentation</a>
+     */
     public ActivityInfo getOwner() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -185,6 +213,13 @@ public class BookmarkResumptionRecord extends system.activities.tracking.Trackin
         }
     }
 
+    /**
+     * Sets the value of the .NET property Owner.
+     *
+     * @param Owner the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.BookmarkResumptionRecord.Owner" target="_top">.NET documentation</a>
+     */
     public void setOwner(ActivityInfo Owner) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -195,6 +230,13 @@ public class BookmarkResumptionRecord extends system.activities.tracking.Trackin
         }
     }
 
+    /**
+     * Gets the value of the .NET property BookmarkScope.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.BookmarkResumptionRecord.BookmarkScope" target="_top">.NET documentation</a>
+     */
     public Guid getBookmarkScope() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -210,6 +252,13 @@ public class BookmarkResumptionRecord extends system.activities.tracking.Trackin
         }
     }
 
+    /**
+     * Sets the value of the .NET property BookmarkScope.
+     *
+     * @param BookmarkScope the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.BookmarkResumptionRecord.BookmarkScope" target="_top">.NET documentation</a>
+     */
     public void setBookmarkScope(Guid BookmarkScope) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -220,6 +269,13 @@ public class BookmarkResumptionRecord extends system.activities.tracking.Trackin
         }
     }
 
+    /**
+     * Gets the value of the .NET property Payload.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.BookmarkResumptionRecord.Payload" target="_top">.NET documentation</a>
+     */
     public NetObject getPayload() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -235,6 +291,13 @@ public class BookmarkResumptionRecord extends system.activities.tracking.Trackin
         }
     }
 
+    /**
+     * Sets the value of the .NET property Payload.
+     *
+     * @param Payload the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.BookmarkResumptionRecord.Payload" target="_top">.NET documentation</a>
+     */
     public void setPayload(NetObject Payload) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -245,6 +308,13 @@ public class BookmarkResumptionRecord extends system.activities.tracking.Trackin
         }
     }
 
+    /**
+     * Gets the value of the .NET property BookmarkName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.BookmarkResumptionRecord.BookmarkName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getBookmarkName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -259,6 +329,13 @@ public class BookmarkResumptionRecord extends system.activities.tracking.Trackin
         }
     }
 
+    /**
+     * Sets the value of the .NET property BookmarkName.
+     *
+     * @param BookmarkName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.BookmarkResumptionRecord.BookmarkName" target="_top">.NET documentation</a>
+     */
     public void setBookmarkName(java.lang.String BookmarkName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

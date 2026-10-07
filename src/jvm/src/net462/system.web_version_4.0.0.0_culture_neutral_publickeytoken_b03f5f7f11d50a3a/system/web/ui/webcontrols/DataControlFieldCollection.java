@@ -102,7 +102,10 @@ public class DataControlFieldCollection extends system.web.ui.StateManagedCollec
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DataControlFieldCollection(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,12 @@ public class DataControlFieldCollection extends system.web.ui.StateManagedCollec
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.DataControlFieldCollection.-ctor" target="_top">.NET documentation</a>
+     */
     public DataControlFieldCollection() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -163,6 +172,14 @@ public class DataControlFieldCollection extends system.web.ui.StateManagedCollec
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Contains.
+     *
+     * @param field the argument of type {@code DataControlField}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.DataControlFieldCollection.Contains" target="_top">.NET documentation</a>
+     */
     public boolean Contains(DataControlField field) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -177,6 +194,14 @@ public class DataControlFieldCollection extends system.web.ui.StateManagedCollec
         }
     }
 
+    /**
+     * Invokes the .NET member IndexOf.
+     *
+     * @param field the argument of type {@code DataControlField}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.DataControlFieldCollection.IndexOf" target="_top">.NET documentation</a>
+     */
     public int IndexOf(DataControlField field) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -217,6 +242,21 @@ public class DataControlFieldCollection extends system.web.ui.StateManagedCollec
         }
     }
 
+    /**
+     * Invokes the .NET member CloneFields.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.DataControlFieldCollection.CloneFields" target="_top">.NET documentation</a>
+     */
     public DataControlFieldCollection CloneFields() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NullReferenceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -232,6 +272,13 @@ public class DataControlFieldCollection extends system.web.ui.StateManagedCollec
         }
     }
 
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param field the argument of type {@code DataControlField}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.DataControlFieldCollection.Add" target="_top">.NET documentation</a>
+     */
     public void Add(DataControlField field) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -242,6 +289,14 @@ public class DataControlFieldCollection extends system.web.ui.StateManagedCollec
         }
     }
 
+    /**
+     * Invokes the .NET member CopyTo.
+     *
+     * @param array the argument of type {@code DataControlField[]}
+     * @param index the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.DataControlFieldCollection.CopyTo" target="_top">.NET documentation</a>
+     */
     public void CopyTo(DataControlField[] array, int index) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -252,6 +307,14 @@ public class DataControlFieldCollection extends system.web.ui.StateManagedCollec
         }
     }
 
+    /**
+     * Invokes the .NET member Insert.
+     *
+     * @param index the argument of type {@code int}
+     * @param field the argument of type {@code DataControlField}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.DataControlFieldCollection.Insert" target="_top">.NET documentation</a>
+     */
     public void Insert(int index, DataControlField field) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -262,6 +325,13 @@ public class DataControlFieldCollection extends system.web.ui.StateManagedCollec
         }
     }
 
+    /**
+     * Invokes the .NET member Remove.
+     *
+     * @param field the argument of type {@code DataControlField}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.DataControlFieldCollection.Remove" target="_top">.NET documentation</a>
+     */
     public void Remove(DataControlField field) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -272,6 +342,13 @@ public class DataControlFieldCollection extends system.web.ui.StateManagedCollec
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveAt.
+     *
+     * @param index the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.DataControlFieldCollection.RemoveAt" target="_top">.NET documentation</a>
+     */
     public void RemoveAt(int index) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -291,6 +368,13 @@ public class DataControlFieldCollection extends system.web.ui.StateManagedCollec
     // Instance Events section
     
 
+    /**
+     * Invokes the .NET member addFieldsChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addFieldsChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -301,6 +385,13 @@ public class DataControlFieldCollection extends system.web.ui.StateManagedCollec
         }
     }
 
+    /**
+     * Invokes the .NET member removeFieldsChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeFieldsChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

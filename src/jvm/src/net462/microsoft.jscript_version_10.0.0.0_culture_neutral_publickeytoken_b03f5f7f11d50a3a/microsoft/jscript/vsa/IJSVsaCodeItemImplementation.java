@@ -102,7 +102,10 @@ public class IJSVsaCodeItemImplementation extends NetObject implements IJSVsaCod
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IJSVsaCodeItemImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -144,6 +147,14 @@ public class IJSVsaCodeItemImplementation extends NetObject implements IJSVsaCod
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetOption.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.IJSVsaCodeItem.GetOption" target="_top">.NET documentation</a>
+     */
     public NetObject GetOption(java.lang.String name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -159,6 +170,14 @@ public class IJSVsaCodeItemImplementation extends NetObject implements IJSVsaCod
         }
     }
 
+    /**
+     * Invokes the .NET member AddEventSource.
+     *
+     * @param eventSourceName the argument of type {@code java.lang.String}
+     * @param eventSourceType the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.IJSVsaCodeItem.AddEventSource" target="_top">.NET documentation</a>
+     */
     public void AddEventSource(java.lang.String eventSourceName, java.lang.String eventSourceType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -169,6 +188,13 @@ public class IJSVsaCodeItemImplementation extends NetObject implements IJSVsaCod
         }
     }
 
+    /**
+     * Invokes the .NET member AppendSourceText.
+     *
+     * @param text the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.IJSVsaCodeItem.AppendSourceText" target="_top">.NET documentation</a>
+     */
     public void AppendSourceText(java.lang.String text) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -179,6 +205,13 @@ public class IJSVsaCodeItemImplementation extends NetObject implements IJSVsaCod
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveEventSource.
+     *
+     * @param eventSourceName the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.IJSVsaCodeItem.RemoveEventSource" target="_top">.NET documentation</a>
+     */
     public void RemoveEventSource(java.lang.String eventSourceName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +222,14 @@ public class IJSVsaCodeItemImplementation extends NetObject implements IJSVsaCod
         }
     }
 
+    /**
+     * Invokes the .NET member SetOption.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param value the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.IJSVsaCodeItem.SetOption" target="_top">.NET documentation</a>
+     */
     public void SetOption(java.lang.String name, NetObject value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +244,13 @@ public class IJSVsaCodeItemImplementation extends NetObject implements IJSVsaCod
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsDirty.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.IJSVsaCodeItem.IsDirty" target="_top">.NET documentation</a>
+     */
     public boolean getIsDirty() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -217,6 +265,13 @@ public class IJSVsaCodeItemImplementation extends NetObject implements IJSVsaCod
         }
     }
 
+    /**
+     * Gets the value of the .NET property ItemType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.IJSVsaCodeItem.ItemType" target="_top">.NET documentation</a>
+     */
     public JSVsaItemType getItemType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -232,6 +287,13 @@ public class IJSVsaCodeItemImplementation extends NetObject implements IJSVsaCod
         }
     }
 
+    /**
+     * Gets the value of the .NET property CodeDOM.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.IJSVsaCodeItem.CodeDOM" target="_top">.NET documentation</a>
+     */
     public CodeObject getCodeDOM() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -247,6 +309,13 @@ public class IJSVsaCodeItemImplementation extends NetObject implements IJSVsaCod
         }
     }
 
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.IJSVsaCodeItem.Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -261,6 +330,13 @@ public class IJSVsaCodeItemImplementation extends NetObject implements IJSVsaCod
         }
     }
 
+    /**
+     * Sets the value of the .NET property Name.
+     *
+     * @param Name the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.IJSVsaCodeItem.Name" target="_top">.NET documentation</a>
+     */
     public void setName(java.lang.String Name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -271,6 +347,13 @@ public class IJSVsaCodeItemImplementation extends NetObject implements IJSVsaCod
         }
     }
 
+    /**
+     * Gets the value of the .NET property SourceText.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.IJSVsaCodeItem.SourceText" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSourceText() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -285,6 +368,13 @@ public class IJSVsaCodeItemImplementation extends NetObject implements IJSVsaCod
         }
     }
 
+    /**
+     * Sets the value of the .NET property SourceText.
+     *
+     * @param SourceText the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.IJSVsaCodeItem.SourceText" target="_top">.NET documentation</a>
+     */
     public void setSourceText(java.lang.String SourceText) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

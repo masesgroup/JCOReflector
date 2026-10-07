@@ -99,7 +99,10 @@ public class StyleTypedPropertyAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public StyleTypedPropertyAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class StyleTypedPropertyAttribute extends system.Attribute  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.StyleTypedPropertyAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public StyleTypedPropertyAttribute() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +173,13 @@ public class StyleTypedPropertyAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Property.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.StyleTypedPropertyAttribute.Property" target="_top">.NET documentation</a>
+     */
     public java.lang.String getProperty() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,6 +194,13 @@ public class StyleTypedPropertyAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Property.
+     *
+     * @param Property the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.StyleTypedPropertyAttribute.Property" target="_top">.NET documentation</a>
+     */
     public void setProperty(java.lang.String Property) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +211,13 @@ public class StyleTypedPropertyAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StyleTargetType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.StyleTypedPropertyAttribute.StyleTargetType" target="_top">.NET documentation</a>
+     */
     public NetType getStyleTargetType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +233,13 @@ public class StyleTypedPropertyAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property StyleTargetType.
+     *
+     * @param StyleTargetType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.StyleTypedPropertyAttribute.StyleTargetType" target="_top">.NET documentation</a>
+     */
     public void setStyleTargetType(NetType StyleTargetType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

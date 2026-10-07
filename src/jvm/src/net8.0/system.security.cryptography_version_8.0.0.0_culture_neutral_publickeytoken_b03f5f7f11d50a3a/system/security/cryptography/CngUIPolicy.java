@@ -99,7 +99,10 @@ public class CngUIPolicy extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CngUIPolicy(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,17 @@ public class CngUIPolicy extends NetObject  {
     public CngUIPolicy() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param protectionLevel the argument of type {@code CngUIProtectionLevels}
+     * @param friendlyName the argument of type {@code java.lang.String}
+     * @param description the argument of type {@code java.lang.String}
+     * @param useContext the argument of type {@code java.lang.String}
+     * @param creationTitle the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CngUIPolicy.-ctor" target="_top">.NET documentation</a>
+     */
     public CngUIPolicy(CngUIProtectionLevels protectionLevel, java.lang.String friendlyName, java.lang.String description, java.lang.String useContext, java.lang.String creationTitle) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -159,6 +173,16 @@ public class CngUIPolicy extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param protectionLevel the argument of type {@code CngUIProtectionLevels}
+     * @param friendlyName the argument of type {@code java.lang.String}
+     * @param description the argument of type {@code java.lang.String}
+     * @param useContext the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CngUIPolicy.-ctor" target="_top">.NET documentation</a>
+     */
     public CngUIPolicy(CngUIProtectionLevels protectionLevel, java.lang.String friendlyName, java.lang.String description, java.lang.String useContext) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +193,15 @@ public class CngUIPolicy extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param protectionLevel the argument of type {@code CngUIProtectionLevels}
+     * @param friendlyName the argument of type {@code java.lang.String}
+     * @param description the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CngUIPolicy.-ctor" target="_top">.NET documentation</a>
+     */
     public CngUIPolicy(CngUIProtectionLevels protectionLevel, java.lang.String friendlyName, java.lang.String description) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -179,6 +212,14 @@ public class CngUIPolicy extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param protectionLevel the argument of type {@code CngUIProtectionLevels}
+     * @param friendlyName the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CngUIPolicy.-ctor" target="_top">.NET documentation</a>
+     */
     public CngUIPolicy(CngUIProtectionLevels protectionLevel, java.lang.String friendlyName) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -189,6 +230,13 @@ public class CngUIPolicy extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param protectionLevel the argument of type {@code CngUIProtectionLevels}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CngUIPolicy.-ctor" target="_top">.NET documentation</a>
+     */
     public CngUIPolicy(CngUIProtectionLevels protectionLevel) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -208,6 +256,13 @@ public class CngUIPolicy extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ProtectionLevel.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CngUIPolicy.ProtectionLevel" target="_top">.NET documentation</a>
+     */
     public CngUIProtectionLevels getProtectionLevel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -223,6 +278,13 @@ public class CngUIPolicy extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ProtectionLevel.
+     *
+     * @param ProtectionLevel the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CngUIPolicy.ProtectionLevel" target="_top">.NET documentation</a>
+     */
     public void setProtectionLevel(CngUIProtectionLevels ProtectionLevel) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -233,6 +295,13 @@ public class CngUIPolicy extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CreationTitle.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CngUIPolicy.CreationTitle" target="_top">.NET documentation</a>
+     */
     public java.lang.String getCreationTitle() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -247,6 +316,13 @@ public class CngUIPolicy extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CreationTitle.
+     *
+     * @param CreationTitle the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CngUIPolicy.CreationTitle" target="_top">.NET documentation</a>
+     */
     public void setCreationTitle(java.lang.String CreationTitle) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -257,6 +333,13 @@ public class CngUIPolicy extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Description.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CngUIPolicy.Description" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDescription() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -271,6 +354,13 @@ public class CngUIPolicy extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Description.
+     *
+     * @param Description the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CngUIPolicy.Description" target="_top">.NET documentation</a>
+     */
     public void setDescription(java.lang.String Description) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -281,6 +371,13 @@ public class CngUIPolicy extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FriendlyName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CngUIPolicy.FriendlyName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getFriendlyName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -295,6 +392,13 @@ public class CngUIPolicy extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property FriendlyName.
+     *
+     * @param FriendlyName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CngUIPolicy.FriendlyName" target="_top">.NET documentation</a>
+     */
     public void setFriendlyName(java.lang.String FriendlyName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -305,6 +409,13 @@ public class CngUIPolicy extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UseContext.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CngUIPolicy.UseContext" target="_top">.NET documentation</a>
+     */
     public java.lang.String getUseContext() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -319,6 +430,13 @@ public class CngUIPolicy extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property UseContext.
+     *
+     * @param UseContext the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CngUIPolicy.UseContext" target="_top">.NET documentation</a>
+     */
     public void setUseContext(java.lang.String UseContext) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

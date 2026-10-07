@@ -100,7 +100,10 @@ public class SseItem_1<T extends IJCOBridgeReflected> extends system.ValueType  
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SseItem_1(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,19 @@ public class SseItem_1<T extends IJCOBridgeReflected> extends system.ValueType  
     public SseItem_1() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param data the argument of type {@code T}
+     * @param eventType the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.ServerSentEvents.SseItem-1.-ctor" target="_top">.NET documentation</a>
+     */
     public SseItem_1(T data, java.lang.String eventType) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -171,6 +187,13 @@ public class SseItem_1<T extends IJCOBridgeReflected> extends system.ValueType  
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ReconnectionInterval.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.ServerSentEvents.SseItem-1.ReconnectionInterval" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getReconnectionInterval() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -186,6 +209,21 @@ public class SseItem_1<T extends IJCOBridgeReflected> extends system.ValueType  
         }
     }
 
+    /**
+     * Sets the value of the .NET property ReconnectionInterval.
+     *
+     * @param ReconnectionInterval the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.ServerSentEvents.SseItem-1.ReconnectionInterval" target="_top">.NET documentation</a>
+     */
     public void setReconnectionInterval(Nullable_1 ReconnectionInterval) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -196,6 +234,13 @@ public class SseItem_1<T extends IJCOBridgeReflected> extends system.ValueType  
         }
     }
 
+    /**
+     * Gets the value of the .NET property EventId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.ServerSentEvents.SseItem-1.EventId" target="_top">.NET documentation</a>
+     */
     public java.lang.String getEventId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -210,6 +255,18 @@ public class SseItem_1<T extends IJCOBridgeReflected> extends system.ValueType  
         }
     }
 
+    /**
+     * Sets the value of the .NET property EventId.
+     *
+     * @param EventId the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.ServerSentEvents.SseItem-1.EventId" target="_top">.NET documentation</a>
+     */
     public void setEventId(java.lang.String EventId) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -220,6 +277,13 @@ public class SseItem_1<T extends IJCOBridgeReflected> extends system.ValueType  
         }
     }
 
+    /**
+     * Gets the value of the .NET property EventType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.ServerSentEvents.SseItem-1.EventType" target="_top">.NET documentation</a>
+     */
     public java.lang.String getEventType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -234,6 +298,13 @@ public class SseItem_1<T extends IJCOBridgeReflected> extends system.ValueType  
         }
     }
 
+    /**
+     * Gets the value of the .NET property Data.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.ServerSentEvents.SseItem-1.Data" target="_top">.NET documentation</a>
+     */
     public T getData() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

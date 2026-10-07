@@ -52,5 +52,11 @@ import microsoft.visualbasic.applicationservices.StartupNextInstanceEventArgs;
  * @version 2.0.0.0
  */
 public interface IStartupNextInstanceEventHandler {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param sender the .NET argument of type {@code System.Object}
+     * @param e the .NET argument of type {@code Microsoft.VisualBasic.ApplicationServices.StartupNextInstanceEventArgs}
+     */
     public void Invoke(NetObject sender, StartupNextInstanceEventArgs e);
 }

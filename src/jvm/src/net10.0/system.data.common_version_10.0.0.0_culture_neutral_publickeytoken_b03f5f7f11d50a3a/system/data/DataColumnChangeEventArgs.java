@@ -101,7 +101,10 @@ public class DataColumnChangeEventArgs extends system.EventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DataColumnChangeEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,15 @@ public class DataColumnChangeEventArgs extends system.EventArgs  {
     public DataColumnChangeEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param row the argument of type {@code DataRow}
+     * @param column the argument of type {@code DataColumn}
+     * @param value the argument of type {@code NetObject}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.DataColumnChangeEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public DataColumnChangeEventArgs(DataRow row, DataColumn column, NetObject value) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +182,13 @@ public class DataColumnChangeEventArgs extends system.EventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Column.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.DataColumnChangeEventArgs.Column" target="_top">.NET documentation</a>
+     */
     public DataColumn getColumn() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -185,6 +204,13 @@ public class DataColumnChangeEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Row.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.DataColumnChangeEventArgs.Row" target="_top">.NET documentation</a>
+     */
     public DataRow getRow() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +226,13 @@ public class DataColumnChangeEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ProposedValue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.DataColumnChangeEventArgs.ProposedValue" target="_top">.NET documentation</a>
+     */
     public NetObject getProposedValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +248,13 @@ public class DataColumnChangeEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ProposedValue.
+     *
+     * @param ProposedValue the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.DataColumnChangeEventArgs.ProposedValue" target="_top">.NET documentation</a>
+     */
     public void setProposedValue(NetObject ProposedValue) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

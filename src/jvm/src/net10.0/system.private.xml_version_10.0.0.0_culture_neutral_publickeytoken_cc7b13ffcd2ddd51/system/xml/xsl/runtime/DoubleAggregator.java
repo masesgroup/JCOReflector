@@ -99,7 +99,10 @@ public class DoubleAggregator extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DoubleAggregator(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,13 @@ public class DoubleAggregator extends system.ValueType  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Average.
+     *
+     * @param value the argument of type {@code double}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.DoubleAggregator.Average" target="_top">.NET documentation</a>
+     */
     public void Average(double value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -164,6 +174,12 @@ public class DoubleAggregator extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.DoubleAggregator.Create" target="_top">.NET documentation</a>
+     */
     public void Create() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -174,6 +190,13 @@ public class DoubleAggregator extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Maximum.
+     *
+     * @param value the argument of type {@code double}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.DoubleAggregator.Maximum" target="_top">.NET documentation</a>
+     */
     public void Maximum(double value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +207,13 @@ public class DoubleAggregator extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Minimum.
+     *
+     * @param value the argument of type {@code double}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.DoubleAggregator.Minimum" target="_top">.NET documentation</a>
+     */
     public void Minimum(double value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +224,13 @@ public class DoubleAggregator extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Sum.
+     *
+     * @param value the argument of type {@code double}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.DoubleAggregator.Sum" target="_top">.NET documentation</a>
+     */
     public void Sum(double value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +245,13 @@ public class DoubleAggregator extends system.ValueType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsEmpty.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.DoubleAggregator.IsEmpty" target="_top">.NET documentation</a>
+     */
     public boolean getIsEmpty() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -222,6 +266,13 @@ public class DoubleAggregator extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AverageResult.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.DoubleAggregator.AverageResult" target="_top">.NET documentation</a>
+     */
     public double getAverageResult() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -262,6 +313,13 @@ public class DoubleAggregator extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MaximumResult.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.DoubleAggregator.MaximumResult" target="_top">.NET documentation</a>
+     */
     public double getMaximumResult() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -302,6 +360,13 @@ public class DoubleAggregator extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MinimumResult.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.DoubleAggregator.MinimumResult" target="_top">.NET documentation</a>
+     */
     public double getMinimumResult() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -342,6 +407,13 @@ public class DoubleAggregator extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SumResult.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.DoubleAggregator.SumResult" target="_top">.NET documentation</a>
+     */
     public double getSumResult() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -99,7 +99,10 @@ public class TripleDesSecurityAlgorithmSuite extends system.servicemodel.securit
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TripleDesSecurityAlgorithmSuite(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class TripleDesSecurityAlgorithmSuite extends system.servicemodel.securit
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.TripleDesSecurityAlgorithmSuite.-ctor" target="_top">.NET documentation</a>
+     */
     public TripleDesSecurityAlgorithmSuite() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -160,6 +169,14 @@ public class TripleDesSecurityAlgorithmSuite extends system.servicemodel.securit
     
     // Methods section
     
+    /**
+     * Invokes the .NET member IsAsymmetricKeyLengthSupported.
+     *
+     * @param length the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.TripleDesSecurityAlgorithmSuite.IsAsymmetricKeyLengthSupported" target="_top">.NET documentation</a>
+     */
     public boolean IsAsymmetricKeyLengthSupported(int length) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -174,6 +191,14 @@ public class TripleDesSecurityAlgorithmSuite extends system.servicemodel.securit
         }
     }
 
+    /**
+     * Invokes the .NET member IsSymmetricKeyLengthSupported.
+     *
+     * @param length the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.TripleDesSecurityAlgorithmSuite.IsSymmetricKeyLengthSupported" target="_top">.NET documentation</a>
+     */
     public boolean IsSymmetricKeyLengthSupported(int length) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

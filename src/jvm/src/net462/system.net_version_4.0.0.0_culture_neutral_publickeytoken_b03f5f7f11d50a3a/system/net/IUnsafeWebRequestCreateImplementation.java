@@ -100,7 +100,10 @@ public class IUnsafeWebRequestCreateImplementation extends NetObject implements 
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IUnsafeWebRequestCreateImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -142,6 +145,14 @@ public class IUnsafeWebRequestCreateImplementation extends NetObject implements 
 
     // Methods section
     
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param uri the argument of type {@code Uri}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.IUnsafeWebRequestCreate.Create" target="_top">.NET documentation</a>
+     */
     public WebRequest Create(Uri uri) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

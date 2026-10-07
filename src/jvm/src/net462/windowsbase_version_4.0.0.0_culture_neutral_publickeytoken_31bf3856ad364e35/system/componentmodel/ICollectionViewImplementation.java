@@ -110,7 +110,10 @@ public class ICollectionViewImplementation extends IEnumerableImplementation imp
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ICollectionViewImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,14 @@ public class ICollectionViewImplementation extends IEnumerableImplementation imp
 
     // Methods section
     
+    /**
+     * Invokes the .NET member Contains.
+     *
+     * @param item the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ICollectionView.Contains" target="_top">.NET documentation</a>
+     */
     public boolean Contains(NetObject item) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -166,6 +177,14 @@ public class ICollectionViewImplementation extends IEnumerableImplementation imp
         }
     }
 
+    /**
+     * Invokes the .NET member MoveCurrentTo.
+     *
+     * @param item the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ICollectionView.MoveCurrentTo" target="_top">.NET documentation</a>
+     */
     public boolean MoveCurrentTo(NetObject item) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +199,13 @@ public class ICollectionViewImplementation extends IEnumerableImplementation imp
         }
     }
 
+    /**
+     * Invokes the .NET member MoveCurrentToFirst.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ICollectionView.MoveCurrentToFirst" target="_top">.NET documentation</a>
+     */
     public boolean MoveCurrentToFirst() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +220,13 @@ public class ICollectionViewImplementation extends IEnumerableImplementation imp
         }
     }
 
+    /**
+     * Invokes the .NET member MoveCurrentToLast.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ICollectionView.MoveCurrentToLast" target="_top">.NET documentation</a>
+     */
     public boolean MoveCurrentToLast() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +241,13 @@ public class ICollectionViewImplementation extends IEnumerableImplementation imp
         }
     }
 
+    /**
+     * Invokes the .NET member MoveCurrentToNext.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ICollectionView.MoveCurrentToNext" target="_top">.NET documentation</a>
+     */
     public boolean MoveCurrentToNext() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -222,6 +262,14 @@ public class ICollectionViewImplementation extends IEnumerableImplementation imp
         }
     }
 
+    /**
+     * Invokes the .NET member MoveCurrentToPosition.
+     *
+     * @param position the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ICollectionView.MoveCurrentToPosition" target="_top">.NET documentation</a>
+     */
     public boolean MoveCurrentToPosition(int position) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -236,6 +284,13 @@ public class ICollectionViewImplementation extends IEnumerableImplementation imp
         }
     }
 
+    /**
+     * Invokes the .NET member MoveCurrentToPrevious.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ICollectionView.MoveCurrentToPrevious" target="_top">.NET documentation</a>
+     */
     public boolean MoveCurrentToPrevious() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -250,6 +305,13 @@ public class ICollectionViewImplementation extends IEnumerableImplementation imp
         }
     }
 
+    /**
+     * Invokes the .NET member DeferRefresh.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ICollectionView.DeferRefresh" target="_top">.NET documentation</a>
+     */
     public IDisposable DeferRefresh() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -265,6 +327,12 @@ public class ICollectionViewImplementation extends IEnumerableImplementation imp
         }
     }
 
+    /**
+     * Invokes the .NET member Refresh.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ICollectionView.Refresh" target="_top">.NET documentation</a>
+     */
     public void Refresh() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -279,6 +347,13 @@ public class ICollectionViewImplementation extends IEnumerableImplementation imp
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CanFilter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ICollectionView.CanFilter" target="_top">.NET documentation</a>
+     */
     public boolean getCanFilter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -293,6 +368,13 @@ public class ICollectionViewImplementation extends IEnumerableImplementation imp
         }
     }
 
+    /**
+     * Gets the value of the .NET property CanGroup.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ICollectionView.CanGroup" target="_top">.NET documentation</a>
+     */
     public boolean getCanGroup() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -307,6 +389,13 @@ public class ICollectionViewImplementation extends IEnumerableImplementation imp
         }
     }
 
+    /**
+     * Gets the value of the .NET property CanSort.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ICollectionView.CanSort" target="_top">.NET documentation</a>
+     */
     public boolean getCanSort() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -321,6 +410,13 @@ public class ICollectionViewImplementation extends IEnumerableImplementation imp
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsCurrentAfterLast.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ICollectionView.IsCurrentAfterLast" target="_top">.NET documentation</a>
+     */
     public boolean getIsCurrentAfterLast() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -335,6 +431,13 @@ public class ICollectionViewImplementation extends IEnumerableImplementation imp
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsCurrentBeforeFirst.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ICollectionView.IsCurrentBeforeFirst" target="_top">.NET documentation</a>
+     */
     public boolean getIsCurrentBeforeFirst() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -349,6 +452,13 @@ public class ICollectionViewImplementation extends IEnumerableImplementation imp
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsEmpty.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ICollectionView.IsEmpty" target="_top">.NET documentation</a>
+     */
     public boolean getIsEmpty() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -363,6 +473,13 @@ public class ICollectionViewImplementation extends IEnumerableImplementation imp
         }
     }
 
+    /**
+     * Gets the value of the .NET property CurrentPosition.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ICollectionView.CurrentPosition" target="_top">.NET documentation</a>
+     */
     public int getCurrentPosition() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -403,6 +520,13 @@ public class ICollectionViewImplementation extends IEnumerableImplementation imp
         }
     }
 
+    /**
+     * Gets the value of the .NET property SourceCollection.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ICollectionView.SourceCollection" target="_top">.NET documentation</a>
+     */
     public IEnumerable getSourceCollection() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -418,6 +542,13 @@ public class ICollectionViewImplementation extends IEnumerableImplementation imp
         }
     }
 
+    /**
+     * Gets the value of the .NET property GroupDescriptions.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ICollectionView.GroupDescriptions" target="_top">.NET documentation</a>
+     */
     public ObservableCollection_1 getGroupDescriptions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -433,6 +564,13 @@ public class ICollectionViewImplementation extends IEnumerableImplementation imp
         }
     }
 
+    /**
+     * Gets the value of the .NET property Groups.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ICollectionView.Groups" target="_top">.NET documentation</a>
+     */
     public ReadOnlyObservableCollection_1 getGroups() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -448,6 +586,13 @@ public class ICollectionViewImplementation extends IEnumerableImplementation imp
         }
     }
 
+    /**
+     * Gets the value of the .NET property SortDescriptions.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ICollectionView.SortDescriptions" target="_top">.NET documentation</a>
+     */
     public SortDescriptionCollection getSortDescriptions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -463,6 +608,13 @@ public class ICollectionViewImplementation extends IEnumerableImplementation imp
         }
     }
 
+    /**
+     * Gets the value of the .NET property Culture.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ICollectionView.Culture" target="_top">.NET documentation</a>
+     */
     public CultureInfo getCulture() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -478,6 +630,13 @@ public class ICollectionViewImplementation extends IEnumerableImplementation imp
         }
     }
 
+    /**
+     * Sets the value of the .NET property Culture.
+     *
+     * @param Culture the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ICollectionView.Culture" target="_top">.NET documentation</a>
+     */
     public void setCulture(CultureInfo Culture) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -488,6 +647,13 @@ public class ICollectionViewImplementation extends IEnumerableImplementation imp
         }
     }
 
+    /**
+     * Gets the value of the .NET property CurrentItem.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ICollectionView.CurrentItem" target="_top">.NET documentation</a>
+     */
     public NetObject getCurrentItem() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -503,6 +669,13 @@ public class ICollectionViewImplementation extends IEnumerableImplementation imp
         }
     }
 
+    /**
+     * Gets the value of the .NET property Filter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ICollectionView.Filter" target="_top">.NET documentation</a>
+     */
     public Predicate_1 getFilter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -517,6 +690,13 @@ public class ICollectionViewImplementation extends IEnumerableImplementation imp
         }
     }
 
+    /**
+     * Sets the value of the .NET property Filter.
+     *
+     * @param Filter the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ICollectionView.Filter" target="_top">.NET documentation</a>
+     */
     public void setFilter(Predicate_1 Filter) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -532,6 +712,13 @@ public class ICollectionViewImplementation extends IEnumerableImplementation imp
     // Instance Events section
     
 
+    /**
+     * Invokes the .NET member addCollectionChanged.
+     *
+     * @param handler the argument of type {@code NotifyCollectionChangedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addCollectionChanged(NotifyCollectionChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -542,6 +729,13 @@ public class ICollectionViewImplementation extends IEnumerableImplementation imp
         }
     }
 
+    /**
+     * Invokes the .NET member removeCollectionChanged.
+     *
+     * @param handler the argument of type {@code NotifyCollectionChangedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeCollectionChanged(NotifyCollectionChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -552,6 +746,13 @@ public class ICollectionViewImplementation extends IEnumerableImplementation imp
         }
     }
 
+    /**
+     * Invokes the .NET member addCurrentChanging.
+     *
+     * @param handler the argument of type {@code CurrentChangingEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addCurrentChanging(CurrentChangingEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -562,6 +763,13 @@ public class ICollectionViewImplementation extends IEnumerableImplementation imp
         }
     }
 
+    /**
+     * Invokes the .NET member removeCurrentChanging.
+     *
+     * @param handler the argument of type {@code CurrentChangingEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeCurrentChanging(CurrentChangingEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -572,6 +780,13 @@ public class ICollectionViewImplementation extends IEnumerableImplementation imp
         }
     }
 
+    /**
+     * Invokes the .NET member addCurrentChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addCurrentChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -582,6 +797,13 @@ public class ICollectionViewImplementation extends IEnumerableImplementation imp
         }
     }
 
+    /**
+     * Invokes the .NET member removeCurrentChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeCurrentChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

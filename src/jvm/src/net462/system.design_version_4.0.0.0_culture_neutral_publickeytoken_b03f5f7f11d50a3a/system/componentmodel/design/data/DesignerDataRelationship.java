@@ -101,7 +101,10 @@ public class DesignerDataRelationship extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DesignerDataRelationship(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,16 @@ public class DesignerDataRelationship extends NetObject  {
     public DesignerDataRelationship() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param parentColumns the argument of type {@code ICollection}
+     * @param childTable the argument of type {@code DesignerDataTable}
+     * @param childColumns the argument of type {@code ICollection}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Data.DesignerDataRelationship.-ctor" target="_top">.NET documentation</a>
+     */
     public DesignerDataRelationship(java.lang.String name, ICollection parentColumns, DesignerDataTable childTable, ICollection childColumns) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +183,13 @@ public class DesignerDataRelationship extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ChildColumns.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Data.DesignerDataRelationship.ChildColumns" target="_top">.NET documentation</a>
+     */
     public ICollection getChildColumns() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -185,6 +205,13 @@ public class DesignerDataRelationship extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ParentColumns.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Data.DesignerDataRelationship.ParentColumns" target="_top">.NET documentation</a>
+     */
     public ICollection getParentColumns() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +227,13 @@ public class DesignerDataRelationship extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ChildTable.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Data.DesignerDataRelationship.ChildTable" target="_top">.NET documentation</a>
+     */
     public DesignerDataTable getChildTable() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +249,13 @@ public class DesignerDataRelationship extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Data.DesignerDataRelationship.Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

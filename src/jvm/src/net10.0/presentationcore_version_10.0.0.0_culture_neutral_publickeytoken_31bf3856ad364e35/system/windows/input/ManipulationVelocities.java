@@ -99,7 +99,10 @@ public class ManipulationVelocities extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ManipulationVelocities(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,15 @@ public class ManipulationVelocities extends NetObject  {
     public ManipulationVelocities() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param linearVelocity the argument of type {@code Vector}
+     * @param angularVelocity the argument of type {@code double}
+     * @param expansionVelocity the argument of type {@code Vector}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.ManipulationVelocities.-ctor" target="_top">.NET documentation</a>
+     */
     public ManipulationVelocities(Vector linearVelocity, double angularVelocity, Vector expansionVelocity) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +180,13 @@ public class ManipulationVelocities extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AngularVelocity.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.ManipulationVelocities.AngularVelocity" target="_top">.NET documentation</a>
+     */
     public double getAngularVelocity() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +227,13 @@ public class ManipulationVelocities extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AngularVelocity.
+     *
+     * @param AngularVelocity the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.ManipulationVelocities.AngularVelocity" target="_top">.NET documentation</a>
+     */
     public void setAngularVelocity(double AngularVelocity) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -218,6 +244,13 @@ public class ManipulationVelocities extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ExpansionVelocity.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.ManipulationVelocities.ExpansionVelocity" target="_top">.NET documentation</a>
+     */
     public Vector getExpansionVelocity() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -233,6 +266,13 @@ public class ManipulationVelocities extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ExpansionVelocity.
+     *
+     * @param ExpansionVelocity the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.ManipulationVelocities.ExpansionVelocity" target="_top">.NET documentation</a>
+     */
     public void setExpansionVelocity(Vector ExpansionVelocity) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -243,6 +283,13 @@ public class ManipulationVelocities extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LinearVelocity.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.ManipulationVelocities.LinearVelocity" target="_top">.NET documentation</a>
+     */
     public Vector getLinearVelocity() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -258,6 +305,13 @@ public class ManipulationVelocities extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property LinearVelocity.
+     *
+     * @param LinearVelocity the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.ManipulationVelocities.LinearVelocity" target="_top">.NET documentation</a>
+     */
     public void setLinearVelocity(Vector LinearVelocity) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -103,7 +103,10 @@ public class OperationMessageCollection extends system.web.services.description.
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public OperationMessageCollection(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -158,6 +161,14 @@ public class OperationMessageCollection extends system.web.services.description.
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Contains.
+     *
+     * @param operationMessage the argument of type {@code OperationMessage}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.OperationMessageCollection.Contains" target="_top">.NET documentation</a>
+     */
     public boolean Contains(OperationMessage operationMessage) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -172,6 +183,14 @@ public class OperationMessageCollection extends system.web.services.description.
         }
     }
 
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param operationMessage the argument of type {@code OperationMessage}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.OperationMessageCollection.Add" target="_top">.NET documentation</a>
+     */
     public int Add(OperationMessage operationMessage) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -212,6 +231,14 @@ public class OperationMessageCollection extends system.web.services.description.
         }
     }
 
+    /**
+     * Invokes the .NET member IndexOf.
+     *
+     * @param operationMessage the argument of type {@code OperationMessage}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.OperationMessageCollection.IndexOf" target="_top">.NET documentation</a>
+     */
     public int IndexOf(OperationMessage operationMessage) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -252,6 +279,14 @@ public class OperationMessageCollection extends system.web.services.description.
         }
     }
 
+    /**
+     * Invokes the .NET member CopyTo.
+     *
+     * @param array the argument of type {@code OperationMessage[]}
+     * @param index the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.OperationMessageCollection.CopyTo" target="_top">.NET documentation</a>
+     */
     public void CopyTo(OperationMessage[] array, int index) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -262,6 +297,14 @@ public class OperationMessageCollection extends system.web.services.description.
         }
     }
 
+    /**
+     * Invokes the .NET member Insert.
+     *
+     * @param index the argument of type {@code int}
+     * @param operationMessage the argument of type {@code OperationMessage}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.OperationMessageCollection.Insert" target="_top">.NET documentation</a>
+     */
     public void Insert(int index, OperationMessage operationMessage) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -272,6 +315,13 @@ public class OperationMessageCollection extends system.web.services.description.
         }
     }
 
+    /**
+     * Invokes the .NET member Remove.
+     *
+     * @param operationMessage the argument of type {@code OperationMessage}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.OperationMessageCollection.Remove" target="_top">.NET documentation</a>
+     */
     public void Remove(OperationMessage operationMessage) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -286,6 +336,13 @@ public class OperationMessageCollection extends system.web.services.description.
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Flow.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.OperationMessageCollection.Flow" target="_top">.NET documentation</a>
+     */
     public OperationFlow getFlow() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -301,6 +358,13 @@ public class OperationMessageCollection extends system.web.services.description.
         }
     }
 
+    /**
+     * Gets the value of the .NET property Input.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.OperationMessageCollection.Input" target="_top">.NET documentation</a>
+     */
     public OperationInput getInput() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -316,6 +380,13 @@ public class OperationMessageCollection extends system.web.services.description.
         }
     }
 
+    /**
+     * Gets the value of the .NET property Output.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.OperationMessageCollection.Output" target="_top">.NET documentation</a>
+     */
     public OperationOutput getOutput() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

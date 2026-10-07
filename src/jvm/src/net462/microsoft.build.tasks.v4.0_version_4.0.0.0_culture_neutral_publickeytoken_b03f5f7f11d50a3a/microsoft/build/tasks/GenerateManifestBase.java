@@ -101,7 +101,10 @@ public class GenerateManifestBase extends microsoft.build.utilities.Task  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public GenerateManifestBase(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,38 @@ public class GenerateManifestBase extends microsoft.build.utilities.Task  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Execute.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.xml.xpath.XPathException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateManifestBase.Execute" target="_top">.NET documentation</a>
+     */
     public boolean Execute() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NullReferenceException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.SecurityException, system.OutOfMemoryException, system.FormatException, system.xml.XmlException, system.xml.xpath.XPathException, system.collections.generic.KeyNotFoundException, system.RankException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -172,6 +207,13 @@ public class GenerateManifestBase extends microsoft.build.utilities.Task  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property MaxTargetPath.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateManifestBase.MaxTargetPath" target="_top">.NET documentation</a>
+     */
     public int getMaxTargetPath() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -212,6 +254,13 @@ public class GenerateManifestBase extends microsoft.build.utilities.Task  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MaxTargetPath.
+     *
+     * @param MaxTargetPath the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateManifestBase.MaxTargetPath" target="_top">.NET documentation</a>
+     */
     public void setMaxTargetPath(int MaxTargetPath) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -222,6 +271,13 @@ public class GenerateManifestBase extends microsoft.build.utilities.Task  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EntryPoint.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateManifestBase.EntryPoint" target="_top">.NET documentation</a>
+     */
     public ITaskItem getEntryPoint() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -237,6 +293,13 @@ public class GenerateManifestBase extends microsoft.build.utilities.Task  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property EntryPoint.
+     *
+     * @param EntryPoint the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateManifestBase.EntryPoint" target="_top">.NET documentation</a>
+     */
     public void setEntryPoint(ITaskItem EntryPoint) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -247,6 +310,13 @@ public class GenerateManifestBase extends microsoft.build.utilities.Task  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property InputManifest.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateManifestBase.InputManifest" target="_top">.NET documentation</a>
+     */
     public ITaskItem getInputManifest() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -262,6 +332,13 @@ public class GenerateManifestBase extends microsoft.build.utilities.Task  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property InputManifest.
+     *
+     * @param InputManifest the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateManifestBase.InputManifest" target="_top">.NET documentation</a>
+     */
     public void setInputManifest(ITaskItem InputManifest) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -272,6 +349,13 @@ public class GenerateManifestBase extends microsoft.build.utilities.Task  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OutputManifest.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateManifestBase.OutputManifest" target="_top">.NET documentation</a>
+     */
     public ITaskItem getOutputManifest() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -287,6 +371,13 @@ public class GenerateManifestBase extends microsoft.build.utilities.Task  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property OutputManifest.
+     *
+     * @param OutputManifest the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateManifestBase.OutputManifest" target="_top">.NET documentation</a>
+     */
     public void setOutputManifest(ITaskItem OutputManifest) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -297,6 +388,13 @@ public class GenerateManifestBase extends microsoft.build.utilities.Task  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AssemblyName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateManifestBase.AssemblyName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getAssemblyName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -311,6 +409,13 @@ public class GenerateManifestBase extends microsoft.build.utilities.Task  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AssemblyName.
+     *
+     * @param AssemblyName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateManifestBase.AssemblyName" target="_top">.NET documentation</a>
+     */
     public void setAssemblyName(java.lang.String AssemblyName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -321,6 +426,13 @@ public class GenerateManifestBase extends microsoft.build.utilities.Task  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AssemblyVersion.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateManifestBase.AssemblyVersion" target="_top">.NET documentation</a>
+     */
     public java.lang.String getAssemblyVersion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -335,6 +447,13 @@ public class GenerateManifestBase extends microsoft.build.utilities.Task  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AssemblyVersion.
+     *
+     * @param AssemblyVersion the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateManifestBase.AssemblyVersion" target="_top">.NET documentation</a>
+     */
     public void setAssemblyVersion(java.lang.String AssemblyVersion) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -345,6 +464,13 @@ public class GenerateManifestBase extends microsoft.build.utilities.Task  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Description.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateManifestBase.Description" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDescription() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -359,6 +485,13 @@ public class GenerateManifestBase extends microsoft.build.utilities.Task  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Description.
+     *
+     * @param Description the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateManifestBase.Description" target="_top">.NET documentation</a>
+     */
     public void setDescription(java.lang.String Description) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -369,6 +502,13 @@ public class GenerateManifestBase extends microsoft.build.utilities.Task  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Platform.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateManifestBase.Platform" target="_top">.NET documentation</a>
+     */
     public java.lang.String getPlatform() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -383,6 +523,13 @@ public class GenerateManifestBase extends microsoft.build.utilities.Task  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Platform.
+     *
+     * @param Platform the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateManifestBase.Platform" target="_top">.NET documentation</a>
+     */
     public void setPlatform(java.lang.String Platform) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -393,6 +540,13 @@ public class GenerateManifestBase extends microsoft.build.utilities.Task  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TargetCulture.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateManifestBase.TargetCulture" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTargetCulture() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -407,6 +561,13 @@ public class GenerateManifestBase extends microsoft.build.utilities.Task  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TargetCulture.
+     *
+     * @param TargetCulture the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateManifestBase.TargetCulture" target="_top">.NET documentation</a>
+     */
     public void setTargetCulture(java.lang.String TargetCulture) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -417,6 +578,13 @@ public class GenerateManifestBase extends microsoft.build.utilities.Task  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TargetFrameworkMoniker.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateManifestBase.TargetFrameworkMoniker" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTargetFrameworkMoniker() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -431,6 +599,13 @@ public class GenerateManifestBase extends microsoft.build.utilities.Task  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TargetFrameworkMoniker.
+     *
+     * @param TargetFrameworkMoniker the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateManifestBase.TargetFrameworkMoniker" target="_top">.NET documentation</a>
+     */
     public void setTargetFrameworkMoniker(java.lang.String TargetFrameworkMoniker) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -441,6 +616,13 @@ public class GenerateManifestBase extends microsoft.build.utilities.Task  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TargetFrameworkVersion.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateManifestBase.TargetFrameworkVersion" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTargetFrameworkVersion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -455,6 +637,13 @@ public class GenerateManifestBase extends microsoft.build.utilities.Task  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TargetFrameworkVersion.
+     *
+     * @param TargetFrameworkVersion the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateManifestBase.TargetFrameworkVersion" target="_top">.NET documentation</a>
+     */
     public void setTargetFrameworkVersion(java.lang.String TargetFrameworkVersion) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

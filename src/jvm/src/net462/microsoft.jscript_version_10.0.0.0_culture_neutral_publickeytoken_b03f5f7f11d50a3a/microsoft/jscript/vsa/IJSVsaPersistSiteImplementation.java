@@ -98,7 +98,10 @@ public class IJSVsaPersistSiteImplementation extends NetObject implements IJSVsa
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IJSVsaPersistSiteImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -140,6 +143,14 @@ public class IJSVsaPersistSiteImplementation extends NetObject implements IJSVsa
 
     // Methods section
     
+    /**
+     * Invokes the .NET member LoadElement.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.IJSVsaPersistSite.LoadElement" target="_top">.NET documentation</a>
+     */
     public java.lang.String LoadElement(java.lang.String name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -154,6 +165,14 @@ public class IJSVsaPersistSiteImplementation extends NetObject implements IJSVsa
         }
     }
 
+    /**
+     * Invokes the .NET member SaveElement.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param source the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Vsa.IJSVsaPersistSite.SaveElement" target="_top">.NET documentation</a>
+     */
     public void SaveElement(java.lang.String name, java.lang.String source) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -99,7 +99,10 @@ public class FlushResult extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public FlushResult(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,14 @@ public class FlushResult extends system.ValueType  {
     public FlushResult() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param isCanceled the argument of type {@code boolean}
+     * @param isCompleted the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Pipelines.FlushResult.-ctor" target="_top">.NET documentation</a>
+     */
     public FlushResult(boolean isCanceled, boolean isCompleted) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +179,13 @@ public class FlushResult extends system.ValueType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsCanceled.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Pipelines.FlushResult.IsCanceled" target="_top">.NET documentation</a>
+     */
     public boolean getIsCanceled() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +200,13 @@ public class FlushResult extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsCompleted.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Pipelines.FlushResult.IsCompleted" target="_top">.NET documentation</a>
+     */
     public boolean getIsCompleted() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

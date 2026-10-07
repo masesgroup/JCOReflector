@@ -102,7 +102,10 @@ public class ComponentInstaller extends system.configuration.install.Installer  
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ComponentInstaller(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,14 @@ public class ComponentInstaller extends system.configuration.install.Installer  
     
     // Methods section
     
+    /**
+     * Invokes the .NET member IsEquivalentInstaller.
+     *
+     * @param otherInstaller the argument of type {@code ComponentInstaller}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.Install.ComponentInstaller.IsEquivalentInstaller" target="_top">.NET documentation</a>
+     */
     public boolean IsEquivalentInstaller(ComponentInstaller otherInstaller) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -169,6 +180,13 @@ public class ComponentInstaller extends system.configuration.install.Installer  
         }
     }
 
+    /**
+     * Invokes the .NET member CopyFromComponent.
+     *
+     * @param component the argument of type {@code IComponent}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.Install.ComponentInstaller.CopyFromComponent" target="_top">.NET documentation</a>
+     */
     public void CopyFromComponent(IComponent component) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

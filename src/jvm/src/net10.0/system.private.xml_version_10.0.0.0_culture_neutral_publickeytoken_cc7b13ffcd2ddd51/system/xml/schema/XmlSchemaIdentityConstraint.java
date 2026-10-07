@@ -102,7 +102,10 @@ public class XmlSchemaIdentityConstraint extends system.xml.schema.XmlSchemaAnno
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XmlSchemaIdentityConstraint(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,12 @@ public class XmlSchemaIdentityConstraint extends system.xml.schema.XmlSchemaAnno
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaIdentityConstraint.-ctor" target="_top">.NET documentation</a>
+     */
     public XmlSchemaIdentityConstraint() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +176,13 @@ public class XmlSchemaIdentityConstraint extends system.xml.schema.XmlSchemaAnno
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaIdentityConstraint.Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -181,6 +197,13 @@ public class XmlSchemaIdentityConstraint extends system.xml.schema.XmlSchemaAnno
         }
     }
 
+    /**
+     * Sets the value of the .NET property Name.
+     *
+     * @param Name the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaIdentityConstraint.Name" target="_top">.NET documentation</a>
+     */
     public void setName(java.lang.String Name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -191,6 +214,13 @@ public class XmlSchemaIdentityConstraint extends system.xml.schema.XmlSchemaAnno
         }
     }
 
+    /**
+     * Gets the value of the .NET property Fields.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaIdentityConstraint.Fields" target="_top">.NET documentation</a>
+     */
     public XmlSchemaObjectCollection getFields() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,6 +236,13 @@ public class XmlSchemaIdentityConstraint extends system.xml.schema.XmlSchemaAnno
         }
     }
 
+    /**
+     * Gets the value of the .NET property Selector.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaIdentityConstraint.Selector" target="_top">.NET documentation</a>
+     */
     public XmlSchemaXPath getSelector() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -221,6 +258,13 @@ public class XmlSchemaIdentityConstraint extends system.xml.schema.XmlSchemaAnno
         }
     }
 
+    /**
+     * Sets the value of the .NET property Selector.
+     *
+     * @param Selector the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaIdentityConstraint.Selector" target="_top">.NET documentation</a>
+     */
     public void setSelector(XmlSchemaXPath Selector) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -231,6 +275,13 @@ public class XmlSchemaIdentityConstraint extends system.xml.schema.XmlSchemaAnno
         }
     }
 
+    /**
+     * Gets the value of the .NET property QualifiedName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaIdentityConstraint.QualifiedName" target="_top">.NET documentation</a>
+     */
     public XmlQualifiedName getQualifiedName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

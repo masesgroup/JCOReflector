@@ -99,7 +99,10 @@ public class IHttpHandlerImplementation extends NetObject implements IHttpHandle
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IHttpHandlerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -141,6 +144,13 @@ public class IHttpHandlerImplementation extends NetObject implements IHttpHandle
 
     // Methods section
     
+    /**
+     * Invokes the .NET member ProcessRequest.
+     *
+     * @param context the argument of type {@code HttpContext}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.IHttpHandler.ProcessRequest" target="_top">.NET documentation</a>
+     */
     public void ProcessRequest(HttpContext context) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -155,6 +165,13 @@ public class IHttpHandlerImplementation extends NetObject implements IHttpHandle
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsReusable.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.IHttpHandler.IsReusable" target="_top">.NET documentation</a>
+     */
     public boolean getIsReusable() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

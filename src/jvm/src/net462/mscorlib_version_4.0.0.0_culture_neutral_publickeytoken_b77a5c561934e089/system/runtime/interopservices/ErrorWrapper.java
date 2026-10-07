@@ -98,7 +98,10 @@ public class ErrorWrapper extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ErrorWrapper(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,13 @@ public class ErrorWrapper extends NetObject  {
     public ErrorWrapper() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param errorCode the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ErrorWrapper.-ctor" target="_top">.NET documentation</a>
+     */
     public ErrorWrapper(int errorCode) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -158,6 +168,13 @@ public class ErrorWrapper extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param e the argument of type {@code NetException}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ErrorWrapper.-ctor" target="_top">.NET documentation</a>
+     */
     public ErrorWrapper(NetException e) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +185,14 @@ public class ErrorWrapper extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param errorCode the argument of type {@code NetObject}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ErrorWrapper.-ctor" target="_top">.NET documentation</a>
+     */
     public ErrorWrapper(NetObject errorCode) throws Throwable, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
@@ -187,6 +212,13 @@ public class ErrorWrapper extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ErrorCode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ErrorWrapper.ErrorCode" target="_top">.NET documentation</a>
+     */
     public int getErrorCode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -105,7 +105,10 @@ public class InstanceView extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public InstanceView(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -164,6 +167,13 @@ public class InstanceView extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsBoundToInstance.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.DurableInstancing.InstanceView.IsBoundToInstance" target="_top">.NET documentation</a>
+     */
     public boolean getIsBoundToInstance() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,6 +188,13 @@ public class InstanceView extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsBoundToInstance.
+     *
+     * @param IsBoundToInstance the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.DurableInstancing.InstanceView.IsBoundToInstance" target="_top">.NET documentation</a>
+     */
     public void setIsBoundToInstance(boolean IsBoundToInstance) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +205,13 @@ public class InstanceView extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsBoundToInstanceOwner.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.DurableInstancing.InstanceView.IsBoundToInstanceOwner" target="_top">.NET documentation</a>
+     */
     public boolean getIsBoundToInstanceOwner() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +226,13 @@ public class InstanceView extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsBoundToLock.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.DurableInstancing.InstanceView.IsBoundToLock" target="_top">.NET documentation</a>
+     */
     public boolean getIsBoundToLock() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +247,13 @@ public class InstanceView extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property InstanceKeys.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.DurableInstancing.InstanceView.InstanceKeys" target="_top">.NET documentation</a>
+     */
     public IDictionary_2 getInstanceKeys() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -231,6 +269,21 @@ public class InstanceView extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property InstanceKeys.
+     *
+     * @param InstanceKeys the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.DurableInstancing.InstanceView.InstanceKeys" target="_top">.NET documentation</a>
+     */
     public void setInstanceKeys(IDictionary_2 InstanceKeys) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -241,6 +294,13 @@ public class InstanceView extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property InstanceData.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.DurableInstancing.InstanceView.InstanceData" target="_top">.NET documentation</a>
+     */
     public IDictionary_2 getInstanceData() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -256,6 +316,21 @@ public class InstanceView extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property InstanceData.
+     *
+     * @param InstanceData the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.DurableInstancing.InstanceView.InstanceData" target="_top">.NET documentation</a>
+     */
     public void setInstanceData(IDictionary_2 InstanceData) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -266,6 +341,22 @@ public class InstanceView extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property InstanceMetadata.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.DurableInstancing.InstanceView.InstanceMetadata" target="_top">.NET documentation</a>
+     */
     public IDictionary_2 getInstanceMetadata() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -281,6 +372,21 @@ public class InstanceView extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property InstanceMetadata.
+     *
+     * @param InstanceMetadata the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.DurableInstancing.InstanceView.InstanceMetadata" target="_top">.NET documentation</a>
+     */
     public void setInstanceMetadata(IDictionary_2 InstanceMetadata) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -291,6 +397,22 @@ public class InstanceView extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property InstanceOwnerMetadata.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.DurableInstancing.InstanceView.InstanceOwnerMetadata" target="_top">.NET documentation</a>
+     */
     public IDictionary_2 getInstanceOwnerMetadata() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -306,6 +428,21 @@ public class InstanceView extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property InstanceOwnerMetadata.
+     *
+     * @param InstanceOwnerMetadata the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.DurableInstancing.InstanceView.InstanceOwnerMetadata" target="_top">.NET documentation</a>
+     */
     public void setInstanceOwnerMetadata(IDictionary_2 InstanceOwnerMetadata) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -316,6 +453,14 @@ public class InstanceView extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property InstanceStoreQueryResults.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.DurableInstancing.InstanceView.InstanceStoreQueryResults" target="_top">.NET documentation</a>
+     */
     public ReadOnlyCollection_1 getInstanceStoreQueryResults() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -331,6 +476,22 @@ public class InstanceView extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property InstanceStoreQueryResults.
+     *
+     * @param InstanceStoreQueryResults the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.DurableInstancing.InstanceView.InstanceStoreQueryResults" target="_top">.NET documentation</a>
+     */
     public void setInstanceStoreQueryResults(ReadOnlyCollection_1 InstanceStoreQueryResults) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.MulticastNotSupportedException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -341,6 +502,13 @@ public class InstanceView extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property InstanceId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.DurableInstancing.InstanceView.InstanceId" target="_top">.NET documentation</a>
+     */
     public Guid getInstanceId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -356,6 +524,13 @@ public class InstanceView extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property InstanceId.
+     *
+     * @param InstanceId the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.DurableInstancing.InstanceView.InstanceId" target="_top">.NET documentation</a>
+     */
     public void setInstanceId(Guid InstanceId) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -366,6 +541,13 @@ public class InstanceView extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property InstanceOwner.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.DurableInstancing.InstanceView.InstanceOwner" target="_top">.NET documentation</a>
+     */
     public InstanceOwner getInstanceOwner() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -381,6 +563,13 @@ public class InstanceView extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property InstanceOwner.
+     *
+     * @param InstanceOwner the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.DurableInstancing.InstanceView.InstanceOwner" target="_top">.NET documentation</a>
+     */
     public void setInstanceOwner(InstanceOwner InstanceOwner) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -391,6 +580,13 @@ public class InstanceView extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property InstanceState.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.DurableInstancing.InstanceView.InstanceState" target="_top">.NET documentation</a>
+     */
     public InstanceState getInstanceState() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -406,6 +602,13 @@ public class InstanceView extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property InstanceState.
+     *
+     * @param InstanceState the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.DurableInstancing.InstanceView.InstanceState" target="_top">.NET documentation</a>
+     */
     public void setInstanceState(InstanceState InstanceState) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -416,6 +619,13 @@ public class InstanceView extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property InstanceDataConsistency.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.DurableInstancing.InstanceView.InstanceDataConsistency" target="_top">.NET documentation</a>
+     */
     public InstanceValueConsistency getInstanceDataConsistency() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -431,6 +641,13 @@ public class InstanceView extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property InstanceDataConsistency.
+     *
+     * @param InstanceDataConsistency the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.DurableInstancing.InstanceView.InstanceDataConsistency" target="_top">.NET documentation</a>
+     */
     public void setInstanceDataConsistency(InstanceValueConsistency InstanceDataConsistency) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -441,6 +658,13 @@ public class InstanceView extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property InstanceKeysConsistency.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.DurableInstancing.InstanceView.InstanceKeysConsistency" target="_top">.NET documentation</a>
+     */
     public InstanceValueConsistency getInstanceKeysConsistency() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -456,6 +680,13 @@ public class InstanceView extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property InstanceKeysConsistency.
+     *
+     * @param InstanceKeysConsistency the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.DurableInstancing.InstanceView.InstanceKeysConsistency" target="_top">.NET documentation</a>
+     */
     public void setInstanceKeysConsistency(InstanceValueConsistency InstanceKeysConsistency) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -466,6 +697,13 @@ public class InstanceView extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property InstanceMetadataConsistency.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.DurableInstancing.InstanceView.InstanceMetadataConsistency" target="_top">.NET documentation</a>
+     */
     public InstanceValueConsistency getInstanceMetadataConsistency() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -481,6 +719,13 @@ public class InstanceView extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property InstanceMetadataConsistency.
+     *
+     * @param InstanceMetadataConsistency the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.DurableInstancing.InstanceView.InstanceMetadataConsistency" target="_top">.NET documentation</a>
+     */
     public void setInstanceMetadataConsistency(InstanceValueConsistency InstanceMetadataConsistency) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -491,6 +736,13 @@ public class InstanceView extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property InstanceOwnerMetadataConsistency.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.DurableInstancing.InstanceView.InstanceOwnerMetadataConsistency" target="_top">.NET documentation</a>
+     */
     public InstanceValueConsistency getInstanceOwnerMetadataConsistency() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -506,6 +758,13 @@ public class InstanceView extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property InstanceOwnerMetadataConsistency.
+     *
+     * @param InstanceOwnerMetadataConsistency the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.DurableInstancing.InstanceView.InstanceOwnerMetadataConsistency" target="_top">.NET documentation</a>
+     */
     public void setInstanceOwnerMetadataConsistency(InstanceValueConsistency InstanceOwnerMetadataConsistency) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

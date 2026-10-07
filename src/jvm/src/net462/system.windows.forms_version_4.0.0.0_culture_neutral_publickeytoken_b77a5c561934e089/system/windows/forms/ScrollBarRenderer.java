@@ -104,7 +104,10 @@ public class ScrollBarRenderer extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ScrollBarRenderer(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -159,6 +162,25 @@ public class ScrollBarRenderer extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetSizeBoxSize.
+     *
+     * @param g the argument of type {@code Graphics}
+     * @param state the argument of type {@code ScrollBarState}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ScrollBarRenderer.GetSizeBoxSize" target="_top">.NET documentation</a>
+     */
     public static Size GetSizeBoxSize(Graphics g, ScrollBarState state) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.NotImplementedException, system.componentmodel.InvalidEnumArgumentException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -174,6 +196,25 @@ public class ScrollBarRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetThumbGripSize.
+     *
+     * @param g the argument of type {@code Graphics}
+     * @param state the argument of type {@code ScrollBarState}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ScrollBarRenderer.GetThumbGripSize" target="_top">.NET documentation</a>
+     */
     public static Size GetThumbGripSize(Graphics g, ScrollBarState state) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.NotImplementedException, system.componentmodel.InvalidEnumArgumentException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -189,6 +230,21 @@ public class ScrollBarRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DrawArrowButton.
+     *
+     * @param g the argument of type {@code Graphics}
+     * @param bounds the argument of type {@code Rectangle}
+     * @param state the argument of type {@code ScrollBarArrowButtonState}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ScrollBarRenderer.DrawArrowButton" target="_top">.NET documentation</a>
+     */
     public static void DrawArrowButton(Graphics g, Rectangle bounds, ScrollBarArrowButtonState state) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -199,6 +255,21 @@ public class ScrollBarRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DrawHorizontalThumb.
+     *
+     * @param g the argument of type {@code Graphics}
+     * @param bounds the argument of type {@code Rectangle}
+     * @param state the argument of type {@code ScrollBarState}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ScrollBarRenderer.DrawHorizontalThumb" target="_top">.NET documentation</a>
+     */
     public static void DrawHorizontalThumb(Graphics g, Rectangle bounds, ScrollBarState state) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -209,6 +280,21 @@ public class ScrollBarRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DrawHorizontalThumbGrip.
+     *
+     * @param g the argument of type {@code Graphics}
+     * @param bounds the argument of type {@code Rectangle}
+     * @param state the argument of type {@code ScrollBarState}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ScrollBarRenderer.DrawHorizontalThumbGrip" target="_top">.NET documentation</a>
+     */
     public static void DrawHorizontalThumbGrip(Graphics g, Rectangle bounds, ScrollBarState state) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -219,6 +305,21 @@ public class ScrollBarRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DrawLeftHorizontalTrack.
+     *
+     * @param g the argument of type {@code Graphics}
+     * @param bounds the argument of type {@code Rectangle}
+     * @param state the argument of type {@code ScrollBarState}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ScrollBarRenderer.DrawLeftHorizontalTrack" target="_top">.NET documentation</a>
+     */
     public static void DrawLeftHorizontalTrack(Graphics g, Rectangle bounds, ScrollBarState state) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -229,6 +330,21 @@ public class ScrollBarRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DrawLowerVerticalTrack.
+     *
+     * @param g the argument of type {@code Graphics}
+     * @param bounds the argument of type {@code Rectangle}
+     * @param state the argument of type {@code ScrollBarState}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ScrollBarRenderer.DrawLowerVerticalTrack" target="_top">.NET documentation</a>
+     */
     public static void DrawLowerVerticalTrack(Graphics g, Rectangle bounds, ScrollBarState state) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -239,6 +355,21 @@ public class ScrollBarRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DrawRightHorizontalTrack.
+     *
+     * @param g the argument of type {@code Graphics}
+     * @param bounds the argument of type {@code Rectangle}
+     * @param state the argument of type {@code ScrollBarState}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ScrollBarRenderer.DrawRightHorizontalTrack" target="_top">.NET documentation</a>
+     */
     public static void DrawRightHorizontalTrack(Graphics g, Rectangle bounds, ScrollBarState state) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -249,6 +380,21 @@ public class ScrollBarRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DrawSizeBox.
+     *
+     * @param g the argument of type {@code Graphics}
+     * @param bounds the argument of type {@code Rectangle}
+     * @param state the argument of type {@code ScrollBarSizeBoxState}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ScrollBarRenderer.DrawSizeBox" target="_top">.NET documentation</a>
+     */
     public static void DrawSizeBox(Graphics g, Rectangle bounds, ScrollBarSizeBoxState state) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -259,6 +405,21 @@ public class ScrollBarRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DrawUpperVerticalTrack.
+     *
+     * @param g the argument of type {@code Graphics}
+     * @param bounds the argument of type {@code Rectangle}
+     * @param state the argument of type {@code ScrollBarState}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ScrollBarRenderer.DrawUpperVerticalTrack" target="_top">.NET documentation</a>
+     */
     public static void DrawUpperVerticalTrack(Graphics g, Rectangle bounds, ScrollBarState state) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -269,6 +430,21 @@ public class ScrollBarRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DrawVerticalThumb.
+     *
+     * @param g the argument of type {@code Graphics}
+     * @param bounds the argument of type {@code Rectangle}
+     * @param state the argument of type {@code ScrollBarState}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ScrollBarRenderer.DrawVerticalThumb" target="_top">.NET documentation</a>
+     */
     public static void DrawVerticalThumb(Graphics g, Rectangle bounds, ScrollBarState state) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -279,6 +455,21 @@ public class ScrollBarRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DrawVerticalThumbGrip.
+     *
+     * @param g the argument of type {@code Graphics}
+     * @param bounds the argument of type {@code Rectangle}
+     * @param state the argument of type {@code ScrollBarState}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ScrollBarRenderer.DrawVerticalThumbGrip" target="_top">.NET documentation</a>
+     */
     public static void DrawVerticalThumbGrip(Graphics g, Rectangle bounds, ScrollBarState state) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -293,6 +484,21 @@ public class ScrollBarRenderer extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsSupported.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ScrollBarRenderer.IsSupported" target="_top">.NET documentation</a>
+     */
     public static boolean getIsSupported() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.resources.MissingManifestResourceException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

@@ -103,7 +103,10 @@ public class SignatureDescription extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SignatureDescription(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,12 @@ public class SignatureDescription extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.SignatureDescription.-ctor" target="_top">.NET documentation</a>
+     */
     public SignatureDescription() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -160,6 +169,25 @@ public class SignatureDescription extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param el the argument of type {@code SecurityElement}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.SignatureDescription.-ctor" target="_top">.NET documentation</a>
+     */
     public SignatureDescription(SecurityElement el) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException {
         try {
             // add reference to assemblyName.dll file
@@ -174,6 +202,25 @@ public class SignatureDescription extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CreateDeformatter.
+     *
+     * @param key the argument of type {@code AsymmetricAlgorithm}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.SignatureDescription.CreateDeformatter" target="_top">.NET documentation</a>
+     */
     public AsymmetricSignatureDeformatter CreateDeformatter(AsymmetricAlgorithm key) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.TypeLoadException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +236,25 @@ public class SignatureDescription extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateFormatter.
+     *
+     * @param key the argument of type {@code AsymmetricAlgorithm}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.SignatureDescription.CreateFormatter" target="_top">.NET documentation</a>
+     */
     public AsymmetricSignatureFormatter CreateFormatter(AsymmetricAlgorithm key) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.TypeLoadException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +270,24 @@ public class SignatureDescription extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateDigest.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.SignatureDescription.CreateDigest" target="_top">.NET documentation</a>
+     */
     public HashAlgorithm CreateDigest() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.TypeLoadException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -223,6 +307,13 @@ public class SignatureDescription extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property DeformatterAlgorithm.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.SignatureDescription.DeformatterAlgorithm" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDeformatterAlgorithm() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -237,6 +328,13 @@ public class SignatureDescription extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DeformatterAlgorithm.
+     *
+     * @param DeformatterAlgorithm the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.SignatureDescription.DeformatterAlgorithm" target="_top">.NET documentation</a>
+     */
     public void setDeformatterAlgorithm(java.lang.String DeformatterAlgorithm) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -247,6 +345,13 @@ public class SignatureDescription extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DigestAlgorithm.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.SignatureDescription.DigestAlgorithm" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDigestAlgorithm() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -261,6 +366,13 @@ public class SignatureDescription extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DigestAlgorithm.
+     *
+     * @param DigestAlgorithm the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.SignatureDescription.DigestAlgorithm" target="_top">.NET documentation</a>
+     */
     public void setDigestAlgorithm(java.lang.String DigestAlgorithm) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -271,6 +383,13 @@ public class SignatureDescription extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FormatterAlgorithm.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.SignatureDescription.FormatterAlgorithm" target="_top">.NET documentation</a>
+     */
     public java.lang.String getFormatterAlgorithm() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -285,6 +404,13 @@ public class SignatureDescription extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property FormatterAlgorithm.
+     *
+     * @param FormatterAlgorithm the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.SignatureDescription.FormatterAlgorithm" target="_top">.NET documentation</a>
+     */
     public void setFormatterAlgorithm(java.lang.String FormatterAlgorithm) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -295,6 +421,13 @@ public class SignatureDescription extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property KeyAlgorithm.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.SignatureDescription.KeyAlgorithm" target="_top">.NET documentation</a>
+     */
     public java.lang.String getKeyAlgorithm() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -309,6 +442,13 @@ public class SignatureDescription extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property KeyAlgorithm.
+     *
+     * @param KeyAlgorithm the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.SignatureDescription.KeyAlgorithm" target="_top">.NET documentation</a>
+     */
     public void setKeyAlgorithm(java.lang.String KeyAlgorithm) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

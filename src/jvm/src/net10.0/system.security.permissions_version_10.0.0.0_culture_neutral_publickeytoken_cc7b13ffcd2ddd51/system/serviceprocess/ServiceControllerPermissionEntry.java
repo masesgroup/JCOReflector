@@ -99,7 +99,10 @@ public class ServiceControllerPermissionEntry extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ServiceControllerPermissionEntry(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class ServiceControllerPermissionEntry extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceProcess.ServiceControllerPermissionEntry.-ctor" target="_top">.NET documentation</a>
+     */
     public ServiceControllerPermissionEntry() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -156,6 +165,15 @@ public class ServiceControllerPermissionEntry extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param permissionAccess the argument of type {@code ServiceControllerPermissionAccess}
+     * @param machineName the argument of type {@code java.lang.String}
+     * @param serviceName the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceProcess.ServiceControllerPermissionEntry.-ctor" target="_top">.NET documentation</a>
+     */
     public ServiceControllerPermissionEntry(ServiceControllerPermissionAccess permissionAccess, java.lang.String machineName, java.lang.String serviceName) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -174,6 +192,13 @@ public class ServiceControllerPermissionEntry extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property PermissionAccess.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceProcess.ServiceControllerPermissionEntry.PermissionAccess" target="_top">.NET documentation</a>
+     */
     public ServiceControllerPermissionAccess getPermissionAccess() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +214,13 @@ public class ServiceControllerPermissionEntry extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MachineName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceProcess.ServiceControllerPermissionEntry.MachineName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getMachineName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +235,13 @@ public class ServiceControllerPermissionEntry extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ServiceName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceProcess.ServiceControllerPermissionEntry.ServiceName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getServiceName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

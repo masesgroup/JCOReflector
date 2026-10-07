@@ -98,7 +98,10 @@ public class NamespaceDeclaration extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public NamespaceDeclaration(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,14 @@ public class NamespaceDeclaration extends NetObject  {
     public NamespaceDeclaration() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param ns the argument of type {@code java.lang.String}
+     * @param prefix the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.NamespaceDeclaration.-ctor" target="_top">.NET documentation</a>
+     */
     public NamespaceDeclaration(java.lang.String ns, java.lang.String prefix) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +178,13 @@ public class NamespaceDeclaration extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Namespace.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.NamespaceDeclaration.Namespace" target="_top">.NET documentation</a>
+     */
     public java.lang.String getNamespace() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -181,6 +199,13 @@ public class NamespaceDeclaration extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Prefix.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.NamespaceDeclaration.Prefix" target="_top">.NET documentation</a>
+     */
     public java.lang.String getPrefix() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

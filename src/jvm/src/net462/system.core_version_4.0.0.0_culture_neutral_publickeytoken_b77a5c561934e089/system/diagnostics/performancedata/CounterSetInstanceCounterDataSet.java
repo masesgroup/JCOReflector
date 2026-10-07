@@ -99,7 +99,10 @@ public class CounterSetInstanceCounterDataSet extends NetObject implements AutoC
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CounterSetInstanceCounterDataSet(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,13 @@ public class CounterSetInstanceCounterDataSet extends NetObject implements AutoC
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Dispose.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.PerformanceData.CounterSetInstanceCounterDataSet.Dispose" target="_top">.NET documentation</a>
+     */
     public void Dispose() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

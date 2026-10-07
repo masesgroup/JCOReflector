@@ -102,7 +102,10 @@ public class IReadOnlySet_1Implementation<T extends IJCOBridgeReflected> extends
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IReadOnlySet_1Implementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -144,6 +147,14 @@ public class IReadOnlySet_1Implementation<T extends IJCOBridgeReflected> extends
 
     // Methods section
     
+    /**
+     * Invokes the .NET member Contains.
+     *
+     * @param item the argument of type {@code T}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.IReadOnlySet-1.Contains" target="_top">.NET documentation</a>
+     */
     public boolean Contains(T item) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -158,6 +169,14 @@ public class IReadOnlySet_1Implementation<T extends IJCOBridgeReflected> extends
         }
     }
 
+    /**
+     * Invokes the .NET member IsProperSubsetOf.
+     *
+     * @param other the argument of type {@code IEnumerable_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.IReadOnlySet-1.IsProperSubsetOf" target="_top">.NET documentation</a>
+     */
     public boolean IsProperSubsetOf(IEnumerable_1 other) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -172,6 +191,14 @@ public class IReadOnlySet_1Implementation<T extends IJCOBridgeReflected> extends
         }
     }
 
+    /**
+     * Invokes the .NET member IsProperSupersetOf.
+     *
+     * @param other the argument of type {@code IEnumerable_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.IReadOnlySet-1.IsProperSupersetOf" target="_top">.NET documentation</a>
+     */
     public boolean IsProperSupersetOf(IEnumerable_1 other) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -186,6 +213,14 @@ public class IReadOnlySet_1Implementation<T extends IJCOBridgeReflected> extends
         }
     }
 
+    /**
+     * Invokes the .NET member IsSubsetOf.
+     *
+     * @param other the argument of type {@code IEnumerable_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.IReadOnlySet-1.IsSubsetOf" target="_top">.NET documentation</a>
+     */
     public boolean IsSubsetOf(IEnumerable_1 other) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +235,14 @@ public class IReadOnlySet_1Implementation<T extends IJCOBridgeReflected> extends
         }
     }
 
+    /**
+     * Invokes the .NET member IsSupersetOf.
+     *
+     * @param other the argument of type {@code IEnumerable_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.IReadOnlySet-1.IsSupersetOf" target="_top">.NET documentation</a>
+     */
     public boolean IsSupersetOf(IEnumerable_1 other) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -214,6 +257,14 @@ public class IReadOnlySet_1Implementation<T extends IJCOBridgeReflected> extends
         }
     }
 
+    /**
+     * Invokes the .NET member Overlaps.
+     *
+     * @param other the argument of type {@code IEnumerable_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.IReadOnlySet-1.Overlaps" target="_top">.NET documentation</a>
+     */
     public boolean Overlaps(IEnumerable_1 other) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -228,6 +279,14 @@ public class IReadOnlySet_1Implementation<T extends IJCOBridgeReflected> extends
         }
     }
 
+    /**
+     * Invokes the .NET member SetEquals.
+     *
+     * @param other the argument of type {@code IEnumerable_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.IReadOnlySet-1.SetEquals" target="_top">.NET documentation</a>
+     */
     public boolean SetEquals(IEnumerable_1 other) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -246,6 +305,13 @@ public class IReadOnlySet_1Implementation<T extends IJCOBridgeReflected> extends
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Count.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.IReadOnlySet-1.Count" target="_top">.NET documentation</a>
+     */
     public int getCount() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

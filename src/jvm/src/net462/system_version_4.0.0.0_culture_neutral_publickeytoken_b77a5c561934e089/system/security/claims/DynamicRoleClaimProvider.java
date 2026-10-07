@@ -101,7 +101,10 @@ public class DynamicRoleClaimProvider extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DynamicRoleClaimProvider(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,15 @@ public class DynamicRoleClaimProvider extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member AddDynamicRoleClaims.
+     *
+     * @param claimsIdentity the argument of type {@code ClaimsIdentity}
+     * @param claims the argument of type {@code IEnumerable_1}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Claims.DynamicRoleClaimProvider.AddDynamicRoleClaims" target="_top">.NET documentation</a>
+     */
     public static void AddDynamicRoleClaims(ClaimsIdentity claimsIdentity, IEnumerable_1 claims) throws Throwable, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

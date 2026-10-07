@@ -108,7 +108,10 @@ public class IMonikerImplementation extends NetObject implements IMoniker {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IMonikerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,13 @@ public class IMonikerImplementation extends NetObject implements IMoniker {
 
     // Methods section
     
+    /**
+     * Invokes the .NET member IsDirty.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComTypes.IMoniker.IsDirty" target="_top">.NET documentation</a>
+     */
     public int IsDirty() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +200,14 @@ public class IMonikerImplementation extends NetObject implements IMoniker {
         }
     }
 
+    /**
+     * Invokes the .NET member IsEqual.
+     *
+     * @param pmkOtherMoniker the argument of type {@code IMoniker}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComTypes.IMoniker.IsEqual" target="_top">.NET documentation</a>
+     */
     public int IsEqual(IMoniker pmkOtherMoniker) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -230,6 +248,16 @@ public class IMonikerImplementation extends NetObject implements IMoniker {
         }
     }
 
+    /**
+     * Invokes the .NET member IsRunning.
+     *
+     * @param pbc the argument of type {@code IBindCtx}
+     * @param pmkToLeft the argument of type {@code IMoniker}
+     * @param pmkNewlyRunning the argument of type {@code IMoniker}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComTypes.IMoniker.IsRunning" target="_top">.NET documentation</a>
+     */
     public int IsRunning(IBindCtx pbc, IMoniker pmkToLeft, IMoniker pmkNewlyRunning) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -270,6 +298,14 @@ public class IMonikerImplementation extends NetObject implements IMoniker {
         }
     }
 
+    /**
+     * Invokes the .NET member IsSystemMoniker.
+     *
+     * @param pdwMksys the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicInteger>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComTypes.IMoniker.IsSystemMoniker" target="_top">.NET documentation</a>
+     */
     public int IsSystemMoniker(JCORefOut<java.util.concurrent.atomic.AtomicInteger> pdwMksys) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -310,6 +346,16 @@ public class IMonikerImplementation extends NetObject implements IMoniker {
         }
     }
 
+    /**
+     * Invokes the .NET member BindToObject.
+     *
+     * @param pbc the argument of type {@code IBindCtx}
+     * @param pmkToLeft the argument of type {@code IMoniker}
+     * @param riidResult the argument of type {@code JCORefOut<Guid>}
+     * @param ppvResult the argument of type {@code JCORefOut<NetObject>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComTypes.IMoniker.BindToObject" target="_top">.NET documentation</a>
+     */
     public void BindToObject(IBindCtx pbc, IMoniker pmkToLeft, JCORefOut<Guid> riidResult, JCORefOut<NetObject> ppvResult) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -320,6 +366,16 @@ public class IMonikerImplementation extends NetObject implements IMoniker {
         }
     }
 
+    /**
+     * Invokes the .NET member BindToStorage.
+     *
+     * @param pbc the argument of type {@code IBindCtx}
+     * @param pmkToLeft the argument of type {@code IMoniker}
+     * @param riid the argument of type {@code JCORefOut<Guid>}
+     * @param ppvObj the argument of type {@code JCORefOut<NetObject>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComTypes.IMoniker.BindToStorage" target="_top">.NET documentation</a>
+     */
     public void BindToStorage(IBindCtx pbc, IMoniker pmkToLeft, JCORefOut<Guid> riid, JCORefOut<NetObject> ppvObj) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -330,6 +386,14 @@ public class IMonikerImplementation extends NetObject implements IMoniker {
         }
     }
 
+    /**
+     * Invokes the .NET member CommonPrefixWith.
+     *
+     * @param pmkOther the argument of type {@code IMoniker}
+     * @param ppmkPrefix the argument of type {@code JCORefOut<IMoniker>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComTypes.IMoniker.CommonPrefixWith" target="_top">.NET documentation</a>
+     */
     public void CommonPrefixWith(IMoniker pmkOther, JCORefOut<IMoniker> ppmkPrefix) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -340,6 +404,15 @@ public class IMonikerImplementation extends NetObject implements IMoniker {
         }
     }
 
+    /**
+     * Invokes the .NET member ComposeWith.
+     *
+     * @param pmkRight the argument of type {@code IMoniker}
+     * @param fOnlyIfNotGeneric the argument of type {@code boolean}
+     * @param ppmkComposite the argument of type {@code JCORefOut<IMoniker>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComTypes.IMoniker.ComposeWith" target="_top">.NET documentation</a>
+     */
     public void ComposeWith(IMoniker pmkRight, boolean fOnlyIfNotGeneric, JCORefOut<IMoniker> ppmkComposite) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -350,6 +423,14 @@ public class IMonikerImplementation extends NetObject implements IMoniker {
         }
     }
 
+    /**
+     * Invokes the .NET member Enum.
+     *
+     * @param fForward the argument of type {@code boolean}
+     * @param ppenumMoniker the argument of type {@code JCORefOut<IEnumMoniker>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComTypes.IMoniker.Enum" target="_top">.NET documentation</a>
+     */
     public void Enum(boolean fForward, JCORefOut<IEnumMoniker> ppenumMoniker) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -360,6 +441,13 @@ public class IMonikerImplementation extends NetObject implements IMoniker {
         }
     }
 
+    /**
+     * Invokes the .NET member GetClassID.
+     *
+     * @param pClassID the argument of type {@code JCORefOut<Guid>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComTypes.IMoniker.GetClassID" target="_top">.NET documentation</a>
+     */
     public void GetClassID(JCORefOut<Guid> pClassID) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -370,6 +458,15 @@ public class IMonikerImplementation extends NetObject implements IMoniker {
         }
     }
 
+    /**
+     * Invokes the .NET member GetDisplayName.
+     *
+     * @param pbc the argument of type {@code IBindCtx}
+     * @param pmkToLeft the argument of type {@code IMoniker}
+     * @param ppszDisplayName the argument of type {@code JCORefOut}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComTypes.IMoniker.GetDisplayName" target="_top">.NET documentation</a>
+     */
     public void GetDisplayName(IBindCtx pbc, IMoniker pmkToLeft, JCORefOut ppszDisplayName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -380,6 +477,13 @@ public class IMonikerImplementation extends NetObject implements IMoniker {
         }
     }
 
+    /**
+     * Invokes the .NET member GetSizeMax.
+     *
+     * @param pcbSize the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicLong>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComTypes.IMoniker.GetSizeMax" target="_top">.NET documentation</a>
+     */
     public void GetSizeMax(JCORefOut<java.util.concurrent.atomic.AtomicLong> pcbSize) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -390,6 +494,15 @@ public class IMonikerImplementation extends NetObject implements IMoniker {
         }
     }
 
+    /**
+     * Invokes the .NET member GetTimeOfLastChange.
+     *
+     * @param pbc the argument of type {@code IBindCtx}
+     * @param pmkToLeft the argument of type {@code IMoniker}
+     * @param pFileTime the argument of type {@code JCORefOut<FILETIME>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComTypes.IMoniker.GetTimeOfLastChange" target="_top">.NET documentation</a>
+     */
     public void GetTimeOfLastChange(IBindCtx pbc, IMoniker pmkToLeft, JCORefOut<FILETIME> pFileTime) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -400,6 +513,13 @@ public class IMonikerImplementation extends NetObject implements IMoniker {
         }
     }
 
+    /**
+     * Invokes the .NET member Hash.
+     *
+     * @param pdwHash the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicInteger>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComTypes.IMoniker.Hash" target="_top">.NET documentation</a>
+     */
     public void Hash(JCORefOut<java.util.concurrent.atomic.AtomicInteger> pdwHash) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -410,6 +530,13 @@ public class IMonikerImplementation extends NetObject implements IMoniker {
         }
     }
 
+    /**
+     * Invokes the .NET member Inverse.
+     *
+     * @param ppmk the argument of type {@code JCORefOut<IMoniker>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComTypes.IMoniker.Inverse" target="_top">.NET documentation</a>
+     */
     public void Inverse(JCORefOut<IMoniker> ppmk) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -420,6 +547,13 @@ public class IMonikerImplementation extends NetObject implements IMoniker {
         }
     }
 
+    /**
+     * Invokes the .NET member Load.
+     *
+     * @param pStm the argument of type {@code IStream}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComTypes.IMoniker.Load" target="_top">.NET documentation</a>
+     */
     public void Load(IStream pStm) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -430,6 +564,17 @@ public class IMonikerImplementation extends NetObject implements IMoniker {
         }
     }
 
+    /**
+     * Invokes the .NET member ParseDisplayName.
+     *
+     * @param pbc the argument of type {@code IBindCtx}
+     * @param pmkToLeft the argument of type {@code IMoniker}
+     * @param pszDisplayName the argument of type {@code java.lang.String}
+     * @param pchEaten the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicInteger>}
+     * @param ppmkOut the argument of type {@code JCORefOut<IMoniker>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComTypes.IMoniker.ParseDisplayName" target="_top">.NET documentation</a>
+     */
     public void ParseDisplayName(IBindCtx pbc, IMoniker pmkToLeft, java.lang.String pszDisplayName, JCORefOut<java.util.concurrent.atomic.AtomicInteger> pchEaten, JCORefOut<IMoniker> ppmkOut) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -440,6 +585,16 @@ public class IMonikerImplementation extends NetObject implements IMoniker {
         }
     }
 
+    /**
+     * Invokes the .NET member Reduce.
+     *
+     * @param pbc the argument of type {@code IBindCtx}
+     * @param dwReduceHowFar the argument of type {@code int}
+     * @param ppmkToLeft the argument of type {@code JCORefOut<IMoniker>}
+     * @param ppmkReduced the argument of type {@code JCORefOut<IMoniker>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComTypes.IMoniker.Reduce" target="_top">.NET documentation</a>
+     */
     public void Reduce(IBindCtx pbc, int dwReduceHowFar, JCORefOut<IMoniker> ppmkToLeft, JCORefOut<IMoniker> ppmkReduced) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -450,6 +605,14 @@ public class IMonikerImplementation extends NetObject implements IMoniker {
         }
     }
 
+    /**
+     * Invokes the .NET member RelativePathTo.
+     *
+     * @param pmkOther the argument of type {@code IMoniker}
+     * @param ppmkRelPath the argument of type {@code JCORefOut<IMoniker>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComTypes.IMoniker.RelativePathTo" target="_top">.NET documentation</a>
+     */
     public void RelativePathTo(IMoniker pmkOther, JCORefOut<IMoniker> ppmkRelPath) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -460,6 +623,14 @@ public class IMonikerImplementation extends NetObject implements IMoniker {
         }
     }
 
+    /**
+     * Invokes the .NET member Save.
+     *
+     * @param pStm the argument of type {@code IStream}
+     * @param fClearDirty the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComTypes.IMoniker.Save" target="_top">.NET documentation</a>
+     */
     public void Save(IStream pStm, boolean fClearDirty) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

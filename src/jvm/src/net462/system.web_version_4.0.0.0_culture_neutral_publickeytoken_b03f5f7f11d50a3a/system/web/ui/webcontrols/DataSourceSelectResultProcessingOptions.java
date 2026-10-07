@@ -98,7 +98,10 @@ public class DataSourceSelectResultProcessingOptions extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DataSourceSelectResultProcessingOptions(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -145,6 +148,12 @@ public class DataSourceSelectResultProcessingOptions extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.DataSourceSelectResultProcessingOptions.-ctor" target="_top">.NET documentation</a>
+     */
     public DataSourceSelectResultProcessingOptions() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -163,6 +172,13 @@ public class DataSourceSelectResultProcessingOptions extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AutoPage.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.DataSourceSelectResultProcessingOptions.AutoPage" target="_top">.NET documentation</a>
+     */
     public boolean getAutoPage() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -177,6 +193,13 @@ public class DataSourceSelectResultProcessingOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AutoPage.
+     *
+     * @param AutoPage the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.DataSourceSelectResultProcessingOptions.AutoPage" target="_top">.NET documentation</a>
+     */
     public void setAutoPage(boolean AutoPage) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +210,13 @@ public class DataSourceSelectResultProcessingOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AutoSort.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.DataSourceSelectResultProcessingOptions.AutoSort" target="_top">.NET documentation</a>
+     */
     public boolean getAutoSort() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +231,13 @@ public class DataSourceSelectResultProcessingOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AutoSort.
+     *
+     * @param AutoSort the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.DataSourceSelectResultProcessingOptions.AutoSort" target="_top">.NET documentation</a>
+     */
     public void setAutoSort(boolean AutoSort) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -211,6 +248,13 @@ public class DataSourceSelectResultProcessingOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ModelType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.DataSourceSelectResultProcessingOptions.ModelType" target="_top">.NET documentation</a>
+     */
     public NetType getModelType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -226,6 +270,13 @@ public class DataSourceSelectResultProcessingOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ModelType.
+     *
+     * @param ModelType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.DataSourceSelectResultProcessingOptions.ModelType" target="_top">.NET documentation</a>
+     */
     public void setModelType(NetType ModelType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -99,7 +99,10 @@ public class CngAlgorithm extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CngAlgorithm(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,16 @@ public class CngAlgorithm extends NetObject  {
     public CngAlgorithm() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param algorithm the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CngAlgorithm.-ctor" target="_top">.NET documentation</a>
+     */
     public CngAlgorithm(java.lang.String algorithm) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +177,19 @@ public class CngAlgorithm extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Equals.
+     *
+     * @param other the argument of type {@code CngAlgorithm}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CngAlgorithm.Equals" target="_top">.NET documentation</a>
+     */
     public boolean Equals(CngAlgorithm other) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +208,15 @@ public class CngAlgorithm extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ECDiffieHellman.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CngAlgorithm.ECDiffieHellman" target="_top">.NET documentation</a>
+     */
     public static CngAlgorithm getECDiffieHellman() throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -197,6 +232,15 @@ public class CngAlgorithm extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ECDiffieHellmanP256.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CngAlgorithm.ECDiffieHellmanP256" target="_top">.NET documentation</a>
+     */
     public static CngAlgorithm getECDiffieHellmanP256() throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -212,6 +256,15 @@ public class CngAlgorithm extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ECDiffieHellmanP384.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CngAlgorithm.ECDiffieHellmanP384" target="_top">.NET documentation</a>
+     */
     public static CngAlgorithm getECDiffieHellmanP384() throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -227,6 +280,15 @@ public class CngAlgorithm extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ECDiffieHellmanP521.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CngAlgorithm.ECDiffieHellmanP521" target="_top">.NET documentation</a>
+     */
     public static CngAlgorithm getECDiffieHellmanP521() throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -242,6 +304,15 @@ public class CngAlgorithm extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ECDsa.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CngAlgorithm.ECDsa" target="_top">.NET documentation</a>
+     */
     public static CngAlgorithm getECDsa() throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -257,6 +328,15 @@ public class CngAlgorithm extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ECDsaP256.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CngAlgorithm.ECDsaP256" target="_top">.NET documentation</a>
+     */
     public static CngAlgorithm getECDsaP256() throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -272,6 +352,15 @@ public class CngAlgorithm extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ECDsaP384.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CngAlgorithm.ECDsaP384" target="_top">.NET documentation</a>
+     */
     public static CngAlgorithm getECDsaP384() throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -287,6 +376,15 @@ public class CngAlgorithm extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ECDsaP521.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CngAlgorithm.ECDsaP521" target="_top">.NET documentation</a>
+     */
     public static CngAlgorithm getECDsaP521() throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -302,6 +400,15 @@ public class CngAlgorithm extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MD5.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CngAlgorithm.MD5" target="_top">.NET documentation</a>
+     */
     public static CngAlgorithm getMD5() throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -317,6 +424,15 @@ public class CngAlgorithm extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Rsa.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CngAlgorithm.Rsa" target="_top">.NET documentation</a>
+     */
     public static CngAlgorithm getRsa() throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -332,6 +448,15 @@ public class CngAlgorithm extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Sha1.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CngAlgorithm.Sha1" target="_top">.NET documentation</a>
+     */
     public static CngAlgorithm getSha1() throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -347,6 +472,15 @@ public class CngAlgorithm extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Sha256.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CngAlgorithm.Sha256" target="_top">.NET documentation</a>
+     */
     public static CngAlgorithm getSha256() throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -362,6 +496,15 @@ public class CngAlgorithm extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Sha384.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CngAlgorithm.Sha384" target="_top">.NET documentation</a>
+     */
     public static CngAlgorithm getSha384() throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -377,6 +520,15 @@ public class CngAlgorithm extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Sha512.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CngAlgorithm.Sha512" target="_top">.NET documentation</a>
+     */
     public static CngAlgorithm getSha512() throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -392,6 +544,13 @@ public class CngAlgorithm extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Algorithm.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CngAlgorithm.Algorithm" target="_top">.NET documentation</a>
+     */
     public java.lang.String getAlgorithm() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

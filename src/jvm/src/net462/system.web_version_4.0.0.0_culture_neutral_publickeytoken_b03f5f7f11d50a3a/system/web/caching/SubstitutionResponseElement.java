@@ -100,7 +100,10 @@ public class SubstitutionResponseElement extends system.web.caching.ResponseElem
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SubstitutionResponseElement(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,14 @@ public class SubstitutionResponseElement extends system.web.caching.ResponseElem
     public SubstitutionResponseElement() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param callback the argument of type {@code HttpResponseSubstitutionCallback}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Caching.SubstitutionResponseElement.-ctor" target="_top">.NET documentation</a>
+     */
     public SubstitutionResponseElement(HttpResponseSubstitutionCallback callback) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +180,13 @@ public class SubstitutionResponseElement extends system.web.caching.ResponseElem
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Callback.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Caching.SubstitutionResponseElement.Callback" target="_top">.NET documentation</a>
+     */
     public HttpResponseSubstitutionCallback getCallback() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

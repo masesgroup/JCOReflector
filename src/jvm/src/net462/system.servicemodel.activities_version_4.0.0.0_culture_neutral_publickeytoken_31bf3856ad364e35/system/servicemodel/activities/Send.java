@@ -107,7 +107,10 @@ public class Send extends system.activities.Activity  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Send(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,18 @@ public class Send extends system.activities.Activity  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Send.-ctor" target="_top">.NET documentation</a>
+     */
     public Send() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
@@ -172,6 +187,13 @@ public class Send extends system.activities.Activity  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CorrelatesWith.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Send.CorrelatesWith" target="_top">.NET documentation</a>
+     */
     public InArgument_1 getCorrelatesWith() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +209,13 @@ public class Send extends system.activities.Activity  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CorrelatesWith.
+     *
+     * @param CorrelatesWith the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Send.CorrelatesWith" target="_top">.NET documentation</a>
+     */
     public void setCorrelatesWith(InArgument_1 CorrelatesWith) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +226,13 @@ public class Send extends system.activities.Activity  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EndpointAddress.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Send.EndpointAddress" target="_top">.NET documentation</a>
+     */
     public InArgument_1 getEndpointAddress() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -212,6 +248,13 @@ public class Send extends system.activities.Activity  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property EndpointAddress.
+     *
+     * @param EndpointAddress the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Send.EndpointAddress" target="_top">.NET documentation</a>
+     */
     public void setEndpointAddress(InArgument_1 EndpointAddress) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -222,6 +265,13 @@ public class Send extends system.activities.Activity  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CorrelationInitializers.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Send.CorrelationInitializers" target="_top">.NET documentation</a>
+     */
     public Collection_1 getCorrelationInitializers() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -237,6 +287,13 @@ public class Send extends system.activities.Activity  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property KnownTypes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Send.KnownTypes" target="_top">.NET documentation</a>
+     */
     public Collection_1 getKnownTypes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -252,6 +309,13 @@ public class Send extends system.activities.Activity  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ProtectionLevel.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Send.ProtectionLevel" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getProtectionLevel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -267,6 +331,13 @@ public class Send extends system.activities.Activity  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ProtectionLevel.
+     *
+     * @param ProtectionLevel the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Send.ProtectionLevel" target="_top">.NET documentation</a>
+     */
     public void setProtectionLevel(Nullable_1 ProtectionLevel) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -277,6 +348,13 @@ public class Send extends system.activities.Activity  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TokenImpersonationLevel.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Send.TokenImpersonationLevel" target="_top">.NET documentation</a>
+     */
     public TokenImpersonationLevel getTokenImpersonationLevel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -292,6 +370,13 @@ public class Send extends system.activities.Activity  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TokenImpersonationLevel.
+     *
+     * @param TokenImpersonationLevel the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Send.TokenImpersonationLevel" target="_top">.NET documentation</a>
+     */
     public void setTokenImpersonationLevel(TokenImpersonationLevel TokenImpersonationLevel) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -302,6 +387,13 @@ public class Send extends system.activities.Activity  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Content.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Send.Content" target="_top">.NET documentation</a>
+     */
     public SendContent getContent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -317,6 +409,13 @@ public class Send extends system.activities.Activity  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Content.
+     *
+     * @param Content the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Send.Content" target="_top">.NET documentation</a>
+     */
     public void setContent(SendContent Content) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -327,6 +426,13 @@ public class Send extends system.activities.Activity  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SerializerOption.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Send.SerializerOption" target="_top">.NET documentation</a>
+     */
     public SerializerOption getSerializerOption() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -342,6 +448,13 @@ public class Send extends system.activities.Activity  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SerializerOption.
+     *
+     * @param SerializerOption the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Send.SerializerOption" target="_top">.NET documentation</a>
+     */
     public void setSerializerOption(SerializerOption SerializerOption) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -352,6 +465,13 @@ public class Send extends system.activities.Activity  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Endpoint.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Send.Endpoint" target="_top">.NET documentation</a>
+     */
     public Endpoint getEndpoint() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -367,6 +487,13 @@ public class Send extends system.activities.Activity  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Endpoint.
+     *
+     * @param Endpoint the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Send.Endpoint" target="_top">.NET documentation</a>
+     */
     public void setEndpoint(Endpoint Endpoint) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -377,6 +504,13 @@ public class Send extends system.activities.Activity  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Action.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Send.Action" target="_top">.NET documentation</a>
+     */
     public java.lang.String getAction() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -391,6 +525,13 @@ public class Send extends system.activities.Activity  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Action.
+     *
+     * @param Action the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Send.Action" target="_top">.NET documentation</a>
+     */
     public void setAction(java.lang.String Action) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -401,6 +542,13 @@ public class Send extends system.activities.Activity  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EndpointConfigurationName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Send.EndpointConfigurationName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getEndpointConfigurationName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -415,6 +563,13 @@ public class Send extends system.activities.Activity  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property EndpointConfigurationName.
+     *
+     * @param EndpointConfigurationName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Send.EndpointConfigurationName" target="_top">.NET documentation</a>
+     */
     public void setEndpointConfigurationName(java.lang.String EndpointConfigurationName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -425,6 +580,13 @@ public class Send extends system.activities.Activity  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OperationName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Send.OperationName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getOperationName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -439,6 +601,13 @@ public class Send extends system.activities.Activity  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property OperationName.
+     *
+     * @param OperationName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Send.OperationName" target="_top">.NET documentation</a>
+     */
     public void setOperationName(java.lang.String OperationName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -449,6 +618,13 @@ public class Send extends system.activities.Activity  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ServiceContractName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Send.ServiceContractName" target="_top">.NET documentation</a>
+     */
     public XName getServiceContractName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -464,6 +640,13 @@ public class Send extends system.activities.Activity  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ServiceContractName.
+     *
+     * @param ServiceContractName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Send.ServiceContractName" target="_top">.NET documentation</a>
+     */
     public void setServiceContractName(XName ServiceContractName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

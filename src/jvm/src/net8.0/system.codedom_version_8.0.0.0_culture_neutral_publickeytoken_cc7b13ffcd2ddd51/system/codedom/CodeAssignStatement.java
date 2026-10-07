@@ -100,7 +100,10 @@ public class CodeAssignStatement extends system.codedom.CodeStatement  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CodeAssignStatement(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class CodeAssignStatement extends system.codedom.CodeStatement  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeAssignStatement.-ctor" target="_top">.NET documentation</a>
+     */
     public CodeAssignStatement() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -157,6 +166,14 @@ public class CodeAssignStatement extends system.codedom.CodeStatement  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param left the argument of type {@code CodeExpression}
+     * @param right the argument of type {@code CodeExpression}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeAssignStatement.-ctor" target="_top">.NET documentation</a>
+     */
     public CodeAssignStatement(CodeExpression left, CodeExpression right) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -175,6 +192,13 @@ public class CodeAssignStatement extends system.codedom.CodeStatement  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Left.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeAssignStatement.Left" target="_top">.NET documentation</a>
+     */
     public CodeExpression getLeft() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +214,13 @@ public class CodeAssignStatement extends system.codedom.CodeStatement  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Left.
+     *
+     * @param Left the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeAssignStatement.Left" target="_top">.NET documentation</a>
+     */
     public void setLeft(CodeExpression Left) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +231,13 @@ public class CodeAssignStatement extends system.codedom.CodeStatement  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Right.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeAssignStatement.Right" target="_top">.NET documentation</a>
+     */
     public CodeExpression getRight() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +253,13 @@ public class CodeAssignStatement extends system.codedom.CodeStatement  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Right.
+     *
+     * @param Right the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeAssignStatement.Right" target="_top">.NET documentation</a>
+     */
     public void setRight(CodeExpression Right) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

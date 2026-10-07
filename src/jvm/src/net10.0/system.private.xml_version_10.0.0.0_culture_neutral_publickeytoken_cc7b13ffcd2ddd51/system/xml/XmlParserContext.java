@@ -102,7 +102,10 @@ public class XmlParserContext extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XmlParserContext(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,34 @@ public class XmlParserContext extends NetObject  {
     public XmlParserContext() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param nt the argument of type {@code XmlNameTable}
+     * @param nsMgr the argument of type {@code XmlNamespaceManager}
+     * @param docTypeName the argument of type {@code java.lang.String}
+     * @param pubId the argument of type {@code java.lang.String}
+     * @param sysId the argument of type {@code java.lang.String}
+     * @param internalSubset the argument of type {@code java.lang.String}
+     * @param baseURI the argument of type {@code java.lang.String}
+     * @param xmlLang the argument of type {@code java.lang.String}
+     * @param xmlSpace the argument of type {@code XmlSpace}
+     * @param enc the argument of type {@code Encoding}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlParserContext.-ctor" target="_top">.NET documentation</a>
+     */
     public XmlParserContext(XmlNameTable nt, XmlNamespaceManager nsMgr, java.lang.String docTypeName, java.lang.String pubId, java.lang.String sysId, java.lang.String internalSubset, java.lang.String baseURI, java.lang.String xmlLang, XmlSpace xmlSpace, Encoding enc) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.xml.XmlException {
         try {
             // add reference to assemblyName.dll file
@@ -162,6 +193,32 @@ public class XmlParserContext extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param nt the argument of type {@code XmlNameTable}
+     * @param nsMgr the argument of type {@code XmlNamespaceManager}
+     * @param docTypeName the argument of type {@code java.lang.String}
+     * @param pubId the argument of type {@code java.lang.String}
+     * @param sysId the argument of type {@code java.lang.String}
+     * @param internalSubset the argument of type {@code java.lang.String}
+     * @param baseURI the argument of type {@code java.lang.String}
+     * @param xmlLang the argument of type {@code java.lang.String}
+     * @param xmlSpace the argument of type {@code XmlSpace}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlParserContext.-ctor" target="_top">.NET documentation</a>
+     */
     public XmlParserContext(XmlNameTable nt, XmlNamespaceManager nsMgr, java.lang.String docTypeName, java.lang.String pubId, java.lang.String sysId, java.lang.String internalSubset, java.lang.String baseURI, java.lang.String xmlLang, XmlSpace xmlSpace) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.FormatException, system.OutOfMemoryException, system.xml.XmlException {
         try {
             // add reference to assemblyName.dll file
@@ -172,6 +229,28 @@ public class XmlParserContext extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param nt the argument of type {@code XmlNameTable}
+     * @param nsMgr the argument of type {@code XmlNamespaceManager}
+     * @param xmlLang the argument of type {@code java.lang.String}
+     * @param xmlSpace the argument of type {@code XmlSpace}
+     * @param enc the argument of type {@code Encoding}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlParserContext.-ctor" target="_top">.NET documentation</a>
+     */
     public XmlParserContext(XmlNameTable nt, XmlNamespaceManager nsMgr, java.lang.String xmlLang, XmlSpace xmlSpace, Encoding enc) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.FormatException, system.OutOfMemoryException, system.xml.XmlException {
         try {
             // add reference to assemblyName.dll file
@@ -182,6 +261,24 @@ public class XmlParserContext extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param nt the argument of type {@code XmlNameTable}
+     * @param nsMgr the argument of type {@code XmlNamespaceManager}
+     * @param xmlLang the argument of type {@code java.lang.String}
+     * @param xmlSpace the argument of type {@code XmlSpace}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlParserContext.-ctor" target="_top">.NET documentation</a>
+     */
     public XmlParserContext(XmlNameTable nt, XmlNamespaceManager nsMgr, java.lang.String xmlLang, XmlSpace xmlSpace) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException, system.OutOfMemoryException, system.xml.XmlException {
         try {
             // add reference to assemblyName.dll file
@@ -201,6 +298,13 @@ public class XmlParserContext extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property BaseURI.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlParserContext.BaseURI" target="_top">.NET documentation</a>
+     */
     public java.lang.String getBaseURI() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +319,13 @@ public class XmlParserContext extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property BaseURI.
+     *
+     * @param BaseURI the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlParserContext.BaseURI" target="_top">.NET documentation</a>
+     */
     public void setBaseURI(java.lang.String BaseURI) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -225,6 +336,13 @@ public class XmlParserContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DocTypeName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlParserContext.DocTypeName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDocTypeName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -239,6 +357,13 @@ public class XmlParserContext extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DocTypeName.
+     *
+     * @param DocTypeName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlParserContext.DocTypeName" target="_top">.NET documentation</a>
+     */
     public void setDocTypeName(java.lang.String DocTypeName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -249,6 +374,13 @@ public class XmlParserContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property InternalSubset.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlParserContext.InternalSubset" target="_top">.NET documentation</a>
+     */
     public java.lang.String getInternalSubset() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -263,6 +395,13 @@ public class XmlParserContext extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property InternalSubset.
+     *
+     * @param InternalSubset the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlParserContext.InternalSubset" target="_top">.NET documentation</a>
+     */
     public void setInternalSubset(java.lang.String InternalSubset) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -273,6 +412,13 @@ public class XmlParserContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PublicId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlParserContext.PublicId" target="_top">.NET documentation</a>
+     */
     public java.lang.String getPublicId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -287,6 +433,13 @@ public class XmlParserContext extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PublicId.
+     *
+     * @param PublicId the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlParserContext.PublicId" target="_top">.NET documentation</a>
+     */
     public void setPublicId(java.lang.String PublicId) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -297,6 +450,13 @@ public class XmlParserContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SystemId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlParserContext.SystemId" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSystemId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -311,6 +471,13 @@ public class XmlParserContext extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SystemId.
+     *
+     * @param SystemId the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlParserContext.SystemId" target="_top">.NET documentation</a>
+     */
     public void setSystemId(java.lang.String SystemId) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -321,6 +488,13 @@ public class XmlParserContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlLang.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlParserContext.XmlLang" target="_top">.NET documentation</a>
+     */
     public java.lang.String getXmlLang() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -335,6 +509,13 @@ public class XmlParserContext extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property XmlLang.
+     *
+     * @param XmlLang the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlParserContext.XmlLang" target="_top">.NET documentation</a>
+     */
     public void setXmlLang(java.lang.String XmlLang) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -345,6 +526,13 @@ public class XmlParserContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Encoding.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlParserContext.Encoding" target="_top">.NET documentation</a>
+     */
     public Encoding getEncoding() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -360,6 +548,13 @@ public class XmlParserContext extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Encoding.
+     *
+     * @param Encoding the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlParserContext.Encoding" target="_top">.NET documentation</a>
+     */
     public void setEncoding(Encoding Encoding) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -370,6 +565,13 @@ public class XmlParserContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NamespaceManager.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlParserContext.NamespaceManager" target="_top">.NET documentation</a>
+     */
     public XmlNamespaceManager getNamespaceManager() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -385,6 +587,13 @@ public class XmlParserContext extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property NamespaceManager.
+     *
+     * @param NamespaceManager the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlParserContext.NamespaceManager" target="_top">.NET documentation</a>
+     */
     public void setNamespaceManager(XmlNamespaceManager NamespaceManager) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -395,6 +604,13 @@ public class XmlParserContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NameTable.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlParserContext.NameTable" target="_top">.NET documentation</a>
+     */
     public XmlNameTable getNameTable() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -410,6 +626,13 @@ public class XmlParserContext extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property NameTable.
+     *
+     * @param NameTable the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlParserContext.NameTable" target="_top">.NET documentation</a>
+     */
     public void setNameTable(XmlNameTable NameTable) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -420,6 +643,13 @@ public class XmlParserContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlSpace.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlParserContext.XmlSpace" target="_top">.NET documentation</a>
+     */
     public XmlSpace getXmlSpace() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -435,6 +665,13 @@ public class XmlParserContext extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property XmlSpace.
+     *
+     * @param XmlSpace the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlParserContext.XmlSpace" target="_top">.NET documentation</a>
+     */
     public void setXmlSpace(XmlSpace XmlSpace) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

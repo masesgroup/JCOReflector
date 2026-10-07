@@ -108,7 +108,10 @@ public class DbProviderFactory extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DbProviderFactory(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -161,6 +164,22 @@ public class DbProviderFactory extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CreateBatch.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbProviderFactory.CreateBatch" target="_top">.NET documentation</a>
+     */
     public DbBatch CreateBatch() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -176,6 +195,22 @@ public class DbProviderFactory extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateBatchCommand.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbProviderFactory.CreateBatchCommand" target="_top">.NET documentation</a>
+     */
     public DbBatchCommand CreateBatchCommand() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -191,6 +226,13 @@ public class DbProviderFactory extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateCommand.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbProviderFactory.CreateCommand" target="_top">.NET documentation</a>
+     */
     public DbCommand CreateCommand() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,6 +248,13 @@ public class DbProviderFactory extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateCommandBuilder.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbProviderFactory.CreateCommandBuilder" target="_top">.NET documentation</a>
+     */
     public DbCommandBuilder CreateCommandBuilder() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -221,6 +270,13 @@ public class DbProviderFactory extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateConnection.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbProviderFactory.CreateConnection" target="_top">.NET documentation</a>
+     */
     public DbConnection CreateConnection() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -236,6 +292,13 @@ public class DbProviderFactory extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateConnectionStringBuilder.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbProviderFactory.CreateConnectionStringBuilder" target="_top">.NET documentation</a>
+     */
     public DbConnectionStringBuilder CreateConnectionStringBuilder() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -251,6 +314,13 @@ public class DbProviderFactory extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateDataAdapter.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbProviderFactory.CreateDataAdapter" target="_top">.NET documentation</a>
+     */
     public DbDataAdapter CreateDataAdapter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -266,6 +336,14 @@ public class DbProviderFactory extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateDataSource.
+     *
+     * @param connectionString the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbProviderFactory.CreateDataSource" target="_top">.NET documentation</a>
+     */
     public DbDataSource CreateDataSource(java.lang.String connectionString) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -281,6 +359,13 @@ public class DbProviderFactory extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateDataSourceEnumerator.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbProviderFactory.CreateDataSourceEnumerator" target="_top">.NET documentation</a>
+     */
     public DbDataSourceEnumerator CreateDataSourceEnumerator() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -296,6 +381,13 @@ public class DbProviderFactory extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateParameter.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbProviderFactory.CreateParameter" target="_top">.NET documentation</a>
+     */
     public DbParameter CreateParameter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -315,6 +407,13 @@ public class DbProviderFactory extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CanCreateBatch.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbProviderFactory.CanCreateBatch" target="_top">.NET documentation</a>
+     */
     public boolean getCanCreateBatch() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -329,6 +428,23 @@ public class DbProviderFactory extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CanCreateCommandBuilder.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbProviderFactory.CanCreateCommandBuilder" target="_top">.NET documentation</a>
+     */
     public boolean getCanCreateCommandBuilder() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -343,6 +459,23 @@ public class DbProviderFactory extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CanCreateDataAdapter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbProviderFactory.CanCreateDataAdapter" target="_top">.NET documentation</a>
+     */
     public boolean getCanCreateDataAdapter() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -357,6 +490,13 @@ public class DbProviderFactory extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CanCreateDataSourceEnumerator.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbProviderFactory.CanCreateDataSourceEnumerator" target="_top">.NET documentation</a>
+     */
     public boolean getCanCreateDataSourceEnumerator() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

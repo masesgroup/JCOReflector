@@ -52,5 +52,10 @@ import system.servicemodel.InstanceContext;
  * @version 2.0.0.0
  */
 public interface IInstanceContextIdleCallback {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param instanceContext the .NET argument of type {@code System.ServiceModel.InstanceContext}
+     */
     public void Invoke(InstanceContext instanceContext);
 }

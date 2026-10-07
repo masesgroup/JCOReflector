@@ -98,7 +98,10 @@ public class IPInterfaceStatistics extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IPInterfaceStatistics(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,13 @@ public class IPInterfaceStatistics extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property BytesReceived.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.IPInterfaceStatistics.BytesReceived" target="_top">.NET documentation</a>
+     */
     public long getBytesReceived() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -195,6 +205,13 @@ public class IPInterfaceStatistics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property BytesSent.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.IPInterfaceStatistics.BytesSent" target="_top">.NET documentation</a>
+     */
     public long getBytesSent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -235,6 +252,13 @@ public class IPInterfaceStatistics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IncomingPacketsDiscarded.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.IPInterfaceStatistics.IncomingPacketsDiscarded" target="_top">.NET documentation</a>
+     */
     public long getIncomingPacketsDiscarded() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -275,6 +299,13 @@ public class IPInterfaceStatistics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IncomingPacketsWithErrors.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.IPInterfaceStatistics.IncomingPacketsWithErrors" target="_top">.NET documentation</a>
+     */
     public long getIncomingPacketsWithErrors() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -315,6 +346,13 @@ public class IPInterfaceStatistics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IncomingUnknownProtocolPackets.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.IPInterfaceStatistics.IncomingUnknownProtocolPackets" target="_top">.NET documentation</a>
+     */
     public long getIncomingUnknownProtocolPackets() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -355,6 +393,13 @@ public class IPInterfaceStatistics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NonUnicastPacketsReceived.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.IPInterfaceStatistics.NonUnicastPacketsReceived" target="_top">.NET documentation</a>
+     */
     public long getNonUnicastPacketsReceived() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -395,6 +440,13 @@ public class IPInterfaceStatistics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NonUnicastPacketsSent.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.IPInterfaceStatistics.NonUnicastPacketsSent" target="_top">.NET documentation</a>
+     */
     public long getNonUnicastPacketsSent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -435,6 +487,13 @@ public class IPInterfaceStatistics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OutgoingPacketsDiscarded.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.IPInterfaceStatistics.OutgoingPacketsDiscarded" target="_top">.NET documentation</a>
+     */
     public long getOutgoingPacketsDiscarded() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -475,6 +534,13 @@ public class IPInterfaceStatistics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OutgoingPacketsWithErrors.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.IPInterfaceStatistics.OutgoingPacketsWithErrors" target="_top">.NET documentation</a>
+     */
     public long getOutgoingPacketsWithErrors() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -515,6 +581,13 @@ public class IPInterfaceStatistics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OutputQueueLength.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.IPInterfaceStatistics.OutputQueueLength" target="_top">.NET documentation</a>
+     */
     public long getOutputQueueLength() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -555,6 +628,13 @@ public class IPInterfaceStatistics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UnicastPacketsReceived.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.IPInterfaceStatistics.UnicastPacketsReceived" target="_top">.NET documentation</a>
+     */
     public long getUnicastPacketsReceived() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -595,6 +675,13 @@ public class IPInterfaceStatistics extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UnicastPacketsSent.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.IPInterfaceStatistics.UnicastPacketsSent" target="_top">.NET documentation</a>
+     */
     public long getUnicastPacketsSent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

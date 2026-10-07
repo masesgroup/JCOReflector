@@ -103,7 +103,10 @@ public class ServicePoint extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ServicePoint(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -158,6 +161,14 @@ public class ServicePoint extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CloseConnectionGroup.
+     *
+     * @param connectionGroupName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.ServicePoint.CloseConnectionGroup" target="_top">.NET documentation</a>
+     */
     public boolean CloseConnectionGroup(java.lang.String connectionGroupName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -172,6 +183,25 @@ public class ServicePoint extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetTcpKeepAlive.
+     *
+     * @param enabled the argument of type {@code boolean}
+     * @param keepAliveTime the argument of type {@code int}
+     * @param keepAliveInterval the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.ServicePoint.SetTcpKeepAlive" target="_top">.NET documentation</a>
+     */
     public void SetTcpKeepAlive(boolean enabled, int keepAliveTime, int keepAliveInterval) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -186,6 +216,13 @@ public class ServicePoint extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Expect100Continue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.ServicePoint.Expect100Continue" target="_top">.NET documentation</a>
+     */
     public boolean getExpect100Continue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +237,13 @@ public class ServicePoint extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Expect100Continue.
+     *
+     * @param Expect100Continue the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.ServicePoint.Expect100Continue" target="_top">.NET documentation</a>
+     */
     public void setExpect100Continue(boolean Expect100Continue) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -210,6 +254,13 @@ public class ServicePoint extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SupportsPipelining.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.ServicePoint.SupportsPipelining" target="_top">.NET documentation</a>
+     */
     public boolean getSupportsPipelining() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -224,6 +275,13 @@ public class ServicePoint extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UseNagleAlgorithm.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.ServicePoint.UseNagleAlgorithm" target="_top">.NET documentation</a>
+     */
     public boolean getUseNagleAlgorithm() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -238,6 +296,13 @@ public class ServicePoint extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property UseNagleAlgorithm.
+     *
+     * @param UseNagleAlgorithm the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.ServicePoint.UseNagleAlgorithm" target="_top">.NET documentation</a>
+     */
     public void setUseNagleAlgorithm(boolean UseNagleAlgorithm) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -248,6 +313,13 @@ public class ServicePoint extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ConnectionLeaseTimeout.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.ServicePoint.ConnectionLeaseTimeout" target="_top">.NET documentation</a>
+     */
     public int getConnectionLeaseTimeout() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -288,6 +360,24 @@ public class ServicePoint extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ConnectionLeaseTimeout.
+     *
+     * @param ConnectionLeaseTimeout the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.ServicePoint.ConnectionLeaseTimeout" target="_top">.NET documentation</a>
+     */
     public void setConnectionLeaseTimeout(int ConnectionLeaseTimeout) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -298,6 +388,13 @@ public class ServicePoint extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ConnectionLimit.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.ServicePoint.ConnectionLimit" target="_top">.NET documentation</a>
+     */
     public int getConnectionLimit() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -338,6 +435,23 @@ public class ServicePoint extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ConnectionLimit.
+     *
+     * @param ConnectionLimit the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.ServicePoint.ConnectionLimit" target="_top">.NET documentation</a>
+     */
     public void setConnectionLimit(int ConnectionLimit) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -348,6 +462,13 @@ public class ServicePoint extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CurrentConnections.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.ServicePoint.CurrentConnections" target="_top">.NET documentation</a>
+     */
     public int getCurrentConnections() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -388,6 +509,13 @@ public class ServicePoint extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MaxIdleTime.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.ServicePoint.MaxIdleTime" target="_top">.NET documentation</a>
+     */
     public int getMaxIdleTime() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -428,6 +556,24 @@ public class ServicePoint extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MaxIdleTime.
+     *
+     * @param MaxIdleTime the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.ServicePoint.MaxIdleTime" target="_top">.NET documentation</a>
+     */
     public void setMaxIdleTime(int MaxIdleTime) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -438,6 +584,13 @@ public class ServicePoint extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ReceiveBufferSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.ServicePoint.ReceiveBufferSize" target="_top">.NET documentation</a>
+     */
     public int getReceiveBufferSize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -478,6 +631,24 @@ public class ServicePoint extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ReceiveBufferSize.
+     *
+     * @param ReceiveBufferSize the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.ServicePoint.ReceiveBufferSize" target="_top">.NET documentation</a>
+     */
     public void setReceiveBufferSize(int ReceiveBufferSize) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -488,6 +659,13 @@ public class ServicePoint extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IdleSince.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.ServicePoint.IdleSince" target="_top">.NET documentation</a>
+     */
     public DateTime getIdleSince() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -503,6 +681,13 @@ public class ServicePoint extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IdleSince.
+     *
+     * @param IdleSince the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.ServicePoint.IdleSince" target="_top">.NET documentation</a>
+     */
     public void setIdleSince(DateTime IdleSince) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -513,6 +698,13 @@ public class ServicePoint extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property BindIPEndPointDelegate.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.ServicePoint.BindIPEndPointDelegate" target="_top">.NET documentation</a>
+     */
     public BindIPEndPoint getBindIPEndPointDelegate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -527,6 +719,13 @@ public class ServicePoint extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property BindIPEndPointDelegate.
+     *
+     * @param BindIPEndPointDelegate the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.ServicePoint.BindIPEndPointDelegate" target="_top">.NET documentation</a>
+     */
     public void setBindIPEndPointDelegate(BindIPEndPoint BindIPEndPointDelegate) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -537,6 +736,13 @@ public class ServicePoint extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Certificate.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.ServicePoint.Certificate" target="_top">.NET documentation</a>
+     */
     public X509Certificate getCertificate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -552,6 +758,13 @@ public class ServicePoint extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Certificate.
+     *
+     * @param Certificate the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.ServicePoint.Certificate" target="_top">.NET documentation</a>
+     */
     public void setCertificate(X509Certificate Certificate) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -562,6 +775,13 @@ public class ServicePoint extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ClientCertificate.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.ServicePoint.ClientCertificate" target="_top">.NET documentation</a>
+     */
     public X509Certificate getClientCertificate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -577,6 +797,13 @@ public class ServicePoint extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ConnectionName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.ServicePoint.ConnectionName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getConnectionName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -591,6 +818,13 @@ public class ServicePoint extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Address.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.ServicePoint.Address" target="_top">.NET documentation</a>
+     */
     public Uri getAddress() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -606,6 +840,13 @@ public class ServicePoint extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ProtocolVersion.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.ServicePoint.ProtocolVersion" target="_top">.NET documentation</a>
+     */
     public Version getProtocolVersion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -621,6 +862,13 @@ public class ServicePoint extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ProtocolVersion.
+     *
+     * @param ProtocolVersion the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.ServicePoint.ProtocolVersion" target="_top">.NET documentation</a>
+     */
     public void setProtocolVersion(Version ProtocolVersion) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

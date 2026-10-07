@@ -99,7 +99,10 @@ public class BitwiseBinary extends microsoft.jscript.BinaryOp  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public BitwiseBinary(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,13 @@ public class BitwiseBinary extends microsoft.jscript.BinaryOp  {
     public BitwiseBinary() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param operatorTok the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.BitwiseBinary.-ctor" target="_top">.NET documentation</a>
+     */
     public BitwiseBinary(int operatorTok) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +174,25 @@ public class BitwiseBinary extends microsoft.jscript.BinaryOp  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member EvaluateBitwiseBinary.
+     *
+     * @param v1 the argument of type {@code NetObject}
+     * @param v2 the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @throws system.ArithmeticException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.BitwiseBinary.EvaluateBitwiseBinary" target="_top">.NET documentation</a>
+     */
     public NetObject EvaluateBitwiseBinary(NetObject v1, NetObject v2) throws Throwable, microsoft.jscript.JScriptException, system.ArithmeticException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OverflowException, system.IndexOutOfRangeException, system.NotImplementedException, system.ArgumentNullException, system.MissingMethodException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

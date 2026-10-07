@@ -99,7 +99,10 @@ public class WqlObjectQuery extends system.management.ObjectQuery  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public WqlObjectQuery(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class WqlObjectQuery extends system.management.ObjectQuery  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.WqlObjectQuery.-ctor" target="_top">.NET documentation</a>
+     */
     public WqlObjectQuery() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -156,6 +165,13 @@ public class WqlObjectQuery extends system.management.ObjectQuery  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param query the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.WqlObjectQuery.-ctor" target="_top">.NET documentation</a>
+     */
     public WqlObjectQuery(java.lang.String query) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +186,13 @@ public class WqlObjectQuery extends system.management.ObjectQuery  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Clone.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.WqlObjectQuery.Clone" target="_top">.NET documentation</a>
+     */
     public NetObject Clone() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

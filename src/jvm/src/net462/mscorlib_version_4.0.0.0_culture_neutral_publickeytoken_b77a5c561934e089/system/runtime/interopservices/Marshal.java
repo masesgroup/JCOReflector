@@ -113,7 +113,10 @@ public class Marshal extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Marshal(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -166,6 +169,13 @@ public class Marshal extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member AreComObjectsAvailableForCleanup.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Marshal.AreComObjectsAvailableForCleanup" target="_top">.NET documentation</a>
+     */
     public static boolean AreComObjectsAvailableForCleanup() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -180,6 +190,14 @@ public class Marshal extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsComObject.
+     *
+     * @param o the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Marshal.IsComObject" target="_top">.NET documentation</a>
+     */
     public static boolean IsComObject(NetObject o) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -194,6 +212,14 @@ public class Marshal extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsTypeVisibleFromCom.
+     *
+     * @param t the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Marshal.IsTypeVisibleFromCom" target="_top">.NET documentation</a>
+     */
     public static boolean IsTypeVisibleFromCom(NetType t) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -208,6 +234,24 @@ public class Marshal extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetComObjectData.
+     *
+     * @param obj the argument of type {@code NetObject}
+     * @param key the argument of type {@code NetObject}
+     * @param data the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Marshal.SetComObjectData" target="_top">.NET documentation</a>
+     */
     public static boolean SetComObjectData(NetObject obj, NetObject key, NetObject data) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -222,6 +266,15 @@ public class Marshal extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ReadByte.
+     *
+     * @param ptr the argument of type {@code NetObject}
+     * @param ofs the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Marshal.ReadByte" target="_top">.NET documentation</a>
+     */
     public static byte ReadByte(NetObject ptr, int ofs) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -262,6 +315,15 @@ public class Marshal extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ReadInt16.
+     *
+     * @param ptr the argument of type {@code NetObject}
+     * @param ofs the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Marshal.ReadInt16" target="_top">.NET documentation</a>
+     */
     public static short ReadInt16(NetObject ptr, int ofs) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -302,6 +364,16 @@ public class Marshal extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member FinalReleaseComObject.
+     *
+     * @param o the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Marshal.FinalReleaseComObject" target="_top">.NET documentation</a>
+     */
     public static int FinalReleaseComObject(NetObject o) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -342,6 +414,16 @@ public class Marshal extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetComSlotForMethodInfo.
+     *
+     * @param m the argument of type {@code MemberInfo}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Marshal.GetComSlotForMethodInfo" target="_top">.NET documentation</a>
+     */
     public static int GetComSlotForMethodInfo(MemberInfo m) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -382,6 +464,14 @@ public class Marshal extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetEndComSlot.
+     *
+     * @param t the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Marshal.GetEndComSlot" target="_top">.NET documentation</a>
+     */
     public static int GetEndComSlot(NetType t) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -422,6 +512,13 @@ public class Marshal extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetExceptionCode.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Marshal.GetExceptionCode" target="_top">.NET documentation</a>
+     */
     public static int GetExceptionCode() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -462,6 +559,14 @@ public class Marshal extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetHRForException.
+     *
+     * @param e the argument of type {@code NetException}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Marshal.GetHRForException" target="_top">.NET documentation</a>
+     */
     public static int GetHRForException(NetException e) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -502,6 +607,13 @@ public class Marshal extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetHRForLastWin32Error.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Marshal.GetHRForLastWin32Error" target="_top">.NET documentation</a>
+     */
     public static int GetHRForLastWin32Error() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -542,6 +654,13 @@ public class Marshal extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetLastWin32Error.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Marshal.GetLastWin32Error" target="_top">.NET documentation</a>
+     */
     public static int GetLastWin32Error() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -582,6 +701,14 @@ public class Marshal extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetStartComSlot.
+     *
+     * @param t the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Marshal.GetStartComSlot" target="_top">.NET documentation</a>
+     */
     public static int GetStartComSlot(NetType t) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -622,6 +749,14 @@ public class Marshal extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetTypeLibLcid.
+     *
+     * @param typelib the argument of type {@code ITypeLib}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Marshal.GetTypeLibLcid" target="_top">.NET documentation</a>
+     */
     public static int GetTypeLibLcid(ITypeLib typelib) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -662,6 +797,14 @@ public class Marshal extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetTypeLibLcid.
+     *
+     * @param pTLB the argument of type {@code UCOMITypeLib}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Marshal.GetTypeLibLcid" target="_top">.NET documentation</a>
+     */
     public static int GetTypeLibLcid(UCOMITypeLib pTLB) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -702,6 +845,16 @@ public class Marshal extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member NumParamBytes.
+     *
+     * @param m the argument of type {@code MethodInfo}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Marshal.NumParamBytes" target="_top">.NET documentation</a>
+     */
     public static int NumParamBytes(MethodInfo m) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -742,6 +895,15 @@ public class Marshal extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ReadInt32.
+     *
+     * @param ptr the argument of type {@code NetObject}
+     * @param ofs the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Marshal.ReadInt32" target="_top">.NET documentation</a>
+     */
     public static int ReadInt32(NetObject ptr, int ofs) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -782,6 +944,14 @@ public class Marshal extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ReleaseComObject.
+     *
+     * @param o the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Marshal.ReleaseComObject" target="_top">.NET documentation</a>
+     */
     public static int ReleaseComObject(NetObject o) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -822,6 +992,15 @@ public class Marshal extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SizeOf.
+     *
+     * @param structure the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Marshal.SizeOf" target="_top">.NET documentation</a>
+     */
     public static int SizeOf(NetObject structure) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -862,6 +1041,16 @@ public class Marshal extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SizeOf.
+     *
+     * @param t the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Marshal.SizeOf" target="_top">.NET documentation</a>
+     */
     public static int SizeOf(NetType t) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -902,6 +1091,16 @@ public class Marshal extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SizeOf.
+     *
+     * @param <T> the type of the generic argument T
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Marshal.SizeOf" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> int SizeOf() throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -942,6 +1141,16 @@ public class Marshal extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SizeOf.
+     *
+     * @param <T> the type of the generic argument T
+     * @param structure the argument of type {@code T}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Marshal.SizeOf" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> int SizeOf(T structure) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -982,6 +1191,15 @@ public class Marshal extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ReadInt64.
+     *
+     * @param ptr the argument of type {@code NetObject}
+     * @param ofs the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Marshal.ReadInt64" target="_top">.NET documentation</a>
+     */
     public static long ReadInt64(NetObject ptr, int ofs) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1022,6 +1240,14 @@ public class Marshal extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetExceptionForHR.
+     *
+     * @param errorCode the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Marshal.GetExceptionForHR" target="_top">.NET documentation</a>
+     */
     public static NetException GetExceptionForHR(int errorCode) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1037,6 +1263,14 @@ public class Marshal extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GenerateGuidForType.
+     *
+     * @param type the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Marshal.GenerateGuidForType" target="_top">.NET documentation</a>
+     */
     public static Guid GenerateGuidForType(NetType type) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1052,6 +1286,14 @@ public class Marshal extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetTypeLibGuid.
+     *
+     * @param typelib the argument of type {@code ITypeLib}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Marshal.GetTypeLibGuid" target="_top">.NET documentation</a>
+     */
     public static Guid GetTypeLibGuid(ITypeLib typelib) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1067,6 +1309,14 @@ public class Marshal extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetTypeLibGuid.
+     *
+     * @param pTLB the argument of type {@code UCOMITypeLib}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Marshal.GetTypeLibGuid" target="_top">.NET documentation</a>
+     */
     public static Guid GetTypeLibGuid(UCOMITypeLib pTLB) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1082,6 +1332,16 @@ public class Marshal extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetTypeLibGuidForAssembly.
+     *
+     * @param asm the argument of type {@code Assembly}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Marshal.GetTypeLibGuidForAssembly" target="_top">.NET documentation</a>
+     */
     public static Guid GetTypeLibGuidForAssembly(Assembly asm) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1097,6 +1357,14 @@ public class Marshal extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member BindToMoniker.
+     *
+     * @param monikerName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Marshal.BindToMoniker" target="_top">.NET documentation</a>
+     */
     public static NetObject BindToMoniker(java.lang.String monikerName) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1112,6 +1380,23 @@ public class Marshal extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateWrapperOfType.
+     *
+     * @param o the argument of type {@code NetObject}
+     * @param t the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Marshal.CreateWrapperOfType" target="_top">.NET documentation</a>
+     */
     public static NetObject CreateWrapperOfType(NetObject o, NetType t) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1127,6 +1412,14 @@ public class Marshal extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetActiveObject.
+     *
+     * @param progID the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Marshal.GetActiveObject" target="_top">.NET documentation</a>
+     */
     public static NetObject GetActiveObject(java.lang.String progID) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1142,6 +1435,20 @@ public class Marshal extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetComObjectData.
+     *
+     * @param obj the argument of type {@code NetObject}
+     * @param key the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Marshal.GetComObjectData" target="_top">.NET documentation</a>
+     */
     public static NetObject GetComObjectData(NetObject obj, NetObject key) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1157,6 +1464,16 @@ public class Marshal extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetMethodInfoForComSlot.
+     *
+     * @param t the argument of type {@code NetType}
+     * @param slot the argument of type {@code int}
+     * @param memberType the argument of type {@code JCORefOut<ComMemberType>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Marshal.GetMethodInfoForComSlot" target="_top">.NET documentation</a>
+     */
     public static MemberInfo GetMethodInfoForComSlot(NetType t, int slot, JCORefOut<ComMemberType> memberType) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1172,6 +1489,23 @@ public class Marshal extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GenerateProgIdForType.
+     *
+     * @param type the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Marshal.GenerateProgIdForType" target="_top">.NET documentation</a>
+     */
     public static java.lang.String GenerateProgIdForType(NetType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1186,6 +1520,15 @@ public class Marshal extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetTypeInfoName.
+     *
+     * @param typeInfo the argument of type {@code ITypeInfo}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Marshal.GetTypeInfoName" target="_top">.NET documentation</a>
+     */
     public static java.lang.String GetTypeInfoName(ITypeInfo typeInfo) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1200,6 +1543,15 @@ public class Marshal extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetTypeInfoName.
+     *
+     * @param pTI the argument of type {@code UCOMITypeInfo}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Marshal.GetTypeInfoName" target="_top">.NET documentation</a>
+     */
     public static java.lang.String GetTypeInfoName(UCOMITypeInfo pTI) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1214,6 +1566,15 @@ public class Marshal extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetTypeLibName.
+     *
+     * @param typelib the argument of type {@code ITypeLib}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Marshal.GetTypeLibName" target="_top">.NET documentation</a>
+     */
     public static java.lang.String GetTypeLibName(ITypeLib typelib) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1228,6 +1589,15 @@ public class Marshal extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetTypeLibName.
+     *
+     * @param pTLB the argument of type {@code UCOMITypeLib}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Marshal.GetTypeLibName" target="_top">.NET documentation</a>
+     */
     public static java.lang.String GetTypeLibName(UCOMITypeLib pTLB) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1242,6 +1612,15 @@ public class Marshal extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetThreadFromFiberCookie.
+     *
+     * @param cookie the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Marshal.GetThreadFromFiberCookie" target="_top">.NET documentation</a>
+     */
     public static Thread GetThreadFromFiberCookie(int cookie) throws Throwable, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1257,6 +1636,14 @@ public class Marshal extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetTypeFromCLSID.
+     *
+     * @param clsid the argument of type {@code Guid}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Marshal.GetTypeFromCLSID" target="_top">.NET documentation</a>
+     */
     public static NetType GetTypeFromCLSID(Guid clsid) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1272,6 +1659,14 @@ public class Marshal extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ChangeWrapperHandleStrength.
+     *
+     * @param otp the argument of type {@code NetObject}
+     * @param fIsWeak the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Marshal.ChangeWrapperHandleStrength" target="_top">.NET documentation</a>
+     */
     public static void ChangeWrapperHandleStrength(NetObject otp, boolean fIsWeak) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1282,6 +1677,12 @@ public class Marshal extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CleanupUnusedObjectsInCurrentContext.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Marshal.CleanupUnusedObjectsInCurrentContext" target="_top">.NET documentation</a>
+     */
     public static void CleanupUnusedObjectsInCurrentContext() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1292,6 +1693,17 @@ public class Marshal extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetTypeLibVersionForAssembly.
+     *
+     * @param inputAssembly the argument of type {@code Assembly}
+     * @param majorVersion the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicInteger>}
+     * @param minorVersion the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicInteger>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Marshal.GetTypeLibVersionForAssembly" target="_top">.NET documentation</a>
+     */
     public static void GetTypeLibVersionForAssembly(Assembly inputAssembly, JCORefOut<java.util.concurrent.atomic.AtomicInteger> majorVersion, JCORefOut<java.util.concurrent.atomic.AtomicInteger> minorVersion) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1302,6 +1714,15 @@ public class Marshal extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Prelink.
+     *
+     * @param m the argument of type {@code MethodInfo}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Marshal.Prelink" target="_top">.NET documentation</a>
+     */
     public static void Prelink(MethodInfo m) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1312,6 +1733,15 @@ public class Marshal extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member PrelinkAll.
+     *
+     * @param c the argument of type {@code NetType}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Marshal.PrelinkAll" target="_top">.NET documentation</a>
+     */
     public static void PrelinkAll(NetType c) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1322,6 +1752,12 @@ public class Marshal extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ReleaseThreadCache.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Marshal.ReleaseThreadCache" target="_top">.NET documentation</a>
+     */
     public static void ReleaseThreadCache() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1332,6 +1768,13 @@ public class Marshal extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ThrowExceptionForHR.
+     *
+     * @param errorCode the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Marshal.ThrowExceptionForHR" target="_top">.NET documentation</a>
+     */
     public static void ThrowExceptionForHR(int errorCode) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1342,6 +1785,15 @@ public class Marshal extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member WriteByte.
+     *
+     * @param ptr the argument of type {@code JCORefOut<NetObject>}
+     * @param ofs the argument of type {@code int}
+     * @param val the argument of type {@code byte}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Marshal.WriteByte" target="_top">.NET documentation</a>
+     */
     public static void WriteByte(JCORefOut<NetObject> ptr, int ofs, byte val) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1352,6 +1804,15 @@ public class Marshal extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member WriteInt16.
+     *
+     * @param ptr the argument of type {@code JCORefOut<NetObject>}
+     * @param ofs the argument of type {@code int}
+     * @param val the argument of type {@code char}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Marshal.WriteInt16" target="_top">.NET documentation</a>
+     */
     public static void WriteInt16(JCORefOut<NetObject> ptr, int ofs, char val) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1362,6 +1823,15 @@ public class Marshal extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member WriteInt16.
+     *
+     * @param ptr the argument of type {@code JCORefOut<NetObject>}
+     * @param ofs the argument of type {@code int}
+     * @param val the argument of type {@code short}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Marshal.WriteInt16" target="_top">.NET documentation</a>
+     */
     public static void WriteInt16(JCORefOut<NetObject> ptr, int ofs, short val) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1372,6 +1842,15 @@ public class Marshal extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member WriteInt32.
+     *
+     * @param ptr the argument of type {@code JCORefOut<NetObject>}
+     * @param ofs the argument of type {@code int}
+     * @param val the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Marshal.WriteInt32" target="_top">.NET documentation</a>
+     */
     public static void WriteInt32(JCORefOut<NetObject> ptr, int ofs, int val) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1382,6 +1861,15 @@ public class Marshal extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member WriteInt64.
+     *
+     * @param ptr the argument of type {@code JCORefOut<NetObject>}
+     * @param ofs the argument of type {@code int}
+     * @param val the argument of type {@code long}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Marshal.WriteInt64" target="_top">.NET documentation</a>
+     */
     public static void WriteInt64(JCORefOut<NetObject> ptr, int ofs, long val) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

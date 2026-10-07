@@ -100,7 +100,10 @@ public class ImeModeConversion extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ImeModeConversion(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -159,6 +162,16 @@ public class ImeModeConversion extends system.ValueType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsCurrentConversionTableSupported.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ImeModeConversion.IsCurrentConversionTableSupported" target="_top">.NET documentation</a>
+     */
     public static boolean getIsCurrentConversionTableSupported() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -173,6 +186,16 @@ public class ImeModeConversion extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ImeModeConversionBits.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ImeModeConversion.ImeModeConversionBits" target="_top">.NET documentation</a>
+     */
     public static Dictionary_2 getImeModeConversionBits() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

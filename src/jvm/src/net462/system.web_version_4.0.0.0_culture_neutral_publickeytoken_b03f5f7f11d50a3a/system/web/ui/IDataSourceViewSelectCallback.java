@@ -51,5 +51,10 @@ import org.mases.jcobridge.netreflection.*;
  * @version 2.0.0.0
  */
 public interface IDataSourceViewSelectCallback {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param data the .NET argument of type {@code System.Collections.IEnumerable}
+     */
     public void Invoke(IEnumerable data);
 }

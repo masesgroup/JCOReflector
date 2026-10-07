@@ -101,7 +101,10 @@ public class IValueTaskSourceImplementation extends NetObject implements IValueT
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IValueTaskSourceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -143,6 +146,14 @@ public class IValueTaskSourceImplementation extends NetObject implements IValueT
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetStatus.
+     *
+     * @param token the argument of type {@code short}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Sources.IValueTaskSource.GetStatus" target="_top">.NET documentation</a>
+     */
     public ValueTaskSourceStatus GetStatus(short token) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -158,6 +169,13 @@ public class IValueTaskSourceImplementation extends NetObject implements IValueT
         }
     }
 
+    /**
+     * Invokes the .NET member GetResult.
+     *
+     * @param token the argument of type {@code short}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Sources.IValueTaskSource.GetResult" target="_top">.NET documentation</a>
+     */
     public void GetResult(short token) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -168,6 +186,16 @@ public class IValueTaskSourceImplementation extends NetObject implements IValueT
         }
     }
 
+    /**
+     * Invokes the .NET member OnCompleted.
+     *
+     * @param continuation the argument of type {@code Action_1}
+     * @param state the argument of type {@code NetObject}
+     * @param token the argument of type {@code short}
+     * @param flags the argument of type {@code ValueTaskSourceOnCompletedFlags}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Sources.IValueTaskSource.OnCompleted" target="_top">.NET documentation</a>
+     */
     public void OnCompleted(Action_1 continuation, NetObject state, short token, ValueTaskSourceOnCompletedFlags flags) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

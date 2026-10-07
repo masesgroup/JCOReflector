@@ -100,7 +100,10 @@ public class MessagePartCollection extends system.web.services.description.Servi
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public MessagePartCollection(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,14 @@ public class MessagePartCollection extends system.web.services.description.Servi
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Contains.
+     *
+     * @param messagePart the argument of type {@code MessagePart}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.MessagePartCollection.Contains" target="_top">.NET documentation</a>
+     */
     public boolean Contains(MessagePart messagePart) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -169,6 +180,14 @@ public class MessagePartCollection extends system.web.services.description.Servi
         }
     }
 
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param messagePart the argument of type {@code MessagePart}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.MessagePartCollection.Add" target="_top">.NET documentation</a>
+     */
     public int Add(MessagePart messagePart) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -209,6 +228,14 @@ public class MessagePartCollection extends system.web.services.description.Servi
         }
     }
 
+    /**
+     * Invokes the .NET member IndexOf.
+     *
+     * @param messagePart the argument of type {@code MessagePart}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.MessagePartCollection.IndexOf" target="_top">.NET documentation</a>
+     */
     public int IndexOf(MessagePart messagePart) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -249,6 +276,14 @@ public class MessagePartCollection extends system.web.services.description.Servi
         }
     }
 
+    /**
+     * Invokes the .NET member CopyTo.
+     *
+     * @param array the argument of type {@code MessagePart[]}
+     * @param index the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.MessagePartCollection.CopyTo" target="_top">.NET documentation</a>
+     */
     public void CopyTo(MessagePart[] array, int index) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -259,6 +294,14 @@ public class MessagePartCollection extends system.web.services.description.Servi
         }
     }
 
+    /**
+     * Invokes the .NET member Insert.
+     *
+     * @param index the argument of type {@code int}
+     * @param messagePart the argument of type {@code MessagePart}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.MessagePartCollection.Insert" target="_top">.NET documentation</a>
+     */
     public void Insert(int index, MessagePart messagePart) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -269,6 +312,13 @@ public class MessagePartCollection extends system.web.services.description.Servi
         }
     }
 
+    /**
+     * Invokes the .NET member Remove.
+     *
+     * @param messagePart the argument of type {@code MessagePart}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.MessagePartCollection.Remove" target="_top">.NET documentation</a>
+     */
     public void Remove(MessagePart messagePart) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -102,7 +102,10 @@ public class ActionBlock_1<TInput extends IJCOBridgeReflected> extends NetObject
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ActionBlock_1(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,24 @@ public class ActionBlock_1<TInput extends IJCOBridgeReflected> extends NetObject
     public ActionBlock_1() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param action the argument of type {@code Action_1}
+     * @param dataflowBlockOptions the argument of type {@code ExecutionDataflowBlockOptions}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.threading.tasks.TaskSchedulerException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Dataflow.ActionBlock-1.-ctor" target="_top">.NET documentation</a>
+     */
     public ActionBlock_1(Action_1 action, ExecutionDataflowBlockOptions dataflowBlockOptions) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.threading.tasks.TaskSchedulerException, system.diagnostics.tracing.EventSourceException, system.NullReferenceException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +185,23 @@ public class ActionBlock_1<TInput extends IJCOBridgeReflected> extends NetObject
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param action the argument of type {@code Action_1}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.threading.tasks.TaskSchedulerException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Dataflow.ActionBlock-1.-ctor" target="_top">.NET documentation</a>
+     */
     public ActionBlock_1(Action_1 action) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.threading.tasks.TaskSchedulerException, system.diagnostics.tracing.EventSourceException, system.NullReferenceException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
@@ -176,6 +214,24 @@ public class ActionBlock_1<TInput extends IJCOBridgeReflected> extends NetObject
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param action the argument of type {@code Func_2}
+     * @param dataflowBlockOptions the argument of type {@code ExecutionDataflowBlockOptions}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.threading.tasks.TaskSchedulerException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Dataflow.ActionBlock-1.-ctor" target="_top">.NET documentation</a>
+     */
     public ActionBlock_1(Func_2 action, ExecutionDataflowBlockOptions dataflowBlockOptions) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.threading.tasks.TaskSchedulerException, system.diagnostics.tracing.EventSourceException, system.NullReferenceException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
@@ -188,6 +244,23 @@ public class ActionBlock_1<TInput extends IJCOBridgeReflected> extends NetObject
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param action the argument of type {@code Func_2}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.threading.tasks.TaskSchedulerException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Dataflow.ActionBlock-1.-ctor" target="_top">.NET documentation</a>
+     */
     public ActionBlock_1(Func_2 action) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.threading.tasks.TaskSchedulerException, system.diagnostics.tracing.EventSourceException, system.NullReferenceException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
@@ -205,6 +278,23 @@ public class ActionBlock_1<TInput extends IJCOBridgeReflected> extends NetObject
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Post.
+     *
+     * @param item the argument of type {@code TInput}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.threading.tasks.TaskSchedulerException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Dataflow.ActionBlock-1.Post" target="_top">.NET documentation</a>
+     */
     public boolean Post(TInput item) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.threading.tasks.TaskSchedulerException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -219,6 +309,23 @@ public class ActionBlock_1<TInput extends IJCOBridgeReflected> extends NetObject
         }
     }
 
+    /**
+     * Invokes the .NET member Complete.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.threading.tasks.TaskSchedulerException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Dataflow.ActionBlock-1.Complete" target="_top">.NET documentation</a>
+     */
     public void Complete() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException, system.threading.tasks.TaskSchedulerException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -232,8 +339,12 @@ public class ActionBlock_1<TInput extends IJCOBridgeReflected> extends NetObject
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIDataflowBlock method available in IDataflowBlock to obtain an object with an invocable method
+     *
+     * @param exception the argument of type {@code NetException}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Dataflow.IDataflowBlock.Fault" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void Fault(NetException exception) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDataflowBlock to obtain the full interface.");
     }
@@ -242,6 +353,13 @@ public class ActionBlock_1<TInput extends IJCOBridgeReflected> extends NetObject
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property InputCount.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Dataflow.ActionBlock-1.InputCount" target="_top">.NET documentation</a>
+     */
     public int getInputCount() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -282,6 +400,17 @@ public class ActionBlock_1<TInput extends IJCOBridgeReflected> extends NetObject
         }
     }
 
+    /**
+     * Gets the value of the .NET property Completion.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Dataflow.ActionBlock-1.Completion" target="_top">.NET documentation</a>
+     */
     public Task getCompletion() throws Throwable, system.PlatformNotSupportedException, system.InvalidOperationException, system.NullReferenceException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

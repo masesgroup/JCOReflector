@@ -100,7 +100,10 @@ public class ActivityAction_16<T1 extends IJCOBridgeReflected, T2 extends IJCOBr
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ActivityAction_16(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class ActivityAction_16<T1 extends IJCOBridgeReflected, T2 extends IJCOBr
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityAction-16.-ctor" target="_top">.NET documentation</a>
+     */
     public ActivityAction_16() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +176,13 @@ public class ActivityAction_16<T1 extends IJCOBridgeReflected, T2 extends IJCOBr
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Argument1.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityAction-16.Argument1" target="_top">.NET documentation</a>
+     */
     public DelegateInArgument_1 getArgument1() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +198,13 @@ public class ActivityAction_16<T1 extends IJCOBridgeReflected, T2 extends IJCOBr
         }
     }
 
+    /**
+     * Sets the value of the .NET property Argument1.
+     *
+     * @param Argument1 the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityAction-16.Argument1" target="_top">.NET documentation</a>
+     */
     public void setArgument1(DelegateInArgument_1 Argument1) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -192,6 +215,13 @@ public class ActivityAction_16<T1 extends IJCOBridgeReflected, T2 extends IJCOBr
         }
     }
 
+    /**
+     * Gets the value of the .NET property Argument10.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityAction-16.Argument10" target="_top">.NET documentation</a>
+     */
     public DelegateInArgument_1 getArgument10() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +237,13 @@ public class ActivityAction_16<T1 extends IJCOBridgeReflected, T2 extends IJCOBr
         }
     }
 
+    /**
+     * Sets the value of the .NET property Argument10.
+     *
+     * @param Argument10 the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityAction-16.Argument10" target="_top">.NET documentation</a>
+     */
     public void setArgument10(DelegateInArgument_1 Argument10) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -217,6 +254,13 @@ public class ActivityAction_16<T1 extends IJCOBridgeReflected, T2 extends IJCOBr
         }
     }
 
+    /**
+     * Gets the value of the .NET property Argument11.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityAction-16.Argument11" target="_top">.NET documentation</a>
+     */
     public DelegateInArgument_1 getArgument11() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -232,6 +276,13 @@ public class ActivityAction_16<T1 extends IJCOBridgeReflected, T2 extends IJCOBr
         }
     }
 
+    /**
+     * Sets the value of the .NET property Argument11.
+     *
+     * @param Argument11 the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityAction-16.Argument11" target="_top">.NET documentation</a>
+     */
     public void setArgument11(DelegateInArgument_1 Argument11) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -242,6 +293,13 @@ public class ActivityAction_16<T1 extends IJCOBridgeReflected, T2 extends IJCOBr
         }
     }
 
+    /**
+     * Gets the value of the .NET property Argument12.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityAction-16.Argument12" target="_top">.NET documentation</a>
+     */
     public DelegateInArgument_1 getArgument12() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -257,6 +315,13 @@ public class ActivityAction_16<T1 extends IJCOBridgeReflected, T2 extends IJCOBr
         }
     }
 
+    /**
+     * Sets the value of the .NET property Argument12.
+     *
+     * @param Argument12 the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityAction-16.Argument12" target="_top">.NET documentation</a>
+     */
     public void setArgument12(DelegateInArgument_1 Argument12) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -267,6 +332,13 @@ public class ActivityAction_16<T1 extends IJCOBridgeReflected, T2 extends IJCOBr
         }
     }
 
+    /**
+     * Gets the value of the .NET property Argument13.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityAction-16.Argument13" target="_top">.NET documentation</a>
+     */
     public DelegateInArgument_1 getArgument13() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -282,6 +354,13 @@ public class ActivityAction_16<T1 extends IJCOBridgeReflected, T2 extends IJCOBr
         }
     }
 
+    /**
+     * Sets the value of the .NET property Argument13.
+     *
+     * @param Argument13 the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityAction-16.Argument13" target="_top">.NET documentation</a>
+     */
     public void setArgument13(DelegateInArgument_1 Argument13) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -292,6 +371,13 @@ public class ActivityAction_16<T1 extends IJCOBridgeReflected, T2 extends IJCOBr
         }
     }
 
+    /**
+     * Gets the value of the .NET property Argument14.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityAction-16.Argument14" target="_top">.NET documentation</a>
+     */
     public DelegateInArgument_1 getArgument14() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -307,6 +393,13 @@ public class ActivityAction_16<T1 extends IJCOBridgeReflected, T2 extends IJCOBr
         }
     }
 
+    /**
+     * Sets the value of the .NET property Argument14.
+     *
+     * @param Argument14 the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityAction-16.Argument14" target="_top">.NET documentation</a>
+     */
     public void setArgument14(DelegateInArgument_1 Argument14) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -317,6 +410,13 @@ public class ActivityAction_16<T1 extends IJCOBridgeReflected, T2 extends IJCOBr
         }
     }
 
+    /**
+     * Gets the value of the .NET property Argument15.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityAction-16.Argument15" target="_top">.NET documentation</a>
+     */
     public DelegateInArgument_1 getArgument15() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -332,6 +432,13 @@ public class ActivityAction_16<T1 extends IJCOBridgeReflected, T2 extends IJCOBr
         }
     }
 
+    /**
+     * Sets the value of the .NET property Argument15.
+     *
+     * @param Argument15 the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityAction-16.Argument15" target="_top">.NET documentation</a>
+     */
     public void setArgument15(DelegateInArgument_1 Argument15) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -342,6 +449,13 @@ public class ActivityAction_16<T1 extends IJCOBridgeReflected, T2 extends IJCOBr
         }
     }
 
+    /**
+     * Gets the value of the .NET property Argument16.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityAction-16.Argument16" target="_top">.NET documentation</a>
+     */
     public DelegateInArgument_1 getArgument16() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -357,6 +471,13 @@ public class ActivityAction_16<T1 extends IJCOBridgeReflected, T2 extends IJCOBr
         }
     }
 
+    /**
+     * Sets the value of the .NET property Argument16.
+     *
+     * @param Argument16 the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityAction-16.Argument16" target="_top">.NET documentation</a>
+     */
     public void setArgument16(DelegateInArgument_1 Argument16) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -367,6 +488,13 @@ public class ActivityAction_16<T1 extends IJCOBridgeReflected, T2 extends IJCOBr
         }
     }
 
+    /**
+     * Gets the value of the .NET property Argument2.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityAction-16.Argument2" target="_top">.NET documentation</a>
+     */
     public DelegateInArgument_1 getArgument2() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -382,6 +510,13 @@ public class ActivityAction_16<T1 extends IJCOBridgeReflected, T2 extends IJCOBr
         }
     }
 
+    /**
+     * Sets the value of the .NET property Argument2.
+     *
+     * @param Argument2 the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityAction-16.Argument2" target="_top">.NET documentation</a>
+     */
     public void setArgument2(DelegateInArgument_1 Argument2) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -392,6 +527,13 @@ public class ActivityAction_16<T1 extends IJCOBridgeReflected, T2 extends IJCOBr
         }
     }
 
+    /**
+     * Gets the value of the .NET property Argument3.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityAction-16.Argument3" target="_top">.NET documentation</a>
+     */
     public DelegateInArgument_1 getArgument3() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -407,6 +549,13 @@ public class ActivityAction_16<T1 extends IJCOBridgeReflected, T2 extends IJCOBr
         }
     }
 
+    /**
+     * Sets the value of the .NET property Argument3.
+     *
+     * @param Argument3 the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityAction-16.Argument3" target="_top">.NET documentation</a>
+     */
     public void setArgument3(DelegateInArgument_1 Argument3) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -417,6 +566,13 @@ public class ActivityAction_16<T1 extends IJCOBridgeReflected, T2 extends IJCOBr
         }
     }
 
+    /**
+     * Gets the value of the .NET property Argument4.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityAction-16.Argument4" target="_top">.NET documentation</a>
+     */
     public DelegateInArgument_1 getArgument4() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -432,6 +588,13 @@ public class ActivityAction_16<T1 extends IJCOBridgeReflected, T2 extends IJCOBr
         }
     }
 
+    /**
+     * Sets the value of the .NET property Argument4.
+     *
+     * @param Argument4 the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityAction-16.Argument4" target="_top">.NET documentation</a>
+     */
     public void setArgument4(DelegateInArgument_1 Argument4) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -442,6 +605,13 @@ public class ActivityAction_16<T1 extends IJCOBridgeReflected, T2 extends IJCOBr
         }
     }
 
+    /**
+     * Gets the value of the .NET property Argument5.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityAction-16.Argument5" target="_top">.NET documentation</a>
+     */
     public DelegateInArgument_1 getArgument5() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -457,6 +627,13 @@ public class ActivityAction_16<T1 extends IJCOBridgeReflected, T2 extends IJCOBr
         }
     }
 
+    /**
+     * Sets the value of the .NET property Argument5.
+     *
+     * @param Argument5 the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityAction-16.Argument5" target="_top">.NET documentation</a>
+     */
     public void setArgument5(DelegateInArgument_1 Argument5) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -467,6 +644,13 @@ public class ActivityAction_16<T1 extends IJCOBridgeReflected, T2 extends IJCOBr
         }
     }
 
+    /**
+     * Gets the value of the .NET property Argument6.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityAction-16.Argument6" target="_top">.NET documentation</a>
+     */
     public DelegateInArgument_1 getArgument6() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -482,6 +666,13 @@ public class ActivityAction_16<T1 extends IJCOBridgeReflected, T2 extends IJCOBr
         }
     }
 
+    /**
+     * Sets the value of the .NET property Argument6.
+     *
+     * @param Argument6 the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityAction-16.Argument6" target="_top">.NET documentation</a>
+     */
     public void setArgument6(DelegateInArgument_1 Argument6) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -492,6 +683,13 @@ public class ActivityAction_16<T1 extends IJCOBridgeReflected, T2 extends IJCOBr
         }
     }
 
+    /**
+     * Gets the value of the .NET property Argument7.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityAction-16.Argument7" target="_top">.NET documentation</a>
+     */
     public DelegateInArgument_1 getArgument7() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -507,6 +705,13 @@ public class ActivityAction_16<T1 extends IJCOBridgeReflected, T2 extends IJCOBr
         }
     }
 
+    /**
+     * Sets the value of the .NET property Argument7.
+     *
+     * @param Argument7 the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityAction-16.Argument7" target="_top">.NET documentation</a>
+     */
     public void setArgument7(DelegateInArgument_1 Argument7) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -517,6 +722,13 @@ public class ActivityAction_16<T1 extends IJCOBridgeReflected, T2 extends IJCOBr
         }
     }
 
+    /**
+     * Gets the value of the .NET property Argument8.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityAction-16.Argument8" target="_top">.NET documentation</a>
+     */
     public DelegateInArgument_1 getArgument8() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -532,6 +744,13 @@ public class ActivityAction_16<T1 extends IJCOBridgeReflected, T2 extends IJCOBr
         }
     }
 
+    /**
+     * Sets the value of the .NET property Argument8.
+     *
+     * @param Argument8 the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityAction-16.Argument8" target="_top">.NET documentation</a>
+     */
     public void setArgument8(DelegateInArgument_1 Argument8) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -542,6 +761,13 @@ public class ActivityAction_16<T1 extends IJCOBridgeReflected, T2 extends IJCOBr
         }
     }
 
+    /**
+     * Gets the value of the .NET property Argument9.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityAction-16.Argument9" target="_top">.NET documentation</a>
+     */
     public DelegateInArgument_1 getArgument9() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -557,6 +783,13 @@ public class ActivityAction_16<T1 extends IJCOBridgeReflected, T2 extends IJCOBr
         }
     }
 
+    /**
+     * Sets the value of the .NET property Argument9.
+     *
+     * @param Argument9 the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityAction-16.Argument9" target="_top">.NET documentation</a>
+     */
     public void setArgument9(DelegateInArgument_1 Argument9) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

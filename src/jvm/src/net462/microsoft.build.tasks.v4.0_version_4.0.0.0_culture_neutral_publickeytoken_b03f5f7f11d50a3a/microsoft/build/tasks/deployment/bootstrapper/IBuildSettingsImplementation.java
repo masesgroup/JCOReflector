@@ -100,7 +100,10 @@ public class IBuildSettingsImplementation extends NetObject implements IBuildSet
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IBuildSettingsImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,13 @@ public class IBuildSettingsImplementation extends NetObject implements IBuildSet
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ApplicationRequiresElevation.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.Bootstrapper.IBuildSettings.ApplicationRequiresElevation" target="_top">.NET documentation</a>
+     */
     public boolean getApplicationRequiresElevation() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -160,6 +170,13 @@ public class IBuildSettingsImplementation extends NetObject implements IBuildSet
         }
     }
 
+    /**
+     * Sets the value of the .NET property ApplicationRequiresElevation.
+     *
+     * @param ApplicationRequiresElevation the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.Bootstrapper.IBuildSettings.ApplicationRequiresElevation" target="_top">.NET documentation</a>
+     */
     public void setApplicationRequiresElevation(boolean ApplicationRequiresElevation) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -170,6 +187,13 @@ public class IBuildSettingsImplementation extends NetObject implements IBuildSet
         }
     }
 
+    /**
+     * Gets the value of the .NET property CopyComponents.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.Bootstrapper.IBuildSettings.CopyComponents" target="_top">.NET documentation</a>
+     */
     public boolean getCopyComponents() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +208,13 @@ public class IBuildSettingsImplementation extends NetObject implements IBuildSet
         }
     }
 
+    /**
+     * Sets the value of the .NET property CopyComponents.
+     *
+     * @param CopyComponents the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.Bootstrapper.IBuildSettings.CopyComponents" target="_top">.NET documentation</a>
+     */
     public void setCopyComponents(boolean CopyComponents) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +225,13 @@ public class IBuildSettingsImplementation extends NetObject implements IBuildSet
         }
     }
 
+    /**
+     * Gets the value of the .NET property Validate.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.Bootstrapper.IBuildSettings.Validate" target="_top">.NET documentation</a>
+     */
     public boolean getValidate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +246,13 @@ public class IBuildSettingsImplementation extends NetObject implements IBuildSet
         }
     }
 
+    /**
+     * Sets the value of the .NET property Validate.
+     *
+     * @param Validate the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.Bootstrapper.IBuildSettings.Validate" target="_top">.NET documentation</a>
+     */
     public void setValidate(boolean Validate) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -218,6 +263,13 @@ public class IBuildSettingsImplementation extends NetObject implements IBuildSet
         }
     }
 
+    /**
+     * Gets the value of the .NET property FallbackLCID.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.Bootstrapper.IBuildSettings.FallbackLCID" target="_top">.NET documentation</a>
+     */
     public int getFallbackLCID() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -258,6 +310,13 @@ public class IBuildSettingsImplementation extends NetObject implements IBuildSet
         }
     }
 
+    /**
+     * Sets the value of the .NET property FallbackLCID.
+     *
+     * @param FallbackLCID the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.Bootstrapper.IBuildSettings.FallbackLCID" target="_top">.NET documentation</a>
+     */
     public void setFallbackLCID(int FallbackLCID) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -268,6 +327,13 @@ public class IBuildSettingsImplementation extends NetObject implements IBuildSet
         }
     }
 
+    /**
+     * Gets the value of the .NET property LCID.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.Bootstrapper.IBuildSettings.LCID" target="_top">.NET documentation</a>
+     */
     public int getLCID() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -308,6 +374,13 @@ public class IBuildSettingsImplementation extends NetObject implements IBuildSet
         }
     }
 
+    /**
+     * Sets the value of the .NET property LCID.
+     *
+     * @param LCID the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.Bootstrapper.IBuildSettings.LCID" target="_top">.NET documentation</a>
+     */
     public void setLCID(int LCID) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -318,6 +391,13 @@ public class IBuildSettingsImplementation extends NetObject implements IBuildSet
         }
     }
 
+    /**
+     * Gets the value of the .NET property ComponentsLocation.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.Bootstrapper.IBuildSettings.ComponentsLocation" target="_top">.NET documentation</a>
+     */
     public ComponentsLocation getComponentsLocation() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -333,6 +413,13 @@ public class IBuildSettingsImplementation extends NetObject implements IBuildSet
         }
     }
 
+    /**
+     * Sets the value of the .NET property ComponentsLocation.
+     *
+     * @param ComponentsLocation the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.Bootstrapper.IBuildSettings.ComponentsLocation" target="_top">.NET documentation</a>
+     */
     public void setComponentsLocation(ComponentsLocation ComponentsLocation) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -343,6 +430,13 @@ public class IBuildSettingsImplementation extends NetObject implements IBuildSet
         }
     }
 
+    /**
+     * Gets the value of the .NET property ProductBuilders.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.Bootstrapper.IBuildSettings.ProductBuilders" target="_top">.NET documentation</a>
+     */
     public ProductBuilderCollection getProductBuilders() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -358,6 +452,13 @@ public class IBuildSettingsImplementation extends NetObject implements IBuildSet
         }
     }
 
+    /**
+     * Gets the value of the .NET property ApplicationFile.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.Bootstrapper.IBuildSettings.ApplicationFile" target="_top">.NET documentation</a>
+     */
     public java.lang.String getApplicationFile() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -372,6 +473,13 @@ public class IBuildSettingsImplementation extends NetObject implements IBuildSet
         }
     }
 
+    /**
+     * Sets the value of the .NET property ApplicationFile.
+     *
+     * @param ApplicationFile the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.Bootstrapper.IBuildSettings.ApplicationFile" target="_top">.NET documentation</a>
+     */
     public void setApplicationFile(java.lang.String ApplicationFile) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -382,6 +490,13 @@ public class IBuildSettingsImplementation extends NetObject implements IBuildSet
         }
     }
 
+    /**
+     * Gets the value of the .NET property ApplicationName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.Bootstrapper.IBuildSettings.ApplicationName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getApplicationName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -396,6 +511,13 @@ public class IBuildSettingsImplementation extends NetObject implements IBuildSet
         }
     }
 
+    /**
+     * Sets the value of the .NET property ApplicationName.
+     *
+     * @param ApplicationName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.Bootstrapper.IBuildSettings.ApplicationName" target="_top">.NET documentation</a>
+     */
     public void setApplicationName(java.lang.String ApplicationName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -406,6 +528,13 @@ public class IBuildSettingsImplementation extends NetObject implements IBuildSet
         }
     }
 
+    /**
+     * Gets the value of the .NET property ApplicationUrl.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.Bootstrapper.IBuildSettings.ApplicationUrl" target="_top">.NET documentation</a>
+     */
     public java.lang.String getApplicationUrl() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -420,6 +549,13 @@ public class IBuildSettingsImplementation extends NetObject implements IBuildSet
         }
     }
 
+    /**
+     * Sets the value of the .NET property ApplicationUrl.
+     *
+     * @param ApplicationUrl the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.Bootstrapper.IBuildSettings.ApplicationUrl" target="_top">.NET documentation</a>
+     */
     public void setApplicationUrl(java.lang.String ApplicationUrl) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -430,6 +566,13 @@ public class IBuildSettingsImplementation extends NetObject implements IBuildSet
         }
     }
 
+    /**
+     * Gets the value of the .NET property ComponentsUrl.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.Bootstrapper.IBuildSettings.ComponentsUrl" target="_top">.NET documentation</a>
+     */
     public java.lang.String getComponentsUrl() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -444,6 +587,13 @@ public class IBuildSettingsImplementation extends NetObject implements IBuildSet
         }
     }
 
+    /**
+     * Sets the value of the .NET property ComponentsUrl.
+     *
+     * @param ComponentsUrl the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.Bootstrapper.IBuildSettings.ComponentsUrl" target="_top">.NET documentation</a>
+     */
     public void setComponentsUrl(java.lang.String ComponentsUrl) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -454,6 +604,13 @@ public class IBuildSettingsImplementation extends NetObject implements IBuildSet
         }
     }
 
+    /**
+     * Gets the value of the .NET property OutputPath.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.Bootstrapper.IBuildSettings.OutputPath" target="_top">.NET documentation</a>
+     */
     public java.lang.String getOutputPath() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -468,6 +625,13 @@ public class IBuildSettingsImplementation extends NetObject implements IBuildSet
         }
     }
 
+    /**
+     * Sets the value of the .NET property OutputPath.
+     *
+     * @param OutputPath the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.Bootstrapper.IBuildSettings.OutputPath" target="_top">.NET documentation</a>
+     */
     public void setOutputPath(java.lang.String OutputPath) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -478,6 +642,13 @@ public class IBuildSettingsImplementation extends NetObject implements IBuildSet
         }
     }
 
+    /**
+     * Gets the value of the .NET property SupportUrl.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.Bootstrapper.IBuildSettings.SupportUrl" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSupportUrl() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -492,6 +663,13 @@ public class IBuildSettingsImplementation extends NetObject implements IBuildSet
         }
     }
 
+    /**
+     * Sets the value of the .NET property SupportUrl.
+     *
+     * @param SupportUrl the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.Bootstrapper.IBuildSettings.SupportUrl" target="_top">.NET documentation</a>
+     */
     public void setSupportUrl(java.lang.String SupportUrl) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

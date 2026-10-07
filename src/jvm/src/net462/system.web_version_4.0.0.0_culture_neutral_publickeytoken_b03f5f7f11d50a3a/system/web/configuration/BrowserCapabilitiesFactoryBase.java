@@ -100,7 +100,10 @@ public class BrowserCapabilitiesFactoryBase extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public BrowserCapabilitiesFactoryBase(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class BrowserCapabilitiesFactoryBase extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Configuration.BrowserCapabilitiesFactoryBase.-ctor" target="_top">.NET documentation</a>
+     */
     public BrowserCapabilitiesFactoryBase() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -161,6 +170,14 @@ public class BrowserCapabilitiesFactoryBase extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ConfigureBrowserCapabilities.
+     *
+     * @param headers the argument of type {@code NameValueCollection}
+     * @param browserCaps the argument of type {@code HttpBrowserCapabilities}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Configuration.BrowserCapabilitiesFactoryBase.ConfigureBrowserCapabilities" target="_top">.NET documentation</a>
+     */
     public void ConfigureBrowserCapabilities(NameValueCollection headers, HttpBrowserCapabilities browserCaps) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -171,6 +188,14 @@ public class BrowserCapabilitiesFactoryBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ConfigureCustomCapabilities.
+     *
+     * @param headers the argument of type {@code NameValueCollection}
+     * @param browserCaps the argument of type {@code HttpBrowserCapabilities}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Configuration.BrowserCapabilitiesFactoryBase.ConfigureCustomCapabilities" target="_top">.NET documentation</a>
+     */
     public void ConfigureCustomCapabilities(NameValueCollection headers, HttpBrowserCapabilities browserCaps) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -103,7 +103,10 @@ public class OracleDataAdapter extends system.data.common.DbDataAdapter  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public OracleDataAdapter(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,13 @@ public class OracleDataAdapter extends system.data.common.DbDataAdapter  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.OracleClient.OracleDataAdapter.-ctor" target="_top">.NET documentation</a>
+     */
     public OracleDataAdapter() throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -160,6 +170,14 @@ public class OracleDataAdapter extends system.data.common.DbDataAdapter  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param selectCommand the argument of type {@code OracleCommand}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.OracleClient.OracleDataAdapter.-ctor" target="_top">.NET documentation</a>
+     */
     public OracleDataAdapter(OracleCommand selectCommand) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +188,15 @@ public class OracleDataAdapter extends system.data.common.DbDataAdapter  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param selectCommandText the argument of type {@code java.lang.String}
+     * @param selectConnection the argument of type {@code OracleConnection}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.OracleClient.OracleDataAdapter.-ctor" target="_top">.NET documentation</a>
+     */
     public OracleDataAdapter(java.lang.String selectCommandText, OracleConnection selectConnection) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -180,6 +207,15 @@ public class OracleDataAdapter extends system.data.common.DbDataAdapter  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param selectCommandText the argument of type {@code java.lang.String}
+     * @param selectConnectionString the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.OracleClient.OracleDataAdapter.-ctor" target="_top">.NET documentation</a>
+     */
     public OracleDataAdapter(java.lang.String selectCommandText, java.lang.String selectConnectionString) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -198,6 +234,13 @@ public class OracleDataAdapter extends system.data.common.DbDataAdapter  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property DeleteCommandNewOracleDataAdapter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.OracleClient.OracleDataAdapter.DeleteCommandNewOracleDataAdapter" target="_top">.NET documentation</a>
+     */
     public OracleCommand getDeleteCommandNewOracleDataAdapter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -213,6 +256,13 @@ public class OracleDataAdapter extends system.data.common.DbDataAdapter  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DeleteCommand.
+     *
+     * @param DeleteCommand the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.OracleClient.OracleDataAdapter.DeleteCommand" target="_top">.NET documentation</a>
+     */
     public void setDeleteCommand(OracleCommand DeleteCommand) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -223,6 +273,13 @@ public class OracleDataAdapter extends system.data.common.DbDataAdapter  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property InsertCommandNewOracleDataAdapter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.OracleClient.OracleDataAdapter.InsertCommandNewOracleDataAdapter" target="_top">.NET documentation</a>
+     */
     public OracleCommand getInsertCommandNewOracleDataAdapter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -238,6 +295,13 @@ public class OracleDataAdapter extends system.data.common.DbDataAdapter  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property InsertCommand.
+     *
+     * @param InsertCommand the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.OracleClient.OracleDataAdapter.InsertCommand" target="_top">.NET documentation</a>
+     */
     public void setInsertCommand(OracleCommand InsertCommand) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -248,6 +312,13 @@ public class OracleDataAdapter extends system.data.common.DbDataAdapter  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SelectCommandNewOracleDataAdapter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.OracleClient.OracleDataAdapter.SelectCommandNewOracleDataAdapter" target="_top">.NET documentation</a>
+     */
     public OracleCommand getSelectCommandNewOracleDataAdapter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -263,6 +334,13 @@ public class OracleDataAdapter extends system.data.common.DbDataAdapter  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SelectCommand.
+     *
+     * @param SelectCommand the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.OracleClient.OracleDataAdapter.SelectCommand" target="_top">.NET documentation</a>
+     */
     public void setSelectCommand(OracleCommand SelectCommand) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -273,6 +351,13 @@ public class OracleDataAdapter extends system.data.common.DbDataAdapter  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UpdateCommandNewOracleDataAdapter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.OracleClient.OracleDataAdapter.UpdateCommandNewOracleDataAdapter" target="_top">.NET documentation</a>
+     */
     public OracleCommand getUpdateCommandNewOracleDataAdapter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -288,6 +373,13 @@ public class OracleDataAdapter extends system.data.common.DbDataAdapter  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property UpdateCommand.
+     *
+     * @param UpdateCommand the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.OracleClient.OracleDataAdapter.UpdateCommand" target="_top">.NET documentation</a>
+     */
     public void setUpdateCommand(OracleCommand UpdateCommand) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -303,6 +395,13 @@ public class OracleDataAdapter extends system.data.common.DbDataAdapter  {
     // Instance Events section
     
 
+    /**
+     * Invokes the .NET member addRowUpdated.
+     *
+     * @param handler the argument of type {@code OracleRowUpdatedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addRowUpdated(OracleRowUpdatedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -313,6 +412,13 @@ public class OracleDataAdapter extends system.data.common.DbDataAdapter  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeRowUpdated.
+     *
+     * @param handler the argument of type {@code OracleRowUpdatedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeRowUpdated(OracleRowUpdatedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -323,6 +429,13 @@ public class OracleDataAdapter extends system.data.common.DbDataAdapter  {
         }
     }
 
+    /**
+     * Invokes the .NET member addRowUpdating.
+     *
+     * @param handler the argument of type {@code OracleRowUpdatingEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addRowUpdating(OracleRowUpdatingEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -333,6 +446,13 @@ public class OracleDataAdapter extends system.data.common.DbDataAdapter  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeRowUpdating.
+     *
+     * @param handler the argument of type {@code OracleRowUpdatingEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeRowUpdating(OracleRowUpdatingEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

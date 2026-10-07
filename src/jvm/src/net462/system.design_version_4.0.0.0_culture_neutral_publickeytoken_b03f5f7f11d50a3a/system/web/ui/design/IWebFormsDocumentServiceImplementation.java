@@ -99,7 +99,10 @@ public class IWebFormsDocumentServiceImplementation extends NetObject implements
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IWebFormsDocumentServiceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -141,6 +144,13 @@ public class IWebFormsDocumentServiceImplementation extends NetObject implements
 
     // Methods section
     
+    /**
+     * Invokes the .NET member CreateDiscardableUndoUnit.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.IWebFormsDocumentService.CreateDiscardableUndoUnit" target="_top">.NET documentation</a>
+     */
     public NetObject CreateDiscardableUndoUnit() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -156,6 +166,13 @@ public class IWebFormsDocumentServiceImplementation extends NetObject implements
         }
     }
 
+    /**
+     * Invokes the .NET member DiscardUndoUnit.
+     *
+     * @param discardableUndoUnit the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.IWebFormsDocumentService.DiscardUndoUnit" target="_top">.NET documentation</a>
+     */
     public void DiscardUndoUnit(NetObject discardableUndoUnit) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -166,6 +183,13 @@ public class IWebFormsDocumentServiceImplementation extends NetObject implements
         }
     }
 
+    /**
+     * Invokes the .NET member EnableUndo.
+     *
+     * @param enable the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.IWebFormsDocumentService.EnableUndo" target="_top">.NET documentation</a>
+     */
     public void EnableUndo(boolean enable) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -176,6 +200,12 @@ public class IWebFormsDocumentServiceImplementation extends NetObject implements
         }
     }
 
+    /**
+     * Invokes the .NET member UpdateSelection.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.IWebFormsDocumentService.UpdateSelection" target="_top">.NET documentation</a>
+     */
     public void UpdateSelection() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +220,13 @@ public class IWebFormsDocumentServiceImplementation extends NetObject implements
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsLoading.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.IWebFormsDocumentService.IsLoading" target="_top">.NET documentation</a>
+     */
     public boolean getIsLoading() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +241,13 @@ public class IWebFormsDocumentServiceImplementation extends NetObject implements
         }
     }
 
+    /**
+     * Gets the value of the .NET property DocumentUrl.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.IWebFormsDocumentService.DocumentUrl" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDocumentUrl() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -223,6 +267,13 @@ public class IWebFormsDocumentServiceImplementation extends NetObject implements
     // Instance Events section
     
 
+    /**
+     * Invokes the .NET member addLoadComplete.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addLoadComplete(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -233,6 +284,13 @@ public class IWebFormsDocumentServiceImplementation extends NetObject implements
         }
     }
 
+    /**
+     * Invokes the .NET member removeLoadComplete.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeLoadComplete(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -107,7 +107,10 @@ public class BindingExpressionBase extends system.windows.Expression  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public BindingExpressionBase(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -160,6 +163,13 @@ public class BindingExpressionBase extends system.windows.Expression  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ValidateWithoutUpdate.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.BindingExpressionBase.ValidateWithoutUpdate" target="_top">.NET documentation</a>
+     */
     public boolean ValidateWithoutUpdate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -174,6 +184,12 @@ public class BindingExpressionBase extends system.windows.Expression  {
         }
     }
 
+    /**
+     * Invokes the .NET member UpdateSource.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.BindingExpressionBase.UpdateSource" target="_top">.NET documentation</a>
+     */
     public void UpdateSource() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +200,12 @@ public class BindingExpressionBase extends system.windows.Expression  {
         }
     }
 
+    /**
+     * Invokes the .NET member UpdateTarget.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.BindingExpressionBase.UpdateTarget" target="_top">.NET documentation</a>
+     */
     public void UpdateTarget() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,8 +219,15 @@ public class BindingExpressionBase extends system.windows.Expression  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIWeakEventListener method available in IWeakEventListener to obtain an object with an invocable method
+     *
+     * @param managerType the argument of type {@code NetType}
+     * @param sender the argument of type {@code NetObject}
+     * @param e the argument of type {@code EventArgs}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.IWeakEventListener.ReceiveWeakEvent" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public boolean ReceiveWeakEvent(NetType managerType, NetObject sender, EventArgs e) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIWeakEventListener to obtain the full interface.");
     }
@@ -207,6 +236,13 @@ public class BindingExpressionBase extends system.windows.Expression  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property HasError.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.BindingExpressionBase.HasError" target="_top">.NET documentation</a>
+     */
     public boolean getHasError() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -221,6 +257,13 @@ public class BindingExpressionBase extends system.windows.Expression  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property HasValidationError.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.BindingExpressionBase.HasValidationError" target="_top">.NET documentation</a>
+     */
     public boolean getHasValidationError() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -235,6 +278,13 @@ public class BindingExpressionBase extends system.windows.Expression  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsDirty.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.BindingExpressionBase.IsDirty" target="_top">.NET documentation</a>
+     */
     public boolean getIsDirty() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -249,6 +299,15 @@ public class BindingExpressionBase extends system.windows.Expression  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ValidationErrors.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.BindingExpressionBase.ValidationErrors" target="_top">.NET documentation</a>
+     */
     public ReadOnlyCollection_1 getValidationErrors() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -264,6 +323,13 @@ public class BindingExpressionBase extends system.windows.Expression  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ValidationError.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.BindingExpressionBase.ValidationError" target="_top">.NET documentation</a>
+     */
     public ValidationError getValidationError() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -279,6 +345,13 @@ public class BindingExpressionBase extends system.windows.Expression  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ParentBindingBase.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.BindingExpressionBase.ParentBindingBase" target="_top">.NET documentation</a>
+     */
     public BindingBase getParentBindingBase() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -294,6 +367,13 @@ public class BindingExpressionBase extends system.windows.Expression  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property BindingGroup.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.BindingExpressionBase.BindingGroup" target="_top">.NET documentation</a>
+     */
     public BindingGroup getBindingGroup() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -309,6 +389,13 @@ public class BindingExpressionBase extends system.windows.Expression  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Status.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.BindingExpressionBase.Status" target="_top">.NET documentation</a>
+     */
     public BindingStatus getStatus() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -324,6 +411,22 @@ public class BindingExpressionBase extends system.windows.Expression  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Target.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.BindingExpressionBase.Target" target="_top">.NET documentation</a>
+     */
     public DependencyObject getTarget() throws Throwable, system.NotSupportedException, system.ArgumentOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -339,6 +442,13 @@ public class BindingExpressionBase extends system.windows.Expression  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TargetProperty.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.BindingExpressionBase.TargetProperty" target="_top">.NET documentation</a>
+     */
     public DependencyProperty getTargetProperty() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

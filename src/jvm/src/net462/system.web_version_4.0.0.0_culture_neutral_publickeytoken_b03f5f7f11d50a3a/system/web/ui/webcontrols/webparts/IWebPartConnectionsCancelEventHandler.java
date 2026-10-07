@@ -52,5 +52,11 @@ import system.web.ui.webcontrols.webparts.WebPartConnectionsCancelEventArgs;
  * @version 2.0.0.0
  */
 public interface IWebPartConnectionsCancelEventHandler {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param sender the .NET argument of type {@code System.Object}
+     * @param e the .NET argument of type {@code System.Web.UI.WebControls.WebParts.WebPartConnectionsCancelEventArgs}
+     */
     public void Invoke(NetObject sender, WebPartConnectionsCancelEventArgs e);
 }

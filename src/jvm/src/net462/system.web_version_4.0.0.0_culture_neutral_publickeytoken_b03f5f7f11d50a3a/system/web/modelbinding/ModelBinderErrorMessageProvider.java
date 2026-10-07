@@ -167,7 +167,10 @@ public class ModelBinderErrorMessageProvider extends JCDelegate implements IJCEv
         callerInstance = instance;
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ModelBinderErrorMessageProvider(java.lang.Object instance) throws Throwable {
         super(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
@@ -189,6 +192,16 @@ public class ModelBinderErrorMessageProvider extends JCDelegate implements IJCEv
         return JCOBridgeInstance.translateException(ne);
     }
 
+    /**
+     * Invokes the .NET member DynamicInvoke.
+     *
+     * @param modelBindingExecutionContext the argument of type {@code ModelBindingExecutionContext}
+     * @param modelMetadata the argument of type {@code ModelMetadata}
+     * @param incomingValue the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Delegate.DynamicInvoke" target="_top">.NET documentation</a>
+     */
     public java.lang.String DynamicInvoke(ModelBindingExecutionContext modelBindingExecutionContext, ModelMetadata modelMetadata, NetObject incomingValue) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,7 +217,12 @@ public class ModelBinderErrorMessageProvider extends JCDelegate implements IJCEv
     }
 
     /**
-     * Methods invoked in JVM when an event is raised in CLR 
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param modelBindingExecutionContext the .NET argument of type {@code System.Web.ModelBinding.ModelBindingExecutionContext}
+     * @param modelMetadata the .NET argument of type {@code System.Web.ModelBinding.ModelMetadata}
+     * @param incomingValue the .NET argument of type {@code System.Object}
+     * @return the value returned to the CLR; this default implementation returns {@code null}
      */
     public java.lang.String Invoke(ModelBindingExecutionContext modelBindingExecutionContext, ModelMetadata modelMetadata, NetObject incomingValue) {
         return "";

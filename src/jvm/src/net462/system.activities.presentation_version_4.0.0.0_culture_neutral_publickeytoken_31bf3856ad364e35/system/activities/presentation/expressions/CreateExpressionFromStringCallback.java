@@ -165,7 +165,10 @@ public class CreateExpressionFromStringCallback extends JCDelegate implements IJ
         callerInstance = instance;
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CreateExpressionFromStringCallback(java.lang.Object instance) throws Throwable {
         super(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
@@ -187,6 +190,16 @@ public class CreateExpressionFromStringCallback extends JCDelegate implements IJ
         return JCOBridgeInstance.translateException(ne);
     }
 
+    /**
+     * Invokes the .NET member DynamicInvoke.
+     *
+     * @param expressionText the argument of type {@code java.lang.String}
+     * @param useLocationExpression the argument of type {@code boolean}
+     * @param expressionType the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Delegate.DynamicInvoke" target="_top">.NET documentation</a>
+     */
     public ActivityWithResult DynamicInvoke(java.lang.String expressionText, boolean useLocationExpression, NetType expressionType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,7 +216,12 @@ public class CreateExpressionFromStringCallback extends JCDelegate implements IJ
     }
 
     /**
-     * Methods invoked in JVM when an event is raised in CLR 
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param expressionText the .NET argument of type {@code System.String}
+     * @param useLocationExpression the .NET argument of type {@code System.Boolean}
+     * @param expressionType the .NET argument of type {@code System.Type}
+     * @return the value returned to the CLR; this default implementation returns {@code null}
      */
     public ActivityWithResult Invoke(java.lang.String expressionText, boolean useLocationExpression, NetType expressionType) {
         return null;

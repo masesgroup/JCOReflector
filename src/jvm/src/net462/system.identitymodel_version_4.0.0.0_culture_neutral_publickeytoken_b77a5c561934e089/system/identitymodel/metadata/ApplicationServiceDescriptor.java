@@ -101,7 +101,10 @@ public class ApplicationServiceDescriptor extends system.identitymodel.metadata.
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ApplicationServiceDescriptor(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class ApplicationServiceDescriptor extends system.identitymodel.metadata.
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.ApplicationServiceDescriptor.-ctor" target="_top">.NET documentation</a>
+     */
     public ApplicationServiceDescriptor() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -166,6 +175,13 @@ public class ApplicationServiceDescriptor extends system.identitymodel.metadata.
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Endpoints.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.ApplicationServiceDescriptor.Endpoints" target="_top">.NET documentation</a>
+     */
     public ICollection_1 getEndpoints() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -181,6 +197,13 @@ public class ApplicationServiceDescriptor extends system.identitymodel.metadata.
         }
     }
 
+    /**
+     * Gets the value of the .NET property PassiveRequestorEndpoints.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.ApplicationServiceDescriptor.PassiveRequestorEndpoints" target="_top">.NET documentation</a>
+     */
     public ICollection_1 getPassiveRequestorEndpoints() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

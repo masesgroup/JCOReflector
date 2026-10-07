@@ -104,7 +104,10 @@ public class XamlSetTypeConverterEventArgs extends system.windows.markup.XamlSet
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XamlSetTypeConverterEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,17 @@ public class XamlSetTypeConverterEventArgs extends system.windows.markup.XamlSet
     public XamlSetTypeConverterEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param member the argument of type {@code XamlMember}
+     * @param typeConverter the argument of type {@code TypeConverter}
+     * @param value the argument of type {@code NetObject}
+     * @param serviceProvider the argument of type {@code ITypeDescriptorContext}
+     * @param cultureInfo the argument of type {@code CultureInfo}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.XamlSetTypeConverterEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public XamlSetTypeConverterEventArgs(XamlMember member, TypeConverter typeConverter, NetObject value, ITypeDescriptorContext serviceProvider, CultureInfo cultureInfo) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +183,23 @@ public class XamlSetTypeConverterEventArgs extends system.windows.markup.XamlSet
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CallBase.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.xaml.XamlSchemaException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.XamlSetTypeConverterEventArgs.CallBase" target="_top">.NET documentation</a>
+     */
     public void CallBase() throws Throwable, system.PlatformNotSupportedException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.security.SecurityException, system.xaml.XamlSchemaException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +214,13 @@ public class XamlSetTypeConverterEventArgs extends system.windows.markup.XamlSet
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ServiceProvider.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.XamlSetTypeConverterEventArgs.ServiceProvider" target="_top">.NET documentation</a>
+     */
     public ITypeDescriptorContext getServiceProvider() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +236,13 @@ public class XamlSetTypeConverterEventArgs extends system.windows.markup.XamlSet
         }
     }
 
+    /**
+     * Sets the value of the .NET property ServiceProvider.
+     *
+     * @param ServiceProvider the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.XamlSetTypeConverterEventArgs.ServiceProvider" target="_top">.NET documentation</a>
+     */
     public void setServiceProvider(ITypeDescriptorContext ServiceProvider) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +253,13 @@ public class XamlSetTypeConverterEventArgs extends system.windows.markup.XamlSet
         }
     }
 
+    /**
+     * Gets the value of the .NET property TypeConverter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.XamlSetTypeConverterEventArgs.TypeConverter" target="_top">.NET documentation</a>
+     */
     public TypeConverter getTypeConverter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -223,6 +275,13 @@ public class XamlSetTypeConverterEventArgs extends system.windows.markup.XamlSet
         }
     }
 
+    /**
+     * Sets the value of the .NET property TypeConverter.
+     *
+     * @param TypeConverter the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.XamlSetTypeConverterEventArgs.TypeConverter" target="_top">.NET documentation</a>
+     */
     public void setTypeConverter(TypeConverter TypeConverter) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -233,6 +292,13 @@ public class XamlSetTypeConverterEventArgs extends system.windows.markup.XamlSet
         }
     }
 
+    /**
+     * Gets the value of the .NET property CultureInfo.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.XamlSetTypeConverterEventArgs.CultureInfo" target="_top">.NET documentation</a>
+     */
     public CultureInfo getCultureInfo() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -248,6 +314,13 @@ public class XamlSetTypeConverterEventArgs extends system.windows.markup.XamlSet
         }
     }
 
+    /**
+     * Sets the value of the .NET property CultureInfo.
+     *
+     * @param CultureInfo the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.XamlSetTypeConverterEventArgs.CultureInfo" target="_top">.NET documentation</a>
+     */
     public void setCultureInfo(CultureInfo CultureInfo) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

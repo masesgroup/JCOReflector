@@ -101,7 +101,10 @@ public class DataViewSetting extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DataViewSetting(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -160,6 +163,13 @@ public class DataViewSetting extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ApplyDefaultSort.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.DataViewSetting.ApplyDefaultSort" target="_top">.NET documentation</a>
+     */
     public boolean getApplyDefaultSort() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -174,6 +184,13 @@ public class DataViewSetting extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ApplyDefaultSort.
+     *
+     * @param ApplyDefaultSort the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.DataViewSetting.ApplyDefaultSort" target="_top">.NET documentation</a>
+     */
     public void setApplyDefaultSort(boolean ApplyDefaultSort) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +201,13 @@ public class DataViewSetting extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Table.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.DataViewSetting.Table" target="_top">.NET documentation</a>
+     */
     public DataTable getTable() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -199,6 +223,13 @@ public class DataViewSetting extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DataViewManager.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.DataViewSetting.DataViewManager" target="_top">.NET documentation</a>
+     */
     public DataViewManager getDataViewManager() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -214,6 +245,13 @@ public class DataViewSetting extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RowStateFilter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.DataViewSetting.RowStateFilter" target="_top">.NET documentation</a>
+     */
     public DataViewRowState getRowStateFilter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -229,6 +267,13 @@ public class DataViewSetting extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RowStateFilter.
+     *
+     * @param RowStateFilter the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.DataViewSetting.RowStateFilter" target="_top">.NET documentation</a>
+     */
     public void setRowStateFilter(DataViewRowState RowStateFilter) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -239,6 +284,13 @@ public class DataViewSetting extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RowFilter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.DataViewSetting.RowFilter" target="_top">.NET documentation</a>
+     */
     public java.lang.String getRowFilter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -253,6 +305,13 @@ public class DataViewSetting extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RowFilter.
+     *
+     * @param RowFilter the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.DataViewSetting.RowFilter" target="_top">.NET documentation</a>
+     */
     public void setRowFilter(java.lang.String RowFilter) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -263,6 +322,13 @@ public class DataViewSetting extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Sort.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.DataViewSetting.Sort" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSort() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -277,6 +343,13 @@ public class DataViewSetting extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Sort.
+     *
+     * @param Sort the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.DataViewSetting.Sort" target="_top">.NET documentation</a>
+     */
     public void setSort(java.lang.String Sort) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

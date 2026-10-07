@@ -100,7 +100,10 @@ public class ResolveProgressChangedEventArgs extends system.componentmodel.Progr
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ResolveProgressChangedEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,14 @@ public class ResolveProgressChangedEventArgs extends system.componentmodel.Progr
     public ResolveProgressChangedEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param peerNameRecord the argument of type {@code PeerNameRecord}
+     * @param userToken the argument of type {@code NetObject}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.PeerToPeer.ResolveProgressChangedEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public ResolveProgressChangedEventArgs(PeerNameRecord peerNameRecord, NetObject userToken) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +180,13 @@ public class ResolveProgressChangedEventArgs extends system.componentmodel.Progr
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property PeerNameRecord.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.PeerToPeer.ResolveProgressChangedEventArgs.PeerNameRecord" target="_top">.NET documentation</a>
+     */
     public PeerNameRecord getPeerNameRecord() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

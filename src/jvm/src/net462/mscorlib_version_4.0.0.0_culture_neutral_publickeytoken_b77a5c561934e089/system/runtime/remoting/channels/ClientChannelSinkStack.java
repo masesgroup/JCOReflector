@@ -107,7 +107,10 @@ public class ClientChannelSinkStack extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ClientChannelSinkStack(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,12 @@ public class ClientChannelSinkStack extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Channels.ClientChannelSinkStack.-ctor" target="_top">.NET documentation</a>
+     */
     public ClientChannelSinkStack() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +173,13 @@ public class ClientChannelSinkStack extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param replySink the argument of type {@code IMessageSink}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Channels.ClientChannelSinkStack.-ctor" target="_top">.NET documentation</a>
+     */
     public ClientChannelSinkStack(IMessageSink replySink) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -178,6 +194,15 @@ public class ClientChannelSinkStack extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Pop.
+     *
+     * @param sink the argument of type {@code IClientChannelSink}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.runtime.remoting.RemotingException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Channels.ClientChannelSinkStack.Pop" target="_top">.NET documentation</a>
+     */
     public NetObject Pop(IClientChannelSink sink) throws Throwable, system.runtime.remoting.RemotingException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +218,15 @@ public class ClientChannelSinkStack extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AsyncProcessResponse.
+     *
+     * @param headers the argument of type {@code ITransportHeaders}
+     * @param stream the argument of type {@code Stream}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.runtime.remoting.RemotingException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Channels.ClientChannelSinkStack.AsyncProcessResponse" target="_top">.NET documentation</a>
+     */
     public void AsyncProcessResponse(ITransportHeaders headers, Stream stream) throws Throwable, system.runtime.remoting.RemotingException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +237,20 @@ public class ClientChannelSinkStack extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DispatchException.
+     *
+     * @param e the argument of type {@code NetException}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Channels.ClientChannelSinkStack.DispatchException" target="_top">.NET documentation</a>
+     */
     public void DispatchException(NetException e) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.NullReferenceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -213,6 +261,13 @@ public class ClientChannelSinkStack extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DispatchReplyMessage.
+     *
+     * @param msg the argument of type {@code IMessage}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Channels.ClientChannelSinkStack.DispatchReplyMessage" target="_top">.NET documentation</a>
+     */
     public void DispatchReplyMessage(IMessage msg) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -223,6 +278,14 @@ public class ClientChannelSinkStack extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Push.
+     *
+     * @param sink the argument of type {@code IClientChannelSink}
+     * @param state the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Channels.ClientChannelSinkStack.Push" target="_top">.NET documentation</a>
+     */
     public void Push(IClientChannelSink sink, NetObject state) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

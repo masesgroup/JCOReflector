@@ -100,7 +100,10 @@ public class DependencyAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DependencyAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,14 @@ public class DependencyAttribute extends system.Attribute  {
     public DependencyAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param dependentAssemblyArgument the argument of type {@code java.lang.String}
+     * @param loadHintArgument the argument of type {@code LoadHint}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.DependencyAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public DependencyAttribute(java.lang.String dependentAssemblyArgument, LoadHint loadHintArgument) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +180,13 @@ public class DependencyAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property LoadHint.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.DependencyAttribute.LoadHint" target="_top">.NET documentation</a>
+     */
     public LoadHint getLoadHint() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +202,13 @@ public class DependencyAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DependentAssembly.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.DependencyAttribute.DependentAssembly" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDependentAssembly() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

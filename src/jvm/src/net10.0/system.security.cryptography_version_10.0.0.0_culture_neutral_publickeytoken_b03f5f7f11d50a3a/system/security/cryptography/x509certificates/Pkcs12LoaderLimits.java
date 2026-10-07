@@ -100,7 +100,10 @@ public class Pkcs12LoaderLimits extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Pkcs12LoaderLimits(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class Pkcs12LoaderLimits extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.X509Certificates.Pkcs12LoaderLimits.-ctor" target="_top">.NET documentation</a>
+     */
     public Pkcs12LoaderLimits() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -157,6 +166,22 @@ public class Pkcs12LoaderLimits extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param copyFrom the argument of type {@code Pkcs12LoaderLimits}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.X509Certificates.Pkcs12LoaderLimits.-ctor" target="_top">.NET documentation</a>
+     */
     public Pkcs12LoaderLimits(Pkcs12LoaderLimits copyFrom) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -171,6 +196,12 @@ public class Pkcs12LoaderLimits extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member MakeReadOnly.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.X509Certificates.Pkcs12LoaderLimits.MakeReadOnly" target="_top">.NET documentation</a>
+     */
     public void MakeReadOnly() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -185,6 +216,13 @@ public class Pkcs12LoaderLimits extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AllowDuplicateAttributes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.X509Certificates.Pkcs12LoaderLimits.AllowDuplicateAttributes" target="_top">.NET documentation</a>
+     */
     public boolean getAllowDuplicateAttributes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -199,6 +237,21 @@ public class Pkcs12LoaderLimits extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AllowDuplicateAttributes.
+     *
+     * @param AllowDuplicateAttributes the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.X509Certificates.Pkcs12LoaderLimits.AllowDuplicateAttributes" target="_top">.NET documentation</a>
+     */
     public void setAllowDuplicateAttributes(boolean AllowDuplicateAttributes) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -209,6 +262,13 @@ public class Pkcs12LoaderLimits extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IgnoreEncryptedAuthSafes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.X509Certificates.Pkcs12LoaderLimits.IgnoreEncryptedAuthSafes" target="_top">.NET documentation</a>
+     */
     public boolean getIgnoreEncryptedAuthSafes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -223,6 +283,21 @@ public class Pkcs12LoaderLimits extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IgnoreEncryptedAuthSafes.
+     *
+     * @param IgnoreEncryptedAuthSafes the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.X509Certificates.Pkcs12LoaderLimits.IgnoreEncryptedAuthSafes" target="_top">.NET documentation</a>
+     */
     public void setIgnoreEncryptedAuthSafes(boolean IgnoreEncryptedAuthSafes) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -233,6 +308,13 @@ public class Pkcs12LoaderLimits extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IgnorePrivateKeys.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.X509Certificates.Pkcs12LoaderLimits.IgnorePrivateKeys" target="_top">.NET documentation</a>
+     */
     public boolean getIgnorePrivateKeys() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -247,6 +329,21 @@ public class Pkcs12LoaderLimits extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IgnorePrivateKeys.
+     *
+     * @param IgnorePrivateKeys the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.X509Certificates.Pkcs12LoaderLimits.IgnorePrivateKeys" target="_top">.NET documentation</a>
+     */
     public void setIgnorePrivateKeys(boolean IgnorePrivateKeys) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -257,6 +354,13 @@ public class Pkcs12LoaderLimits extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsReadOnly.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.X509Certificates.Pkcs12LoaderLimits.IsReadOnly" target="_top">.NET documentation</a>
+     */
     public boolean getIsReadOnly() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -271,6 +375,13 @@ public class Pkcs12LoaderLimits extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PreserveCertificateAlias.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.X509Certificates.Pkcs12LoaderLimits.PreserveCertificateAlias" target="_top">.NET documentation</a>
+     */
     public boolean getPreserveCertificateAlias() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -285,6 +396,21 @@ public class Pkcs12LoaderLimits extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PreserveCertificateAlias.
+     *
+     * @param PreserveCertificateAlias the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.X509Certificates.Pkcs12LoaderLimits.PreserveCertificateAlias" target="_top">.NET documentation</a>
+     */
     public void setPreserveCertificateAlias(boolean PreserveCertificateAlias) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -295,6 +421,13 @@ public class Pkcs12LoaderLimits extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PreserveKeyName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.X509Certificates.Pkcs12LoaderLimits.PreserveKeyName" target="_top">.NET documentation</a>
+     */
     public boolean getPreserveKeyName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -309,6 +442,21 @@ public class Pkcs12LoaderLimits extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PreserveKeyName.
+     *
+     * @param PreserveKeyName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.X509Certificates.Pkcs12LoaderLimits.PreserveKeyName" target="_top">.NET documentation</a>
+     */
     public void setPreserveKeyName(boolean PreserveKeyName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -319,6 +467,13 @@ public class Pkcs12LoaderLimits extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PreserveStorageProvider.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.X509Certificates.Pkcs12LoaderLimits.PreserveStorageProvider" target="_top">.NET documentation</a>
+     */
     public boolean getPreserveStorageProvider() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -333,6 +488,21 @@ public class Pkcs12LoaderLimits extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PreserveStorageProvider.
+     *
+     * @param PreserveStorageProvider the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.X509Certificates.Pkcs12LoaderLimits.PreserveStorageProvider" target="_top">.NET documentation</a>
+     */
     public void setPreserveStorageProvider(boolean PreserveStorageProvider) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -343,6 +513,13 @@ public class Pkcs12LoaderLimits extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PreserveUnknownAttributes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.X509Certificates.Pkcs12LoaderLimits.PreserveUnknownAttributes" target="_top">.NET documentation</a>
+     */
     public boolean getPreserveUnknownAttributes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -357,6 +534,21 @@ public class Pkcs12LoaderLimits extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PreserveUnknownAttributes.
+     *
+     * @param PreserveUnknownAttributes the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.X509Certificates.Pkcs12LoaderLimits.PreserveUnknownAttributes" target="_top">.NET documentation</a>
+     */
     public void setPreserveUnknownAttributes(boolean PreserveUnknownAttributes) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -367,6 +559,13 @@ public class Pkcs12LoaderLimits extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IndividualKdfIterationLimit.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.X509Certificates.Pkcs12LoaderLimits.IndividualKdfIterationLimit" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getIndividualKdfIterationLimit() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -382,6 +581,20 @@ public class Pkcs12LoaderLimits extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IndividualKdfIterationLimit.
+     *
+     * @param IndividualKdfIterationLimit the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.X509Certificates.Pkcs12LoaderLimits.IndividualKdfIterationLimit" target="_top">.NET documentation</a>
+     */
     public void setIndividualKdfIterationLimit(Nullable_1 IndividualKdfIterationLimit) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -392,6 +605,13 @@ public class Pkcs12LoaderLimits extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MacIterationLimit.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.X509Certificates.Pkcs12LoaderLimits.MacIterationLimit" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getMacIterationLimit() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -407,6 +627,20 @@ public class Pkcs12LoaderLimits extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MacIterationLimit.
+     *
+     * @param MacIterationLimit the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.X509Certificates.Pkcs12LoaderLimits.MacIterationLimit" target="_top">.NET documentation</a>
+     */
     public void setMacIterationLimit(Nullable_1 MacIterationLimit) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -417,6 +651,13 @@ public class Pkcs12LoaderLimits extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MaxCertificates.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.X509Certificates.Pkcs12LoaderLimits.MaxCertificates" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getMaxCertificates() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -432,6 +673,20 @@ public class Pkcs12LoaderLimits extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MaxCertificates.
+     *
+     * @param MaxCertificates the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.X509Certificates.Pkcs12LoaderLimits.MaxCertificates" target="_top">.NET documentation</a>
+     */
     public void setMaxCertificates(Nullable_1 MaxCertificates) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -442,6 +697,13 @@ public class Pkcs12LoaderLimits extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MaxKeys.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.X509Certificates.Pkcs12LoaderLimits.MaxKeys" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getMaxKeys() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -457,6 +719,20 @@ public class Pkcs12LoaderLimits extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MaxKeys.
+     *
+     * @param MaxKeys the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.X509Certificates.Pkcs12LoaderLimits.MaxKeys" target="_top">.NET documentation</a>
+     */
     public void setMaxKeys(Nullable_1 MaxKeys) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -467,6 +743,13 @@ public class Pkcs12LoaderLimits extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TotalKdfIterationLimit.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.X509Certificates.Pkcs12LoaderLimits.TotalKdfIterationLimit" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getTotalKdfIterationLimit() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -482,6 +765,20 @@ public class Pkcs12LoaderLimits extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TotalKdfIterationLimit.
+     *
+     * @param TotalKdfIterationLimit the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.X509Certificates.Pkcs12LoaderLimits.TotalKdfIterationLimit" target="_top">.NET documentation</a>
+     */
     public void setTotalKdfIterationLimit(Nullable_1 TotalKdfIterationLimit) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -492,6 +789,13 @@ public class Pkcs12LoaderLimits extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DangerousNoLimits.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.X509Certificates.Pkcs12LoaderLimits.DangerousNoLimits" target="_top">.NET documentation</a>
+     */
     public static Pkcs12LoaderLimits getDangerousNoLimits() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -507,6 +811,13 @@ public class Pkcs12LoaderLimits extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Defaults.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.X509Certificates.Pkcs12LoaderLimits.Defaults" target="_top">.NET documentation</a>
+     */
     public static Pkcs12LoaderLimits getDefaults() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

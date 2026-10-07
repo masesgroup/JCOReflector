@@ -99,7 +99,10 @@ public class UnconditionalSuppressMessageAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public UnconditionalSuppressMessageAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,14 @@ public class UnconditionalSuppressMessageAttribute extends system.Attribute  {
     public UnconditionalSuppressMessageAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param category the argument of type {@code java.lang.String}
+     * @param checkId the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public UnconditionalSuppressMessageAttribute(java.lang.String category, java.lang.String checkId) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +179,13 @@ public class UnconditionalSuppressMessageAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Category.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.Category" target="_top">.NET documentation</a>
+     */
     public java.lang.String getCategory() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +200,13 @@ public class UnconditionalSuppressMessageAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CheckId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.CheckId" target="_top">.NET documentation</a>
+     */
     public java.lang.String getCheckId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -196,6 +221,13 @@ public class UnconditionalSuppressMessageAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Justification.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.Justification" target="_top">.NET documentation</a>
+     */
     public java.lang.String getJustification() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -210,6 +242,13 @@ public class UnconditionalSuppressMessageAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Justification.
+     *
+     * @param Justification the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.Justification" target="_top">.NET documentation</a>
+     */
     public void setJustification(java.lang.String Justification) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -220,6 +259,13 @@ public class UnconditionalSuppressMessageAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MessageId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.MessageId" target="_top">.NET documentation</a>
+     */
     public java.lang.String getMessageId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -234,6 +280,13 @@ public class UnconditionalSuppressMessageAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MessageId.
+     *
+     * @param MessageId the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.MessageId" target="_top">.NET documentation</a>
+     */
     public void setMessageId(java.lang.String MessageId) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -244,6 +297,13 @@ public class UnconditionalSuppressMessageAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Scope.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.Scope" target="_top">.NET documentation</a>
+     */
     public java.lang.String getScope() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -258,6 +318,13 @@ public class UnconditionalSuppressMessageAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Scope.
+     *
+     * @param Scope the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.Scope" target="_top">.NET documentation</a>
+     */
     public void setScope(java.lang.String Scope) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -268,6 +335,13 @@ public class UnconditionalSuppressMessageAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Target.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.Target" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTarget() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -282,6 +356,13 @@ public class UnconditionalSuppressMessageAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Target.
+     *
+     * @param Target the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute.Target" target="_top">.NET documentation</a>
+     */
     public void setTarget(java.lang.String Target) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

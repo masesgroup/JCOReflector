@@ -99,7 +99,10 @@ public class ListControlConvertEventArgs extends system.windows.forms.ConvertEve
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ListControlConvertEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,15 @@ public class ListControlConvertEventArgs extends system.windows.forms.ConvertEve
     public ListControlConvertEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param value the argument of type {@code NetObject}
+     * @param desiredType the argument of type {@code NetType}
+     * @param listItem the argument of type {@code NetObject}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ListControlConvertEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public ListControlConvertEventArgs(NetObject value, NetType desiredType, NetObject listItem) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +180,13 @@ public class ListControlConvertEventArgs extends system.windows.forms.ConvertEve
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ListItem.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ListControlConvertEventArgs.ListItem" target="_top">.NET documentation</a>
+     */
     public NetObject getListItem() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

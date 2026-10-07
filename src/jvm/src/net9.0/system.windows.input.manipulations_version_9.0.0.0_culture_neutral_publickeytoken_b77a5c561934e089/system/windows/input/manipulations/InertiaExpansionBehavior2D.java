@@ -100,7 +100,10 @@ public class InertiaExpansionBehavior2D extends system.windows.input.manipulatio
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public InertiaExpansionBehavior2D(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class InertiaExpansionBehavior2D extends system.windows.input.manipulatio
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.Manipulations.InertiaExpansionBehavior2D.-ctor" target="_top">.NET documentation</a>
+     */
     public InertiaExpansionBehavior2D() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +174,13 @@ public class InertiaExpansionBehavior2D extends system.windows.input.manipulatio
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property DesiredDeceleration.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.Manipulations.InertiaExpansionBehavior2D.DesiredDeceleration" target="_top">.NET documentation</a>
+     */
     public Single getDesiredDeceleration() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +196,23 @@ public class InertiaExpansionBehavior2D extends system.windows.input.manipulatio
         }
     }
 
+    /**
+     * Sets the value of the .NET property DesiredDeceleration.
+     *
+     * @param DesiredDeceleration the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.Manipulations.InertiaExpansionBehavior2D.DesiredDeceleration" target="_top">.NET documentation</a>
+     */
     public void setDesiredDeceleration(Single DesiredDeceleration) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +223,13 @@ public class InertiaExpansionBehavior2D extends system.windows.input.manipulatio
         }
     }
 
+    /**
+     * Gets the value of the .NET property DesiredExpansionX.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.Manipulations.InertiaExpansionBehavior2D.DesiredExpansionX" target="_top">.NET documentation</a>
+     */
     public Single getDesiredExpansionX() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +245,23 @@ public class InertiaExpansionBehavior2D extends system.windows.input.manipulatio
         }
     }
 
+    /**
+     * Sets the value of the .NET property DesiredExpansionX.
+     *
+     * @param DesiredExpansionX the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.Manipulations.InertiaExpansionBehavior2D.DesiredExpansionX" target="_top">.NET documentation</a>
+     */
     public void setDesiredExpansionX(Single DesiredExpansionX) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +272,13 @@ public class InertiaExpansionBehavior2D extends system.windows.input.manipulatio
         }
     }
 
+    /**
+     * Gets the value of the .NET property DesiredExpansionY.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.Manipulations.InertiaExpansionBehavior2D.DesiredExpansionY" target="_top">.NET documentation</a>
+     */
     public Single getDesiredExpansionY() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -230,6 +294,23 @@ public class InertiaExpansionBehavior2D extends system.windows.input.manipulatio
         }
     }
 
+    /**
+     * Sets the value of the .NET property DesiredExpansionY.
+     *
+     * @param DesiredExpansionY the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.Manipulations.InertiaExpansionBehavior2D.DesiredExpansionY" target="_top">.NET documentation</a>
+     */
     public void setDesiredExpansionY(Single DesiredExpansionY) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -240,6 +321,13 @@ public class InertiaExpansionBehavior2D extends system.windows.input.manipulatio
         }
     }
 
+    /**
+     * Gets the value of the .NET property InitialRadius.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.Manipulations.InertiaExpansionBehavior2D.InitialRadius" target="_top">.NET documentation</a>
+     */
     public Single getInitialRadius() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -255,6 +343,23 @@ public class InertiaExpansionBehavior2D extends system.windows.input.manipulatio
         }
     }
 
+    /**
+     * Sets the value of the .NET property InitialRadius.
+     *
+     * @param InitialRadius the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.Manipulations.InertiaExpansionBehavior2D.InitialRadius" target="_top">.NET documentation</a>
+     */
     public void setInitialRadius(Single InitialRadius) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.NullReferenceException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -265,6 +370,13 @@ public class InertiaExpansionBehavior2D extends system.windows.input.manipulatio
         }
     }
 
+    /**
+     * Gets the value of the .NET property InitialVelocityX.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.Manipulations.InertiaExpansionBehavior2D.InitialVelocityX" target="_top">.NET documentation</a>
+     */
     public Single getInitialVelocityX() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -280,6 +392,23 @@ public class InertiaExpansionBehavior2D extends system.windows.input.manipulatio
         }
     }
 
+    /**
+     * Sets the value of the .NET property InitialVelocityX.
+     *
+     * @param InitialVelocityX the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.Manipulations.InertiaExpansionBehavior2D.InitialVelocityX" target="_top">.NET documentation</a>
+     */
     public void setInitialVelocityX(Single InitialVelocityX) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -290,6 +419,13 @@ public class InertiaExpansionBehavior2D extends system.windows.input.manipulatio
         }
     }
 
+    /**
+     * Gets the value of the .NET property InitialVelocityY.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.Manipulations.InertiaExpansionBehavior2D.InitialVelocityY" target="_top">.NET documentation</a>
+     */
     public Single getInitialVelocityY() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -305,6 +441,23 @@ public class InertiaExpansionBehavior2D extends system.windows.input.manipulatio
         }
     }
 
+    /**
+     * Sets the value of the .NET property InitialVelocityY.
+     *
+     * @param InitialVelocityY the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.Manipulations.InertiaExpansionBehavior2D.InitialVelocityY" target="_top">.NET documentation</a>
+     */
     public void setInitialVelocityY(Single InitialVelocityY) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

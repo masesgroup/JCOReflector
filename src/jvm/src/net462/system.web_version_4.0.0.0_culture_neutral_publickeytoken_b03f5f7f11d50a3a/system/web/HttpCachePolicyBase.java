@@ -106,7 +106,10 @@ public class HttpCachePolicyBase extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public HttpCachePolicyBase(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -159,6 +162,15 @@ public class HttpCachePolicyBase extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member AddValidationCallback.
+     *
+     * @param handler the argument of type {@code HttpCacheValidateHandler}
+     * @param data the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpCachePolicyBase.AddValidationCallback" target="_top">.NET documentation</a>
+     */
     public void AddValidationCallback(HttpCacheValidateHandler handler, NetObject data) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -169,6 +181,14 @@ public class HttpCachePolicyBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AppendCacheExtension.
+     *
+     * @param extension the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpCachePolicyBase.AppendCacheExtension" target="_top">.NET documentation</a>
+     */
     public void AppendCacheExtension(java.lang.String extension) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -179,6 +199,14 @@ public class HttpCachePolicyBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetAllowResponseInBrowserHistory.
+     *
+     * @param allow the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpCachePolicyBase.SetAllowResponseInBrowserHistory" target="_top">.NET documentation</a>
+     */
     public void SetAllowResponseInBrowserHistory(boolean allow) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +217,14 @@ public class HttpCachePolicyBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetCacheability.
+     *
+     * @param cacheability the argument of type {@code HttpCacheability}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpCachePolicyBase.SetCacheability" target="_top">.NET documentation</a>
+     */
     public void SetCacheability(HttpCacheability cacheability) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -199,6 +235,15 @@ public class HttpCachePolicyBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetCacheability.
+     *
+     * @param cacheability the argument of type {@code HttpCacheability}
+     * @param field the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpCachePolicyBase.SetCacheability" target="_top">.NET documentation</a>
+     */
     public void SetCacheability(HttpCacheability cacheability, java.lang.String field) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -209,6 +254,14 @@ public class HttpCachePolicyBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetETag.
+     *
+     * @param etag the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpCachePolicyBase.SetETag" target="_top">.NET documentation</a>
+     */
     public void SetETag(java.lang.String etag) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -219,6 +272,13 @@ public class HttpCachePolicyBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetETagFromFileDependencies.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpCachePolicyBase.SetETagFromFileDependencies" target="_top">.NET documentation</a>
+     */
     public void SetETagFromFileDependencies() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -229,6 +289,14 @@ public class HttpCachePolicyBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetExpires.
+     *
+     * @param date the argument of type {@code DateTime}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpCachePolicyBase.SetExpires" target="_top">.NET documentation</a>
+     */
     public void SetExpires(DateTime date) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -239,6 +307,14 @@ public class HttpCachePolicyBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetLastModified.
+     *
+     * @param date the argument of type {@code DateTime}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpCachePolicyBase.SetLastModified" target="_top">.NET documentation</a>
+     */
     public void SetLastModified(DateTime date) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -249,6 +325,13 @@ public class HttpCachePolicyBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetLastModifiedFromFileDependencies.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpCachePolicyBase.SetLastModifiedFromFileDependencies" target="_top">.NET documentation</a>
+     */
     public void SetLastModifiedFromFileDependencies() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -259,6 +342,14 @@ public class HttpCachePolicyBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetMaxAge.
+     *
+     * @param delta the argument of type {@code TimeSpan}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpCachePolicyBase.SetMaxAge" target="_top">.NET documentation</a>
+     */
     public void SetMaxAge(TimeSpan delta) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -269,6 +360,13 @@ public class HttpCachePolicyBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetNoServerCaching.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpCachePolicyBase.SetNoServerCaching" target="_top">.NET documentation</a>
+     */
     public void SetNoServerCaching() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -279,6 +377,13 @@ public class HttpCachePolicyBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetNoStore.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpCachePolicyBase.SetNoStore" target="_top">.NET documentation</a>
+     */
     public void SetNoStore() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -289,6 +394,13 @@ public class HttpCachePolicyBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetNoTransforms.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpCachePolicyBase.SetNoTransforms" target="_top">.NET documentation</a>
+     */
     public void SetNoTransforms() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -299,6 +411,14 @@ public class HttpCachePolicyBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetOmitVaryStar.
+     *
+     * @param omit the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpCachePolicyBase.SetOmitVaryStar" target="_top">.NET documentation</a>
+     */
     public void SetOmitVaryStar(boolean omit) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -309,6 +429,14 @@ public class HttpCachePolicyBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetProxyMaxAge.
+     *
+     * @param delta the argument of type {@code TimeSpan}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpCachePolicyBase.SetProxyMaxAge" target="_top">.NET documentation</a>
+     */
     public void SetProxyMaxAge(TimeSpan delta) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -319,6 +447,14 @@ public class HttpCachePolicyBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetRevalidation.
+     *
+     * @param revalidation the argument of type {@code HttpCacheRevalidation}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpCachePolicyBase.SetRevalidation" target="_top">.NET documentation</a>
+     */
     public void SetRevalidation(HttpCacheRevalidation revalidation) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -329,6 +465,14 @@ public class HttpCachePolicyBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetSlidingExpiration.
+     *
+     * @param slide the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpCachePolicyBase.SetSlidingExpiration" target="_top">.NET documentation</a>
+     */
     public void SetSlidingExpiration(boolean slide) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -339,6 +483,14 @@ public class HttpCachePolicyBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetValidUntilExpires.
+     *
+     * @param validUntilExpires the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpCachePolicyBase.SetValidUntilExpires" target="_top">.NET documentation</a>
+     */
     public void SetValidUntilExpires(boolean validUntilExpires) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -349,6 +501,14 @@ public class HttpCachePolicyBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetVaryByCustom.
+     *
+     * @param custom the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpCachePolicyBase.SetVaryByCustom" target="_top">.NET documentation</a>
+     */
     public void SetVaryByCustom(java.lang.String custom) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -363,6 +523,14 @@ public class HttpCachePolicyBase extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property VaryByContentEncodings.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpCachePolicyBase.VaryByContentEncodings" target="_top">.NET documentation</a>
+     */
     public HttpCacheVaryByContentEncodings getVaryByContentEncodings() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -378,6 +546,14 @@ public class HttpCachePolicyBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property VaryByHeaders.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpCachePolicyBase.VaryByHeaders" target="_top">.NET documentation</a>
+     */
     public HttpCacheVaryByHeaders getVaryByHeaders() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -393,6 +569,14 @@ public class HttpCachePolicyBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property VaryByParams.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpCachePolicyBase.VaryByParams" target="_top">.NET documentation</a>
+     */
     public HttpCacheVaryByParams getVaryByParams() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -99,7 +99,10 @@ public class MessageHeaderAttribute extends system.servicemodel.MessageContractM
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public MessageHeaderAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class MessageHeaderAttribute extends system.servicemodel.MessageContractM
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.MessageHeaderAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public MessageHeaderAttribute() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +173,13 @@ public class MessageHeaderAttribute extends system.servicemodel.MessageContractM
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property MustUnderstand.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.MessageHeaderAttribute.MustUnderstand" target="_top">.NET documentation</a>
+     */
     public boolean getMustUnderstand() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,6 +194,13 @@ public class MessageHeaderAttribute extends system.servicemodel.MessageContractM
         }
     }
 
+    /**
+     * Sets the value of the .NET property MustUnderstand.
+     *
+     * @param MustUnderstand the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.MessageHeaderAttribute.MustUnderstand" target="_top">.NET documentation</a>
+     */
     public void setMustUnderstand(boolean MustUnderstand) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +211,13 @@ public class MessageHeaderAttribute extends system.servicemodel.MessageContractM
         }
     }
 
+    /**
+     * Gets the value of the .NET property Relay.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.MessageHeaderAttribute.Relay" target="_top">.NET documentation</a>
+     */
     public boolean getRelay() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +232,13 @@ public class MessageHeaderAttribute extends system.servicemodel.MessageContractM
         }
     }
 
+    /**
+     * Sets the value of the .NET property Relay.
+     *
+     * @param Relay the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.MessageHeaderAttribute.Relay" target="_top">.NET documentation</a>
+     */
     public void setRelay(boolean Relay) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -212,6 +249,13 @@ public class MessageHeaderAttribute extends system.servicemodel.MessageContractM
         }
     }
 
+    /**
+     * Gets the value of the .NET property Actor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.MessageHeaderAttribute.Actor" target="_top">.NET documentation</a>
+     */
     public java.lang.String getActor() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -226,6 +270,13 @@ public class MessageHeaderAttribute extends system.servicemodel.MessageContractM
         }
     }
 
+    /**
+     * Sets the value of the .NET property Actor.
+     *
+     * @param Actor the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.MessageHeaderAttribute.Actor" target="_top">.NET documentation</a>
+     */
     public void setActor(java.lang.String Actor) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

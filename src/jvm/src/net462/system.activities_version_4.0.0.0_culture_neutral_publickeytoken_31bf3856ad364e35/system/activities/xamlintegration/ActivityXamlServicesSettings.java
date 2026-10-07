@@ -99,7 +99,10 @@ public class ActivityXamlServicesSettings extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ActivityXamlServicesSettings(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class ActivityXamlServicesSettings extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.XamlIntegration.ActivityXamlServicesSettings.-ctor" target="_top">.NET documentation</a>
+     */
     public ActivityXamlServicesSettings() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +173,13 @@ public class ActivityXamlServicesSettings extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CompileExpressions.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.XamlIntegration.ActivityXamlServicesSettings.CompileExpressions" target="_top">.NET documentation</a>
+     */
     public boolean getCompileExpressions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,6 +194,13 @@ public class ActivityXamlServicesSettings extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CompileExpressions.
+     *
+     * @param CompileExpressions the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.XamlIntegration.ActivityXamlServicesSettings.CompileExpressions" target="_top">.NET documentation</a>
+     */
     public void setCompileExpressions(boolean CompileExpressions) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +211,13 @@ public class ActivityXamlServicesSettings extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LocationReferenceEnvironment.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.XamlIntegration.ActivityXamlServicesSettings.LocationReferenceEnvironment" target="_top">.NET documentation</a>
+     */
     public LocationReferenceEnvironment getLocationReferenceEnvironment() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +233,13 @@ public class ActivityXamlServicesSettings extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property LocationReferenceEnvironment.
+     *
+     * @param LocationReferenceEnvironment the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.XamlIntegration.ActivityXamlServicesSettings.LocationReferenceEnvironment" target="_top">.NET documentation</a>
+     */
     public void setLocationReferenceEnvironment(LocationReferenceEnvironment LocationReferenceEnvironment) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -102,7 +102,10 @@ public class EditAndContinueLogEntry extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public EditAndContinueLogEntry(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,14 @@ public class EditAndContinueLogEntry extends system.ValueType  {
     public EditAndContinueLogEntry() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param handle the argument of type {@code EntityHandle}
+     * @param operation the argument of type {@code EditAndContinueOperation}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.EditAndContinueLogEntry.-ctor" target="_top">.NET documentation</a>
+     */
     public EditAndContinueLogEntry(EntityHandle handle, EditAndContinueOperation operation) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +178,14 @@ public class EditAndContinueLogEntry extends system.ValueType  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Equals.
+     *
+     * @param other the argument of type {@code EditAndContinueLogEntry}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.EditAndContinueLogEntry.Equals" target="_top">.NET documentation</a>
+     */
     public boolean Equals(EditAndContinueLogEntry other) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -185,6 +204,13 @@ public class EditAndContinueLogEntry extends system.ValueType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Operation.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.EditAndContinueLogEntry.Operation" target="_top">.NET documentation</a>
+     */
     public EditAndContinueOperation getOperation() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +226,13 @@ public class EditAndContinueLogEntry extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Handle.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.EditAndContinueLogEntry.Handle" target="_top">.NET documentation</a>
+     */
     public EntityHandle getHandle() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

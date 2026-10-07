@@ -99,7 +99,10 @@ public class DataGridViewCellMouseEventArgs extends system.windows.forms.MouseEv
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DataGridViewCellMouseEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,18 @@ public class DataGridViewCellMouseEventArgs extends system.windows.forms.MouseEv
     public DataGridViewCellMouseEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param columnIndex the argument of type {@code int}
+     * @param rowIndex the argument of type {@code int}
+     * @param localX the argument of type {@code int}
+     * @param localY the argument of type {@code int}
+     * @param e the argument of type {@code MouseEventArgs}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridViewCellMouseEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public DataGridViewCellMouseEventArgs(int columnIndex, int rowIndex, int localX, int localY, MouseEventArgs e) throws Throwable, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +183,13 @@ public class DataGridViewCellMouseEventArgs extends system.windows.forms.MouseEv
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ColumnIndex.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridViewCellMouseEventArgs.ColumnIndex" target="_top">.NET documentation</a>
+     */
     public int getColumnIndex() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +230,13 @@ public class DataGridViewCellMouseEventArgs extends system.windows.forms.MouseEv
         }
     }
 
+    /**
+     * Gets the value of the .NET property RowIndex.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridViewCellMouseEventArgs.RowIndex" target="_top">.NET documentation</a>
+     */
     public int getRowIndex() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

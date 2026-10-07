@@ -103,7 +103,10 @@ public class SiteMapDataSourceView extends system.web.ui.DataSourceView  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SiteMapDataSourceView(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,20 @@ public class SiteMapDataSourceView extends system.web.ui.DataSourceView  {
     public SiteMapDataSourceView() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param owner the argument of type {@code SiteMapDataSource}
+     * @param name the argument of type {@code java.lang.String}
+     * @param node the argument of type {@code SiteMapNode}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.SiteMapDataSourceView.-ctor" target="_top">.NET documentation</a>
+     */
     public SiteMapDataSourceView(SiteMapDataSource owner, java.lang.String name, SiteMapNode node) throws Throwable, system.ArgumentNullException, system.MulticastNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
@@ -163,6 +180,17 @@ public class SiteMapDataSourceView extends system.web.ui.DataSourceView  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param owner the argument of type {@code SiteMapDataSource}
+     * @param name the argument of type {@code java.lang.String}
+     * @param collection the argument of type {@code SiteMapNodeCollection}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.SiteMapDataSourceView.-ctor" target="_top">.NET documentation</a>
+     */
     public SiteMapDataSourceView(SiteMapDataSource owner, java.lang.String name, SiteMapNodeCollection collection) throws Throwable, system.ArgumentNullException, system.MulticastNotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -178,6 +206,14 @@ public class SiteMapDataSourceView extends system.web.ui.DataSourceView  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Select.
+     *
+     * @param arguments the argument of type {@code DataSourceSelectArguments}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.SiteMapDataSourceView.Select" target="_top">.NET documentation</a>
+     */
     public IEnumerable Select(DataSourceSelectArguments arguments) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -100,7 +100,10 @@ public class UseKey extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public UseKey(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class UseKey extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.UseKey.-ctor" target="_top">.NET documentation</a>
+     */
     public UseKey() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -157,6 +166,13 @@ public class UseKey extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param ski the argument of type {@code SecurityKeyIdentifier}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.UseKey.-ctor" target="_top">.NET documentation</a>
+     */
     public UseKey(SecurityKeyIdentifier ski) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +183,14 @@ public class UseKey extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param ski the argument of type {@code SecurityKeyIdentifier}
+     * @param token the argument of type {@code SecurityToken}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.UseKey.-ctor" target="_top">.NET documentation</a>
+     */
     public UseKey(SecurityKeyIdentifier ski, SecurityToken token) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -177,6 +201,13 @@ public class UseKey extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param token the argument of type {@code SecurityToken}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.UseKey.-ctor" target="_top">.NET documentation</a>
+     */
     public UseKey(SecurityToken token) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -195,6 +226,13 @@ public class UseKey extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property SecurityKeyIdentifier.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.UseKey.SecurityKeyIdentifier" target="_top">.NET documentation</a>
+     */
     public SecurityKeyIdentifier getSecurityKeyIdentifier() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -210,6 +248,13 @@ public class UseKey extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Token.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.UseKey.Token" target="_top">.NET documentation</a>
+     */
     public SecurityToken getToken() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

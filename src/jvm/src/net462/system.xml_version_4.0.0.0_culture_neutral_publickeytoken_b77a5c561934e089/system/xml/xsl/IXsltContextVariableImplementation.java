@@ -100,7 +100,10 @@ public class IXsltContextVariableImplementation extends NetObject implements IXs
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IXsltContextVariableImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -142,6 +145,14 @@ public class IXsltContextVariableImplementation extends NetObject implements IXs
 
     // Methods section
     
+    /**
+     * Invokes the .NET member Evaluate.
+     *
+     * @param xsltContext the argument of type {@code XsltContext}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.IXsltContextVariable.Evaluate" target="_top">.NET documentation</a>
+     */
     public NetObject Evaluate(XsltContext xsltContext) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -161,6 +172,13 @@ public class IXsltContextVariableImplementation extends NetObject implements IXs
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsLocal.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.IXsltContextVariable.IsLocal" target="_top">.NET documentation</a>
+     */
     public boolean getIsLocal() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -175,6 +193,13 @@ public class IXsltContextVariableImplementation extends NetObject implements IXs
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsParam.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.IXsltContextVariable.IsParam" target="_top">.NET documentation</a>
+     */
     public boolean getIsParam() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +214,13 @@ public class IXsltContextVariableImplementation extends NetObject implements IXs
         }
     }
 
+    /**
+     * Gets the value of the .NET property VariableType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.IXsltContextVariable.VariableType" target="_top">.NET documentation</a>
+     */
     public XPathResultType getVariableType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

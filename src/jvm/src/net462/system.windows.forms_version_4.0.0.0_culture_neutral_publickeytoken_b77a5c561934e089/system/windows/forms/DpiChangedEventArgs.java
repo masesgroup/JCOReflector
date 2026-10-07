@@ -100,7 +100,10 @@ public class DpiChangedEventArgs extends system.componentmodel.CancelEventArgs  
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DpiChangedEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -159,6 +162,13 @@ public class DpiChangedEventArgs extends system.componentmodel.CancelEventArgs  
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property DeviceDpiNew.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DpiChangedEventArgs.DeviceDpiNew" target="_top">.NET documentation</a>
+     */
     public int getDeviceDpiNew() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -199,6 +209,13 @@ public class DpiChangedEventArgs extends system.componentmodel.CancelEventArgs  
         }
     }
 
+    /**
+     * Sets the value of the .NET property DeviceDpiNew.
+     *
+     * @param DeviceDpiNew the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DpiChangedEventArgs.DeviceDpiNew" target="_top">.NET documentation</a>
+     */
     public void setDeviceDpiNew(int DeviceDpiNew) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -209,6 +226,13 @@ public class DpiChangedEventArgs extends system.componentmodel.CancelEventArgs  
         }
     }
 
+    /**
+     * Gets the value of the .NET property DeviceDpiOld.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DpiChangedEventArgs.DeviceDpiOld" target="_top">.NET documentation</a>
+     */
     public int getDeviceDpiOld() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -249,6 +273,13 @@ public class DpiChangedEventArgs extends system.componentmodel.CancelEventArgs  
         }
     }
 
+    /**
+     * Sets the value of the .NET property DeviceDpiOld.
+     *
+     * @param DeviceDpiOld the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DpiChangedEventArgs.DeviceDpiOld" target="_top">.NET documentation</a>
+     */
     public void setDeviceDpiOld(int DeviceDpiOld) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -259,6 +290,13 @@ public class DpiChangedEventArgs extends system.componentmodel.CancelEventArgs  
         }
     }
 
+    /**
+     * Gets the value of the .NET property SuggestedRectangle.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DpiChangedEventArgs.SuggestedRectangle" target="_top">.NET documentation</a>
+     */
     public Rectangle getSuggestedRectangle() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -274,6 +312,13 @@ public class DpiChangedEventArgs extends system.componentmodel.CancelEventArgs  
         }
     }
 
+    /**
+     * Sets the value of the .NET property SuggestedRectangle.
+     *
+     * @param SuggestedRectangle the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DpiChangedEventArgs.SuggestedRectangle" target="_top">.NET documentation</a>
+     */
     public void setSuggestedRectangle(Rectangle SuggestedRectangle) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

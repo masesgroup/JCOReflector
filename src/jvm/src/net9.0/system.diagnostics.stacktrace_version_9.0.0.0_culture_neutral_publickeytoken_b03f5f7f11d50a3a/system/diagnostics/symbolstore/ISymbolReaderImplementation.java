@@ -108,7 +108,10 @@ public class ISymbolReaderImplementation extends NetObject implements ISymbolRea
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ISymbolReaderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,15 @@ public class ISymbolReaderImplementation extends NetObject implements ISymbolRea
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetSymAttribute.
+     *
+     * @param parent the argument of type {@code SymbolToken}
+     * @param name the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.SymbolStore.ISymbolReader.GetSymAttribute" target="_top">.NET documentation</a>
+     */
     public byte[] GetSymAttribute(SymbolToken parent, java.lang.String name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -173,6 +185,17 @@ public class ISymbolReaderImplementation extends NetObject implements ISymbolRea
         }
     }
 
+    /**
+     * Invokes the .NET member GetDocument.
+     *
+     * @param url the argument of type {@code java.lang.String}
+     * @param language the argument of type {@code Guid}
+     * @param languageVendor the argument of type {@code Guid}
+     * @param documentType the argument of type {@code Guid}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.SymbolStore.ISymbolReader.GetDocument" target="_top">.NET documentation</a>
+     */
     public ISymbolDocument GetDocument(java.lang.String url, Guid language, Guid languageVendor, Guid documentType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +211,13 @@ public class ISymbolReaderImplementation extends NetObject implements ISymbolRea
         }
     }
 
+    /**
+     * Invokes the .NET member GetDocuments.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.SymbolStore.ISymbolReader.GetDocuments" target="_top">.NET documentation</a>
+     */
     public ISymbolDocument[] GetDocuments() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -209,6 +239,15 @@ public class ISymbolReaderImplementation extends NetObject implements ISymbolRea
         }
     }
 
+    /**
+     * Invokes the .NET member GetMethod.
+     *
+     * @param method the argument of type {@code SymbolToken}
+     * @param version the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.SymbolStore.ISymbolReader.GetMethod" target="_top">.NET documentation</a>
+     */
     public ISymbolMethod GetMethod(SymbolToken method, int version) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -224,6 +263,14 @@ public class ISymbolReaderImplementation extends NetObject implements ISymbolRea
         }
     }
 
+    /**
+     * Invokes the .NET member GetMethod.
+     *
+     * @param method the argument of type {@code SymbolToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.SymbolStore.ISymbolReader.GetMethod" target="_top">.NET documentation</a>
+     */
     public ISymbolMethod GetMethod(SymbolToken method) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -239,6 +286,16 @@ public class ISymbolReaderImplementation extends NetObject implements ISymbolRea
         }
     }
 
+    /**
+     * Invokes the .NET member GetMethodFromDocumentPosition.
+     *
+     * @param document the argument of type {@code ISymbolDocument}
+     * @param line the argument of type {@code int}
+     * @param column the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.SymbolStore.ISymbolReader.GetMethodFromDocumentPosition" target="_top">.NET documentation</a>
+     */
     public ISymbolMethod GetMethodFromDocumentPosition(ISymbolDocument document, int line, int column) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -254,6 +311,13 @@ public class ISymbolReaderImplementation extends NetObject implements ISymbolRea
         }
     }
 
+    /**
+     * Invokes the .NET member GetNamespaces.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.SymbolStore.ISymbolReader.GetNamespaces" target="_top">.NET documentation</a>
+     */
     public ISymbolNamespace[] GetNamespaces() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -275,6 +339,13 @@ public class ISymbolReaderImplementation extends NetObject implements ISymbolRea
         }
     }
 
+    /**
+     * Invokes the .NET member GetGlobalVariables.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.SymbolStore.ISymbolReader.GetGlobalVariables" target="_top">.NET documentation</a>
+     */
     public ISymbolVariable[] GetGlobalVariables() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -296,6 +367,14 @@ public class ISymbolReaderImplementation extends NetObject implements ISymbolRea
         }
     }
 
+    /**
+     * Invokes the .NET member GetVariables.
+     *
+     * @param parent the argument of type {@code SymbolToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.SymbolStore.ISymbolReader.GetVariables" target="_top">.NET documentation</a>
+     */
     public ISymbolVariable[] GetVariables(SymbolToken parent) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -321,6 +400,13 @@ public class ISymbolReaderImplementation extends NetObject implements ISymbolRea
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property UserEntryPoint.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.SymbolStore.ISymbolReader.UserEntryPoint" target="_top">.NET documentation</a>
+     */
     public SymbolToken getUserEntryPoint() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

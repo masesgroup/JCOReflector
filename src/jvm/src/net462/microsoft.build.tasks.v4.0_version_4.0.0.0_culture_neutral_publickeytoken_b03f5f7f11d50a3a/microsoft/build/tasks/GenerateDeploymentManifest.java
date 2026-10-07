@@ -99,7 +99,10 @@ public class GenerateDeploymentManifest extends microsoft.build.tasks.GenerateMa
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public GenerateDeploymentManifest(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,13 @@ public class GenerateDeploymentManifest extends microsoft.build.tasks.GenerateMa
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateDeploymentManifest.-ctor" target="_top">.NET documentation</a>
+     */
     public GenerateDeploymentManifest() throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +174,19 @@ public class GenerateDeploymentManifest extends microsoft.build.tasks.GenerateMa
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CreateDesktopShortcut.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateDeploymentManifest.CreateDesktopShortcut" target="_top">.NET documentation</a>
+     */
     public boolean getCreateDesktopShortcut() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,6 +201,13 @@ public class GenerateDeploymentManifest extends microsoft.build.tasks.GenerateMa
         }
     }
 
+    /**
+     * Sets the value of the .NET property CreateDesktopShortcut.
+     *
+     * @param CreateDesktopShortcut the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateDeploymentManifest.CreateDesktopShortcut" target="_top">.NET documentation</a>
+     */
     public void setCreateDesktopShortcut(boolean CreateDesktopShortcut) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +218,14 @@ public class GenerateDeploymentManifest extends microsoft.build.tasks.GenerateMa
         }
     }
 
+    /**
+     * Gets the value of the .NET property DisallowUrlActivation.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateDeploymentManifest.DisallowUrlActivation" target="_top">.NET documentation</a>
+     */
     public boolean getDisallowUrlActivation() throws Throwable, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +240,13 @@ public class GenerateDeploymentManifest extends microsoft.build.tasks.GenerateMa
         }
     }
 
+    /**
+     * Sets the value of the .NET property DisallowUrlActivation.
+     *
+     * @param DisallowUrlActivation the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateDeploymentManifest.DisallowUrlActivation" target="_top">.NET documentation</a>
+     */
     public void setDisallowUrlActivation(boolean DisallowUrlActivation) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -212,6 +257,14 @@ public class GenerateDeploymentManifest extends microsoft.build.tasks.GenerateMa
         }
     }
 
+    /**
+     * Gets the value of the .NET property Install.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateDeploymentManifest.Install" target="_top">.NET documentation</a>
+     */
     public boolean getInstall() throws Throwable, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -226,6 +279,13 @@ public class GenerateDeploymentManifest extends microsoft.build.tasks.GenerateMa
         }
     }
 
+    /**
+     * Sets the value of the .NET property Install.
+     *
+     * @param Install the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateDeploymentManifest.Install" target="_top">.NET documentation</a>
+     */
     public void setInstall(boolean Install) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -236,6 +296,14 @@ public class GenerateDeploymentManifest extends microsoft.build.tasks.GenerateMa
         }
     }
 
+    /**
+     * Gets the value of the .NET property MapFileExtensions.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateDeploymentManifest.MapFileExtensions" target="_top">.NET documentation</a>
+     */
     public boolean getMapFileExtensions() throws Throwable, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -250,6 +318,13 @@ public class GenerateDeploymentManifest extends microsoft.build.tasks.GenerateMa
         }
     }
 
+    /**
+     * Sets the value of the .NET property MapFileExtensions.
+     *
+     * @param MapFileExtensions the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateDeploymentManifest.MapFileExtensions" target="_top">.NET documentation</a>
+     */
     public void setMapFileExtensions(boolean MapFileExtensions) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -260,6 +335,14 @@ public class GenerateDeploymentManifest extends microsoft.build.tasks.GenerateMa
         }
     }
 
+    /**
+     * Gets the value of the .NET property TrustUrlParameters.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateDeploymentManifest.TrustUrlParameters" target="_top">.NET documentation</a>
+     */
     public boolean getTrustUrlParameters() throws Throwable, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -274,6 +357,13 @@ public class GenerateDeploymentManifest extends microsoft.build.tasks.GenerateMa
         }
     }
 
+    /**
+     * Sets the value of the .NET property TrustUrlParameters.
+     *
+     * @param TrustUrlParameters the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateDeploymentManifest.TrustUrlParameters" target="_top">.NET documentation</a>
+     */
     public void setTrustUrlParameters(boolean TrustUrlParameters) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -284,6 +374,14 @@ public class GenerateDeploymentManifest extends microsoft.build.tasks.GenerateMa
         }
     }
 
+    /**
+     * Gets the value of the .NET property UpdateEnabled.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateDeploymentManifest.UpdateEnabled" target="_top">.NET documentation</a>
+     */
     public boolean getUpdateEnabled() throws Throwable, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -298,6 +396,13 @@ public class GenerateDeploymentManifest extends microsoft.build.tasks.GenerateMa
         }
     }
 
+    /**
+     * Sets the value of the .NET property UpdateEnabled.
+     *
+     * @param UpdateEnabled the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateDeploymentManifest.UpdateEnabled" target="_top">.NET documentation</a>
+     */
     public void setUpdateEnabled(boolean UpdateEnabled) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -308,6 +413,14 @@ public class GenerateDeploymentManifest extends microsoft.build.tasks.GenerateMa
         }
     }
 
+    /**
+     * Gets the value of the .NET property UpdateInterval.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateDeploymentManifest.UpdateInterval" target="_top">.NET documentation</a>
+     */
     public int getUpdateInterval() throws Throwable, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -348,6 +461,13 @@ public class GenerateDeploymentManifest extends microsoft.build.tasks.GenerateMa
         }
     }
 
+    /**
+     * Sets the value of the .NET property UpdateInterval.
+     *
+     * @param UpdateInterval the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateDeploymentManifest.UpdateInterval" target="_top">.NET documentation</a>
+     */
     public void setUpdateInterval(int UpdateInterval) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -358,6 +478,13 @@ public class GenerateDeploymentManifest extends microsoft.build.tasks.GenerateMa
         }
     }
 
+    /**
+     * Gets the value of the .NET property DeploymentUrl.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateDeploymentManifest.DeploymentUrl" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDeploymentUrl() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -372,6 +499,13 @@ public class GenerateDeploymentManifest extends microsoft.build.tasks.GenerateMa
         }
     }
 
+    /**
+     * Sets the value of the .NET property DeploymentUrl.
+     *
+     * @param DeploymentUrl the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateDeploymentManifest.DeploymentUrl" target="_top">.NET documentation</a>
+     */
     public void setDeploymentUrl(java.lang.String DeploymentUrl) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -382,6 +516,19 @@ public class GenerateDeploymentManifest extends microsoft.build.tasks.GenerateMa
         }
     }
 
+    /**
+     * Gets the value of the .NET property ErrorReportUrl.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateDeploymentManifest.ErrorReportUrl" target="_top">.NET documentation</a>
+     */
     public java.lang.String getErrorReportUrl() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -396,6 +543,13 @@ public class GenerateDeploymentManifest extends microsoft.build.tasks.GenerateMa
         }
     }
 
+    /**
+     * Sets the value of the .NET property ErrorReportUrl.
+     *
+     * @param ErrorReportUrl the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateDeploymentManifest.ErrorReportUrl" target="_top">.NET documentation</a>
+     */
     public void setErrorReportUrl(java.lang.String ErrorReportUrl) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -406,6 +560,13 @@ public class GenerateDeploymentManifest extends microsoft.build.tasks.GenerateMa
         }
     }
 
+    /**
+     * Gets the value of the .NET property MinimumRequiredVersion.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateDeploymentManifest.MinimumRequiredVersion" target="_top">.NET documentation</a>
+     */
     public java.lang.String getMinimumRequiredVersion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -420,6 +581,13 @@ public class GenerateDeploymentManifest extends microsoft.build.tasks.GenerateMa
         }
     }
 
+    /**
+     * Sets the value of the .NET property MinimumRequiredVersion.
+     *
+     * @param MinimumRequiredVersion the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateDeploymentManifest.MinimumRequiredVersion" target="_top">.NET documentation</a>
+     */
     public void setMinimumRequiredVersion(java.lang.String MinimumRequiredVersion) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -430,6 +598,13 @@ public class GenerateDeploymentManifest extends microsoft.build.tasks.GenerateMa
         }
     }
 
+    /**
+     * Gets the value of the .NET property Product.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateDeploymentManifest.Product" target="_top">.NET documentation</a>
+     */
     public java.lang.String getProduct() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -444,6 +619,13 @@ public class GenerateDeploymentManifest extends microsoft.build.tasks.GenerateMa
         }
     }
 
+    /**
+     * Sets the value of the .NET property Product.
+     *
+     * @param Product the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateDeploymentManifest.Product" target="_top">.NET documentation</a>
+     */
     public void setProduct(java.lang.String Product) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -454,6 +636,13 @@ public class GenerateDeploymentManifest extends microsoft.build.tasks.GenerateMa
         }
     }
 
+    /**
+     * Gets the value of the .NET property Publisher.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateDeploymentManifest.Publisher" target="_top">.NET documentation</a>
+     */
     public java.lang.String getPublisher() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -468,6 +657,13 @@ public class GenerateDeploymentManifest extends microsoft.build.tasks.GenerateMa
         }
     }
 
+    /**
+     * Sets the value of the .NET property Publisher.
+     *
+     * @param Publisher the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateDeploymentManifest.Publisher" target="_top">.NET documentation</a>
+     */
     public void setPublisher(java.lang.String Publisher) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -478,6 +674,19 @@ public class GenerateDeploymentManifest extends microsoft.build.tasks.GenerateMa
         }
     }
 
+    /**
+     * Gets the value of the .NET property SuiteName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateDeploymentManifest.SuiteName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSuiteName() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -492,6 +701,13 @@ public class GenerateDeploymentManifest extends microsoft.build.tasks.GenerateMa
         }
     }
 
+    /**
+     * Sets the value of the .NET property SuiteName.
+     *
+     * @param SuiteName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateDeploymentManifest.SuiteName" target="_top">.NET documentation</a>
+     */
     public void setSuiteName(java.lang.String SuiteName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -502,6 +718,13 @@ public class GenerateDeploymentManifest extends microsoft.build.tasks.GenerateMa
         }
     }
 
+    /**
+     * Gets the value of the .NET property SupportUrl.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateDeploymentManifest.SupportUrl" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSupportUrl() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -516,6 +739,13 @@ public class GenerateDeploymentManifest extends microsoft.build.tasks.GenerateMa
         }
     }
 
+    /**
+     * Sets the value of the .NET property SupportUrl.
+     *
+     * @param SupportUrl the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateDeploymentManifest.SupportUrl" target="_top">.NET documentation</a>
+     */
     public void setSupportUrl(java.lang.String SupportUrl) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -526,6 +756,13 @@ public class GenerateDeploymentManifest extends microsoft.build.tasks.GenerateMa
         }
     }
 
+    /**
+     * Gets the value of the .NET property UpdateMode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateDeploymentManifest.UpdateMode" target="_top">.NET documentation</a>
+     */
     public java.lang.String getUpdateMode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -540,6 +777,13 @@ public class GenerateDeploymentManifest extends microsoft.build.tasks.GenerateMa
         }
     }
 
+    /**
+     * Sets the value of the .NET property UpdateMode.
+     *
+     * @param UpdateMode the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateDeploymentManifest.UpdateMode" target="_top">.NET documentation</a>
+     */
     public void setUpdateMode(java.lang.String UpdateMode) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -550,6 +794,13 @@ public class GenerateDeploymentManifest extends microsoft.build.tasks.GenerateMa
         }
     }
 
+    /**
+     * Gets the value of the .NET property UpdateUnit.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateDeploymentManifest.UpdateUnit" target="_top">.NET documentation</a>
+     */
     public java.lang.String getUpdateUnit() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -564,6 +815,13 @@ public class GenerateDeploymentManifest extends microsoft.build.tasks.GenerateMa
         }
     }
 
+    /**
+     * Sets the value of the .NET property UpdateUnit.
+     *
+     * @param UpdateUnit the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GenerateDeploymentManifest.UpdateUnit" target="_top">.NET documentation</a>
+     */
     public void setUpdateUnit(java.lang.String UpdateUnit) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

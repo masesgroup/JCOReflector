@@ -99,7 +99,10 @@ public class ICredentialsByHostImplementation extends NetObject implements ICred
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ICredentialsByHostImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -141,6 +144,16 @@ public class ICredentialsByHostImplementation extends NetObject implements ICred
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetCredential.
+     *
+     * @param host the argument of type {@code java.lang.String}
+     * @param port the argument of type {@code int}
+     * @param authenticationType the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.ICredentialsByHost.GetCredential" target="_top">.NET documentation</a>
+     */
     public NetworkCredential GetCredential(java.lang.String host, int port, java.lang.String authenticationType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

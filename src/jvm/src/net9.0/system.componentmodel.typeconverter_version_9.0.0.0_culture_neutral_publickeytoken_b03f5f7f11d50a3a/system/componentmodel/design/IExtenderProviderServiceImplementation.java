@@ -100,7 +100,10 @@ public class IExtenderProviderServiceImplementation extends NetObject implements
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IExtenderProviderServiceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -142,6 +145,13 @@ public class IExtenderProviderServiceImplementation extends NetObject implements
 
     // Methods section
     
+    /**
+     * Invokes the .NET member AddExtenderProvider.
+     *
+     * @param provider the argument of type {@code IExtenderProvider}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IExtenderProviderService.AddExtenderProvider" target="_top">.NET documentation</a>
+     */
     public void AddExtenderProvider(IExtenderProvider provider) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -152,6 +162,13 @@ public class IExtenderProviderServiceImplementation extends NetObject implements
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveExtenderProvider.
+     *
+     * @param provider the argument of type {@code IExtenderProvider}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IExtenderProviderService.RemoveExtenderProvider" target="_top">.NET documentation</a>
+     */
     public void RemoveExtenderProvider(IExtenderProvider provider) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

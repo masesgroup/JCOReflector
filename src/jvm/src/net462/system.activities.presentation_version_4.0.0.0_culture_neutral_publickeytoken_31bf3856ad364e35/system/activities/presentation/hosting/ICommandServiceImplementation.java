@@ -99,7 +99,10 @@ public class ICommandServiceImplementation extends NetObject implements ICommand
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ICommandServiceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -141,6 +144,14 @@ public class ICommandServiceImplementation extends NetObject implements ICommand
 
     // Methods section
     
+    /**
+     * Invokes the .NET member CanExecuteCommand.
+     *
+     * @param commandId the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Hosting.ICommandService.CanExecuteCommand" target="_top">.NET documentation</a>
+     */
     public boolean CanExecuteCommand(int commandId) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -155,6 +166,14 @@ public class ICommandServiceImplementation extends NetObject implements ICommand
         }
     }
 
+    /**
+     * Invokes the .NET member IsCommandSupported.
+     *
+     * @param commandId the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Hosting.ICommandService.IsCommandSupported" target="_top">.NET documentation</a>
+     */
     public boolean IsCommandSupported(int commandId) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -169,6 +188,14 @@ public class ICommandServiceImplementation extends NetObject implements ICommand
         }
     }
 
+    /**
+     * Invokes the .NET member ExecuteCommand.
+     *
+     * @param commandId the argument of type {@code int}
+     * @param parameters the argument of type {@code Dictionary_2}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Hosting.ICommandService.ExecuteCommand" target="_top">.NET documentation</a>
+     */
     public void ExecuteCommand(int commandId, Dictionary_2 parameters) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

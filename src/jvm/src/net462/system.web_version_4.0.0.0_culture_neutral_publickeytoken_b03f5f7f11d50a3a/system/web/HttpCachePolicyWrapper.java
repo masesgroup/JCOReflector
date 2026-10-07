@@ -108,7 +108,10 @@ public class HttpCachePolicyWrapper extends system.web.HttpCachePolicyBase  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public HttpCachePolicyWrapper(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -158,6 +161,14 @@ public class HttpCachePolicyWrapper extends system.web.HttpCachePolicyBase  {
     public HttpCachePolicyWrapper() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param httpCachePolicy the argument of type {@code HttpCachePolicy}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpCachePolicyWrapper.-ctor" target="_top">.NET documentation</a>
+     */
     public HttpCachePolicyWrapper(HttpCachePolicy httpCachePolicy) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -173,6 +184,16 @@ public class HttpCachePolicyWrapper extends system.web.HttpCachePolicyBase  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member AddValidationCallback.
+     *
+     * @param handler the argument of type {@code HttpCacheValidateHandler}
+     * @param data the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpCachePolicyWrapper.AddValidationCallback" target="_top">.NET documentation</a>
+     */
     public void AddValidationCallback(HttpCacheValidateHandler handler, NetObject data) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +204,15 @@ public class HttpCachePolicyWrapper extends system.web.HttpCachePolicyBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member AppendCacheExtension.
+     *
+     * @param extension the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpCachePolicyWrapper.AppendCacheExtension" target="_top">.NET documentation</a>
+     */
     public void AppendCacheExtension(java.lang.String extension) throws Throwable, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +223,13 @@ public class HttpCachePolicyWrapper extends system.web.HttpCachePolicyBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetAllowResponseInBrowserHistory.
+     *
+     * @param allow the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpCachePolicyWrapper.SetAllowResponseInBrowserHistory" target="_top">.NET documentation</a>
+     */
     public void SetAllowResponseInBrowserHistory(boolean allow) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +240,14 @@ public class HttpCachePolicyWrapper extends system.web.HttpCachePolicyBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetCacheability.
+     *
+     * @param cacheability the argument of type {@code HttpCacheability}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpCachePolicyWrapper.SetCacheability" target="_top">.NET documentation</a>
+     */
     public void SetCacheability(HttpCacheability cacheability) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -213,6 +258,23 @@ public class HttpCachePolicyWrapper extends system.web.HttpCachePolicyBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetCacheability.
+     *
+     * @param cacheability the argument of type {@code HttpCacheability}
+     * @param field the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpCachePolicyWrapper.SetCacheability" target="_top">.NET documentation</a>
+     */
     public void SetCacheability(HttpCacheability cacheability, java.lang.String field) throws Throwable, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -223,6 +285,23 @@ public class HttpCachePolicyWrapper extends system.web.HttpCachePolicyBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetETag.
+     *
+     * @param etag the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpCachePolicyWrapper.SetETag" target="_top">.NET documentation</a>
+     */
     public void SetETag(java.lang.String etag) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -233,6 +312,22 @@ public class HttpCachePolicyWrapper extends system.web.HttpCachePolicyBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetETagFromFileDependencies.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpCachePolicyWrapper.SetETagFromFileDependencies" target="_top">.NET documentation</a>
+     */
     public void SetETagFromFileDependencies() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -243,6 +338,17 @@ public class HttpCachePolicyWrapper extends system.web.HttpCachePolicyBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetExpires.
+     *
+     * @param date the argument of type {@code DateTime}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpCachePolicyWrapper.SetExpires" target="_top">.NET documentation</a>
+     */
     public void SetExpires(DateTime date) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.OverflowException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -253,6 +359,17 @@ public class HttpCachePolicyWrapper extends system.web.HttpCachePolicyBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetLastModified.
+     *
+     * @param date the argument of type {@code DateTime}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpCachePolicyWrapper.SetLastModified" target="_top">.NET documentation</a>
+     */
     public void SetLastModified(DateTime date) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.OverflowException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -263,6 +380,12 @@ public class HttpCachePolicyWrapper extends system.web.HttpCachePolicyBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetLastModifiedFromFileDependencies.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpCachePolicyWrapper.SetLastModifiedFromFileDependencies" target="_top">.NET documentation</a>
+     */
     public void SetLastModifiedFromFileDependencies() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -273,6 +396,14 @@ public class HttpCachePolicyWrapper extends system.web.HttpCachePolicyBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetMaxAge.
+     *
+     * @param delta the argument of type {@code TimeSpan}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpCachePolicyWrapper.SetMaxAge" target="_top">.NET documentation</a>
+     */
     public void SetMaxAge(TimeSpan delta) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -283,6 +414,12 @@ public class HttpCachePolicyWrapper extends system.web.HttpCachePolicyBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetNoServerCaching.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpCachePolicyWrapper.SetNoServerCaching" target="_top">.NET documentation</a>
+     */
     public void SetNoServerCaching() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -293,6 +430,12 @@ public class HttpCachePolicyWrapper extends system.web.HttpCachePolicyBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetNoStore.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpCachePolicyWrapper.SetNoStore" target="_top">.NET documentation</a>
+     */
     public void SetNoStore() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -303,6 +446,12 @@ public class HttpCachePolicyWrapper extends system.web.HttpCachePolicyBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetNoTransforms.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpCachePolicyWrapper.SetNoTransforms" target="_top">.NET documentation</a>
+     */
     public void SetNoTransforms() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -313,6 +462,13 @@ public class HttpCachePolicyWrapper extends system.web.HttpCachePolicyBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetOmitVaryStar.
+     *
+     * @param omit the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpCachePolicyWrapper.SetOmitVaryStar" target="_top">.NET documentation</a>
+     */
     public void SetOmitVaryStar(boolean omit) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -323,6 +479,14 @@ public class HttpCachePolicyWrapper extends system.web.HttpCachePolicyBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetProxyMaxAge.
+     *
+     * @param delta the argument of type {@code TimeSpan}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpCachePolicyWrapper.SetProxyMaxAge" target="_top">.NET documentation</a>
+     */
     public void SetProxyMaxAge(TimeSpan delta) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -333,6 +497,14 @@ public class HttpCachePolicyWrapper extends system.web.HttpCachePolicyBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetRevalidation.
+     *
+     * @param revalidation the argument of type {@code HttpCacheRevalidation}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpCachePolicyWrapper.SetRevalidation" target="_top">.NET documentation</a>
+     */
     public void SetRevalidation(HttpCacheRevalidation revalidation) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -343,6 +515,13 @@ public class HttpCachePolicyWrapper extends system.web.HttpCachePolicyBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetSlidingExpiration.
+     *
+     * @param slide the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpCachePolicyWrapper.SetSlidingExpiration" target="_top">.NET documentation</a>
+     */
     public void SetSlidingExpiration(boolean slide) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -353,6 +532,13 @@ public class HttpCachePolicyWrapper extends system.web.HttpCachePolicyBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetValidUntilExpires.
+     *
+     * @param validUntilExpires the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpCachePolicyWrapper.SetValidUntilExpires" target="_top">.NET documentation</a>
+     */
     public void SetValidUntilExpires(boolean validUntilExpires) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -363,6 +549,23 @@ public class HttpCachePolicyWrapper extends system.web.HttpCachePolicyBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetVaryByCustom.
+     *
+     * @param custom the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpCachePolicyWrapper.SetVaryByCustom" target="_top">.NET documentation</a>
+     */
     public void SetVaryByCustom(java.lang.String custom) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

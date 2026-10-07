@@ -100,7 +100,10 @@ public class ServiceDomain extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ServiceDomain(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,15 @@ public class ServiceDomain extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Leave.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ServiceDomain.Leave" target="_top">.NET documentation</a>
+     */
     public static TransactionStatus Leave() throws Throwable, system.InvalidOperationException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -170,6 +182,13 @@ public class ServiceDomain extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Enter.
+     *
+     * @param cfg the argument of type {@code ServiceConfig}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ServiceDomain.Enter" target="_top">.NET documentation</a>
+     */
     public static void Enter(ServiceConfig cfg) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

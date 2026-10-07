@@ -101,7 +101,10 @@ public class ViewEventArgs extends system.EventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ViewEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,15 @@ public class ViewEventArgs extends system.EventArgs  {
     public ViewEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param eventType the argument of type {@code ViewEvent}
+     * @param region the argument of type {@code DesignerRegion}
+     * @param eventArgs the argument of type {@code EventArgs}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.ViewEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public ViewEventArgs(ViewEvent eventType, DesignerRegion region, EventArgs eventArgs) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +182,13 @@ public class ViewEventArgs extends system.EventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property EventArgs.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.ViewEventArgs.EventArgs" target="_top">.NET documentation</a>
+     */
     public EventArgs getEventArgs() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -185,6 +204,13 @@ public class ViewEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Region.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.ViewEventArgs.Region" target="_top">.NET documentation</a>
+     */
     public DesignerRegion getRegion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +226,13 @@ public class ViewEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EventType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.ViewEventArgs.EventType" target="_top">.NET documentation</a>
+     */
     public ViewEvent getEventType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

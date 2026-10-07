@@ -101,7 +101,10 @@ public class SecurityPackageContextConnectionInformation extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SecurityPackageContextConnectionInformation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -160,6 +163,13 @@ public class SecurityPackageContextConnectionInformation extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CipherStrength.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.Protocols.SecurityPackageContextConnectionInformation.CipherStrength" target="_top">.NET documentation</a>
+     */
     public int getCipherStrength() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +210,13 @@ public class SecurityPackageContextConnectionInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ExchangeStrength.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.Protocols.SecurityPackageContextConnectionInformation.ExchangeStrength" target="_top">.NET documentation</a>
+     */
     public int getExchangeStrength() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -240,6 +257,13 @@ public class SecurityPackageContextConnectionInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property HashStrength.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.Protocols.SecurityPackageContextConnectionInformation.HashStrength" target="_top">.NET documentation</a>
+     */
     public int getHashStrength() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -280,6 +304,13 @@ public class SecurityPackageContextConnectionInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property KeyExchangeAlgorithm.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.Protocols.SecurityPackageContextConnectionInformation.KeyExchangeAlgorithm" target="_top">.NET documentation</a>
+     */
     public int getKeyExchangeAlgorithm() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -320,6 +351,13 @@ public class SecurityPackageContextConnectionInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Protocol.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.Protocols.SecurityPackageContextConnectionInformation.Protocol" target="_top">.NET documentation</a>
+     */
     public SecurityProtocol getProtocol() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -335,6 +373,13 @@ public class SecurityPackageContextConnectionInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AlgorithmIdentifier.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.Protocols.SecurityPackageContextConnectionInformation.AlgorithmIdentifier" target="_top">.NET documentation</a>
+     */
     public CipherAlgorithmType getAlgorithmIdentifier() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -350,6 +395,13 @@ public class SecurityPackageContextConnectionInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Hash.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.Protocols.SecurityPackageContextConnectionInformation.Hash" target="_top">.NET documentation</a>
+     */
     public HashAlgorithmType getHash() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

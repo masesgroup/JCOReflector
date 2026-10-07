@@ -101,7 +101,10 @@ public class WorkflowCommandExtensionItem extends system.activities.presentation
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public WorkflowCommandExtensionItem(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class WorkflowCommandExtensionItem extends system.activities.presentation
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Hosting.WorkflowCommandExtensionItem.-ctor" target="_top">.NET documentation</a>
+     */
     public WorkflowCommandExtensionItem() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -158,6 +167,20 @@ public class WorkflowCommandExtensionItem extends system.activities.presentation
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param callback the argument of type {@code IWorkflowCommandExtensionCallback}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Hosting.WorkflowCommandExtensionItem.-ctor" target="_top">.NET documentation</a>
+     */
     public WorkflowCommandExtensionItem(IWorkflowCommandExtensionCallback callback) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file

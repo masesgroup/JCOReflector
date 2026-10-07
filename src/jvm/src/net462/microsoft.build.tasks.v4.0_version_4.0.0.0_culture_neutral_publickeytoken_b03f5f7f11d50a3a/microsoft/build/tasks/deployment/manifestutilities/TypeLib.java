@@ -98,7 +98,10 @@ public class TypeLib extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TypeLib(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -145,6 +148,12 @@ public class TypeLib extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.TypeLib.-ctor" target="_top">.NET documentation</a>
+     */
     public TypeLib() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -163,6 +172,13 @@ public class TypeLib extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Flags.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.TypeLib.Flags" target="_top">.NET documentation</a>
+     */
     public java.lang.String getFlags() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -177,6 +193,13 @@ public class TypeLib extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property HelpDirectory.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.TypeLib.HelpDirectory" target="_top">.NET documentation</a>
+     */
     public java.lang.String getHelpDirectory() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -191,6 +214,13 @@ public class TypeLib extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ResourceId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.TypeLib.ResourceId" target="_top">.NET documentation</a>
+     */
     public java.lang.String getResourceId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +235,13 @@ public class TypeLib extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TlbId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.TypeLib.TlbId" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTlbId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -219,6 +256,13 @@ public class TypeLib extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Version.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.TypeLib.Version" target="_top">.NET documentation</a>
+     */
     public java.lang.String getVersion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -233,6 +277,13 @@ public class TypeLib extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlFlags.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.TypeLib.XmlFlags" target="_top">.NET documentation</a>
+     */
     public java.lang.String getXmlFlags() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -247,6 +298,13 @@ public class TypeLib extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property XmlFlags.
+     *
+     * @param XmlFlags the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.TypeLib.XmlFlags" target="_top">.NET documentation</a>
+     */
     public void setXmlFlags(java.lang.String XmlFlags) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -257,6 +315,13 @@ public class TypeLib extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlHelpDirectory.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.TypeLib.XmlHelpDirectory" target="_top">.NET documentation</a>
+     */
     public java.lang.String getXmlHelpDirectory() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -271,6 +336,13 @@ public class TypeLib extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property XmlHelpDirectory.
+     *
+     * @param XmlHelpDirectory the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.TypeLib.XmlHelpDirectory" target="_top">.NET documentation</a>
+     */
     public void setXmlHelpDirectory(java.lang.String XmlHelpDirectory) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -281,6 +353,13 @@ public class TypeLib extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlResourceId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.TypeLib.XmlResourceId" target="_top">.NET documentation</a>
+     */
     public java.lang.String getXmlResourceId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -295,6 +374,13 @@ public class TypeLib extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property XmlResourceId.
+     *
+     * @param XmlResourceId the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.TypeLib.XmlResourceId" target="_top">.NET documentation</a>
+     */
     public void setXmlResourceId(java.lang.String XmlResourceId) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -305,6 +391,13 @@ public class TypeLib extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlTlbId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.TypeLib.XmlTlbId" target="_top">.NET documentation</a>
+     */
     public java.lang.String getXmlTlbId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -319,6 +412,13 @@ public class TypeLib extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property XmlTlbId.
+     *
+     * @param XmlTlbId the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.TypeLib.XmlTlbId" target="_top">.NET documentation</a>
+     */
     public void setXmlTlbId(java.lang.String XmlTlbId) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -329,6 +429,13 @@ public class TypeLib extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlVersion.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.TypeLib.XmlVersion" target="_top">.NET documentation</a>
+     */
     public java.lang.String getXmlVersion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -343,6 +450,13 @@ public class TypeLib extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property XmlVersion.
+     *
+     * @param XmlVersion the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.TypeLib.XmlVersion" target="_top">.NET documentation</a>
+     */
     public void setXmlVersion(java.lang.String XmlVersion) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

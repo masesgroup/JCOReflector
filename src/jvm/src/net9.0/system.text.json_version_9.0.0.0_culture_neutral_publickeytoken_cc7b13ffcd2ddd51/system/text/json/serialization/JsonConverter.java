@@ -98,7 +98,10 @@ public class JsonConverter extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public JsonConverter(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,14 @@ public class JsonConverter extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CanConvert.
+     *
+     * @param typeToConvert the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.JsonConverter.CanConvert" target="_top">.NET documentation</a>
+     */
     public boolean CanConvert(NetType typeToConvert) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -169,6 +180,13 @@ public class JsonConverter extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Type.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.JsonConverter.Type" target="_top">.NET documentation</a>
+     */
     public NetType getType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

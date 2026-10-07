@@ -52,5 +52,11 @@ import system.drawing.printing.QueryPageSettingsEventArgs;
  * @version 2.0.0.0
  */
 public interface IQueryPageSettingsEventHandler {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param sender the .NET argument of type {@code System.Object}
+     * @param e the .NET argument of type {@code System.Drawing.Printing.QueryPageSettingsEventArgs}
+     */
     public void Invoke(NetObject sender, QueryPageSettingsEventArgs e);
 }

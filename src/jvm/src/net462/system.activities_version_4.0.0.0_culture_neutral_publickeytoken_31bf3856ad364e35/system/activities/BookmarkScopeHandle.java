@@ -103,7 +103,10 @@ public class BookmarkScopeHandle extends system.activities.Handle  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public BookmarkScopeHandle(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,12 @@ public class BookmarkScopeHandle extends system.activities.Handle  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.BookmarkScopeHandle.-ctor" target="_top">.NET documentation</a>
+     */
     public BookmarkScopeHandle() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +173,22 @@ public class BookmarkScopeHandle extends system.activities.Handle  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CreateBookmarkScope.
+     *
+     * @param context the argument of type {@code NativeActivityContext}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.BookmarkScopeHandle.CreateBookmarkScope" target="_top">.NET documentation</a>
+     */
     public void CreateBookmarkScope(NativeActivityContext context) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -174,6 +199,23 @@ public class BookmarkScopeHandle extends system.activities.Handle  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateBookmarkScope.
+     *
+     * @param context the argument of type {@code NativeActivityContext}
+     * @param scopeId the argument of type {@code Guid}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.BookmarkScopeHandle.CreateBookmarkScope" target="_top">.NET documentation</a>
+     */
     public void CreateBookmarkScope(NativeActivityContext context, Guid scopeId) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +226,24 @@ public class BookmarkScopeHandle extends system.activities.Handle  {
         }
     }
 
+    /**
+     * Invokes the .NET member Initialize.
+     *
+     * @param context the argument of type {@code NativeActivityContext}
+     * @param scope the argument of type {@code Guid}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.BookmarkScopeHandle.Initialize" target="_top">.NET documentation</a>
+     */
     public void Initialize(NativeActivityContext context, Guid scope) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +258,13 @@ public class BookmarkScopeHandle extends system.activities.Handle  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property BookmarkScope.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.BookmarkScopeHandle.BookmarkScope" target="_top">.NET documentation</a>
+     */
     public BookmarkScope getBookmarkScope() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -213,6 +280,13 @@ public class BookmarkScopeHandle extends system.activities.Handle  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Default.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.BookmarkScopeHandle.Default" target="_top">.NET documentation</a>
+     */
     public static BookmarkScopeHandle getDefault() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

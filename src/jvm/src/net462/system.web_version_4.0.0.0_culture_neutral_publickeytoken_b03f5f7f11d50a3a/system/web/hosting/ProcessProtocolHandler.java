@@ -103,7 +103,10 @@ public class ProcessProtocolHandler extends system.MarshalByRefObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ProcessProtocolHandler(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,13 @@ public class ProcessProtocolHandler extends system.MarshalByRefObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member InitializeLifetimeService.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.ProcessProtocolHandler.InitializeLifetimeService" target="_top">.NET documentation</a>
+     */
     public NetObject InitializeLifetimeService() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -171,6 +181,14 @@ public class ProcessProtocolHandler extends system.MarshalByRefObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member StartListenerChannel.
+     *
+     * @param listenerChannelCallback the argument of type {@code IListenerChannelCallback}
+     * @param AdphManager the argument of type {@code IAdphManager}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.ProcessProtocolHandler.StartListenerChannel" target="_top">.NET documentation</a>
+     */
     public void StartListenerChannel(IListenerChannelCallback listenerChannelCallback, IAdphManager AdphManager) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -181,6 +199,14 @@ public class ProcessProtocolHandler extends system.MarshalByRefObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member StopListenerChannel.
+     *
+     * @param listenerChannelId the argument of type {@code int}
+     * @param immediate the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.ProcessProtocolHandler.StopListenerChannel" target="_top">.NET documentation</a>
+     */
     public void StopListenerChannel(int listenerChannelId, boolean immediate) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -191,6 +217,13 @@ public class ProcessProtocolHandler extends system.MarshalByRefObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member StopProtocol.
+     *
+     * @param immediate the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.ProcessProtocolHandler.StopProtocol" target="_top">.NET documentation</a>
+     */
     public void StopProtocol(boolean immediate) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

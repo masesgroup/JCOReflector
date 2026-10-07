@@ -51,5 +51,12 @@ import org.mases.jcobridge.netreflection.*;
  * @version 2.0.0.0
  */
 public interface IDataSourceViewOperationCallback {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param affectedRecords the .NET argument of type {@code System.Int32}
+     * @param ex the .NET argument of type {@code System.Exception}
+     * @return the value returned to the CLR
+     */
     public boolean Invoke(int affectedRecords, NetException ex);
 }

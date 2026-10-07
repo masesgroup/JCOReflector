@@ -118,7 +118,10 @@ public class HwndSource extends system.windows.PresentationSource implements Aut
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public HwndSource(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -168,6 +171,36 @@ public class HwndSource extends system.windows.PresentationSource implements Aut
     public HwndSource() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param parameters the argument of type {@code HwndSourceParameters}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.MethodAccessException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.MemberAccessException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.AccessViolationException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.threading.ThreadStateException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.HwndSource.-ctor" target="_top">.NET documentation</a>
+     */
     public HwndSource(HwndSourceParameters parameters) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotImplementedException, system.ObjectDisposedException, system.NotSupportedException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.OverflowException, system.AccessViolationException, system.collections.generic.KeyNotFoundException, system.threading.ThreadStateException, system.security.SecurityException, system.io.IOException {
         try {
             // add reference to assemblyName.dll file
@@ -183,6 +216,13 @@ public class HwndSource extends system.windows.PresentationSource implements Aut
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CreateHandleRef.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.HwndSource.CreateHandleRef" target="_top">.NET documentation</a>
+     */
     public HandleRef CreateHandleRef() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +238,26 @@ public class HwndSource extends system.windows.PresentationSource implements Aut
         }
     }
 
+    /**
+     * Invokes the .NET member Dispose.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.threading.ThreadStateException if the .NET member raises it
+     * @throws system.SystemException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.HwndSource.Dispose" target="_top">.NET documentation</a>
+     */
     public void Dispose() throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentOutOfRangeException, system.MulticastNotSupportedException, system.IndexOutOfRangeException, system.NotImplementedException, system.threading.ThreadStateException, system.SystemException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -211,8 +271,12 @@ public class HwndSource extends system.windows.PresentationSource implements Aut
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIKeyboardInputSink method available in IKeyboardInputSink to obtain an object with an invocable method
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.IKeyboardInputSink.HasFocusWithin" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public boolean HasFocusWithin() throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIKeyboardInputSink to obtain the full interface.");
     }
@@ -220,8 +284,14 @@ public class HwndSource extends system.windows.PresentationSource implements Aut
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIKeyboardInputSink method available in IKeyboardInputSink to obtain an object with an invocable method
+     *
+     * @param msg the argument of type {@code JCORefOut<MSG>}
+     * @param modifiers the argument of type {@code ModifierKeys}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.IKeyboardInputSink.OnMnemonic" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public boolean OnMnemonic(JCORefOut<MSG> msg, ModifierKeys modifiers) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIKeyboardInputSink to obtain the full interface.");
     }
@@ -229,8 +299,13 @@ public class HwndSource extends system.windows.PresentationSource implements Aut
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIKeyboardInputSink method available in IKeyboardInputSink to obtain an object with an invocable method
+     *
+     * @param request the argument of type {@code TraversalRequest}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.IKeyboardInputSink.TabInto" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public boolean TabInto(TraversalRequest request) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIKeyboardInputSink to obtain the full interface.");
     }
@@ -238,8 +313,14 @@ public class HwndSource extends system.windows.PresentationSource implements Aut
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIKeyboardInputSink method available in IKeyboardInputSink to obtain an object with an invocable method
+     *
+     * @param msg the argument of type {@code JCORefOut<MSG>}
+     * @param modifiers the argument of type {@code ModifierKeys}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.IKeyboardInputSink.TranslateAccelerator" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public boolean TranslateAccelerator(JCORefOut<MSG> msg, ModifierKeys modifiers) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIKeyboardInputSink to obtain the full interface.");
     }
@@ -247,8 +328,14 @@ public class HwndSource extends system.windows.PresentationSource implements Aut
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIKeyboardInputSink method available in IKeyboardInputSink to obtain an object with an invocable method
+     *
+     * @param msg the argument of type {@code JCORefOut<MSG>}
+     * @param modifiers the argument of type {@code ModifierKeys}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.IKeyboardInputSink.TranslateChar" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public boolean TranslateChar(JCORefOut<MSG> msg, ModifierKeys modifiers) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIKeyboardInputSink to obtain the full interface.");
     }
@@ -256,8 +343,13 @@ public class HwndSource extends system.windows.PresentationSource implements Aut
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIKeyboardInputSink method available in IKeyboardInputSink to obtain an object with an invocable method
+     *
+     * @param sink the argument of type {@code IKeyboardInputSink}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.IKeyboardInputSink.RegisterKeyboardInputSink" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public IKeyboardInputSite RegisterKeyboardInputSink(IKeyboardInputSink sink) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIKeyboardInputSink to obtain the full interface.");
     }
@@ -279,6 +371,13 @@ public class HwndSource extends system.windows.PresentationSource implements Aut
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AcquireHwndFocusInMenuMode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.HwndSource.AcquireHwndFocusInMenuMode" target="_top">.NET documentation</a>
+     */
     public boolean getAcquireHwndFocusInMenuMode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -293,6 +392,23 @@ public class HwndSource extends system.windows.PresentationSource implements Aut
         }
     }
 
+    /**
+     * Gets the value of the .NET property DefaultAcquireHwndFocusInMenuMode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.HwndSource.DefaultAcquireHwndFocusInMenuMode" target="_top">.NET documentation</a>
+     */
     public static boolean getDefaultAcquireHwndFocusInMenuMode() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -307,6 +423,13 @@ public class HwndSource extends system.windows.PresentationSource implements Aut
         }
     }
 
+    /**
+     * Sets the value of the .NET property DefaultAcquireHwndFocusInMenuMode.
+     *
+     * @param DefaultAcquireHwndFocusInMenuMode the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.HwndSource.DefaultAcquireHwndFocusInMenuMode" target="_top">.NET documentation</a>
+     */
     public static void setDefaultAcquireHwndFocusInMenuMode(boolean DefaultAcquireHwndFocusInMenuMode) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -317,6 +440,20 @@ public class HwndSource extends system.windows.PresentationSource implements Aut
         }
     }
 
+    /**
+     * Gets the value of the .NET property UsesPerPixelOpacity.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.HwndSource.UsesPerPixelOpacity" target="_top">.NET documentation</a>
+     */
     public boolean getUsesPerPixelOpacity() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -331,6 +468,13 @@ public class HwndSource extends system.windows.PresentationSource implements Aut
         }
     }
 
+    /**
+     * Gets the value of the .NET property ChildKeyboardInputSinks.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.HwndSource.ChildKeyboardInputSinks" target="_top">.NET documentation</a>
+     */
     public IEnumerable_1 getChildKeyboardInputSinks() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -346,6 +490,13 @@ public class HwndSource extends system.windows.PresentationSource implements Aut
         }
     }
 
+    /**
+     * Gets the value of the .NET property RestoreFocusMode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.HwndSource.RestoreFocusMode" target="_top">.NET documentation</a>
+     */
     public RestoreFocusMode getRestoreFocusMode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -361,6 +512,13 @@ public class HwndSource extends system.windows.PresentationSource implements Aut
         }
     }
 
+    /**
+     * Gets the value of the .NET property CompositionTargetNewHwndSource.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.HwndSource.CompositionTargetNewHwndSource" target="_top">.NET documentation</a>
+     */
     public HwndTarget getCompositionTargetNewHwndSource() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -376,6 +534,20 @@ public class HwndSource extends system.windows.PresentationSource implements Aut
         }
     }
 
+    /**
+     * Gets the value of the .NET property SizeToContent.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.HwndSource.SizeToContent" target="_top">.NET documentation</a>
+     */
     public SizeToContent getSizeToContent() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -391,6 +563,28 @@ public class HwndSource extends system.windows.PresentationSource implements Aut
         }
     }
 
+    /**
+     * Sets the value of the .NET property SizeToContent.
+     *
+     * @param SizeToContent the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.HwndSource.SizeToContent" target="_top">.NET documentation</a>
+     */
     public void setSizeToContent(SizeToContent SizeToContent) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.componentmodel.InvalidEnumArgumentException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.componentmodel.Win32Exception, system.NotSupportedException, system.MulticastNotSupportedException, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -406,6 +600,13 @@ public class HwndSource extends system.windows.PresentationSource implements Aut
     // Instance Events section
     
 
+    /**
+     * Invokes the .NET member addDisposed.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addDisposed(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -416,6 +617,13 @@ public class HwndSource extends system.windows.PresentationSource implements Aut
         }
     }
 
+    /**
+     * Invokes the .NET member removeDisposed.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeDisposed(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -426,6 +634,13 @@ public class HwndSource extends system.windows.PresentationSource implements Aut
         }
     }
 
+    /**
+     * Invokes the .NET member addSizeToContentChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addSizeToContentChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -436,6 +651,13 @@ public class HwndSource extends system.windows.PresentationSource implements Aut
         }
     }
 
+    /**
+     * Invokes the .NET member removeSizeToContentChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeSizeToContentChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -446,6 +668,13 @@ public class HwndSource extends system.windows.PresentationSource implements Aut
         }
     }
 
+    /**
+     * Invokes the .NET member addAutoResized.
+     *
+     * @param handler the argument of type {@code AutoResizedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addAutoResized(AutoResizedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -456,6 +685,13 @@ public class HwndSource extends system.windows.PresentationSource implements Aut
         }
     }
 
+    /**
+     * Invokes the .NET member removeAutoResized.
+     *
+     * @param handler the argument of type {@code AutoResizedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeAutoResized(AutoResizedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -466,6 +702,13 @@ public class HwndSource extends system.windows.PresentationSource implements Aut
         }
     }
 
+    /**
+     * Invokes the .NET member addDpiChanged.
+     *
+     * @param handler the argument of type {@code HwndDpiChangedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addDpiChanged(HwndDpiChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -476,6 +719,13 @@ public class HwndSource extends system.windows.PresentationSource implements Aut
         }
     }
 
+    /**
+     * Invokes the .NET member removeDpiChanged.
+     *
+     * @param handler the argument of type {@code HwndDpiChangedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeDpiChanged(HwndDpiChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

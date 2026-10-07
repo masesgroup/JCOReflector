@@ -100,7 +100,10 @@ public class RuntimeEnvironment extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public RuntimeEnvironment(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class RuntimeEnvironment extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.RuntimeEnvironment.-ctor" target="_top">.NET documentation</a>
+     */
     public RuntimeEnvironment() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -161,6 +170,15 @@ public class RuntimeEnvironment extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member FromGlobalAccessCache.
+     *
+     * @param a the argument of type {@code Assembly}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.RuntimeEnvironment.FromGlobalAccessCache" target="_top">.NET documentation</a>
+     */
     public static boolean FromGlobalAccessCache(Assembly a) throws Throwable, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -175,6 +193,15 @@ public class RuntimeEnvironment extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetRuntimeInterfaceAsObject.
+     *
+     * @param clsid the argument of type {@code Guid}
+     * @param riid the argument of type {@code Guid}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.RuntimeEnvironment.GetRuntimeInterfaceAsObject" target="_top">.NET documentation</a>
+     */
     public static NetObject GetRuntimeInterfaceAsObject(Guid clsid, Guid riid) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -190,6 +217,23 @@ public class RuntimeEnvironment extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetRuntimeDirectory.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.RuntimeEnvironment.GetRuntimeDirectory" target="_top">.NET documentation</a>
+     */
     public static java.lang.String GetRuntimeDirectory() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.NotSupportedException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -204,6 +248,14 @@ public class RuntimeEnvironment extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetSystemVersion.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.RuntimeEnvironment.GetSystemVersion" target="_top">.NET documentation</a>
+     */
     public static java.lang.String GetSystemVersion() throws Throwable, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -222,6 +274,21 @@ public class RuntimeEnvironment extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property SystemConfigurationFile.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.RuntimeEnvironment.SystemConfigurationFile" target="_top">.NET documentation</a>
+     */
     public static java.lang.String getSystemConfigurationFile() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

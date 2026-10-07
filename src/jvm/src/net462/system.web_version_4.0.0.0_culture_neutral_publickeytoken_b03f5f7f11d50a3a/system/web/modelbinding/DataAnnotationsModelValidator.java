@@ -104,7 +104,10 @@ public class DataAnnotationsModelValidator extends system.web.modelbinding.Model
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DataAnnotationsModelValidator(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,16 @@ public class DataAnnotationsModelValidator extends system.web.modelbinding.Model
     public DataAnnotationsModelValidator() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param metadata the argument of type {@code ModelMetadata}
+     * @param context the argument of type {@code ModelBindingExecutionContext}
+     * @param attribute the argument of type {@code ValidationAttribute}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.DataAnnotationsModelValidator.-ctor" target="_top">.NET documentation</a>
+     */
     public DataAnnotationsModelValidator(ModelMetadata metadata, ModelBindingExecutionContext context, ValidationAttribute attribute) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +182,14 @@ public class DataAnnotationsModelValidator extends system.web.modelbinding.Model
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Validate.
+     *
+     * @param container the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.DataAnnotationsModelValidator.Validate" target="_top">.NET documentation</a>
+     */
     public IEnumerable_1 Validate(NetObject container) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

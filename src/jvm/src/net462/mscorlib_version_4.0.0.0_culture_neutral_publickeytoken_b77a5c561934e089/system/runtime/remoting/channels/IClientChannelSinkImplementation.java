@@ -113,7 +113,10 @@ public class IClientChannelSinkImplementation extends NetObject implements IClie
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IClientChannelSinkImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,15 @@ public class IClientChannelSinkImplementation extends NetObject implements IClie
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetRequestStream.
+     *
+     * @param msg the argument of type {@code IMessage}
+     * @param headers the argument of type {@code ITransportHeaders}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Channels.IClientChannelSink.GetRequestStream" target="_top">.NET documentation</a>
+     */
     public Stream GetRequestStream(IMessage msg, ITransportHeaders headers) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -170,6 +182,16 @@ public class IClientChannelSinkImplementation extends NetObject implements IClie
         }
     }
 
+    /**
+     * Invokes the .NET member AsyncProcessRequest.
+     *
+     * @param sinkStack the argument of type {@code IClientChannelSinkStack}
+     * @param msg the argument of type {@code IMessage}
+     * @param headers the argument of type {@code ITransportHeaders}
+     * @param stream the argument of type {@code Stream}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Channels.IClientChannelSink.AsyncProcessRequest" target="_top">.NET documentation</a>
+     */
     public void AsyncProcessRequest(IClientChannelSinkStack sinkStack, IMessage msg, ITransportHeaders headers, Stream stream) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +202,16 @@ public class IClientChannelSinkImplementation extends NetObject implements IClie
         }
     }
 
+    /**
+     * Invokes the .NET member AsyncProcessResponse.
+     *
+     * @param sinkStack the argument of type {@code IClientResponseChannelSinkStack}
+     * @param state the argument of type {@code NetObject}
+     * @param headers the argument of type {@code ITransportHeaders}
+     * @param stream the argument of type {@code Stream}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Channels.IClientChannelSink.AsyncProcessResponse" target="_top">.NET documentation</a>
+     */
     public void AsyncProcessResponse(IClientResponseChannelSinkStack sinkStack, NetObject state, ITransportHeaders headers, Stream stream) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +222,17 @@ public class IClientChannelSinkImplementation extends NetObject implements IClie
         }
     }
 
+    /**
+     * Invokes the .NET member ProcessMessage.
+     *
+     * @param msg the argument of type {@code IMessage}
+     * @param requestHeaders the argument of type {@code ITransportHeaders}
+     * @param requestStream the argument of type {@code Stream}
+     * @param responseHeaders the argument of type {@code JCORefOut<ITransportHeaders>}
+     * @param responseStream the argument of type {@code JCORefOut<Stream>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Channels.IClientChannelSink.ProcessMessage" target="_top">.NET documentation</a>
+     */
     public void ProcessMessage(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream, JCORefOut<ITransportHeaders> responseHeaders, JCORefOut<Stream> responseStream) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +247,13 @@ public class IClientChannelSinkImplementation extends NetObject implements IClie
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Properties.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Channels.IClientChannelSink.Properties" target="_top">.NET documentation</a>
+     */
     public IDictionary getProperties() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -219,6 +269,13 @@ public class IClientChannelSinkImplementation extends NetObject implements IClie
         }
     }
 
+    /**
+     * Gets the value of the .NET property NextChannelSink.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Channels.IClientChannelSink.NextChannelSink" target="_top">.NET documentation</a>
+     */
     public IClientChannelSink getNextChannelSink() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

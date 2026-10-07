@@ -101,7 +101,10 @@ public class CatchBlock extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CatchBlock(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,24 @@ public class CatchBlock extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Update.
+     *
+     * @param variable the argument of type {@code ParameterExpression}
+     * @param filter the argument of type {@code Expression}
+     * @param body the argument of type {@code Expression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.CatchBlock.Update" target="_top">.NET documentation</a>
+     */
     public CatchBlock Update(ParameterExpression variable, Expression filter, Expression body) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -175,6 +196,13 @@ public class CatchBlock extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Body.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.CatchBlock.Body" target="_top">.NET documentation</a>
+     */
     public Expression getBody() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +218,13 @@ public class CatchBlock extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Filter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.CatchBlock.Filter" target="_top">.NET documentation</a>
+     */
     public Expression getFilter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +240,13 @@ public class CatchBlock extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Variable.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.CatchBlock.Variable" target="_top">.NET documentation</a>
+     */
     public ParameterExpression getVariable() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -220,6 +262,13 @@ public class CatchBlock extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Test.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.CatchBlock.Test" target="_top">.NET documentation</a>
+     */
     public NetType getTest() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

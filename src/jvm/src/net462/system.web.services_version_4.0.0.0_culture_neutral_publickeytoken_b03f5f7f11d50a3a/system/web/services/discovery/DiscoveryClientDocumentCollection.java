@@ -101,7 +101,10 @@ public class DiscoveryClientDocumentCollection extends system.collections.Dictio
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DiscoveryClientDocumentCollection(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class DiscoveryClientDocumentCollection extends system.collections.Dictio
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Discovery.DiscoveryClientDocumentCollection.-ctor" target="_top">.NET documentation</a>
+     */
     public DiscoveryClientDocumentCollection() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -162,6 +171,14 @@ public class DiscoveryClientDocumentCollection extends system.collections.Dictio
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Contains.
+     *
+     * @param url the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Discovery.DiscoveryClientDocumentCollection.Contains" target="_top">.NET documentation</a>
+     */
     public boolean Contains(java.lang.String url) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -176,6 +193,14 @@ public class DiscoveryClientDocumentCollection extends system.collections.Dictio
         }
     }
 
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param url the argument of type {@code java.lang.String}
+     * @param value the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Discovery.DiscoveryClientDocumentCollection.Add" target="_top">.NET documentation</a>
+     */
     public void Add(java.lang.String url, NetObject value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -186,6 +211,13 @@ public class DiscoveryClientDocumentCollection extends system.collections.Dictio
         }
     }
 
+    /**
+     * Invokes the .NET member Remove.
+     *
+     * @param url the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Discovery.DiscoveryClientDocumentCollection.Remove" target="_top">.NET documentation</a>
+     */
     public void Remove(java.lang.String url) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +232,13 @@ public class DiscoveryClientDocumentCollection extends system.collections.Dictio
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Keys.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Discovery.DiscoveryClientDocumentCollection.Keys" target="_top">.NET documentation</a>
+     */
     public ICollection getKeys() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +254,13 @@ public class DiscoveryClientDocumentCollection extends system.collections.Dictio
         }
     }
 
+    /**
+     * Gets the value of the .NET property Values.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Discovery.DiscoveryClientDocumentCollection.Values" target="_top">.NET documentation</a>
+     */
     public ICollection getValues() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

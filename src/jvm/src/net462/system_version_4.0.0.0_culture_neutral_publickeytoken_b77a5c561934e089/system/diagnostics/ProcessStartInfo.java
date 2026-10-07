@@ -104,7 +104,10 @@ public class ProcessStartInfo extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ProcessStartInfo(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,12 @@ public class ProcessStartInfo extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.ProcessStartInfo.-ctor" target="_top">.NET documentation</a>
+     */
     public ProcessStartInfo() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -161,6 +170,13 @@ public class ProcessStartInfo extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param fileName the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.ProcessStartInfo.-ctor" target="_top">.NET documentation</a>
+     */
     public ProcessStartInfo(java.lang.String fileName) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -171,6 +187,14 @@ public class ProcessStartInfo extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param fileName the argument of type {@code java.lang.String}
+     * @param arguments the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.ProcessStartInfo.-ctor" target="_top">.NET documentation</a>
+     */
     public ProcessStartInfo(java.lang.String fileName, java.lang.String arguments) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -189,6 +213,13 @@ public class ProcessStartInfo extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CreateNoWindow.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.ProcessStartInfo.CreateNoWindow" target="_top">.NET documentation</a>
+     */
     public boolean getCreateNoWindow() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +234,13 @@ public class ProcessStartInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CreateNoWindow.
+     *
+     * @param CreateNoWindow the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.ProcessStartInfo.CreateNoWindow" target="_top">.NET documentation</a>
+     */
     public void setCreateNoWindow(boolean CreateNoWindow) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -213,6 +251,13 @@ public class ProcessStartInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ErrorDialog.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.ProcessStartInfo.ErrorDialog" target="_top">.NET documentation</a>
+     */
     public boolean getErrorDialog() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -227,6 +272,13 @@ public class ProcessStartInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ErrorDialog.
+     *
+     * @param ErrorDialog the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.ProcessStartInfo.ErrorDialog" target="_top">.NET documentation</a>
+     */
     public void setErrorDialog(boolean ErrorDialog) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -237,6 +289,13 @@ public class ProcessStartInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LoadUserProfile.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.ProcessStartInfo.LoadUserProfile" target="_top">.NET documentation</a>
+     */
     public boolean getLoadUserProfile() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -251,6 +310,13 @@ public class ProcessStartInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property LoadUserProfile.
+     *
+     * @param LoadUserProfile the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.ProcessStartInfo.LoadUserProfile" target="_top">.NET documentation</a>
+     */
     public void setLoadUserProfile(boolean LoadUserProfile) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -261,6 +327,13 @@ public class ProcessStartInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RedirectStandardError.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.ProcessStartInfo.RedirectStandardError" target="_top">.NET documentation</a>
+     */
     public boolean getRedirectStandardError() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -275,6 +348,13 @@ public class ProcessStartInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RedirectStandardError.
+     *
+     * @param RedirectStandardError the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.ProcessStartInfo.RedirectStandardError" target="_top">.NET documentation</a>
+     */
     public void setRedirectStandardError(boolean RedirectStandardError) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -285,6 +365,13 @@ public class ProcessStartInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RedirectStandardInput.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.ProcessStartInfo.RedirectStandardInput" target="_top">.NET documentation</a>
+     */
     public boolean getRedirectStandardInput() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -299,6 +386,13 @@ public class ProcessStartInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RedirectStandardInput.
+     *
+     * @param RedirectStandardInput the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.ProcessStartInfo.RedirectStandardInput" target="_top">.NET documentation</a>
+     */
     public void setRedirectStandardInput(boolean RedirectStandardInput) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -309,6 +403,13 @@ public class ProcessStartInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RedirectStandardOutput.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.ProcessStartInfo.RedirectStandardOutput" target="_top">.NET documentation</a>
+     */
     public boolean getRedirectStandardOutput() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -323,6 +424,13 @@ public class ProcessStartInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RedirectStandardOutput.
+     *
+     * @param RedirectStandardOutput the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.ProcessStartInfo.RedirectStandardOutput" target="_top">.NET documentation</a>
+     */
     public void setRedirectStandardOutput(boolean RedirectStandardOutput) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -333,6 +441,13 @@ public class ProcessStartInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UseShellExecute.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.ProcessStartInfo.UseShellExecute" target="_top">.NET documentation</a>
+     */
     public boolean getUseShellExecute() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -347,6 +462,13 @@ public class ProcessStartInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property UseShellExecute.
+     *
+     * @param UseShellExecute the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.ProcessStartInfo.UseShellExecute" target="_top">.NET documentation</a>
+     */
     public void setUseShellExecute(boolean UseShellExecute) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -357,6 +479,18 @@ public class ProcessStartInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Environment.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.ProcessStartInfo.Environment" target="_top">.NET documentation</a>
+     */
     public IDictionary_2 getEnvironment() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -372,6 +506,23 @@ public class ProcessStartInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EnvironmentVariables.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.ProcessStartInfo.EnvironmentVariables" target="_top">.NET documentation</a>
+     */
     public StringDictionary getEnvironmentVariables() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.NullReferenceException, system.NotSupportedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -387,6 +538,13 @@ public class ProcessStartInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property WindowStyle.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.ProcessStartInfo.WindowStyle" target="_top">.NET documentation</a>
+     */
     public ProcessWindowStyle getWindowStyle() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -402,6 +560,27 @@ public class ProcessStartInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property WindowStyle.
+     *
+     * @param WindowStyle the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.ProcessStartInfo.WindowStyle" target="_top">.NET documentation</a>
+     */
     public void setWindowStyle(ProcessWindowStyle WindowStyle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -412,6 +591,13 @@ public class ProcessStartInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Password.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.ProcessStartInfo.Password" target="_top">.NET documentation</a>
+     */
     public SecureString getPassword() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -427,6 +613,13 @@ public class ProcessStartInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Password.
+     *
+     * @param Password the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.ProcessStartInfo.Password" target="_top">.NET documentation</a>
+     */
     public void setPassword(SecureString Password) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -437,6 +630,13 @@ public class ProcessStartInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Arguments.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.ProcessStartInfo.Arguments" target="_top">.NET documentation</a>
+     */
     public java.lang.String getArguments() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -451,6 +651,13 @@ public class ProcessStartInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Arguments.
+     *
+     * @param Arguments the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.ProcessStartInfo.Arguments" target="_top">.NET documentation</a>
+     */
     public void setArguments(java.lang.String Arguments) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -461,6 +668,13 @@ public class ProcessStartInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Domain.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.ProcessStartInfo.Domain" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDomain() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -475,6 +689,13 @@ public class ProcessStartInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Domain.
+     *
+     * @param Domain the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.ProcessStartInfo.Domain" target="_top">.NET documentation</a>
+     */
     public void setDomain(java.lang.String Domain) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -485,6 +706,13 @@ public class ProcessStartInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FileName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.ProcessStartInfo.FileName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getFileName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -499,6 +727,13 @@ public class ProcessStartInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property FileName.
+     *
+     * @param FileName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.ProcessStartInfo.FileName" target="_top">.NET documentation</a>
+     */
     public void setFileName(java.lang.String FileName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -509,6 +744,13 @@ public class ProcessStartInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PasswordInClearText.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.ProcessStartInfo.PasswordInClearText" target="_top">.NET documentation</a>
+     */
     public java.lang.String getPasswordInClearText() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -523,6 +765,13 @@ public class ProcessStartInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PasswordInClearText.
+     *
+     * @param PasswordInClearText the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.ProcessStartInfo.PasswordInClearText" target="_top">.NET documentation</a>
+     */
     public void setPasswordInClearText(java.lang.String PasswordInClearText) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -533,6 +782,13 @@ public class ProcessStartInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UserName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.ProcessStartInfo.UserName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getUserName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -547,6 +803,13 @@ public class ProcessStartInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property UserName.
+     *
+     * @param UserName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.ProcessStartInfo.UserName" target="_top">.NET documentation</a>
+     */
     public void setUserName(java.lang.String UserName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -557,6 +820,13 @@ public class ProcessStartInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Verb.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.ProcessStartInfo.Verb" target="_top">.NET documentation</a>
+     */
     public java.lang.String getVerb() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -571,6 +841,13 @@ public class ProcessStartInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Verb.
+     *
+     * @param Verb the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.ProcessStartInfo.Verb" target="_top">.NET documentation</a>
+     */
     public void setVerb(java.lang.String Verb) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -581,6 +858,13 @@ public class ProcessStartInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property WorkingDirectory.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.ProcessStartInfo.WorkingDirectory" target="_top">.NET documentation</a>
+     */
     public java.lang.String getWorkingDirectory() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -595,6 +879,13 @@ public class ProcessStartInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property WorkingDirectory.
+     *
+     * @param WorkingDirectory the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.ProcessStartInfo.WorkingDirectory" target="_top">.NET documentation</a>
+     */
     public void setWorkingDirectory(java.lang.String WorkingDirectory) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -605,6 +896,24 @@ public class ProcessStartInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Verbs.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.ProcessStartInfo.Verbs" target="_top">.NET documentation</a>
+     */
     public java.lang.String[] getVerbs() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -628,6 +937,13 @@ public class ProcessStartInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StandardErrorEncoding.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.ProcessStartInfo.StandardErrorEncoding" target="_top">.NET documentation</a>
+     */
     public Encoding getStandardErrorEncoding() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -643,6 +959,13 @@ public class ProcessStartInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property StandardErrorEncoding.
+     *
+     * @param StandardErrorEncoding the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.ProcessStartInfo.StandardErrorEncoding" target="_top">.NET documentation</a>
+     */
     public void setStandardErrorEncoding(Encoding StandardErrorEncoding) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -653,6 +976,13 @@ public class ProcessStartInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StandardOutputEncoding.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.ProcessStartInfo.StandardOutputEncoding" target="_top">.NET documentation</a>
+     */
     public Encoding getStandardOutputEncoding() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -668,6 +998,13 @@ public class ProcessStartInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property StandardOutputEncoding.
+     *
+     * @param StandardOutputEncoding the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.ProcessStartInfo.StandardOutputEncoding" target="_top">.NET documentation</a>
+     */
     public void setStandardOutputEncoding(Encoding StandardOutputEncoding) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

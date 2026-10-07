@@ -100,7 +100,10 @@ public class SecurityRulesAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SecurityRulesAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,13 @@ public class SecurityRulesAttribute extends system.Attribute  {
     public SecurityRulesAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param ruleSet the argument of type {@code SecurityRuleSet}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.SecurityRulesAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public SecurityRulesAttribute(SecurityRuleSet ruleSet) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +179,13 @@ public class SecurityRulesAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property SkipVerificationInFullTrust.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.SecurityRulesAttribute.SkipVerificationInFullTrust" target="_top">.NET documentation</a>
+     */
     public boolean getSkipVerificationInFullTrust() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +200,13 @@ public class SecurityRulesAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SkipVerificationInFullTrust.
+     *
+     * @param SkipVerificationInFullTrust the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.SecurityRulesAttribute.SkipVerificationInFullTrust" target="_top">.NET documentation</a>
+     */
     public void setSkipVerificationInFullTrust(boolean SkipVerificationInFullTrust) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +217,13 @@ public class SecurityRulesAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RuleSet.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.SecurityRulesAttribute.RuleSet" target="_top">.NET documentation</a>
+     */
     public SecurityRuleSet getRuleSet() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -52,5 +52,11 @@ import system.data.oracleclient.OracleInfoMessageEventArgs;
  * @version 2.0.0.0
  */
 public interface IOracleInfoMessageEventHandler {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param sender the .NET argument of type {@code System.Object}
+     * @param e the .NET argument of type {@code System.Data.OracleClient.OracleInfoMessageEventArgs}
+     */
     public void Invoke(NetObject sender, OracleInfoMessageEventArgs e);
 }

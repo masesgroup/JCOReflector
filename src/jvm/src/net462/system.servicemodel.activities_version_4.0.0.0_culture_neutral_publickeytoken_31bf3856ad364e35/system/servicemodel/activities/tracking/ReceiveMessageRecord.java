@@ -100,7 +100,10 @@ public class ReceiveMessageRecord extends system.activities.tracking.CustomTrack
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ReceiveMessageRecord(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,20 @@ public class ReceiveMessageRecord extends system.activities.tracking.CustomTrack
     public ReceiveMessageRecord() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Tracking.ReceiveMessageRecord.-ctor" target="_top">.NET documentation</a>
+     */
     public ReceiveMessageRecord(java.lang.String name) throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.MulticastNotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +186,15 @@ public class ReceiveMessageRecord extends system.activities.tracking.CustomTrack
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property E2EActivityId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Tracking.ReceiveMessageRecord.E2EActivityId" target="_top">.NET documentation</a>
+     */
     public Guid getE2EActivityId() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +210,15 @@ public class ReceiveMessageRecord extends system.activities.tracking.CustomTrack
         }
     }
 
+    /**
+     * Sets the value of the .NET property E2EActivityId.
+     *
+     * @param E2EActivityId the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Tracking.ReceiveMessageRecord.E2EActivityId" target="_top">.NET documentation</a>
+     */
     public void setE2EActivityId(Guid E2EActivityId) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +229,15 @@ public class ReceiveMessageRecord extends system.activities.tracking.CustomTrack
         }
     }
 
+    /**
+     * Gets the value of the .NET property MessageId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Tracking.ReceiveMessageRecord.MessageId" target="_top">.NET documentation</a>
+     */
     public Guid getMessageId() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

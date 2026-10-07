@@ -99,7 +99,10 @@ public class CallSite_1<T extends IJCOBridgeReflected> extends system.runtime.co
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CallSite_1(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -158,6 +161,13 @@ public class CallSite_1<T extends IJCOBridgeReflected> extends system.runtime.co
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Update.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.CallSite-1.Update" target="_top">.NET documentation</a>
+     */
     public T getUpdate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

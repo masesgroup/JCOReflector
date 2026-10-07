@@ -100,7 +100,10 @@ public class TrackingProfile extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TrackingProfile(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class TrackingProfile extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.TrackingProfile.-ctor" target="_top">.NET documentation</a>
+     */
     public TrackingProfile() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +174,13 @@ public class TrackingProfile extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ImplementationVisibility.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.TrackingProfile.ImplementationVisibility" target="_top">.NET documentation</a>
+     */
     public ImplementationVisibility getImplementationVisibility() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +196,13 @@ public class TrackingProfile extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ImplementationVisibility.
+     *
+     * @param ImplementationVisibility the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.TrackingProfile.ImplementationVisibility" target="_top">.NET documentation</a>
+     */
     public void setImplementationVisibility(ImplementationVisibility ImplementationVisibility) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +213,13 @@ public class TrackingProfile extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Queries.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.TrackingProfile.Queries" target="_top">.NET documentation</a>
+     */
     public Collection_1 getQueries() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +235,13 @@ public class TrackingProfile extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ActivityDefinitionId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.TrackingProfile.ActivityDefinitionId" target="_top">.NET documentation</a>
+     */
     public java.lang.String getActivityDefinitionId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -219,6 +256,13 @@ public class TrackingProfile extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ActivityDefinitionId.
+     *
+     * @param ActivityDefinitionId the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.TrackingProfile.ActivityDefinitionId" target="_top">.NET documentation</a>
+     */
     public void setActivityDefinitionId(java.lang.String ActivityDefinitionId) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -229,6 +273,13 @@ public class TrackingProfile extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.TrackingProfile.Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -243,6 +294,13 @@ public class TrackingProfile extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Name.
+     *
+     * @param Name the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.TrackingProfile.Name" target="_top">.NET documentation</a>
+     */
     public void setName(java.lang.String Name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

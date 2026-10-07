@@ -52,5 +52,12 @@ import system.text.Encoding;
  * @version 2.0.0.0
  */
 public interface IHeaderEncodingSelector_1<TContext extends IJCOBridgeReflected> {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param headerName the .NET argument of type {@code System.String}
+     * @param context the .NET argument of type {@code TContext}
+     * @return the value returned to the CLR
+     */
     public Encoding Invoke(java.lang.String headerName, TContext context);
 }

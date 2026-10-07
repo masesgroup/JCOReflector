@@ -99,7 +99,10 @@ public class TypeMapAssociationAttribute_1<TTypeMapGroup extends IJCOBridgeRefle
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TypeMapAssociationAttribute_1(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,14 @@ public class TypeMapAssociationAttribute_1<TTypeMapGroup extends IJCOBridgeRefle
     public TypeMapAssociationAttribute_1() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param source the argument of type {@code NetType}
+     * @param proxy the argument of type {@code NetType}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.TypeMapAssociationAttribute-1.-ctor" target="_top">.NET documentation</a>
+     */
     public TypeMapAssociationAttribute_1(NetType source, NetType proxy) throws Throwable {
         try {
             // add reference to assemblyName.dll file

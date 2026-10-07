@@ -98,7 +98,10 @@ public class IJsonOnDeserializingImplementation extends NetObject implements IJs
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IJsonOnDeserializingImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -140,6 +143,12 @@ public class IJsonOnDeserializingImplementation extends NetObject implements IJs
 
     // Methods section
     
+    /**
+     * Invokes the .NET member OnDeserializing.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.IJsonOnDeserializing.OnDeserializing" target="_top">.NET documentation</a>
+     */
     public void OnDeserializing() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

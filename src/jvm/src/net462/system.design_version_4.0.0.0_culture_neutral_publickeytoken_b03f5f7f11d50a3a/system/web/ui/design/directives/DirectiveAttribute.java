@@ -99,7 +99,10 @@ public class DirectiveAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DirectiveAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class DirectiveAttribute extends system.Attribute  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.Directives.DirectiveAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public DirectiveAttribute() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +173,13 @@ public class DirectiveAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AllowedOnMobilePages.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.Directives.DirectiveAttribute.AllowedOnMobilePages" target="_top">.NET documentation</a>
+     */
     public boolean getAllowedOnMobilePages() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,6 +194,13 @@ public class DirectiveAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AllowedOnMobilePages.
+     *
+     * @param AllowedOnMobilePages the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.Directives.DirectiveAttribute.AllowedOnMobilePages" target="_top">.NET documentation</a>
+     */
     public void setAllowedOnMobilePages(boolean AllowedOnMobilePages) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +211,13 @@ public class DirectiveAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Culture.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.Directives.DirectiveAttribute.Culture" target="_top">.NET documentation</a>
+     */
     public boolean getCulture() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +232,13 @@ public class DirectiveAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Culture.
+     *
+     * @param Culture the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.Directives.DirectiveAttribute.Culture" target="_top">.NET documentation</a>
+     */
     public void setCulture(boolean Culture) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -212,6 +249,13 @@ public class DirectiveAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ServerLanguageExtensions.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.Directives.DirectiveAttribute.ServerLanguageExtensions" target="_top">.NET documentation</a>
+     */
     public boolean getServerLanguageExtensions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -226,6 +270,13 @@ public class DirectiveAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ServerLanguageExtensions.
+     *
+     * @param ServerLanguageExtensions the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.Directives.DirectiveAttribute.ServerLanguageExtensions" target="_top">.NET documentation</a>
+     */
     public void setServerLanguageExtensions(boolean ServerLanguageExtensions) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -236,6 +287,13 @@ public class DirectiveAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ServerLanguageNames.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.Directives.DirectiveAttribute.ServerLanguageNames" target="_top">.NET documentation</a>
+     */
     public boolean getServerLanguageNames() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -250,6 +308,13 @@ public class DirectiveAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ServerLanguageNames.
+     *
+     * @param ServerLanguageNames the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.Directives.DirectiveAttribute.ServerLanguageNames" target="_top">.NET documentation</a>
+     */
     public void setServerLanguageNames(boolean ServerLanguageNames) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -260,6 +325,13 @@ public class DirectiveAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property BuilderType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.Directives.DirectiveAttribute.BuilderType" target="_top">.NET documentation</a>
+     */
     public java.lang.String getBuilderType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -274,6 +346,13 @@ public class DirectiveAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property BuilderType.
+     *
+     * @param BuilderType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.Directives.DirectiveAttribute.BuilderType" target="_top">.NET documentation</a>
+     */
     public void setBuilderType(java.lang.String BuilderType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -284,6 +363,13 @@ public class DirectiveAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RenameType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.Directives.DirectiveAttribute.RenameType" target="_top">.NET documentation</a>
+     */
     public java.lang.String getRenameType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -298,6 +384,13 @@ public class DirectiveAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RenameType.
+     *
+     * @param RenameType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.Directives.DirectiveAttribute.RenameType" target="_top">.NET documentation</a>
+     */
     public void setRenameType(java.lang.String RenameType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

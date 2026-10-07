@@ -103,7 +103,10 @@ public class EncodingProvider extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public EncodingProvider(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,13 @@ public class EncodingProvider extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetEncodings.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.EncodingProvider.GetEncodings" target="_top">.NET documentation</a>
+     */
     public IEnumerable_1 GetEncodings() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -171,6 +181,20 @@ public class EncodingProvider extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetEncoding.
+     *
+     * @param codepage the argument of type {@code int}
+     * @param encoderFallback the argument of type {@code EncoderFallback}
+     * @param decoderFallback the argument of type {@code DecoderFallback}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.EncodingProvider.GetEncoding" target="_top">.NET documentation</a>
+     */
     public Encoding GetEncoding(int codepage, EncoderFallback encoderFallback, DecoderFallback decoderFallback) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -186,6 +210,14 @@ public class EncodingProvider extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetEncoding.
+     *
+     * @param codepage the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.EncodingProvider.GetEncoding" target="_top">.NET documentation</a>
+     */
     public Encoding GetEncoding(int codepage) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +233,20 @@ public class EncodingProvider extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetEncoding.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param encoderFallback the argument of type {@code EncoderFallback}
+     * @param decoderFallback the argument of type {@code DecoderFallback}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.EncodingProvider.GetEncoding" target="_top">.NET documentation</a>
+     */
     public Encoding GetEncoding(java.lang.String name, EncoderFallback encoderFallback, DecoderFallback decoderFallback) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +262,14 @@ public class EncodingProvider extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetEncoding.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.EncodingProvider.GetEncoding" target="_top">.NET documentation</a>
+     */
     public Encoding GetEncoding(java.lang.String name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

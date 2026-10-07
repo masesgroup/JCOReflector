@@ -53,5 +53,11 @@ import system.servicemodel.EndpointAddress;
  * @version 2.0.0.0
  */
 public interface IIssuedSecurityTokenHandler {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param issuedToken the .NET argument of type {@code System.IdentityModel.Tokens.SecurityToken}
+     * @param tokenRequestor the .NET argument of type {@code System.ServiceModel.EndpointAddress}
+     */
     public void Invoke(SecurityToken issuedToken, EndpointAddress tokenRequestor);
 }

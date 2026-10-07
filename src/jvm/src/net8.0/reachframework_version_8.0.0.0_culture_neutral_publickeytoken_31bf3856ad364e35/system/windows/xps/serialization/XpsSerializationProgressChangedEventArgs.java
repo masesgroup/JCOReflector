@@ -100,7 +100,10 @@ public class XpsSerializationProgressChangedEventArgs extends system.componentmo
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XpsSerializationProgressChangedEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,16 @@ public class XpsSerializationProgressChangedEventArgs extends system.componentmo
     public XpsSerializationProgressChangedEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param writingLevel the argument of type {@code XpsWritingProgressChangeLevel}
+     * @param pageNumber the argument of type {@code int}
+     * @param progressPercentage the argument of type {@code int}
+     * @param userToken the argument of type {@code NetObject}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Serialization.XpsSerializationProgressChangedEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public XpsSerializationProgressChangedEventArgs(XpsWritingProgressChangeLevel writingLevel, int pageNumber, int progressPercentage, NetObject userToken) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +182,13 @@ public class XpsSerializationProgressChangedEventArgs extends system.componentmo
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property PageNumber.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Serialization.XpsSerializationProgressChangedEventArgs.PageNumber" target="_top">.NET documentation</a>
+     */
     public int getPageNumber() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -209,6 +229,13 @@ public class XpsSerializationProgressChangedEventArgs extends system.componentmo
         }
     }
 
+    /**
+     * Gets the value of the .NET property WritingLevel.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Serialization.XpsSerializationProgressChangedEventArgs.WritingLevel" target="_top">.NET documentation</a>
+     */
     public XpsWritingProgressChangeLevel getWritingLevel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

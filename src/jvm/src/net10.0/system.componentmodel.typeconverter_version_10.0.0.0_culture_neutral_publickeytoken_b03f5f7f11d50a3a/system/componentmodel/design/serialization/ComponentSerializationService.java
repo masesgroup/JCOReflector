@@ -105,7 +105,10 @@ public class ComponentSerializationService extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ComponentSerializationService(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -158,6 +161,15 @@ public class ComponentSerializationService extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Deserialize.
+     *
+     * @param store the argument of type {@code SerializationStore}
+     * @param container the argument of type {@code IContainer}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.ComponentSerializationService.Deserialize" target="_top">.NET documentation</a>
+     */
     public ICollection Deserialize(SerializationStore store, IContainer container) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -173,6 +185,14 @@ public class ComponentSerializationService extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Deserialize.
+     *
+     * @param store the argument of type {@code SerializationStore}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.ComponentSerializationService.Deserialize" target="_top">.NET documentation</a>
+     */
     public ICollection Deserialize(SerializationStore store) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +208,13 @@ public class ComponentSerializationService extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateStore.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.ComponentSerializationService.CreateStore" target="_top">.NET documentation</a>
+     */
     public SerializationStore CreateStore() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +230,14 @@ public class ComponentSerializationService extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LoadStore.
+     *
+     * @param stream the argument of type {@code Stream}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.ComponentSerializationService.LoadStore" target="_top">.NET documentation</a>
+     */
     public SerializationStore LoadStore(Stream stream) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -218,6 +253,16 @@ public class ComponentSerializationService extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DeserializeTo.
+     *
+     * @param store the argument of type {@code SerializationStore}
+     * @param container the argument of type {@code IContainer}
+     * @param validateRecycledTypes the argument of type {@code boolean}
+     * @param applyDefaults the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.ComponentSerializationService.DeserializeTo" target="_top">.NET documentation</a>
+     */
     public void DeserializeTo(SerializationStore store, IContainer container, boolean validateRecycledTypes, boolean applyDefaults) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -228,6 +273,15 @@ public class ComponentSerializationService extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DeserializeTo.
+     *
+     * @param store the argument of type {@code SerializationStore}
+     * @param container the argument of type {@code IContainer}
+     * @param validateRecycledTypes the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.ComponentSerializationService.DeserializeTo" target="_top">.NET documentation</a>
+     */
     public void DeserializeTo(SerializationStore store, IContainer container, boolean validateRecycledTypes) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -238,6 +292,14 @@ public class ComponentSerializationService extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DeserializeTo.
+     *
+     * @param store the argument of type {@code SerializationStore}
+     * @param container the argument of type {@code IContainer}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.ComponentSerializationService.DeserializeTo" target="_top">.NET documentation</a>
+     */
     public void DeserializeTo(SerializationStore store, IContainer container) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -248,6 +310,14 @@ public class ComponentSerializationService extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Serialize.
+     *
+     * @param store the argument of type {@code SerializationStore}
+     * @param value the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.ComponentSerializationService.Serialize" target="_top">.NET documentation</a>
+     */
     public void Serialize(SerializationStore store, NetObject value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -258,6 +328,14 @@ public class ComponentSerializationService extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SerializeAbsolute.
+     *
+     * @param store the argument of type {@code SerializationStore}
+     * @param value the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.ComponentSerializationService.SerializeAbsolute" target="_top">.NET documentation</a>
+     */
     public void SerializeAbsolute(SerializationStore store, NetObject value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -268,6 +346,15 @@ public class ComponentSerializationService extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SerializeMember.
+     *
+     * @param store the argument of type {@code SerializationStore}
+     * @param owningObject the argument of type {@code NetObject}
+     * @param member the argument of type {@code MemberDescriptor}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.ComponentSerializationService.SerializeMember" target="_top">.NET documentation</a>
+     */
     public void SerializeMember(SerializationStore store, NetObject owningObject, MemberDescriptor member) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -278,6 +365,15 @@ public class ComponentSerializationService extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SerializeMemberAbsolute.
+     *
+     * @param store the argument of type {@code SerializationStore}
+     * @param owningObject the argument of type {@code NetObject}
+     * @param member the argument of type {@code MemberDescriptor}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.ComponentSerializationService.SerializeMemberAbsolute" target="_top">.NET documentation</a>
+     */
     public void SerializeMemberAbsolute(SerializationStore store, NetObject owningObject, MemberDescriptor member) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

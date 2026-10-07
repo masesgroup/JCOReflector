@@ -102,7 +102,10 @@ public class ICompiledExpressionRootImplementation extends NetObject implements 
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ICompiledExpressionRootImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -144,6 +147,17 @@ public class ICompiledExpressionRootImplementation extends NetObject implements 
 
     // Methods section
     
+    /**
+     * Invokes the .NET member CanExecuteExpression.
+     *
+     * @param expressionText the argument of type {@code java.lang.String}
+     * @param isReference the argument of type {@code boolean}
+     * @param locations the argument of type {@code IList_1}
+     * @param expressionId the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicInteger>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.XamlIntegration.ICompiledExpressionRoot.CanExecuteExpression" target="_top">.NET documentation</a>
+     */
     public boolean CanExecuteExpression(java.lang.String expressionText, boolean isReference, IList_1 locations, JCORefOut<java.util.concurrent.atomic.AtomicInteger> expressionId) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -158,6 +172,14 @@ public class ICompiledExpressionRootImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member GetRequiredLocations.
+     *
+     * @param expressionId the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.XamlIntegration.ICompiledExpressionRoot.GetRequiredLocations" target="_top">.NET documentation</a>
+     */
     public IList_1 GetRequiredLocations(int expressionId) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -173,6 +195,15 @@ public class ICompiledExpressionRootImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member GetExpressionTreeForExpression.
+     *
+     * @param expressionId the argument of type {@code int}
+     * @param locationReferences the argument of type {@code IList_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.XamlIntegration.ICompiledExpressionRoot.GetExpressionTreeForExpression" target="_top">.NET documentation</a>
+     */
     public Expression GetExpressionTreeForExpression(int expressionId, IList_1 locationReferences) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +219,15 @@ public class ICompiledExpressionRootImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member InvokeExpression.
+     *
+     * @param expressionId the argument of type {@code int}
+     * @param locations the argument of type {@code IList_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.XamlIntegration.ICompiledExpressionRoot.InvokeExpression" target="_top">.NET documentation</a>
+     */
     public NetObject InvokeExpression(int expressionId, IList_1 locations) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +243,16 @@ public class ICompiledExpressionRootImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member InvokeExpression.
+     *
+     * @param expressionId the argument of type {@code int}
+     * @param locations the argument of type {@code IList_1}
+     * @param activityContext the argument of type {@code ActivityContext}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.XamlIntegration.ICompiledExpressionRoot.InvokeExpression" target="_top">.NET documentation</a>
+     */
     public NetObject InvokeExpression(int expressionId, IList_1 locations, ActivityContext activityContext) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -218,6 +268,13 @@ public class ICompiledExpressionRootImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member GetLanguage.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.XamlIntegration.ICompiledExpressionRoot.GetLanguage" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetLanguage() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -103,7 +103,10 @@ public class SecurityPermissionAttribute extends system.security.permissions.Cod
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SecurityPermissionAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,13 @@ public class SecurityPermissionAttribute extends system.security.permissions.Cod
     public SecurityPermissionAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param action the argument of type {@code SecurityAction}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.SecurityPermissionAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public SecurityPermissionAttribute(SecurityAction action) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +178,13 @@ public class SecurityPermissionAttribute extends system.security.permissions.Cod
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CreatePermission.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.SecurityPermissionAttribute.CreatePermission" target="_top">.NET documentation</a>
+     */
     public IPermission CreatePermission() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +204,13 @@ public class SecurityPermissionAttribute extends system.security.permissions.Cod
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Assertion.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.SecurityPermissionAttribute.Assertion" target="_top">.NET documentation</a>
+     */
     public boolean getAssertion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +225,13 @@ public class SecurityPermissionAttribute extends system.security.permissions.Cod
         }
     }
 
+    /**
+     * Sets the value of the .NET property Assertion.
+     *
+     * @param Assertion the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.SecurityPermissionAttribute.Assertion" target="_top">.NET documentation</a>
+     */
     public void setAssertion(boolean Assertion) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -211,6 +242,13 @@ public class SecurityPermissionAttribute extends system.security.permissions.Cod
         }
     }
 
+    /**
+     * Gets the value of the .NET property BindingRedirects.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.SecurityPermissionAttribute.BindingRedirects" target="_top">.NET documentation</a>
+     */
     public boolean getBindingRedirects() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -225,6 +263,13 @@ public class SecurityPermissionAttribute extends system.security.permissions.Cod
         }
     }
 
+    /**
+     * Sets the value of the .NET property BindingRedirects.
+     *
+     * @param BindingRedirects the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.SecurityPermissionAttribute.BindingRedirects" target="_top">.NET documentation</a>
+     */
     public void setBindingRedirects(boolean BindingRedirects) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -235,6 +280,13 @@ public class SecurityPermissionAttribute extends system.security.permissions.Cod
         }
     }
 
+    /**
+     * Gets the value of the .NET property ControlAppDomain.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.SecurityPermissionAttribute.ControlAppDomain" target="_top">.NET documentation</a>
+     */
     public boolean getControlAppDomain() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -249,6 +301,13 @@ public class SecurityPermissionAttribute extends system.security.permissions.Cod
         }
     }
 
+    /**
+     * Sets the value of the .NET property ControlAppDomain.
+     *
+     * @param ControlAppDomain the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.SecurityPermissionAttribute.ControlAppDomain" target="_top">.NET documentation</a>
+     */
     public void setControlAppDomain(boolean ControlAppDomain) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -259,6 +318,13 @@ public class SecurityPermissionAttribute extends system.security.permissions.Cod
         }
     }
 
+    /**
+     * Gets the value of the .NET property ControlDomainPolicy.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.SecurityPermissionAttribute.ControlDomainPolicy" target="_top">.NET documentation</a>
+     */
     public boolean getControlDomainPolicy() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -273,6 +339,13 @@ public class SecurityPermissionAttribute extends system.security.permissions.Cod
         }
     }
 
+    /**
+     * Sets the value of the .NET property ControlDomainPolicy.
+     *
+     * @param ControlDomainPolicy the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.SecurityPermissionAttribute.ControlDomainPolicy" target="_top">.NET documentation</a>
+     */
     public void setControlDomainPolicy(boolean ControlDomainPolicy) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -283,6 +356,13 @@ public class SecurityPermissionAttribute extends system.security.permissions.Cod
         }
     }
 
+    /**
+     * Gets the value of the .NET property ControlEvidence.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.SecurityPermissionAttribute.ControlEvidence" target="_top">.NET documentation</a>
+     */
     public boolean getControlEvidence() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -297,6 +377,13 @@ public class SecurityPermissionAttribute extends system.security.permissions.Cod
         }
     }
 
+    /**
+     * Sets the value of the .NET property ControlEvidence.
+     *
+     * @param ControlEvidence the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.SecurityPermissionAttribute.ControlEvidence" target="_top">.NET documentation</a>
+     */
     public void setControlEvidence(boolean ControlEvidence) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -307,6 +394,13 @@ public class SecurityPermissionAttribute extends system.security.permissions.Cod
         }
     }
 
+    /**
+     * Gets the value of the .NET property ControlPolicy.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.SecurityPermissionAttribute.ControlPolicy" target="_top">.NET documentation</a>
+     */
     public boolean getControlPolicy() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -321,6 +415,13 @@ public class SecurityPermissionAttribute extends system.security.permissions.Cod
         }
     }
 
+    /**
+     * Sets the value of the .NET property ControlPolicy.
+     *
+     * @param ControlPolicy the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.SecurityPermissionAttribute.ControlPolicy" target="_top">.NET documentation</a>
+     */
     public void setControlPolicy(boolean ControlPolicy) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -331,6 +432,13 @@ public class SecurityPermissionAttribute extends system.security.permissions.Cod
         }
     }
 
+    /**
+     * Gets the value of the .NET property ControlPrincipal.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.SecurityPermissionAttribute.ControlPrincipal" target="_top">.NET documentation</a>
+     */
     public boolean getControlPrincipal() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -345,6 +453,13 @@ public class SecurityPermissionAttribute extends system.security.permissions.Cod
         }
     }
 
+    /**
+     * Sets the value of the .NET property ControlPrincipal.
+     *
+     * @param ControlPrincipal the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.SecurityPermissionAttribute.ControlPrincipal" target="_top">.NET documentation</a>
+     */
     public void setControlPrincipal(boolean ControlPrincipal) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -355,6 +470,13 @@ public class SecurityPermissionAttribute extends system.security.permissions.Cod
         }
     }
 
+    /**
+     * Gets the value of the .NET property ControlThread.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.SecurityPermissionAttribute.ControlThread" target="_top">.NET documentation</a>
+     */
     public boolean getControlThread() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -369,6 +491,13 @@ public class SecurityPermissionAttribute extends system.security.permissions.Cod
         }
     }
 
+    /**
+     * Sets the value of the .NET property ControlThread.
+     *
+     * @param ControlThread the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.SecurityPermissionAttribute.ControlThread" target="_top">.NET documentation</a>
+     */
     public void setControlThread(boolean ControlThread) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -379,6 +508,13 @@ public class SecurityPermissionAttribute extends system.security.permissions.Cod
         }
     }
 
+    /**
+     * Gets the value of the .NET property Execution.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.SecurityPermissionAttribute.Execution" target="_top">.NET documentation</a>
+     */
     public boolean getExecution() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -393,6 +529,13 @@ public class SecurityPermissionAttribute extends system.security.permissions.Cod
         }
     }
 
+    /**
+     * Sets the value of the .NET property Execution.
+     *
+     * @param Execution the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.SecurityPermissionAttribute.Execution" target="_top">.NET documentation</a>
+     */
     public void setExecution(boolean Execution) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -403,6 +546,13 @@ public class SecurityPermissionAttribute extends system.security.permissions.Cod
         }
     }
 
+    /**
+     * Gets the value of the .NET property Infrastructure.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.SecurityPermissionAttribute.Infrastructure" target="_top">.NET documentation</a>
+     */
     public boolean getInfrastructure() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -417,6 +567,13 @@ public class SecurityPermissionAttribute extends system.security.permissions.Cod
         }
     }
 
+    /**
+     * Sets the value of the .NET property Infrastructure.
+     *
+     * @param Infrastructure the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.SecurityPermissionAttribute.Infrastructure" target="_top">.NET documentation</a>
+     */
     public void setInfrastructure(boolean Infrastructure) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -427,6 +584,13 @@ public class SecurityPermissionAttribute extends system.security.permissions.Cod
         }
     }
 
+    /**
+     * Gets the value of the .NET property RemotingConfiguration.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.SecurityPermissionAttribute.RemotingConfiguration" target="_top">.NET documentation</a>
+     */
     public boolean getRemotingConfiguration() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -441,6 +605,13 @@ public class SecurityPermissionAttribute extends system.security.permissions.Cod
         }
     }
 
+    /**
+     * Sets the value of the .NET property RemotingConfiguration.
+     *
+     * @param RemotingConfiguration the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.SecurityPermissionAttribute.RemotingConfiguration" target="_top">.NET documentation</a>
+     */
     public void setRemotingConfiguration(boolean RemotingConfiguration) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -451,6 +622,13 @@ public class SecurityPermissionAttribute extends system.security.permissions.Cod
         }
     }
 
+    /**
+     * Gets the value of the .NET property SerializationFormatter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter" target="_top">.NET documentation</a>
+     */
     public boolean getSerializationFormatter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -465,6 +643,13 @@ public class SecurityPermissionAttribute extends system.security.permissions.Cod
         }
     }
 
+    /**
+     * Sets the value of the .NET property SerializationFormatter.
+     *
+     * @param SerializationFormatter the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter" target="_top">.NET documentation</a>
+     */
     public void setSerializationFormatter(boolean SerializationFormatter) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -475,6 +660,13 @@ public class SecurityPermissionAttribute extends system.security.permissions.Cod
         }
     }
 
+    /**
+     * Gets the value of the .NET property SkipVerification.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.SecurityPermissionAttribute.SkipVerification" target="_top">.NET documentation</a>
+     */
     public boolean getSkipVerification() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -489,6 +681,13 @@ public class SecurityPermissionAttribute extends system.security.permissions.Cod
         }
     }
 
+    /**
+     * Sets the value of the .NET property SkipVerification.
+     *
+     * @param SkipVerification the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.SecurityPermissionAttribute.SkipVerification" target="_top">.NET documentation</a>
+     */
     public void setSkipVerification(boolean SkipVerification) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -499,6 +698,13 @@ public class SecurityPermissionAttribute extends system.security.permissions.Cod
         }
     }
 
+    /**
+     * Gets the value of the .NET property UnmanagedCode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.SecurityPermissionAttribute.UnmanagedCode" target="_top">.NET documentation</a>
+     */
     public boolean getUnmanagedCode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -513,6 +719,13 @@ public class SecurityPermissionAttribute extends system.security.permissions.Cod
         }
     }
 
+    /**
+     * Sets the value of the .NET property UnmanagedCode.
+     *
+     * @param UnmanagedCode the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.SecurityPermissionAttribute.UnmanagedCode" target="_top">.NET documentation</a>
+     */
     public void setUnmanagedCode(boolean UnmanagedCode) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -523,6 +736,13 @@ public class SecurityPermissionAttribute extends system.security.permissions.Cod
         }
     }
 
+    /**
+     * Gets the value of the .NET property Flags.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.SecurityPermissionAttribute.Flags" target="_top">.NET documentation</a>
+     */
     public SecurityPermissionFlag getFlags() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -538,6 +758,13 @@ public class SecurityPermissionAttribute extends system.security.permissions.Cod
         }
     }
 
+    /**
+     * Sets the value of the .NET property Flags.
+     *
+     * @param Flags the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.SecurityPermissionAttribute.Flags" target="_top">.NET documentation</a>
+     */
     public void setFlags(SecurityPermissionFlag Flags) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

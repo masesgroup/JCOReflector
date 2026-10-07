@@ -98,7 +98,10 @@ public class IMultitargetHelperServiceImplementation extends NetObject implement
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IMultitargetHelperServiceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -140,6 +143,14 @@ public class IMultitargetHelperServiceImplementation extends NetObject implement
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetAssemblyQualifiedName.
+     *
+     * @param type the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IMultitargetHelperService.GetAssemblyQualifiedName" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetAssemblyQualifiedName(NetType type) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

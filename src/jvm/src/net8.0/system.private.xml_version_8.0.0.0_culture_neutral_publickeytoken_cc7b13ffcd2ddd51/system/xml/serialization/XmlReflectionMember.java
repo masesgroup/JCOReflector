@@ -100,7 +100,10 @@ public class XmlReflectionMember extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XmlReflectionMember(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class XmlReflectionMember extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlReflectionMember.-ctor" target="_top">.NET documentation</a>
+     */
     public XmlReflectionMember() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +174,13 @@ public class XmlReflectionMember extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsReturnValue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlReflectionMember.IsReturnValue" target="_top">.NET documentation</a>
+     */
     public boolean getIsReturnValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -179,6 +195,13 @@ public class XmlReflectionMember extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsReturnValue.
+     *
+     * @param IsReturnValue the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlReflectionMember.IsReturnValue" target="_top">.NET documentation</a>
+     */
     public void setIsReturnValue(boolean IsReturnValue) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +212,13 @@ public class XmlReflectionMember extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OverrideIsNullable.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlReflectionMember.OverrideIsNullable" target="_top">.NET documentation</a>
+     */
     public boolean getOverrideIsNullable() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +233,13 @@ public class XmlReflectionMember extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property OverrideIsNullable.
+     *
+     * @param OverrideIsNullable the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlReflectionMember.OverrideIsNullable" target="_top">.NET documentation</a>
+     */
     public void setOverrideIsNullable(boolean OverrideIsNullable) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -213,6 +250,13 @@ public class XmlReflectionMember extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MemberName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlReflectionMember.MemberName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getMemberName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -227,6 +271,13 @@ public class XmlReflectionMember extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MemberName.
+     *
+     * @param MemberName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlReflectionMember.MemberName" target="_top">.NET documentation</a>
+     */
     public void setMemberName(java.lang.String MemberName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -237,6 +288,13 @@ public class XmlReflectionMember extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MemberType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlReflectionMember.MemberType" target="_top">.NET documentation</a>
+     */
     public NetType getMemberType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -252,6 +310,13 @@ public class XmlReflectionMember extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MemberType.
+     *
+     * @param MemberType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlReflectionMember.MemberType" target="_top">.NET documentation</a>
+     */
     public void setMemberType(NetType MemberType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -262,6 +327,13 @@ public class XmlReflectionMember extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SoapAttributes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlReflectionMember.SoapAttributes" target="_top">.NET documentation</a>
+     */
     public SoapAttributes getSoapAttributes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -277,6 +349,22 @@ public class XmlReflectionMember extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SoapAttributes.
+     *
+     * @param SoapAttributes the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlReflectionMember.SoapAttributes" target="_top">.NET documentation</a>
+     */
     public void setSoapAttributes(SoapAttributes SoapAttributes) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -287,6 +375,13 @@ public class XmlReflectionMember extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlAttributes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlReflectionMember.XmlAttributes" target="_top">.NET documentation</a>
+     */
     public XmlAttributes getXmlAttributes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -302,6 +397,22 @@ public class XmlReflectionMember extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property XmlAttributes.
+     *
+     * @param XmlAttributes the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlReflectionMember.XmlAttributes" target="_top">.NET documentation</a>
+     */
     public void setXmlAttributes(XmlAttributes XmlAttributes) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

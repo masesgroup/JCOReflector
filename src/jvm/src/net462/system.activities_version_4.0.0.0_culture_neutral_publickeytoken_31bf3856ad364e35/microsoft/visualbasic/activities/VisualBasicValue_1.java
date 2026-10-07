@@ -102,7 +102,10 @@ public class VisualBasicValue_1<TResult extends IJCOBridgeReflected> extends sys
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public VisualBasicValue_1(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,12 @@ public class VisualBasicValue_1<TResult extends IJCOBridgeReflected> extends sys
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.Activities.VisualBasicValue-1.-ctor" target="_top">.NET documentation</a>
+     */
     public VisualBasicValue_1() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -161,6 +170,13 @@ public class VisualBasicValue_1<TResult extends IJCOBridgeReflected> extends sys
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param expressionText the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.Activities.VisualBasicValue-1.-ctor" target="_top">.NET documentation</a>
+     */
     public VisualBasicValue_1(java.lang.String expressionText) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -177,6 +193,14 @@ public class VisualBasicValue_1<TResult extends IJCOBridgeReflected> extends sys
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CanConvertToString.
+     *
+     * @param context the argument of type {@code IValueSerializerContext}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.Activities.VisualBasicValue-1.CanConvertToString" target="_top">.NET documentation</a>
+     */
     public boolean CanConvertToString(IValueSerializerContext context) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -191,6 +215,27 @@ public class VisualBasicValue_1<TResult extends IJCOBridgeReflected> extends sys
         }
     }
 
+    /**
+     * Invokes the .NET member GetExpressionTree.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ApplicationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.Activities.VisualBasicValue-1.GetExpressionTree" target="_top">.NET documentation</a>
+     */
     public Expression GetExpressionTree() throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.MulticastNotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.threading.ThreadAbortException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.ApplicationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,6 +251,15 @@ public class VisualBasicValue_1<TResult extends IJCOBridgeReflected> extends sys
         }
     }
 
+    /**
+     * Invokes the .NET member ConvertToString.
+     *
+     * @param context the argument of type {@code IValueSerializerContext}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.Activities.VisualBasicValue-1.ConvertToString" target="_top">.NET documentation</a>
+     */
     public java.lang.String ConvertToString(IValueSerializerContext context) throws Throwable, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -224,6 +278,13 @@ public class VisualBasicValue_1<TResult extends IJCOBridgeReflected> extends sys
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property RequiresCompilation.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.Activities.VisualBasicValue-1.RequiresCompilation" target="_top">.NET documentation</a>
+     */
     public boolean getRequiresCompilation() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -238,6 +299,13 @@ public class VisualBasicValue_1<TResult extends IJCOBridgeReflected> extends sys
         }
     }
 
+    /**
+     * Gets the value of the .NET property ExpressionText.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.Activities.VisualBasicValue-1.ExpressionText" target="_top">.NET documentation</a>
+     */
     public java.lang.String getExpressionText() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -252,6 +320,13 @@ public class VisualBasicValue_1<TResult extends IJCOBridgeReflected> extends sys
         }
     }
 
+    /**
+     * Sets the value of the .NET property ExpressionText.
+     *
+     * @param ExpressionText the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.Activities.VisualBasicValue-1.ExpressionText" target="_top">.NET documentation</a>
+     */
     public void setExpressionText(java.lang.String ExpressionText) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -262,6 +337,13 @@ public class VisualBasicValue_1<TResult extends IJCOBridgeReflected> extends sys
         }
     }
 
+    /**
+     * Gets the value of the .NET property Language.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.Activities.VisualBasicValue-1.Language" target="_top">.NET documentation</a>
+     */
     public java.lang.String getLanguage() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

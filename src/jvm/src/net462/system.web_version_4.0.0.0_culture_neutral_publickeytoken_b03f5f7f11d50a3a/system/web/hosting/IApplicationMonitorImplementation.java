@@ -100,7 +100,10 @@ public class IApplicationMonitorImplementation extends NetObject implements IApp
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IApplicationMonitorImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -142,6 +145,12 @@ public class IApplicationMonitorImplementation extends NetObject implements IApp
 
     // Methods section
     
+    /**
+     * Invokes the .NET member Dispose.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.IApplicationMonitor.Dispose" target="_top">.NET documentation</a>
+     */
     public void Dispose() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -152,6 +161,12 @@ public class IApplicationMonitorImplementation extends NetObject implements IApp
         }
     }
 
+    /**
+     * Invokes the .NET member Start.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.IApplicationMonitor.Start" target="_top">.NET documentation</a>
+     */
     public void Start() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -162,6 +177,12 @@ public class IApplicationMonitorImplementation extends NetObject implements IApp
         }
     }
 
+    /**
+     * Invokes the .NET member Stop.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.IApplicationMonitor.Stop" target="_top">.NET documentation</a>
+     */
     public void Stop() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

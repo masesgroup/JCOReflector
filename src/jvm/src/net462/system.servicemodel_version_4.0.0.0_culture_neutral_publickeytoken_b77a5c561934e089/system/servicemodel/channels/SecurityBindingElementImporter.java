@@ -100,7 +100,10 @@ public class SecurityBindingElementImporter extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SecurityBindingElementImporter(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class SecurityBindingElementImporter extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.SecurityBindingElementImporter.-ctor" target="_top">.NET documentation</a>
+     */
     public SecurityBindingElementImporter() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -164,8 +173,13 @@ public class SecurityBindingElementImporter extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIPolicyImportExtension method available in IPolicyImportExtension to obtain an object with an invocable method
+     *
+     * @param importer the argument of type {@code MetadataImporter}
+     * @param context the argument of type {@code PolicyConversionContext}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.IPolicyImportExtension.ImportPolicy" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void ImportPolicy(MetadataImporter importer, PolicyConversionContext context) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPolicyImportExtension to obtain the full interface.");
     }
@@ -174,6 +188,13 @@ public class SecurityBindingElementImporter extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property MaxPolicyRedirections.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.SecurityBindingElementImporter.MaxPolicyRedirections" target="_top">.NET documentation</a>
+     */
     public int getMaxPolicyRedirections() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -99,7 +99,10 @@ public class ApplicationQueuingAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ApplicationQueuingAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class ApplicationQueuingAttribute extends system.Attribute  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ApplicationQueuingAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public ApplicationQueuingAttribute() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +173,13 @@ public class ApplicationQueuingAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Enabled.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ApplicationQueuingAttribute.Enabled" target="_top">.NET documentation</a>
+     */
     public boolean getEnabled() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,6 +194,13 @@ public class ApplicationQueuingAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Enabled.
+     *
+     * @param Enabled the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ApplicationQueuingAttribute.Enabled" target="_top">.NET documentation</a>
+     */
     public void setEnabled(boolean Enabled) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +211,13 @@ public class ApplicationQueuingAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property QueueListenerEnabled.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ApplicationQueuingAttribute.QueueListenerEnabled" target="_top">.NET documentation</a>
+     */
     public boolean getQueueListenerEnabled() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +232,13 @@ public class ApplicationQueuingAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property QueueListenerEnabled.
+     *
+     * @param QueueListenerEnabled the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ApplicationQueuingAttribute.QueueListenerEnabled" target="_top">.NET documentation</a>
+     */
     public void setQueueListenerEnabled(boolean QueueListenerEnabled) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -212,6 +249,13 @@ public class ApplicationQueuingAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MaxListenerThreads.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ApplicationQueuingAttribute.MaxListenerThreads" target="_top">.NET documentation</a>
+     */
     public int getMaxListenerThreads() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -252,6 +296,13 @@ public class ApplicationQueuingAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MaxListenerThreads.
+     *
+     * @param MaxListenerThreads the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ApplicationQueuingAttribute.MaxListenerThreads" target="_top">.NET documentation</a>
+     */
     public void setMaxListenerThreads(int MaxListenerThreads) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

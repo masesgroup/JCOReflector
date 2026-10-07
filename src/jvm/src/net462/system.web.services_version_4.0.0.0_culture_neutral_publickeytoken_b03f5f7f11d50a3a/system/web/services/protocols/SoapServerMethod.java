@@ -104,7 +104,10 @@ public class SoapServerMethod extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SoapServerMethod(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,12 @@ public class SoapServerMethod extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapServerMethod.-ctor" target="_top">.NET documentation</a>
+     */
     public SoapServerMethod() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -161,6 +170,36 @@ public class SoapServerMethod extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param serverType the argument of type {@code NetType}
+     * @param methodInfo the argument of type {@code LogicalMethodInfo}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapServerMethod.-ctor" target="_top">.NET documentation</a>
+     */
     public SoapServerMethod(NetType serverType, LogicalMethodInfo methodInfo) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.OutOfMemoryException, system.RankException, system.InvalidCastException, system.MulticastNotSupportedException, system.threading.ThreadAbortException, system.security.SecurityException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.io.FileNotFoundException, system.TypeLoadException, system.UnauthorizedAccessException {
         try {
             // add reference to assemblyName.dll file
@@ -179,6 +218,13 @@ public class SoapServerMethod extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property OneWay.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapServerMethod.OneWay" target="_top">.NET documentation</a>
+     */
     public boolean getOneWay() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +239,13 @@ public class SoapServerMethod extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Rpc.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapServerMethod.Rpc" target="_top">.NET documentation</a>
+     */
     public boolean getRpc() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +260,13 @@ public class SoapServerMethod extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Action.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapServerMethod.Action" target="_top">.NET documentation</a>
+     */
     public java.lang.String getAction() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -221,6 +281,13 @@ public class SoapServerMethod extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property BindingUse.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapServerMethod.BindingUse" target="_top">.NET documentation</a>
+     */
     public SoapBindingUse getBindingUse() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -236,6 +303,13 @@ public class SoapServerMethod extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MethodInfo.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapServerMethod.MethodInfo" target="_top">.NET documentation</a>
+     */
     public LogicalMethodInfo getMethodInfo() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -251,6 +325,13 @@ public class SoapServerMethod extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property InHeaderMappings.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapServerMethod.InHeaderMappings" target="_top">.NET documentation</a>
+     */
     public final SoapHeaderMapping[] getInHeaderMappings() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -272,6 +353,13 @@ public class SoapServerMethod extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OutHeaderMappings.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapServerMethod.OutHeaderMappings" target="_top">.NET documentation</a>
+     */
     public final SoapHeaderMapping[] getOutHeaderMappings() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -293,6 +381,13 @@ public class SoapServerMethod extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ParameterStyle.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapServerMethod.ParameterStyle" target="_top">.NET documentation</a>
+     */
     public SoapParameterStyle getParameterStyle() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -308,6 +403,13 @@ public class SoapServerMethod extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property WsiClaims.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapServerMethod.WsiClaims" target="_top">.NET documentation</a>
+     */
     public WsiProfiles getWsiClaims() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -323,6 +425,13 @@ public class SoapServerMethod extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property InHeaderSerializer.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapServerMethod.InHeaderSerializer" target="_top">.NET documentation</a>
+     */
     public XmlSerializer getInHeaderSerializer() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -338,6 +447,13 @@ public class SoapServerMethod extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OutHeaderSerializer.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapServerMethod.OutHeaderSerializer" target="_top">.NET documentation</a>
+     */
     public XmlSerializer getOutHeaderSerializer() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -353,6 +469,13 @@ public class SoapServerMethod extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ParameterSerializer.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapServerMethod.ParameterSerializer" target="_top">.NET documentation</a>
+     */
     public XmlSerializer getParameterSerializer() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -368,6 +491,13 @@ public class SoapServerMethod extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ReturnSerializer.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapServerMethod.ReturnSerializer" target="_top">.NET documentation</a>
+     */
     public XmlSerializer getReturnSerializer() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

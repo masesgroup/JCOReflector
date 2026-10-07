@@ -104,7 +104,10 @@ public class TouchEventArgs extends system.windows.input.InputEventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TouchEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,14 @@ public class TouchEventArgs extends system.windows.input.InputEventArgs  {
     public TouchEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param touchDevice the argument of type {@code TouchDevice}
+     * @param timestamp the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.TouchEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public TouchEventArgs(TouchDevice touchDevice, int timestamp) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +180,14 @@ public class TouchEventArgs extends system.windows.input.InputEventArgs  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetTouchPoint.
+     *
+     * @param relativeTo the argument of type {@code IInputElement}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.TouchEventArgs.GetTouchPoint" target="_top">.NET documentation</a>
+     */
     public TouchPoint GetTouchPoint(IInputElement relativeTo) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +203,14 @@ public class TouchEventArgs extends system.windows.input.InputEventArgs  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetIntermediateTouchPoints.
+     *
+     * @param relativeTo the argument of type {@code IInputElement}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.TouchEventArgs.GetIntermediateTouchPoints" target="_top">.NET documentation</a>
+     */
     public TouchPointCollection GetIntermediateTouchPoints(IInputElement relativeTo) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +230,13 @@ public class TouchEventArgs extends system.windows.input.InputEventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property TouchDevice.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.TouchEventArgs.TouchDevice" target="_top">.NET documentation</a>
+     */
     public TouchDevice getTouchDevice() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

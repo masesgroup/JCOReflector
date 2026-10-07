@@ -99,7 +99,10 @@ public class IPAddressInformation extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IPAddressInformation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,13 @@ public class IPAddressInformation extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsDnsEligible.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.IPAddressInformation.IsDnsEligible" target="_top">.NET documentation</a>
+     */
     public boolean getIsDnsEligible() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -170,6 +180,13 @@ public class IPAddressInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsTransient.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.IPAddressInformation.IsTransient" target="_top">.NET documentation</a>
+     */
     public boolean getIsTransient() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +201,13 @@ public class IPAddressInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Address.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.IPAddressInformation.Address" target="_top">.NET documentation</a>
+     */
     public IPAddress getAddress() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

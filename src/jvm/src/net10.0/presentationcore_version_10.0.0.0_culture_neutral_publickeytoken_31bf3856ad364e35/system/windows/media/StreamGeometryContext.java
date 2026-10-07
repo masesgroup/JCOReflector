@@ -104,7 +104,10 @@ public class StreamGeometryContext extends system.windows.threading.DispatcherOb
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public StreamGeometryContext(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,19 @@ public class StreamGeometryContext extends system.windows.threading.DispatcherOb
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ArcTo.
+     *
+     * @param point the argument of type {@code Point}
+     * @param size the argument of type {@code Size}
+     * @param rotationAngle the argument of type {@code double}
+     * @param isLargeArc the argument of type {@code boolean}
+     * @param sweepDirection the argument of type {@code SweepDirection}
+     * @param isStroked the argument of type {@code boolean}
+     * @param isSmoothJoin the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.StreamGeometryContext.ArcTo" target="_top">.NET documentation</a>
+     */
     public void ArcTo(Point point, Size size, double rotationAngle, boolean isLargeArc, SweepDirection sweepDirection, boolean isStroked, boolean isSmoothJoin) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -167,6 +183,15 @@ public class StreamGeometryContext extends system.windows.threading.DispatcherOb
         }
     }
 
+    /**
+     * Invokes the .NET member BeginFigure.
+     *
+     * @param startPoint the argument of type {@code Point}
+     * @param isFilled the argument of type {@code boolean}
+     * @param isClosed the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.StreamGeometryContext.BeginFigure" target="_top">.NET documentation</a>
+     */
     public void BeginFigure(Point startPoint, boolean isFilled, boolean isClosed) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -177,6 +202,17 @@ public class StreamGeometryContext extends system.windows.threading.DispatcherOb
         }
     }
 
+    /**
+     * Invokes the .NET member BezierTo.
+     *
+     * @param point1 the argument of type {@code Point}
+     * @param point2 the argument of type {@code Point}
+     * @param point3 the argument of type {@code Point}
+     * @param isStroked the argument of type {@code boolean}
+     * @param isSmoothJoin the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.StreamGeometryContext.BezierTo" target="_top">.NET documentation</a>
+     */
     public void BezierTo(Point point1, Point point2, Point point3, boolean isStroked, boolean isSmoothJoin) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +223,12 @@ public class StreamGeometryContext extends system.windows.threading.DispatcherOb
         }
     }
 
+    /**
+     * Invokes the .NET member Close.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.StreamGeometryContext.Close" target="_top">.NET documentation</a>
+     */
     public void Close() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +239,15 @@ public class StreamGeometryContext extends system.windows.threading.DispatcherOb
         }
     }
 
+    /**
+     * Invokes the .NET member LineTo.
+     *
+     * @param point the argument of type {@code Point}
+     * @param isStroked the argument of type {@code boolean}
+     * @param isSmoothJoin the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.StreamGeometryContext.LineTo" target="_top">.NET documentation</a>
+     */
     public void LineTo(Point point, boolean isStroked, boolean isSmoothJoin) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +258,15 @@ public class StreamGeometryContext extends system.windows.threading.DispatcherOb
         }
     }
 
+    /**
+     * Invokes the .NET member PolyBezierTo.
+     *
+     * @param points the argument of type {@code IList_1}
+     * @param isStroked the argument of type {@code boolean}
+     * @param isSmoothJoin the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.StreamGeometryContext.PolyBezierTo" target="_top">.NET documentation</a>
+     */
     public void PolyBezierTo(IList_1 points, boolean isStroked, boolean isSmoothJoin) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -217,6 +277,15 @@ public class StreamGeometryContext extends system.windows.threading.DispatcherOb
         }
     }
 
+    /**
+     * Invokes the .NET member PolyLineTo.
+     *
+     * @param points the argument of type {@code IList_1}
+     * @param isStroked the argument of type {@code boolean}
+     * @param isSmoothJoin the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.StreamGeometryContext.PolyLineTo" target="_top">.NET documentation</a>
+     */
     public void PolyLineTo(IList_1 points, boolean isStroked, boolean isSmoothJoin) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -227,6 +296,15 @@ public class StreamGeometryContext extends system.windows.threading.DispatcherOb
         }
     }
 
+    /**
+     * Invokes the .NET member PolyQuadraticBezierTo.
+     *
+     * @param points the argument of type {@code IList_1}
+     * @param isStroked the argument of type {@code boolean}
+     * @param isSmoothJoin the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.StreamGeometryContext.PolyQuadraticBezierTo" target="_top">.NET documentation</a>
+     */
     public void PolyQuadraticBezierTo(IList_1 points, boolean isStroked, boolean isSmoothJoin) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -237,6 +315,16 @@ public class StreamGeometryContext extends system.windows.threading.DispatcherOb
         }
     }
 
+    /**
+     * Invokes the .NET member QuadraticBezierTo.
+     *
+     * @param point1 the argument of type {@code Point}
+     * @param point2 the argument of type {@code Point}
+     * @param isStroked the argument of type {@code boolean}
+     * @param isSmoothJoin the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.StreamGeometryContext.QuadraticBezierTo" target="_top">.NET documentation</a>
+     */
     public void QuadraticBezierTo(Point point1, Point point2, boolean isStroked, boolean isSmoothJoin) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -250,8 +338,11 @@ public class StreamGeometryContext extends system.windows.threading.DispatcherOb
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIDisposable method available in IDisposable to obtain an object with an invocable method
+     *
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IDisposable.Dispose" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void Dispose() throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDisposable to obtain the full interface.");
     }

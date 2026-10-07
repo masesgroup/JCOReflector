@@ -103,7 +103,10 @@ public class WorkflowCompilerParameters extends system.codedom.compiler.Compiler
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public WorkflowCompilerParameters(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,15 @@ public class WorkflowCompilerParameters extends system.codedom.compiler.Compiler
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.WorkflowCompilerParameters.-ctor" target="_top">.NET documentation</a>
+     */
     public WorkflowCompilerParameters() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
@@ -160,6 +172,16 @@ public class WorkflowCompilerParameters extends system.codedom.compiler.Compiler
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param assemblyNames the argument of type {@code java.lang.String[]}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.WorkflowCompilerParameters.-ctor" target="_top">.NET documentation</a>
+     */
     public WorkflowCompilerParameters(java.lang.String[] assemblyNames) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +192,17 @@ public class WorkflowCompilerParameters extends system.codedom.compiler.Compiler
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param assemblyNames the argument of type {@code java.lang.String[]}
+     * @param outputName the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.WorkflowCompilerParameters.-ctor" target="_top">.NET documentation</a>
+     */
     public WorkflowCompilerParameters(java.lang.String[] assemblyNames, java.lang.String outputName) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
@@ -180,6 +213,18 @@ public class WorkflowCompilerParameters extends system.codedom.compiler.Compiler
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param assemblyNames the argument of type {@code java.lang.String[]}
+     * @param outputName the argument of type {@code java.lang.String}
+     * @param includeDebugInformation the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.WorkflowCompilerParameters.-ctor" target="_top">.NET documentation</a>
+     */
     public WorkflowCompilerParameters(java.lang.String[] assemblyNames, java.lang.String outputName, boolean includeDebugInformation) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
@@ -190,6 +235,17 @@ public class WorkflowCompilerParameters extends system.codedom.compiler.Compiler
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param parameters the argument of type {@code WorkflowCompilerParameters}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.WorkflowCompilerParameters.-ctor" target="_top">.NET documentation</a>
+     */
     public WorkflowCompilerParameters(WorkflowCompilerParameters parameters) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException {
         try {
             // add reference to assemblyName.dll file
@@ -208,6 +264,13 @@ public class WorkflowCompilerParameters extends system.codedom.compiler.Compiler
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property GenerateCodeCompileUnitOnly.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.WorkflowCompilerParameters.GenerateCodeCompileUnitOnly" target="_top">.NET documentation</a>
+     */
     public boolean getGenerateCodeCompileUnitOnly() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -222,6 +285,13 @@ public class WorkflowCompilerParameters extends system.codedom.compiler.Compiler
         }
     }
 
+    /**
+     * Sets the value of the .NET property GenerateCodeCompileUnitOnly.
+     *
+     * @param GenerateCodeCompileUnitOnly the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.WorkflowCompilerParameters.GenerateCodeCompileUnitOnly" target="_top">.NET documentation</a>
+     */
     public void setGenerateCodeCompileUnitOnly(boolean GenerateCodeCompileUnitOnly) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -232,6 +302,13 @@ public class WorkflowCompilerParameters extends system.codedom.compiler.Compiler
         }
     }
 
+    /**
+     * Gets the value of the .NET property UserCodeCompileUnits.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.WorkflowCompilerParameters.UserCodeCompileUnits" target="_top">.NET documentation</a>
+     */
     public IList_1 getUserCodeCompileUnits() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -247,6 +324,13 @@ public class WorkflowCompilerParameters extends system.codedom.compiler.Compiler
         }
     }
 
+    /**
+     * Gets the value of the .NET property LibraryPaths.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.WorkflowCompilerParameters.LibraryPaths" target="_top">.NET documentation</a>
+     */
     public StringCollection getLibraryPaths() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -262,6 +346,13 @@ public class WorkflowCompilerParameters extends system.codedom.compiler.Compiler
         }
     }
 
+    /**
+     * Gets the value of the .NET property CompilerOptions.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.WorkflowCompilerParameters.CompilerOptions" target="_top">.NET documentation</a>
+     */
     public java.lang.String getCompilerOptions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -276,6 +367,19 @@ public class WorkflowCompilerParameters extends system.codedom.compiler.Compiler
         }
     }
 
+    /**
+     * Sets the value of the .NET property CompilerOptions.
+     *
+     * @param CompilerOptions the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.WorkflowCompilerParameters.CompilerOptions" target="_top">.NET documentation</a>
+     */
     public void setCompilerOptions(java.lang.String CompilerOptions) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -286,6 +390,13 @@ public class WorkflowCompilerParameters extends system.codedom.compiler.Compiler
         }
     }
 
+    /**
+     * Gets the value of the .NET property LanguageToUse.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.WorkflowCompilerParameters.LanguageToUse" target="_top">.NET documentation</a>
+     */
     public java.lang.String getLanguageToUse() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -300,6 +411,26 @@ public class WorkflowCompilerParameters extends system.codedom.compiler.Compiler
         }
     }
 
+    /**
+     * Sets the value of the .NET property LanguageToUse.
+     *
+     * @param LanguageToUse the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.WorkflowCompilerParameters.LanguageToUse" target="_top">.NET documentation</a>
+     */
     public void setLanguageToUse(java.lang.String LanguageToUse) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

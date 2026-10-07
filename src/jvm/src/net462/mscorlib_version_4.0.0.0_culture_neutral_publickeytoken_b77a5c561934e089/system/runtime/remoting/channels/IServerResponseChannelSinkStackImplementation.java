@@ -103,7 +103,10 @@ public class IServerResponseChannelSinkStackImplementation extends NetObject imp
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IServerResponseChannelSinkStackImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -145,6 +148,15 @@ public class IServerResponseChannelSinkStackImplementation extends NetObject imp
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetResponseStream.
+     *
+     * @param msg the argument of type {@code IMessage}
+     * @param headers the argument of type {@code ITransportHeaders}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Channels.IServerResponseChannelSinkStack.GetResponseStream" target="_top">.NET documentation</a>
+     */
     public Stream GetResponseStream(IMessage msg, ITransportHeaders headers) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -160,6 +172,15 @@ public class IServerResponseChannelSinkStackImplementation extends NetObject imp
         }
     }
 
+    /**
+     * Invokes the .NET member AsyncProcessResponse.
+     *
+     * @param msg the argument of type {@code IMessage}
+     * @param headers the argument of type {@code ITransportHeaders}
+     * @param stream the argument of type {@code Stream}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Channels.IServerResponseChannelSinkStack.AsyncProcessResponse" target="_top">.NET documentation</a>
+     */
     public void AsyncProcessResponse(IMessage msg, ITransportHeaders headers, Stream stream) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

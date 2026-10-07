@@ -99,7 +99,10 @@ public class LookupBindingPropertiesAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public LookupBindingPropertiesAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class LookupBindingPropertiesAttribute extends system.Attribute  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.LookupBindingPropertiesAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public LookupBindingPropertiesAttribute() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -156,6 +165,16 @@ public class LookupBindingPropertiesAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param dataSource the argument of type {@code java.lang.String}
+     * @param displayMember the argument of type {@code java.lang.String}
+     * @param valueMember the argument of type {@code java.lang.String}
+     * @param lookupMember the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.LookupBindingPropertiesAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public LookupBindingPropertiesAttribute(java.lang.String dataSource, java.lang.String displayMember, java.lang.String valueMember, java.lang.String lookupMember) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -174,6 +193,13 @@ public class LookupBindingPropertiesAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property DataSource.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.LookupBindingPropertiesAttribute.DataSource" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDataSource() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +214,13 @@ public class LookupBindingPropertiesAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DisplayMember.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.LookupBindingPropertiesAttribute.DisplayMember" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDisplayMember() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +235,13 @@ public class LookupBindingPropertiesAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LookupMember.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.LookupBindingPropertiesAttribute.LookupMember" target="_top">.NET documentation</a>
+     */
     public java.lang.String getLookupMember() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +256,13 @@ public class LookupBindingPropertiesAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ValueMember.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.LookupBindingPropertiesAttribute.ValueMember" target="_top">.NET documentation</a>
+     */
     public java.lang.String getValueMember() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

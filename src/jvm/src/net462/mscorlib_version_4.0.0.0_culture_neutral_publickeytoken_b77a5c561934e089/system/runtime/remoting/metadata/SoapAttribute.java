@@ -99,7 +99,10 @@ public class SoapAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SoapAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class SoapAttribute extends system.Attribute  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Metadata.SoapAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public SoapAttribute() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +173,13 @@ public class SoapAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Embedded.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Metadata.SoapAttribute.Embedded" target="_top">.NET documentation</a>
+     */
     public boolean getEmbedded() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,6 +194,13 @@ public class SoapAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Embedded.
+     *
+     * @param Embedded the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Metadata.SoapAttribute.Embedded" target="_top">.NET documentation</a>
+     */
     public void setEmbedded(boolean Embedded) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +211,13 @@ public class SoapAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UseAttribute.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Metadata.SoapAttribute.UseAttribute" target="_top">.NET documentation</a>
+     */
     public boolean getUseAttribute() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +232,13 @@ public class SoapAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property UseAttribute.
+     *
+     * @param UseAttribute the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Metadata.SoapAttribute.UseAttribute" target="_top">.NET documentation</a>
+     */
     public void setUseAttribute(boolean UseAttribute) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -212,6 +249,13 @@ public class SoapAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlNamespace.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Metadata.SoapAttribute.XmlNamespace" target="_top">.NET documentation</a>
+     */
     public java.lang.String getXmlNamespace() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -226,6 +270,13 @@ public class SoapAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property XmlNamespace.
+     *
+     * @param XmlNamespace the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Metadata.SoapAttribute.XmlNamespace" target="_top">.NET documentation</a>
+     */
     public void setXmlNamespace(java.lang.String XmlNamespace) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -98,7 +98,10 @@ public class ImplicitResourceKey extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ImplicitResourceKey(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -145,6 +148,12 @@ public class ImplicitResourceKey extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Compilation.ImplicitResourceKey.-ctor" target="_top">.NET documentation</a>
+     */
     public ImplicitResourceKey() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -155,6 +164,15 @@ public class ImplicitResourceKey extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param filter the argument of type {@code java.lang.String}
+     * @param keyPrefix the argument of type {@code java.lang.String}
+     * @param property the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Compilation.ImplicitResourceKey.-ctor" target="_top">.NET documentation</a>
+     */
     public ImplicitResourceKey(java.lang.String filter, java.lang.String keyPrefix, java.lang.String property) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -173,6 +191,13 @@ public class ImplicitResourceKey extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Filter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Compilation.ImplicitResourceKey.Filter" target="_top">.NET documentation</a>
+     */
     public java.lang.String getFilter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +212,13 @@ public class ImplicitResourceKey extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Filter.
+     *
+     * @param Filter the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Compilation.ImplicitResourceKey.Filter" target="_top">.NET documentation</a>
+     */
     public void setFilter(java.lang.String Filter) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +229,13 @@ public class ImplicitResourceKey extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property KeyPrefix.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Compilation.ImplicitResourceKey.KeyPrefix" target="_top">.NET documentation</a>
+     */
     public java.lang.String getKeyPrefix() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -211,6 +250,13 @@ public class ImplicitResourceKey extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property KeyPrefix.
+     *
+     * @param KeyPrefix the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Compilation.ImplicitResourceKey.KeyPrefix" target="_top">.NET documentation</a>
+     */
     public void setKeyPrefix(java.lang.String KeyPrefix) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -221,6 +267,13 @@ public class ImplicitResourceKey extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Property.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Compilation.ImplicitResourceKey.Property" target="_top">.NET documentation</a>
+     */
     public java.lang.String getProperty() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -235,6 +288,13 @@ public class ImplicitResourceKey extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Property.
+     *
+     * @param Property the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Compilation.ImplicitResourceKey.Property" target="_top">.NET documentation</a>
+     */
     public void setProperty(java.lang.String Property) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

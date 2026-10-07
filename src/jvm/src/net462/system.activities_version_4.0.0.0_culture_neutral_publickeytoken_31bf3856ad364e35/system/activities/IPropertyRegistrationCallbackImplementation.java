@@ -99,7 +99,10 @@ public class IPropertyRegistrationCallbackImplementation extends NetObject imple
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IPropertyRegistrationCallbackImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -141,6 +144,13 @@ public class IPropertyRegistrationCallbackImplementation extends NetObject imple
 
     // Methods section
     
+    /**
+     * Invokes the .NET member Register.
+     *
+     * @param context the argument of type {@code RegistrationContext}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.IPropertyRegistrationCallback.Register" target="_top">.NET documentation</a>
+     */
     public void Register(RegistrationContext context) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -151,6 +161,13 @@ public class IPropertyRegistrationCallbackImplementation extends NetObject imple
         }
     }
 
+    /**
+     * Invokes the .NET member Unregister.
+     *
+     * @param context the argument of type {@code RegistrationContext}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.IPropertyRegistrationCallback.Unregister" target="_top">.NET documentation</a>
+     */
     public void Unregister(RegistrationContext context) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

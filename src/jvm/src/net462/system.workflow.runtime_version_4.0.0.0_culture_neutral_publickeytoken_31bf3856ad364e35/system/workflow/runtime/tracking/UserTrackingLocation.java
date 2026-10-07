@@ -99,7 +99,10 @@ public class UserTrackingLocation extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public UserTrackingLocation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class UserTrackingLocation extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.UserTrackingLocation.-ctor" target="_top">.NET documentation</a>
+     */
     public UserTrackingLocation() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -156,6 +165,13 @@ public class UserTrackingLocation extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param argumentTypeName the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.UserTrackingLocation.-ctor" target="_top">.NET documentation</a>
+     */
     public UserTrackingLocation(java.lang.String argumentTypeName) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -166,6 +182,14 @@ public class UserTrackingLocation extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param argumentTypeName the argument of type {@code java.lang.String}
+     * @param activityTypeName the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.UserTrackingLocation.-ctor" target="_top">.NET documentation</a>
+     */
     public UserTrackingLocation(java.lang.String argumentTypeName, java.lang.String activityTypeName) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -176,6 +200,14 @@ public class UserTrackingLocation extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param argumentTypeName the argument of type {@code java.lang.String}
+     * @param activityType the argument of type {@code NetType}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.UserTrackingLocation.-ctor" target="_top">.NET documentation</a>
+     */
     public UserTrackingLocation(java.lang.String argumentTypeName, NetType activityType) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -186,6 +218,13 @@ public class UserTrackingLocation extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param argumentType the argument of type {@code NetType}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.UserTrackingLocation.-ctor" target="_top">.NET documentation</a>
+     */
     public UserTrackingLocation(NetType argumentType) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -196,6 +235,14 @@ public class UserTrackingLocation extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param argumentType the argument of type {@code NetType}
+     * @param activityTypeName the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.UserTrackingLocation.-ctor" target="_top">.NET documentation</a>
+     */
     public UserTrackingLocation(NetType argumentType, java.lang.String activityTypeName) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -206,6 +253,14 @@ public class UserTrackingLocation extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param argumentType the argument of type {@code NetType}
+     * @param activityType the argument of type {@code NetType}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.UserTrackingLocation.-ctor" target="_top">.NET documentation</a>
+     */
     public UserTrackingLocation(NetType argumentType, NetType activityType) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -224,6 +279,13 @@ public class UserTrackingLocation extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property MatchDerivedActivityTypes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.UserTrackingLocation.MatchDerivedActivityTypes" target="_top">.NET documentation</a>
+     */
     public boolean getMatchDerivedActivityTypes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -238,6 +300,13 @@ public class UserTrackingLocation extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MatchDerivedActivityTypes.
+     *
+     * @param MatchDerivedActivityTypes the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.UserTrackingLocation.MatchDerivedActivityTypes" target="_top">.NET documentation</a>
+     */
     public void setMatchDerivedActivityTypes(boolean MatchDerivedActivityTypes) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -248,6 +317,13 @@ public class UserTrackingLocation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MatchDerivedArgumentTypes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.UserTrackingLocation.MatchDerivedArgumentTypes" target="_top">.NET documentation</a>
+     */
     public boolean getMatchDerivedArgumentTypes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -262,6 +338,13 @@ public class UserTrackingLocation extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MatchDerivedArgumentTypes.
+     *
+     * @param MatchDerivedArgumentTypes the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.UserTrackingLocation.MatchDerivedArgumentTypes" target="_top">.NET documentation</a>
+     */
     public void setMatchDerivedArgumentTypes(boolean MatchDerivedArgumentTypes) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -272,6 +355,13 @@ public class UserTrackingLocation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ActivityTypeName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.UserTrackingLocation.ActivityTypeName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getActivityTypeName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -286,6 +376,13 @@ public class UserTrackingLocation extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ActivityTypeName.
+     *
+     * @param ActivityTypeName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.UserTrackingLocation.ActivityTypeName" target="_top">.NET documentation</a>
+     */
     public void setActivityTypeName(java.lang.String ActivityTypeName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -296,6 +393,13 @@ public class UserTrackingLocation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ArgumentTypeName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.UserTrackingLocation.ArgumentTypeName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getArgumentTypeName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -310,6 +414,13 @@ public class UserTrackingLocation extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ArgumentTypeName.
+     *
+     * @param ArgumentTypeName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.UserTrackingLocation.ArgumentTypeName" target="_top">.NET documentation</a>
+     */
     public void setArgumentTypeName(java.lang.String ArgumentTypeName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -320,6 +431,13 @@ public class UserTrackingLocation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property KeyName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.UserTrackingLocation.KeyName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getKeyName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -334,6 +452,13 @@ public class UserTrackingLocation extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property KeyName.
+     *
+     * @param KeyName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.UserTrackingLocation.KeyName" target="_top">.NET documentation</a>
+     */
     public void setKeyName(java.lang.String KeyName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -344,6 +469,13 @@ public class UserTrackingLocation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ActivityType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.UserTrackingLocation.ActivityType" target="_top">.NET documentation</a>
+     */
     public NetType getActivityType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -359,6 +491,13 @@ public class UserTrackingLocation extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ActivityType.
+     *
+     * @param ActivityType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.UserTrackingLocation.ActivityType" target="_top">.NET documentation</a>
+     */
     public void setActivityType(NetType ActivityType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -369,6 +508,13 @@ public class UserTrackingLocation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ArgumentType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.UserTrackingLocation.ArgumentType" target="_top">.NET documentation</a>
+     */
     public NetType getArgumentType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -384,6 +530,13 @@ public class UserTrackingLocation extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ArgumentType.
+     *
+     * @param ArgumentType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.UserTrackingLocation.ArgumentType" target="_top">.NET documentation</a>
+     */
     public void setArgumentType(NetType ArgumentType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -394,6 +547,13 @@ public class UserTrackingLocation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Conditions.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.UserTrackingLocation.Conditions" target="_top">.NET documentation</a>
+     */
     public TrackingConditionCollection getConditions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

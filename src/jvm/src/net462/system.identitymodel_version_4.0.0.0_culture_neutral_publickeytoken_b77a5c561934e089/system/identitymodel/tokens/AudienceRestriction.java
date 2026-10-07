@@ -100,7 +100,10 @@ public class AudienceRestriction extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public AudienceRestriction(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class AudienceRestriction extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.AudienceRestriction.-ctor" target="_top">.NET documentation</a>
+     */
     public AudienceRestriction() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -157,6 +166,13 @@ public class AudienceRestriction extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param audienceMode the argument of type {@code AudienceUriMode}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.AudienceRestriction.-ctor" target="_top">.NET documentation</a>
+     */
     public AudienceRestriction(AudienceUriMode audienceMode) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -175,6 +191,13 @@ public class AudienceRestriction extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AllowedAudienceUris.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.AudienceRestriction.AllowedAudienceUris" target="_top">.NET documentation</a>
+     */
     public Collection_1 getAllowedAudienceUris() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +213,13 @@ public class AudienceRestriction extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AudienceMode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.AudienceRestriction.AudienceMode" target="_top">.NET documentation</a>
+     */
     public AudienceUriMode getAudienceMode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +235,13 @@ public class AudienceRestriction extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AudienceMode.
+     *
+     * @param AudienceMode the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.AudienceRestriction.AudienceMode" target="_top">.NET documentation</a>
+     */
     public void setAudienceMode(AudienceUriMode AudienceMode) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -98,7 +98,10 @@ public class IWorkflowDebuggerServiceImplementation extends NetObject implements
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IWorkflowDebuggerServiceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -140,6 +143,12 @@ public class IWorkflowDebuggerServiceImplementation extends NetObject implements
 
     // Methods section
     
+    /**
+     * Invokes the .NET member NotifyHandlerInvoked.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.DebugEngine.IWorkflowDebuggerService.NotifyHandlerInvoked" target="_top">.NET documentation</a>
+     */
     public void NotifyHandlerInvoked() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

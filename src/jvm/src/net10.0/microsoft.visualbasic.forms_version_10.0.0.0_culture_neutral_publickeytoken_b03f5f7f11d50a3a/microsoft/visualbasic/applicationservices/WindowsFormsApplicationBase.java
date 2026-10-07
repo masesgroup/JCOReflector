@@ -109,7 +109,10 @@ public class WindowsFormsApplicationBase extends microsoft.visualbasic.applicati
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public WindowsFormsApplicationBase(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,27 @@ public class WindowsFormsApplicationBase extends microsoft.visualbasic.applicati
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.-ctor" target="_top">.NET documentation</a>
+     */
     public WindowsFormsApplicationBase() throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.RankException, system.ArrayTypeMismatchException, system.NullReferenceException, system.NotSupportedException, system.MulticastNotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -166,6 +190,26 @@ public class WindowsFormsApplicationBase extends microsoft.visualbasic.applicati
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param authenticationMode the argument of type {@code AuthenticationMode}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.-ctor" target="_top">.NET documentation</a>
+     */
     public WindowsFormsApplicationBase(AuthenticationMode authenticationMode) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.InvalidOperationException, system.FormatException, system.security.SecurityException, system.NullReferenceException, system.MulticastNotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -180,6 +224,21 @@ public class WindowsFormsApplicationBase extends microsoft.visualbasic.applicati
     
     // Methods section
     
+    /**
+     * Invokes the .NET member DoEvents.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.componentmodel.InvalidAsynchronousStateException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.DoEvents" target="_top">.NET documentation</a>
+     */
     public void DoEvents() throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception, system.componentmodel.InvalidAsynchronousStateException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +249,46 @@ public class WindowsFormsApplicationBase extends microsoft.visualbasic.applicati
         }
     }
 
+    /**
+     * Invokes the .NET member Run.
+     *
+     * @param commandLine the argument of type {@code java.lang.String[]}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.threading.tasks.TaskSchedulerException if the .NET member raises it
+     * @throws system.net.networkinformation.NetworkInformationException if the .NET member raises it
+     * @throws system.net.sockets.SocketException if the .NET member raises it
+     * @throws microsoft.visualbasic.applicationservices.NoStartupFormException if the .NET member raises it
+     * @throws system.componentmodel.InvalidAsynchronousStateException if the .NET member raises it
+     * @throws system.reflection.AmbiguousMatchException if the .NET member raises it
+     * @throws system.AccessViolationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.AggregateException if the .NET member raises it
+     * @throws system.threading.tasks.TaskCanceledException if the .NET member raises it
+     * @throws microsoft.visualbasic.applicationservices.CantStartSingleInstanceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Run" target="_top">.NET documentation</a>
+     */
     public void Run(java.lang.String[] commandLine) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.threading.LockRecursionException, system.threading.AbandonedMutexException, system.componentmodel.Win32Exception, system.threading.SynchronizationLockException, system.componentmodel.InvalidEnumArgumentException, system.OutOfMemoryException, system.NullReferenceException, system.FormatException, system.threading.tasks.TaskSchedulerException, system.net.networkinformation.NetworkInformationException, system.net.sockets.SocketException, microsoft.visualbasic.applicationservices.NoStartupFormException, system.componentmodel.InvalidAsynchronousStateException, system.reflection.AmbiguousMatchException, system.AccessViolationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.AggregateException, system.threading.tasks.TaskCanceledException, microsoft.visualbasic.applicationservices.CantStartSingleInstanceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +299,46 @@ public class WindowsFormsApplicationBase extends microsoft.visualbasic.applicati
         }
     }
 
+    /**
+     * Invokes the .NET member Run.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.threading.tasks.TaskSchedulerException if the .NET member raises it
+     * @throws system.net.networkinformation.NetworkInformationException if the .NET member raises it
+     * @throws system.net.sockets.SocketException if the .NET member raises it
+     * @throws microsoft.visualbasic.applicationservices.NoStartupFormException if the .NET member raises it
+     * @throws system.componentmodel.InvalidAsynchronousStateException if the .NET member raises it
+     * @throws system.reflection.AmbiguousMatchException if the .NET member raises it
+     * @throws system.AccessViolationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.AggregateException if the .NET member raises it
+     * @throws system.threading.tasks.TaskCanceledException if the .NET member raises it
+     * @throws microsoft.visualbasic.applicationservices.CantStartSingleInstanceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Run" target="_top">.NET documentation</a>
+     */
     public void Run(JCORefOut dupParam0) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.threading.LockRecursionException, system.threading.AbandonedMutexException, system.componentmodel.Win32Exception, system.threading.SynchronizationLockException, system.componentmodel.InvalidEnumArgumentException, system.OutOfMemoryException, system.NullReferenceException, system.FormatException, system.threading.tasks.TaskSchedulerException, system.net.networkinformation.NetworkInformationException, system.net.sockets.SocketException, microsoft.visualbasic.applicationservices.NoStartupFormException, system.componentmodel.InvalidAsynchronousStateException, system.reflection.AmbiguousMatchException, system.AccessViolationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.AggregateException, system.threading.tasks.TaskCanceledException, microsoft.visualbasic.applicationservices.CantStartSingleInstanceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -214,6 +353,13 @@ public class WindowsFormsApplicationBase extends microsoft.visualbasic.applicati
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property SaveMySettingsOnExit.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SaveMySettingsOnExit" target="_top">.NET documentation</a>
+     */
     public boolean getSaveMySettingsOnExit() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -228,6 +374,13 @@ public class WindowsFormsApplicationBase extends microsoft.visualbasic.applicati
         }
     }
 
+    /**
+     * Sets the value of the .NET property SaveMySettingsOnExit.
+     *
+     * @param SaveMySettingsOnExit the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SaveMySettingsOnExit" target="_top">.NET documentation</a>
+     */
     public void setSaveMySettingsOnExit(boolean SaveMySettingsOnExit) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -238,6 +391,13 @@ public class WindowsFormsApplicationBase extends microsoft.visualbasic.applicati
         }
     }
 
+    /**
+     * Gets the value of the .NET property MinimumSplashScreenDisplayTime.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MinimumSplashScreenDisplayTime" target="_top">.NET documentation</a>
+     */
     public int getMinimumSplashScreenDisplayTime() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -278,6 +438,13 @@ public class WindowsFormsApplicationBase extends microsoft.visualbasic.applicati
         }
     }
 
+    /**
+     * Sets the value of the .NET property MinimumSplashScreenDisplayTime.
+     *
+     * @param MinimumSplashScreenDisplayTime the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MinimumSplashScreenDisplayTime" target="_top">.NET documentation</a>
+     */
     public void setMinimumSplashScreenDisplayTime(int MinimumSplashScreenDisplayTime) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -288,6 +455,13 @@ public class WindowsFormsApplicationBase extends microsoft.visualbasic.applicati
         }
     }
 
+    /**
+     * Gets the value of the .NET property ApplicationContext.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.ApplicationContext" target="_top">.NET documentation</a>
+     */
     public ApplicationContext getApplicationContext() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -303,6 +477,13 @@ public class WindowsFormsApplicationBase extends microsoft.visualbasic.applicati
         }
     }
 
+    /**
+     * Gets the value of the .NET property SplashScreen.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen" target="_top">.NET documentation</a>
+     */
     public Form getSplashScreen() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -318,6 +499,21 @@ public class WindowsFormsApplicationBase extends microsoft.visualbasic.applicati
         }
     }
 
+    /**
+     * Sets the value of the .NET property SplashScreen.
+     *
+     * @param SplashScreen the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen" target="_top">.NET documentation</a>
+     */
     public void setSplashScreen(Form SplashScreen) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -328,6 +524,13 @@ public class WindowsFormsApplicationBase extends microsoft.visualbasic.applicati
         }
     }
 
+    /**
+     * Gets the value of the .NET property OpenForms.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms" target="_top">.NET documentation</a>
+     */
     public FormCollection getOpenForms() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -348,6 +551,13 @@ public class WindowsFormsApplicationBase extends microsoft.visualbasic.applicati
     // Instance Events section
     
 
+    /**
+     * Invokes the .NET member addApplyApplicationDefaults.
+     *
+     * @param handler the argument of type {@code ApplyApplicationDefaultsEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addApplyApplicationDefaults(ApplyApplicationDefaultsEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -358,6 +568,13 @@ public class WindowsFormsApplicationBase extends microsoft.visualbasic.applicati
         }
     }
 
+    /**
+     * Invokes the .NET member removeApplyApplicationDefaults.
+     *
+     * @param handler the argument of type {@code ApplyApplicationDefaultsEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeApplyApplicationDefaults(ApplyApplicationDefaultsEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -368,6 +585,13 @@ public class WindowsFormsApplicationBase extends microsoft.visualbasic.applicati
         }
     }
 
+    /**
+     * Invokes the .NET member addShutdown.
+     *
+     * @param handler the argument of type {@code ShutdownEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addShutdown(ShutdownEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -378,6 +602,13 @@ public class WindowsFormsApplicationBase extends microsoft.visualbasic.applicati
         }
     }
 
+    /**
+     * Invokes the .NET member removeShutdown.
+     *
+     * @param handler the argument of type {@code ShutdownEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeShutdown(ShutdownEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -388,6 +619,13 @@ public class WindowsFormsApplicationBase extends microsoft.visualbasic.applicati
         }
     }
 
+    /**
+     * Invokes the .NET member addStartup.
+     *
+     * @param handler the argument of type {@code StartupEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addStartup(StartupEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -398,6 +636,13 @@ public class WindowsFormsApplicationBase extends microsoft.visualbasic.applicati
         }
     }
 
+    /**
+     * Invokes the .NET member removeStartup.
+     *
+     * @param handler the argument of type {@code StartupEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeStartup(StartupEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -408,6 +653,13 @@ public class WindowsFormsApplicationBase extends microsoft.visualbasic.applicati
         }
     }
 
+    /**
+     * Invokes the .NET member addStartupNextInstance.
+     *
+     * @param handler the argument of type {@code StartupNextInstanceEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addStartupNextInstance(StartupNextInstanceEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -418,6 +670,13 @@ public class WindowsFormsApplicationBase extends microsoft.visualbasic.applicati
         }
     }
 
+    /**
+     * Invokes the .NET member removeStartupNextInstance.
+     *
+     * @param handler the argument of type {@code StartupNextInstanceEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeStartupNextInstance(StartupNextInstanceEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -428,6 +687,13 @@ public class WindowsFormsApplicationBase extends microsoft.visualbasic.applicati
         }
     }
 
+    /**
+     * Invokes the .NET member addUnhandledException.
+     *
+     * @param handler the argument of type {@code UnhandledExceptionEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addUnhandledException(UnhandledExceptionEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -438,6 +704,13 @@ public class WindowsFormsApplicationBase extends microsoft.visualbasic.applicati
         }
     }
 
+    /**
+     * Invokes the .NET member removeUnhandledException.
+     *
+     * @param handler the argument of type {@code UnhandledExceptionEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeUnhandledException(UnhandledExceptionEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -448,6 +721,13 @@ public class WindowsFormsApplicationBase extends microsoft.visualbasic.applicati
         }
     }
 
+    /**
+     * Invokes the .NET member addNetworkAvailabilityChanged.
+     *
+     * @param handler the argument of type {@code NetworkAvailableEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addNetworkAvailabilityChanged(NetworkAvailableEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -458,6 +738,13 @@ public class WindowsFormsApplicationBase extends microsoft.visualbasic.applicati
         }
     }
 
+    /**
+     * Invokes the .NET member removeNetworkAvailabilityChanged.
+     *
+     * @param handler the argument of type {@code NetworkAvailableEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeNetworkAvailabilityChanged(NetworkAvailableEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

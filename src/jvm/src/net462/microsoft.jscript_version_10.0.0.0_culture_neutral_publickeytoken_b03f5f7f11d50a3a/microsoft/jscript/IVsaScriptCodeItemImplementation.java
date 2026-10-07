@@ -104,7 +104,10 @@ public class IVsaScriptCodeItemImplementation extends NetObject implements IVsaS
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IVsaScriptCodeItemImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,13 @@ public class IVsaScriptCodeItemImplementation extends NetObject implements IVsaS
 
     // Methods section
     
+    /**
+     * Invokes the .NET member Execute.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.IVsaScriptCodeItem.Execute" target="_top">.NET documentation</a>
+     */
     public NetObject Execute() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -161,6 +171,14 @@ public class IVsaScriptCodeItemImplementation extends NetObject implements IVsaS
         }
     }
 
+    /**
+     * Invokes the .NET member GetOption.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.IVsaScriptCodeItem.GetOption" target="_top">.NET documentation</a>
+     */
     public NetObject GetOption(java.lang.String name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -176,6 +194,14 @@ public class IVsaScriptCodeItemImplementation extends NetObject implements IVsaS
         }
     }
 
+    /**
+     * Invokes the .NET member AddEventSource.
+     *
+     * @param eventSourceName the argument of type {@code java.lang.String}
+     * @param eventSourceType the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.IVsaScriptCodeItem.AddEventSource" target="_top">.NET documentation</a>
+     */
     public void AddEventSource(java.lang.String eventSourceName, java.lang.String eventSourceType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -186,6 +212,13 @@ public class IVsaScriptCodeItemImplementation extends NetObject implements IVsaS
         }
     }
 
+    /**
+     * Invokes the .NET member AppendSourceText.
+     *
+     * @param text the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.IVsaScriptCodeItem.AppendSourceText" target="_top">.NET documentation</a>
+     */
     public void AppendSourceText(java.lang.String text) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -196,6 +229,13 @@ public class IVsaScriptCodeItemImplementation extends NetObject implements IVsaS
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveEventSource.
+     *
+     * @param eventSourceName the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.IVsaScriptCodeItem.RemoveEventSource" target="_top">.NET documentation</a>
+     */
     public void RemoveEventSource(java.lang.String eventSourceName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,6 +246,14 @@ public class IVsaScriptCodeItemImplementation extends NetObject implements IVsaS
         }
     }
 
+    /**
+     * Invokes the .NET member SetOption.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param value the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.IVsaScriptCodeItem.SetOption" target="_top">.NET documentation</a>
+     */
     public void SetOption(java.lang.String name, NetObject value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -220,6 +268,13 @@ public class IVsaScriptCodeItemImplementation extends NetObject implements IVsaS
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsDirty.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.IVsaScriptCodeItem.IsDirty" target="_top">.NET documentation</a>
+     */
     public boolean getIsDirty() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -234,6 +289,13 @@ public class IVsaScriptCodeItemImplementation extends NetObject implements IVsaS
         }
     }
 
+    /**
+     * Gets the value of the .NET property StartColumn.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.IVsaScriptCodeItem.StartColumn" target="_top">.NET documentation</a>
+     */
     public int getStartColumn() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -274,6 +336,13 @@ public class IVsaScriptCodeItemImplementation extends NetObject implements IVsaS
         }
     }
 
+    /**
+     * Sets the value of the .NET property StartColumn.
+     *
+     * @param StartColumn the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.IVsaScriptCodeItem.StartColumn" target="_top">.NET documentation</a>
+     */
     public void setStartColumn(int StartColumn) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -284,6 +353,13 @@ public class IVsaScriptCodeItemImplementation extends NetObject implements IVsaS
         }
     }
 
+    /**
+     * Gets the value of the .NET property StartLine.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.IVsaScriptCodeItem.StartLine" target="_top">.NET documentation</a>
+     */
     public int getStartLine() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -324,6 +400,13 @@ public class IVsaScriptCodeItemImplementation extends NetObject implements IVsaS
         }
     }
 
+    /**
+     * Sets the value of the .NET property StartLine.
+     *
+     * @param StartLine the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.IVsaScriptCodeItem.StartLine" target="_top">.NET documentation</a>
+     */
     public void setStartLine(int StartLine) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -334,6 +417,13 @@ public class IVsaScriptCodeItemImplementation extends NetObject implements IVsaS
         }
     }
 
+    /**
+     * Gets the value of the .NET property ItemType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.IVsaScriptCodeItem.ItemType" target="_top">.NET documentation</a>
+     */
     public JSVsaItemType getItemType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -349,6 +439,13 @@ public class IVsaScriptCodeItemImplementation extends NetObject implements IVsaS
         }
     }
 
+    /**
+     * Gets the value of the .NET property CodeDOM.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.IVsaScriptCodeItem.CodeDOM" target="_top">.NET documentation</a>
+     */
     public CodeObject getCodeDOM() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -364,6 +461,13 @@ public class IVsaScriptCodeItemImplementation extends NetObject implements IVsaS
         }
     }
 
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.IVsaScriptCodeItem.Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -378,6 +482,13 @@ public class IVsaScriptCodeItemImplementation extends NetObject implements IVsaS
         }
     }
 
+    /**
+     * Sets the value of the .NET property Name.
+     *
+     * @param Name the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.IVsaScriptCodeItem.Name" target="_top">.NET documentation</a>
+     */
     public void setName(java.lang.String Name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -388,6 +499,13 @@ public class IVsaScriptCodeItemImplementation extends NetObject implements IVsaS
         }
     }
 
+    /**
+     * Gets the value of the .NET property SourceText.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.IVsaScriptCodeItem.SourceText" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSourceText() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -402,6 +520,13 @@ public class IVsaScriptCodeItemImplementation extends NetObject implements IVsaS
         }
     }
 
+    /**
+     * Sets the value of the .NET property SourceText.
+     *
+     * @param SourceText the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.IVsaScriptCodeItem.SourceText" target="_top">.NET documentation</a>
+     */
     public void setSourceText(java.lang.String SourceText) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -29,6 +29,7 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -423,6 +424,163 @@ namespace MASES.JCOReflector.Engine
 
             // Standard non-generic types keep their native pure name untouched (e.g., ObjectSecurity)
             return type.Name;
+        }
+
+        // ----------------------------------------------------------------------------------------------
+        // Javadoc completion for the generated members.
+        // Paste these members inside the Reflector class (the one that contains GetJavaClassName).
+        // Needs: using System.Linq; using System.Text.RegularExpressions;
+        //
+        // The member templates carry placeholders inside their Javadoc comment. This function expands them
+        // reading the Java signature that follows the comment, so no chain of Replace has to know about them:
+        //   METHOD_JAVADOC_PARAMS, CTOR_JAVADOC_PARAMS  -> one @param line for each parameter of the signature
+        //   METHOD_JAVADOC_RETURN                       -> @return line, or nothing when the method is void
+        //   THROWABLE_JAVADOC                           -> one @throws line for each exception but Throwable
+        //   DOCUMENTATION_MEMBER_NAME                   -> <documentation name of the type>.<member name>
+        // A text without placeholders is returned as it is.
+        // ----------------------------------------------------------------------------------------------
+
+        static readonly Regex JavadocMemberRegex = new Regex(
+            @"(?<block>/\*\*(?:(?!\*/).)*\*/)(?<annotations>(?:[ \t]*\r?\n[ \t]*@[^\r\n]*)*)[ \t]*\r?\n(?<signature>[ \t]*(?:public|protected)[^\r\n]*)",
+            RegexOptions.Singleline | RegexOptions.CultureInvariant);
+
+        static readonly Regex JavadocSignatureRegex = new Regex(
+            @"^\s*(?:public|protected)\b(?<modifiers>[^(]*?)(?<name>\w+)\((?<parameters>[^)]*)\)\s*(?:throws\s+(?<throws>[^{;]+?))?\s*[{;]?\s*$",
+            RegexOptions.Singleline | RegexOptions.CultureInvariant);
+
+        // Name of a type in the URL of the .NET documentation: List`1 becomes List-1.
+        // It uses the same conversion applied to FULLYQUALIFIED_DOCUMENTATION_CLASS_NAME, so the link of a member
+        // and the link of its class follow the same rule.
+        static string GetDocumentationName(Type type)
+        {
+            // the FullName of a constructed generic type, like ICollection<KeyValuePair<string, JsonNode>>, lists the
+            // assembly qualified names of its arguments: the documentation page is the one of the generic definition
+            if (type.IsGenericType && !type.IsGenericTypeDefinition) type = type.GetGenericTypeDefinition();
+            return (type.FullName ?? type.Name).ConvertGenericForMicrosoftDocumentation();
+        }
+
+        // Splits a Java parameter list on the commas that are not inside generics: "NetObject a, JCORefOut<K, V> b".
+        static IEnumerable<string> SplitJavaParameters(string parameters)
+        {
+            int depth = 0, start = 0;
+            for (int i = 0; i < parameters.Length; i++)
+            {
+                char c = parameters[i];
+                if (c == '<') depth++;
+                else if (c == '>') depth--;
+                else if (c == ',' && depth == 0)
+                {
+                    yield return parameters.Substring(start, i - start);
+                    start = i + 1;
+                }
+            }
+            yield return parameters.Substring(start);
+        }
+
+        // Replaces a placeholder that stands alone on a line of the comment with the given lines.
+        // With no lines, the whole line is removed.
+        static string ReplaceJavadocLine(string block, string placeholder, IList<string> lines, string eol)
+        {
+            string escaped = Regex.Escape(placeholder);
+            if (lines.Count == 0)
+            {
+                return Regex.Replace(block, @"^[ \t]*\*[ \t]*" + escaped + @"[ \t]*\r?\n", string.Empty,
+                                     RegexOptions.Multiline | RegexOptions.CultureInvariant);
+            }
+            return Regex.Replace(block, @"^(?<prefix>[ \t]*\*[ \t]*)" + escaped + @"(?=[ \t]*\r?$)",
+                                 m =>
+                                 {
+                                     string prefix = m.Groups["prefix"].Value;
+                                     return prefix + string.Join(eol + prefix, lines);
+                                 },
+                                 RegexOptions.Multiline | RegexOptions.CultureInvariant);
+        }
+
+        // memberText: the text of one generated member, comment included.
+        // declaringType: the .NET type that declares the member (the class, or the interface for the explicit stubs).
+        static string CompleteMemberJavadoc(string memberText, Type declaringType)
+        {
+            if (string.IsNullOrEmpty(memberText)
+                || (memberText.IndexOf("JAVADOC", StringComparison.Ordinal) < 0
+                    && memberText.IndexOf("DOCUMENTATION_MEMBER_NAME", StringComparison.Ordinal) < 0))
+            {
+                return memberText;
+            }
+
+            return JavadocMemberRegex.Replace(memberText, match =>
+            {
+                var signature = JavadocSignatureRegex.Match(match.Groups["signature"].Value);
+                if (!signature.Success) return match.Value;
+
+                string block = match.Groups["block"].Value;
+                string eol = block.Contains("\r\n") ? "\r\n" : "\n";
+
+                string name = signature.Groups["name"].Value;
+                string modifiers = Regex.Replace(signature.Groups["modifiers"].Value.Trim(),
+                                                 @"^(?:(?:static|final|synchronized|abstract)\s+)*", string.Empty);
+
+                // type parameters of a generic method: "<T extends IJCOBridgeReflected, U extends IJCOBridgeReflected> ..."
+                var typeParameterTags = new List<string>();
+                var typeParameters = Regex.Match(modifiers, @"^<(?<list>[^>]*)>\s*");
+                if (typeParameters.Success)
+                {
+                    typeParameterTags = typeParameters.Groups["list"].Value.Split(',')
+                        .Select(t => t.Trim().Split(' ')[0])
+                        .Where(t => t.Length > 0)
+                        .Select(t => "@param <" + t + "> the type of the generic argument " + t)
+                        .ToList();
+                    modifiers = modifiers.Substring(typeParameters.Length);
+                }
+                bool isConstructor = modifiers.Length == 0;
+                bool isVoid = modifiers == "void";
+
+                var paramTags = typeParameterTags.Concat(SplitJavaParameters(signature.Groups["parameters"].Value)
+                    .Select(p => p.Trim())
+                    .Where(p => p.LastIndexOf(' ') > 0)
+                    .Select(p =>
+                    {
+                        int space = p.LastIndexOf(' ');
+                        return "@param " + p.Substring(space + 1) + " the argument of type {@code " + p.Substring(0, space).Trim() + "}";
+                    }))
+                    .ToList();
+
+                var returnTags = new List<string>();
+                if (!isConstructor && !isVoid) returnTags.Add("@return the value returned by the .NET member");
+
+                var throwTags = new List<string>();
+                if (signature.Groups["throws"].Success)
+                {
+                    throwTags = signature.Groups["throws"].Value.Split(',')
+                        .Select(e => e.Trim())
+                        .Where(e => e.Length > 0 && e != "Throwable" && e != "java.lang.Throwable")
+                        .Select(e => "@throws " + e + " if the .NET member raises it")
+                        .ToList();
+                }
+
+                // getX and setX are the Java accessors of the property X, the methods start with an upper case letter
+                string member = name;
+                if (isConstructor) member = "-ctor";
+                else if (name.Length > 3 && char.IsLower(name[0]) && char.IsUpper(name[3])
+                         && (name.StartsWith("get", StringComparison.Ordinal) || name.StartsWith("set", StringComparison.Ordinal)))
+                    member = name.Substring(3);
+
+                block = ReplaceJavadocLine(block, Const.Methods.METHOD_JAVADOC_PARAMS, paramTags, eol);
+                block = ReplaceJavadocLine(block, Const.CTor.CTOR_JAVADOC_PARAMS, paramTags, eol);
+                block = ReplaceJavadocLine(block, Const.Methods.METHOD_JAVADOC_RETURN, returnTags, eol);
+                block = ReplaceJavadocLine(block, Const.Exceptions.THROWABLE_JAVADOC, throwTags, eol);
+                string documentationName = declaringType == null ? null : GetDocumentationName(declaringType) + "." + member;
+                // a name with characters that are not valid in the URL would make the Javadoc fail: no link is better than a broken one
+                if (documentationName == null || documentationName.IndexOfAny(new[] { '[', ']', ',', ' ' }) >= 0)
+                {
+                    block = Regex.Replace(block, @"^[^\r\n]*DOCUMENTATION_MEMBER_NAME[^\r\n]*\r?\n", string.Empty, RegexOptions.Multiline);
+                }
+                else
+                {
+                    block = block.Replace("DOCUMENTATION_MEMBER_NAME", documentationName);
+                }
+
+                return block + match.Value.Substring(match.Groups["block"].Length);
+            });
         }
 
         static string ConvertGenericForMicrosoftDocumentation(this string input)
@@ -1562,7 +1720,7 @@ namespace MASES.JCOReflector.Engine
                 // TOTAL FIX VIA TARGETED INJECTION: One single replacement shot handles both empty and loaded constructors
                 otherCtor = otherCtor.Replace(Const.CTor.CTOR_NEWOBJECT_PARAMETERS, isGenericCtor ? newObjParamStrGeneric : newObjParamStr);
 
-                ctors.AppendLine(otherCtor);
+                ctors.AppendLine(CompleteMemberJavadoc(otherCtor, type));
 
                 Interlocked.Increment(ref implementedCtors);
             }
@@ -1572,8 +1730,8 @@ namespace MASES.JCOReflector.Engine
             if (!isException && !hasDefaultCtor)
             {
                 ctors = new StringBuilder();
-                ctors.AppendLine(defaultCtor);
-                ctors.AppendLine(ctorsStr);
+                ctors.AppendLine(CompleteMemberJavadoc(defaultCtor, type));
+                ctors.AppendLine(CompleteMemberJavadoc(ctorsStr, type));
                 ctorsStr = ctors.ToString();
             }
 
@@ -2462,17 +2620,17 @@ namespace MASES.JCOReflector.Engine
                     methodsNameCreated.Add(item.Name);
                     if (isInterface)
                     {
-                        methodInterfaceBuilder.AppendLine(methodInterfaceStr);
+                        methodInterfaceBuilder.AppendLine(CompleteMemberJavadoc(methodInterfaceStr, type));
                         if (EnableDuplicateMethodNativeArrayWithJCRefOut && !string.IsNullOrEmpty(dupMethodInterfaceStr) && !methodsDuplicatedCreated.Contains(dupMethodSignature))
                         {
-                            methodInterfaceBuilder.AppendLine(dupMethodInterfaceStr);
+                            methodInterfaceBuilder.AppendLine(CompleteMemberJavadoc(dupMethodInterfaceStr, type));
                         }
                     }
 
-                    methodBuilder.AppendLine(methodStr);
+                    methodBuilder.AppendLine(CompleteMemberJavadoc(methodStr, type));
                     if (EnableDuplicateMethodNativeArrayWithJCRefOut && !string.IsNullOrEmpty(dupMethodStr) && !methodsDuplicatedCreated.Contains(dupMethodSignature))
                     {
-                        methodBuilder.AppendLine(dupMethodStr);
+                        methodBuilder.AppendLine(CompleteMemberJavadoc(dupMethodStr, type));
                         methodsDuplicatedCreated.Add(dupMethodSignature);
                     }
                     if (withInheritance)
@@ -2853,10 +3011,10 @@ namespace MASES.JCOReflector.Engine
 
                         Interlocked.Increment(ref extraImplementedMethods);
 
-                        methodBuilder.AppendLine(methodStr);
+                        methodBuilder.AppendLine(CompleteMemberJavadoc(methodStr, implementableInterface));
                         if (EnableDuplicateMethodNativeArrayWithJCRefOut && !string.IsNullOrEmpty(dupMethodStr) && !methodsDuplicatedCreated.Contains(dupMethodSignature))
                         {
-                            methodBuilder.AppendLine(dupMethodStr);
+                            methodBuilder.AppendLine(CompleteMemberJavadoc(dupMethodStr, implementableInterface));
                             methodsDuplicatedCreated.Add(dupMethodSignature);
                         }
                     }
@@ -3104,7 +3262,7 @@ namespace MASES.JCOReflector.Engine
                             string propertyInterfaceTemplate = Const.Templates.GetTemplate(isArray ? Const.Templates.ReflectorInterfaceGetArrayTemplate : Const.Templates.ReflectorInterfaceGetTemplate);
 
                             var propertyInterfaceStr = BuildPropertySignature(propertyInterfaceTemplate, isNewPropertyVal ? newPropertyName : propertyName, propertyName, propertyType, exceptionStr, isPrimitive, isArray, isPropertyTypeInterface, statics, string.Empty);
-                            propertyInterfaceBuilder.AppendLine(propertyInterfaceStr);
+                            propertyInterfaceBuilder.AppendLine(CompleteMemberJavadoc(propertyInterfaceStr, type));
                         }
 
                         if (withInheritance ? (isInterface || (item.GetMethod.GetBaseDefinition().DeclaringType == type)) : true)
@@ -3153,7 +3311,7 @@ namespace MASES.JCOReflector.Engine
                                 propertyStr = propertyStr.Replace("new IJCOBridgeReflected(", "new NetObject(");
                             }
 
-                            propertyBuilder.AppendLine(propertyStr);
+                            propertyBuilder.AppendLine(CompleteMemberJavadoc(propertyStr, type));
                         }
                     }
                     if (item.CanWrite) // set
@@ -3172,7 +3330,7 @@ namespace MASES.JCOReflector.Engine
                             string propertyInterfaceTemplate = Const.Templates.GetTemplate(Const.Templates.ReflectorInterfaceSetTemplate);
 
                             var propertyInterfaceStr = BuildPropertySignature(propertyInterfaceTemplate, isNewPropertyVal ? newPropertyName : propertyName, propertyName, propertyType, exceptionStr, isPrimitive, isArray, isPropertyTypeInterface, statics, string.Empty);
-                            propertyInterfaceBuilder.AppendLine(propertyInterfaceStr);
+                            propertyInterfaceBuilder.AppendLine(CompleteMemberJavadoc(propertyInterfaceStr, type));
                         }
 
                         if (withInheritance ? (isInterface || (item.SetMethod.GetBaseDefinition().DeclaringType == type)) : true)
@@ -3201,7 +3359,7 @@ namespace MASES.JCOReflector.Engine
                                 propertyStr = propertyStr.Replace("new IJCOBridgeReflected(", "new NetObject(");
                             }
 
-                            propertyBuilder.AppendLine(propertyStr);
+                            propertyBuilder.AppendLine(CompleteMemberJavadoc(propertyStr, type));
                         }
                     }
                     propertiesSignaturesCreated.Add(item.ToString());
@@ -3312,7 +3470,7 @@ namespace MASES.JCOReflector.Engine
                                 }
 
                                 var propertyStr = BuildPropertySignature(templateToUse, isNewPropertyVal ? newPropertyName : propertyName, propertyName, propertyType, exceptionStr, isPrimitive, isArray, isPropertyTypeInterface, statics, implementableInterface.Name);
-                                propertyBuilder.AppendLine(propertyStr);
+                                propertyBuilder.AppendLine(CompleteMemberJavadoc(propertyStr, implementableInterface));
                             }
                         }
                         if (item.CanWrite) // set
@@ -3330,7 +3488,7 @@ namespace MASES.JCOReflector.Engine
                             {
                                 templateToUse = Const.Templates.GetTemplate(Const.Templates.ReflectorClassSetDeprecatedTemplate);
                                 var propertyStr = BuildPropertySignature(templateToUse, isNewPropertyVal ? newPropertyName : propertyName, propertyName, propertyType, exceptionStr, isPrimitive, isArray, isPropertyTypeInterface, statics, implementableInterface.Name);
-                                propertyBuilder.AppendLine(propertyStr);
+                                propertyBuilder.AppendLine(CompleteMemberJavadoc(propertyStr, implementableInterface));
                             }
                         }
 
@@ -3450,6 +3608,7 @@ namespace MASES.JCOReflector.Engine
             // expression token (no leading/trailing comma), and the single Join below owns all
             // separators. This removes the mismatch that produced "Invoke(sender, , e)".
             List<string> execParamTokens = new List<string>();
+            List<string> javadocParams = new List<string>();
             foreach (var parameter in parameters)
             {
                 string paramType = string.Empty;
@@ -3475,6 +3634,7 @@ namespace MASES.JCOReflector.Engine
                 if (!isManaged) break;
 
                 var paramName = ReplaceSinglekeyword(parameter.Name);
+                javadocParams.Add(string.Format("@param {0} the .NET argument of type {{@code {1}}}", paramName, parameter.ParameterType));
 
                 if (isArray)
                 {
@@ -3547,6 +3707,8 @@ namespace MASES.JCOReflector.Engine
             }
 
             string execParamStr = string.Join(", ", execParamTokens);
+            var javadocEol = interfaceTemplateToUse.Contains("\r\n") ? "\r\n" : "\n";
+            string javadocParamsStr = string.Join(javadocEol + "     * ", javadocParams);
 
             var exceptionStr = invokeMethod.ExceptionStringBuilder(imports);
             var importsStr = imports.ExportImports();
@@ -3578,6 +3740,7 @@ namespace MASES.JCOReflector.Engine
                                                      .Replace(Const.Class.GENERIC_CLASS_PARAMETERS, classParameters) // Resolves placeholder inside the <...> block
                                                      .Replace(Const.Delegates.DELEGATE_RETURN_TYPE, (isRetValArray) ? returnType + Const.SpecialNames.ArrayTrailer : returnType)
                                                      .Replace(Const.Delegates.DELEGATE_PARAMETERS, inputParamStr)
+                                                     .Replace(Const.Delegates.DELEGATE_JAVADOC_PARAMS, javadocParamsStr)
                                                      .Replace(Const.Class.JCOREFLECTOR_VERSION, reflectorVersion);
             var pathToSaveTo = packageName.Replace('.', '\\');
         
@@ -3597,6 +3760,7 @@ namespace MASES.JCOReflector.Engine
                                                              .Replace(Const.Methods.METHOD_MODIFIER_KEYWORD, string.Empty)
                                                              .Replace(Const.Methods.METHOD_OBJECT, Const.Class.INSTANCE_CLASS_NAME)
                                                              .Replace(Const.Exceptions.THROWABLE_TEMPLATE, string.Empty);
+            dynamicInvokeStr = CompleteMemberJavadoc(dynamicInvokeStr, typeof(Delegate));
             var delegateStr = classTemplateToUse.Replace(Const.Delegates.PACKAGE_NAME, packageName)
                                                 .Replace(Const.Delegates.PACKAGE_IMPORT_SECTION, importsStr)
                                                 .Replace(Const.Class.PACKAGE_CLASS_NAME, javaClassName) // Pure name replacement, does not corrupt interface substring
@@ -3609,6 +3773,7 @@ namespace MASES.JCOReflector.Engine
                                                 .Replace(Const.Delegates.DELEGATE_INVOKE_PARAMETERS_CONVERTER_BLOCK, converterBlockStr)
                                                 .Replace(Const.Delegates.DELEGATE_INVOKE_PARAMETERS, execParamStr)
                                                 .Replace(Const.Delegates.DELEGATE_PARAMETERS, inputParamStr)
+                                                .Replace(Const.Delegates.DELEGATE_JAVADOC_PARAMS, javadocParamsStr)
                                                 .Replace(Const.Delegates.DELEGATE_RETURN_STATEMENT, strReturnStatement)
                                                 .Replace(Const.Delegates.DELEGATE_RETURN_TYPE, (isRetValArray) ? returnType + Const.SpecialNames.ArrayTrailer : returnType)
                                                 .Replace(Const.Delegates.DELEGATE_PRIMITIVE_DEFAULT_VALUE, defaultPrimitiveReturnValue)

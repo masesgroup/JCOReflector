@@ -175,7 +175,10 @@ DELEGATE_RETURN_STATEMENT
         callerInstance = instance;
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     @SuppressWarnings("unchecked")
     public PACKAGE_CLASS_NAME(java.lang.Object instance) throws Throwable {
@@ -200,7 +203,10 @@ DELEGATE_RETURN_STATEMENT
 
 DELEGATE_DYNAMIC_INVOKE_SECTION
     /**
-     * Methods invoked in JVM when an event is raised in CLR 
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * DELEGATE_JAVADOC_PARAMS
+     * @return the value returned to the CLR; this default implementation returns {@code null}
      */
     public DELEGATE_RETURN_TYPE Invoke(DELEGATE_PARAMETERS) {
         return null;

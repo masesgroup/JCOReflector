@@ -1,3 +1,10 @@
+    /**
+     * Invokes the .NET member METHOD_ENUMERATOR_NAME.
+     *
+     * METHOD_JAVADOC_RETURN
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public METHOD_RETURN_TYPE METHOD_ENUMERATOR_NAME() throws Throwable {
         return new METHOD_IMPLEMENTATION_RETURN_TYPE(classInstance);
     }

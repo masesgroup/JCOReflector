@@ -1,15 +1,47 @@
+    /**
+     * Invokes the .NET member add.
+     *
+     * @param val the argument of type {@code PACKAGE_CLASS_NAME}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public final PACKAGE_CLASS_NAME add(PACKAGE_CLASS_NAME val) throws Throwable {
         return new PACKAGE_CLASS_NAME(NetEnum.add(classInstance, val.classInstance));
     }
 
+    /**
+     * Invokes the .NET member remove.
+     *
+     * @param val the argument of type {@code PACKAGE_CLASS_NAME}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public final PACKAGE_CLASS_NAME remove(PACKAGE_CLASS_NAME val) throws Throwable {
         return new PACKAGE_CLASS_NAME(NetEnum.remove(classInstance, val.classInstance));
     }
 
+    /**
+     * Invokes the .NET member is.
+     *
+     * @param val the argument of type {@code PACKAGE_CLASS_NAME}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public final boolean is(PACKAGE_CLASS_NAME val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
+    /**
+     * Invokes the .NET member has.
+     *
+     * @param val the argument of type {@code PACKAGE_CLASS_NAME}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public final boolean has(PACKAGE_CLASS_NAME val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }

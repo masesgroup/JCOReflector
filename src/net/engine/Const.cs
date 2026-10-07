@@ -569,6 +569,7 @@ namespace MASES.JCOReflector.Engine
         public class CTor
         {
             public const string CTOR_PARAMETERS = "CTOR_PARAMETERS";
+            public const string CTOR_JAVADOC_PARAMS = "CTOR_JAVADOC_PARAMS";
             public const string CTOR_NEWOBJECT_PARAMETERS = "CTOR_NEWOBJECT_PARAMETERS";
 
             public static string DEFAULT_CTOR = "    public PACKAGE_CLASS_NAME() throws Throwable {" + Environment.NewLine +
@@ -582,9 +583,11 @@ namespace MASES.JCOReflector.Engine
             public const string METHOD_NAME = "METHOD_NAME";
             public const string METHOD_OBJECT = "METHOD_OBJECT";
             public const string METHOD_RETURN_TYPE = "METHOD_RETURN_TYPE";
+            public const string METHOD_JAVADOC_RETURN = "METHOD_JAVADOC_RETURN";
             public const string METHOD_IMPLEMENTATION_RETURN_TYPE = "METHOD_IMPLEMENTATION_RETURN_TYPE";
             public const string METHOD_RETURN_INNER_TYPE = "METHOD_RETURN_INNER_TYPE";
             public const string METHOD_PARAMETERS = "METHOD_PARAMETERS";
+            public const string METHOD_JAVADOC_PARAMS = "METHOD_JAVADOC_PARAMS";
             public const string METHOD_INVOKE_PARAMETERS = "METHOD_INVOKE_PARAMETERS";
 
             public const string DUPLICATED_PARAMETER_PROTO = "dupParam{0}";
@@ -651,6 +654,7 @@ namespace MASES.JCOReflector.Engine
             public const string DELEGATE_NAME = "DELEGATE_NAME";
             public const string DELEGATE_RETURN_TYPE = "DELEGATE_RETURN_TYPE";
             public const string DELEGATE_PARAMETERS = "DELEGATE_PARAMETERS";
+            public const string DELEGATE_JAVADOC_PARAMS = "DELEGATE_JAVADOC_PARAMS";
             public const string DELEGATE_INVOKE_PARAMETERS = "DELEGATE_INVOKE_PARAMETERS";
             public const string DELEGATE_INVOKE_PARAMETERS_CONVERTER_BLOCK = "DELEGATE_INVOKE_PARAMETERS_CONVERTER_BLOCK";
             public const string DELEGATE_PRIMITIVE_DEFAULT_VALUE = "DELEGATE_PRIMITIVE_DEFAULT_VALUE";
@@ -732,6 +736,7 @@ namespace MASES.JCOReflector.Engine
         public class Exceptions
         {
             public const string THROWABLE_TEMPLATE = "THROWABLE_TEMPLATE";
+            public const string THROWABLE_JAVADOC = "THROWABLE_JAVADOC";
             public const string DEFAULT_EXCEPTION = "Throwable";
             public const string SINGLE_EXCEPTION_PROTO = ", {0}.{1}";
         }

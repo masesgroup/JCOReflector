@@ -28,12 +28,26 @@ import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
 import java.util.concurrent.ConcurrentHashMap;
 
+/**
+ * Helper for the generic classes that do not extend {@link NetObject}, such as the generic delegates.
+ * <p>
+ * It offers the same logic used by {@link NetObject}: it reads the type arguments from the anonymous subclass
+ * of a generic class ({@code new Foo<Bar>() {}}), builds the name of the closed CLR type and instantiates the
+ * type arguments reflectively.
+ */
 public final class NetGenericHelper {
     private static final ConcurrentHashMap<Class<?>, Class<?>[]> cache = new ConcurrentHashMap<>();
 
     private NetGenericHelper() {}
 
-    /* Type arguments captured by the anonymous subclass: new Foo<Bar>() {} */
+    /**
+     * Returns the type arguments captured by the anonymous subclass, as in {@code new Foo<Bar>() {}}.
+     * The result is cached for each class.
+     *
+     * @param instanceClass the class of the instance: it must be an anonymous subclass of a generic class
+     * @return the classes of the type arguments, in declaration order
+     * @throws IllegalArgumentException if the instance was not created with the anonymous subclass syntax, or if a type argument is not a plain class
+     */
     public static Class<?>[] resolveTypeArguments(Class<?> instanceClass) {
         Class<?>[] resolved = cache.get(instanceClass);
         if (resolved != null) return resolved;
@@ -53,6 +67,15 @@ public final class NetGenericHelper {
         return resolved;
     }
 
+    /**
+     * Builds the name of a closed generic CLR type, for example {@code System.Collections.Generic.List`1[System.Object]}.
+     * The name of each type argument is read from its public static {@code className} field.
+     *
+     * @param openClrName the name of the open generic type, for example {@code System.Collections.Generic.List`1}
+     * @param typeArguments the classes of the type arguments
+     * @return the name of the closed generic type
+     * @throws IllegalArgumentException if a type argument does not expose a public static {@code className} field
+     */
     public static String buildClosedClrName(String openClrName, Class<?>[] typeArguments) {
         StringBuilder sb = new StringBuilder(openClrName).append('[');
         for (int i = 0; i < typeArguments.length; i++) {
@@ -67,6 +90,17 @@ public final class NetGenericHelper {
         return sb.append(']').toString();
     }
 
+    /**
+     * Reflectively builds an instance of a type argument, wrapping a native handle returned from the bridge.
+     * It uses the public constructor of the type argument that accepts a single {@code Object}.
+     *
+     * @param <X> the type of the instance to build
+     * @param typeArguments the classes of the type arguments
+     * @param index the position of the type argument to instantiate
+     * @param nativeHandle the native object returned from the bridge
+     * @return the new instance of the type argument
+     * @throws Throwable if the type argument has no public constructor accepting a single {@code Object}, or if that constructor fails
+     */
     @SuppressWarnings("unchecked")
     public static <X> X instantiate(Class<?>[] typeArguments, int index, Object nativeHandle) throws Throwable {
         try {

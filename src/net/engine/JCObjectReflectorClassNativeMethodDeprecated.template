@@ -1,8 +1,14 @@
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToMETHOD_INTERFACE_NAME method available in METHOD_INTERFACE_NAME to obtain an object with an invocable method
+     *
+     * METHOD_JAVADOC_PARAMS
+     * METHOD_JAVADOC_RETURN
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * THROWABLE_JAVADOC
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public METHOD_MODIFIER_KEYWORDMETHOD_RETURN_TYPE METHOD_JAVA_NAME(METHOD_PARAMETERS) throws ThrowableTHROWABLE_TEMPLATE {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToMETHOD_INTERFACE_NAME to obtain the full interface.");
     }

@@ -77,6 +77,7 @@ public class JCORefOut<T> {
      * Returns an instance of {@link JCRefOut} to be passed to the underlying layer
      * 
      * @return an instance of {@link JCRefOut}
+     * @throws Throwable if the call fails in the bridge or in the CLR
      */
     public Object getJCRefOut() throws Throwable {
         if (mrefObj != null) {

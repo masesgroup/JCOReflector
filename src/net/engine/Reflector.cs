@@ -619,11 +619,11 @@ namespace MASES.JCOReflector.Engine
             Const.SpecialNames.ExportingAvoidanceMap.Add(@"^System\.Threading\.Thread$", new string[] { "VolatileRead" });
             Const.SpecialNames.ExportingAvoidanceMap.Add(@"^System\.Threading\.Volatile$", new string[] { "Read" });
             Const.SpecialNames.ExportingAvoidanceMap.Add(@"^System\.Threading\.Interlocked$", new string[] { "Decrement", "Increment"
-#if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
+#if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0 || NET11_0
                                                                                               , "Read"
 #endif
                                                                                             });
-#if NET7_0 || NET8_0 || NET9_0 || NET10_0
+#if NET7_0 || NET8_0 || NET9_0 || NET10_0 || NET11_0
             Const.SpecialNames.ExportingAvoidanceMap.Add(@"^System\.Runtime\.InteropServices\.JavaScript\.JSMarshalerArgument$", new string[] { "ToManaged" });
             if (EnableGenerics)
             {
@@ -636,10 +636,10 @@ namespace MASES.JCOReflector.Engine
                 Const.SpecialNames.ExportingAvoidanceMap.Add(@"^System\.I(Span|Utf8Span)?Parsable`\d+$", null);
             }
 #endif
-#if NET8_0 || NET9_0 || NET10_0
+#if NET8_0 || NET9_0 || NET10_0 || NET11_0
             Const.SpecialNames.ExportingAvoidanceMap.Add(@"^System\.Runtime\.InteropServices\.Marshalling\.IIUnknownInterfaceType$", null);
 #endif
-#if NET10_0
+#if NET10_0 || NET11_0
             Const.SpecialNames.ExportingAvoidanceMap.Add(@"^System\.MemoryExtensions$", null);
             Const.SpecialNames.ExportingAvoidanceMap.Add(@"^System\.Runtime\.InteropServices\.Java\.JavaMarshal$", new string[] { "Initialize" });
 #endif

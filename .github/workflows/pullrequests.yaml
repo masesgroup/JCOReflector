@@ -99,7 +99,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        framework: [ 'net462', 'net8.0', 'net9.0', 'net10.0' ]
+        framework: [ 'net462', 'net8.0', 'net9.0', 'net10.0', 'net11.0' ]
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -114,9 +114,16 @@ jobs:
           fetch-depth: '1'
 
       - uses: actions/setup-dotnet@v6
+        if: matrix.framework == 'net10.0'
         with:
           dotnet-version: |
             10.x
+
+      - uses: actions/setup-dotnet@v6
+        if: matrix.framework == 'net11.0'
+        with:
+          dotnet-version: '11.0.x'
+          dotnet-quality: 'preview'
 
       # Runs a set of commands using the runners shell
       - name: Build JCOReflectorCLI
@@ -213,6 +220,11 @@ jobs:
         if: matrix.framework == 'net10.0'
         shell: bash
         run: echo "JCOBRIDGE_CoreCLRVersion=10" >> $GITHUB_ENV
+
+      - name: Prepare extra argument
+        if: matrix.framework == 'net11.0'
+        shell: bash
+        run: echo "JCOBRIDGE_CoreCLRVersion=11" >> $GITHUB_ENV
 
       - name: Build Clojure test source files
         shell: pwsh

@@ -91,7 +91,7 @@ jobs:
       fail-fast: false
       matrix:
         os: [ 'windows-2022' ]
-        framework: [ 'net462', 'net8.0', 'net9.0', 'net10.0' ]
+        framework: [ 'net462', 'net8.0', 'net9.0', 'net10.0', 'net11.0' ]
 
     # The type of runner that the job will run on
     runs-on: ${{ matrix.os }}
@@ -109,9 +109,16 @@ jobs:
           fetch-depth: '1'
 
       - uses: actions/setup-dotnet@v6
+        if: matrix.framework == 'net10.0'
         with:
           dotnet-version: |
             10.x
+
+      - uses: actions/setup-dotnet@v6
+        if: matrix.framework == 'net11.0'
+        with:
+          dotnet-version: '11.0.x'
+          dotnet-quality: 'preview'
 
       - name: Download pscp directly
         if: ${{ inputs.UseSpecialSettings == true }}
@@ -247,7 +254,7 @@ jobs:
       fail-fast: false
       matrix:
         os: [ 'ubuntu-22.04' ]
-        framework: [ 'net8.0', 'net9.0', 'net10.0' ]
+        framework: [ 'net8.0', 'net9.0', 'net10.0', 'net11.0' ]
     # The type of runner that the job will run on
     runs-on: ${{ matrix.os }}
 
@@ -259,10 +266,22 @@ jobs:
           fetch-depth: '1'
 
       - uses: actions/setup-dotnet@v6
+        if: matrix.framework == 'net9.0'
         with:
           dotnet-version: |
             9.x
+
+      - uses: actions/setup-dotnet@v6
+        if: matrix.framework == 'net10.0'
+        with:
+          dotnet-version: |
             10.x
+
+      - uses: actions/setup-dotnet@v6
+        if: matrix.framework == 'net11.0'
+        with:
+          dotnet-version: '11.0.x'
+          dotnet-quality: 'preview'
 
       - name: Install sshpass
         if: ${{ inputs.UseSpecialSettings == true }}
@@ -377,7 +396,7 @@ jobs:
       fail-fast: false
       matrix:
         os: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_win_os) }}
-        framework: [ 'net462', 'net8.0', 'net9.0', 'net10.0' ]
+        framework: [ 'net462', 'net8.0', 'net9.0', 'net10.0', 'net11.0' ]
         jdk_vendor: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_jdk_vendor) }}
         jdk_version: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_jdk_version) }} # only LTS versions
         exclude:
@@ -434,6 +453,12 @@ jobs:
           dotnet-version: |
             10.x
 
+      - uses: actions/setup-dotnet@v6
+        if: matrix.framework == 'net11.0'
+        with:
+          dotnet-version: '11.0.x'
+          dotnet-quality: 'preview'
+
       - name: Solved issue using workaround in https://github.com/actions/partner-runner-images/issues/99#issue-3075011959
         if: ${{ matrix.os == 'windows-11-arm' }}
         run: choco install zstandard
@@ -474,6 +499,11 @@ jobs:
         if: matrix.framework == 'net10.0'
         shell: bash
         run: echo "JCOBRIDGE_CoreCLRVersion=10" >> $GITHUB_ENV
+
+      - name: Prepare extra argument
+        if: matrix.framework == 'net11.0'
+        shell: bash
+        run: echo "JCOBRIDGE_CoreCLRVersion=11" >> $GITHUB_ENV
 
       - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" generics.AnonymousSubclassConstruction
         continue-on-error: ${{ inputs.ForceExecution == true }}
@@ -543,7 +573,7 @@ jobs:
       fail-fast: false
       matrix:
         os: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_win_os) }}
-        framework: [ 'net462', 'net8.0', 'net9.0', 'net10.0' ]
+        framework: [ 'net462', 'net8.0', 'net9.0', 'net10.0', 'net11.0' ]
         jdk_vendor: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_jdk_vendor) }}
         jdk_version: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_jdk_version) }} # only LTS versions
         exclude:
@@ -600,6 +630,12 @@ jobs:
           dotnet-version: |
             10.x
 
+      - uses: actions/setup-dotnet@v6
+        if: matrix.framework == 'net11.0'
+        with:
+          dotnet-version: '11.0.x'
+          dotnet-quality: 'preview'
+
       - name: Solved issue using workaround in https://github.com/actions/partner-runner-images/issues/99#issue-3075011959
         if: ${{ matrix.os == 'windows-11-arm' }}
         run: choco install zstandard
@@ -644,6 +680,11 @@ jobs:
         if: matrix.framework == 'net10.0'
         shell: bash
         run: echo "JCOBRIDGE_CoreCLRVersion=10" >> $GITHUB_ENV
+
+      - name: Prepare extra argument
+        if: matrix.framework == 'net11.0'
+        shell: bash
+        run: echo "JCOBRIDGE_CoreCLRVersion=11" >> $GITHUB_ENV        
 
       - name: Build Scala test source file for ${{ matrix.framework }}
         continue-on-error: ${{ inputs.ForceExecution == true }}
@@ -743,7 +784,7 @@ jobs:
       fail-fast: false
       matrix:
         os: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_win_os) }}
-        framework: [ 'net462', 'net8.0', 'net9.0', 'net10.0' ]
+        framework: [ 'net462', 'net8.0', 'net9.0', 'net10.0', 'net11.0' ]
         jdk_vendor: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_jdk_vendor) }}
         jdk_version: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_jdk_version) }} # only LTS versions
         exclude:
@@ -800,6 +841,12 @@ jobs:
           dotnet-version: |
             10.x
 
+      - uses: actions/setup-dotnet@v6
+        if: matrix.framework == 'net11.0'
+        with:
+          dotnet-version: '11.0.x'
+          dotnet-quality: 'preview'
+
       - name: Solved issue using workaround in https://github.com/actions/partner-runner-images/issues/99#issue-3075011959
         if: ${{ matrix.os == 'windows-11-arm' }}
         run: choco install zstandard
@@ -836,6 +883,11 @@ jobs:
         if: matrix.framework == 'net10.0'
         shell: bash
         run: echo "JCOBRIDGE_CoreCLRVersion=10" >> $GITHUB_ENV
+
+      - name: Prepare extra argument
+        if: matrix.framework == 'net11.0'
+        shell: bash
+        run: echo "JCOBRIDGE_CoreCLRVersion=11" >> $GITHUB_ENV        
 
       - name: Build Kotlin test source file
         shell: pwsh
@@ -941,7 +993,7 @@ jobs:
       fail-fast: false
       matrix:
         os: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_win_os) }}
-        framework: [ 'net462', 'net8.0', 'net9.0', 'net10.0' ]
+        framework: [ 'net462', 'net8.0', 'net9.0', 'net10.0', 'net11.0' ]
         jdk_vendor: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_jdk_vendor) }}
         jdk_version: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_jdk_version) }} # only LTS versions
         exclude:
@@ -998,6 +1050,12 @@ jobs:
           dotnet-version: |
             10.x
 
+      - uses: actions/setup-dotnet@v6
+        if: matrix.framework == 'net11.0'
+        with:
+          dotnet-version: '11.0.x'
+          dotnet-quality: 'preview'
+
       - name: Solved issue using workaround in https://github.com/actions/partner-runner-images/issues/99#issue-3075011959
         if: ${{ matrix.os == 'windows-11-arm' }}
         run: choco install zstandard
@@ -1034,6 +1092,11 @@ jobs:
         if: matrix.framework == 'net10.0'
         shell: bash
         run: echo "JCOBRIDGE_CoreCLRVersion=10" >> $GITHUB_ENV
+
+      - name: Prepare extra argument
+        if: matrix.framework == 'net11.0'
+        shell: bash
+        run: echo "JCOBRIDGE_CoreCLRVersion=11" >> $GITHUB_ENV        
 
       - name: Restore Clojure bin from cache
         uses: actions/cache/restore@v6
@@ -1132,7 +1195,7 @@ jobs:
       fail-fast: false
       matrix:
         os: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_linux_os) }}
-        framework: [ 'net8.0', 'net9.0', 'net10.0' ]
+        framework: [ 'net8.0', 'net9.0', 'net10.0', 'net11.0' ]
         jdk_vendor: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_jdk_vendor) }}
         jdk_version: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_jdk_version) }} # only LTS versions
         exclude:
@@ -1182,6 +1245,12 @@ jobs:
           dotnet-version: |
             10.x
 
+      - uses: actions/setup-dotnet@v6
+        if: matrix.framework == 'net11.0'
+        with:
+          dotnet-version: '11.0.x'
+          dotnet-quality: 'preview'
+
       - name: Restore ${{ matrix.framework }} JCOReflector bin from cache
         uses: actions/cache/restore@v6
         with:
@@ -1214,6 +1283,11 @@ jobs:
         if: matrix.framework == 'net10.0'
         shell: bash
         run: echo "JCOBRIDGE_CoreCLRVersion=10" >> $GITHUB_ENV
+
+      - name: Prepare extra argument
+        if: matrix.framework == 'net11.0'
+        shell: bash
+        run: echo "JCOBRIDGE_CoreCLRVersion=11" >> $GITHUB_ENV        
 
       - name: Build Java test source file
         continue-on-error: ${{ inputs.ForceExecution == true }}
@@ -1287,7 +1361,7 @@ jobs:
       fail-fast: false
       matrix:
         os: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_linux_os) }}
-        framework: [ 'net8.0', 'net9.0', 'net10.0' ]
+        framework: [ 'net8.0', 'net9.0', 'net10.0', 'net11.0' ]
         jdk_vendor: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_jdk_vendor) }}
         jdk_version: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_jdk_version) }} # only LTS versions
         exclude:
@@ -1321,6 +1395,12 @@ jobs:
         with:
           dotnet-version: |
             10.x
+
+      - uses: actions/setup-dotnet@v6
+        if: matrix.framework == 'net11.0'
+        with:
+          dotnet-version: '11.0.x'
+          dotnet-quality: 'preview'
 
       - name: Restore JCOReflector bin from cache
         uses: actions/cache/restore@v6
@@ -1363,6 +1443,11 @@ jobs:
         if: matrix.framework == 'net10.0'
         shell: bash
         run: echo "JCOBRIDGE_CoreCLRVersion=10" >> $GITHUB_ENV
+
+      - name: Prepare extra argument
+        if: matrix.framework == 'net11.0'
+        shell: bash
+        run: echo "JCOBRIDGE_CoreCLRVersion=11" >> $GITHUB_ENV        
 
       - name: Build Scala test source file
         continue-on-error: ${{ inputs.ForceExecution == true }}
@@ -1441,7 +1526,7 @@ jobs:
       fail-fast: false
       matrix:
         os: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_linux_os) }}
-        framework: [ 'net8.0', 'net9.0', 'net10.0' ]
+        framework: [ 'net8.0', 'net9.0', 'net10.0', 'net11.0' ]
         jdk_vendor: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_jdk_vendor) }}
         jdk_version: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_jdk_version) }} # only LTS versions
         exclude:
@@ -1476,6 +1561,12 @@ jobs:
           dotnet-version: |
             10.x
 
+      - uses: actions/setup-dotnet@v6
+        if: matrix.framework == 'net11.0'
+        with:
+          dotnet-version: '11.0.x'
+          dotnet-quality: 'preview'
+
       - name: Restore JCOReflector bin from cache
         uses: actions/cache/restore@v6
         with:
@@ -1508,6 +1599,11 @@ jobs:
         if: matrix.framework == 'net10.0'
         shell: bash
         run: echo "JCOBRIDGE_CoreCLRVersion=10" >> $GITHUB_ENV
+
+      - name: Prepare extra argument
+        if: matrix.framework == 'net11.0'
+        shell: bash
+        run: echo "JCOBRIDGE_CoreCLRVersion=11" >> $GITHUB_ENV        
 
       - name: Build Kotlin test source file
         continue-on-error: ${{ inputs.ForceExecution == true }}
@@ -1591,7 +1687,7 @@ jobs:
       fail-fast: false
       matrix:
         os: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_linux_os) }}
-        framework: [ 'net8.0', 'net9.0', 'net10.0' ]
+        framework: [ 'net8.0', 'net9.0', 'net10.0', 'net11.0' ]
         jdk_vendor: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_jdk_vendor) }}
         jdk_version: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_jdk_version) }} # only LTS versions
         exclude:
@@ -1626,6 +1722,12 @@ jobs:
           dotnet-version: |
             10.x
 
+      - uses: actions/setup-dotnet@v6
+        if: matrix.framework == 'net11.0'
+        with:
+          dotnet-version: '11.0.x'
+          dotnet-quality: 'preview'
+
       - name: Restore JCOReflector bin from cache
         uses: actions/cache/restore@v6
         with:
@@ -1658,6 +1760,11 @@ jobs:
         if: matrix.framework == 'net10.0'
         shell: bash
         run: echo "JCOBRIDGE_CoreCLRVersion=10" >> $GITHUB_ENV
+
+      - name: Prepare extra argument
+        if: matrix.framework == 'net11.0'
+        shell: bash
+        run: echo "JCOBRIDGE_CoreCLRVersion=11" >> $GITHUB_ENV        
 
       - name: Restore Clojure bin from cache
         uses: actions/cache/restore@v6
@@ -1757,7 +1864,7 @@ jobs:
       fail-fast: false
       matrix:
         os: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_mac_os) }}
-        framework: [ 'net8.0', 'net9.0', 'net10.0' ]
+        framework: [ 'net8.0', 'net9.0', 'net10.0', 'net11.0' ]
         jdk_vendor: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_jdk_vendor) }}
         jdk_version: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_jdk_version) }} # only LTS versions
         exclude:
@@ -1807,6 +1914,12 @@ jobs:
           dotnet-version: |
             10.x
 
+      - uses: actions/setup-dotnet@v6
+        if: matrix.framework == 'net11.0'
+        with:
+          dotnet-version: '11.0.x'
+          dotnet-quality: 'preview'
+
       - name: Restore ${{ matrix.framework }} JCOReflector bin from cache
         uses: actions/cache/restore@v6
         with:
@@ -1839,6 +1952,11 @@ jobs:
         if: matrix.framework == 'net10.0'
         shell: bash
         run: echo "JCOBRIDGE_CoreCLRVersion=10" >> $GITHUB_ENV
+
+      - name: Prepare extra argument
+        if: matrix.framework == 'net11.0'
+        shell: bash
+        run: echo "JCOBRIDGE_CoreCLRVersion=11" >> $GITHUB_ENV        
 
       - name: Build Java test source file
         continue-on-error: ${{ inputs.ForceExecution == true }}
@@ -1912,7 +2030,7 @@ jobs:
       fail-fast: false
       matrix:
         os: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_mac_os) }}
-        framework: [ 'net8.0', 'net9.0', 'net10.0' ]
+        framework: [ 'net8.0', 'net9.0', 'net10.0', 'net11.0' ]
         jdk_vendor: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_jdk_vendor) }}
         jdk_version: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_jdk_version) }} # only LTS versions
         exclude:
@@ -1955,6 +2073,12 @@ jobs:
           dotnet-version: |
             10.x
 
+      - uses: actions/setup-dotnet@v6
+        if: matrix.framework == 'net11.0'
+        with:
+          dotnet-version: '11.0.x'
+          dotnet-quality: 'preview'
+
       - name: Restore ${{ matrix.framework }} JCOReflector bin from cache
         uses: actions/cache/restore@v6
         with:
@@ -1995,6 +2119,11 @@ jobs:
         if: matrix.framework == 'net10.0'
         shell: bash
         run: echo "JCOBRIDGE_CoreCLRVersion=10" >> $GITHUB_ENV
+
+      - name: Prepare extra argument
+        if: matrix.framework == 'net11.0'
+        shell: bash
+        run: echo "JCOBRIDGE_CoreCLRVersion=11" >> $GITHUB_ENV        
 
       - name: Build Scala test source file
         continue-on-error: ${{ inputs.ForceExecution == true }}
@@ -2072,7 +2201,7 @@ jobs:
       fail-fast: false
       matrix:
         os: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_mac_os) }}
-        framework: [ 'net8.0', 'net9.0', 'net10.0' ]
+        framework: [ 'net8.0', 'net9.0', 'net10.0', 'net11.0' ]
         jdk_vendor: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_jdk_vendor) }}
         jdk_version: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_jdk_version) }} # only LTS versions
         exclude:
@@ -2115,6 +2244,12 @@ jobs:
           dotnet-version: |
             10.x
 
+      - uses: actions/setup-dotnet@v6
+        if: matrix.framework == 'net11.0'
+        with:
+          dotnet-version: '11.0.x'
+          dotnet-quality: 'preview'
+
       - name: Restore ${{ matrix.framework }} JCOReflector bin from cache
         uses: actions/cache/restore@v6
         with:
@@ -2147,6 +2282,11 @@ jobs:
         if: matrix.framework == 'net10.0'
         shell: bash
         run: echo "JCOBRIDGE_CoreCLRVersion=10" >> $GITHUB_ENV
+
+      - name: Prepare extra argument
+        if: matrix.framework == 'net11.0'
+        shell: bash
+        run: echo "JCOBRIDGE_CoreCLRVersion=11" >> $GITHUB_ENV        
 
       - name: Build Kotlin test source file
         continue-on-error: ${{ inputs.ForceExecution == true }}
@@ -2230,7 +2370,7 @@ jobs:
       fail-fast: false
       matrix:
         os: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_linux_os) }}
-        framework: [ 'net8.0', 'net9.0', 'net10.0' ]
+        framework: [ 'net8.0', 'net9.0', 'net10.0', 'net11.0' ]
         jdk_vendor: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_jdk_vendor) }}
         jdk_version: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_jdk_version) }} # only LTS versions
         exclude:
@@ -2265,6 +2405,12 @@ jobs:
           dotnet-version: |
             10.x
 
+      - uses: actions/setup-dotnet@v6
+        if: matrix.framework == 'net11.0'
+        with:
+          dotnet-version: '11.0.x'
+          dotnet-quality: 'preview'
+
       - name: Restore JCOReflector bin from cache
         uses: actions/cache/restore@v6
         with:
@@ -2297,6 +2443,11 @@ jobs:
         if: matrix.framework == 'net10.0'
         shell: bash
         run: echo "JCOBRIDGE_CoreCLRVersion=10" >> $GITHUB_ENV
+
+      - name: Prepare extra argument
+        if: matrix.framework == 'net11.0'
+        shell: bash
+        run: echo "JCOBRIDGE_CoreCLRVersion=11" >> $GITHUB_ENV        
 
       - name: Restore Clojure bin from cache
         uses: actions/cache/restore@v6
@@ -2516,6 +2667,17 @@ jobs:
               ./src/jvm/src/net10.0/
           key: JCOReflector_${{ github.run_number }}_${{ github.run_attempt }}_source_net10.0_${{ github.sha }}
 
+      - name: Restore net11.0 JCOReflector source from cache
+        uses: actions/cache/restore@v6
+        with:
+          fail-on-cache-miss: true
+          enableCrossOsArchive: true
+          path: |
+              ./src/jvm/net11.0.md
+              ./src/jvm/statistics/net11.0/
+              ./src/jvm/src/net11.0/
+          key: JCOReflector_${{ github.run_number }}_${{ github.run_attempt }}_source_net11.0_${{ github.sha }}
+
       - name: Extract commit SHA
         if: ${{ inputs.GeneratePR == true }}
         run: |
@@ -2537,7 +2699,7 @@ jobs:
           body: Automated changes by GitHub action
           reviewers: masesdevelopers
           assignees: masesdevelopers
-          labels: enhancement, java, .NET Framework, .NET 8, .NET 9, .NET 10
+          labels: enhancement, java, .NET Framework, .NET 8, .NET 9, .NET 10, .NET 11
           delete-branch: true
 
       # Runs a set of commands using the runners shell

@@ -109,13 +109,11 @@ jobs:
           fetch-depth: '1'
 
       - uses: actions/setup-dotnet@v6
-        if: matrix.framework == 'net10.0'
         with:
           dotnet-version: |
             10.x
 
       - uses: actions/setup-dotnet@v6
-        if: matrix.framework == 'net11.0'
         with:
           dotnet-version: '11.0.x'
           dotnet-quality: 'preview'
@@ -2558,6 +2556,11 @@ jobs:
         with:
           dotnet-version: |
             10.x
+
+      - uses: actions/setup-dotnet@v6
+        with:
+          dotnet-version: '11.0.x'
+          dotnet-quality: 'preview'
 
       - name: Restore net462 JCOReflector bin from cache
         uses: actions/cache/restore@v6

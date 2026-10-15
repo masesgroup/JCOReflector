@@ -67,20 +67,17 @@ jobs:
   
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v7
-        with: 
+        with:
+          fetch-depth: 1
           persist-credentials: false
           submodules: 'true'
 
       - name: Common site
         uses: actions/checkout@v7
         with:
+          fetch-depth: 1
           repository: masesgroup/CommonTools
           path: CommonTools
-
-      - uses: actions/setup-dotnet@v6
-        with:
-          dotnet-version: |
-            10.x
 
       - uses: actions/setup-dotnet@v6
         with:

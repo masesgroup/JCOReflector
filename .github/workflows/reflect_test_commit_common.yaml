@@ -110,11 +110,6 @@ jobs:
 
       - uses: actions/setup-dotnet@v6
         with:
-          dotnet-version: |
-            10.x
-
-      - uses: actions/setup-dotnet@v6
-        with:
           dotnet-version: '11.0.x'
           dotnet-quality: 'preview'
 
@@ -264,19 +259,6 @@ jobs:
           fetch-depth: '1'
 
       - uses: actions/setup-dotnet@v6
-        if: matrix.framework == 'net9.0'
-        with:
-          dotnet-version: |
-            9.x
-
-      - uses: actions/setup-dotnet@v6
-        if: matrix.framework == 'net10.0'
-        with:
-          dotnet-version: |
-            10.x
-
-      - uses: actions/setup-dotnet@v6
-        if: matrix.framework == 'net11.0'
         with:
           dotnet-version: '11.0.x'
           dotnet-quality: 'preview'
@@ -444,12 +426,6 @@ jobs:
       - uses: actions/checkout@v7
         with: 
           fetch-depth: '1'
-
-      - uses: actions/setup-dotnet@v6
-        if: matrix.framework == 'net10.0'
-        with:
-          dotnet-version: |
-            10.x
 
       - uses: actions/setup-dotnet@v6
         if: matrix.framework == 'net11.0'
@@ -621,12 +597,6 @@ jobs:
       - uses: actions/checkout@v7
         with: 
           fetch-depth: '1'
-
-      - uses: actions/setup-dotnet@v6
-        if: matrix.framework == 'net10.0'
-        with:
-          dotnet-version: |
-            10.x
 
       - uses: actions/setup-dotnet@v6
         if: matrix.framework == 'net11.0'
@@ -834,12 +804,6 @@ jobs:
           fetch-depth: '1'
 
       - uses: actions/setup-dotnet@v6
-        if: matrix.framework == 'net10.0'
-        with:
-          dotnet-version: |
-            10.x
-
-      - uses: actions/setup-dotnet@v6
         if: matrix.framework == 'net11.0'
         with:
           dotnet-version: '11.0.x'
@@ -1043,12 +1007,6 @@ jobs:
           fetch-depth: '1'
 
       - uses: actions/setup-dotnet@v6
-        if: matrix.framework == 'net10.0'
-        with:
-          dotnet-version: |
-            10.x
-
-      - uses: actions/setup-dotnet@v6
         if: matrix.framework == 'net11.0'
         with:
           dotnet-version: '11.0.x'
@@ -1226,24 +1184,6 @@ jobs:
           fetch-depth: '1'
 
       - uses: actions/setup-dotnet@v6
-        if: matrix.framework == 'net8.0'
-        with:
-          dotnet-version: |
-            8.x
-
-      - uses: actions/setup-dotnet@v6
-        if: matrix.framework == 'net9.0'
-        with:
-          dotnet-version: |
-            9.x
-
-      - uses: actions/setup-dotnet@v6
-        if: matrix.framework == 'net10.0'
-        with:
-          dotnet-version: |
-            10.x
-
-      - uses: actions/setup-dotnet@v6
         if: matrix.framework == 'net11.0'
         with:
           dotnet-version: '11.0.x'
@@ -1381,18 +1321,6 @@ jobs:
       - uses: actions/checkout@v7
         with: 
           fetch-depth: '1'
-
-      - uses: actions/setup-dotnet@v6
-        if: matrix.framework == 'net9.0'
-        with:
-          dotnet-version: |
-            9.x
-
-      - uses: actions/setup-dotnet@v6
-        if: matrix.framework == 'net10.0'
-        with:
-          dotnet-version: |
-            10.x
 
       - uses: actions/setup-dotnet@v6
         if: matrix.framework == 'net11.0'
@@ -1548,18 +1476,6 @@ jobs:
           fetch-depth: '1'
 
       - uses: actions/setup-dotnet@v6
-        if: matrix.framework == 'net9.0'
-        with:
-          dotnet-version: |
-            9.x
-
-      - uses: actions/setup-dotnet@v6
-        if: matrix.framework == 'net10.0'
-        with:
-          dotnet-version: |
-            10.x
-
-      - uses: actions/setup-dotnet@v6
         if: matrix.framework == 'net11.0'
         with:
           dotnet-version: '11.0.x'
@@ -1707,18 +1623,6 @@ jobs:
       - uses: actions/checkout@v7
         with: 
           fetch-depth: '1'
-
-      - uses: actions/setup-dotnet@v6
-        if: matrix.framework == 'net9.0'
-        with:
-          dotnet-version: |
-            9.x
-
-      - uses: actions/setup-dotnet@v6
-        if: matrix.framework == 'net10.0'
-        with:
-          dotnet-version: |
-            10.x
 
       - uses: actions/setup-dotnet@v6
         if: matrix.framework == 'net11.0'
@@ -1895,24 +1799,6 @@ jobs:
           fetch-depth: '1'
 
       - uses: actions/setup-dotnet@v6
-        if: matrix.framework == 'net8.0'
-        with:
-          dotnet-version: |
-            8.x
-
-      - uses: actions/setup-dotnet@v6
-        if: matrix.framework == 'net9.0'
-        with:
-          dotnet-version: |
-            9.x
-
-      - uses: actions/setup-dotnet@v6
-        if: matrix.framework == 'net10.0'
-        with:
-          dotnet-version: |
-            10.x
-
-      - uses: actions/setup-dotnet@v6
         if: matrix.framework == 'net11.0'
         with:
           dotnet-version: '11.0.x'
@@ -2052,24 +1938,6 @@ jobs:
       - uses: actions/checkout@v7
         with: 
           fetch-depth: '1'
-
-      - uses: actions/setup-dotnet@v6
-        if: matrix.framework == 'net8.0'
-        with:
-          dotnet-version: |
-            8.x
-
-      - uses: actions/setup-dotnet@v6
-        if: matrix.framework == 'net9.0'
-        with:
-          dotnet-version: |
-            9.x
-
-      - uses: actions/setup-dotnet@v6
-        if: matrix.framework == 'net10.0'
-        with:
-          dotnet-version: |
-            10.x
 
       - uses: actions/setup-dotnet@v6
         if: matrix.framework == 'net11.0'
@@ -2225,24 +2093,6 @@ jobs:
           fetch-depth: '1'
 
       - uses: actions/setup-dotnet@v6
-        if: matrix.framework == 'net8.0'
-        with:
-          dotnet-version: |
-            8.x
-
-      - uses: actions/setup-dotnet@v6
-        if: matrix.framework == 'net9.0'
-        with:
-          dotnet-version: |
-            9.x
-
-      - uses: actions/setup-dotnet@v6
-        if: matrix.framework == 'net10.0'
-        with:
-          dotnet-version: |
-            10.x
-
-      - uses: actions/setup-dotnet@v6
         if: matrix.framework == 'net11.0'
         with:
           dotnet-version: '11.0.x'
@@ -2392,18 +2242,6 @@ jobs:
           fetch-depth: '1'
 
       - uses: actions/setup-dotnet@v6
-        if: matrix.framework == 'net9.0'
-        with:
-          dotnet-version: |
-            9.x
-
-      - uses: actions/setup-dotnet@v6
-        if: matrix.framework == 'net10.0'
-        with:
-          dotnet-version: |
-            10.x
-
-      - uses: actions/setup-dotnet@v6
         if: matrix.framework == 'net11.0'
         with:
           dotnet-version: '11.0.x'
@@ -2551,11 +2389,6 @@ jobs:
       - uses: actions/checkout@v7
         with: 
           fetch-depth: '1'
-
-      - uses: actions/setup-dotnet@v6
-        with:
-          dotnet-version: |
-            10.x
 
       - uses: actions/setup-dotnet@v6
         with:

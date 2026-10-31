@@ -367,7 +367,7 @@ jobs:
         run: echo "matrix_mac=[ 'macos-15' ]" >> $GITHUB_OUTPUT
       - id: set-matrix-mac-os-ext
         if: ${{ inputs.ExecuteOnMoreOSes == true }}
-        run: echo "matrix_mac=[ 'macos-14', 'macos-15', 'macos-26' ]" >> $GITHUB_OUTPUT
+        run: echo "matrix_mac=[ 'macos-15', 'macos-15-intel', 'macos-26' ]" >> $GITHUB_OUTPUT
 
   java_tests_windows:
     if: ${{ inputs.EnableWindowsTests }}
@@ -1155,10 +1155,10 @@ jobs:
         jdk_vendor: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_jdk_vendor) }}
         jdk_version: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_jdk_version) }} # only LTS versions
         exclude:
-          - os: macos-14
+          - os: macos-15
             jdk_vendor: temurin
             jdk_version: 8
-          - os: macos-15
+          - os: macos-15-intel
             jdk_vendor: temurin
             jdk_version: 8
           - os: macos-26
@@ -1770,10 +1770,10 @@ jobs:
         jdk_vendor: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_jdk_vendor) }}
         jdk_version: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_jdk_version) }} # only LTS versions
         exclude:
-          - os: macos-14
+          - os: macos-15
             jdk_vendor: temurin
             jdk_version: 8
-          - os: macos-15
+          - os: macos-15-intel
             jdk_vendor: temurin
             jdk_version: 8
           - os: macos-26

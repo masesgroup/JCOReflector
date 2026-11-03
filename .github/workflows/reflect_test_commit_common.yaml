@@ -2009,7 +2009,7 @@ jobs:
 
       - name: Export Scala root
         run: |
-          echo "SCALA_BIN=/opt/homebrew/opt/scala@2.13/bin" >> $GITHUB_ENV
+          echo "SCALA_BIN=$(brew --prefix scala@2.13)/bin" >> $GITHUB_ENV
         shell: bash
 
       - name: Prepare extra argument
@@ -2370,14 +2370,16 @@ jobs:
         run: |
           mkdir -p tests/jvm/clojure/classes
           
-          mapfile -t NAMESPACES < <(cd tests/jvm/clojure/src/main/clojure && find . -name '*.clj' | sed 's|^\./||; s|\.clj$||; s|/|.|g' | sort)
+          NAMESPACES=()
+          while IFS= read -r ns || [ -n "$ns" ]; do
+              NAMESPACES+=("$ns")
+          done < <(cd tests/jvm/clojure/src/main/clojure && find . -name '*.clj' | sed 's|^\./||; s|\.clj$||; s|/|.|g' | sort)
           
           if [ ${#NAMESPACES[@]} -eq 0 ]; then echo "No Clojure test sources found"; exit 1; fi
           echo "Compiling in order: ${NAMESPACES[*]}"
-          
-          java -cp './bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/src/main/clojure:./tests/jvm/clojure/classes' \
-            -Dclojure.compile.path=$PWD/tests/jvm/clojure/classes \
-            clojure.lang.Compile "${NAMESPACES[@]}"
+          java -cp './bin/net8.0/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/src/main/clojure:./tests/jvm/clojure/classes' \
+           -Dclojure.compile.path=$PWD/tests/jvm/clojure/classes \
+           clojure.lang.Compile "${NAMESPACES[@]}"
 
       - run: java -cp "./bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/classes" generics.AnonymousSubclassConstruction
         continue-on-error: ${{ inputs.ForceExecution == true }}

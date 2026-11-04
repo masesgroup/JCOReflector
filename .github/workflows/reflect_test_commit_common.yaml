@@ -2377,7 +2377,7 @@ jobs:
           
           if [ ${#NAMESPACES[@]} -eq 0 ]; then echo "No Clojure test sources found"; exit 1; fi
           echo "Compiling in order: ${NAMESPACES[*]}"
-          java -cp './bin/net8.0/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/src/main/clojure:./tests/jvm/clojure/classes' \
+          java -cp './bin/${{ matrix.framework }}/*:./tests/jvm/clojure/target/dependency/*:./tests/jvm/clojure/src/main/clojure:./tests/jvm/clojure/classes' \
            -Dclojure.compile.path=$PWD/tests/jvm/clojure/classes \
            clojure.lang.Compile "${NAMESPACES[@]}"
 

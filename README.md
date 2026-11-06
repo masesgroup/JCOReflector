@@ -3,13 +3,25 @@
 [![Java 8+](https://img.shields.io/badge/Java-8%2B-blue)](https://www.oracle.com/java/)
 [![.NET 8+](https://img.shields.io/badge/.NET-8%2B-purple)](https://dotnet.microsoft.com/)
 
-JCOReflector is a comprehensive suite of libraries and tools to use Java™/JVM™ APIs (Java, Scala, Kotlin, ...) and .NET side-by-side.
+JCOReflector is a comprehensive suite of libraries and tools to use Java™/JVM™ APIs (Java, Scala, Kotlin, Clojure, ...) and .NET side-by-side.
 
-### Libraries and Tools
+## Libraries and Tools
 
-|.NET Framework | .NET 8 | .NET 9 |  .NET 10 |
+### Current public supported Maven artifacts
+
+|.NET Framework (4.6.2+) | .NET 8 | .NET 9 |  .NET 10 |
 |:---:	|:---:	|:---:	|:---:	|
 |[![Maven Central](https://img.shields.io/maven-central/v/com.masesgroup/jcoreflector_net462.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22com.masesgroup%22%20AND%20a:%22jcoreflector_net462%22) <br/> ![JCOReflector](https://api.scarf.sh/v2/packages/Masesgroup/a8e43716-e06c-4a1c-ba5e-d2c5695d5e33/commercial-users-badge) <br/> ![JCOReflector](https://api.scarf.sh/v2/packages/Masesgroup/a8e43716-e06c-4a1c-ba5e-d2c5695d5e33/downloads-badge) | [![Maven Central](https://img.shields.io/maven-central/v/com.masesgroup/jcoreflector_net8.0.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22com.masesgroup%22%20AND%20a:%22jcoreflector_net8.0%22) <br/> ![JCOReflector](https://api.scarf.sh/v2/packages/Masesgroup/63e64356-68aa-4a33-bef5-56cb451c8d5e/commercial-users-badge)<br/> ![JCOReflector](https://api.scarf.sh/v2/packages/Masesgroup/63e64356-68aa-4a33-bef5-56cb451c8d5e/downloads-badge) | [![Maven Central](https://img.shields.io/maven-central/v/com.masesgroup/jcoreflector_net9.0.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22com.masesgroup%22%20AND%20a:%22jcoreflector_net9.0%22) <br/> ![JCOReflector](https://api.scarf.sh/v2/packages/Masesgroup/ac4af46b-2671-4c12-9c0d-31cf67bcf26a/commercial-users-badge) <br/> ![JCOReflector](https://api.scarf.sh/v2/packages/Masesgroup/ac4af46b-2671-4c12-9c0d-31cf67bcf26a/downloads-badge) | [![Maven Central](https://img.shields.io/maven-central/v/com.masesgroup/jcoreflector_net10.0.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22com.masesgroup%22%20AND%20a:%22jcoreflector_net10.0%22) <br/> ![JCOReflector](https://api.scarf.sh/v2/packages/Masesgroup/48418723-04ae-4b40-8cb4-573993e3e626/commercial-users-badge) <br/> ![JCOReflector](https://api.scarf.sh/v2/packages/Masesgroup/48418723-04ae-4b40-8cb4-573993e3e626/downloads-badge) |
+
+### Deprecated with extended support Maven artifacts
+
+|.NET Framework (4.6.1+) | .NET 5 | .NET 6 |  .NET 7 |
+|:---:	|:---:	|:---:	|:---:	|
+|[![Maven Central](https://img.shields.io/maven-central/v/com.masesgroup/jcoreflector_net461.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22com.masesgroup%22%20AND%20a:%22jcoreflector_net461%22) <br/> ![JCOReflector](https://api.scarf.sh/v2/packages/Masesgroup/689d369f-1c29-4274-8936-63dc347a7410/commercial-users-badge) <br/> ![JCOReflector](https://api.scarf.sh/v2/packages/Masesgroup/689d369f-1c29-4274-8936-63dc347a7410/downloads-badge) | [![Maven Central](https://img.shields.io/maven-central/v/com.masesgroup/jcoreflector_net5.0.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22com.masesgroup%22%20AND%20a:%22jcoreflector_net5.0%22) <br/> ![JCOReflector](https://api.scarf.sh/v2/packages/Masesgroup/8e9dfb6b-67f6-4340-981e-341af2fba2c0/commercial-users-badge)<br/> ![JCOReflector](https://api.scarf.sh/v2/packages/Masesgroup/8e9dfb6b-67f6-4340-981e-341af2fba2c0/downloads-badge) | [![Maven Central](https://img.shields.io/maven-central/v/com.masesgroup/jcoreflector_net6.0.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22com.masesgroup%22%20AND%20a:%22jcoreflector_net6.0%22) <br/> ![JCOReflector](https://api.scarf.sh/v2/packages/Masesgroup/8c8cd59a-a84f-4205-ab7f-e74d8840a996/commercial-users-badge) <br/> ![JCOReflector](https://api.scarf.sh/v2/packages/Masesgroup/8c8cd59a-a84f-4205-ab7f-e74d8840a996/downloads-badge) | [![Maven Central](https://img.shields.io/maven-central/v/com.masesgroup/jcoreflector_net7.0.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22com.masesgroup%22%20AND%20a:%22jcoreflector_net7.0%22) <br/> ![JCOReflector](https://api.scarf.sh/v2/packages/Masesgroup/a5cd76d9-da23-4e80-84bb-bb0f526ba18d/commercial-users-badge) <br/> ![JCOReflector](https://api.scarf.sh/v2/packages/Masesgroup/a5cd76d9-da23-4e80-84bb-bb0f526ba18d/downloads-badge) |
+
+Deprecated targets: see [Professional support](src/documentation/articles/support.md).
+
+### Reflection engine
 
 |JCOReflectorEngine | JCOReflectorCLI |
 |:---:	|:---:	|
@@ -21,13 +33,11 @@ JCOReflector is a comprehensive suite of libraries and tools to use Java™/JVM�
 
 ### Project disclaimer
 
-JCOReflector is a project, curated by MASES Group, can be supported by the open-source community.
+JCOReflector is a comprehensive suite of libraries and tools to use Java™/JVM™ APIs (Java, Scala, Kotlin, Clojure, ...) and .NET side-by-side, maintained by MASES Group and open to community contributions.
+Its primary scope is to support other MASES Group projects — both open-source and commercial — though it is freely available for any use. Dedicated community and commercial subscription plans are available.
+The repository and releases may contain bugs. The release cycle depends on critical issues discovered and/or enhancement requests from this or other dependent projects.
 
-Its primary scope is to support other, public or internal, MASES Group projects: open-source community and commercial entities can use it for their needs and support this project, moreover there are dedicated community and commercial subscription plans.
-
-The repository code and releases may contain bugs, the release cycle depends from critical discovered issues and/or enhancement requested from this or other projects.
-
-Looking for the help of experts? MASES Group can help you design, build, deploy, and manage applications mixing .NET and JVM™ enabled languages.
+Looking for expertise in applications mixing .NET and JVM™-enabled languages? MASES Group can help you design, build, deploy, and manage applications that run .NET and Java™/JVM™ side-by-side. [Find out more.](src/documentation/articles/support.md)
 
 ---
 
@@ -47,6 +57,7 @@ Articles:
 
 - [Using JCOReflector](src/documentation/articles/usage.md): the artifacts published on Maven Central, how the runtime is initialized, and how to run the reflection tool with job files.
 - [Generics support](src/documentation/articles/generics.md): how .NET generics are reflected, what is intentionally skipped, the known gaps, and how to use them from Java and Clojure.
+
 
 ## The project
 
@@ -91,7 +102,7 @@ public class LegacyApp {
 ## History of the project
 
 This project started in 2019 with the aims to create a set of Java™ (JVM™) classes which mimic .NET (Framework/6/8) conterparts, in May 2020 the first commit in GitHub.
-Using this project it is possible to use .NET API in Java™ and all JVM™ enabled languages (Scala, Kotlin, and so on).
+Using this project it is possible to use .NET API in Java™ and all JVM™ enabled languages (Scala, Kotlin, Clojure, and so on).
 The final output of JCOReflector are JARs.
 At its first stages no JARs was available: only the JCOBridge engine, the graphical UI that helps to manages reflection and the operations needed to finally build JARs was relased.
 Starting from recent relases automated continous integration and verification process are in places, so the produced JARs are directly available for download and is no more needed to manually rebuils JARs before use it. 

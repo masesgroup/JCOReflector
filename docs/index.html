@@ -396,6 +396,7 @@ Eventually migrate Java when ready
 <li><strong>net8.0</strong> (available on .NET 8 supported platforms)</li>
 <li><strong>net9.0</strong> (available on .NET 9 supported platforms)</li>
 <li><strong>net10.0</strong> (available on .NET 10 supported platforms)</li>
+<li><strong>net11.0</strong> (available on .NET 11 supported platforms)</li>
 </ul>
 <p>in each subfolder will be available two executables:</p>
 <ul>
@@ -406,7 +407,7 @@ Eventually migrate Java when ready
 <img src="images/jcoreflector2.png" alt="JCOReflector" title="JCOReflector screenshot"></p>
 <p>The reflection can also be driven by job files, one for each stage (reflect, build, JAR creation and POM creation): see <a href="articles/usage.html#job-files">Job files</a> and <a href="articles/usage.html#running-the-jobs">Running the jobs</a> in the usage article for the details and the command lines.</p>
 <h2 id="reflected-assemblies">Reflected Assemblies</h2>
-<p>The folder <a href="/src/jvm/src">src/jvm/src</a> contains all reflected classes generated for <strong>.NET</strong> <strong>Framework</strong> (<em>net462</em>), <strong>8</strong> (<em>net8.0</em>), <strong>9</strong> (<em>net9.0</em>) and <strong>10</strong> (<em>net10.0</em>). Below the coverage <a href="#statistics">statistics</a>:</p>
+<p>The folder <a href="/src/jvm/src">src/jvm/src</a> contains all reflected classes generated for <strong>.NET</strong> <strong>Framework</strong> (<em>net462</em>), <strong>8</strong> (<em>net8.0</em>), <strong>9</strong> (<em>net9.0</em>), <strong>10</strong> (<em>net10.0</em>) and <strong>11</strong> (<em>net11.0</em>). Below the coverage <a href="#statistics">statistics</a>:</p>
 <h3 id="statistics">Statistics</h3>
 <table>
 <thead>
@@ -462,7 +463,7 @@ Eventually migrate Java when ready
 <p><strong>.NET:</strong></p>
 <ul>
 <li>.NET Framework 4.6.2+</li>
-<li>.NET 6, 8, 9, 10</li>
+<li>.NET 8, 9, 10, 11</li>
 </ul>
 <p><strong>Note for Java 8 Users:</strong>
 JCOReflector enables modernization of Java 8 applications by providing access

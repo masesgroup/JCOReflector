@@ -19,7 +19,7 @@ JCOReflector is a comprehensive suite of libraries and tools to use Java™/JVM�
 > [!NOTE]
 > In alignment with the upcoming **JCOBridge** releases, **.NET 8** and **.NET 9** will move to the deprecated targets: standard public updates will be phased out from the public open-source branch.
 
-### 🟡 Deprecated with Extended Support Maven Artifacts
+### 🟡 Deprecated Maven Artifacts with Extended Support
 
 | Target | Commercial users | Downloads | Maven Central |
 |:--|:--:|:--:|:--:|

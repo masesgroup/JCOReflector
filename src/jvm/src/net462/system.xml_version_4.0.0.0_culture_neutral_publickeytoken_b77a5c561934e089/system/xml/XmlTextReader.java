@@ -737,10 +737,12 @@ public class XmlTextReader extends system.xml.XmlReader  {
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.FormatException if the .NET member raises it
      * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlTextReader.ReadBase64" target="_top">.NET documentation</a>
      */
-    public int ReadBase64(byte[] array, int offset, int len) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.OutOfMemoryException {
+    public int ReadBase64(byte[] array, int offset, int len) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.security.SecurityException, system.io.IOException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectReadBase64 = null;
@@ -793,10 +795,12 @@ public class XmlTextReader extends system.xml.XmlReader  {
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.FormatException if the .NET member raises it
      * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlTextReader.ReadBase64" target="_top">.NET documentation</a>
      */
-    public int ReadBase64(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.OutOfMemoryException {
+    public int ReadBase64(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.security.SecurityException, system.io.IOException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectReadBase64 = null;
@@ -849,10 +853,12 @@ public class XmlTextReader extends system.xml.XmlReader  {
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.FormatException if the .NET member raises it
      * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlTextReader.ReadBinHex" target="_top">.NET documentation</a>
      */
-    public int ReadBinHex(byte[] array, int offset, int len) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.OutOfMemoryException {
+    public int ReadBinHex(byte[] array, int offset, int len) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.security.SecurityException, system.io.IOException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectReadBinHex = null;
@@ -905,10 +911,12 @@ public class XmlTextReader extends system.xml.XmlReader  {
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.FormatException if the .NET member raises it
      * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlTextReader.ReadBinHex" target="_top">.NET documentation</a>
      */
-    public int ReadBinHex(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.OutOfMemoryException {
+    public int ReadBinHex(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.security.SecurityException, system.io.IOException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectReadBinHex = null;
@@ -961,10 +969,12 @@ public class XmlTextReader extends system.xml.XmlReader  {
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.FormatException if the .NET member raises it
      * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlTextReader.ReadChars" target="_top">.NET documentation</a>
      */
-    public int ReadChars(char[] buffer, int index, int count) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.OutOfMemoryException {
+    public int ReadChars(char[] buffer, int index, int count) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.security.SecurityException, system.io.IOException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectReadChars = null;
@@ -1017,10 +1027,12 @@ public class XmlTextReader extends system.xml.XmlReader  {
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.FormatException if the .NET member raises it
      * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlTextReader.ReadChars" target="_top">.NET documentation</a>
      */
-    public int ReadChars(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.OutOfMemoryException {
+    public int ReadChars(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.security.SecurityException, system.io.IOException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectReadChars = null;
@@ -1598,9 +1610,11 @@ public class XmlTextReader extends system.xml.XmlReader  {
      * @throws system.io.PathTooLongException if the .NET member raises it
      * @throws system.NotSupportedException if the .NET member raises it
      * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlTextReader.GetRemainder" target="_top">.NET documentation</a>
      */
-    public TextReader GetRemainder() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.UriFormatException, system.io.PathTooLongException, system.NotSupportedException, system.OutOfMemoryException {
+    public TextReader GetRemainder() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.UriFormatException, system.io.PathTooLongException, system.NotSupportedException, system.OutOfMemoryException, system.security.SecurityException, system.io.IOException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetRemainder = null;

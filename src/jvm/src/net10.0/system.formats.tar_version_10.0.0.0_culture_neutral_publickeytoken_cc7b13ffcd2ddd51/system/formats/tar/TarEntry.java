@@ -214,12 +214,12 @@ public class TarEntry extends NetObject  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @throws system.globalization.CultureNotFoundException if the .NET member raises it
      * @throws system.io.IOException if the .NET member raises it
-     * @throws system.runtime.serialization.SerializationException if the .NET member raises it
      * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.runtime.serialization.SerializationException if the .NET member raises it
      * @throws system.NullReferenceException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Formats.Tar.TarEntry.ExtractToFile" target="_top">.NET documentation</a>
      */
-    public void ExtractToFile(java.lang.String destinationFileName, boolean overwrite) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.io.IOException, system.runtime.serialization.SerializationException, system.ObjectDisposedException, system.NullReferenceException {
+    public void ExtractToFile(java.lang.String destinationFileName, boolean overwrite) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.io.IOException, system.ObjectDisposedException, system.runtime.serialization.SerializationException, system.NullReferenceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

@@ -259,35 +259,26 @@ public class EncryptedXml extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
-     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @throws system.IndexOutOfRangeException if the .NET member raises it
-     * @throws system.OutOfMemoryException if the .NET member raises it
      * @throws system.security.SecurityException if the .NET member raises it
      * @throws system.UnauthorizedAccessException if the .NET member raises it
      * @throws system.io.IOException if the .NET member raises it
-     * @throws system.NotSupportedException if the .NET member raises it
      * @throws system.InvalidOperationException if the .NET member raises it
-     * @throws system.TypeLoadException if the .NET member raises it
      * @throws system.MissingMethodException if the .NET member raises it
      * @throws system.reflection.TargetInvocationException if the .NET member raises it
      * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
      * @throws system.resources.MissingManifestResourceException if the .NET member raises it
-     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
      * @throws system.security.cryptography.CryptographicException if the .NET member raises it
      * @throws system.xml.XmlException if the .NET member raises it
-     * @throws system.xml.schema.XmlSchemaException if the .NET member raises it
-     * @throws system.NullReferenceException if the .NET member raises it
-     * @throws system.xml.xpath.XPathException if the .NET member raises it
-     * @throws system.security.XmlSyntaxException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
      * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
-     * @throws system.MulticastNotSupportedException if the .NET member raises it
-     * @throws system.UriFormatException if the .NET member raises it
-     * @throws system.InvalidCastException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Xml.EncryptedXml.DecryptData" target="_top">.NET documentation</a>
      */
-    public byte[] DecryptData(EncryptedData encryptedData, SymmetricAlgorithm symmetricAlgorithm) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArgumentException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.NotSupportedException, system.InvalidOperationException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.threading.AbandonedMutexException, system.security.cryptography.CryptographicException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.NullReferenceException, system.xml.xpath.XPathException, system.security.XmlSyntaxException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException, system.UriFormatException, system.InvalidCastException {
+    public byte[] DecryptData(EncryptedData encryptedData, SymmetricAlgorithm symmetricAlgorithm) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.FormatException, system.security.cryptography.CryptographicException, system.xml.XmlException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectDecryptData = null;
@@ -317,33 +308,28 @@ public class EncryptedXml extends NetObject  {
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
-     * @throws system.ObjectDisposedException if the .NET member raises it
-     * @throws system.threading.AbandonedMutexException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
-     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
      * @throws system.IndexOutOfRangeException if the .NET member raises it
-     * @throws system.OutOfMemoryException if the .NET member raises it
      * @throws system.security.SecurityException if the .NET member raises it
      * @throws system.UnauthorizedAccessException if the .NET member raises it
      * @throws system.io.IOException if the .NET member raises it
-     * @throws system.NotSupportedException if the .NET member raises it
      * @throws system.InvalidOperationException if the .NET member raises it
-     * @throws system.NotImplementedException if the .NET member raises it
-     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
-     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
-     * @throws system.RankException if the .NET member raises it
-     * @throws system.ApplicationException if the .NET member raises it
      * @throws system.MissingMethodException if the .NET member raises it
      * @throws system.reflection.TargetInvocationException if the .NET member raises it
-     * @throws system.AccessViolationException if the .NET member raises it
-     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
      * @throws system.threading.ThreadAbortException if the .NET member raises it
-     * @throws system.security.accesscontrol.PrivilegeNotHeldException if the .NET member raises it
      * @throws system.xml.xpath.XPathException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Xml.EncryptedXml.DecryptEncryptedKey" target="_top">.NET documentation</a>
      */
-    public byte[] DecryptEncryptedKey(EncryptedKey encryptedKey) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArgumentException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.security.cryptography.CryptographicException, system.RankException, system.ApplicationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.AccessViolationException, system.OverflowException, system.threading.ThreadAbortException, system.security.accesscontrol.PrivilegeNotHeldException, system.xml.xpath.XPathException {
+    public byte[] DecryptEncryptedKey(EncryptedKey encryptedKey) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.FormatException, system.security.cryptography.CryptographicException, system.RankException, system.OutOfMemoryException, system.threading.ThreadAbortException, system.xml.xpath.XPathException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectDecryptEncryptedKey = null;
@@ -820,34 +806,26 @@ public class EncryptedXml extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
-     * @throws system.TypeLoadException if the .NET member raises it
      * @throws system.InvalidOperationException if the .NET member raises it
      * @throws system.MissingMethodException if the .NET member raises it
      * @throws system.reflection.TargetInvocationException if the .NET member raises it
-     * @throws system.NotSupportedException if the .NET member raises it
      * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
-     * @throws system.IndexOutOfRangeException if the .NET member raises it
-     * @throws system.ObjectDisposedException if the .NET member raises it
      * @throws system.globalization.CultureNotFoundException if the .NET member raises it
      * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
      * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @throws system.security.SecurityException if the .NET member raises it
      * @throws system.UnauthorizedAccessException if the .NET member raises it
      * @throws system.io.IOException if the .NET member raises it
      * @throws system.xml.XmlException if the .NET member raises it
-     * @throws system.xml.schema.XmlSchemaException if the .NET member raises it
-     * @throws system.NullReferenceException if the .NET member raises it
      * @throws system.OutOfMemoryException if the .NET member raises it
-     * @throws system.xml.xpath.XPathException if the .NET member raises it
-     * @throws system.security.XmlSyntaxException if the .NET member raises it
      * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
-     * @throws system.MulticastNotSupportedException if the .NET member raises it
-     * @throws system.UriFormatException if the .NET member raises it
-     * @throws system.InvalidCastException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Xml.EncryptedXml.GetDecryptionIV" target="_top">.NET documentation</a>
      */
-    public byte[] GetDecryptionIV(EncryptedData encryptedData, java.lang.String symmetricAlgorithmUri) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.security.cryptography.CryptographicException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.NullReferenceException, system.OutOfMemoryException, system.xml.xpath.XPathException, system.security.XmlSyntaxException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException, system.UriFormatException, system.InvalidCastException {
+    public byte[] GetDecryptionIV(EncryptedData encryptedData, java.lang.String symmetricAlgorithmUri) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.xml.XmlException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetDecryptionIV = null;
@@ -882,13 +860,10 @@ public class EncryptedXml extends NetObject  {
      * @throws system.threading.AbandonedMutexException if the .NET member raises it
      * @throws system.NullReferenceException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
-     * @throws system.InvalidOperationException if the .NET member raises it
-     * @throws system.MissingMethodException if the .NET member raises it
-     * @throws system.reflection.TargetInvocationException if the .NET member raises it
      * @throws system.NotImplementedException if the .NET member raises it
-     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
-     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
      * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @throws system.xml.xpath.XPathException if the .NET member raises it
      * @throws system.security.cryptography.CryptographicException if the .NET member raises it
@@ -896,14 +871,14 @@ public class EncryptedXml extends NetObject  {
      * @throws system.UnauthorizedAccessException if the .NET member raises it
      * @throws system.io.IOException if the .NET member raises it
      * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
      * @throws system.RankException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
      * @throws system.NotSupportedException if the .NET member raises it
-     * @throws system.AccessViolationException if the .NET member raises it
-     * @throws system.threading.ThreadAbortException if the .NET member raises it
-     * @throws system.security.accesscontrol.PrivilegeNotHeldException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Xml.EncryptedXml.GetDecryptionKey" target="_top">.NET documentation</a>
      */
-    public SymmetricAlgorithm GetDecryptionKey(EncryptedData encryptedData, java.lang.String symmetricAlgorithmUri) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NullReferenceException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.xml.xpath.XPathException, system.security.cryptography.CryptographicException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.OutOfMemoryException, system.RankException, system.NotSupportedException, system.AccessViolationException, system.threading.ThreadAbortException, system.security.accesscontrol.PrivilegeNotHeldException {
+    public SymmetricAlgorithm GetDecryptionKey(EncryptedData encryptedData, java.lang.String symmetricAlgorithmUri) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NullReferenceException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.xml.xpath.XPathException, system.security.cryptography.CryptographicException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.OutOfMemoryException, system.FormatException, system.RankException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetDecryptionKey = null;
@@ -1100,30 +1075,21 @@ public class EncryptedXml extends NetObject  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.NullReferenceException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
-     * @throws system.InvalidOperationException if the .NET member raises it
-     * @throws system.MissingMethodException if the .NET member raises it
-     * @throws system.reflection.TargetInvocationException if the .NET member raises it
      * @throws system.NotImplementedException if the .NET member raises it
-     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
-     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
      * @throws system.resources.MissingManifestResourceException if the .NET member raises it
      * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @throws system.xml.xpath.XPathException if the .NET member raises it
      * @throws system.security.cryptography.CryptographicException if the .NET member raises it
-     * @throws system.security.SecurityException if the .NET member raises it
-     * @throws system.UnauthorizedAccessException if the .NET member raises it
-     * @throws system.io.IOException if the .NET member raises it
      * @throws system.OutOfMemoryException if the .NET member raises it
-     * @throws system.RankException if the .NET member raises it
-     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
      * @throws system.NotSupportedException if the .NET member raises it
      * @throws system.xml.XmlException if the .NET member raises it
-     * @throws system.InvalidCastException if the .NET member raises it
-     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Xml.EncryptedXml.DecryptDocument" target="_top">.NET documentation</a>
      */
-    public void DecryptDocument() throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.xml.xpath.XPathException, system.security.cryptography.CryptographicException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.OutOfMemoryException, system.RankException, system.threading.ThreadAbortException, system.NotSupportedException, system.xml.XmlException, system.InvalidCastException, system.configuration.ConfigurationErrorsException {
+    public void DecryptDocument() throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.xml.xpath.XPathException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.security.SecurityException, system.NotSupportedException, system.xml.XmlException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -1155,9 +1121,11 @@ public class EncryptedXml extends NetObject  {
      * @throws system.FormatException if the .NET member raises it
      * @throws system.xml.schema.XmlSchemaException if the .NET member raises it
      * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Xml.EncryptedXml.ReplaceData" target="_top">.NET documentation</a>
      */
-    public void ReplaceData(XmlElement inputElement, byte[] decryptedData) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.xml.XmlException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.xml.schema.XmlSchemaException, system.NullReferenceException {
+    public void ReplaceData(XmlElement inputElement, byte[] decryptedData) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.xml.XmlException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.xml.schema.XmlSchemaException, system.NullReferenceException, system.OutOfMemoryException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -1189,9 +1157,11 @@ public class EncryptedXml extends NetObject  {
      * @throws system.FormatException if the .NET member raises it
      * @throws system.xml.schema.XmlSchemaException if the .NET member raises it
      * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Xml.EncryptedXml.ReplaceData" target="_top">.NET documentation</a>
      */
-    public void ReplaceData(XmlElement dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.xml.XmlException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.xml.schema.XmlSchemaException, system.NullReferenceException {
+    public void ReplaceData(XmlElement dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.xml.XmlException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.xml.schema.XmlSchemaException, system.NullReferenceException, system.OutOfMemoryException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

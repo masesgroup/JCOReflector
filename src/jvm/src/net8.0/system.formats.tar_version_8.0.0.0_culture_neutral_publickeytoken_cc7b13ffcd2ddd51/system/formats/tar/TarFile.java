@@ -456,14 +456,14 @@ public class TarFile extends NetObject  {
      * @throws system.runtime.serialization.SerializationException if the .NET member raises it
      * @throws system.diagnostics.UnreachableException if the .NET member raises it
      * @throws system.io.IOException if the .NET member raises it
-     * @throws system.ObjectDisposedException if the .NET member raises it
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
      * @throws system.io.InvalidDataException if the .NET member raises it
      * @throws system.OverflowException if the .NET member raises it
-     * @throws system.RankException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Formats.Tar.TarFile.ExtractToDirectory" target="_top">.NET documentation</a>
      */
-    public static void ExtractToDirectory(java.lang.String sourceFileName, java.lang.String destinationDirectoryName, boolean overwriteFiles) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.runtime.serialization.SerializationException, system.diagnostics.UnreachableException, system.io.IOException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.io.InvalidDataException, system.OverflowException, system.RankException {
+    public static void ExtractToDirectory(java.lang.String sourceFileName, java.lang.String destinationDirectoryName, boolean overwriteFiles) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.runtime.serialization.SerializationException, system.diagnostics.UnreachableException, system.io.IOException, system.ArrayTypeMismatchException, system.RankException, system.ObjectDisposedException, system.io.InvalidDataException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

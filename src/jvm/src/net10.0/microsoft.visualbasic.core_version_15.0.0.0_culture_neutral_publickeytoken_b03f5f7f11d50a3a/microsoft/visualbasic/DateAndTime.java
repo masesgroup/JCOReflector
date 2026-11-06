@@ -238,8 +238,8 @@ public class DateAndTime extends NetObject  {
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.globalization.CultureNotFoundException if the .NET member raises it
      * @throws system.IndexOutOfRangeException if the .NET member raises it
-     * @throws system.TypeInitializationException if the .NET member raises it
      * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.TypeInitializationException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @throws system.InvalidCastException if the .NET member raises it
@@ -247,7 +247,7 @@ public class DateAndTime extends NetObject  {
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.DateAndTime.DatePart" target="_top">.NET documentation</a>
      */
-    public static int DatePart(java.lang.String Interval, NetObject DateValue, FirstDayOfWeek DayOfWeek, FirstWeekOfYear WeekOfYear) throws Throwable, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.TypeInitializationException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.InvalidCastException, system.OutOfMemoryException, system.ArrayTypeMismatchException {
+    public static int DatePart(java.lang.String Interval, NetObject DateValue, FirstDayOfWeek DayOfWeek, FirstWeekOfYear WeekOfYear) throws Throwable, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.InvalidOperationException, system.TypeInitializationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.InvalidCastException, system.OutOfMemoryException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDatePart = null;
@@ -790,8 +790,8 @@ public class DateAndTime extends NetObject  {
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.globalization.CultureNotFoundException if the .NET member raises it
      * @throws system.IndexOutOfRangeException if the .NET member raises it
-     * @throws system.TypeInitializationException if the .NET member raises it
      * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.TypeInitializationException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @throws system.InvalidCastException if the .NET member raises it
@@ -799,7 +799,7 @@ public class DateAndTime extends NetObject  {
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.DateAndTime.DateDiff" target="_top">.NET documentation</a>
      */
-    public static long DateDiff(java.lang.String Interval, NetObject Date1, NetObject Date2, FirstDayOfWeek DayOfWeek, FirstWeekOfYear WeekOfYear) throws Throwable, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.TypeInitializationException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.InvalidCastException, system.OutOfMemoryException, system.ArrayTypeMismatchException {
+    public static long DateDiff(java.lang.String Interval, NetObject Date1, NetObject Date2, FirstDayOfWeek DayOfWeek, FirstWeekOfYear WeekOfYear) throws Throwable, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.InvalidOperationException, system.TypeInitializationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.InvalidCastException, system.OutOfMemoryException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDateDiff = null;
@@ -890,8 +890,8 @@ public class DateAndTime extends NetObject  {
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.globalization.CultureNotFoundException if the .NET member raises it
      * @throws system.IndexOutOfRangeException if the .NET member raises it
-     * @throws system.TypeInitializationException if the .NET member raises it
      * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.TypeInitializationException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @throws system.InvalidCastException if the .NET member raises it
@@ -899,7 +899,7 @@ public class DateAndTime extends NetObject  {
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.DateAndTime.DateAdd" target="_top">.NET documentation</a>
      */
-    public static DateTime DateAdd(java.lang.String Interval, double Number, NetObject DateValue) throws Throwable, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.TypeInitializationException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.InvalidCastException, system.OutOfMemoryException, system.ArrayTypeMismatchException {
+    public static DateTime DateAdd(java.lang.String Interval, double Number, NetObject DateValue) throws Throwable, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.InvalidOperationException, system.TypeInitializationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.InvalidCastException, system.OutOfMemoryException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDateAdd = null;
@@ -965,16 +965,16 @@ public class DateAndTime extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
      * @throws system.TypeInitializationException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @throws system.ArgumentNullException if the .NET member raises it
-     * @throws system.InvalidOperationException if the .NET member raises it
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @throws system.FormatException if the .NET member raises it
      * @throws system.InvalidCastException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.DateAndTime.DateValue" target="_top">.NET documentation</a>
      */
-    public static DateTime DateValue(java.lang.String StringDate) throws Throwable, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.TypeInitializationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.ObjectDisposedException, system.FormatException, system.InvalidCastException {
+    public static DateTime DateValue(java.lang.String StringDate) throws Throwable, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.InvalidOperationException, system.TypeInitializationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.FormatException, system.InvalidCastException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDateValue = null;
@@ -1036,16 +1036,16 @@ public class DateAndTime extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
      * @throws system.TypeInitializationException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @throws system.ArgumentNullException if the .NET member raises it
-     * @throws system.InvalidOperationException if the .NET member raises it
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @throws system.FormatException if the .NET member raises it
      * @throws system.InvalidCastException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.DateAndTime.TimeValue" target="_top">.NET documentation</a>
      */
-    public static DateTime TimeValue(java.lang.String StringTime) throws Throwable, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.TypeInitializationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.ObjectDisposedException, system.FormatException, system.InvalidCastException {
+    public static DateTime TimeValue(java.lang.String StringTime) throws Throwable, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.InvalidOperationException, system.TypeInitializationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.FormatException, system.InvalidCastException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTimeValue = null;
@@ -1450,17 +1450,17 @@ public class DateAndTime extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
      * @throws system.TypeInitializationException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @throws system.ArgumentNullException if the .NET member raises it
-     * @throws system.InvalidOperationException if the .NET member raises it
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @throws system.FormatException if the .NET member raises it
      * @throws system.InvalidCastException if the .NET member raises it
      * @throws system.security.SecurityException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.DateAndTime.TimeString" target="_top">.NET documentation</a>
      */
-    public static void setTimeString(java.lang.String TimeString) throws Throwable, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.TypeInitializationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.ObjectDisposedException, system.FormatException, system.InvalidCastException, system.security.SecurityException {
+    public static void setTimeString(java.lang.String TimeString) throws Throwable, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.InvalidOperationException, system.TypeInitializationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.FormatException, system.InvalidCastException, system.security.SecurityException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

@@ -366,10 +366,12 @@ public class XmlDsigC14NTransform extends system.security.cryptography.xml.Trans
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @throws system.security.XmlSyntaxException if the .NET member raises it
      * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
      * @throws system.xml.XmlException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Xml.XmlDsigC14NTransform.LoadInput" target="_top">.NET documentation</a>
      */
-    public void LoadInput(NetObject obj) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.security.SecurityException, system.UriFormatException, system.OutOfMemoryException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.security.XmlSyntaxException, system.MissingMethodException, system.xml.XmlException {
+    public void LoadInput(NetObject obj) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.security.SecurityException, system.UriFormatException, system.OutOfMemoryException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.security.XmlSyntaxException, system.MissingMethodException, system.UnauthorizedAccessException, system.io.IOException, system.xml.XmlException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

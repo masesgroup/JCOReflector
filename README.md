@@ -17,7 +17,7 @@ JCOReflector is a comprehensive suite of libraries and tools to use Java™/JVM�
 | **.NET 10** | ![.NET 10 commercial users](https://api.scarf.sh/v2/packages/Masesgroup/48418723-04ae-4b40-8cb4-573993e3e626/commercial-users-badge) | ![.NET 10 downloads](https://api.scarf.sh/v2/packages/Masesgroup/48418723-04ae-4b40-8cb4-573993e3e626/downloads-badge) | [![Maven Central](https://img.shields.io/maven-central/v/com.masesgroup/jcoreflector_net10.0.svg?label=Maven%20Central)](https://central.sonatype.com/artifact/com.masesgroup/jcoreflector_net10.0) |
 
 > [!NOTE]
-> In alignment with the upcoming **JCOBridge** releases, **.NET 8** and **.NET 9** will move to the deprecated targets: standard public updates will be phased out from the public open-source branch.
+> JCOReflector follows the target framework support of **JCOBridge**, which in turn follows the Microsoft .NET support lifecycle. Microsoft support for **.NET 8** and **.NET 9** ends on November 10, 2026. To allow a soft transition, **.NET 8** and **.NET 9** are still included in the JCOBridge 2.6.10 line, together with .NET 10 and .NET 11. They will move to the deprecated targets starting with JCOBridge 2.6.11.
 
 ### 🟡 Deprecated Maven Artifacts with Extended Support
 
@@ -28,7 +28,7 @@ JCOReflector is a comprehensive suite of libraries and tools to use Java™/JVM�
 | **.NET 6** | ![.NET 6 commercial users](https://api.scarf.sh/v2/packages/Masesgroup/8c8cd59a-a84f-4205-ab7f-e74d8840a996/commercial-users-badge) | ![.NET 6 downloads](https://api.scarf.sh/v2/packages/Masesgroup/8c8cd59a-a84f-4205-ab7f-e74d8840a996/downloads-badge) | [![Maven Central](https://img.shields.io/maven-central/v/com.masesgroup/jcoreflector_net6.0.svg?label=Maven%20Central)](https://central.sonatype.com/artifact/com.masesgroup/jcoreflector_net6.0) |
 | **.NET 7** | ![.NET 7 commercial users](https://api.scarf.sh/v2/packages/Masesgroup/a5cd76d9-da23-4e80-84bb-bb0f526ba18d/commercial-users-badge) | ![.NET 7 downloads](https://api.scarf.sh/v2/packages/Masesgroup/a5cd76d9-da23-4e80-84bb-bb0f526ba18d/downloads-badge) | [![Maven Central](https://img.shields.io/maven-central/v/com.masesgroup/jcoreflector_net7.0.svg?label=Maven%20Central)](https://central.sonatype.com/artifact/com.masesgroup/jcoreflector_net7.0) |
 
-Need a build for a legacy or out-of-support target? See [Professional Support Options](src/documentation/articles/support.md).
+Need a build for a legacy or out-of-support target, or expert help with .NET and JVM™ integration? See [Professional Support Options](src/documentation/articles/support.md).
 
 ### Reflection engine
 

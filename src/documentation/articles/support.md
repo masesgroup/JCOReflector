@@ -1,11 +1,23 @@
 ---
 title: Professional support for JCOReflector
-_description: Professional support and implementation services for JCOReflector by MASES Group
+_description: Professional support, legacy target builds and implementation services for JCOReflector by MASES Group
 ---
 
 # JCOReflector: professional support
 
-Looking for expertise in applications mixing .NET and JVM™-enabled languages? MASES Group can help you design, build, deploy, and manage applications that run .NET and Java™/JVM™ side-by-side.
+Looking for expertise in applications mixing .NET and JVM™-enabled languages? MASES Group can help you design, build, deploy, and manage applications that run .NET and Java™/JVM™ side-by-side, and can provide builds for targets no longer covered by the public releases.
+
+---
+
+## Legacy and out-of-support targets
+
+The public open-source branch of JCOReflector follows the target framework support of JCOBridge, which in turn follows the Microsoft .NET support lifecycle. When a target reaches end of support, it moves to the deprecated targets and is no longer part of the standard public updates.
+
+If your project still depends on one of those targets, MASES Group can provide:
+
+- Dedicated engine compilation for deprecated or out-of-support targets (for example .NET Framework 4.6.1+, .NET 5, .NET 6 and .NET 7)
+- Continued maintenance of those builds, so you can plan your migration to a supported runtime on your own schedule
+- Help assessing and executing the migration to a currently supported .NET target
 
 ---
 
@@ -14,7 +26,7 @@ Looking for expertise in applications mixing .NET and JVM™-enabled languages? 
 ### Architecture and design
 
 - Designing the integration architecture between .NET and JVM™-based systems: in-process vs. out-of-process, bidirectional vs. unidirectional, synchronous vs. event-driven
-- Selecting the right JVM version for your .NET target runtime (.NET 8, .NET 10, .NET Framework) and managing backward compatibility with existing Java 8+ bytecode
+- Selecting the right JVM version for your .NET target runtime and managing backward compatibility with existing Java 8+ bytecode
 - Mapping Java API surface to idiomatic C# patterns: generics, listeners, iterables, futures, and exception hierarchies
 - Assessing legacy Java codebases for .NET integration — identifying which components to wrap via JCOReflector and which to migrate
 
@@ -23,7 +35,7 @@ Looking for expertise in applications mixing .NET and JVM™-enabled languages? 
 - Building .NET applications that consume Java/Scala/Kotlin/etc libraries directly via JCOReflector, without requiring Java-side modifications
 - Developing JCOReflector-based wrappers for custom or third-party Java libraries not covered by the standard JCOReflector generated classes
 - Implementing bidirectional integration using JCOReflector: exposing .NET assemblies as JARs for consumption from Java, Kotlin, or Scala
-- Configuring JCOReflectorReflector to generate C# gateway classes from custom JARs and maintaining those classes across library updates
+- Configuring JCOReflectorEngine to generate C# gateway classes from custom JARs and maintaining those classes across library updates
 
 ### Operations and performance
 

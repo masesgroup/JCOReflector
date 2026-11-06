@@ -17,6 +17,7 @@ JCOReflector publishes one artifact for each .NET flavor, all in the `com.masesg
 | .NET 8 | [`jcoreflector_net8.0`](https://central.sonatype.com/artifact/com.masesgroup/jcoreflector_net8.0) |
 | .NET 9 | [`jcoreflector_net9.0`](https://central.sonatype.com/artifact/com.masesgroup/jcoreflector_net9.0) |
 | .NET 10 | [`jcoreflector_net10.0`](https://central.sonatype.com/artifact/com.masesgroup/jcoreflector_net10.0) |
+| .NET 11 | [`jcoreflector_net11.0`](https://central.sonatype.com/artifact/com.masesgroup/jcoreflector_net11.0) |
 
 With Maven, add the dependency for the flavor you want to use:
 
@@ -120,6 +121,7 @@ Within the folder bin you will find four subfolders:
 - **net8.0** (available on .NET 8 supported platforms)
 - **net9.0** (available on .NET 9 supported platforms)
 - **net10.0** (available on .NET 10 supported platforms)
+- **net11.0** (available on .NET 11 supported platforms)
 
 in each subfolder will be available two executables:
 
@@ -139,7 +141,7 @@ The work of the tool is described by XML job files, one for each stage of the pr
 
 | Stage | Root element | Job files | What it does |
 |:---|:---|:---|:---|
-| Reflect | `ReflectorEventArgs` | `reflect_net462.job`, `reflect_net8_0.job`, `reflect_net9_0.job`, `reflect_net10_0.job` | Generates the Java sources from the .NET assemblies |
+| Reflect | `ReflectorEventArgs` | `reflect_net462.job`, `reflect_net8_0.job`, `reflect_net9_0.job`, `reflect_net10_0.job`, `reflect_net11_0.job` | Generates the Java sources from the .NET assemblies |
 | Build | `JavaBuilderEventArgs` | `build_linux.job`, `build_win19.job` | Compiles the generated sources with a JDK |
 | Create JARs | `JARBuilderEventArgs` | `createjars_<framework>_<os>.job` | Packages the compiled classes into JARs, one for each assembly |
 | Create POM | `POMBuilderEventArgs` | `createpom_win19.job` | Generates the Maven POM used to publish the artifacts |

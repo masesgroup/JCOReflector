@@ -65,7 +65,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        framework: [ 'net462', 'net8.0', 'net9.0', 'net10.0' ]
+        framework: [ 'net462', 'net8.0', 'net9.0', 'net10.0', 'net11.0' ]
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -79,8 +79,8 @@ jobs:
 
       - uses: actions/setup-dotnet@v6
         with:
-          dotnet-version: |
-            10.x
+          dotnet-version: '11.0.x'
+          dotnet-quality: 'preview'
 
       # Runs a set of commands using the runners shell
       - name: Build JCOReflectorCLI

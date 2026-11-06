@@ -356,6 +356,7 @@ Within the folder bin you will find four subfolders:
 - **net8.0** (available on .NET 8 supported platforms)
 - **net9.0** (available on .NET 9 supported platforms)
 - **net10.0** (available on .NET 10 supported platforms)
+- **net11.0** (available on .NET 11 supported platforms)
 
 in each subfolder will be available two executables:
 
@@ -369,7 +370,7 @@ The reflection can also be driven by job files, one for each stage (reflect, bui
 
 ## Reflected Assemblies
 
-The folder [src/jvm/src](/src/jvm/src) contains all reflected classes generated for **.NET** **Framework** (_net462_), **8** (_net8.0_), **9** (_net9.0_) and **10** (_net10.0_). Below the coverage [statistics](#statistics):
+The folder [src/jvm/src](/src/jvm/src) contains all reflected classes generated for **.NET** **Framework** (_net462_), **8** (_net8.0_), **9** (_net9.0_), **10** (_net10.0_) and **11** (_net11.0_). Below the coverage [statistics](#statistics):
 
 ### Statistics
 
@@ -406,7 +407,7 @@ JCOReflector uses [JCOBridge](https://www.jcobridge.com), and its [features](htt
 
 **.NET:**
 - .NET Framework 4.6.2+
-- .NET 6, 8, 9, 10
+- .NET 8, 9, 10, 11
 
 **Note for Java 8 Users:**
 JCOReflector enables modernization of Java 8 applications by providing access 

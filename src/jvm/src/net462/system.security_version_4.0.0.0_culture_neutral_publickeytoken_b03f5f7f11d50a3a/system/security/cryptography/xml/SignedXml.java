@@ -184,9 +184,10 @@ public class SignedXml extends NetObject  {
      * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
      * @throws system.FormatException if the .NET member raises it
      * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Xml.SignedXml.-ctor" target="_top">.NET documentation</a>
      */
-    public SignedXml() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException, system.ApplicationException, system.NotSupportedException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.FormatException, system.NotImplementedException {
+    public SignedXml() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException, system.ApplicationException, system.NotSupportedException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.FormatException, system.NotImplementedException, system.security.cryptography.CryptographicException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -219,9 +220,10 @@ public class SignedXml extends NetObject  {
      * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
      * @throws system.FormatException if the .NET member raises it
      * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Xml.SignedXml.-ctor" target="_top">.NET documentation</a>
      */
-    public SignedXml(XmlDocument document) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException, system.ApplicationException, system.NotSupportedException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.FormatException, system.NotImplementedException {
+    public SignedXml(XmlDocument document) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException, system.ApplicationException, system.NotSupportedException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.FormatException, system.NotImplementedException, system.security.cryptography.CryptographicException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -254,9 +256,10 @@ public class SignedXml extends NetObject  {
      * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
      * @throws system.FormatException if the .NET member raises it
      * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Xml.SignedXml.-ctor" target="_top">.NET documentation</a>
      */
-    public SignedXml(XmlElement elem) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException, system.ApplicationException, system.NotSupportedException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.FormatException, system.NotImplementedException {
+    public SignedXml(XmlElement elem) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException, system.ApplicationException, system.NotSupportedException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.FormatException, system.NotImplementedException, system.security.cryptography.CryptographicException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -275,36 +278,17 @@ public class SignedXml extends NetObject  {
      *
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
-     * @throws system.ArgumentException if the .NET member raises it
-     * @throws system.configuration.ConfigurationException if the .NET member raises it
-     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
      * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
      * @throws system.resources.MissingManifestResourceException if the .NET member raises it
-     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
-     * @throws system.InvalidCastException if the .NET member raises it
-     * @throws system.NotImplementedException if the .NET member raises it
-     * @throws system.NotSupportedException if the .NET member raises it
      * @throws system.InvalidOperationException if the .NET member raises it
-     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
-     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
      * @throws system.security.cryptography.CryptographicException if the .NET member raises it
-     * @throws system.threading.ThreadAbortException if the .NET member raises it
-     * @throws system.MissingMethodException if the .NET member raises it
-     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
      * @throws system.security.SecurityException if the .NET member raises it
-     * @throws system.RankException if the .NET member raises it
-     * @throws system.ObjectDisposedException if the .NET member raises it
-     * @throws system.UnauthorizedAccessException if the .NET member raises it
-     * @throws system.io.IOException if the .NET member raises it
-     * @throws system.ApplicationException if the .NET member raises it
-     * @throws system.security.cryptography.CryptographicUnexpectedOperationException if the .NET member raises it
-     * @throws system.xml.XmlException if the .NET member raises it
-     * @throws system.NullReferenceException if the .NET member raises it
-     * @throws system.FormatException if the .NET member raises it
-     * @throws system.xml.xpath.XPathException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Xml.SignedXml.CheckSignature" target="_top">.NET documentation</a>
      */
-    public boolean CheckSignature() throws Throwable, system.ArgumentException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.InvalidCastException, system.NotImplementedException, system.NotSupportedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.security.cryptography.CryptographicException, system.threading.ThreadAbortException, system.MissingMethodException, system.OutOfMemoryException, system.security.SecurityException, system.RankException, system.ObjectDisposedException, system.UnauthorizedAccessException, system.io.IOException, system.ApplicationException, system.security.cryptography.CryptographicUnexpectedOperationException, system.xml.XmlException, system.NullReferenceException, system.FormatException, system.xml.xpath.XPathException {
+    public boolean CheckSignature() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.NotImplementedException, system.security.cryptography.CryptographicException, system.NotSupportedException, system.security.SecurityException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectCheckSignature = null;
@@ -325,40 +309,30 @@ public class SignedXml extends NetObject  {
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
-     * @throws system.configuration.ConfigurationException if the .NET member raises it
      * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
-     * @throws system.ArgumentNullException if the .NET member raises it
-     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
-     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
-     * @throws system.InvalidCastException if the .NET member raises it
      * @throws system.NotSupportedException if the .NET member raises it
-     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.NotImplementedException if the .NET member raises it
      * @throws system.globalization.CultureNotFoundException if the .NET member raises it
-     * @throws system.ObjectDisposedException if the .NET member raises it
      * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @throws system.security.SecurityException if the .NET member raises it
      * @throws system.UnauthorizedAccessException if the .NET member raises it
      * @throws system.io.IOException if the .NET member raises it
      * @throws system.ApplicationException if the .NET member raises it
      * @throws system.security.cryptography.CryptographicException if the .NET member raises it
-     * @throws system.FormatException if the .NET member raises it
-     * @throws system.NullReferenceException if the .NET member raises it
-     * @throws system.UriFormatException if the .NET member raises it
-     * @throws system.xml.XmlException if the .NET member raises it
      * @throws system.security.cryptography.CryptographicUnexpectedOperationException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
      * @throws system.OutOfMemoryException if the .NET member raises it
-     * @throws system.MissingMethodException if the .NET member raises it
-     * @throws system.reflection.TargetInvocationException if the .NET member raises it
-     * @throws system.io.FileNotFoundException if the .NET member raises it
-     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
-     * @throws system.io.PathTooLongException if the .NET member raises it
-     * @throws system.io.DriveNotFoundException if the .NET member raises it
-     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
      * @throws system.xml.xpath.XPathException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Xml.SignedXml.CheckSignature" target="_top">.NET documentation</a>
      */
-    public boolean CheckSignature(AsymmetricAlgorithm key) throws Throwable, system.ArgumentException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.InvalidCastException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ApplicationException, system.security.cryptography.CryptographicException, system.FormatException, system.NullReferenceException, system.UriFormatException, system.xml.XmlException, system.security.cryptography.CryptographicUnexpectedOperationException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.xml.xpath.XPathException {
+    public boolean CheckSignature(AsymmetricAlgorithm key) throws Throwable, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ApplicationException, system.security.cryptography.CryptographicException, system.security.cryptography.CryptographicUnexpectedOperationException, system.xml.XmlException, system.NullReferenceException, system.OutOfMemoryException, system.FormatException, system.xml.xpath.XPathException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectCheckSignature = null;
@@ -379,39 +353,28 @@ public class SignedXml extends NetObject  {
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
-     * @throws system.configuration.ConfigurationException if the .NET member raises it
      * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
-     * @throws system.ArgumentNullException if the .NET member raises it
-     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
-     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
-     * @throws system.InvalidCastException if the .NET member raises it
      * @throws system.NotSupportedException if the .NET member raises it
-     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.NotImplementedException if the .NET member raises it
      * @throws system.globalization.CultureNotFoundException if the .NET member raises it
-     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
-     * @throws system.FormatException if the .NET member raises it
-     * @throws system.NullReferenceException if the .NET member raises it
-     * @throws system.UriFormatException if the .NET member raises it
-     * @throws system.xml.XmlException if the .NET member raises it
      * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
      * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
      * @throws system.security.cryptography.CryptographicUnexpectedOperationException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
      * @throws system.OutOfMemoryException if the .NET member raises it
-     * @throws system.io.FileNotFoundException if the .NET member raises it
-     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
-     * @throws system.UnauthorizedAccessException if the .NET member raises it
-     * @throws system.io.IOException if the .NET member raises it
-     * @throws system.io.PathTooLongException if the .NET member raises it
-     * @throws system.io.DriveNotFoundException if the .NET member raises it
-     * @throws system.OperationCanceledException if the .NET member raises it
      * @throws system.security.SecurityException if the .NET member raises it
      * @throws system.xml.xpath.XPathException if the .NET member raises it
-     * @throws system.MissingMethodException if the .NET member raises it
-     * @throws system.reflection.TargetInvocationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Xml.SignedXml.CheckSignature" target="_top">.NET documentation</a>
      */
-    public boolean CheckSignature(KeyedHashAlgorithm macAlg) throws Throwable, system.ArgumentException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.InvalidCastException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.security.cryptography.CryptographicException, system.FormatException, system.NullReferenceException, system.UriFormatException, system.xml.XmlException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.security.cryptography.CryptographicUnexpectedOperationException, system.OutOfMemoryException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.SecurityException, system.xml.xpath.XPathException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public boolean CheckSignature(KeyedHashAlgorithm macAlg) throws Throwable, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.OverflowException, system.security.cryptography.CryptographicException, system.security.cryptography.CryptographicUnexpectedOperationException, system.xml.XmlException, system.NullReferenceException, system.OutOfMemoryException, system.security.SecurityException, system.xml.xpath.XPathException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectCheckSignature = null;
@@ -434,41 +397,27 @@ public class SignedXml extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
-     * @throws system.InvalidOperationException if the .NET member raises it
-     * @throws system.MissingMethodException if the .NET member raises it
-     * @throws system.reflection.TargetInvocationException if the .NET member raises it
      * @throws system.NotImplementedException if the .NET member raises it
-     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
-     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
      * @throws system.resources.MissingManifestResourceException if the .NET member raises it
      * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
      * @throws system.security.cryptography.CryptographicException if the .NET member raises it
-     * @throws system.OutOfMemoryException if the .NET member raises it
-     * @throws system.IndexOutOfRangeException if the .NET member raises it
-     * @throws system.security.SecurityException if the .NET member raises it
-     * @throws system.ApplicationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
      * @throws system.NotSupportedException if the .NET member raises it
-     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.ApplicationException if the .NET member raises it
      * @throws system.configuration.ConfigurationException if the .NET member raises it
      * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
      * @throws system.OverflowException if the .NET member raises it
-     * @throws system.FormatException if the .NET member raises it
-     * @throws system.AccessViolationException if the .NET member raises it
      * @throws system.RankException if the .NET member raises it
+     * @throws system.AccessViolationException if the .NET member raises it
      * @throws system.threading.ThreadAbortException if the .NET member raises it
-     * @throws system.xml.XmlException if the .NET member raises it
-     * @throws system.security.cryptography.CryptographicUnexpectedOperationException if the .NET member raises it
-     * @throws system.io.FileNotFoundException if the .NET member raises it
-     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
-     * @throws system.UnauthorizedAccessException if the .NET member raises it
-     * @throws system.io.PathTooLongException if the .NET member raises it
-     * @throws system.io.DriveNotFoundException if the .NET member raises it
-     * @throws system.OperationCanceledException if the .NET member raises it
-     * @throws system.xml.xpath.XPathException if the .NET member raises it
-     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Xml.SignedXml.CheckSignature" target="_top">.NET documentation</a>
      */
-    public boolean CheckSignature(X509Certificate2 certificate, boolean verifySignatureOnly) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.security.SecurityException, system.ApplicationException, system.NotSupportedException, system.io.IOException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.FormatException, system.AccessViolationException, system.RankException, system.threading.ThreadAbortException, system.xml.XmlException, system.security.cryptography.CryptographicUnexpectedOperationException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.xml.xpath.XPathException, system.InvalidCastException {
+    public boolean CheckSignature(X509Certificate2 certificate, boolean verifySignatureOnly) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.security.cryptography.CryptographicException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ApplicationException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.RankException, system.AccessViolationException, system.threading.ThreadAbortException, system.NullReferenceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectCheckSignature = null;
@@ -489,40 +438,24 @@ public class SignedXml extends NetObject  {
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
-     * @throws system.ArgumentNullException if the .NET member raises it
-     * @throws system.NotSupportedException if the .NET member raises it
      * @throws system.configuration.ConfigurationException if the .NET member raises it
      * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
-     * @throws system.OverflowException if the .NET member raises it
-     * @throws system.FormatException if the .NET member raises it
-     * @throws system.NotImplementedException if the .NET member raises it
-     * @throws system.IndexOutOfRangeException if the .NET member raises it
-     * @throws system.ObjectDisposedException if the .NET member raises it
      * @throws system.InvalidOperationException if the .NET member raises it
-     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
-     * @throws system.threading.ThreadAbortException if the .NET member raises it
      * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @throws system.security.SecurityException if the .NET member raises it
-     * @throws system.AccessViolationException if the .NET member raises it
      * @throws system.RankException if the .NET member raises it
-     * @throws system.UnauthorizedAccessException if the .NET member raises it
-     * @throws system.io.IOException if the .NET member raises it
-     * @throws system.ApplicationException if the .NET member raises it
-     * @throws system.xml.XmlException if the .NET member raises it
-     * @throws system.security.cryptography.CryptographicUnexpectedOperationException if the .NET member raises it
-     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
-     * @throws system.io.FileNotFoundException if the .NET member raises it
-     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
-     * @throws system.io.PathTooLongException if the .NET member raises it
-     * @throws system.io.DriveNotFoundException if the .NET member raises it
-     * @throws system.OperationCanceledException if the .NET member raises it
-     * @throws system.xml.xpath.XPathException if the .NET member raises it
-     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Xml.SignedXml.CheckSignatureReturningKey" target="_top">.NET documentation</a>
      */
-    public boolean CheckSignatureReturningKey(JCORefOut<AsymmetricAlgorithm> signingKey) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.FormatException, system.NotImplementedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.security.cryptography.CryptographicException, system.threading.ThreadAbortException, system.MissingMethodException, system.OutOfMemoryException, system.security.SecurityException, system.AccessViolationException, system.RankException, system.UnauthorizedAccessException, system.io.IOException, system.ApplicationException, system.xml.XmlException, system.security.cryptography.CryptographicUnexpectedOperationException, system.globalization.CultureNotFoundException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.xml.xpath.XPathException, system.InvalidCastException {
+    public boolean CheckSignatureReturningKey(JCORefOut<AsymmetricAlgorithm> signingKey) throws Throwable, system.ArgumentException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.security.SecurityException, system.RankException, system.NullReferenceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectCheckSignatureReturningKey = null;
@@ -657,38 +590,30 @@ public class SignedXml extends NetObject  {
      *
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
-     * @throws system.ArgumentNullException if the .NET member raises it
-     * @throws system.NotSupportedException if the .NET member raises it
      * @throws system.configuration.ConfigurationException if the .NET member raises it
      * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
-     * @throws system.OverflowException if the .NET member raises it
-     * @throws system.FormatException if the .NET member raises it
-     * @throws system.NotImplementedException if the .NET member raises it
-     * @throws system.IndexOutOfRangeException if the .NET member raises it
-     * @throws system.ObjectDisposedException if the .NET member raises it
-     * @throws system.RankException if the .NET member raises it
      * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
      * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @throws system.security.SecurityException if the .NET member raises it
-     * @throws system.UnauthorizedAccessException if the .NET member raises it
      * @throws system.io.IOException if the .NET member raises it
-     * @throws system.ApplicationException if the .NET member raises it
      * @throws system.security.cryptography.CryptographicException if the .NET member raises it
-     * @throws system.io.FileNotFoundException if the .NET member raises it
-     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
-     * @throws system.io.PathTooLongException if the .NET member raises it
-     * @throws system.io.DriveNotFoundException if the .NET member raises it
-     * @throws system.OperationCanceledException if the .NET member raises it
      * @throws system.xml.xpath.XPathException if the .NET member raises it
      * @throws system.OutOfMemoryException if the .NET member raises it
-     * @throws system.InvalidCastException if the .NET member raises it
-     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
-     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
      * @throws system.security.cryptography.CryptographicUnexpectedOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Xml.SignedXml.ComputeSignature" target="_top">.NET documentation</a>
      */
-    public void ComputeSignature() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.FormatException, system.NotImplementedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.RankException, system.InvalidOperationException, system.xml.XmlException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ApplicationException, system.security.cryptography.CryptographicException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.xml.xpath.XPathException, system.OutOfMemoryException, system.InvalidCastException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.security.cryptography.CryptographicUnexpectedOperationException {
+    public void ComputeSignature() throws Throwable, system.ArgumentException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.RankException, system.xml.XmlException, system.IndexOutOfRangeException, system.security.SecurityException, system.io.IOException, system.security.cryptography.CryptographicException, system.xml.xpath.XPathException, system.OutOfMemoryException, system.NotSupportedException, system.FormatException, system.ObjectDisposedException, system.security.cryptography.CryptographicUnexpectedOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -705,41 +630,30 @@ public class SignedXml extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
-     * @throws system.TypeLoadException if the .NET member raises it
      * @throws system.InvalidOperationException if the .NET member raises it
      * @throws system.MissingMethodException if the .NET member raises it
      * @throws system.reflection.TargetInvocationException if the .NET member raises it
-     * @throws system.NotSupportedException if the .NET member raises it
      * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
-     * @throws system.IndexOutOfRangeException if the .NET member raises it
-     * @throws system.ObjectDisposedException if the .NET member raises it
      * @throws system.globalization.CultureNotFoundException if the .NET member raises it
      * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
      * @throws system.security.cryptography.CryptographicException if the .NET member raises it
      * @throws system.FormatException if the .NET member raises it
      * @throws system.OverflowException if the .NET member raises it
      * @throws system.RankException if the .NET member raises it
-     * @throws system.NullReferenceException if the .NET member raises it
      * @throws system.xml.XmlException if the .NET member raises it
-     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
-     * @throws system.InvalidCastException if the .NET member raises it
      * @throws system.security.SecurityException if the .NET member raises it
-     * @throws system.UnauthorizedAccessException if the .NET member raises it
      * @throws system.io.IOException if the .NET member raises it
-     * @throws system.ApplicationException if the .NET member raises it
-     * @throws system.io.FileNotFoundException if the .NET member raises it
-     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
-     * @throws system.io.PathTooLongException if the .NET member raises it
-     * @throws system.io.DriveNotFoundException if the .NET member raises it
-     * @throws system.OperationCanceledException if the .NET member raises it
      * @throws system.xml.xpath.XPathException if the .NET member raises it
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @throws system.security.cryptography.CryptographicUnexpectedOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Xml.SignedXml.ComputeSignature" target="_top">.NET documentation</a>
      */
-    public void ComputeSignature(KeyedHashAlgorithm macAlg) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.security.cryptography.CryptographicException, system.FormatException, system.OverflowException, system.RankException, system.NullReferenceException, system.xml.XmlException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.InvalidCastException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ApplicationException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.xml.xpath.XPathException, system.OutOfMemoryException, system.security.cryptography.CryptographicUnexpectedOperationException {
+    public void ComputeSignature(KeyedHashAlgorithm macAlg) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.FormatException, system.OverflowException, system.RankException, system.xml.XmlException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.security.SecurityException, system.io.IOException, system.xml.xpath.XPathException, system.OutOfMemoryException, system.security.cryptography.CryptographicUnexpectedOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -755,30 +669,31 @@ public class SignedXml extends NetObject  {
      * @param value the argument of type {@code XmlElement}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
-     * @throws system.NullReferenceException if the .NET member raises it
-     * @throws system.ArgumentException if the .NET member raises it
-     * @throws system.TypeLoadException if the .NET member raises it
-     * @throws system.InvalidOperationException if the .NET member raises it
-     * @throws system.MissingMethodException if the .NET member raises it
-     * @throws system.reflection.TargetInvocationException if the .NET member raises it
-     * @throws system.NotSupportedException if the .NET member raises it
-     * @throws system.NotImplementedException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
-     * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @throws system.globalization.CultureNotFoundException if the .NET member raises it
-     * @throws system.OutOfMemoryException if the .NET member raises it
-     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ObjectDisposedException if the .NET member raises it
-     * @throws system.FormatException if the .NET member raises it
-     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
      * @throws system.security.SecurityException if the .NET member raises it
      * @throws system.UnauthorizedAccessException if the .NET member raises it
      * @throws system.io.IOException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
      * @throws system.xml.xpath.XPathException if the .NET member raises it
      * @throws system.ApplicationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Xml.SignedXml.LoadXml" target="_top">.NET documentation</a>
      */
-    public void LoadXml(XmlElement value) throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.security.cryptography.CryptographicException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.xml.xpath.XPathException, system.ApplicationException {
+    public void LoadXml(XmlElement value) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArgumentException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.NotSupportedException, system.InvalidOperationException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.threading.AbandonedMutexException, system.FormatException, system.security.cryptography.CryptographicException, system.NullReferenceException, system.xml.xpath.XPathException, system.ApplicationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

@@ -179,12 +179,12 @@ public class PackageDigitalSignature extends NetObject  {
      * @throws system.globalization.CultureNotFoundException if the .NET member raises it
      * @throws system.InvalidOperationException if the .NET member raises it
      * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
      * @throws system.io.IOException if the .NET member raises it
      * @throws system.security.SecurityException if the .NET member raises it
      * @throws system.io.FileFormatException if the .NET member raises it
      * @throws system.xml.schema.XmlSchemaException if the .NET member raises it
      * @throws system.xml.XmlException if the .NET member raises it
-     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @throws system.xml.xpath.XPathException if the .NET member raises it
      * @throws system.FormatException if the .NET member raises it
@@ -192,7 +192,7 @@ public class PackageDigitalSignature extends NetObject  {
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Packaging.PackageDigitalSignature.GetPartTransformList" target="_top">.NET documentation</a>
      */
-    public List_1 GetPartTransformList(Uri partName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.io.IOException, system.security.SecurityException, system.io.FileFormatException, system.xml.schema.XmlSchemaException, system.xml.XmlException, system.security.cryptography.CryptographicException, system.IndexOutOfRangeException, system.xml.xpath.XPathException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
+    public List_1 GetPartTransformList(Uri partName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.io.IOException, system.security.SecurityException, system.io.FileFormatException, system.xml.schema.XmlSchemaException, system.xml.XmlException, system.IndexOutOfRangeException, system.xml.xpath.XPathException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetPartTransformList = null;
@@ -265,10 +265,10 @@ public class PackageDigitalSignature extends NetObject  {
      * @throws system.globalization.CultureNotFoundException if the .NET member raises it
      * @throws system.InvalidOperationException if the .NET member raises it
      * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
      * @throws system.io.IOException if the .NET member raises it
      * @throws system.io.FileFormatException if the .NET member raises it
      * @throws system.xml.XmlException if the .NET member raises it
-     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @throws system.RankException if the .NET member raises it
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
@@ -285,7 +285,7 @@ public class PackageDigitalSignature extends NetObject  {
      * @throws system.UriFormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Packaging.PackageDigitalSignature.Verify" target="_top">.NET documentation</a>
      */
-    public VerifyResult Verify(X509Certificate signingCertificate) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.io.IOException, system.io.FileFormatException, system.xml.XmlException, system.security.cryptography.CryptographicException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.xml.xpath.XPathException, system.OverflowException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.formats.asn1.AsnContentException, system.FormatException, system.TypeLoadException, system.io.FileLoadException, system.security.cryptography.CryptographicUnexpectedOperationException, system.UriFormatException {
+    public VerifyResult Verify(X509Certificate signingCertificate) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.io.IOException, system.io.FileFormatException, system.xml.XmlException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.xml.xpath.XPathException, system.OverflowException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.formats.asn1.AsnContentException, system.FormatException, system.TypeLoadException, system.io.FileLoadException, system.security.cryptography.CryptographicUnexpectedOperationException, system.UriFormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectVerify = null;
@@ -317,6 +317,7 @@ public class PackageDigitalSignature extends NetObject  {
      * @throws system.globalization.CultureNotFoundException if the .NET member raises it
      * @throws system.InvalidOperationException if the .NET member raises it
      * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
      * @throws system.io.IOException if the .NET member raises it
      * @throws system.RankException if the .NET member raises it
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
@@ -325,12 +326,11 @@ public class PackageDigitalSignature extends NetObject  {
      * @throws system.io.FileFormatException if the .NET member raises it
      * @throws system.xml.schema.XmlSchemaException if the .NET member raises it
      * @throws system.xml.XmlException if the .NET member raises it
-     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
      * @throws system.xml.xpath.XPathException if the .NET member raises it
      * @throws system.FormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Packaging.PackageDigitalSignature.SignatureValue" target="_top">.NET documentation</a>
      */
-    public byte[] getSignatureValue() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.io.IOException, system.RankException, system.ArrayTypeMismatchException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.FileFormatException, system.xml.schema.XmlSchemaException, system.xml.XmlException, system.security.cryptography.CryptographicException, system.xml.xpath.XPathException, system.FormatException {
+    public byte[] getSignatureValue() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.io.IOException, system.RankException, system.ArrayTypeMismatchException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.FileFormatException, system.xml.schema.XmlSchemaException, system.xml.XmlException, system.xml.xpath.XPathException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSignatureValue = null;
@@ -366,12 +366,12 @@ public class PackageDigitalSignature extends NetObject  {
      * @throws system.globalization.CultureNotFoundException if the .NET member raises it
      * @throws system.InvalidOperationException if the .NET member raises it
      * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
      * @throws system.io.IOException if the .NET member raises it
      * @throws system.security.SecurityException if the .NET member raises it
      * @throws system.io.FileFormatException if the .NET member raises it
      * @throws system.xml.schema.XmlSchemaException if the .NET member raises it
      * @throws system.xml.XmlException if the .NET member raises it
-     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @throws system.xml.xpath.XPathException if the .NET member raises it
      * @throws system.FormatException if the .NET member raises it
@@ -379,7 +379,7 @@ public class PackageDigitalSignature extends NetObject  {
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Packaging.PackageDigitalSignature.SignedRelationshipSelectors" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 getSignedRelationshipSelectors() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.io.IOException, system.security.SecurityException, system.io.FileFormatException, system.xml.schema.XmlSchemaException, system.xml.XmlException, system.security.cryptography.CryptographicException, system.IndexOutOfRangeException, system.xml.xpath.XPathException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
+    public ReadOnlyCollection_1 getSignedRelationshipSelectors() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.io.IOException, system.security.SecurityException, system.io.FileFormatException, system.xml.schema.XmlSchemaException, system.xml.XmlException, system.IndexOutOfRangeException, system.xml.xpath.XPathException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSignedRelationshipSelectors = null;
@@ -407,12 +407,12 @@ public class PackageDigitalSignature extends NetObject  {
      * @throws system.globalization.CultureNotFoundException if the .NET member raises it
      * @throws system.InvalidOperationException if the .NET member raises it
      * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
      * @throws system.io.IOException if the .NET member raises it
      * @throws system.security.SecurityException if the .NET member raises it
      * @throws system.io.FileFormatException if the .NET member raises it
      * @throws system.xml.schema.XmlSchemaException if the .NET member raises it
      * @throws system.xml.XmlException if the .NET member raises it
-     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @throws system.xml.xpath.XPathException if the .NET member raises it
      * @throws system.FormatException if the .NET member raises it
@@ -420,7 +420,7 @@ public class PackageDigitalSignature extends NetObject  {
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Packaging.PackageDigitalSignature.SignedParts" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 getSignedParts() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.io.IOException, system.security.SecurityException, system.io.FileFormatException, system.xml.schema.XmlSchemaException, system.xml.XmlException, system.security.cryptography.CryptographicException, system.IndexOutOfRangeException, system.xml.xpath.XPathException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
+    public ReadOnlyCollection_1 getSignedParts() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.io.IOException, system.security.SecurityException, system.io.FileFormatException, system.xml.schema.XmlSchemaException, system.xml.XmlException, system.IndexOutOfRangeException, system.xml.xpath.XPathException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSignedParts = null;
@@ -448,12 +448,12 @@ public class PackageDigitalSignature extends NetObject  {
      * @throws system.globalization.CultureNotFoundException if the .NET member raises it
      * @throws system.InvalidOperationException if the .NET member raises it
      * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
      * @throws system.io.IOException if the .NET member raises it
      * @throws system.security.SecurityException if the .NET member raises it
      * @throws system.io.FileFormatException if the .NET member raises it
      * @throws system.xml.schema.XmlSchemaException if the .NET member raises it
      * @throws system.xml.XmlException if the .NET member raises it
-     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @throws system.xml.xpath.XPathException if the .NET member raises it
      * @throws system.FormatException if the .NET member raises it
@@ -461,7 +461,7 @@ public class PackageDigitalSignature extends NetObject  {
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Packaging.PackageDigitalSignature.SigningTime" target="_top">.NET documentation</a>
      */
-    public DateTime getSigningTime() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.io.IOException, system.security.SecurityException, system.io.FileFormatException, system.xml.schema.XmlSchemaException, system.xml.XmlException, system.security.cryptography.CryptographicException, system.IndexOutOfRangeException, system.xml.xpath.XPathException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
+    public DateTime getSigningTime() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.io.IOException, system.security.SecurityException, system.io.FileFormatException, system.xml.schema.XmlSchemaException, system.xml.XmlException, system.IndexOutOfRangeException, system.xml.xpath.XPathException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSigningTime = null;
@@ -602,6 +602,7 @@ public class PackageDigitalSignature extends NetObject  {
      * @throws system.globalization.CultureNotFoundException if the .NET member raises it
      * @throws system.InvalidOperationException if the .NET member raises it
      * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
      * @throws system.io.IOException if the .NET member raises it
      * @throws system.RankException if the .NET member raises it
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
@@ -610,12 +611,11 @@ public class PackageDigitalSignature extends NetObject  {
      * @throws system.io.FileFormatException if the .NET member raises it
      * @throws system.xml.schema.XmlSchemaException if the .NET member raises it
      * @throws system.xml.XmlException if the .NET member raises it
-     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
      * @throws system.xml.xpath.XPathException if the .NET member raises it
      * @throws system.FormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Packaging.PackageDigitalSignature.Signature" target="_top">.NET documentation</a>
      */
-    public Signature getSignature() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.io.IOException, system.RankException, system.ArrayTypeMismatchException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.FileFormatException, system.xml.schema.XmlSchemaException, system.xml.XmlException, system.security.cryptography.CryptographicException, system.xml.xpath.XPathException, system.FormatException {
+    public Signature getSignature() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.io.IOException, system.RankException, system.ArrayTypeMismatchException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.FileFormatException, system.xml.schema.XmlSchemaException, system.xml.XmlException, system.xml.xpath.XPathException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSignature = null;
@@ -706,12 +706,12 @@ public class PackageDigitalSignature extends NetObject  {
      * @throws system.globalization.CultureNotFoundException if the .NET member raises it
      * @throws system.InvalidOperationException if the .NET member raises it
      * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
      * @throws system.io.IOException if the .NET member raises it
      * @throws system.security.SecurityException if the .NET member raises it
      * @throws system.io.FileFormatException if the .NET member raises it
      * @throws system.xml.schema.XmlSchemaException if the .NET member raises it
      * @throws system.xml.XmlException if the .NET member raises it
-     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @throws system.xml.xpath.XPathException if the .NET member raises it
      * @throws system.FormatException if the .NET member raises it
@@ -719,7 +719,7 @@ public class PackageDigitalSignature extends NetObject  {
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Packaging.PackageDigitalSignature.TimeFormat" target="_top">.NET documentation</a>
      */
-    public java.lang.String getTimeFormat() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.io.IOException, system.security.SecurityException, system.io.FileFormatException, system.xml.schema.XmlSchemaException, system.xml.XmlException, system.security.cryptography.CryptographicException, system.IndexOutOfRangeException, system.xml.xpath.XPathException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
+    public java.lang.String getTimeFormat() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.io.IOException, system.security.SecurityException, system.io.FileFormatException, system.xml.schema.XmlSchemaException, system.xml.XmlException, system.IndexOutOfRangeException, system.xml.xpath.XPathException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectTimeFormat = null;

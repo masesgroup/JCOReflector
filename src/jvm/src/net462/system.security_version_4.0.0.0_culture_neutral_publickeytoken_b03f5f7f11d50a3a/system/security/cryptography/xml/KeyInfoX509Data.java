@@ -432,11 +432,17 @@ public class KeyInfoX509Data extends system.security.cryptography.xml.KeyInfoCla
      * @throws system.xml.xpath.XPathException if the .NET member raises it
      * @throws system.security.cryptography.CryptographicException if the .NET member raises it
      * @throws system.FormatException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @throws system.AccessViolationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Xml.KeyInfoX509Data.LoadXml" target="_top">.NET documentation</a>
      */
-    public void LoadXml(XmlElement element) throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.xml.xpath.XPathException, system.security.cryptography.CryptographicException, system.FormatException, system.OutOfMemoryException, system.AccessViolationException {
+    public void LoadXml(XmlElement element) throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.xml.xpath.XPathException, system.security.cryptography.CryptographicException, system.FormatException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.NotSupportedException, system.io.PathTooLongException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.AccessViolationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

@@ -186,12 +186,11 @@ public class Rfc3161TimestampToken extends NetObject  {
      * @throws system.security.cryptography.CryptographicException if the .NET member raises it
      * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
      * @throws system.globalization.CultureNotFoundException if the .NET member raises it
-     * @throws system.io.IOException if the .NET member raises it
      * @throws system.OverflowException if the .NET member raises it
      * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Pkcs.Rfc3161TimestampToken.TryDecode" target="_top">.NET documentation</a>
      */
-    public static boolean TryDecode(ReadOnlyMemory_1 encodedBytes, JCORefOut<Rfc3161TimestampToken> token, JCORefOut<java.util.concurrent.atomic.AtomicInteger> bytesConsumed) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException, system.ArgumentNullException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.io.IOException, system.OverflowException, system.collections.generic.KeyNotFoundException {
+    public static boolean TryDecode(ReadOnlyMemory_1 encodedBytes, JCORefOut<Rfc3161TimestampToken> token, JCORefOut<java.util.concurrent.atomic.AtomicInteger> bytesConsumed) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException, system.ArgumentNullException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.OverflowException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTryDecode = null;
@@ -222,12 +221,14 @@ public class Rfc3161TimestampToken extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @throws system.globalization.CultureNotFoundException if the .NET member raises it
      * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
      * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
      * @throws system.formats.asn1.AsnContentException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Pkcs.Rfc3161TimestampToken.VerifySignatureForSignerInfo" target="_top">.NET documentation</a>
      */
-    public boolean VerifySignatureForSignerInfo(SignerInfo signerInfo, JCORefOut<X509Certificate2> signerCertificate, X509Certificate2Collection extraCandidates) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.collections.generic.KeyNotFoundException, system.formats.asn1.AsnContentException {
+    public boolean VerifySignatureForSignerInfo(SignerInfo signerInfo, JCORefOut<X509Certificate2> signerCertificate, X509Certificate2Collection extraCandidates) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.formats.asn1.AsnContentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectVerifySignatureForSignerInfo = null;

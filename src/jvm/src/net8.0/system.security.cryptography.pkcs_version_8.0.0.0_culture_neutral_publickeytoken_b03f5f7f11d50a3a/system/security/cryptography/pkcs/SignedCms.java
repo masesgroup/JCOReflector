@@ -921,27 +921,19 @@ public class SignedCms extends NetObject  {
      * @return the value of the property
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
-     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
-     * @throws system.ArgumentNullException if the .NET member raises it
-     * @throws system.InvalidOperationException if the .NET member raises it
-     * @throws system.PlatformNotSupportedException if the .NET member raises it
-     * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @throws system.NotSupportedException if the .NET member raises it
-     * @throws system.ObjectDisposedException if the .NET member raises it
-     * @throws system.RankException if the .NET member raises it
-     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @throws system.OutOfMemoryException if the .NET member raises it
-     * @throws system.MethodAccessException if the .NET member raises it
-     * @throws system.MissingMethodException if the .NET member raises it
-     * @throws system.MemberAccessException if the .NET member raises it
-     * @throws system.reflection.TargetInvocationException if the .NET member raises it
      * @throws system.security.cryptography.CryptographicException if the .NET member raises it
-     * @throws system.runtime.serialization.SerializationException if the .NET member raises it
      * @throws system.io.IOException if the .NET member raises it
-     * @throws system.formats.asn1.AsnContentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Pkcs.SignedCms.Certificates" target="_top">.NET documentation</a>
      */
-    public X509Certificate2Collection getCertificates() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.security.cryptography.CryptographicException, system.runtime.serialization.SerializationException, system.io.IOException, system.formats.asn1.AsnContentException {
+    public X509Certificate2Collection getCertificates() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.io.IOException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectCertificates = null;

@@ -473,11 +473,10 @@ public class EndpointDispatcher extends NetObject  {
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @throws system.NotSupportedException if the .NET member raises it
      * @throws system.xml.XmlException if the .NET member raises it
-     * @throws system.NotImplementedException if the .NET member raises it
      * @throws system.security.cryptography.CryptographicException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.EndpointDispatcher.EndpointAddress" target="_top">.NET documentation</a>
      */
-    public EndpointAddress getEndpointAddress() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.xml.XmlException, system.NotImplementedException, system.security.cryptography.CryptographicException {
+    public EndpointAddress getEndpointAddress() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.xml.XmlException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectEndpointAddress = null;

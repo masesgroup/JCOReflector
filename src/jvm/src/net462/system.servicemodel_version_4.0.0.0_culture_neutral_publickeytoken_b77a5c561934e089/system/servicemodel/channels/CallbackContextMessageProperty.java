@@ -520,9 +520,10 @@ public class CallbackContextMessageProperty extends NetObject  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @throws system.xml.XmlException if the .NET member raises it
      * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.CallbackContextMessageProperty.GetListenAddressAndContext" target="_top">.NET documentation</a>
      */
-    public void GetListenAddressAndContext(JCORefOut<EndpointAddress> listenAddress, JCORefOut<IDictionary_2> context) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.xml.XmlException, system.InvalidOperationException {
+    public void GetListenAddressAndContext(JCORefOut<EndpointAddress> listenAddress, JCORefOut<IDictionary_2> context) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.xml.XmlException, system.InvalidOperationException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

@@ -392,10 +392,11 @@ public class SignedCms extends NetObject  {
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @throws system.security.cryptography.CryptographicException if the .NET member raises it
      * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
      * @throws system.AccessViolationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Pkcs.SignedCms.CheckSignature" target="_top">.NET documentation</a>
      */
-    public void CheckSignature(boolean verifySignatureOnly) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.security.SecurityException, system.AccessViolationException {
+    public void CheckSignature(boolean verifySignatureOnly) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.security.SecurityException, system.io.IOException, system.AccessViolationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -427,11 +428,12 @@ public class SignedCms extends NetObject  {
      * @throws system.security.cryptography.CryptographicException if the .NET member raises it
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @throws system.security.SecurityException if the .NET member raises it
-     * @throws system.RankException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
      * @throws system.AccessViolationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Pkcs.SignedCms.CheckSignature" target="_top">.NET documentation</a>
      */
-    public void CheckSignature(X509Certificate2Collection extraStore, boolean verifySignatureOnly) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.security.SecurityException, system.RankException, system.AccessViolationException {
+    public void CheckSignature(X509Certificate2Collection extraStore, boolean verifySignatureOnly) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.AccessViolationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -461,9 +463,11 @@ public class SignedCms extends NetObject  {
      * @throws system.AccessViolationException if the .NET member raises it
      * @throws system.NotSupportedException if the .NET member raises it
      * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Pkcs.SignedCms.ComputeSignature" target="_top">.NET documentation</a>
      */
-    public void ComputeSignature() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.RankException, system.AccessViolationException, system.NotSupportedException, system.security.SecurityException {
+    public void ComputeSignature() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.RankException, system.AccessViolationException, system.NotSupportedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -497,9 +501,11 @@ public class SignedCms extends NetObject  {
      * @throws system.RankException if the .NET member raises it
      * @throws system.AccessViolationException if the .NET member raises it
      * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Pkcs.SignedCms.ComputeSignature" target="_top">.NET documentation</a>
      */
-    public void ComputeSignature(CmsSigner signer) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.FormatException, system.RankException, system.AccessViolationException, system.security.SecurityException {
+    public void ComputeSignature(CmsSigner signer) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.FormatException, system.RankException, system.AccessViolationException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -533,9 +539,12 @@ public class SignedCms extends NetObject  {
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @throws system.RankException if the .NET member raises it
      * @throws system.AccessViolationException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Pkcs.SignedCms.ComputeSignature" target="_top">.NET documentation</a>
      */
-    public void ComputeSignature(CmsSigner signer, boolean silent) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.security.cryptography.CryptographicException, system.FormatException, system.OutOfMemoryException, system.RankException, system.AccessViolationException {
+    public void ComputeSignature(CmsSigner signer, boolean silent) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.security.cryptography.CryptographicException, system.FormatException, system.OutOfMemoryException, system.RankException, system.AccessViolationException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -798,14 +807,22 @@ public class SignedCms extends NetObject  {
      * @return the value of the property
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
-     * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
      * @throws system.security.cryptography.CryptographicException if the .NET member raises it
      * @throws system.AccessViolationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Pkcs.SignedCms.Certificates" target="_top">.NET documentation</a>
      */
-    public X509Certificate2Collection getCertificates() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.AccessViolationException {
+    public X509Certificate2Collection getCertificates() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArgumentException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.NotSupportedException, system.InvalidOperationException, system.security.cryptography.CryptographicException, system.AccessViolationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectCertificates = null;

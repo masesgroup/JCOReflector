@@ -427,11 +427,15 @@ public class X509SecurityTokenHandler extends system.identitymodel.tokens.Securi
      * @throws system.xml.XmlException if the .NET member raises it
      * @throws system.NotSupportedException if the .NET member raises it
      * @throws system.runtime.remoting.RemotingException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
      * @throws system.security.cryptography.CryptographicException if the .NET member raises it
      * @throws system.AccessViolationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.X509SecurityTokenHandler.ReadToken" target="_top">.NET documentation</a>
      */
-    public SecurityToken ReadToken(XmlReader reader) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.xml.XmlException, system.NotSupportedException, system.runtime.remoting.RemotingException, system.security.cryptography.CryptographicException, system.AccessViolationException {
+    public SecurityToken ReadToken(XmlReader reader) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.xml.XmlException, system.NotSupportedException, system.runtime.remoting.RemotingException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.collections.generic.KeyNotFoundException, system.security.cryptography.CryptographicException, system.AccessViolationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectReadToken = null;

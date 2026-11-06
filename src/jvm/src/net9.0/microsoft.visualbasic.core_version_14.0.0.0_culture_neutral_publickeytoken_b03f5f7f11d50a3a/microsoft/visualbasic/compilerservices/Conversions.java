@@ -1153,17 +1153,17 @@ public class Conversions extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
      * @throws system.TypeInitializationException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @throws system.ArgumentNullException if the .NET member raises it
-     * @throws system.InvalidOperationException if the .NET member raises it
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @throws system.InvalidCastException if the .NET member raises it
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.CompilerServices.Conversions.ToDate" target="_top">.NET documentation</a>
      */
-    public static DateTime ToDate(NetObject Value) throws Throwable, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.TypeInitializationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.ObjectDisposedException, system.InvalidCastException, system.OutOfMemoryException, system.ArrayTypeMismatchException {
+    public static DateTime ToDate(NetObject Value) throws Throwable, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.InvalidOperationException, system.TypeInitializationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidCastException, system.OutOfMemoryException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToDate = null;
@@ -1191,12 +1191,12 @@ public class Conversions extends NetObject  {
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
-     * @throws system.ObjectDisposedException if the .NET member raises it
      * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
      * @throws system.InvalidCastException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.CompilerServices.Conversions.ToDate" target="_top">.NET documentation</a>
      */
-    public static DateTime ToDate(java.lang.String Value) throws Throwable, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.InvalidCastException {
+    public static DateTime ToDate(java.lang.String Value) throws Throwable, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.InvalidCastException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToDate = null;

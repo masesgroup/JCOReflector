@@ -289,9 +289,10 @@ public class XmlLicenseTransform extends system.security.cryptography.xml.Transf
      * @throws system.UnauthorizedAccessException if the .NET member raises it
      * @throws system.io.IOException if the .NET member raises it
      * @throws system.ApplicationException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Xml.XmlLicenseTransform.LoadInput" target="_top">.NET documentation</a>
      */
-    public void LoadInput(NetObject obj) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.security.cryptography.CryptographicException, system.NullReferenceException, system.xml.xpath.XPathException, system.FormatException, system.OverflowException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ApplicationException {
+    public void LoadInput(NetObject obj) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.security.cryptography.CryptographicException, system.NullReferenceException, system.xml.xpath.XPathException, system.FormatException, system.OverflowException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ApplicationException, system.xml.XmlException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

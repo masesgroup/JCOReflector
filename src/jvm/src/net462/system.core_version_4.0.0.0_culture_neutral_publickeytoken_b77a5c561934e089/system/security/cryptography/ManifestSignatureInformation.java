@@ -178,15 +178,15 @@ public class ManifestSignatureInformation extends NetObject  {
      * @throws system.globalization.CultureNotFoundException if the .NET member raises it
      * @throws system.NotSupportedException if the .NET member raises it
      * @throws system.FormatException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
      * @throws system.NullReferenceException if the .NET member raises it
      * @throws system.xml.xpath.XPathException if the .NET member raises it
-     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
-     * @throws system.NotImplementedException if the .NET member raises it
-     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
      * @throws system.AccessViolationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.ManifestSignatureInformation.VerifySignature" target="_top">.NET documentation</a>
      */
-    public static ManifestSignatureInformationCollection VerifySignature(ActivationContext application) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.xml.XmlException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.FormatException, system.NullReferenceException, system.xml.xpath.XPathException, system.security.cryptography.CryptographicException, system.NotImplementedException, system.security.SecurityException, system.AccessViolationException {
+    public static ManifestSignatureInformationCollection VerifySignature(ActivationContext application) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.xml.XmlException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.FormatException, system.security.cryptography.CryptographicException, system.NullReferenceException, system.xml.xpath.XPathException, system.ObjectDisposedException, system.AccessViolationException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectVerifySignature = null;
@@ -217,21 +217,18 @@ public class ManifestSignatureInformation extends NetObject  {
      * @throws system.xml.schema.XmlSchemaException if the .NET member raises it
      * @throws system.globalization.CultureNotFoundException if the .NET member raises it
      * @throws system.FormatException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @throws system.NullReferenceException if the .NET member raises it
      * @throws system.xml.xpath.XPathException if the .NET member raises it
-     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
-     * @throws system.NotSupportedException if the .NET member raises it
      * @throws system.NotImplementedException if the .NET member raises it
-     * @throws system.MissingMethodException if the .NET member raises it
-     * @throws system.reflection.TargetInvocationException if the .NET member raises it
-     * @throws system.OutOfMemoryException if the .NET member raises it
-     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @throws system.AccessViolationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.ManifestSignatureInformation.VerifySignature" target="_top">.NET documentation</a>
      */
-    public static ManifestSignatureInformationCollection VerifySignature(ActivationContext application, ManifestKinds manifests) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.xml.XmlException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.xml.schema.XmlSchemaException, system.globalization.CultureNotFoundException, system.FormatException, system.IndexOutOfRangeException, system.NullReferenceException, system.xml.xpath.XPathException, system.security.cryptography.CryptographicException, system.NotSupportedException, system.NotImplementedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException, system.security.SecurityException, system.ObjectDisposedException, system.AccessViolationException {
+    public static ManifestSignatureInformationCollection VerifySignature(ActivationContext application, ManifestKinds manifests) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.xml.XmlException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.xml.schema.XmlSchemaException, system.globalization.CultureNotFoundException, system.FormatException, system.security.cryptography.CryptographicException, system.IndexOutOfRangeException, system.NullReferenceException, system.xml.xpath.XPathException, system.NotImplementedException, system.NotSupportedException, system.ObjectDisposedException, system.AccessViolationException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectVerifySignature = null;
@@ -268,14 +265,15 @@ public class ManifestSignatureInformation extends NetObject  {
      * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @throws system.FormatException if the .NET member raises it
-     * @throws system.xml.xpath.XPathException if the .NET member raises it
      * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @throws system.xml.xpath.XPathException if the .NET member raises it
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @throws system.AccessViolationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
      * @throws system.UriFormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.ManifestSignatureInformation.VerifySignature" target="_top">.NET documentation</a>
      */
-    public static ManifestSignatureInformationCollection VerifySignature(ActivationContext application, ManifestKinds manifests, X509RevocationFlag revocationFlag, X509RevocationMode revocationMode) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.globalization.CultureNotFoundException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.FormatException, system.xml.xpath.XPathException, system.security.cryptography.CryptographicException, system.ObjectDisposedException, system.AccessViolationException, system.UriFormatException {
+    public static ManifestSignatureInformationCollection VerifySignature(ActivationContext application, ManifestKinds manifests, X509RevocationFlag revocationFlag, X509RevocationMode revocationMode) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.globalization.CultureNotFoundException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.FormatException, system.security.cryptography.CryptographicException, system.xml.xpath.XPathException, system.ObjectDisposedException, system.AccessViolationException, system.MissingMethodException, system.UriFormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectVerifySignature = null;

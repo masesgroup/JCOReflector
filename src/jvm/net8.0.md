@@ -298,7 +298,7 @@ Parsed assemblies are:
 > * PresentationUI, Version=8.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
 > * System.DirectoryServices, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 
-> * Analyzed Types = 26833
+> * Analyzed Types = 26848
 >   * Enumerators = 25
 >   * Delegates = 409
 >   * Classes
@@ -319,8 +319,8 @@ Parsed assemblies are:
 >       * Duplicated Methods = 971
 >     * Properties = 18328
 >     * Events = 1639
-> * Discarded Types = 19222
->   * Non Public = 19116
+> * Discarded Types = 19237
+>   * Non Public = 19131
 >   * Generic = 39
 >   * Internals = 20
 

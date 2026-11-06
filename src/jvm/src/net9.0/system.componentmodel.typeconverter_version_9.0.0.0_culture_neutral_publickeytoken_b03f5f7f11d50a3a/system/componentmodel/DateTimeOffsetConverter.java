@@ -238,10 +238,11 @@ public class DateTimeOffsetConverter extends system.componentmodel.TypeConverter
      * @throws system.RankException if the .NET member raises it
      * @throws system.InvalidCastException if the .NET member raises it
      * @throws system.TypeInitializationException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
      * @throws system.FormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.DateTimeOffsetConverter.ConvertFrom" target="_top">.NET documentation</a>
      */
-    public NetObject ConvertFrom(ITypeDescriptorContext context, CultureInfo culture, NetObject value) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentNullException, system.ArrayTypeMismatchException, system.RankException, system.InvalidCastException, system.TypeInitializationException, system.FormatException {
+    public NetObject ConvertFrom(ITypeDescriptorContext context, CultureInfo culture, NetObject value) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentNullException, system.ArrayTypeMismatchException, system.RankException, system.InvalidCastException, system.TypeInitializationException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectConvertFrom = null;

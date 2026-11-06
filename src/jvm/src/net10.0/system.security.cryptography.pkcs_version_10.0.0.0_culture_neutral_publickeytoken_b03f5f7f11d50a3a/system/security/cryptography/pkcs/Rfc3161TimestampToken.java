@@ -217,12 +217,14 @@ public class Rfc3161TimestampToken extends NetObject  {
      * @throws system.RankException if the .NET member raises it
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
      * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @throws system.formats.asn1.AsnContentException if the .NET member raises it
      * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Pkcs.Rfc3161TimestampToken.VerifySignatureForSignerInfo" target="_top">.NET documentation</a>
      */
-    public boolean VerifySignatureForSignerInfo(SignerInfo signerInfo, JCORefOut<X509Certificate2> signerCertificate, X509Certificate2Collection extraCandidates) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.security.cryptography.CryptographicException, system.formats.asn1.AsnContentException, system.collections.generic.KeyNotFoundException {
+    public boolean VerifySignatureForSignerInfo(SignerInfo signerInfo, JCORefOut<X509Certificate2> signerCertificate, X509Certificate2Collection extraCandidates) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectVerifySignatureForSignerInfo = null;

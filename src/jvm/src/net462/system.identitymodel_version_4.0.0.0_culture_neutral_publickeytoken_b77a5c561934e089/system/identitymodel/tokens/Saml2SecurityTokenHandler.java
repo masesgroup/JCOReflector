@@ -458,12 +458,12 @@ public class Saml2SecurityTokenHandler extends system.identitymodel.tokens.Secur
      * @throws system.security.SecurityException if the .NET member raises it
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @throws system.xml.XmlException if the .NET member raises it
-     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
      * @throws system.security.cryptography.CryptographicException if the .NET member raises it
      * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.identitymodel.tokens.EncryptedTokenDecryptionFailedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.Saml2SecurityTokenHandler.ReadToken" target="_top">.NET documentation</a>
      */
-    public SecurityToken ReadToken(XmlReader reader) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.MulticastNotSupportedException, system.FormatException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.xml.XmlException, system.collections.generic.KeyNotFoundException, system.security.cryptography.CryptographicException, system.UriFormatException {
+    public SecurityToken ReadToken(XmlReader reader) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.MulticastNotSupportedException, system.FormatException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.xml.XmlException, system.security.cryptography.CryptographicException, system.UriFormatException, system.identitymodel.tokens.EncryptedTokenDecryptionFailedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectReadToken = null;

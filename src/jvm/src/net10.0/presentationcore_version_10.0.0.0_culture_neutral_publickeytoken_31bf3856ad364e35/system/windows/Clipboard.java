@@ -415,6 +415,7 @@ public class Clipboard extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @throws system.RankException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
@@ -422,7 +423,7 @@ public class Clipboard extends NetObject  {
      * @throws system.InvalidCastException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Clipboard.GetFileDropList" target="_top">.NET documentation</a>
      */
-    public static StringCollection GetFileDropList() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException {
+    public static StringCollection GetFileDropList() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetFileDropList = null;
@@ -444,9 +445,10 @@ public class Clipboard extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Clipboard.GetAudioStream" target="_top">.NET documentation</a>
      */
-    public static Stream GetAudioStream() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public static Stream GetAudioStream() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetAudioStream = null;
@@ -588,9 +590,10 @@ public class Clipboard extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Clipboard.GetImage" target="_top">.NET documentation</a>
      */
-    public static BitmapSource GetImage() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public static BitmapSource GetImage() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetImage = null;

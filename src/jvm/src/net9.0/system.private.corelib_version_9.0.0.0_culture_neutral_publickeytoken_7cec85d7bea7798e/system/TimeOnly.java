@@ -403,9 +403,10 @@ public class TimeOnly extends system.ValueType  {
      * @throws system.globalization.CultureNotFoundException if the .NET member raises it
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.TimeOnly.TryParse" target="_top">.NET documentation</a>
      */
-    public static boolean TryParse(java.lang.String s, IFormatProvider provider, JCORefOut<TimeOnly> result) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException {
+    public static boolean TryParse(java.lang.String s, IFormatProvider provider, JCORefOut<TimeOnly> result) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTryParse = null;
@@ -433,9 +434,10 @@ public class TimeOnly extends system.ValueType  {
      * @throws system.globalization.CultureNotFoundException if the .NET member raises it
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.TimeOnly.TryParse" target="_top">.NET documentation</a>
      */
-    public static boolean TryParse(java.lang.String s, JCORefOut<TimeOnly> result) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException {
+    public static boolean TryParse(java.lang.String s, JCORefOut<TimeOnly> result) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTryParse = null;

@@ -178,30 +178,24 @@ public class XmlDecryptionTransform extends system.security.cryptography.xml.Tra
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
-     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @throws system.IndexOutOfRangeException if the .NET member raises it
-     * @throws system.OutOfMemoryException if the .NET member raises it
      * @throws system.security.SecurityException if the .NET member raises it
      * @throws system.UnauthorizedAccessException if the .NET member raises it
      * @throws system.io.IOException if the .NET member raises it
-     * @throws system.NotSupportedException if the .NET member raises it
      * @throws system.InvalidOperationException if the .NET member raises it
      * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
      * @throws system.resources.MissingManifestResourceException if the .NET member raises it
      * @throws system.FormatException if the .NET member raises it
      * @throws system.security.cryptography.CryptographicException if the .NET member raises it
      * @throws system.NullReferenceException if the .NET member raises it
      * @throws system.xml.xpath.XPathException if the .NET member raises it
-     * @throws system.RankException if the .NET member raises it
-     * @throws system.MissingMethodException if the .NET member raises it
-     * @throws system.reflection.TargetInvocationException if the .NET member raises it
-     * @throws system.threading.ThreadAbortException if the .NET member raises it
      * @throws system.xml.XmlException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Xml.XmlDecryptionTransform.GetOutput" target="_top">.NET documentation</a>
      */
-    public NetObject GetOutput() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArgumentException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.FormatException, system.security.cryptography.CryptographicException, system.NullReferenceException, system.xml.xpath.XPathException, system.RankException, system.MissingMethodException, system.reflection.TargetInvocationException, system.threading.ThreadAbortException, system.xml.XmlException {
+    public NetObject GetOutput() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.FormatException, system.security.cryptography.CryptographicException, system.NullReferenceException, system.xml.xpath.XPathException, system.xml.XmlException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetOutput = null;
@@ -232,12 +226,13 @@ public class XmlDecryptionTransform extends system.security.cryptography.xml.Tra
      * @throws system.NotImplementedException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @throws system.IndexOutOfRangeException if the .NET member raises it
-     * @throws system.ObjectDisposedException if the .NET member raises it
      * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
      * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Xml.XmlDecryptionTransform.GetOutput" target="_top">.NET documentation</a>
      */
-    public NetObject GetOutput(NetType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException {
+    public NetObject GetOutput(NetType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetOutput = null;

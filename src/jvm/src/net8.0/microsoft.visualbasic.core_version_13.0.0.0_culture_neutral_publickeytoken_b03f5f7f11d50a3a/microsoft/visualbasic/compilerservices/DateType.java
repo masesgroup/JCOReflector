@@ -170,8 +170,8 @@ public class DateType extends NetObject  {
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @throws system.OverflowException if the .NET member raises it
-     * @throws system.TypeInitializationException if the .NET member raises it
      * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.TypeInitializationException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @throws system.InvalidCastException if the .NET member raises it
@@ -180,7 +180,7 @@ public class DateType extends NetObject  {
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.CompilerServices.DateType.FromObject" target="_top">.NET documentation</a>
      */
-    public static DateTime FromObject(NetObject Value) throws Throwable, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.OverflowException, system.TypeInitializationException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.InvalidCastException, system.OutOfMemoryException, system.NotSupportedException, system.ArrayTypeMismatchException {
+    public static DateTime FromObject(NetObject Value) throws Throwable, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.OverflowException, system.InvalidOperationException, system.TypeInitializationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.InvalidCastException, system.OutOfMemoryException, system.NotSupportedException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromObject = null;
@@ -208,13 +208,13 @@ public class DateType extends NetObject  {
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @throws system.OverflowException if the .NET member raises it
-     * @throws system.NotSupportedException if the .NET member raises it
      * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @throws system.InvalidCastException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.CompilerServices.DateType.FromString" target="_top">.NET documentation</a>
      */
-    public static DateTime FromString(java.lang.String Value, CultureInfo culture) throws Throwable, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.OverflowException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.InvalidCastException {
+    public static DateTime FromString(java.lang.String Value, CultureInfo culture) throws Throwable, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.OverflowException, system.InvalidOperationException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidCastException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromString = null;
@@ -241,14 +241,14 @@ public class DateType extends NetObject  {
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @throws system.OverflowException if the .NET member raises it
-     * @throws system.TypeInitializationException if the .NET member raises it
      * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.TypeInitializationException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @throws system.InvalidCastException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.CompilerServices.DateType.FromString" target="_top">.NET documentation</a>
      */
-    public static DateTime FromString(java.lang.String Value) throws Throwable, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.OverflowException, system.TypeInitializationException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.InvalidCastException {
+    public static DateTime FromString(java.lang.String Value) throws Throwable, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.OverflowException, system.InvalidOperationException, system.TypeInitializationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.InvalidCastException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromString = null;

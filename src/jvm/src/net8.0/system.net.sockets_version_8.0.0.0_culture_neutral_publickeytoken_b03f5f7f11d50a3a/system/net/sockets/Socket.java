@@ -563,17 +563,17 @@ public class Socket extends NetObject implements AutoCloseable {
      * @throws system.NotSupportedException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.InvalidOperationException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @throws system.net.sockets.SocketException if the .NET member raises it
-     * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.Socket.ReceiveFromAsync" target="_top">.NET documentation</a>
      */
-    public boolean ReceiveFromAsync(SocketAsyncEventArgs e) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.net.sockets.SocketException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
+    public boolean ReceiveFromAsync(SocketAsyncEventArgs e) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.net.sockets.SocketException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectReceiveFromAsync = null;
@@ -5869,11 +5869,11 @@ public class Socket extends NetObject implements AutoCloseable {
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @throws system.FormatException if the .NET member raises it
      * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
-     * @throws system.net.sockets.SocketException if the .NET member raises it
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.net.sockets.SocketException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.Socket.ReceiveFromAsync" target="_top">.NET documentation</a>
      */
-    public ValueTask_1 ReceiveFromAsync(Memory_1 buffer, SocketFlags socketFlags, SocketAddress receivedAddress, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.ArgumentNullException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.net.sockets.SocketException, system.ArrayTypeMismatchException {
+    public ValueTask_1 ReceiveFromAsync(Memory_1 buffer, SocketFlags socketFlags, SocketAddress receivedAddress, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.ArgumentNullException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.ArrayTypeMismatchException, system.net.sockets.SocketException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectReceiveFromAsync = null;

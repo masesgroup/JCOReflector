@@ -15,6 +15,7 @@ The project is organized in this folder structure:
 * **bin** (The output folder, automatically generated and not in git)
     * net462 (folder for .NET Framework output)
     * net10.0 (folder for .NET 10 output)
+    * net11.0 (folder for .NET 11 output)
 	
 * **src** (container of Java classes)
   * **jvm**
@@ -22,16 +23,29 @@ The project is organized in this folder structure:
       * **JCOReflector** (contains the base classes used from JCOReflector to build reflected classes)
       * **net462** (contains, sepearated in folders, the sets of reflected classes of .NET Framework generated from JCOReflector: **no manual action shall be made on this folder and subfolders, an issue or enhancement shall be made in the JCOReflector engine (code or templates)**)
 	  * **net10.0** (contains, sepearated in folders, the sets of reflected classes of .NET 10 generated from JCOReflector: **no manual action shall be made on this folder and subfolders, an issue or enhancement shall be made in the JCOReflector engine (code or templates)**)
+	  * **net11.0** (contains, sepearated in folders, the sets of reflected classes of .NET 11 generated from JCOReflector: **no manual action shall be made on this folder and subfolders, an issue or enhancement shall be made in the JCOReflector engine (code or templates)**)
     * **docs**
       * **net462** (contains the generated documentation related to .NET Framework: **no manual action shall be made on this folder and subfolders, an issue or enhancement shall be made in the JCOReflector engine (code or templates)**)
 	  * **net10.0** (contains the generated documentation related to .NET 10: **no manual action shall be made on this folder and subfolders, an issue or enhancement shall be made in the JCOReflector engine (code or templates)**)
+	  * **net11.0** (contains the generated documentation related to .NET 11: **no manual action shall be made on this folder and subfolders, an issue or enhancement shall be made in the JCOReflector engine (code or templates)**)
     * **statistics**
       * **net462** (contains the generated statistics related to .NET Framework: **no manual action shall be made on this folder and subfolders, an issue or enhancement shall be made in the JCOReflector engine (code or templates)**)
 	  * **net10.0** (contains the generated statistics related to .NET 10: **no manual action shall be made on this folder and subfolders, an issue or enhancement shall be made in the JCOReflector engine (code or templates)**)
+	  * **net11.0** (contains the generated statistics related to .NET 10: **no manual action shall be made on this folder and subfolders, an issue or enhancement shall be made in the JCOReflector engine (code or templates)**)
 		
 * **tests** (container test classes)
+	* **clojure** (container of Clojure test classes)
+		* **src** (a standard folder used in any Java IDE)
+			* **main**
+				* **scala**
+					* **generics** (contains an example class which use generics API)		
+					* **mscorlib** (contains an example class which use mscorlib API)
+					* **nettest** (contains an example class which use network API)
+					* **hierarchy** (contains an example class which use hierarchy)
+					* **refout** (contains an example class which use refout)
 	* **java** (container of Java test classes)
 		* **src** (a standard folder used in any Java IDE)
+			* **generics** (contains an example class which use generics API)
 			* **mscorlib** (contains an example class which use mscorlib API)
 			* **nettest** (contains an example class which use network API)
 			* **hierarchy** (contains an example class which use hierarchy)
@@ -40,6 +54,7 @@ The project is organized in this folder structure:
 		* **src** (a standard folder used in any Java IDE)
 			* **main**
 				* **kotlin**
+					* **generics** (contains an example class which use generics API)
 					* **mscorlib** (contains an example class which use mscorlib API)
 					* **nettest** (contains an example class which use network API)
 					* **hierarchy** (contains an example class which use hierarchy)
@@ -48,6 +63,7 @@ The project is organized in this folder structure:
 		* **src** (a standard folder used in any Java IDE)
 			* **main**
 				* **scala**
+					* **generics** (contains an example class which use generics API)		
 					* **mscorlib** (contains an example class which use mscorlib API)
 					* **nettest** (contains an example class which use network API)
 					* **hierarchy** (contains an example class which use hierarchy)
@@ -75,6 +91,7 @@ The basic and simple rules for the project are:
     * **src/jvm/src/JCOReflector**
 * **Unit test**: contibution can be made in the testing code section under **tests** folder
 * **Reflected classes**: the following folders and subsolders are generated code from JCOReflector, to change them a developer shall modify the templates; the code will be updated from mantairners after the validation of JCOReflector engine:
+    * **src/jvm/src/net11.0**
     * **src/jvm/src/net10.0**
     * **src/jvm/src/net462**
 

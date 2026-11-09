@@ -113,11 +113,11 @@ namespace MASES.JCOReflector.Engine
                 ExportingAvoidanceMap.Add(@"^System\.Threading\.Thread$", new string[] { "VolatileRead" });
                 ExportingAvoidanceMap.Add(@"^System\.Threading\.Volatile$", new string[] { "Read" });
                 ExportingAvoidanceMap.Add(@"^System\.Threading\.Interlocked$", new string[] { "Decrement", "Increment"
-#if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
+#if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0 || NET11_0
                                                                                           , "Read"
 #endif
                                                                                             });
-#if NET7_0 || NET8_0 || NET9_0 || NET10_0
+#if NET7_0 || NET8_0 || NET9_0 || NET10_0 || NET11_0
                 ExportingAvoidanceMap.Add(@"^System\.Runtime\.InteropServices\.JavaScript\.JSMarshalerArgument$", new string[] { "ToManaged" });
 
                 // Generic math (C# 11 "static abstract members in interfaces"): no Java equivalent for a
@@ -128,10 +128,10 @@ namespace MASES.JCOReflector.Engine
                 ExportingAvoidanceMap.Add(@"^System\.Numerics\.I\w+`\d+$", null);
                 ExportingAvoidanceMap.Add(@"^System\.I(Span|Utf8Span)?Parsable`\d+$", null);
 #endif
-#if NET8_0 || NET9_0 || NET10_0
+#if NET8_0 || NET9_0 || NET10_0 || NET11_0
                 ExportingAvoidanceMap.Add(@"^System\.Runtime\.InteropServices\.Marshalling\.IIUnknownInterfaceType$", null);
 #endif
-#if NET10_0
+#if NET10_0 || NET11_0
                 ExportingAvoidanceMap.Add(@"^System\.MemoryExtensions$", null);
                 ExportingAvoidanceMap.Add(@"^System\.Runtime\.InteropServices\.Java\.JavaMarshal$", new string[] { "Initialize" });
 #endif
@@ -203,7 +203,7 @@ namespace MASES.JCOReflector.Engine
             public const string JCOBridgeEmbeddedFile = "JCOBridge.zip";
             public const string JCOReflectorOptionsFile = "JCOReflectorOptions.java";
 
-#if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0
+#if NET6_0 || NET7_0 || NET8_0 || NET9_0 || NET10_0 || NET11_0
             public static string[] JCOBridgeFiles = new string[]
             {
                 "J2CBridgeHostActivator_arm.so",
@@ -211,7 +211,7 @@ namespace MASES.JCOReflector.Engine
                 "J2CBridgeHostActivator_x64.so",
                 "J2CBridgeHostActivator_arm64.dylib",
                 "J2CBridgeHostActivator_x64.dylib",
-#if !(NET8_0 || NET9_0 || NET10_0)
+#if !(NET8_0 || NET9_0 || NET10_0 || NET11_0)
                 "J2CBridgeHostActivator_arm.dll",
 #endif
                 "J2CBridgeHostActivator_arm64.dll",
@@ -252,6 +252,9 @@ namespace MASES.JCOReflector.Engine
 #elif NET10_0
                 "Microsoft.NET10.App.runtimeconfig.json",
                 "Microsoft.WindowsDesktop10.App.runtimeconfig.json",
+#elif NET11_0
+                "Microsoft.NET11.App.runtimeconfig.json",
+                "Microsoft.WindowsDesktop11.App.runtimeconfig.json",
 #else
 #error Unable to identify .NET engine
 #endif
@@ -322,6 +325,10 @@ namespace MASES.JCOReflector.Engine
             public const string Runtime = ".NET 10";
             public const string RuntimeName = ".NETCoreApp";
             public const string RuntimeFolder = "net10.0";
+#elif NET11_0
+            public const string Runtime = ".NET 11";
+            public const string RuntimeName = ".NETCoreApp";
+            public const string RuntimeFolder = "net11.0";
 #elif NETFRAMEWORK
             public const string Runtime = ".NET Framework";
             public const string RuntimeName = ".NETFramework";
@@ -776,6 +783,8 @@ namespace MASES.JCOReflector.Engine
             public const string REPORT_FILE_TO_WRITE = "net9.0.md";
 #elif NET10_0
             public const string REPORT_FILE_TO_WRITE = "net10.0.md";
+#elif NET11_0
+            public const string REPORT_FILE_TO_WRITE = "net11.0.md";
 #elif NETFRAMEWORK
             public const string REPORT_FILE_TO_WRITE = "net462.md";
 #else

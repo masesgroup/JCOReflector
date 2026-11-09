@@ -201,12 +201,9 @@ public class RsaProtectedConfigurationProvider extends system.configuration.Prot
      * @throws system.xml.XmlException if the .NET member raises it
      * @throws system.NullReferenceException if the .NET member raises it
      * @throws system.xml.xpath.XPathException if the .NET member raises it
-     * @throws system.MissingMethodException if the .NET member raises it
-     * @throws system.reflection.TargetInvocationException if the .NET member raises it
-     * @throws system.threading.ThreadAbortException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.RsaProtectedConfigurationProvider.Decrypt" target="_top">.NET documentation</a>
      */
-    public XmlNode Decrypt(XmlNode encryptedNode) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.security.cryptography.CryptographicException, system.RankException, system.OutOfMemoryException, system.UnauthorizedAccessException, system.security.accesscontrol.PrivilegeNotHeldException, system.NotSupportedException, system.ObjectDisposedException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationErrorsException, system.security.SecurityException, system.io.IOException, system.xml.schema.XmlSchemaException, system.xml.XmlException, system.NullReferenceException, system.xml.xpath.XPathException, system.MissingMethodException, system.reflection.TargetInvocationException, system.threading.ThreadAbortException {
+    public XmlNode Decrypt(XmlNode encryptedNode) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.security.cryptography.CryptographicException, system.RankException, system.OutOfMemoryException, system.UnauthorizedAccessException, system.security.accesscontrol.PrivilegeNotHeldException, system.NotSupportedException, system.ObjectDisposedException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationErrorsException, system.security.SecurityException, system.io.IOException, system.xml.schema.XmlSchemaException, system.xml.XmlException, system.NullReferenceException, system.xml.xpath.XPathException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectDecrypt = null;

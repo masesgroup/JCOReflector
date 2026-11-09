@@ -915,22 +915,18 @@ public class SignedCms extends NetObject  {
      * @return the value of the property
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
-     * @throws system.ArgumentNullException if the .NET member raises it
-     * @throws system.PlatformNotSupportedException if the .NET member raises it
-     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
-     * @throws system.InvalidOperationException if the .NET member raises it
-     * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @throws system.NotSupportedException if the .NET member raises it
-     * @throws system.ObjectDisposedException if the .NET member raises it
-     * @throws system.RankException if the .NET member raises it
-     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @throws system.MissingMethodException if the .NET member raises it
      * @throws system.reflection.TargetInvocationException if the .NET member raises it
-     * @throws system.FormatException if the .NET member raises it
      * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Pkcs.SignedCms.Certificates" target="_top">.NET documentation</a>
      */
-    public X509Certificate2Collection getCertificates() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.security.cryptography.CryptographicException {
+    public X509Certificate2Collection getCertificates() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.cryptography.CryptographicException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectCertificates = null;

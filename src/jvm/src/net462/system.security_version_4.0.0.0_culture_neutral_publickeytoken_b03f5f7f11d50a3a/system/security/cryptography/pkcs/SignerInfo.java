@@ -234,13 +234,17 @@ public class SignerInfo extends NetObject  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @throws system.MissingMethodException if the .NET member raises it
      * @throws system.reflection.TargetInvocationException if the .NET member raises it
-     * @throws system.AccessViolationException if the .NET member raises it
-     * @throws system.security.SecurityException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
      * @throws system.RankException if the .NET member raises it
+     * @throws system.AccessViolationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Pkcs.SignerInfo.CheckSignature" target="_top">.NET documentation</a>
      */
-    public void CheckSignature(boolean verifySignatureOnly) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.AccessViolationException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.RankException {
+    public void CheckSignature(boolean verifySignatureOnly) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.RankException, system.AccessViolationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -268,13 +272,17 @@ public class SignerInfo extends NetObject  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @throws system.MissingMethodException if the .NET member raises it
      * @throws system.reflection.TargetInvocationException if the .NET member raises it
-     * @throws system.AccessViolationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.AccessViolationException if the .NET member raises it
      * @throws system.RankException if the .NET member raises it
      * @throws system.ApplicationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Pkcs.SignerInfo.CheckSignature" target="_top">.NET documentation</a>
      */
-    public void CheckSignature(X509Certificate2Collection extraStore, boolean verifySignatureOnly) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.NotImplementedException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.AccessViolationException, system.security.SecurityException, system.RankException, system.ApplicationException {
+    public void CheckSignature(X509Certificate2Collection extraStore, boolean verifySignatureOnly) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.NotImplementedException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.AccessViolationException, system.RankException, system.ApplicationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -679,12 +687,14 @@ public class SignerInfo extends NetObject  {
      * @throws system.security.SecurityException if the .NET member raises it
      * @throws system.MissingMethodException if the .NET member raises it
      * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
      * @throws system.AccessViolationException if the .NET member raises it
      * @throws system.RankException if the .NET member raises it
-     * @throws system.OverflowException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Pkcs.SignerInfo.Certificate" target="_top">.NET documentation</a>
      */
-    public X509Certificate2 getCertificate() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.FormatException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.AccessViolationException, system.RankException, system.OverflowException {
+    public X509Certificate2 getCertificate() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.FormatException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ObjectDisposedException, system.UnauthorizedAccessException, system.io.IOException, system.AccessViolationException, system.RankException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectCertificate = null;

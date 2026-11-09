@@ -176,27 +176,26 @@ public class XmlDecryptionTransform extends system.security.cryptography.xml.Tra
      *
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
-     * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @throws system.ArgumentNullException if the .NET member raises it
-     * @throws system.RankException if the .NET member raises it
-     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
-     * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @throws system.InvalidCastException if the .NET member raises it
      * @throws system.InvalidOperationException if the .NET member raises it
      * @throws system.NotSupportedException if the .NET member raises it
-     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
-     * @throws system.ObjectDisposedException if the .NET member raises it
-     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
      * @throws system.xml.xpath.XPathException if the .NET member raises it
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @throws system.security.cryptography.xml.CryptoSignedXmlRecursionException if the .NET member raises it
-     * @throws system.diagnostics.UnreachableException if the .NET member raises it
      * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Xml.XmlDecryptionTransform.GetOutput" target="_top">.NET documentation</a>
      */
-    public NetObject GetOutput() throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException, system.InvalidOperationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.xml.xpath.XPathException, system.OutOfMemoryException, system.security.cryptography.xml.CryptoSignedXmlRecursionException, system.diagnostics.UnreachableException, system.xml.XmlException {
+    public NetObject GetOutput() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.security.cryptography.CryptographicException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidCastException, system.InvalidOperationException, system.NotSupportedException, system.xml.xpath.XPathException, system.OutOfMemoryException, system.security.cryptography.xml.CryptoSignedXmlRecursionException, system.xml.XmlException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetOutput = null;
@@ -314,14 +313,14 @@ public class XmlDecryptionTransform extends system.security.cryptography.xml.Tra
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @throws system.InvalidOperationException if the .NET member raises it
      * @throws system.xml.schema.XmlSchemaException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @throws system.RankException if the .NET member raises it
      * @throws system.InvalidCastException if the .NET member raises it
      * @throws system.xml.xpath.XPathException if the .NET member raises it
-     * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Xml.XmlDecryptionTransform.LoadInput" target="_top">.NET documentation</a>
      */
-    public void LoadInput(NetObject obj) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.OutOfMemoryException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.xml.schema.XmlSchemaException, system.IndexOutOfRangeException, system.RankException, system.InvalidCastException, system.xml.xpath.XPathException, system.ArgumentNullException {
+    public void LoadInput(NetObject obj) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.OutOfMemoryException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.xml.schema.XmlSchemaException, system.ArgumentNullException, system.IndexOutOfRangeException, system.RankException, system.InvalidCastException, system.xml.xpath.XPathException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

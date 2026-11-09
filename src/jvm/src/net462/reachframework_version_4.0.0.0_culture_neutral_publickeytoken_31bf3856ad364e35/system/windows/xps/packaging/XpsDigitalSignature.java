@@ -207,12 +207,9 @@ public class XpsDigitalSignature extends NetObject  {
      * @throws system.NullReferenceException if the .NET member raises it
      * @throws system.xml.xpath.XPathException if the .NET member raises it
      * @throws system.security.SecurityException if the .NET member raises it
-     * @throws system.MissingMethodException if the .NET member raises it
-     * @throws system.reflection.TargetInvocationException if the .NET member raises it
-     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.XpsDigitalSignature.Verify" target="_top">.NET documentation</a>
      */
-    public VerifyResult Verify() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.io.IOException, system.io.FileFormatException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.AccessViolationException, system.xml.XmlException, system.NullReferenceException, system.xml.xpath.XPathException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.configuration.ConfigurationErrorsException {
+    public VerifyResult Verify() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.io.IOException, system.io.FileFormatException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.AccessViolationException, system.xml.XmlException, system.NullReferenceException, system.xml.xpath.XPathException, system.security.SecurityException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectVerify = null;
@@ -240,12 +237,12 @@ public class XpsDigitalSignature extends NetObject  {
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @throws system.io.IOException if the .NET member raises it
      * @throws system.io.FileFormatException if the .NET member raises it
      * @throws system.xml.XmlException if the .NET member raises it
      * @throws system.NullReferenceException if the .NET member raises it
-     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
      * @throws system.xml.xpath.XPathException if the .NET member raises it
      * @throws system.OverflowException if the .NET member raises it
      * @throws system.NotSupportedException if the .NET member raises it
@@ -253,13 +250,11 @@ public class XpsDigitalSignature extends NetObject  {
      * @throws system.AccessViolationException if the .NET member raises it
      * @throws system.MissingMethodException if the .NET member raises it
      * @throws system.reflection.TargetInvocationException if the .NET member raises it
-     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
-     * @throws system.OutOfMemoryException if the .NET member raises it
      * @throws system.security.SecurityException if the .NET member raises it
-     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.XpsDigitalSignature.Verify" target="_top">.NET documentation</a>
      */
-    public VerifyResult Verify(X509Certificate certificate) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.io.IOException, system.io.FileFormatException, system.xml.XmlException, system.NullReferenceException, system.security.cryptography.CryptographicException, system.xml.xpath.XPathException, system.OverflowException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.AccessViolationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.security.SecurityException, system.threading.ThreadAbortException {
+    public VerifyResult Verify(X509Certificate certificate) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.security.cryptography.CryptographicException, system.ArgumentOutOfRangeException, system.io.IOException, system.io.FileFormatException, system.xml.XmlException, system.NullReferenceException, system.xml.xpath.XPathException, system.OverflowException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.AccessViolationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectVerify = null;
@@ -372,18 +367,18 @@ public class XpsDigitalSignature extends NetObject  {
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @throws system.io.IOException if the .NET member raises it
      * @throws system.io.FileFormatException if the .NET member raises it
      * @throws system.xml.XmlException if the .NET member raises it
      * @throws system.NullReferenceException if the .NET member raises it
-     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
      * @throws system.xml.xpath.XPathException if the .NET member raises it
      * @throws system.OverflowException if the .NET member raises it
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.XpsDigitalSignature.DocumentPropertiesRestricted" target="_top">.NET documentation</a>
      */
-    public boolean getDocumentPropertiesRestricted() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.io.IOException, system.io.FileFormatException, system.xml.XmlException, system.NullReferenceException, system.security.cryptography.CryptographicException, system.xml.xpath.XPathException, system.OverflowException, system.IndexOutOfRangeException {
+    public boolean getDocumentPropertiesRestricted() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.security.cryptography.CryptographicException, system.ArgumentOutOfRangeException, system.io.IOException, system.io.FileFormatException, system.xml.XmlException, system.NullReferenceException, system.xml.xpath.XPathException, system.OverflowException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectDocumentPropertiesRestricted = null;
@@ -448,19 +443,19 @@ public class XpsDigitalSignature extends NetObject  {
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @throws system.io.IOException if the .NET member raises it
      * @throws system.io.FileFormatException if the .NET member raises it
      * @throws system.xml.XmlException if the .NET member raises it
      * @throws system.NullReferenceException if the .NET member raises it
-     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
      * @throws system.xml.xpath.XPathException if the .NET member raises it
      * @throws system.OverflowException if the .NET member raises it
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.XpsDigitalSignature.SignatureOriginRestricted" target="_top">.NET documentation</a>
      */
-    public boolean getSignatureOriginRestricted() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.io.IOException, system.io.FileFormatException, system.xml.XmlException, system.NullReferenceException, system.security.cryptography.CryptographicException, system.xml.xpath.XPathException, system.OverflowException, system.IndexOutOfRangeException, system.OutOfMemoryException {
+    public boolean getSignatureOriginRestricted() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.security.cryptography.CryptographicException, system.ArgumentOutOfRangeException, system.io.IOException, system.io.FileFormatException, system.xml.XmlException, system.NullReferenceException, system.xml.xpath.XPathException, system.OverflowException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSignatureOriginRestricted = null;
@@ -486,6 +481,7 @@ public class XpsDigitalSignature extends NetObject  {
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @throws system.io.IOException if the .NET member raises it
      * @throws system.security.SecurityException if the .NET member raises it
@@ -493,11 +489,10 @@ public class XpsDigitalSignature extends NetObject  {
      * @throws system.xml.schema.XmlSchemaException if the .NET member raises it
      * @throws system.xml.XmlException if the .NET member raises it
      * @throws system.NullReferenceException if the .NET member raises it
-     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
      * @throws system.xml.xpath.XPathException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.XpsDigitalSignature.SignatureValue" target="_top">.NET documentation</a>
      */
-    public byte[] getSignatureValue() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.io.IOException, system.security.SecurityException, system.io.FileFormatException, system.xml.schema.XmlSchemaException, system.xml.XmlException, system.NullReferenceException, system.security.cryptography.CryptographicException, system.xml.xpath.XPathException {
+    public byte[] getSignatureValue() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.security.cryptography.CryptographicException, system.ArgumentOutOfRangeException, system.io.IOException, system.security.SecurityException, system.io.FileFormatException, system.xml.schema.XmlSchemaException, system.xml.XmlException, system.NullReferenceException, system.xml.xpath.XPathException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSignatureValue = null;
@@ -532,18 +527,18 @@ public class XpsDigitalSignature extends NetObject  {
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @throws system.io.IOException if the .NET member raises it
      * @throws system.io.FileFormatException if the .NET member raises it
      * @throws system.xml.XmlException if the .NET member raises it
      * @throws system.NullReferenceException if the .NET member raises it
-     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
      * @throws system.xml.xpath.XPathException if the .NET member raises it
      * @throws system.OverflowException if the .NET member raises it
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.XpsDigitalSignature.SigningTime" target="_top">.NET documentation</a>
      */
-    public DateTime getSigningTime() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.io.IOException, system.io.FileFormatException, system.xml.XmlException, system.NullReferenceException, system.security.cryptography.CryptographicException, system.xml.xpath.XPathException, system.OverflowException, system.IndexOutOfRangeException {
+    public DateTime getSigningTime() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.security.cryptography.CryptographicException, system.ArgumentOutOfRangeException, system.io.IOException, system.io.FileFormatException, system.xml.XmlException, system.NullReferenceException, system.xml.xpath.XPathException, system.OverflowException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSigningTime = null;
@@ -570,6 +565,7 @@ public class XpsDigitalSignature extends NetObject  {
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @throws system.io.IOException if the .NET member raises it
      * @throws system.security.SecurityException if the .NET member raises it
@@ -577,7 +573,6 @@ public class XpsDigitalSignature extends NetObject  {
      * @throws system.xml.schema.XmlSchemaException if the .NET member raises it
      * @throws system.xml.XmlException if the .NET member raises it
      * @throws system.NullReferenceException if the .NET member raises it
-     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
      * @throws system.xml.xpath.XPathException if the .NET member raises it
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @throws system.IndexOutOfRangeException if the .NET member raises it
@@ -585,7 +580,7 @@ public class XpsDigitalSignature extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.XpsDigitalSignature.Id" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getId() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.io.IOException, system.security.SecurityException, system.io.FileFormatException, system.xml.schema.XmlSchemaException, system.xml.XmlException, system.NullReferenceException, system.security.cryptography.CryptographicException, system.xml.xpath.XPathException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.RankException, system.NotSupportedException {
+    public Nullable_1 getId() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.security.cryptography.CryptographicException, system.ArgumentOutOfRangeException, system.io.IOException, system.security.SecurityException, system.io.FileFormatException, system.xml.schema.XmlSchemaException, system.xml.XmlException, system.NullReferenceException, system.xml.xpath.XPathException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.RankException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectId = null;
@@ -691,12 +686,12 @@ public class XpsDigitalSignature extends NetObject  {
      * @throws system.FormatException if the .NET member raises it
      * @throws system.NotImplementedException if the .NET member raises it
      * @throws system.OverflowException if the .NET member raises it
-     * @throws system.NullReferenceException if the .NET member raises it
      * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
      * @throws system.xml.xpath.XPathException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.XpsDigitalSignature.SignedDocumentSequence" target="_top">.NET documentation</a>
      */
-    public IXpsFixedDocumentSequenceReader getSignedDocumentSequence() throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.io.IOException, system.ArgumentException, system.io.FileFormatException, system.xml.XmlException, system.io.InvalidDataException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.windows.xps.XpsPackagingException, system.NotSupportedException, system.FormatException, system.NotImplementedException, system.OverflowException, system.NullReferenceException, system.security.cryptography.CryptographicException, system.xml.xpath.XPathException {
+    public IXpsFixedDocumentSequenceReader getSignedDocumentSequence() throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.io.IOException, system.ArgumentException, system.io.FileFormatException, system.xml.XmlException, system.io.InvalidDataException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.windows.xps.XpsPackagingException, system.NotSupportedException, system.FormatException, system.NotImplementedException, system.OverflowException, system.security.cryptography.CryptographicException, system.NullReferenceException, system.xml.xpath.XPathException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSignedDocumentSequence = null;

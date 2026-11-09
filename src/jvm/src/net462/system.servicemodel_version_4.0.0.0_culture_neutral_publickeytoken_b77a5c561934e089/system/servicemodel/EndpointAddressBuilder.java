@@ -227,12 +227,11 @@ public class EndpointAddressBuilder extends NetObject  {
      * @throws system.FormatException if the .NET member raises it
      * @throws system.NotSupportedException if the .NET member raises it
      * @throws system.security.cryptography.CryptographicException if the .NET member raises it
-     * @throws system.AccessViolationException if the .NET member raises it
      * @throws system.UnauthorizedAccessException if the .NET member raises it
      * @throws system.security.accesscontrol.PrivilegeNotHeldException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.EndpointAddressBuilder.ToEndpointAddress" target="_top">.NET documentation</a>
      */
-    public EndpointAddress ToEndpointAddress() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.xml.XmlException, system.FormatException, system.NotSupportedException, system.security.cryptography.CryptographicException, system.AccessViolationException, system.UnauthorizedAccessException, system.security.accesscontrol.PrivilegeNotHeldException {
+    public EndpointAddress ToEndpointAddress() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.xml.XmlException, system.FormatException, system.NotSupportedException, system.security.cryptography.CryptographicException, system.UnauthorizedAccessException, system.security.accesscontrol.PrivilegeNotHeldException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectToEndpointAddress = null;
@@ -323,6 +322,8 @@ public class EndpointAddressBuilder extends NetObject  {
      * @throws system.xml.XmlException if the .NET member raises it
      * @throws system.InvalidOperationException if the .NET member raises it
      * @throws system.FormatException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
      * @throws system.NotImplementedException if the .NET member raises it
      * @throws system.NotSupportedException if the .NET member raises it
      * @throws system.security.cryptography.CryptographicException if the .NET member raises it
@@ -331,7 +332,7 @@ public class EndpointAddressBuilder extends NetObject  {
      * @throws system.security.accesscontrol.PrivilegeNotHeldException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.EndpointAddressBuilder.SetExtensionReader" target="_top">.NET documentation</a>
      */
-    public void SetExtensionReader(XmlDictionaryReader reader) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.xml.XmlException, system.InvalidOperationException, system.FormatException, system.NotImplementedException, system.NotSupportedException, system.security.cryptography.CryptographicException, system.AccessViolationException, system.UnauthorizedAccessException, system.security.accesscontrol.PrivilegeNotHeldException {
+    public void SetExtensionReader(XmlDictionaryReader reader) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.xml.XmlException, system.InvalidOperationException, system.FormatException, system.security.SecurityException, system.io.IOException, system.NotImplementedException, system.NotSupportedException, system.security.cryptography.CryptographicException, system.AccessViolationException, system.UnauthorizedAccessException, system.security.accesscontrol.PrivilegeNotHeldException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

@@ -194,9 +194,10 @@ public class Information extends NetObject  {
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.Information.IsDate" target="_top">.NET documentation</a>
      */
-    public static boolean IsDate(NetObject Expression) throws Throwable, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException {
+    public static boolean IsDate(NetObject Expression) throws Throwable, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectIsDate = null;

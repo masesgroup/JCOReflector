@@ -346,13 +346,12 @@ public class XmlTextReader extends system.xml.XmlReader  {
      * @param input the argument of type {@code TextReader}
      * @param nt the argument of type {@code XmlNameTable}
      * @throws Throwable if the .NET constructor fails
-     * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlTextReader.-ctor" target="_top">.NET documentation</a>
      */
-    public XmlTextReader(java.lang.String url, TextReader input, XmlNameTable nt) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException {
+    public XmlTextReader(java.lang.String url, TextReader input, XmlNameTable nt) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);

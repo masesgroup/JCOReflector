@@ -297,13 +297,13 @@ public class XmlDsigEnvelopedSignatureTransform extends system.security.cryptogr
      * @throws system.InvalidOperationException if the .NET member raises it
      * @throws system.xml.schema.XmlSchemaException if the .NET member raises it
      * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @throws system.RankException if the .NET member raises it
      * @throws system.InvalidCastException if the .NET member raises it
-     * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform.LoadInput" target="_top">.NET documentation</a>
      */
-    public void LoadInput(NetObject obj) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.OutOfMemoryException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.xml.schema.XmlSchemaException, system.security.cryptography.CryptographicException, system.IndexOutOfRangeException, system.RankException, system.InvalidCastException, system.ArgumentNullException {
+    public void LoadInput(NetObject obj) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.OutOfMemoryException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.xml.schema.XmlSchemaException, system.security.cryptography.CryptographicException, system.ArgumentNullException, system.IndexOutOfRangeException, system.RankException, system.InvalidCastException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

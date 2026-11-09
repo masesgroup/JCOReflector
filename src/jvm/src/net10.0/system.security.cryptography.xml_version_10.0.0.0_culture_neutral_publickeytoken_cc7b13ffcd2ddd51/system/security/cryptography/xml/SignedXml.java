@@ -180,9 +180,10 @@ public class SignedXml extends NetObject  {
      * @throws system.globalization.CultureNotFoundException if the .NET member raises it
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @throws system.FormatException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Xml.SignedXml.-ctor" target="_top">.NET documentation</a>
      */
-    public SignedXml() throws Throwable, system.ArgumentNullException, system.diagnostics.UnreachableException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.TypeLoadException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.FormatException {
+    public SignedXml() throws Throwable, system.ArgumentNullException, system.diagnostics.UnreachableException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.TypeLoadException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.FormatException, system.security.cryptography.CryptographicException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -211,9 +212,10 @@ public class SignedXml extends NetObject  {
      * @throws system.globalization.CultureNotFoundException if the .NET member raises it
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @throws system.FormatException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Xml.SignedXml.-ctor" target="_top">.NET documentation</a>
      */
-    public SignedXml(XmlDocument document) throws Throwable, system.ArgumentNullException, system.diagnostics.UnreachableException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.TypeLoadException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.FormatException {
+    public SignedXml(XmlDocument document) throws Throwable, system.ArgumentNullException, system.diagnostics.UnreachableException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.TypeLoadException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.FormatException, system.security.cryptography.CryptographicException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -242,9 +244,10 @@ public class SignedXml extends NetObject  {
      * @throws system.globalization.CultureNotFoundException if the .NET member raises it
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @throws system.FormatException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Xml.SignedXml.-ctor" target="_top">.NET documentation</a>
      */
-    public SignedXml(XmlElement elem) throws Throwable, system.ArgumentNullException, system.diagnostics.UnreachableException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.TypeLoadException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.FormatException {
+    public SignedXml(XmlElement elem) throws Throwable, system.ArgumentNullException, system.diagnostics.UnreachableException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.TypeLoadException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.FormatException, system.security.cryptography.CryptographicException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -323,12 +326,11 @@ public class SignedXml extends NetObject  {
      * @throws system.xml.XmlException if the .NET member raises it
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @throws system.security.cryptography.CryptographicUnexpectedOperationException if the .NET member raises it
-     * @throws system.xml.schema.XmlSchemaException if the .NET member raises it
      * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
      * @throws system.xml.xpath.XPathException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Xml.SignedXml.CheckSignature" target="_top">.NET documentation</a>
      */
-    public boolean CheckSignature(AsymmetricAlgorithm key) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NullReferenceException, system.NotSupportedException, system.IndexOutOfRangeException, system.BadImageFormatException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.FormatException, system.OutOfMemoryException, system.diagnostics.UnreachableException, system.TypeLoadException, system.security.cryptography.CryptographicException, system.xml.XmlException, system.ObjectDisposedException, system.security.cryptography.CryptographicUnexpectedOperationException, system.xml.schema.XmlSchemaException, system.runtime.interopservices.ExternalException, system.xml.xpath.XPathException {
+    public boolean CheckSignature(AsymmetricAlgorithm key) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NullReferenceException, system.NotSupportedException, system.IndexOutOfRangeException, system.BadImageFormatException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.FormatException, system.OutOfMemoryException, system.diagnostics.UnreachableException, system.TypeLoadException, system.security.cryptography.CryptographicException, system.xml.XmlException, system.ObjectDisposedException, system.security.cryptography.CryptographicUnexpectedOperationException, system.runtime.interopservices.ExternalException, system.xml.xpath.XPathException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectCheckSignature = null;
@@ -366,12 +368,11 @@ public class SignedXml extends NetObject  {
      * @throws system.diagnostics.UnreachableException if the .NET member raises it
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @throws system.security.cryptography.CryptographicUnexpectedOperationException if the .NET member raises it
-     * @throws system.xml.schema.XmlSchemaException if the .NET member raises it
      * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
      * @throws system.xml.xpath.XPathException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Xml.SignedXml.CheckSignature" target="_top">.NET documentation</a>
      */
-    public boolean CheckSignature(KeyedHashAlgorithm macAlg) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NullReferenceException, system.NotSupportedException, system.IndexOutOfRangeException, system.BadImageFormatException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.FormatException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.xml.XmlException, system.diagnostics.UnreachableException, system.ObjectDisposedException, system.security.cryptography.CryptographicUnexpectedOperationException, system.xml.schema.XmlSchemaException, system.runtime.interopservices.ExternalException, system.xml.xpath.XPathException {
+    public boolean CheckSignature(KeyedHashAlgorithm macAlg) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NullReferenceException, system.NotSupportedException, system.IndexOutOfRangeException, system.BadImageFormatException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.FormatException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.xml.XmlException, system.diagnostics.UnreachableException, system.ObjectDisposedException, system.security.cryptography.CryptographicUnexpectedOperationException, system.runtime.interopservices.ExternalException, system.xml.xpath.XPathException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectCheckSignature = null;

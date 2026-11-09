@@ -207,11 +207,12 @@ public class XmlTextReader extends system.xml.XmlReader  {
      * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @throws system.io.IOException if the .NET member raises it
      * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.diagnostics.UnreachableException if the .NET member raises it
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlTextReader.-ctor" target="_top">.NET documentation</a>
      */
-    public XmlTextReader(Stream xmlFragment, XmlNodeType fragType, XmlParserContext context) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.io.IOException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.OutOfMemoryException {
+    public XmlTextReader(Stream xmlFragment, XmlNodeType fragType, XmlParserContext context) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.io.IOException, system.globalization.CultureNotFoundException, system.ArgumentNullException, system.diagnostics.UnreachableException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);

@@ -1,0 +1,9 @@
+{
+  "runtimeOptions": {
+    "tfm": "net11.0",
+    "framework": {
+      "name": "Microsoft.WindowsDesktop.App",
+      "version": "11.0.0-rc.3.26522.148"
+    }
+  }
+}

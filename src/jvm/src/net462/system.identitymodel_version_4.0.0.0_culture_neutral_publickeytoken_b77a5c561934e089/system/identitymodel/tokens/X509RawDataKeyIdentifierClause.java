@@ -159,18 +159,24 @@ public class X509RawDataKeyIdentifierClause extends system.identitymodel.tokens.
      *
      * @param certificateRawData the argument of type {@code byte[]}
      * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
      * @throws system.NotImplementedException if the .NET member raises it
      * @throws system.NotSupportedException if the .NET member raises it
-     * @throws system.ArgumentNullException if the .NET member raises it
-     * @throws system.ArgumentException if the .NET member raises it
-     * @throws system.InvalidOperationException if the .NET member raises it
-     * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
      * @throws system.OutOfMemoryException if the .NET member raises it
-     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.X509RawDataKeyIdentifierClause.-ctor" target="_top">.NET documentation</a>
      */
-    public X509RawDataKeyIdentifierClause(byte[] certificateRawData) throws Throwable, system.NotImplementedException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.ArgumentOutOfRangeException {
+    public X509RawDataKeyIdentifierClause(byte[] certificateRawData) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException, system.NotImplementedException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.collections.generic.KeyNotFoundException, system.security.cryptography.CryptographicException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);

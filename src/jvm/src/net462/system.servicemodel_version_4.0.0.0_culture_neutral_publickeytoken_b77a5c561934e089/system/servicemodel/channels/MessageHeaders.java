@@ -1205,9 +1205,10 @@ public class MessageHeaders extends NetObjectEnumerable  {
      * @throws system.OverflowException if the .NET member raises it
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.MessageHeaders.FaultTo" target="_top">.NET documentation</a>
      */
-    public EndpointAddress getFaultTo() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.OutOfMemoryException, system.xml.XmlException {
+    public EndpointAddress getFaultTo() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.OutOfMemoryException, system.xml.XmlException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectFaultTo = null;
@@ -1273,9 +1274,10 @@ public class MessageHeaders extends NetObjectEnumerable  {
      * @throws system.OverflowException if the .NET member raises it
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.MessageHeaders.From" target="_top">.NET documentation</a>
      */
-    public EndpointAddress getFrom() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.OutOfMemoryException, system.xml.XmlException {
+    public EndpointAddress getFrom() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.OutOfMemoryException, system.xml.XmlException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectFrom = null;
@@ -1341,9 +1343,10 @@ public class MessageHeaders extends NetObjectEnumerable  {
      * @throws system.OverflowException if the .NET member raises it
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.MessageHeaders.ReplyTo" target="_top">.NET documentation</a>
      */
-    public EndpointAddress getReplyTo() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.OutOfMemoryException, system.xml.XmlException {
+    public EndpointAddress getReplyTo() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.OutOfMemoryException, system.xml.XmlException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectReplyTo = null;

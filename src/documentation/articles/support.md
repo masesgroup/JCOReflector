@@ -32,9 +32,9 @@ If your project still depends on one of those targets, MASES Group can provide:
 
 ### Implementation
 
-- Building .NET applications that consume Java/Scala/Kotlin/etc libraries directly via JCOReflector, without requiring Java-side modifications
+- Building .NET applications that consume Java/Scala/Kotlin/Clojure/etc libraries directly via JCOReflector, without requiring Java-side modifications
 - Developing JCOReflector-based wrappers for custom or third-party Java libraries not covered by the standard JCOReflector generated classes
-- Implementing bidirectional integration using JCOReflector: exposing .NET assemblies as JARs for consumption from Java, Kotlin, or Scala
+- Implementing bidirectional integration using JCOReflector: exposing .NET assemblies as JARs for consumption from Java, Kotlin, Scala or Clojure
 - Configuring JCOReflectorEngine to generate C# gateway classes from custom JARs and maintaining those classes across library updates
 
 ### Operations and performance

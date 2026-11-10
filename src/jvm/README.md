@@ -6,4 +6,4 @@ There are three main folders:
 * [**_net10.0_**](net10.0.md) contains the reflected classes generated from .NET 10, divided by the containing assembly
 * [**_net11.0_**](net11.0.md) contains the reflected classes generated from .NET 11, divided by the containing assembly
 
-**JCOReflector** is the folder of common classes for both **.NET** **Framework**, **8**, **9**, **10** and **11**
+**JCOReflector** is the folder of common classes for both **.NET** **Framework**, **10** and **11**

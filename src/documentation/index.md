@@ -32,9 +32,9 @@ JCOReflector is a comprehensive suite of libraries and tools to use Java™/JVM�
 | **.NET 9** | ![.NET 9 commercial users](https://api.scarf.sh/v2/packages/Masesgroup/ac4af46b-2671-4c12-9c0d-31cf67bcf26a/commercial-users-badge) | ![.NET 9 downloads](https://api.scarf.sh/v2/packages/Masesgroup/ac4af46b-2671-4c12-9c0d-31cf67bcf26a/downloads-badge) | [![Maven Central](https://img.shields.io/maven-central/v/com.masesgroup/jcoreflector_net9.0.svg?label=Maven%20Central)](https://central.sonatype.com/artifact/com.masesgroup/jcoreflector_net9.0) |
 
 > [!NOTE]
-> JCOReflector follows the target framework support of **JCOBridge**, which in turn follows the Microsoft .NET support lifecycle. Microsoft support for **.NET 8** and **.NET 9** ended on November 10, 2026, so both were moved to the deprecated list starting with JCOBridge 2.6.10.
-
-Need a build for a legacy or out-of-support target, or expert help with .NET and JVM™ integration? See [Professional Support Options](articles/support.md).
+> This project follows the target framework support of **JCOBridge**, which in turn follows the Microsoft .NET support lifecycle. Public releases do not take on the maintenance of runtimes that Microsoft no longer supports: when Microsoft ends support for a .NET version, that target is moved to the deprecated artifacts starting with the next JCOBridge release.
+>
+> Need a build for a legacy or out-of-support target, or expert help with .NET and JVM™ integration? See [Professional Support Options](articles/support.md).
 
 ### Reflection engine
 

@@ -112,7 +112,7 @@ jobs:
           cd ..\..
 
       - name: Clear documentation folder 
-        run: Get-ChildItem -Path .\docs -Exclude net8.0,net9.0,net10.0,net11.0,net462,_config.yml,CNAME,README.md | Remove-Item -Recurse -Force
+        run: Get-ChildItem -Path .\docs -Exclude net5.0,net6.0,net7.0,net8.0,net9.0,net10.0,net11.0,net462,_config.yml,CNAME,README.md | Remove-Item -Recurse -Force
 
       # Runs a set of commands using the runners shell
       - name: Clean net10.0 help file folders

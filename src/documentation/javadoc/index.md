@@ -9,6 +9,21 @@ _description: The Java documentation of .NET reflected API
    rel="noopener noreferrer"
    style="font-size:30px">.NET Framework 4.6.2+</a>
 &nbsp;&nbsp;&nbsp;
+<a href="https://jcoreflector.masesgroup.com/net5.0/"
+   target="myiframe"
+   rel="noopener noreferrer"
+   style="font-size:30px">.NET 5</a>
+&nbsp;&nbsp;&nbsp;
+<a href="https://jcoreflector.masesgroup.com/net6.0/"
+   target="myiframe"
+   rel="noopener noreferrer"
+   style="font-size:30px">.NET 6</a>
+&nbsp;&nbsp;&nbsp;
+<a href="https://jcoreflector.masesgroup.com/net7.0/"
+   target="myiframe"
+   rel="noopener noreferrer"
+   style="font-size:30px">.NET 7</a>
+&nbsp;&nbsp;&nbsp;
 <a href="https://jcoreflector.masesgroup.com/net8.0/"
    target="myiframe"
    rel="noopener noreferrer"

@@ -1,6 +1,15 @@
 [submodule "docs/net462"]
 	path = docs/net462
 	url = https://github.com/masesgroup/FrameworkDocs.git
+[submodule "docs/net5.0"]
+	path = docs/net5.0
+	url = https://github.com/masesgroup/NET5Docs.git
+[submodule "docs/net6.0"]
+	path = docs/net6.0
+	url = https://github.com/masesgroup/NET6Docs.git
+[submodule "docs/net7.0"]
+	path = docs/net7.0
+	url = https://github.com/masesgroup/NET7Docs.git
 [submodule "docs/net8.0"]
 	path = docs/net8.0
 	url = https://github.com/masesgroup/NET8Docs.git

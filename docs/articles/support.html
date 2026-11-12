@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Professional support for JCOReflector | MASES Group website - JCOReflector </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Professional support for JCOReflector | MASES Group website - JCOReflector ">
+      <meta name="description" content="Professional support, legacy target builds and implementation services for JCOReflector by MASES Group">
+      
+      <link rel="icon" href="../images/favicon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/masesgroup/JCOReflector/blob/master/src/documentation/articles/support.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="jcoreflector-professional-support">JCOReflector: professional support</h1>
+
+<p>Looking for expertise in applications mixing .NET and JVM™-enabled languages? MASES Group can help you design, build, deploy, and manage applications that run .NET and Java™/JVM™ side-by-side, and can provide builds for targets no longer covered by the public releases.</p>
+<hr>
+<h2 id="legacy-and-out-of-support-targets">Legacy and out-of-support targets</h2>
+<p>The public open-source branch of JCOReflector follows the target framework support of JCOBridge, which in turn follows the Microsoft .NET support lifecycle. When a target reaches end of support, it moves to the deprecated targets and is no longer part of the standard public updates.</p>
+<p>If your project still depends on one of those targets, MASES Group can provide:</p>
+<ul>
+<li>Dedicated engine compilation for deprecated or out-of-support targets (for example .NET Framework 4.6.1+, .NET 5, .NET 6 and .NET 7)</li>
+<li>Continued maintenance of those builds, so you can plan your migration to a supported runtime on your own schedule</li>
+<li>Help assessing and executing the migration to a currently supported .NET target</li>
+</ul>
+<hr>
+<h2 id="what-mases-group-can-help-with">What MASES Group can help with</h2>
+<h3 id="architecture-and-design">Architecture and design</h3>
+<ul>
+<li>Designing the integration architecture between .NET and JVM™-based systems: in-process vs. out-of-process, bidirectional vs. unidirectional, synchronous vs. event-driven</li>
+<li>Selecting the right JVM version for your .NET target runtime and managing backward compatibility with existing Java 8+ bytecode</li>
+<li>Mapping Java API surface to idiomatic C# patterns: generics, listeners, iterables, futures, and exception hierarchies</li>
+<li>Assessing legacy Java codebases for .NET integration — identifying which components to wrap via JCOReflector and which to migrate</li>
+</ul>
+<h3 id="implementation">Implementation</h3>
+<ul>
+<li>Building .NET applications that consume Java/Scala/Kotlin/Clojure/etc libraries directly via JCOReflector, without requiring Java-side modifications</li>
+<li>Developing JCOReflector-based wrappers for custom or third-party Java libraries not covered by the standard JCOReflector generated classes</li>
+<li>Implementing bidirectional integration using JCOReflector: exposing .NET assemblies as JARs for consumption from Java, Kotlin, Scala or Clojure</li>
+<li>Configuring JCOReflectorEngine to generate C# gateway classes from custom JARs and maintaining those classes across library updates</li>
+</ul>
+<h3 id="operations-and-performance">Operations and performance</h3>
+<ul>
+<li>JVM tuning for .NET-hosted processes: GC strategy, heap sizing, class loading, and thread pool configuration</li>
+<li>Diagnosing and resolving JVM↔CLR boundary issues, including object lifetime and cross-boundary GC collection (see <a href="https://github.com/masesgroup/JCOBridgePublic/issues/24">JCOBridgePublic#24</a>)</li>
+<li>Guidance on JCOBridge HPA Edition for production workloads requiring the highest reliability at the JVM↔CLR boundary</li>
+<li>PowerShell automation via JCOReflectorPS: scripting Java API calls from PowerShell in CI/CD and operational workflows</li>
+</ul>
+<h3 id="training-and-knowledge-transfer">Training and knowledge transfer</h3>
+<ul>
+<li>Hands-on workshops covering the JCOReflector programming model: JVMBridgeBase, listeners, generics, and the JCOBridge runtime</li>
+<li>Code reviews and architectural walkthroughs for teams integrating existing Java libraries into .NET applications</li>
+<li>Guidance on managing multi-version Java compatibility and JVM upgrade paths alongside .NET runtime upgrades</li>
+</ul>
+<hr>
+<h2 id="contact">Contact</h2>
+<p>To discuss your project or request a quote, contact MASES Group at:</p>
+<ul>
+<li><strong>Website:</strong> <a href="https://www.masesgroup.com/">https://www.masesgroup.com/</a></li>
+<li><strong>GitHub:</strong> <a href="https://github.com/masesgroup">https://github.com/masesgroup</a></li>
+<li><strong>Email:</strong> <span>sales@masesgroup.com</span></li>
+</ul>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/masesgroup/JCOReflector/blob/master/src/documentation/articles/support.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <script type="text/javascript">document.write('<div style="text-align: center;">Copyright © 2020 - ' + new Date().getFullYear() + ' MASES s.r.l. | Via San Cesidio 16 - San Valentino in A.C. - PE | P.I. 01932310681</div>');</script>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

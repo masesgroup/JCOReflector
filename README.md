@@ -3,7 +3,7 @@
 [![Java 8+](https://img.shields.io/badge/Java-8%2B-blue)](https://www.oracle.com/java/)
 [![.NET 10+](https://img.shields.io/badge/.NET-10%2B-purple)](https://dotnet.microsoft.com/)
 
-JCOReflector is a comprehensive suite of libraries and tools to use Java™/JVM™ APIs (Java, Scala, Kotlin, ...) and .NET side-by-side.
+JCOReflector is a comprehensive suite of libraries and tools to use Java™/JVM™ APIs (Java, Scala, Kotlin, Clojure, ...) and .NET side-by-side.
 
 ## Libraries and Tools
 
@@ -113,7 +113,7 @@ public class LegacyApp {
 ## History of the project
 
 This project started in 2019 with the aims to create a set of Java™ (JVM™) classes which mimic .NET (Framework/6/8) conterparts, in May 2020 the first commit in GitHub.
-Using this project it is possible to use .NET API in Java™ and all JVM™ enabled languages (Scala, Kotlin, and so on).
+Using this project it is possible to use .NET API in Java™ and all JVM™ enabled languages (Scala, Kotlin, Clojure, and so on).
 The final output of JCOReflector are JARs.
 At its first stages no JARs was available: only the JCOBridge engine, the graphical UI that helps to manages reflection and the operations needed to finally build JARs was relased.
 Starting from recent relases automated continous integration and verification process are in places, so the produced JARs are directly available for download and is no more needed to manually rebuils JARs before use it. 

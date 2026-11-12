@@ -1,3 +1,7 @@
+[submodule "docs/net461"]
+	path = docs/net461
+	url = https://github.com/masesgroup/FrameworkDocs.git
+	branch = 5da37c4bef02da6a9516f2929244318d3b61e6a0
 [submodule "docs/net462"]
 	path = docs/net462
 	url = https://github.com/masesgroup/FrameworkDocs.git

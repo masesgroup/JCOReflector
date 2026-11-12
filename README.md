@@ -5,11 +5,32 @@
 
 JCOReflector is a comprehensive suite of libraries and tools to use Java™/JVM™ APIs (Java, Scala, Kotlin, ...) and .NET side-by-side.
 
-### Libraries and Tools
+## Libraries and Tools
 
-|.NET Framework | .NET 8 | .NET 9 |  .NET 10 |
-|:---:	|:---:	|:---:	|:---:	|
-|[![Maven Central](https://img.shields.io/maven-central/v/com.masesgroup/jcoreflector_net462.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22com.masesgroup%22%20AND%20a:%22jcoreflector_net462%22) <br/> ![JCOReflector](https://api.scarf.sh/v2/packages/Masesgroup/a8e43716-e06c-4a1c-ba5e-d2c5695d5e33/commercial-users-badge) <br/> ![JCOReflector](https://api.scarf.sh/v2/packages/Masesgroup/a8e43716-e06c-4a1c-ba5e-d2c5695d5e33/downloads-badge) | [![Maven Central](https://img.shields.io/maven-central/v/com.masesgroup/jcoreflector_net8.0.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22com.masesgroup%22%20AND%20a:%22jcoreflector_net8.0%22) <br/> ![JCOReflector](https://api.scarf.sh/v2/packages/Masesgroup/63e64356-68aa-4a33-bef5-56cb451c8d5e/commercial-users-badge)<br/> ![JCOReflector](https://api.scarf.sh/v2/packages/Masesgroup/63e64356-68aa-4a33-bef5-56cb451c8d5e/downloads-badge) | [![Maven Central](https://img.shields.io/maven-central/v/com.masesgroup/jcoreflector_net9.0.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22com.masesgroup%22%20AND%20a:%22jcoreflector_net9.0%22) <br/> ![JCOReflector](https://api.scarf.sh/v2/packages/Masesgroup/ac4af46b-2671-4c12-9c0d-31cf67bcf26a/commercial-users-badge) <br/> ![JCOReflector](https://api.scarf.sh/v2/packages/Masesgroup/ac4af46b-2671-4c12-9c0d-31cf67bcf26a/downloads-badge) | [![Maven Central](https://img.shields.io/maven-central/v/com.masesgroup/jcoreflector_net10.0.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22com.masesgroup%22%20AND%20a:%22jcoreflector_net10.0%22) <br/> ![JCOReflector](https://api.scarf.sh/v2/packages/Masesgroup/48418723-04ae-4b40-8cb4-573993e3e626/commercial-users-badge) <br/> ![JCOReflector](https://api.scarf.sh/v2/packages/Masesgroup/48418723-04ae-4b40-8cb4-573993e3e626/downloads-badge) |
+### 🟢 Current Public Supported Maven Artifacts
+
+| Target | Commercial users | Downloads | Maven Central |
+|:--|:--:|:--:|:--:|
+| **.NET Framework 4.6.2+** | ![.NET Framework 4.6.2+ commercial users](https://api.scarf.sh/v2/packages/Masesgroup/a8e43716-e06c-4a1c-ba5e-d2c5695d5e33/commercial-users-badge) | ![.NET Framework 4.6.2+ downloads](https://api.scarf.sh/v2/packages/Masesgroup/a8e43716-e06c-4a1c-ba5e-d2c5695d5e33/downloads-badge) | [![Maven Central](https://img.shields.io/maven-central/v/com.masesgroup/jcoreflector_net462.svg?label=Maven%20Central)](https://central.sonatype.com/artifact/com.masesgroup/jcoreflector_net462) |
+| **.NET 10** | ![.NET 10 commercial users](https://api.scarf.sh/v2/packages/Masesgroup/48418723-04ae-4b40-8cb4-573993e3e626/commercial-users-badge) | ![.NET 10 downloads](https://api.scarf.sh/v2/packages/Masesgroup/48418723-04ae-4b40-8cb4-573993e3e626/downloads-badge) | [![Maven Central](https://img.shields.io/maven-central/v/com.masesgroup/jcoreflector_net10.0.svg?label=Maven%20Central)](https://central.sonatype.com/artifact/com.masesgroup/jcoreflector_net10.0) |
+
+### 🟡 Deprecated Maven Artifacts with Extended Support
+
+| Target | Commercial users | Downloads | Maven Central |
+|:--|:--:|:--:|:--:|
+| **.NET Framework 4.6.1+** | ![.NET Framework 4.6.1+ commercial users](https://api.scarf.sh/v2/packages/Masesgroup/689d369f-1c29-4274-8936-63dc347a7410/commercial-users-badge) | ![.NET Framework 4.6.1+ downloads](https://api.scarf.sh/v2/packages/Masesgroup/689d369f-1c29-4274-8936-63dc347a7410/downloads-badge) | [![Maven Central](https://img.shields.io/maven-central/v/com.masesgroup/jcoreflector_net461.svg?label=Maven%20Central)](https://central.sonatype.com/artifact/com.masesgroup/jcoreflector_net461) |
+| **.NET 5** | ![.NET 5 commercial users](https://api.scarf.sh/v2/packages/Masesgroup/8e9dfb6b-67f6-4340-981e-341af2fba2c0/commercial-users-badge) | ![.NET 5 downloads](https://api.scarf.sh/v2/packages/Masesgroup/8e9dfb6b-67f6-4340-981e-341af2fba2c0/downloads-badge) | [![Maven Central](https://img.shields.io/maven-central/v/com.masesgroup/jcoreflector_net5.0.svg?label=Maven%20Central)](https://central.sonatype.com/artifact/com.masesgroup/jcoreflector_net5.0) |
+| **.NET 6** | ![.NET 6 commercial users](https://api.scarf.sh/v2/packages/Masesgroup/8c8cd59a-a84f-4205-ab7f-e74d8840a996/commercial-users-badge) | ![.NET 6 downloads](https://api.scarf.sh/v2/packages/Masesgroup/8c8cd59a-a84f-4205-ab7f-e74d8840a996/downloads-badge) | [![Maven Central](https://img.shields.io/maven-central/v/com.masesgroup/jcoreflector_net6.0.svg?label=Maven%20Central)](https://central.sonatype.com/artifact/com.masesgroup/jcoreflector_net6.0) |
+| **.NET 7** | ![.NET 7 commercial users](https://api.scarf.sh/v2/packages/Masesgroup/a5cd76d9-da23-4e80-84bb-bb0f526ba18d/commercial-users-badge) | ![.NET 7 downloads](https://api.scarf.sh/v2/packages/Masesgroup/a5cd76d9-da23-4e80-84bb-bb0f526ba18d/downloads-badge) | [![Maven Central](https://img.shields.io/maven-central/v/com.masesgroup/jcoreflector_net7.0.svg?label=Maven%20Central)](https://central.sonatype.com/artifact/com.masesgroup/jcoreflector_net7.0) |
+| **.NET 8** | ![.NET 8 commercial users](https://api.scarf.sh/v2/packages/Masesgroup/63e64356-68aa-4a33-bef5-56cb451c8d5e/commercial-users-badge) | ![.NET 8 downloads](https://api.scarf.sh/v2/packages/Masesgroup/63e64356-68aa-4a33-bef5-56cb451c8d5e/downloads-badge) | [![Maven Central](https://img.shields.io/maven-central/v/com.masesgroup/jcoreflector_net8.0.svg?label=Maven%20Central)](https://central.sonatype.com/artifact/com.masesgroup/jcoreflector_net8.0) |
+| **.NET 9** | ![.NET 9 commercial users](https://api.scarf.sh/v2/packages/Masesgroup/ac4af46b-2671-4c12-9c0d-31cf67bcf26a/commercial-users-badge) | ![.NET 9 downloads](https://api.scarf.sh/v2/packages/Masesgroup/ac4af46b-2671-4c12-9c0d-31cf67bcf26a/downloads-badge) | [![Maven Central](https://img.shields.io/maven-central/v/com.masesgroup/jcoreflector_net9.0.svg?label=Maven%20Central)](https://central.sonatype.com/artifact/com.masesgroup/jcoreflector_net9.0) |
+
+> [!NOTE]
+> This project follows the target framework support of **JCOBridge**, which in turn follows the Microsoft .NET support lifecycle. Public releases do not take on the maintenance of runtimes that Microsoft no longer supports: when Microsoft ends support for a .NET version, that target is moved to the deprecated artifacts starting with the next JCOBridge release.
+>
+> Need a build for a legacy or out-of-support target, or expert help with .NET and JVM™ integration? See [Professional Support Options](src/documentation/articles/support.md).
+
+### Reflection engine
 
 |JCOReflectorEngine | JCOReflectorCLI |
 |:---:	|:---:	|

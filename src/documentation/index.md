@@ -33,7 +33,7 @@ JCOReflector is a comprehensive suite of libraries and tools to use Java™/JVM�
 > [!NOTE]
 > This project follows the target framework support of **JCOBridge**, which in turn follows the Microsoft .NET support lifecycle. Public releases do not take on the maintenance of runtimes that Microsoft no longer supports: when Microsoft ends support for a .NET version, that target is moved to the deprecated artifacts starting with the next JCOBridge release.
 >
-> Need a build for a legacy or out-of-support target, or expert help with .NET and JVM™ integration? See [Professional Support Options](src/documentation/articles/support.md).
+> Need a build for a legacy or out-of-support target, or expert help with .NET and JVM™ integration? See [Professional Support Options](articles/support.md).
 
 ### Reflection engine
 

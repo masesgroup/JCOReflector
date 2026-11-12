@@ -1,7 +1,7 @@
 # JCOReflector (a .NET Java™ wrapper)
 
 [![Java 8+](https://img.shields.io/badge/Java-8%2B-blue)](https://www.oracle.com/java/)
-[![.NET 8+](https://img.shields.io/badge/.NET-8%2B-purple)](https://dotnet.microsoft.com/)
+[![.NET 10+](https://img.shields.io/badge/.NET-10%2B-purple)](https://dotnet.microsoft.com/)
 
 JCOReflector is a comprehensive suite of libraries and tools to use Java™/JVM™ APIs (Java, Scala, Kotlin, Clojure, ...) and .NET side-by-side.
 

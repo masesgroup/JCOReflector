@@ -14,7 +14,7 @@
     <copyright>Copyright (c) 2020-2026 MASES s.r.l.</copyright>
     <license type="file">LICENSE</license>
     <icon>JCOB128x128.png</icon>
-    <tags>jcoreflector cli jvm-enabled-language kotlin java scala reflection dotnet clr netcore bridge jcobridge class framework csharp</tags>
+    <tags>jcoreflector cli jvm-enabled-language kotlin clojure java scala reflection dotnet clr netcore bridge jcobridge class framework csharp</tags>
     <packageTypes>
       <packageType name="DotnetTool" />
     </packageTypes>

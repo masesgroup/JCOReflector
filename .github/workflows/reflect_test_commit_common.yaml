@@ -259,8 +259,7 @@ jobs:
 
       - uses: actions/setup-dotnet@v6
         with:
-          dotnet-version: '11.0.x'
-          dotnet-quality: 'preview'
+          dotnet-version: '11.x'
 
       - name: Install sshpass
         if: ${{ inputs.UseSpecialSettings == true }}
@@ -429,8 +428,7 @@ jobs:
       - uses: actions/setup-dotnet@v6
         if: matrix.framework == 'net11.0'
         with:
-          dotnet-version: '11.0.x'
-          dotnet-quality: 'preview'
+          dotnet-version: '11.x'
 
       - name: Solved issue using workaround in https://github.com/actions/partner-runner-images/issues/99#issue-3075011959
         if: ${{ matrix.os == 'windows-11-arm' }}
@@ -462,16 +460,6 @@ jobs:
       - name: Build Java test source file for ${{ matrix.framework }}
         continue-on-error: ${{ inputs.ForceExecution == true }}
         run: javac -cp ./bin/${{ matrix.framework }}/JCOReflector.jar ./tests/jvm/java/src/generics/*.java ./tests/jvm/java/src/hierarchy/*.java ./tests/jvm/java/src/mscorlib/*.java ./tests/jvm/java/src/nettest/*.java ./tests/jvm/java/src/refout/*.java
-
-      - name: Prepare extra argument
-        if: matrix.framework == 'net9.0'
-        shell: bash
-        run: echo "JCOBRIDGE_CoreCLRVersion=9" >> $GITHUB_ENV
-
-      - name: Prepare extra argument
-        if: matrix.framework == 'net10.0'
-        shell: bash
-        run: echo "JCOBRIDGE_CoreCLRVersion=10" >> $GITHUB_ENV
 
       - name: Prepare extra argument
         if: matrix.framework == 'net11.0'
@@ -600,8 +588,7 @@ jobs:
       - uses: actions/setup-dotnet@v6
         if: matrix.framework == 'net11.0'
         with:
-          dotnet-version: '11.0.x'
-          dotnet-quality: 'preview'
+          dotnet-version: '11.x'
 
       - name: Solved issue using workaround in https://github.com/actions/partner-runner-images/issues/99#issue-3075011959
         if: ${{ matrix.os == 'windows-11-arm' }}
@@ -637,16 +624,6 @@ jobs:
           java-version: '${{ matrix.jdk_version }}' # See 'Options' for more details
           distribution: 'graalvm' # See 'Supported distributions' for available options
           github-token: ${{ secrets.GITHUB_TOKEN_INHERITED }}
-
-      - name: Prepare extra argument
-        if: matrix.framework == 'net9.0'
-        shell: bash
-        run: echo "JCOBRIDGE_CoreCLRVersion=9" >> $GITHUB_ENV
-
-      - name: Prepare extra argument
-        if: matrix.framework == 'net10.0'
-        shell: bash
-        run: echo "JCOBRIDGE_CoreCLRVersion=10" >> $GITHUB_ENV
 
       - name: Prepare extra argument
         if: matrix.framework == 'net11.0'
@@ -805,8 +782,7 @@ jobs:
       - uses: actions/setup-dotnet@v6
         if: matrix.framework == 'net11.0'
         with:
-          dotnet-version: '11.0.x'
-          dotnet-quality: 'preview'
+          dotnet-version: '11.x'
 
       - name: Solved issue using workaround in https://github.com/actions/partner-runner-images/issues/99#issue-3075011959
         if: ${{ matrix.os == 'windows-11-arm' }}
@@ -834,16 +810,6 @@ jobs:
           java-version: '${{ matrix.jdk_version }}' # See 'Options' for more details
           distribution: 'graalvm' # See 'Supported distributions' for available options
           github-token: ${{ secrets.GITHUB_TOKEN_INHERITED }}
-
-      - name: Prepare extra argument
-        if: matrix.framework == 'net9.0'
-        shell: bash
-        run: echo "JCOBRIDGE_CoreCLRVersion=9" >> $GITHUB_ENV
-
-      - name: Prepare extra argument
-        if: matrix.framework == 'net10.0'
-        shell: bash
-        run: echo "JCOBRIDGE_CoreCLRVersion=10" >> $GITHUB_ENV
 
       - name: Prepare extra argument
         if: matrix.framework == 'net11.0'
@@ -1008,8 +974,7 @@ jobs:
       - uses: actions/setup-dotnet@v6
         if: matrix.framework == 'net11.0'
         with:
-          dotnet-version: '11.0.x'
-          dotnet-quality: 'preview'
+          dotnet-version: '11.x'
 
       - name: Solved issue using workaround in https://github.com/actions/partner-runner-images/issues/99#issue-3075011959
         if: ${{ matrix.os == 'windows-11-arm' }}
@@ -1037,16 +1002,6 @@ jobs:
           java-version: '${{ matrix.jdk_version }}' # See 'Options' for more details
           distribution: 'graalvm' # See 'Supported distributions' for available options
           github-token: ${{ secrets.GITHUB_TOKEN_INHERITED }}
-
-      - name: Prepare extra argument
-        if: matrix.framework == 'net9.0'
-        shell: bash
-        run: echo "JCOBRIDGE_CoreCLRVersion=9" >> $GITHUB_ENV
-
-      - name: Prepare extra argument
-        if: matrix.framework == 'net10.0'
-        shell: bash
-        run: echo "JCOBRIDGE_CoreCLRVersion=10" >> $GITHUB_ENV
 
       - name: Prepare extra argument
         if: matrix.framework == 'net11.0'
@@ -1185,8 +1140,7 @@ jobs:
       - uses: actions/setup-dotnet@v6
         if: matrix.framework == 'net11.0'
         with:
-          dotnet-version: '11.0.x'
-          dotnet-quality: 'preview'
+          dotnet-version: '11.x'
 
       - name: Restore ${{ matrix.framework }} JCOReflector bin from cache
         uses: actions/cache/restore@v6
@@ -1210,16 +1164,6 @@ jobs:
           java-version: '${{ matrix.jdk_version }}' # See 'Options' for more details
           distribution: 'graalvm' # See 'Supported distributions' for available options
           github-token: ${{ secrets.GITHUB_TOKEN_INHERITED }}
-
-      - name: Prepare extra argument
-        if: matrix.framework == 'net9.0'
-        shell: bash
-        run: echo "JCOBRIDGE_CoreCLRVersion=9" >> $GITHUB_ENV
-
-      - name: Prepare extra argument
-        if: matrix.framework == 'net10.0'
-        shell: bash
-        run: echo "JCOBRIDGE_CoreCLRVersion=10" >> $GITHUB_ENV
 
       - name: Prepare extra argument
         if: matrix.framework == 'net11.0'
@@ -1324,8 +1268,7 @@ jobs:
       - uses: actions/setup-dotnet@v6
         if: matrix.framework == 'net11.0'
         with:
-          dotnet-version: '11.0.x'
-          dotnet-quality: 'preview'
+          dotnet-version: '11.x'
 
       - name: Restore JCOReflector bin from cache
         uses: actions/cache/restore@v6
@@ -1358,16 +1301,6 @@ jobs:
           curl -s "https://get.sdkman.io" | bash
           source "$HOME/.sdkman/bin/sdkman-init.sh"
           sdk install scala ${{ env.SCALARELEASE }}
-
-      - name: Prepare extra argument
-        if: matrix.framework == 'net9.0'
-        shell: bash
-        run: echo "JCOBRIDGE_CoreCLRVersion=9" >> $GITHUB_ENV
-
-      - name: Prepare extra argument
-        if: matrix.framework == 'net10.0'
-        shell: bash
-        run: echo "JCOBRIDGE_CoreCLRVersion=10" >> $GITHUB_ENV
 
       - name: Prepare extra argument
         if: matrix.framework == 'net11.0'
@@ -1477,8 +1410,7 @@ jobs:
       - uses: actions/setup-dotnet@v6
         if: matrix.framework == 'net11.0'
         with:
-          dotnet-version: '11.0.x'
-          dotnet-quality: 'preview'
+          dotnet-version: '11.x'
 
       - name: Restore JCOReflector bin from cache
         uses: actions/cache/restore@v6
@@ -1502,16 +1434,6 @@ jobs:
           java-version: '${{ matrix.jdk_version }}' # See 'Options' for more details
           distribution: 'graalvm' # See 'Supported distributions' for available options
           github-token: ${{ secrets.GITHUB_TOKEN_INHERITED }}
-
-      - name: Prepare extra argument
-        if: matrix.framework == 'net9.0'
-        shell: bash
-        run: echo "JCOBRIDGE_CoreCLRVersion=9" >> $GITHUB_ENV
-
-      - name: Prepare extra argument
-        if: matrix.framework == 'net10.0'
-        shell: bash
-        run: echo "JCOBRIDGE_CoreCLRVersion=10" >> $GITHUB_ENV
 
       - name: Prepare extra argument
         if: matrix.framework == 'net11.0'
@@ -1626,8 +1548,7 @@ jobs:
       - uses: actions/setup-dotnet@v6
         if: matrix.framework == 'net11.0'
         with:
-          dotnet-version: '11.0.x'
-          dotnet-quality: 'preview'
+          dotnet-version: '11.x'
 
       - name: Restore JCOReflector bin from cache
         uses: actions/cache/restore@v6
@@ -1651,16 +1572,6 @@ jobs:
           java-version: '${{ matrix.jdk_version }}' # See 'Options' for more details
           distribution: 'graalvm' # See 'Supported distributions' for available options
           github-token: ${{ secrets.GITHUB_TOKEN_INHERITED }}
-
-      - name: Prepare extra argument
-        if: matrix.framework == 'net9.0'
-        shell: bash
-        run: echo "JCOBRIDGE_CoreCLRVersion=9" >> $GITHUB_ENV
-
-      - name: Prepare extra argument
-        if: matrix.framework == 'net10.0'
-        shell: bash
-        run: echo "JCOBRIDGE_CoreCLRVersion=10" >> $GITHUB_ENV
 
       - name: Prepare extra argument
         if: matrix.framework == 'net11.0'
@@ -1798,18 +1709,6 @@ jobs:
           fetch-depth: '1'
 
       - uses: actions/setup-dotnet@v6
-        if: matrix.framework == 'net8.0'
-        with:
-          dotnet-version: |
-            8.x
-
-      - uses: actions/setup-dotnet@v6
-        if: matrix.framework == 'net9.0'
-        with:
-          dotnet-version: |
-            9.x
-
-      - uses: actions/setup-dotnet@v6
         if: matrix.framework == 'net10.0'
         with:
           dotnet-version: |
@@ -1818,8 +1717,7 @@ jobs:
       - uses: actions/setup-dotnet@v6
         if: matrix.framework == 'net11.0'
         with:
-          dotnet-version: '11.0.x'
-          dotnet-quality: 'preview'
+          dotnet-version: '11.x'
 
       - name: Restore ${{ matrix.framework }} JCOReflector bin from cache
         uses: actions/cache/restore@v6
@@ -1843,16 +1741,6 @@ jobs:
           java-version: '${{ matrix.jdk_version }}' # See 'Options' for more details
           distribution: 'graalvm' # See 'Supported distributions' for available options
           github-token: ${{ secrets.GITHUB_TOKEN_INHERITED }}
-
-      - name: Prepare extra argument
-        if: matrix.framework == 'net9.0'
-        shell: bash
-        run: echo "JCOBRIDGE_CoreCLRVersion=9" >> $GITHUB_ENV
-
-      - name: Prepare extra argument
-        if: matrix.framework == 'net10.0'
-        shell: bash
-        run: echo "JCOBRIDGE_CoreCLRVersion=10" >> $GITHUB_ENV
 
       - name: Prepare extra argument
         if: matrix.framework == 'net11.0'
@@ -1957,18 +1845,6 @@ jobs:
           fetch-depth: '1'
 
       - uses: actions/setup-dotnet@v6
-        if: matrix.framework == 'net8.0'
-        with:
-          dotnet-version: |
-            8.x
-
-      - uses: actions/setup-dotnet@v6
-        if: matrix.framework == 'net9.0'
-        with:
-          dotnet-version: |
-            9.x
-
-      - uses: actions/setup-dotnet@v6
         if: matrix.framework == 'net10.0'
         with:
           dotnet-version: |
@@ -1977,8 +1853,7 @@ jobs:
       - uses: actions/setup-dotnet@v6
         if: matrix.framework == 'net11.0'
         with:
-          dotnet-version: '11.0.x'
-          dotnet-quality: 'preview'
+          dotnet-version: '11.x'
 
       - name: Restore ${{ matrix.framework }} JCOReflector bin from cache
         uses: actions/cache/restore@v6
@@ -2010,16 +1885,6 @@ jobs:
         run: |
           echo "SCALA_BIN=$(brew --prefix scala@2.13)/bin" >> $GITHUB_ENV
         shell: bash
-
-      - name: Prepare extra argument
-        if: matrix.framework == 'net9.0'
-        shell: bash
-        run: echo "JCOBRIDGE_CoreCLRVersion=9" >> $GITHUB_ENV
-
-      - name: Prepare extra argument
-        if: matrix.framework == 'net10.0'
-        shell: bash
-        run: echo "JCOBRIDGE_CoreCLRVersion=10" >> $GITHUB_ENV
 
       - name: Prepare extra argument
         if: matrix.framework == 'net11.0'
@@ -2128,18 +1993,6 @@ jobs:
           fetch-depth: '1'
 
       - uses: actions/setup-dotnet@v6
-        if: matrix.framework == 'net8.0'
-        with:
-          dotnet-version: |
-            8.x
-
-      - uses: actions/setup-dotnet@v6
-        if: matrix.framework == 'net9.0'
-        with:
-          dotnet-version: |
-            9.x
-
-      - uses: actions/setup-dotnet@v6
         if: matrix.framework == 'net10.0'
         with:
           dotnet-version: |
@@ -2148,8 +2001,7 @@ jobs:
       - uses: actions/setup-dotnet@v6
         if: matrix.framework == 'net11.0'
         with:
-          dotnet-version: '11.0.x'
-          dotnet-quality: 'preview'
+          dotnet-version: '11.x'
 
       - name: Restore ${{ matrix.framework }} JCOReflector bin from cache
         uses: actions/cache/restore@v6
@@ -2173,16 +2025,6 @@ jobs:
           java-version: '${{ matrix.jdk_version }}' # See 'Options' for more details
           distribution: 'graalvm' # See 'Supported distributions' for available options
           github-token: ${{ secrets.GITHUB_TOKEN_INHERITED }}
-
-      - name: Prepare extra argument
-        if: matrix.framework == 'net9.0'
-        shell: bash
-        run: echo "JCOBRIDGE_CoreCLRVersion=9" >> $GITHUB_ENV
-
-      - name: Prepare extra argument
-        if: matrix.framework == 'net10.0'
-        shell: bash
-        run: echo "JCOBRIDGE_CoreCLRVersion=10" >> $GITHUB_ENV
 
       - name: Prepare extra argument
         if: matrix.framework == 'net11.0'
@@ -2295,18 +2137,6 @@ jobs:
           fetch-depth: '1'
 
       - uses: actions/setup-dotnet@v6
-        if: matrix.framework == 'net8.0'
-        with:
-          dotnet-version: |
-            8.x
-
-      - uses: actions/setup-dotnet@v6
-        if: matrix.framework == 'net9.0'
-        with:
-          dotnet-version: |
-            9.x
-
-      - uses: actions/setup-dotnet@v6
         if: matrix.framework == 'net10.0'
         with:
           dotnet-version: |
@@ -2315,8 +2145,7 @@ jobs:
       - uses: actions/setup-dotnet@v6
         if: matrix.framework == 'net11.0'
         with:
-          dotnet-version: '11.0.x'
-          dotnet-quality: 'preview'
+          dotnet-version: '11.x'
 
       - name: Restore JCOReflector bin from cache
         uses: actions/cache/restore@v6
@@ -2340,16 +2169,6 @@ jobs:
           java-version: '${{ matrix.jdk_version }}' # See 'Options' for more details
           distribution: 'graalvm' # See 'Supported distributions' for available options
           github-token: ${{ secrets.GITHUB_TOKEN_INHERITED }}
-
-      - name: Prepare extra argument
-        if: matrix.framework == 'net9.0'
-        shell: bash
-        run: echo "JCOBRIDGE_CoreCLRVersion=9" >> $GITHUB_ENV
-
-      - name: Prepare extra argument
-        if: matrix.framework == 'net10.0'
-        shell: bash
-        run: echo "JCOBRIDGE_CoreCLRVersion=10" >> $GITHUB_ENV
 
       - name: Prepare extra argument
         if: matrix.framework == 'net11.0'
@@ -2465,8 +2284,7 @@ jobs:
 
       - uses: actions/setup-dotnet@v6
         with:
-          dotnet-version: '11.0.x'
-          dotnet-quality: 'preview'
+          dotnet-version: '11.x'
 
       - name: Restore net462 JCOReflector bin from cache
         uses: actions/cache/restore@v6
@@ -2484,10 +2302,23 @@ jobs:
           path: ./bin/
           key: JCOReflector_${{ github.run_number }}_${{ github.run_attempt }}_windows_bin_net10.0_${{ github.sha }}
 
+      - name: Restore net11.0 JCOReflector bin from cache
+        uses: actions/cache/restore@v6
+        with:
+          fail-on-cache-miss: true
+          enableCrossOsArchive: true
+          path: ./bin/
+          key: JCOReflector_${{ github.run_number }}_${{ github.run_attempt }}_windows_bin_net11.0_${{ github.sha }}
+
       - uses: actions/upload-artifact@v7
         with:
           name: net10.0
           path: .\bin\net10.0\**\*
+
+      - uses: actions/upload-artifact@v7
+        with:
+          name: net11.0
+          path: .\bin\net11.0\**\*
 
       - uses: actions/upload-artifact@v7
         with:
@@ -2499,6 +2330,9 @@ jobs:
 
       - name: Remove net10.0 Java files
         run: Remove-Item .\src\jvm\src\net10.0 -Recurse -Force
+
+      - name: Remove net11.0 Java files
+        run: Remove-Item .\src\jvm\src\net11.0 -Recurse -Force
 
       - name: Restore net462 JCOReflector source from cache
         uses: actions/cache/restore@v6
@@ -2554,7 +2388,7 @@ jobs:
           body: Automated changes by GitHub action
           reviewers: masesdevelopers
           assignees: masesdevelopers
-          labels: enhancement, java, .NET Framework, .NET 8, .NET 9, .NET 10, .NET 11
+          labels: enhancement, java, .NET Framework, .NET 10, .NET 11
           delete-branch: true
 
       # Runs a set of commands using the runners shell

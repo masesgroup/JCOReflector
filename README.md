@@ -43,13 +43,11 @@ JCOReflector is a comprehensive suite of libraries and tools to use Java™/JVM�
 
 ### Project disclaimer
 
-JCOReflector is a project, curated by MASES Group, can be supported by the open-source community.
+JCOReflector is a comprehensive suite of libraries and tools to use Java™/JVM™ APIs (Java, Scala, Kotlin, Clojure, ...) and .NET side-by-side, maintained by MASES Group and open to community contributions.
+Its primary scope is to support other MASES Group projects — both open-source and commercial — though it is freely available for any use. Dedicated community and commercial subscription plans are available.
+The repository and releases may contain bugs. The release cycle depends on critical issues discovered and/or enhancement requests from this or other dependent projects.
 
-Its primary scope is to support other, public or internal, MASES Group projects: open-source community and commercial entities can use it for their needs and support this project, moreover there are dedicated community and commercial subscription plans.
-
-The repository code and releases may contain bugs, the release cycle depends from critical discovered issues and/or enhancement requested from this or other projects.
-
-Looking for the help of experts? MASES Group can help you design, build, deploy, and manage applications mixing .NET and JVM™ enabled languages.
+Looking for expertise in applications mixing .NET and JVM™-enabled languages? MASES Group can help you design, build, deploy, and manage applications that run .NET and Java™/JVM™ side-by-side. [Find out more.](src/documentation/articles/support.md)
 
 ---
 
@@ -69,6 +67,7 @@ Articles:
 
 - [Using JCOReflector](src/documentation/articles/usage.md): the artifacts published on Maven Central, how the runtime is initialized, and how to run the reflection tool with job files.
 - [Generics support](src/documentation/articles/generics.md): how .NET generics are reflected, what is intentionally skipped, the known gaps, and how to use them from Java and Clojure.
+
 
 ## The project
 
@@ -395,9 +394,9 @@ The folder [src/jvm/src](/src/jvm/src) contains all reflected classes generated 
 
 ### Statistics
 
-|.NET Framework | .NET 8 | .NET 9 | .NET 10 |
-|:---:	|:---:	|:---:	|:---:	|
-|![FrameworkStatistic](https://docs.google.com/spreadsheets/d/e/2PACX-1vTe94B4KWTddOWDnIHGRkHHPq23g_oPzZUfmVU3ls1lEUwNQmG_T4Zi7xCCNkb0RMqkT8LblRNW7aT9/pubchart?oid=935306611&format=image) | ![Net8Statistic](https://docs.google.com/spreadsheets/d/e/2PACX-1vTe94B4KWTddOWDnIHGRkHHPq23g_oPzZUfmVU3ls1lEUwNQmG_T4Zi7xCCNkb0RMqkT8LblRNW7aT9/pubchart?oid=1753386013&format=image) | ![Net9Statistic](https://docs.google.com/spreadsheets/d/e/2PACX-1vTe94B4KWTddOWDnIHGRkHHPq23g_oPzZUfmVU3ls1lEUwNQmG_T4Zi7xCCNkb0RMqkT8LblRNW7aT9/pubchart?oid=1200391981&format=image)| ![Net10Statistic](https://docs.google.com/spreadsheets/d/e/2PACX-1vTe94B4KWTddOWDnIHGRkHHPq23g_oPzZUfmVU3ls1lEUwNQmG_T4Zi7xCCNkb0RMqkT8LblRNW7aT9/pubchart?oid=1926760119&format=image)|
+|.NET Framework (4.6.2+) | .NET 10 | .NET 11 |
+|:---:	|:---:	|:---:	|
+|![FrameworkStatistic](https://docs.google.com/spreadsheets/d/e/2PACX-1vTe94B4KWTddOWDnIHGRkHHPq23g_oPzZUfmVU3ls1lEUwNQmG_T4Zi7xCCNkb0RMqkT8LblRNW7aT9/pubchart?oid=935306611&format=image) | ![Net10Statistic](https://docs.google.com/spreadsheets/d/e/2PACX-1vTe94B4KWTddOWDnIHGRkHHPq23g_oPzZUfmVU3ls1lEUwNQmG_T4Zi7xCCNkb0RMqkT8LblRNW7aT9/pubchart?oid=1926760119&format=image)| ![Net11Statistic](https://docs.google.com/spreadsheets/d/e/2PACX-1vTe94B4KWTddOWDnIHGRkHHPq23g_oPzZUfmVU3ls1lEUwNQmG_T4Zi7xCCNkb0RMqkT8LblRNW7aT9/pubchart?oid=54021714&format=image)|
 
 ## Runtime engine
 
@@ -428,7 +427,7 @@ JCOReflector uses [JCOBridge](https://www.jcobridge.com), and its [features](htt
 
 **.NET:**
 - .NET Framework 4.6.2+
-- .NET 8, 9, 10, 11
+- .NET 10, 11
 
 **Note for Java 8 Users:**
 JCOReflector enables modernization of Java 8 applications by providing access 

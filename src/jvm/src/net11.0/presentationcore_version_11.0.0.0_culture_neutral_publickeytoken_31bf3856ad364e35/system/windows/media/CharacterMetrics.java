@@ -572,13 +572,12 @@ public class CharacterMetrics extends NetObject  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @throws system.PlatformNotSupportedException if the .NET member raises it
-     * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.OverflowException if the .NET member raises it
      * @throws system.globalization.CultureNotFoundException if the .NET member raises it
      * @throws system.FormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.CharacterMetrics.Metrics" target="_top">.NET documentation</a>
      */
-    public void setMetrics(java.lang.String Metrics) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.OverflowException, system.globalization.CultureNotFoundException, system.FormatException {
+    public void setMetrics(java.lang.String Metrics) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OverflowException, system.globalization.CultureNotFoundException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

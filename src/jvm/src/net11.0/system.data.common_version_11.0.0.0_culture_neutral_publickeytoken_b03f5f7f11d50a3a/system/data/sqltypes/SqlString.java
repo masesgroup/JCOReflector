@@ -845,12 +845,12 @@ public class SqlString extends system.ValueType  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @throws system.PlatformNotSupportedException if the .NET member raises it
-     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
      * @throws system.FormatException if the .NET member raises it
      * @throws system.OverflowException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlTypes.SqlString.ToSqlByte" target="_top">.NET documentation</a>
      */
-    public SqlByte ToSqlByte() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.data.sqltypes.SqlNullValueException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException, system.OverflowException {
+    public SqlByte ToSqlByte() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.data.sqltypes.SqlNullValueException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.FormatException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectToSqlByte = null;
@@ -1002,12 +1002,12 @@ public class SqlString extends system.ValueType  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @throws system.PlatformNotSupportedException if the .NET member raises it
-     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
      * @throws system.FormatException if the .NET member raises it
      * @throws system.OverflowException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlTypes.SqlString.ToSqlInt16" target="_top">.NET documentation</a>
      */
-    public SqlInt16 ToSqlInt16() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.data.sqltypes.SqlNullValueException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException, system.OverflowException {
+    public SqlInt16 ToSqlInt16() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.data.sqltypes.SqlNullValueException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.FormatException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectToSqlInt16 = null;
@@ -1033,12 +1033,12 @@ public class SqlString extends system.ValueType  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @throws system.PlatformNotSupportedException if the .NET member raises it
-     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
      * @throws system.FormatException if the .NET member raises it
      * @throws system.OverflowException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlTypes.SqlString.ToSqlInt32" target="_top">.NET documentation</a>
      */
-    public SqlInt32 ToSqlInt32() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.data.sqltypes.SqlNullValueException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException, system.OverflowException {
+    public SqlInt32 ToSqlInt32() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.data.sqltypes.SqlNullValueException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.FormatException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectToSqlInt32 = null;
@@ -1064,12 +1064,12 @@ public class SqlString extends system.ValueType  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @throws system.PlatformNotSupportedException if the .NET member raises it
-     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
      * @throws system.FormatException if the .NET member raises it
      * @throws system.OverflowException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlTypes.SqlString.ToSqlInt64" target="_top">.NET documentation</a>
      */
-    public SqlInt64 ToSqlInt64() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.data.sqltypes.SqlNullValueException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException, system.OverflowException {
+    public SqlInt64 ToSqlInt64() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.data.sqltypes.SqlNullValueException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.FormatException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectToSqlInt64 = null;

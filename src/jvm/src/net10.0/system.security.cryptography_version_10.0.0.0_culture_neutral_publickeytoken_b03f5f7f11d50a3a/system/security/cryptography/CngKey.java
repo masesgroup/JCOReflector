@@ -615,10 +615,16 @@ public class CngKey extends NetObject implements AutoCloseable {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.MissingMethodException if the .NET member raises it
      * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
      * @throws system.security.cryptography.CryptographicException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CngKey.Open" target="_top">.NET documentation</a>
      */
-    public static CngKey Open(SafeNCryptKeyHandle keyHandle, CngKeyHandleOpenOptions keyHandleOpenOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.cryptography.CryptographicException {
+    public static CngKey Open(SafeNCryptKeyHandle keyHandle, CngKeyHandleOpenOptions keyHandleOpenOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NullReferenceException, system.MissingMemberException, system.threading.LockRecursionException, system.OutOfMemoryException, system.threading.AbandonedMutexException, system.threading.SynchronizationLockException, system.security.cryptography.CryptographicException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectOpen = null;
@@ -1004,14 +1010,19 @@ public class CngKey extends NetObject implements AutoCloseable {
      * @return the value of the property
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.PlatformNotSupportedException if the .NET member raises it
-     * @throws system.NotSupportedException if the .NET member raises it
-     * @throws system.ArgumentException if the .NET member raises it
      * @throws system.MissingMethodException if the .NET member raises it
      * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
      * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CngKey.Handle" target="_top">.NET documentation</a>
      */
-    public SafeNCryptKeyHandle getHandle() throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ObjectDisposedException {
+    public SafeNCryptKeyHandle getHandle() throws Throwable, system.PlatformNotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NullReferenceException, system.NotSupportedException, system.MissingMemberException, system.threading.LockRecursionException, system.OutOfMemoryException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.threading.SynchronizationLockException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectHandle = null;
@@ -1032,14 +1043,19 @@ public class CngKey extends NetObject implements AutoCloseable {
      * @return the value of the property
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.PlatformNotSupportedException if the .NET member raises it
-     * @throws system.NotSupportedException if the .NET member raises it
-     * @throws system.ArgumentException if the .NET member raises it
      * @throws system.MissingMethodException if the .NET member raises it
      * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
      * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CngKey.ProviderHandle" target="_top">.NET documentation</a>
      */
-    public SafeNCryptProviderHandle getProviderHandle() throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ObjectDisposedException {
+    public SafeNCryptProviderHandle getProviderHandle() throws Throwable, system.PlatformNotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NullReferenceException, system.NotSupportedException, system.MissingMemberException, system.threading.LockRecursionException, system.OutOfMemoryException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.threading.SynchronizationLockException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectProviderHandle = null;

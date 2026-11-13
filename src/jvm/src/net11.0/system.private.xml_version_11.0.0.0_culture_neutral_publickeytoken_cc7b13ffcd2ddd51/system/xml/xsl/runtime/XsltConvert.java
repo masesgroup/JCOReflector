@@ -421,12 +421,11 @@ public class XsltConvert extends NetObject  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @throws system.IndexOutOfRangeException if the .NET member raises it
-     * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.OverflowException if the .NET member raises it
      * @throws system.globalization.CultureNotFoundException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XsltConvert.ToDouble" target="_top">.NET documentation</a>
      */
-    public static double ToDouble(java.lang.String value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.OverflowException, system.globalization.CultureNotFoundException {
+    public static double ToDouble(java.lang.String value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OverflowException, system.globalization.CultureNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToDouble = null;
@@ -478,12 +477,11 @@ public class XsltConvert extends NetObject  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @throws system.IndexOutOfRangeException if the .NET member raises it
-     * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.OverflowException if the .NET member raises it
      * @throws system.globalization.CultureNotFoundException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XsltConvert.ToDouble" target="_top">.NET documentation</a>
      */
-    public static double ToDouble(XPathItem item) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.OverflowException, system.globalization.CultureNotFoundException {
+    public static double ToDouble(XPathItem item) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OverflowException, system.globalization.CultureNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToDouble = null;

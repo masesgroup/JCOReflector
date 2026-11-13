@@ -169,11 +169,11 @@ public class MLKemCng extends system.security.cryptography.MLKem  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @throws system.FormatException if the .NET member raises it
      * @throws system.security.cryptography.CryptographicException if the .NET member raises it
-     * @throws system.MissingMethodException if the .NET member raises it
-     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.MLKemCng.-ctor" target="_top">.NET documentation</a>
      */
-    public MLKemCng(CngKey key) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.security.cryptography.CryptographicException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public MLKemCng(CngKey key) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.security.cryptography.CryptographicException, system.MissingMemberException, system.threading.SynchronizationLockException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -198,13 +198,18 @@ public class MLKemCng extends system.security.cryptography.MLKem  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @throws system.MissingMethodException if the .NET member raises it
      * @throws system.reflection.TargetInvocationException if the .NET member raises it
-     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
      * @throws system.security.cryptography.CryptographicException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.MLKemCng.GetKey" target="_top">.NET documentation</a>
      */
-    public CngKey GetKey() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException {
+    public CngKey GetKey() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NullReferenceException, system.MissingMemberException, system.threading.LockRecursionException, system.threading.AbandonedMutexException, system.threading.SynchronizationLockException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetKey = null;

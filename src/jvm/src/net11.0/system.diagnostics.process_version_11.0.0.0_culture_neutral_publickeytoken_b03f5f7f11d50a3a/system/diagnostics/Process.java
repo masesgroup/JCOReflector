@@ -296,11 +296,10 @@ public class Process extends system.componentmodel.Component  {
      * @throws system.io.IOException if the .NET member raises it
      * @throws system.threading.ThreadStateException if the .NET member raises it
      * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
-     * @throws system.MissingMemberException if the .NET member raises it
      * @throws system.security.cryptography.CryptographicException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Process.Start" target="_top">.NET documentation</a>
      */
-    public boolean Start() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.LockRecursionException, system.OutOfMemoryException, system.threading.AbandonedMutexException, system.threading.SynchronizationLockException, system.ArgumentNullException, system.AggregateException, system.OverflowException, system.IndexOutOfRangeException, system.FormatException, system.MissingMethodException, system.reflection.TargetInvocationException, system.componentmodel.Win32Exception, system.io.IOException, system.threading.ThreadStateException, system.collections.generic.KeyNotFoundException, system.MissingMemberException, system.security.cryptography.CryptographicException {
+    public boolean Start() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.LockRecursionException, system.OutOfMemoryException, system.threading.AbandonedMutexException, system.threading.SynchronizationLockException, system.ArgumentNullException, system.AggregateException, system.OverflowException, system.IndexOutOfRangeException, system.FormatException, system.MissingMethodException, system.reflection.TargetInvocationException, system.componentmodel.Win32Exception, system.io.IOException, system.threading.ThreadStateException, system.collections.generic.KeyNotFoundException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectStart = null;
@@ -601,15 +600,13 @@ public class Process extends system.componentmodel.Component  {
      * @throws system.io.IOException if the .NET member raises it
      * @throws system.threading.ThreadStateException if the .NET member raises it
      * @throws system.threading.LockRecursionException if the .NET member raises it
-     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
      * @throws system.componentmodel.Win32Exception if the .NET member raises it
      * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
-     * @throws system.MissingMemberException if the .NET member raises it
      * @throws system.security.cryptography.CryptographicException if the .NET member raises it
-     * @throws system.threading.SynchronizationLockException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Process.StartAndForget" target="_top">.NET documentation</a>
      */
-    public static int StartAndForget(ProcessStartInfo startInfo) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.io.IOException, system.threading.ThreadStateException, system.threading.LockRecursionException, system.threading.AbandonedMutexException, system.componentmodel.Win32Exception, system.collections.generic.KeyNotFoundException, system.MissingMemberException, system.security.cryptography.CryptographicException, system.threading.SynchronizationLockException {
+    public static int StartAndForget(ProcessStartInfo startInfo) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.io.IOException, system.threading.ThreadStateException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.componentmodel.Win32Exception, system.collections.generic.KeyNotFoundException, system.security.cryptography.CryptographicException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectStartAndForget = null;
@@ -668,15 +665,15 @@ public class Process extends system.componentmodel.Component  {
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @throws system.io.IOException if the .NET member raises it
      * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
      * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
      * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
      * @throws system.OutOfMemoryException if the .NET member raises it
-     * @throws system.MissingMemberException if the .NET member raises it
      * @throws system.security.cryptography.CryptographicException if the .NET member raises it
-     * @throws system.threading.SynchronizationLockException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Process.StartAndForget" target="_top">.NET documentation</a>
      */
-    public static int StartAndForget(java.lang.String fileName, IEnumerable_1 arguments) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.FormatException, system.ObjectDisposedException, system.io.IOException, system.threading.LockRecursionException, system.componentmodel.Win32Exception, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.MissingMemberException, system.security.cryptography.CryptographicException, system.threading.SynchronizationLockException {
+    public static int StartAndForget(java.lang.String fileName, IEnumerable_1 arguments) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.FormatException, system.ObjectDisposedException, system.io.IOException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.componentmodel.Win32Exception, system.RankException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.security.cryptography.CryptographicException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectStartAndForget = null;
@@ -903,11 +900,10 @@ public class Process extends system.componentmodel.Component  {
      * @throws system.io.IOException if the .NET member raises it
      * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
      * @throws system.OutOfMemoryException if the .NET member raises it
-     * @throws system.MissingMemberException if the .NET member raises it
      * @throws system.security.cryptography.CryptographicException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Process.Start" target="_top">.NET documentation</a>
      */
-    public static Process Start(ProcessStartInfo startInfo) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.NullReferenceException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.AggregateException, system.IndexOutOfRangeException, system.FormatException, system.MissingMethodException, system.reflection.TargetInvocationException, system.componentmodel.Win32Exception, system.io.IOException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.MissingMemberException, system.security.cryptography.CryptographicException {
+    public static Process Start(ProcessStartInfo startInfo) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.NullReferenceException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.AggregateException, system.IndexOutOfRangeException, system.FormatException, system.MissingMethodException, system.reflection.TargetInvocationException, system.componentmodel.Win32Exception, system.io.IOException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.security.cryptography.CryptographicException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectStart = null;
@@ -947,9 +943,10 @@ public class Process extends system.componentmodel.Component  {
      * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Process.Start" target="_top">.NET documentation</a>
      */
-    public static Process Start(java.lang.String fileName, IEnumerable_1 arguments) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.threading.SynchronizationLockException, system.AggregateException, system.FormatException, system.threading.LockRecursionException, system.MissingMethodException, system.reflection.TargetInvocationException, system.componentmodel.Win32Exception, system.io.IOException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.security.cryptography.CryptographicException {
+    public static Process Start(java.lang.String fileName, IEnumerable_1 arguments) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.threading.SynchronizationLockException, system.AggregateException, system.FormatException, system.threading.LockRecursionException, system.MissingMethodException, system.reflection.TargetInvocationException, system.componentmodel.Win32Exception, system.io.IOException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectStart = null;
@@ -991,9 +988,10 @@ public class Process extends system.componentmodel.Component  {
      * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Process.Start" target="_top">.NET documentation</a>
      */
-    public static Process Start(java.lang.String fileName, java.lang.String userName, SecureString password, java.lang.String domain) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.threading.SynchronizationLockException, system.AggregateException, system.FormatException, system.threading.LockRecursionException, system.MissingMethodException, system.reflection.TargetInvocationException, system.componentmodel.Win32Exception, system.io.IOException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.security.cryptography.CryptographicException {
+    public static Process Start(java.lang.String fileName, java.lang.String userName, SecureString password, java.lang.String domain) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.threading.SynchronizationLockException, system.AggregateException, system.FormatException, system.threading.LockRecursionException, system.MissingMethodException, system.reflection.TargetInvocationException, system.componentmodel.Win32Exception, system.io.IOException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectStart = null;
@@ -1036,9 +1034,10 @@ public class Process extends system.componentmodel.Component  {
      * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Process.Start" target="_top">.NET documentation</a>
      */
-    public static Process Start(java.lang.String fileName, java.lang.String arguments, java.lang.String userName, SecureString password, java.lang.String domain) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.threading.SynchronizationLockException, system.AggregateException, system.FormatException, system.threading.LockRecursionException, system.MissingMethodException, system.reflection.TargetInvocationException, system.componentmodel.Win32Exception, system.io.IOException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.security.cryptography.CryptographicException {
+    public static Process Start(java.lang.String fileName, java.lang.String arguments, java.lang.String userName, SecureString password, java.lang.String domain) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.threading.SynchronizationLockException, system.AggregateException, system.FormatException, system.threading.LockRecursionException, system.MissingMethodException, system.reflection.TargetInvocationException, system.componentmodel.Win32Exception, system.io.IOException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectStart = null;
@@ -1078,9 +1077,10 @@ public class Process extends system.componentmodel.Component  {
      * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Process.Start" target="_top">.NET documentation</a>
      */
-    public static Process Start(java.lang.String fileName, java.lang.String arguments) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.threading.SynchronizationLockException, system.AggregateException, system.FormatException, system.threading.LockRecursionException, system.MissingMethodException, system.reflection.TargetInvocationException, system.componentmodel.Win32Exception, system.io.IOException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.security.cryptography.CryptographicException {
+    public static Process Start(java.lang.String fileName, java.lang.String arguments) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.threading.SynchronizationLockException, system.AggregateException, system.FormatException, system.threading.LockRecursionException, system.MissingMethodException, system.reflection.TargetInvocationException, system.componentmodel.Win32Exception, system.io.IOException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectStart = null;
@@ -1119,9 +1119,10 @@ public class Process extends system.componentmodel.Component  {
      * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Process.Start" target="_top">.NET documentation</a>
      */
-    public static Process Start(java.lang.String fileName) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.threading.SynchronizationLockException, system.AggregateException, system.FormatException, system.threading.LockRecursionException, system.MissingMethodException, system.reflection.TargetInvocationException, system.componentmodel.Win32Exception, system.io.IOException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.security.cryptography.CryptographicException {
+    public static Process Start(java.lang.String fileName) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.threading.SynchronizationLockException, system.AggregateException, system.FormatException, system.threading.LockRecursionException, system.MissingMethodException, system.reflection.TargetInvocationException, system.componentmodel.Win32Exception, system.io.IOException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectStart = null;
@@ -1335,15 +1336,14 @@ public class Process extends system.componentmodel.Component  {
      * @throws system.FormatException if the .NET member raises it
      * @throws system.io.IOException if the .NET member raises it
      * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
      * @throws system.componentmodel.Win32Exception if the .NET member raises it
      * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
      * @throws system.OutOfMemoryException if the .NET member raises it
-     * @throws system.MissingMemberException if the .NET member raises it
      * @throws system.security.cryptography.CryptographicException if the .NET member raises it
-     * @throws system.threading.SynchronizationLockException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Process.Run" target="_top">.NET documentation</a>
      */
-    public static ProcessExitStatus Run(ProcessStartInfo startInfo, Nullable_1 timeout) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.io.IOException, system.threading.LockRecursionException, system.componentmodel.Win32Exception, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.MissingMemberException, system.security.cryptography.CryptographicException, system.threading.SynchronizationLockException {
+    public static ProcessExitStatus Run(ProcessStartInfo startInfo, Nullable_1 timeout) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.io.IOException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.componentmodel.Win32Exception, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.security.cryptography.CryptographicException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRun = null;
@@ -1382,13 +1382,14 @@ public class Process extends system.componentmodel.Component  {
      * @throws system.ApplicationException if the .NET member raises it
      * @throws system.threading.ThreadStateException if the .NET member raises it
      * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
      * @throws system.componentmodel.Win32Exception if the .NET member raises it
      * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
      * @throws system.security.cryptography.CryptographicException if the .NET member raises it
-     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Process.Run" target="_top">.NET documentation</a>
      */
-    public static ProcessExitStatus Run(java.lang.String fileName, IEnumerable_1 arguments, boolean silent, Nullable_1 timeout) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.InvalidOperationException, system.FormatException, system.io.IOException, system.ApplicationException, system.threading.ThreadStateException, system.threading.LockRecursionException, system.componentmodel.Win32Exception, system.collections.generic.KeyNotFoundException, system.security.cryptography.CryptographicException, system.threading.SynchronizationLockException {
+    public static ProcessExitStatus Run(java.lang.String fileName, IEnumerable_1 arguments, boolean silent, Nullable_1 timeout) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.InvalidOperationException, system.FormatException, system.io.IOException, system.ApplicationException, system.threading.ThreadStateException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.componentmodel.Win32Exception, system.collections.generic.KeyNotFoundException, system.security.cryptography.CryptographicException, system.threading.AbandonedMutexException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRun = null;
@@ -1515,15 +1516,14 @@ public class Process extends system.componentmodel.Component  {
      * @throws system.componentmodel.Win32Exception if the .NET member raises it
      * @throws system.io.IOException if the .NET member raises it
      * @throws system.threading.SynchronizationLockException if the .NET member raises it
-     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
-     * @throws system.OutOfMemoryException if the .NET member raises it
      * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
      * @throws system.threading.AbandonedMutexException if the .NET member raises it
      * @throws system.TimeoutException if the .NET member raises it
      * @throws system.OverflowException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Process.RunAndCaptureText" target="_top">.NET documentation</a>
      */
-    public static ProcessTextOutput RunAndCaptureText(java.lang.String fileName, IEnumerable_1 arguments, Nullable_1 timeout) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.AggregateException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.threading.LockRecursionException, system.MissingMethodException, system.reflection.TargetInvocationException, system.componentmodel.Win32Exception, system.io.IOException, system.threading.SynchronizationLockException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.threading.AbandonedMutexException, system.TimeoutException, system.OverflowException {
+    public static ProcessTextOutput RunAndCaptureText(java.lang.String fileName, IEnumerable_1 arguments, Nullable_1 timeout) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.AggregateException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.threading.LockRecursionException, system.MissingMethodException, system.reflection.TargetInvocationException, system.componentmodel.Win32Exception, system.io.IOException, system.threading.SynchronizationLockException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.threading.AbandonedMutexException, system.TimeoutException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRunAndCaptureText = null;
@@ -1601,12 +1601,11 @@ public class Process extends system.componentmodel.Component  {
      * @throws system.FormatException if the .NET member raises it
      * @throws system.io.IOException if the .NET member raises it
      * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
      * @throws system.componentmodel.Win32Exception if the .NET member raises it
      * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
      * @throws system.OutOfMemoryException if the .NET member raises it
-     * @throws system.MissingMemberException if the .NET member raises it
      * @throws system.security.cryptography.CryptographicException if the .NET member raises it
-     * @throws system.threading.SynchronizationLockException if the .NET member raises it
      * @throws system.NullReferenceException if the .NET member raises it
      * @throws system.threading.ThreadStateException if the .NET member raises it
      * @throws system.threading.ThreadStartException if the .NET member raises it
@@ -1615,7 +1614,7 @@ public class Process extends system.componentmodel.Component  {
      * @throws system.AggregateException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Process.RunAsync" target="_top">.NET documentation</a>
      */
-    public static Task_1 RunAsync(ProcessStartInfo startInfo, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.io.IOException, system.threading.LockRecursionException, system.componentmodel.Win32Exception, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.MissingMemberException, system.security.cryptography.CryptographicException, system.threading.SynchronizationLockException, system.NullReferenceException, system.threading.ThreadStateException, system.threading.ThreadStartException, system.diagnostics.UnreachableException, system.threading.tasks.TaskCanceledException, system.AggregateException {
+    public static Task_1 RunAsync(ProcessStartInfo startInfo, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.io.IOException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.componentmodel.Win32Exception, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.NullReferenceException, system.threading.ThreadStateException, system.threading.ThreadStartException, system.diagnostics.UnreachableException, system.threading.tasks.TaskCanceledException, system.AggregateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRunAsync = null;
@@ -1654,10 +1653,10 @@ public class Process extends system.componentmodel.Component  {
      * @throws system.ApplicationException if the .NET member raises it
      * @throws system.threading.ThreadStateException if the .NET member raises it
      * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
      * @throws system.componentmodel.Win32Exception if the .NET member raises it
      * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
      * @throws system.security.cryptography.CryptographicException if the .NET member raises it
-     * @throws system.threading.SynchronizationLockException if the .NET member raises it
      * @throws system.threading.tasks.TaskSchedulerException if the .NET member raises it
      * @throws system.NotSupportedException if the .NET member raises it
      * @throws system.diagnostics.UnreachableException if the .NET member raises it
@@ -1665,7 +1664,7 @@ public class Process extends system.componentmodel.Component  {
      * @throws system.AggregateException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Process.RunAsync" target="_top">.NET documentation</a>
      */
-    public static Task_1 RunAsync(java.lang.String fileName, IEnumerable_1 arguments, boolean silent, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.InvalidOperationException, system.FormatException, system.io.IOException, system.ApplicationException, system.threading.ThreadStateException, system.threading.LockRecursionException, system.componentmodel.Win32Exception, system.collections.generic.KeyNotFoundException, system.security.cryptography.CryptographicException, system.threading.SynchronizationLockException, system.threading.tasks.TaskSchedulerException, system.NotSupportedException, system.diagnostics.UnreachableException, system.threading.tasks.TaskCanceledException, system.AggregateException {
+    public static Task_1 RunAsync(java.lang.String fileName, IEnumerable_1 arguments, boolean silent, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.InvalidOperationException, system.FormatException, system.io.IOException, system.ApplicationException, system.threading.ThreadStateException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.componentmodel.Win32Exception, system.collections.generic.KeyNotFoundException, system.security.cryptography.CryptographicException, system.threading.tasks.TaskSchedulerException, system.NotSupportedException, system.diagnostics.UnreachableException, system.threading.tasks.TaskCanceledException, system.AggregateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRunAsync = null;
@@ -1798,14 +1797,13 @@ public class Process extends system.componentmodel.Component  {
      * @throws system.componentmodel.Win32Exception if the .NET member raises it
      * @throws system.io.IOException if the .NET member raises it
      * @throws system.threading.SynchronizationLockException if the .NET member raises it
-     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
-     * @throws system.OutOfMemoryException if the .NET member raises it
      * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
      * @throws system.diagnostics.UnreachableException if the .NET member raises it
      * @throws system.threading.tasks.TaskSchedulerException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Process.RunAndCaptureTextAsync" target="_top">.NET documentation</a>
      */
-    public static Task_1 RunAndCaptureTextAsync(java.lang.String fileName, IEnumerable_1 arguments, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.AggregateException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.threading.LockRecursionException, system.MissingMethodException, system.reflection.TargetInvocationException, system.componentmodel.Win32Exception, system.io.IOException, system.threading.SynchronizationLockException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.diagnostics.UnreachableException, system.threading.tasks.TaskSchedulerException {
+    public static Task_1 RunAndCaptureTextAsync(java.lang.String fileName, IEnumerable_1 arguments, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.AggregateException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.threading.LockRecursionException, system.MissingMethodException, system.reflection.TargetInvocationException, system.componentmodel.Win32Exception, system.io.IOException, system.threading.SynchronizationLockException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.diagnostics.UnreachableException, system.threading.tasks.TaskSchedulerException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRunAndCaptureTextAsync = null;

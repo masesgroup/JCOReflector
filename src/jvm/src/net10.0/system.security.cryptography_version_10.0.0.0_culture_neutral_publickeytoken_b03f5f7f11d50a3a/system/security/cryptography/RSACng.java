@@ -222,9 +222,14 @@ public class RSACng extends system.security.cryptography.RSA  {
      * @throws system.security.cryptography.CryptographicException if the .NET member raises it
      * @throws system.MissingMethodException if the .NET member raises it
      * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.RSACng.-ctor" target="_top">.NET documentation</a>
      */
-    public RSACng(CngKey key) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.security.cryptography.CryptographicException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public RSACng(CngKey key) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.security.cryptography.CryptographicException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NullReferenceException, system.MissingMemberException, system.threading.LockRecursionException, system.threading.AbandonedMutexException, system.threading.SynchronizationLockException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -325,11 +330,14 @@ public class RSACng extends system.security.cryptography.RSA  {
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @throws system.FormatException if the .NET member raises it
      * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.RSACng.Decrypt" target="_top">.NET documentation</a>
      */
-    public byte[] Decrypt(byte[] data, RSAEncryptionPadding padding) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.security.cryptography.CryptographicException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
+    public byte[] Decrypt(byte[] data, RSAEncryptionPadding padding) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.security.cryptography.CryptographicException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.ObjectDisposedException, system.MissingMemberException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectDecrypt = null;
@@ -369,11 +377,14 @@ public class RSACng extends system.security.cryptography.RSA  {
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @throws system.FormatException if the .NET member raises it
      * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.RSACng.Decrypt" target="_top">.NET documentation</a>
      */
-    public byte[] Decrypt(JCORefOut dupParam0, RSAEncryptionPadding dupParam1) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.security.cryptography.CryptographicException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
+    public byte[] Decrypt(JCORefOut dupParam0, RSAEncryptionPadding dupParam1) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.security.cryptography.CryptographicException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.ObjectDisposedException, system.MissingMemberException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectDecrypt = null;
@@ -413,11 +424,14 @@ public class RSACng extends system.security.cryptography.RSA  {
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @throws system.FormatException if the .NET member raises it
      * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.RSACng.Encrypt" target="_top">.NET documentation</a>
      */
-    public byte[] Encrypt(byte[] data, RSAEncryptionPadding padding) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.security.cryptography.CryptographicException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
+    public byte[] Encrypt(byte[] data, RSAEncryptionPadding padding) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.security.cryptography.CryptographicException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.ObjectDisposedException, system.MissingMemberException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectEncrypt = null;
@@ -457,11 +471,14 @@ public class RSACng extends system.security.cryptography.RSA  {
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @throws system.FormatException if the .NET member raises it
      * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.RSACng.Encrypt" target="_top">.NET documentation</a>
      */
-    public byte[] Encrypt(JCORefOut dupParam0, RSAEncryptionPadding dupParam1) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.security.cryptography.CryptographicException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
+    public byte[] Encrypt(JCORefOut dupParam0, RSAEncryptionPadding dupParam1) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.security.cryptography.CryptographicException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.ObjectDisposedException, system.MissingMemberException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectEncrypt = null;
@@ -502,10 +519,15 @@ public class RSACng extends system.security.cryptography.RSA  {
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.RSACng.SignHash" target="_top">.NET documentation</a>
      */
-    public byte[] SignHash(byte[] hash, HashAlgorithmName hashAlgorithm, RSASignaturePadding padding) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.security.cryptography.CryptographicException, system.OutOfMemoryException {
+    public byte[] SignHash(byte[] hash, HashAlgorithmName hashAlgorithm, RSASignaturePadding padding) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.security.cryptography.CryptographicException, system.NullReferenceException, system.MissingMemberException, system.threading.LockRecursionException, system.threading.AbandonedMutexException, system.threading.SynchronizationLockException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSignHash = null;
@@ -546,10 +568,15 @@ public class RSACng extends system.security.cryptography.RSA  {
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.RSACng.SignHash" target="_top">.NET documentation</a>
      */
-    public byte[] SignHash(JCORefOut dupParam0, HashAlgorithmName dupParam1, RSASignaturePadding dupParam2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.security.cryptography.CryptographicException, system.OutOfMemoryException {
+    public byte[] SignHash(JCORefOut dupParam0, HashAlgorithmName dupParam1, RSASignaturePadding dupParam2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.security.cryptography.CryptographicException, system.NullReferenceException, system.MissingMemberException, system.threading.LockRecursionException, system.threading.AbandonedMutexException, system.threading.SynchronizationLockException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSignHash = null;

@@ -183,7 +183,6 @@ public class Executor extends NetObject  {
      * @throws system.reflection.TargetInvocationException if the .NET member raises it
      * @throws system.componentmodel.Win32Exception if the .NET member raises it
      * @throws system.threading.SynchronizationLockException if the .NET member raises it
-     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
      * @throws system.security.cryptography.CryptographicException if the .NET member raises it
      * @throws system.diagnostics.UnreachableException if the .NET member raises it
      * @throws system.IndexOutOfRangeException if the .NET member raises it
@@ -191,7 +190,7 @@ public class Executor extends NetObject  {
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.Executor.ExecWaitWithCapture" target="_top">.NET documentation</a>
      */
-    public static int ExecWaitWithCapture(java.lang.String cmd, TempFileCollection tempFiles, JCORefOut outputName, JCORefOut errorName) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.NullReferenceException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.FormatException, system.io.IOException, system.ObjectDisposedException, system.AggregateException, system.threading.LockRecursionException, system.MissingMethodException, system.reflection.TargetInvocationException, system.componentmodel.Win32Exception, system.threading.SynchronizationLockException, system.collections.generic.KeyNotFoundException, system.security.cryptography.CryptographicException, system.diagnostics.UnreachableException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
+    public static int ExecWaitWithCapture(java.lang.String cmd, TempFileCollection tempFiles, JCORefOut outputName, JCORefOut errorName) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.NullReferenceException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.FormatException, system.io.IOException, system.ObjectDisposedException, system.AggregateException, system.threading.LockRecursionException, system.MissingMethodException, system.reflection.TargetInvocationException, system.componentmodel.Win32Exception, system.threading.SynchronizationLockException, system.security.cryptography.CryptographicException, system.diagnostics.UnreachableException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectExecWaitWithCapture = null;
@@ -260,13 +259,12 @@ public class Executor extends NetObject  {
      * @throws system.reflection.TargetInvocationException if the .NET member raises it
      * @throws system.componentmodel.Win32Exception if the .NET member raises it
      * @throws system.threading.SynchronizationLockException if the .NET member raises it
-     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
      * @throws system.security.cryptography.CryptographicException if the .NET member raises it
      * @throws system.diagnostics.UnreachableException if the .NET member raises it
      * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.Executor.ExecWaitWithCapture" target="_top">.NET documentation</a>
      */
-    public static int ExecWaitWithCapture(java.lang.String cmd, java.lang.String currentDir, TempFileCollection tempFiles, JCORefOut outputName, JCORefOut errorName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.io.IOException, system.AggregateException, system.threading.LockRecursionException, system.MissingMethodException, system.reflection.TargetInvocationException, system.componentmodel.Win32Exception, system.threading.SynchronizationLockException, system.collections.generic.KeyNotFoundException, system.security.cryptography.CryptographicException, system.diagnostics.UnreachableException, system.runtime.interopservices.ExternalException {
+    public static int ExecWaitWithCapture(java.lang.String cmd, java.lang.String currentDir, TempFileCollection tempFiles, JCORefOut outputName, JCORefOut errorName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.io.IOException, system.AggregateException, system.threading.LockRecursionException, system.MissingMethodException, system.reflection.TargetInvocationException, system.componentmodel.Win32Exception, system.threading.SynchronizationLockException, system.security.cryptography.CryptographicException, system.diagnostics.UnreachableException, system.runtime.interopservices.ExternalException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectExecWaitWithCapture = null;
@@ -325,7 +323,6 @@ public class Executor extends NetObject  {
      * @throws system.componentmodel.Win32Exception if the .NET member raises it
      * @throws system.FormatException if the .NET member raises it
      * @throws system.threading.SynchronizationLockException if the .NET member raises it
-     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @throws system.diagnostics.UnreachableException if the .NET member raises it
@@ -334,7 +331,7 @@ public class Executor extends NetObject  {
      * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.Executor.ExecWait" target="_top">.NET documentation</a>
      */
-    public static void ExecWait(java.lang.String cmd, TempFileCollection tempFiles) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.io.IOException, system.ArgumentNullException, system.threading.LockRecursionException, system.componentmodel.Win32Exception, system.FormatException, system.threading.SynchronizationLockException, system.security.cryptography.CryptographicException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.diagnostics.UnreachableException, system.DuplicateWaitObjectException, system.threading.AbandonedMutexException, system.runtime.interopservices.ExternalException {
+    public static void ExecWait(java.lang.String cmd, TempFileCollection tempFiles) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.io.IOException, system.ArgumentNullException, system.threading.LockRecursionException, system.componentmodel.Win32Exception, system.FormatException, system.threading.SynchronizationLockException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.diagnostics.UnreachableException, system.DuplicateWaitObjectException, system.threading.AbandonedMutexException, system.runtime.interopservices.ExternalException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

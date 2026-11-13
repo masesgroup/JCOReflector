@@ -1585,10 +1585,9 @@ public class HttpWebRequest extends system.net.WebRequest  {
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @throws system.FormatException if the .NET member raises it
      * @throws system.globalization.CultureNotFoundException if the .NET member raises it
-     * @throws system.OverflowException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.HttpWebRequest.Date" target="_top">.NET documentation</a>
      */
-    public void setDate(DateTime Date) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.PlatformNotSupportedException, system.InvalidOperationException, system.NullReferenceException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.globalization.CultureNotFoundException, system.OverflowException {
+    public void setDate(DateTime Date) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.PlatformNotSupportedException, system.InvalidOperationException, system.NullReferenceException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -1646,10 +1645,9 @@ public class HttpWebRequest extends system.net.WebRequest  {
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @throws system.FormatException if the .NET member raises it
      * @throws system.globalization.CultureNotFoundException if the .NET member raises it
-     * @throws system.OverflowException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.HttpWebRequest.IfModifiedSince" target="_top">.NET documentation</a>
      */
-    public void setIfModifiedSince(DateTime IfModifiedSince) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.PlatformNotSupportedException, system.InvalidOperationException, system.NullReferenceException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.globalization.CultureNotFoundException, system.OverflowException {
+    public void setIfModifiedSince(DateTime IfModifiedSince) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.PlatformNotSupportedException, system.InvalidOperationException, system.NullReferenceException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

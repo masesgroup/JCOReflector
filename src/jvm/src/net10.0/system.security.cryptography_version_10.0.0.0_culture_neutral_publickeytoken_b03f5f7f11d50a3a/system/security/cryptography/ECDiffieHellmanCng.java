@@ -225,9 +225,13 @@ public class ECDiffieHellmanCng extends system.security.cryptography.ECDiffieHel
      * @throws system.globalization.CultureNotFoundException if the .NET member raises it
      * @throws system.MissingMethodException if the .NET member raises it
      * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.ECDiffieHellmanCng.-ctor" target="_top">.NET documentation</a>
      */
-    public ECDiffieHellmanCng(CngKey key) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.security.cryptography.CryptographicException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public ECDiffieHellmanCng(CngKey key) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.security.cryptography.CryptographicException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.MissingMemberException, system.threading.LockRecursionException, system.threading.AbandonedMutexException, system.threading.SynchronizationLockException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -286,10 +290,13 @@ public class ECDiffieHellmanCng extends system.security.cryptography.ECDiffieHel
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.security.cryptography.CryptographicException if the .NET member raises it
      * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.ECDiffieHellmanCng.DeriveKeyFromHash" target="_top">.NET documentation</a>
      */
-    public byte[] DeriveKeyFromHash(ECDiffieHellmanPublicKey otherPartyPublicKey, HashAlgorithmName hashAlgorithm, byte[] secretPrepend, byte[] secretAppend) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.IndexOutOfRangeException {
+    public byte[] DeriveKeyFromHash(ECDiffieHellmanPublicKey otherPartyPublicKey, HashAlgorithmName hashAlgorithm, byte[] secretPrepend, byte[] secretAppend) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.MissingMemberException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectDeriveKeyFromHash = null;
@@ -332,10 +339,13 @@ public class ECDiffieHellmanCng extends system.security.cryptography.ECDiffieHel
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.security.cryptography.CryptographicException if the .NET member raises it
      * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.ECDiffieHellmanCng.DeriveKeyFromHash" target="_top">.NET documentation</a>
      */
-    public byte[] DeriveKeyFromHash(ECDiffieHellmanPublicKey dupParam0, HashAlgorithmName dupParam1, JCORefOut dupParam2, JCORefOut dupParam3) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.IndexOutOfRangeException {
+    public byte[] DeriveKeyFromHash(ECDiffieHellmanPublicKey dupParam0, HashAlgorithmName dupParam1, JCORefOut dupParam2, JCORefOut dupParam3) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.MissingMemberException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectDeriveKeyFromHash = null;
@@ -379,10 +389,13 @@ public class ECDiffieHellmanCng extends system.security.cryptography.ECDiffieHel
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.security.cryptography.CryptographicException if the .NET member raises it
      * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.ECDiffieHellmanCng.DeriveKeyFromHmac" target="_top">.NET documentation</a>
      */
-    public byte[] DeriveKeyFromHmac(ECDiffieHellmanPublicKey otherPartyPublicKey, HashAlgorithmName hashAlgorithm, byte[] hmacKey, byte[] secretPrepend, byte[] secretAppend) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.IndexOutOfRangeException {
+    public byte[] DeriveKeyFromHmac(ECDiffieHellmanPublicKey otherPartyPublicKey, HashAlgorithmName hashAlgorithm, byte[] hmacKey, byte[] secretPrepend, byte[] secretAppend) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.MissingMemberException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectDeriveKeyFromHmac = null;
@@ -426,10 +439,13 @@ public class ECDiffieHellmanCng extends system.security.cryptography.ECDiffieHel
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.security.cryptography.CryptographicException if the .NET member raises it
      * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.ECDiffieHellmanCng.DeriveKeyFromHmac" target="_top">.NET documentation</a>
      */
-    public byte[] DeriveKeyFromHmac(ECDiffieHellmanPublicKey dupParam0, HashAlgorithmName dupParam1, JCORefOut dupParam2, JCORefOut dupParam3, JCORefOut dupParam4) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.IndexOutOfRangeException {
+    public byte[] DeriveKeyFromHmac(ECDiffieHellmanPublicKey dupParam0, HashAlgorithmName dupParam1, JCORefOut dupParam2, JCORefOut dupParam3, JCORefOut dupParam4) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.MissingMemberException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectDeriveKeyFromHmac = null;
@@ -468,9 +484,14 @@ public class ECDiffieHellmanCng extends system.security.cryptography.ECDiffieHel
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.ECDiffieHellmanCng.DeriveKeyMaterial" target="_top">.NET documentation</a>
      */
-    public byte[] DeriveKeyMaterial(CngKey otherPartyPublicKey) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.security.cryptography.CryptographicException {
+    public byte[] DeriveKeyMaterial(CngKey otherPartyPublicKey) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.security.cryptography.CryptographicException, system.NullReferenceException, system.MissingMemberException, system.threading.LockRecursionException, system.threading.AbandonedMutexException, system.threading.SynchronizationLockException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectDeriveKeyMaterial = null;
@@ -512,10 +533,13 @@ public class ECDiffieHellmanCng extends system.security.cryptography.ECDiffieHel
      * @throws system.reflection.TargetInvocationException if the .NET member raises it
      * @throws system.security.cryptography.CryptographicException if the .NET member raises it
      * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.ECDiffieHellmanCng.DeriveKeyMaterial" target="_top">.NET documentation</a>
      */
-    public byte[] DeriveKeyMaterial(ECDiffieHellmanPublicKey otherPartyPublicKey) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.IndexOutOfRangeException {
+    public byte[] DeriveKeyMaterial(ECDiffieHellmanPublicKey otherPartyPublicKey) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.MissingMemberException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectDeriveKeyMaterial = null;
@@ -557,9 +581,12 @@ public class ECDiffieHellmanCng extends system.security.cryptography.ECDiffieHel
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.security.cryptography.CryptographicException if the .NET member raises it
      * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.ECDiffieHellmanCng.DeriveKeyTls" target="_top">.NET documentation</a>
      */
-    public byte[] DeriveKeyTls(ECDiffieHellmanPublicKey otherPartyPublicKey, byte[] prfLabel, byte[] prfSeed) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.security.cryptography.CryptographicException, system.OutOfMemoryException {
+    public byte[] DeriveKeyTls(ECDiffieHellmanPublicKey otherPartyPublicKey, byte[] prfLabel, byte[] prfSeed) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.MissingMemberException, system.threading.LockRecursionException, system.threading.SynchronizationLockException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectDeriveKeyTls = null;
@@ -601,9 +628,12 @@ public class ECDiffieHellmanCng extends system.security.cryptography.ECDiffieHel
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.security.cryptography.CryptographicException if the .NET member raises it
      * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.ECDiffieHellmanCng.DeriveKeyTls" target="_top">.NET documentation</a>
      */
-    public byte[] DeriveKeyTls(ECDiffieHellmanPublicKey dupParam0, JCORefOut dupParam1, JCORefOut dupParam2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.security.cryptography.CryptographicException, system.OutOfMemoryException {
+    public byte[] DeriveKeyTls(ECDiffieHellmanPublicKey dupParam0, JCORefOut dupParam1, JCORefOut dupParam2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.MissingMemberException, system.threading.LockRecursionException, system.threading.SynchronizationLockException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectDeriveKeyTls = null;
@@ -643,10 +673,12 @@ public class ECDiffieHellmanCng extends system.security.cryptography.ECDiffieHel
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.security.cryptography.CryptographicException if the .NET member raises it
      * @throws system.OutOfMemoryException if the .NET member raises it
-     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.ECDiffieHellmanCng.DeriveRawSecretAgreement" target="_top">.NET documentation</a>
      */
-    public byte[] DeriveRawSecretAgreement(ECDiffieHellmanPublicKey otherPartyPublicKey) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.NullReferenceException {
+    public byte[] DeriveRawSecretAgreement(ECDiffieHellmanPublicKey otherPartyPublicKey) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.MissingMemberException, system.threading.LockRecursionException, system.threading.SynchronizationLockException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectDeriveRawSecretAgreement = null;
@@ -687,9 +719,15 @@ public class ECDiffieHellmanCng extends system.security.cryptography.ECDiffieHel
      * @throws system.security.cryptography.CryptographicException if the .NET member raises it
      * @throws system.MissingMethodException if the .NET member raises it
      * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.ECDiffieHellmanCng.DeriveSecretAgreementHandle" target="_top">.NET documentation</a>
      */
-    public SafeNCryptSecretHandle DeriveSecretAgreementHandle(CngKey otherPartyPublicKey) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.security.cryptography.CryptographicException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public SafeNCryptSecretHandle DeriveSecretAgreementHandle(CngKey otherPartyPublicKey) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.security.cryptography.CryptographicException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NullReferenceException, system.MissingMemberException, system.threading.LockRecursionException, system.OutOfMemoryException, system.threading.AbandonedMutexException, system.threading.SynchronizationLockException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectDeriveSecretAgreementHandle = null;
@@ -723,9 +761,14 @@ public class ECDiffieHellmanCng extends system.security.cryptography.ECDiffieHel
      * @throws system.reflection.TargetInvocationException if the .NET member raises it
      * @throws system.security.cryptography.CryptographicException if the .NET member raises it
      * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.ECDiffieHellmanCng.DeriveSecretAgreementHandle" target="_top">.NET documentation</a>
      */
-    public SafeNCryptSecretHandle DeriveSecretAgreementHandle(ECDiffieHellmanPublicKey otherPartyPublicKey) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.cryptography.CryptographicException, system.OutOfMemoryException {
+    public SafeNCryptSecretHandle DeriveSecretAgreementHandle(ECDiffieHellmanPublicKey otherPartyPublicKey) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.NullReferenceException, system.MissingMemberException, system.threading.LockRecursionException, system.threading.AbandonedMutexException, system.threading.SynchronizationLockException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectDeriveSecretAgreementHandle = null;

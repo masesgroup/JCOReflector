@@ -222,9 +222,13 @@ public class ECDsaCng extends system.security.cryptography.ECDsa  {
      * @throws system.globalization.CultureNotFoundException if the .NET member raises it
      * @throws system.MissingMethodException if the .NET member raises it
      * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.ECDsaCng.-ctor" target="_top">.NET documentation</a>
      */
-    public ECDsaCng(CngKey key) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.security.cryptography.CryptographicException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public ECDsaCng(CngKey key) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.security.cryptography.CryptographicException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.MissingMemberException, system.threading.LockRecursionException, system.threading.AbandonedMutexException, system.threading.SynchronizationLockException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -763,9 +767,14 @@ public class ECDsaCng extends system.security.cryptography.ECDsa  {
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.ECDsaCng.SignHash" target="_top">.NET documentation</a>
      */
-    public byte[] SignHash(byte[] hash) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.security.cryptography.CryptographicException {
+    public byte[] SignHash(byte[] hash) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.security.cryptography.CryptographicException, system.NullReferenceException, system.MissingMemberException, system.threading.LockRecursionException, system.threading.AbandonedMutexException, system.threading.SynchronizationLockException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSignHash = null;
@@ -804,9 +813,14 @@ public class ECDsaCng extends system.security.cryptography.ECDsa  {
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.ECDsaCng.SignHash" target="_top">.NET documentation</a>
      */
-    public byte[] SignHash(JCORefOut dupParam0) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.security.cryptography.CryptographicException {
+    public byte[] SignHash(JCORefOut dupParam0) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.security.cryptography.CryptographicException, system.NullReferenceException, system.MissingMemberException, system.threading.LockRecursionException, system.threading.AbandonedMutexException, system.threading.SynchronizationLockException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSignHash = null;

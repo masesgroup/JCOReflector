@@ -343,11 +343,12 @@ public class TarEntry extends NetObject  {
      * @throws system.NullReferenceException if the .NET member raises it
      * @throws system.NotSupportedException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Formats.Tar.TarEntry.Gid" target="_top">.NET documentation</a>
      */
-    public void setGid(int Gid) throws Throwable, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
+    public void setGid(int Gid) throws Throwable, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -413,11 +414,12 @@ public class TarEntry extends NetObject  {
      * @throws system.NullReferenceException if the .NET member raises it
      * @throws system.NotSupportedException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Formats.Tar.TarEntry.Uid" target="_top">.NET documentation</a>
      */
-    public void setUid(int Uid) throws Throwable, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
+    public void setUid(int Uid) throws Throwable, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

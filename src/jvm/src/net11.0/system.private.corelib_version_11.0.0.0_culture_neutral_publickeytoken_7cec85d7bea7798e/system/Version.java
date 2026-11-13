@@ -317,12 +317,12 @@ public class Version extends NetObject  {
      * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @throws system.NullReferenceException if the .NET member raises it
-     * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @throws system.OverflowException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.FormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Version.TryParse" target="_top">.NET documentation</a>
      */
-    public static boolean TryParse(java.lang.String input, JCORefOut<Version> result) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NullReferenceException, system.ArrayTypeMismatchException, system.OverflowException, system.FormatException {
+    public static boolean TryParse(java.lang.String input, JCORefOut<Version> result) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NullReferenceException, system.OverflowException, system.ArgumentNullException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTryParse = null;

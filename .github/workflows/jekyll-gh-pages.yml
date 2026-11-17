@@ -49,7 +49,30 @@ jobs:
       - name: Sitemap lastmod replacer
         shell: pwsh
         run: ./CommonTools/scripts/SitemapLastmodReplacer.ps1 -baseUrl https://jcoreflector.masesgroup.com -baseFolder ${{ github.workspace }}/docs/ -inSitemapFile ${{ github.workspace }}/_site/sitemap.xml -outSitemapFile ${{ github.workspace }}/sitemap.xml
-      - run: sudo cp ${{ github.workspace }}/sitemap.xml ${{ github.workspace }}/_site/sitemap.xml
+      - name: Sitemap split
+        shell: pwsh
+        run: |
+          $ws = "${{ github.workspace }}"
+          $base = "https://jcoreflector.masesgroup.com"
+          $rx = "^$([regex]::Escape($base))/(net[^/]+)/"
+          $data = [xml](Get-Content -Raw "$ws/sitemap.xml")
+          $out = New-Item -ItemType Directory "$ws/split" -Force
+          $groups = $data.urlset.url | Group-Object { if ($_.loc -match $rx) { $Matches[1] } else { 'main' } }
+          $idx = @('<?xml version="1.0" encoding="UTF-8"?>', '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">')
+          foreach ($g in $groups) {
+            $name = "sitemap-$($g.Name).xml"
+            $lines = @('<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">')
+            $lines += $g.Group | ForEach-Object {
+              "<url><loc>$([Security.SecurityElement]::Escape($_.loc))</loc><lastmod>$($_.lastmod)</lastmod></url>"
+            }
+            $lines += '</urlset>'
+            Set-Content "$out/$name" $lines -Encoding utf8
+            $idx += "<sitemap><loc>$base/$name</loc></sitemap>"
+            Write-Host "$name : $($g.Count) url"
+          }
+          $idx += '</sitemapindex>'
+          Set-Content "$out/sitemap.xml" $idx -Encoding utf8
+      - run: sudo cp ${{ github.workspace }}/split/*.xml ${{ github.workspace }}/_site/
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v5
 

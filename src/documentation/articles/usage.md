@@ -14,8 +14,6 @@ JCOReflector publishes one artifact for each .NET flavor, all in the `com.masesg
 | .NET flavor | Artifact id |
 |:---|:---|
 | .NET Framework (Windows only) | [`jcoreflector_net462`](https://central.sonatype.com/artifact/com.masesgroup/jcoreflector_net462) |
-| .NET 8 | [`jcoreflector_net8.0`](https://central.sonatype.com/artifact/com.masesgroup/jcoreflector_net8.0) |
-| .NET 9 | [`jcoreflector_net9.0`](https://central.sonatype.com/artifact/com.masesgroup/jcoreflector_net9.0) |
 | .NET 10 | [`jcoreflector_net10.0`](https://central.sonatype.com/artifact/com.masesgroup/jcoreflector_net10.0) |
 | .NET 11 | [`jcoreflector_net11.0`](https://central.sonatype.com/artifact/com.masesgroup/jcoreflector_net11.0) |
 
@@ -25,17 +23,17 @@ With Maven, add the dependency for the flavor you want to use:
 <dependency>
     <groupId>com.masesgroup</groupId>
     <artifactId>jcoreflector_net462</artifactId>
-    <version>1.16.2.0</version>
+    <version>2.0.0.0</version>
 </dependency>
 ```
 
 and with Gradle:
 
 ```groovy
-implementation 'com.masesgroup:jcoreflector_net462:1.16.2.0'
+implementation 'com.masesgroup:jcoreflector_net462:2.0.0.0'
 ```
 
-To work with another framework, change only the artifact id, for example to `jcoreflector_net8.0`. The Java code does not change, as long as the classes it uses exist in the framework you selected.
+To work with another framework, change only the artifact id, for example to `jcoreflector_net10.0`. The Java code does not change, as long as the classes it uses exist in the framework you selected.
 
 > [!NOTE]
 > The version shown above is the one published when this article was written. Check the Maven Central page of the artifact for the latest one.
@@ -43,7 +41,7 @@ To work with another framework, change only the artifact id, for example to `jco
 A few things to know:
 
 - The artifacts embed the JCOBridge runtime, so JCOBridge does not have to be added as a separate dependency.
-- The minimum Java version is Java 8, and a .NET runtime matching the artifact must be available on the machine. See the project README for the full list of supported versions.
+- The minimum Java version is Java , and a .NET runtime matching the artifact must be available on the machine. See the project README for the full list of supported versions.
 - JCOBridge has its own licensing, independent of the MIT license of JCOReflector: [JCOBridge 2.6.\*](https://www.jcobridge.com) can be used for free without any obligations. A commercial license must be purchased — or the software uninstalled — if you derive direct or indirect income from its usage.
 
 ## Initializing the runtime
@@ -118,8 +116,6 @@ or
 Within the folder bin you will find four subfolders:
 
 - **net462** (available only on Windows platform)
-- **net8.0** (available on .NET 8 supported platforms)
-- **net9.0** (available on .NET 9 supported platforms)
 - **net10.0** (available on .NET 10 supported platforms)
 - **net11.0** (available on .NET 11 supported platforms)
 
@@ -141,7 +137,7 @@ The work of the tool is described by XML job files, one for each stage of the pr
 
 | Stage | Root element | Job files | What it does |
 |:---|:---|:---|:---|
-| Reflect | `ReflectorEventArgs` | `reflect_net462.job`, `reflect_net8_0.job`, `reflect_net9_0.job`, `reflect_net10_0.job`, `reflect_net11_0.job` | Generates the Java sources from the .NET assemblies |
+| Reflect | `ReflectorEventArgs` | `reflect_net462.job`, `reflect_net10_0.job`, `reflect_net11_0.job` | Generates the Java sources from the .NET assemblies |
 | Build | `JavaBuilderEventArgs` | `build_linux.job`, `build_win19.job` | Compiles the generated sources with a JDK |
 | Create JARs | `JARBuilderEventArgs` | `createjars_<framework>_<os>.job` | Packages the compiled classes into JARs, one for each assembly |
 | Create POM | `POMBuilderEventArgs` | `createpom_win19.job` | Generates the Maven POM used to publish the artifacts |
@@ -150,14 +146,14 @@ The stages work on the same source folder (`src/jvm`), so the output of one is t
 
 #### Reflect
 
-The reflect job lists the assemblies to start from and the generator options. This is the one for .NET 8 (the .NET 9 and .NET 10 ones differ only in the assembly version):
+The reflect job lists the assemblies to start from and the generator options. This is the one for .NET 10 (.NET 11 one differ only in the assembly version):
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <ReflectorEventArgs xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <LogLevel>Error</LogLevel>
   <AssemblyNames>
-    <string>PresentationFramework, Version=8.0.0.0</string>
+    <string>PresentationFramework, Version=10.0.0.0</string>
   </AssemblyNames>
   <SourceFolder>src/jvm</SourceFolder>
   <SplitFolderByAssembly>true</SplitFolderByAssembly>
@@ -213,13 +209,13 @@ The JAR job packages the compiled classes, and there is one for each framework a
   <JDKFolder>jdk</JDKFolder>
   <JDKTarget>Version8</JDKTarget>
   <JDKToolExtraOptions></JDKToolExtraOptions>
-  <JarDestinationFolder>bin/net8.0</JarDestinationFolder>
+  <JarDestinationFolder>bin/net10.0</JarDestinationFolder>
   <WithJARSource>false</WithJARSource>
   <EmbeddingJCOBridge>true</EmbeddingJCOBridge>
 </JARBuilderEventArgs>
 ```
 
-The jobs of the different frameworks differ only in the platform paths and in `JarDestinationFolder`, which is `bin/net462`, `bin/net8.0`, `bin/net9.0` or `bin/net10.0`. `EmbeddingJCOBridge` embeds the JCOBridge runtime in the JARs, which is why the published artifacts do not need a separate JCOBridge dependency. `WithJARSource` controls whether the sources are included in the JARs.
+The jobs of the different frameworks differ only in the platform paths and in `JarDestinationFolder`, which is `bin/net462`, `bin/net10.0` or `bin/net11.0`. `EmbeddingJCOBridge` embeds the JCOBridge runtime in the JARs, which is why the published artifacts do not need a separate JCOBridge dependency. `WithJARSource` controls whether the sources are included in the JARs.
 
 #### Create POM
 
@@ -240,18 +236,18 @@ The POM it generates is the one published with each artifact on Maven Central. I
 
 ### Running the jobs
 
-A job is run with the CLI tool: the `-JobType` switch selects the stage, `-JobFile` the job file, and `-JDKFolder` the JDK to use. This is how the project pipelines run the build, JAR and POM stages on Windows, here for .NET 8:
+A job is run with the CLI tool: the `-JobType` switch selects the stage, `-JobFile` the job file, and `-JDKFolder` the JDK to use. This is how the project pipelines run the build, JAR and POM stages on Windows, here for .NET 10:
 
 ```
-bin\net8.0\MASES.JCOReflectorCLI -JobType Build -JobFile .github\workflows\build_win19.job -JDKFolder <path to a JDK>
-bin\net8.0\MASES.JCOReflectorCLI -JobType CreateJars -JobFile .github\workflows\createjars_net8_0_win19.job -JDKFolder <path to a JDK>
-bin\net8.0\MASES.JCOReflectorCLI -JobType CreatePOM -JobFile .github\workflows\createpom_win19.job
+bin\net10.0\MASES.JCOReflectorCLI -JobType Build -JobFile .github\workflows\build_win19.job -JDKFolder <path to a JDK>
+bin\net10.0\MASES.JCOReflectorCLI -JobType CreateJars -JobFile .github\workflows\createjars_net10_0_win19.job -JDKFolder <path to a JDK>
+bin\net10.0\MASES.JCOReflectorCLI -JobType CreatePOM -JobFile .github\workflows\createpom_win19.job
 ```
 
-On .NET 8 or later the tool can also be started through the `dotnet` host:
+On .NET 10 or later the tool can also be started through the `dotnet` host:
 
 ```
-dotnet bin\net8.0\MASES.JCOReflectorCLI.dll -JobType Build -JobFile .github\workflows\build_win19.job -JDKFolder <path to a JDK>
+dotnet bin\net10.0\MASES.JCOReflectorCLI.dll -JobType Build -JobFile .github\workflows\build_win19.job -JDKFolder <path to a JDK>
 ```
 
 On Linux the build and JAR stages have their own `linux` job files, while the POM stage has only the `win19` one.

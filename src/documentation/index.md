@@ -373,8 +373,6 @@ or
 Within the folder bin you will find four subfolders:
 
 - **net462** (available only on Windows platform)
-- **net8.0** (available on .NET 8 supported platforms)
-- **net9.0** (available on .NET 9 supported platforms)
 - **net10.0** (available on .NET 10 supported platforms)
 - **net11.0** (available on .NET 11 supported platforms)
 
@@ -390,7 +388,7 @@ The reflection can also be driven by job files, one for each stage (reflect, bui
 
 ## Reflected Assemblies
 
-The folder [src/jvm/src](/src/jvm/src) contains all reflected classes generated for **.NET** **Framework** (_net462_), **8** (_net8.0_), **9** (_net9.0_), **10** (_net10.0_) and **11** (_net11.0_). Below the coverage [statistics](#statistics):
+The folder [src/jvm/src](/src/jvm/src) contains all reflected classes generated for **.NET** **Framework** (_net462_), **10** (_net10.0_) and **11** (_net11.0_). Below the coverage [statistics](#statistics):
 
 ### Statistics
 

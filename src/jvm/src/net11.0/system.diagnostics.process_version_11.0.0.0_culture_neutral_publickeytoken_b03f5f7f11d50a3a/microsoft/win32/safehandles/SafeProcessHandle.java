@@ -342,15 +342,13 @@ public class SafeProcessHandle extends microsoft.win32.safehandles.SafeHandleZer
      * @throws system.io.IOException if the .NET member raises it
      * @throws system.threading.ThreadStateException if the .NET member raises it
      * @throws system.threading.LockRecursionException if the .NET member raises it
-     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
      * @throws system.componentmodel.Win32Exception if the .NET member raises it
      * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
-     * @throws system.MissingMemberException if the .NET member raises it
      * @throws system.security.cryptography.CryptographicException if the .NET member raises it
-     * @throws system.threading.SynchronizationLockException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Win32.SafeHandles.SafeProcessHandle.Start" target="_top">.NET documentation</a>
      */
-    public static SafeProcessHandle Start(ProcessStartInfo startInfo) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.io.IOException, system.threading.ThreadStateException, system.threading.LockRecursionException, system.threading.AbandonedMutexException, system.componentmodel.Win32Exception, system.collections.generic.KeyNotFoundException, system.MissingMemberException, system.security.cryptography.CryptographicException, system.threading.SynchronizationLockException {
+    public static SafeProcessHandle Start(ProcessStartInfo startInfo) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.io.IOException, system.threading.ThreadStateException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.componentmodel.Win32Exception, system.collections.generic.KeyNotFoundException, system.security.cryptography.CryptographicException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectStart = null;

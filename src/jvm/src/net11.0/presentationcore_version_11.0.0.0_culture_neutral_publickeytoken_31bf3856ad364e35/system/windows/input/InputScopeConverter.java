@@ -235,9 +235,10 @@ public class InputScopeConverter extends system.componentmodel.TypeConverter  {
      * @throws system.NullReferenceException if the .NET member raises it
      * @throws system.OverflowException if the .NET member raises it
      * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.InputScopeConverter.ConvertFrom" target="_top">.NET documentation</a>
      */
-    public NetObject ConvertFrom(ITypeDescriptorContext context, CultureInfo culture, NetObject source) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.NullReferenceException, system.OverflowException, system.InvalidCastException {
+    public NetObject ConvertFrom(ITypeDescriptorContext context, CultureInfo culture, NetObject source) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.NullReferenceException, system.OverflowException, system.InvalidCastException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectConvertFrom = null;

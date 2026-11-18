@@ -2664,16 +2664,16 @@ public class XmlDictionaryReader extends system.xml.XmlReader  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @throws system.NullReferenceException if the .NET member raises it
      * @throws system.NotSupportedException if the .NET member raises it
-     * @throws system.InvalidOperationException if the .NET member raises it
      * @throws system.FormatException if the .NET member raises it
      * @throws system.OverflowException if the .NET member raises it
      * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
      * @throws system.xml.XmlException if the .NET member raises it
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlDictionaryReader.ReadElementContentAsInt" target="_top">.NET documentation</a>
      */
-    public int ReadElementContentAsInt() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, system.OverflowException, system.ObjectDisposedException, system.xml.XmlException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
+    public int ReadElementContentAsInt() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.NotSupportedException, system.FormatException, system.OverflowException, system.ObjectDisposedException, system.InvalidOperationException, system.xml.XmlException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectReadElementContentAsInt = null;
@@ -2930,16 +2930,16 @@ public class XmlDictionaryReader extends system.xml.XmlReader  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @throws system.NullReferenceException if the .NET member raises it
      * @throws system.NotSupportedException if the .NET member raises it
-     * @throws system.InvalidOperationException if the .NET member raises it
      * @throws system.FormatException if the .NET member raises it
      * @throws system.OverflowException if the .NET member raises it
      * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
      * @throws system.xml.XmlException if the .NET member raises it
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlDictionaryReader.ReadElementContentAsLong" target="_top">.NET documentation</a>
      */
-    public long ReadElementContentAsLong() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, system.OverflowException, system.ObjectDisposedException, system.xml.XmlException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
+    public long ReadElementContentAsLong() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.NotSupportedException, system.FormatException, system.OverflowException, system.ObjectDisposedException, system.InvalidOperationException, system.xml.XmlException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectReadElementContentAsLong = null;

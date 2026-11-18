@@ -231,12 +231,12 @@ public class VersionConverter extends system.componentmodel.TypeConverter  {
      * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @throws system.NullReferenceException if the .NET member raises it
-     * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.OverflowException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.FormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.VersionConverter.IsValid" target="_top">.NET documentation</a>
      */
-    public boolean IsValid(ITypeDescriptorContext context, NetObject value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.ArgumentNullException, system.OverflowException, system.FormatException {
+    public boolean IsValid(ITypeDescriptorContext context, NetObject value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.OverflowException, system.ArgumentNullException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectIsValid = null;

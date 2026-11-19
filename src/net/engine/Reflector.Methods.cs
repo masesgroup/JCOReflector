@@ -412,6 +412,16 @@ namespace MASES.JCOReflector.Engine
                                 {
                                     implementationReturnType = implementationReturnType.Split('`')[0];
                                 }
+
+                                // A constructed generic over in-scope type parameters (ICollection<TKey>) is declared
+                                // parameterized; implementationReturnType was computed from the raw name above, so the
+                                // "...Implementation" instance keeps being created raw.
+                                if (!isRetValArray && !isPrimitive && !isSpecial
+                                    && !typeof(Exception).IsAssignableFrom(type)
+                                    && IsResolvableConstructedGeneric(item.ReturnType))
+                                {
+                                    returnType = ResolveGenericTypeName(item.ReturnType, imports);
+                                }
                             }
                         }
                         // --- FIXED GENERICS ANALYSIS FOR METHOD INPUT PARAMETERS ---
@@ -430,7 +440,7 @@ namespace MASES.JCOReflector.Engine
                                                  (parameter.ParameterType.IsArray && parameter.ParameterType.GetElementType().IsGenericParameter));
                             // ...or a constructed generic over in-scope type parameters (KeyValuePair<TKey,TValue>):
                             // resolved recursively instead of falling back to the raw type.
-                            bool isParamConstructedGeneric = !isParamGeneric && IsResolvableConstructedGeneric(parameter.ParameterType)
+                            bool isParamConstructedGeneric = !isParamGeneric && !typeof(Exception).IsAssignableFrom(type) && IsResolvableConstructedGeneric(parameter.ParameterType)
                                                              && !DeclaresSameNameAndArityInBaseClass(type, methodName, parameters.Length);
 
                             if (isParamGeneric)
@@ -662,7 +672,7 @@ namespace MASES.JCOReflector.Engine
                                 bool isParamGeneric = EnableGenerics && (parameter.ParameterType.IsGenericParameter ||
                                                      (parameter.ParameterType.IsArray && parameter.ParameterType.GetElementType().IsGenericParameter));
                                 // same rule as the main signature, so the duplicated overload stays consistent with it
-                                bool isParamConstructedGeneric = !isParamGeneric && IsResolvableConstructedGeneric(parameter.ParameterType)
+                                bool isParamConstructedGeneric = !isParamGeneric && !typeof(Exception).IsAssignableFrom(type) && IsResolvableConstructedGeneric(parameter.ParameterType)
                                                                  && !DeclaresSameNameAndArityInBaseClass(type, methodName, parameters.Length);
 
                                 if (isParamGeneric)

@@ -27,6 +27,7 @@ package generics;
 import org.mases.jcobridge.netreflection.*;
 
 import system.*;
+import system.collections.concurrent.*;
 import system.collections.generic.*;
 import system.collections.objectmodel.*;
 
@@ -54,9 +55,10 @@ public class GenericConstructedPropertyTypeIsResolved {
     }
 
     /**
-     * Exercises a property whose type is a constructed generic over the interface's own type
-     * parameters: IDictionary<TKey,TValue>.Keys is ICollection<TKey> and .Values is ICollection<TValue>.
-     * They must be exposed as ICollection_1<TKey> / ICollection_1<TValue>, not as the raw ICollection_1.
+     * Exercises a property whose type is a constructed generic over the type parameters in scope:
+     * IDictionary<TKey,TValue>.Keys is ICollection<TKey> and .Values is ICollection<TValue>, and the
+     * same holds for the public ConcurrentDictionary<TKey,TValue>.Keys/Values. They must be exposed
+     * as ICollection_1<TKey> / ICollection_1<TValue>, not as the raw ICollection_1.
      */
     static void testGenericConstructedPropertyTypeIsResolved() throws Throwable {
         assertParameterized(IDictionary_2.class.getMethod("getKeys").getGenericReturnType(),
@@ -64,13 +66,17 @@ public class GenericConstructedPropertyTypeIsResolved {
         assertParameterized(IDictionary_2.class.getMethod("getValues").getGenericReturnType(),
                 ICollection_1.class, IDictionary_2.class, "TValue");
 
-        // the typed property is usable end to end
-        Dictionary_2<system.Object, system.Object> dict = new Dictionary_2<system.Object, system.Object>() {};
-        dict.Add(new system.Object(), new system.Object());
+        assertParameterized(ConcurrentDictionary_2.class.getMethod("getKeys").getGenericReturnType(),
+                ICollection_1.class, ConcurrentDictionary_2.class, "TKey");
+        assertParameterized(ConcurrentDictionary_2.class.getMethod("getValues").getGenericReturnType(),
+                ICollection_1.class, ConcurrentDictionary_2.class, "TValue");
 
-        IDictionary_2<system.Object, system.Object> idict = IDictionary_2.ToIDictionary_2(dict);
-        ICollection_1<system.Object> keys = idict.getKeys();
-        ICollection_1<system.Object> values = idict.getValues();
+        // the typed property is usable end to end
+        ConcurrentDictionary_2<system.Object, system.Object> dict = new ConcurrentDictionary_2<system.Object, system.Object>() {};
+        if (!dict.TryAdd(new system.Object(), new system.Object())) throw new AssertionError("TryAdd of a new key must succeed");
+
+        ICollection_1<system.Object> keys = dict.getKeys();
+        ICollection_1<system.Object> values = dict.getValues();
         if (keys.getCount() != 1) throw new AssertionError("Expected 1 key");
         if (values.getCount() != 1) throw new AssertionError("Expected 1 value");
     }

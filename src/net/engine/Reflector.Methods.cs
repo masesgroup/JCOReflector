@@ -428,6 +428,9 @@ namespace MASES.JCOReflector.Engine
                             // A parameter is generic if it is a raw generic parameter (T) OR an array of generic parameters (T[])
                             bool isParamGeneric = EnableGenerics && (parameter.ParameterType.IsGenericParameter ||
                                                  (parameter.ParameterType.IsArray && parameter.ParameterType.GetElementType().IsGenericParameter));
+                            // ...or a constructed generic over in-scope type parameters (KeyValuePair<TKey,TValue>):
+                            // resolved recursively instead of falling back to the raw type.
+                            bool isParamConstructedGeneric = !isParamGeneric && IsResolvableConstructedGeneric(parameter.ParameterType);
 
                             if (isParamGeneric)
                             {
@@ -441,6 +444,14 @@ namespace MASES.JCOReflector.Engine
                                     paramType = parameter.ParameterType.Name;
                                     isArray = false;
                                 }
+                                isPrimitive = false;
+                                isManaged = true;
+                                isSpecial = false;
+                            }
+                            else if (isParamConstructedGeneric)
+                            {
+                                paramType = ResolveGenericTypeName(parameter.ParameterType, imports);
+                                isArray = false;
                                 isPrimitive = false;
                                 isManaged = true;
                                 isSpecial = false;
@@ -473,7 +484,7 @@ namespace MASES.JCOReflector.Engine
                             // "JCORefOut" regardless of what's inside — record the wrapper itself for a
                             // by-ref/out parameter, not the inner paramType, or two overloads that only
                             // differ inside a JCORefOut<...> won't be seen as colliding.
-                            erasedParamTypes.Add(useRefOut ? "JCORefOut" : (isArray ? paramType + "[]" : paramType));
+                            erasedParamTypes.Add(useRefOut ? "JCORefOut" : (isArray ? paramType + "[]" : (isParamConstructedGeneric ? paramType.Split('<')[0] : paramType)));
 
                             isPrimitive |= typeof(Delegate).IsAssignableFrom(parameter.ParameterType);
                             string formatter = string.Empty;

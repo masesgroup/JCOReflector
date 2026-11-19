@@ -89,6 +89,28 @@ namespace MASES.JCOReflector.Engine
             return false;
         }
 
+        // True when `t` is a constructed generic type (KeyValuePair<TKey,TValue>, List<T>, ...) whose
+        // arguments reference generic parameters in scope and that can be rendered as a parameterized
+        // Java type in a member signature. Method-level parameters are excluded: they need the method's
+        // own <T> declaration, which is handled by the dedicated method-generic paths.
+        static bool IsResolvableConstructedGeneric(Type t)
+        {
+            if (!EnableGenerics) return false;
+            if (t.IsByRef || t.IsArray || t.IsPointer) return false;
+            if (!t.IsGenericType || t.IsGenericTypeDefinition || !t.ContainsGenericParameters) return false;
+            if (ViolatesReflectedBound(t)) return false;
+            return !ContainsMethodLevelGenericParameter(t);
+        }
+
+        static bool ContainsMethodLevelGenericParameter(Type t)
+        {
+            if (t == null) return false;
+            if (t.IsGenericParameter) return t.DeclaringMethod != null;
+            if (t.HasElementType) return ContainsMethodLevelGenericParameter(t.GetElementType());
+            if (t.IsGenericType) return t.GetGenericArguments().Any(ContainsMethodLevelGenericParameter);
+            return false;
+        }
+
         // Recursively builds the Java "<Arg1, Arg2>" text for a type used in an extends/implements
         // clause, or as a base type. Needed because leaving any supertype raw poisons the whole
         // inherited chain to raw types (the "Iterable cannot be inherited with different arguments"

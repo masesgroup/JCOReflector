@@ -177,7 +177,7 @@ public class Progress_1<T extends IJCOBridgeReflected> extends NetObject  {
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param handler the argument of type {@code Action_1}
+     * @param handler the argument of type {@code Action_1<T>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.TypeLoadException if the .NET member raises it
@@ -188,7 +188,7 @@ public class Progress_1<T extends IJCOBridgeReflected> extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Progress-1.-ctor" target="_top">.NET documentation</a>
      */
-    public Progress_1(Action_1 handler) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
+    public Progress_1(Action_1<T> handler) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);

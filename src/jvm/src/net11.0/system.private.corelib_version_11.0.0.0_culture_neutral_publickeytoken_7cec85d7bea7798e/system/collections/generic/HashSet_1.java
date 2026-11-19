@@ -177,7 +177,7 @@ public class HashSet_1<T extends IJCOBridgeReflected> extends NetObjectEnumerabl
      * Initializes a new instance by invoking the .NET constructor.
      *
      * @param capacity the argument of type {@code int}
-     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @param comparer the argument of type {@code IEqualityComparer_1<T>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -191,7 +191,7 @@ public class HashSet_1<T extends IJCOBridgeReflected> extends NetObjectEnumerabl
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.HashSet-1.-ctor" target="_top">.NET documentation</a>
      */
-    public HashSet_1(int capacity, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+    public HashSet_1(int capacity, IEqualityComparer_1<T> comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -232,8 +232,8 @@ public class HashSet_1<T extends IJCOBridgeReflected> extends NetObjectEnumerabl
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param collection the argument of type {@code IEnumerable_1}
-     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @param collection the argument of type {@code IEnumerable_1<T>}
+     * @param comparer the argument of type {@code IEqualityComparer_1<T>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -248,7 +248,7 @@ public class HashSet_1<T extends IJCOBridgeReflected> extends NetObjectEnumerabl
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.HashSet-1.-ctor" target="_top">.NET documentation</a>
      */
-    public HashSet_1(IEnumerable_1 collection, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
+    public HashSet_1(IEnumerable_1<T> collection, IEqualityComparer_1<T> comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -263,7 +263,7 @@ public class HashSet_1<T extends IJCOBridgeReflected> extends NetObjectEnumerabl
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param collection the argument of type {@code IEnumerable_1}
+     * @param collection the argument of type {@code IEnumerable_1<T>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -275,7 +275,7 @@ public class HashSet_1<T extends IJCOBridgeReflected> extends NetObjectEnumerabl
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.HashSet-1.-ctor" target="_top">.NET documentation</a>
      */
-    public HashSet_1(IEnumerable_1 collection) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException {
+    public HashSet_1(IEnumerable_1<T> collection) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -290,11 +290,11 @@ public class HashSet_1<T extends IJCOBridgeReflected> extends NetObjectEnumerabl
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @param comparer the argument of type {@code IEqualityComparer_1<T>}
      * @throws Throwable if the .NET constructor fails
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.HashSet-1.-ctor" target="_top">.NET documentation</a>
      */
-    public HashSet_1(IEqualityComparer_1 comparer) throws Throwable {
+    public HashSet_1(IEqualityComparer_1<T> comparer) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -367,7 +367,7 @@ public class HashSet_1<T extends IJCOBridgeReflected> extends NetObjectEnumerabl
     /**
      * Invokes the .NET member IsProperSubsetOf.
      *
-     * @param other the argument of type {@code IEnumerable_1}
+     * @param other the argument of type {@code IEnumerable_1<T>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -382,7 +382,7 @@ public class HashSet_1<T extends IJCOBridgeReflected> extends NetObjectEnumerabl
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.HashSet-1.IsProperSubsetOf" target="_top">.NET documentation</a>
      */
-    public boolean IsProperSubsetOf(IEnumerable_1 other) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArgumentNullException, system.IndexOutOfRangeException {
+    public boolean IsProperSubsetOf(IEnumerable_1<T> other) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectIsProperSubsetOf = null;
@@ -399,7 +399,7 @@ public class HashSet_1<T extends IJCOBridgeReflected> extends NetObjectEnumerabl
     /**
      * Invokes the .NET member IsProperSupersetOf.
      *
-     * @param other the argument of type {@code IEnumerable_1}
+     * @param other the argument of type {@code IEnumerable_1<T>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -414,7 +414,7 @@ public class HashSet_1<T extends IJCOBridgeReflected> extends NetObjectEnumerabl
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.HashSet-1.IsProperSupersetOf" target="_top">.NET documentation</a>
      */
-    public boolean IsProperSupersetOf(IEnumerable_1 other) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArgumentNullException, system.IndexOutOfRangeException {
+    public boolean IsProperSupersetOf(IEnumerable_1<T> other) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectIsProperSupersetOf = null;
@@ -431,7 +431,7 @@ public class HashSet_1<T extends IJCOBridgeReflected> extends NetObjectEnumerabl
     /**
      * Invokes the .NET member IsSubsetOf.
      *
-     * @param other the argument of type {@code IEnumerable_1}
+     * @param other the argument of type {@code IEnumerable_1<T>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -446,7 +446,7 @@ public class HashSet_1<T extends IJCOBridgeReflected> extends NetObjectEnumerabl
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.HashSet-1.IsSubsetOf" target="_top">.NET documentation</a>
      */
-    public boolean IsSubsetOf(IEnumerable_1 other) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArgumentNullException, system.IndexOutOfRangeException {
+    public boolean IsSubsetOf(IEnumerable_1<T> other) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectIsSubsetOf = null;
@@ -463,7 +463,7 @@ public class HashSet_1<T extends IJCOBridgeReflected> extends NetObjectEnumerabl
     /**
      * Invokes the .NET member IsSupersetOf.
      *
-     * @param other the argument of type {@code IEnumerable_1}
+     * @param other the argument of type {@code IEnumerable_1<T>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -477,7 +477,7 @@ public class HashSet_1<T extends IJCOBridgeReflected> extends NetObjectEnumerabl
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.HashSet-1.IsSupersetOf" target="_top">.NET documentation</a>
      */
-    public boolean IsSupersetOf(IEnumerable_1 other) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArgumentNullException {
+    public boolean IsSupersetOf(IEnumerable_1<T> other) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectIsSupersetOf = null;
@@ -494,7 +494,7 @@ public class HashSet_1<T extends IJCOBridgeReflected> extends NetObjectEnumerabl
     /**
      * Invokes the .NET member Overlaps.
      *
-     * @param other the argument of type {@code IEnumerable_1}
+     * @param other the argument of type {@code IEnumerable_1<T>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -508,7 +508,7 @@ public class HashSet_1<T extends IJCOBridgeReflected> extends NetObjectEnumerabl
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.HashSet-1.Overlaps" target="_top">.NET documentation</a>
      */
-    public boolean Overlaps(IEnumerable_1 other) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArgumentNullException {
+    public boolean Overlaps(IEnumerable_1<T> other) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectOverlaps = null;
@@ -549,7 +549,7 @@ public class HashSet_1<T extends IJCOBridgeReflected> extends NetObjectEnumerabl
     /**
      * Invokes the .NET member SetEquals.
      *
-     * @param other the argument of type {@code IEnumerable_1}
+     * @param other the argument of type {@code IEnumerable_1<T>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -564,7 +564,7 @@ public class HashSet_1<T extends IJCOBridgeReflected> extends NetObjectEnumerabl
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.HashSet-1.SetEquals" target="_top">.NET documentation</a>
      */
-    public boolean SetEquals(IEnumerable_1 other) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArgumentNullException, system.IndexOutOfRangeException {
+    public boolean SetEquals(IEnumerable_1<T> other) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSetEquals = null;
@@ -665,7 +665,7 @@ public class HashSet_1<T extends IJCOBridgeReflected> extends NetObjectEnumerabl
     /**
      * Invokes the .NET member RemoveWhere.
      *
-     * @param match the argument of type {@code Predicate_1}
+     * @param match the argument of type {@code Predicate_1<T>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -679,7 +679,7 @@ public class HashSet_1<T extends IJCOBridgeReflected> extends NetObjectEnumerabl
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.HashSet-1.RemoveWhere" target="_top">.NET documentation</a>
      */
-    public int RemoveWhere(Predicate_1 match) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArgumentNullException {
+    public int RemoveWhere(Predicate_1<T> match) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectRemoveWhere = null;
@@ -827,7 +827,7 @@ public class HashSet_1<T extends IJCOBridgeReflected> extends NetObjectEnumerabl
     /**
      * Invokes the .NET member ExceptWith.
      *
-     * @param other the argument of type {@code IEnumerable_1}
+     * @param other the argument of type {@code IEnumerable_1<T>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -841,7 +841,7 @@ public class HashSet_1<T extends IJCOBridgeReflected> extends NetObjectEnumerabl
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.HashSet-1.ExceptWith" target="_top">.NET documentation</a>
      */
-    public void ExceptWith(IEnumerable_1 other) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArgumentNullException, system.IndexOutOfRangeException {
+    public void ExceptWith(IEnumerable_1<T> other) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -883,7 +883,7 @@ public class HashSet_1<T extends IJCOBridgeReflected> extends NetObjectEnumerabl
     /**
      * Invokes the .NET member IntersectWith.
      *
-     * @param other the argument of type {@code IEnumerable_1}
+     * @param other the argument of type {@code IEnumerable_1<T>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -897,7 +897,7 @@ public class HashSet_1<T extends IJCOBridgeReflected> extends NetObjectEnumerabl
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.HashSet-1.IntersectWith" target="_top">.NET documentation</a>
      */
-    public void IntersectWith(IEnumerable_1 other) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArgumentNullException, system.IndexOutOfRangeException {
+    public void IntersectWith(IEnumerable_1<T> other) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -940,7 +940,7 @@ public class HashSet_1<T extends IJCOBridgeReflected> extends NetObjectEnumerabl
     /**
      * Invokes the .NET member SymmetricExceptWith.
      *
-     * @param other the argument of type {@code IEnumerable_1}
+     * @param other the argument of type {@code IEnumerable_1<T>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -954,7 +954,7 @@ public class HashSet_1<T extends IJCOBridgeReflected> extends NetObjectEnumerabl
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.HashSet-1.SymmetricExceptWith" target="_top">.NET documentation</a>
      */
-    public void SymmetricExceptWith(IEnumerable_1 other) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArgumentNullException, system.IndexOutOfRangeException {
+    public void SymmetricExceptWith(IEnumerable_1<T> other) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -1019,7 +1019,7 @@ public class HashSet_1<T extends IJCOBridgeReflected> extends NetObjectEnumerabl
     /**
      * Invokes the .NET member UnionWith.
      *
-     * @param other the argument of type {@code IEnumerable_1}
+     * @param other the argument of type {@code IEnumerable_1<T>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -1034,7 +1034,7 @@ public class HashSet_1<T extends IJCOBridgeReflected> extends NetObjectEnumerabl
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.HashSet-1.UnionWith" target="_top">.NET documentation</a>
      */
-    public void UnionWith(IEnumerable_1 other) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
+    public void UnionWith(IEnumerable_1<T> other) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

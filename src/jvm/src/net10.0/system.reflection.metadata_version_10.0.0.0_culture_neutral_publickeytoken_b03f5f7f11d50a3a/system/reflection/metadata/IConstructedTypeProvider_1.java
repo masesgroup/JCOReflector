@@ -123,7 +123,7 @@ public interface IConstructedTypeProvider_1<TType extends IJCOBridgeReflected> e
 
     public TType GetByReferenceType(TType elementType) throws Throwable;
 
-    public TType GetGenericInstantiation(TType genericType, ImmutableArray_1 typeArguments) throws Throwable;
+    public TType GetGenericInstantiation(TType genericType, ImmutableArray_1<TType> typeArguments) throws Throwable;
 
     public TType GetPointerType(TType elementType) throws Throwable;
 

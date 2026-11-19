@@ -213,7 +213,7 @@ public class FreezableCollection_1<T extends IJCOBridgeReflected> extends system
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param collection the argument of type {@code IEnumerable_1}
+     * @param collection the argument of type {@code IEnumerable_1<T>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
@@ -229,7 +229,7 @@ public class FreezableCollection_1<T extends IJCOBridgeReflected> extends system
      * @throws system.globalization.CultureNotFoundException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.FreezableCollection-1.-ctor" target="_top">.NET documentation</a>
      */
-    public FreezableCollection_1(IEnumerable_1 collection) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException {
+    public FreezableCollection_1(IEnumerable_1<T> collection) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);

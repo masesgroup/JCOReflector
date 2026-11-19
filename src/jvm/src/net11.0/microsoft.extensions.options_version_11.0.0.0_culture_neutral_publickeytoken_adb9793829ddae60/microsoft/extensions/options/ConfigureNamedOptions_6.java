@@ -161,11 +161,11 @@ public class ConfigureNamedOptions_6<TOptions extends IJCOBridgeReflected, TDep1
      * @param dependency3 the argument of type {@code TDep3}
      * @param dependency4 the argument of type {@code TDep4}
      * @param dependency5 the argument of type {@code TDep5}
-     * @param action the argument of type {@code Action_6}
+     * @param action the argument of type {@code Action_6<TOptions, TDep1, TDep2, TDep3, TDep4, TDep5>}
      * @throws Throwable if the .NET constructor fails
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Options.ConfigureNamedOptions-6.-ctor" target="_top">.NET documentation</a>
      */
-    public ConfigureNamedOptions_6(java.lang.String name, TDep1 dependency1, TDep2 dependency2, TDep3 dependency3, TDep4 dependency4, TDep5 dependency5, Action_6 action) throws Throwable {
+    public ConfigureNamedOptions_6(java.lang.String name, TDep1 dependency1, TDep2 dependency2, TDep3 dependency3, TDep4 dependency4, TDep5 dependency5, Action_6<TOptions, TDep1, TDep2, TDep3, TDep4, TDep5> action) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);

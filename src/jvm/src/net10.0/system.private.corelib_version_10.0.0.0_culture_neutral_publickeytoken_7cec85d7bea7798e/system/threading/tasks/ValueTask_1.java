@@ -161,7 +161,7 @@ public class ValueTask_1<TResult extends IJCOBridgeReflected> extends system.Val
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param source the argument of type {@code IValueTaskSource_1}
+     * @param source the argument of type {@code IValueTaskSource_1<TResult>}
      * @param token the argument of type {@code short}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
@@ -176,7 +176,7 @@ public class ValueTask_1<TResult extends IJCOBridgeReflected> extends system.Val
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.ValueTask-1.-ctor" target="_top">.NET documentation</a>
      */
-    public ValueTask_1(IValueTaskSource_1 source, short token) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+    public ValueTask_1(IValueTaskSource_1<TResult> source, short token) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -191,7 +191,7 @@ public class ValueTask_1<TResult extends IJCOBridgeReflected> extends system.Val
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param task the argument of type {@code Task_1}
+     * @param task the argument of type {@code Task_1<TResult>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -205,7 +205,7 @@ public class ValueTask_1<TResult extends IJCOBridgeReflected> extends system.Val
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.ValueTask-1.-ctor" target="_top">.NET documentation</a>
      */
-    public ValueTask_1(Task_1 task) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+    public ValueTask_1(Task_1<TResult> task) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);

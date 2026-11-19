@@ -303,7 +303,7 @@ public class ConditionalWeakTable_2<TKey extends IJCOBridgeReflected, TValue ext
      * Invokes the .NET member GetOrAdd.
      *
      * @param key the argument of type {@code TKey}
-     * @param valueFactory the argument of type {@code Func_2}
+     * @param valueFactory the argument of type {@code Func_2<TKey, TValue>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -315,7 +315,7 @@ public class ConditionalWeakTable_2<TKey extends IJCOBridgeReflected, TValue ext
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.ConditionalWeakTable-2.GetOrAdd" target="_top">.NET documentation</a>
      */
-    public TValue GetOrAdd(TKey key, Func_2 valueFactory) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
+    public TValue GetOrAdd(TKey key, Func_2<TKey, TValue> valueFactory) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetOrAdd = null;

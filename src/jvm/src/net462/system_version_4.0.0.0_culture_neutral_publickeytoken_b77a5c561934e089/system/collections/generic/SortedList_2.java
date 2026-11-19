@@ -206,7 +206,7 @@ public class SortedList_2<TKey extends IJCOBridgeReflected, TValue extends IJCOB
      * Initializes a new instance by invoking the .NET constructor.
      *
      * @param capacity the argument of type {@code int}
-     * @param comparer the argument of type {@code IComparer_1}
+     * @param comparer the argument of type {@code IComparer_1<TKey>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
@@ -219,7 +219,7 @@ public class SortedList_2<TKey extends IJCOBridgeReflected, TValue extends IJCOB
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.SortedList-2.-ctor" target="_top">.NET documentation</a>
      */
-    public SortedList_2(int capacity, IComparer_1 comparer) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+    public SortedList_2(int capacity, IComparer_1<TKey> comparer) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -234,11 +234,11 @@ public class SortedList_2<TKey extends IJCOBridgeReflected, TValue extends IJCOB
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param comparer the argument of type {@code IComparer_1}
+     * @param comparer the argument of type {@code IComparer_1<TKey>}
      * @throws Throwable if the .NET constructor fails
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.SortedList-2.-ctor" target="_top">.NET documentation</a>
      */
-    public SortedList_2(IComparer_1 comparer) throws Throwable {
+    public SortedList_2(IComparer_1<TKey> comparer) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -253,7 +253,7 @@ public class SortedList_2<TKey extends IJCOBridgeReflected, TValue extends IJCOB
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param dictionary the argument of type {@code IDictionary_2}
+     * @param dictionary the argument of type {@code IDictionary_2<TKey, TValue>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
@@ -265,7 +265,7 @@ public class SortedList_2<TKey extends IJCOBridgeReflected, TValue extends IJCOB
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.SortedList-2.-ctor" target="_top">.NET documentation</a>
      */
-    public SortedList_2(IDictionary_2 dictionary) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
+    public SortedList_2(IDictionary_2<TKey, TValue> dictionary) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -280,8 +280,8 @@ public class SortedList_2<TKey extends IJCOBridgeReflected, TValue extends IJCOB
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param dictionary the argument of type {@code IDictionary_2}
-     * @param comparer the argument of type {@code IComparer_1}
+     * @param dictionary the argument of type {@code IDictionary_2<TKey, TValue>}
+     * @param comparer the argument of type {@code IComparer_1<TKey>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
@@ -293,7 +293,7 @@ public class SortedList_2<TKey extends IJCOBridgeReflected, TValue extends IJCOB
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.SortedList-2.-ctor" target="_top">.NET documentation</a>
      */
-    public SortedList_2(IDictionary_2 dictionary, IComparer_1 comparer) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
+    public SortedList_2(IDictionary_2<TKey, TValue> dictionary, IComparer_1<TKey> comparer) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);

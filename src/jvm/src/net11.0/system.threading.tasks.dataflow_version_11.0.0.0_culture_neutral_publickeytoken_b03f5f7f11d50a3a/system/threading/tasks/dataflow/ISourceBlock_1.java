@@ -124,15 +124,15 @@ public interface ISourceBlock_1<TOutput extends IJCOBridgeReflected> extends IJC
 
     // Methods section
     
-    public boolean ReserveMessage(DataflowMessageHeader messageHeader, ITargetBlock_1 target) throws Throwable;
+    public boolean ReserveMessage(DataflowMessageHeader messageHeader, ITargetBlock_1<TOutput> target) throws Throwable;
 
-    public IDisposable LinkTo(ITargetBlock_1 target, DataflowLinkOptions linkOptions) throws Throwable;
+    public IDisposable LinkTo(ITargetBlock_1<TOutput> target, DataflowLinkOptions linkOptions) throws Throwable;
 
-    public TOutput ConsumeMessage(DataflowMessageHeader messageHeader, ITargetBlock_1 target, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> messageConsumed) throws Throwable;
+    public TOutput ConsumeMessage(DataflowMessageHeader messageHeader, ITargetBlock_1<TOutput> target, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> messageConsumed) throws Throwable;
 
 
 
-    public void ReleaseReservation(DataflowMessageHeader messageHeader, ITargetBlock_1 target) throws Throwable;
+    public void ReleaseReservation(DataflowMessageHeader messageHeader, ITargetBlock_1<TOutput> target) throws Throwable;
 
 
     

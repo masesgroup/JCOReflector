@@ -245,7 +245,7 @@ public class OptionsCache_1<TOptions extends IJCOBridgeReflected> extends NetObj
      * Invokes the .NET member GetOrAdd.
      *
      * @param name the argument of type {@code java.lang.String}
-     * @param createOptions the argument of type {@code Func_1}
+     * @param createOptions the argument of type {@code Func_1<TOptions>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -262,7 +262,7 @@ public class OptionsCache_1<TOptions extends IJCOBridgeReflected> extends NetObj
      * @throws system.NullReferenceException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Options.OptionsCache-1.GetOrAdd" target="_top">.NET documentation</a>
      */
-    public TOptions GetOrAdd(java.lang.String name, Func_1 createOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.MissingMemberException, system.NullReferenceException {
+    public TOptions GetOrAdd(java.lang.String name, Func_1<TOptions> createOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.MissingMemberException, system.NullReferenceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetOrAdd = null;

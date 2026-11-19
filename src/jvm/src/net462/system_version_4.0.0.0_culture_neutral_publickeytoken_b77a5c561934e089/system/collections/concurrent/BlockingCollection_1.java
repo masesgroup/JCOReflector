@@ -207,13 +207,13 @@ public class BlockingCollection_1<T extends IJCOBridgeReflected> extends NetObje
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param collection the argument of type {@code IProducerConsumerCollection_1}
+     * @param collection the argument of type {@code IProducerConsumerCollection_1<T>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Concurrent.BlockingCollection-1.-ctor" target="_top">.NET documentation</a>
      */
-    public BlockingCollection_1(IProducerConsumerCollection_1 collection) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
+    public BlockingCollection_1(IProducerConsumerCollection_1<T> collection) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -228,7 +228,7 @@ public class BlockingCollection_1<T extends IJCOBridgeReflected> extends NetObje
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param collection the argument of type {@code IProducerConsumerCollection_1}
+     * @param collection the argument of type {@code IProducerConsumerCollection_1<T>}
      * @param boundedCapacity the argument of type {@code int}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -244,7 +244,7 @@ public class BlockingCollection_1<T extends IJCOBridgeReflected> extends NetObje
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Concurrent.BlockingCollection-1.-ctor" target="_top">.NET documentation</a>
      */
-    public BlockingCollection_1(IProducerConsumerCollection_1 collection, int boundedCapacity) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+    public BlockingCollection_1(IProducerConsumerCollection_1<T> collection, int boundedCapacity) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);

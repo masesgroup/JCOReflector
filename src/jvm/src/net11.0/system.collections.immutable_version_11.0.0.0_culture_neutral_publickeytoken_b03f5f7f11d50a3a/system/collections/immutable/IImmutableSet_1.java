@@ -123,17 +123,17 @@ public interface IImmutableSet_1<T extends IJCOBridgeReflected> extends IJCOBrid
     
     public boolean Contains(T value) throws Throwable;
 
-    public boolean IsProperSubsetOf(IEnumerable_1 other) throws Throwable;
+    public boolean IsProperSubsetOf(IEnumerable_1<T> other) throws Throwable;
 
-    public boolean IsProperSupersetOf(IEnumerable_1 other) throws Throwable;
+    public boolean IsProperSupersetOf(IEnumerable_1<T> other) throws Throwable;
 
-    public boolean IsSubsetOf(IEnumerable_1 other) throws Throwable;
+    public boolean IsSubsetOf(IEnumerable_1<T> other) throws Throwable;
 
-    public boolean IsSupersetOf(IEnumerable_1 other) throws Throwable;
+    public boolean IsSupersetOf(IEnumerable_1<T> other) throws Throwable;
 
-    public boolean Overlaps(IEnumerable_1 other) throws Throwable;
+    public boolean Overlaps(IEnumerable_1<T> other) throws Throwable;
 
-    public boolean SetEquals(IEnumerable_1 other) throws Throwable;
+    public boolean SetEquals(IEnumerable_1<T> other) throws Throwable;
 
     public boolean TryGetValue(T equalValue, JCORefOut<T> actualValue) throws Throwable;
 
@@ -141,15 +141,15 @@ public interface IImmutableSet_1<T extends IJCOBridgeReflected> extends IJCOBrid
 
     public IImmutableSet_1 Clear() throws Throwable;
 
-    public IImmutableSet_1 Except(IEnumerable_1 other) throws Throwable;
+    public IImmutableSet_1 Except(IEnumerable_1<T> other) throws Throwable;
 
-    public IImmutableSet_1 Intersect(IEnumerable_1 other) throws Throwable;
+    public IImmutableSet_1 Intersect(IEnumerable_1<T> other) throws Throwable;
 
     public IImmutableSet_1 Remove(T value) throws Throwable;
 
-    public IImmutableSet_1 SymmetricExcept(IEnumerable_1 other) throws Throwable;
+    public IImmutableSet_1 SymmetricExcept(IEnumerable_1<T> other) throws Throwable;
 
-    public IImmutableSet_1 Union(IEnumerable_1 other) throws Throwable;
+    public IImmutableSet_1 Union(IEnumerable_1<T> other) throws Throwable;
 
 
     

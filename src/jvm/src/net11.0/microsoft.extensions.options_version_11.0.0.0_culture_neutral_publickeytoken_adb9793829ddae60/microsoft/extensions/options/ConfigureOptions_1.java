@@ -155,11 +155,11 @@ public class ConfigureOptions_1<TOptions extends IJCOBridgeReflected> extends Ne
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param action the argument of type {@code Action_1}
+     * @param action the argument of type {@code Action_1<TOptions>}
      * @throws Throwable if the .NET constructor fails
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Options.ConfigureOptions-1.-ctor" target="_top">.NET documentation</a>
      */
-    public ConfigureOptions_1(Action_1 action) throws Throwable {
+    public ConfigureOptions_1(Action_1<TOptions> action) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);

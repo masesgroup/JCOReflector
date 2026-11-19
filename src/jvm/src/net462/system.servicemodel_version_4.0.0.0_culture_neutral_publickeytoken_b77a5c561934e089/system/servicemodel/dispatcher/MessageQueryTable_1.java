@@ -183,12 +183,12 @@ public class MessageQueryTable_1<TItem extends IJCOBridgeReflected> extends NetO
     /**
      * Invokes the .NET member Contains.
      *
-     * @param item the argument of type {@code KeyValuePair_2}
+     * @param item the argument of type {@code KeyValuePair_2<MessageQuery, TItem>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.MessageQueryTable-1.Contains" target="_top">.NET documentation</a>
      */
-    public boolean Contains(KeyValuePair_2 item) throws Throwable {
+    public boolean Contains(KeyValuePair_2<MessageQuery, TItem> item) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectContains = null;
@@ -228,7 +228,7 @@ public class MessageQueryTable_1<TItem extends IJCOBridgeReflected> extends NetO
     /**
      * Invokes the .NET member Remove.
      *
-     * @param item the argument of type {@code KeyValuePair_2}
+     * @param item the argument of type {@code KeyValuePair_2<MessageQuery, TItem>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -236,7 +236,7 @@ public class MessageQueryTable_1<TItem extends IJCOBridgeReflected> extends NetO
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.MessageQueryTable-1.Remove" target="_top">.NET documentation</a>
      */
-    public boolean Remove(KeyValuePair_2 item) throws Throwable, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.NotSupportedException {
+    public boolean Remove(KeyValuePair_2<MessageQuery, TItem> item) throws Throwable, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectRemove = null;
@@ -372,7 +372,7 @@ public class MessageQueryTable_1<TItem extends IJCOBridgeReflected> extends NetO
     /**
      * Invokes the .NET member Add.
      *
-     * @param item the argument of type {@code KeyValuePair_2}
+     * @param item the argument of type {@code KeyValuePair_2<MessageQuery, TItem>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.IndexOutOfRangeException if the .NET member raises it
@@ -389,7 +389,7 @@ public class MessageQueryTable_1<TItem extends IJCOBridgeReflected> extends NetO
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.MessageQueryTable-1.Add" target="_top">.NET documentation</a>
      */
-    public void Add(KeyValuePair_2 item) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
+    public void Add(KeyValuePair_2<MessageQuery, TItem> item) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

@@ -208,7 +208,7 @@ public class List_1<T extends IJCOBridgeReflected> extends NetObjectEnumerable  
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param collection the argument of type {@code IEnumerable_1}
+     * @param collection the argument of type {@code IEnumerable_1<T>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -222,7 +222,7 @@ public class List_1<T extends IJCOBridgeReflected> extends NetObjectEnumerable  
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.List-1.-ctor" target="_top">.NET documentation</a>
      */
-    public List_1(IEnumerable_1 collection) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+    public List_1(IEnumerable_1<T> collection) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -269,7 +269,7 @@ public class List_1<T extends IJCOBridgeReflected> extends NetObjectEnumerable  
     /**
      * Invokes the .NET member Exists.
      *
-     * @param match the argument of type {@code Predicate_1}
+     * @param match the argument of type {@code Predicate_1<T>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.NotSupportedException if the .NET member raises it
@@ -278,7 +278,7 @@ public class List_1<T extends IJCOBridgeReflected> extends NetObjectEnumerable  
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.List-1.Exists" target="_top">.NET documentation</a>
      */
-    public boolean Exists(Predicate_1 match) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+    public boolean Exists(Predicate_1<T> match) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectExists = null;
@@ -323,7 +323,7 @@ public class List_1<T extends IJCOBridgeReflected> extends NetObjectEnumerable  
     /**
      * Invokes the .NET member TrueForAll.
      *
-     * @param match the argument of type {@code Predicate_1}
+     * @param match the argument of type {@code Predicate_1<T>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -338,7 +338,7 @@ public class List_1<T extends IJCOBridgeReflected> extends NetObjectEnumerable  
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.List-1.TrueForAll" target="_top">.NET documentation</a>
      */
-    public boolean TrueForAll(Predicate_1 match) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+    public boolean TrueForAll(Predicate_1<T> match) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectTrueForAll = null;
@@ -358,7 +358,7 @@ public class List_1<T extends IJCOBridgeReflected> extends NetObjectEnumerable  
      * @param index the argument of type {@code int}
      * @param count the argument of type {@code int}
      * @param item the argument of type {@code T}
-     * @param comparer the argument of type {@code IComparer_1}
+     * @param comparer the argument of type {@code IComparer_1<T>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -372,7 +372,7 @@ public class List_1<T extends IJCOBridgeReflected> extends NetObjectEnumerable  
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.List-1.BinarySearch" target="_top">.NET documentation</a>
      */
-    public int BinarySearch(int index, int count, T item, IComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public int BinarySearch(int index, int count, T item, IComparer_1<T> comparer) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectBinarySearch = null;
@@ -416,7 +416,7 @@ public class List_1<T extends IJCOBridgeReflected> extends NetObjectEnumerable  
      * Invokes the .NET member BinarySearch.
      *
      * @param item the argument of type {@code T}
-     * @param comparer the argument of type {@code IComparer_1}
+     * @param comparer the argument of type {@code IComparer_1<T>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -426,7 +426,7 @@ public class List_1<T extends IJCOBridgeReflected> extends NetObjectEnumerable  
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.List-1.BinarySearch" target="_top">.NET documentation</a>
      */
-    public int BinarySearch(T item, IComparer_1 comparer) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+    public int BinarySearch(T item, IComparer_1<T> comparer) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectBinarySearch = null;
@@ -581,7 +581,7 @@ public class List_1<T extends IJCOBridgeReflected> extends NetObjectEnumerable  
      *
      * @param startIndex the argument of type {@code int}
      * @param count the argument of type {@code int}
-     * @param match the argument of type {@code Predicate_1}
+     * @param match the argument of type {@code Predicate_1<T>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -595,7 +595,7 @@ public class List_1<T extends IJCOBridgeReflected> extends NetObjectEnumerable  
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.List-1.FindIndex" target="_top">.NET documentation</a>
      */
-    public int FindIndex(int startIndex, int count, Predicate_1 match) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public int FindIndex(int startIndex, int count, Predicate_1<T> match) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectFindIndex = null;
@@ -639,7 +639,7 @@ public class List_1<T extends IJCOBridgeReflected> extends NetObjectEnumerable  
      * Invokes the .NET member FindIndex.
      *
      * @param startIndex the argument of type {@code int}
-     * @param match the argument of type {@code Predicate_1}
+     * @param match the argument of type {@code Predicate_1<T>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -649,7 +649,7 @@ public class List_1<T extends IJCOBridgeReflected> extends NetObjectEnumerable  
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.List-1.FindIndex" target="_top">.NET documentation</a>
      */
-    public int FindIndex(int startIndex, Predicate_1 match) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+    public int FindIndex(int startIndex, Predicate_1<T> match) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectFindIndex = null;
@@ -692,7 +692,7 @@ public class List_1<T extends IJCOBridgeReflected> extends NetObjectEnumerable  
     /**
      * Invokes the .NET member FindIndex.
      *
-     * @param match the argument of type {@code Predicate_1}
+     * @param match the argument of type {@code Predicate_1<T>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -702,7 +702,7 @@ public class List_1<T extends IJCOBridgeReflected> extends NetObjectEnumerable  
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.List-1.FindIndex" target="_top">.NET documentation</a>
      */
-    public int FindIndex(Predicate_1 match) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+    public int FindIndex(Predicate_1<T> match) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectFindIndex = null;
@@ -747,7 +747,7 @@ public class List_1<T extends IJCOBridgeReflected> extends NetObjectEnumerable  
      *
      * @param startIndex the argument of type {@code int}
      * @param count the argument of type {@code int}
-     * @param match the argument of type {@code Predicate_1}
+     * @param match the argument of type {@code Predicate_1<T>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -762,7 +762,7 @@ public class List_1<T extends IJCOBridgeReflected> extends NetObjectEnumerable  
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.List-1.FindLastIndex" target="_top">.NET documentation</a>
      */
-    public int FindLastIndex(int startIndex, int count, Predicate_1 match) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+    public int FindLastIndex(int startIndex, int count, Predicate_1<T> match) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectFindLastIndex = null;
@@ -806,7 +806,7 @@ public class List_1<T extends IJCOBridgeReflected> extends NetObjectEnumerable  
      * Invokes the .NET member FindLastIndex.
      *
      * @param startIndex the argument of type {@code int}
-     * @param match the argument of type {@code Predicate_1}
+     * @param match the argument of type {@code Predicate_1<T>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -820,7 +820,7 @@ public class List_1<T extends IJCOBridgeReflected> extends NetObjectEnumerable  
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.List-1.FindLastIndex" target="_top">.NET documentation</a>
      */
-    public int FindLastIndex(int startIndex, Predicate_1 match) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public int FindLastIndex(int startIndex, Predicate_1<T> match) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectFindLastIndex = null;
@@ -863,7 +863,7 @@ public class List_1<T extends IJCOBridgeReflected> extends NetObjectEnumerable  
     /**
      * Invokes the .NET member FindLastIndex.
      *
-     * @param match the argument of type {@code Predicate_1}
+     * @param match the argument of type {@code Predicate_1<T>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -877,7 +877,7 @@ public class List_1<T extends IJCOBridgeReflected> extends NetObjectEnumerable  
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.List-1.FindLastIndex" target="_top">.NET documentation</a>
      */
-    public int FindLastIndex(Predicate_1 match) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public int FindLastIndex(Predicate_1<T> match) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectFindLastIndex = null;
@@ -1265,7 +1265,7 @@ public class List_1<T extends IJCOBridgeReflected> extends NetObjectEnumerable  
     /**
      * Invokes the .NET member RemoveAll.
      *
-     * @param match the argument of type {@code Predicate_1}
+     * @param match the argument of type {@code Predicate_1<T>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -1280,7 +1280,7 @@ public class List_1<T extends IJCOBridgeReflected> extends NetObjectEnumerable  
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.List-1.RemoveAll" target="_top">.NET documentation</a>
      */
-    public int RemoveAll(Predicate_1 match) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+    public int RemoveAll(Predicate_1<T> match) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectRemoveAll = null;
@@ -1323,7 +1323,7 @@ public class List_1<T extends IJCOBridgeReflected> extends NetObjectEnumerable  
     /**
      * Invokes the .NET member FindAll.
      *
-     * @param match the argument of type {@code Predicate_1}
+     * @param match the argument of type {@code Predicate_1<T>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -1338,7 +1338,7 @@ public class List_1<T extends IJCOBridgeReflected> extends NetObjectEnumerable  
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.List-1.FindAll" target="_top">.NET documentation</a>
      */
-    public List_1 FindAll(Predicate_1 match) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+    public List_1 FindAll(Predicate_1<T> match) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectFindAll = null;
@@ -1482,7 +1482,7 @@ public class List_1<T extends IJCOBridgeReflected> extends NetObjectEnumerable  
     /**
      * Invokes the .NET member Find.
      *
-     * @param match the argument of type {@code Predicate_1}
+     * @param match the argument of type {@code Predicate_1<T>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -1497,7 +1497,7 @@ public class List_1<T extends IJCOBridgeReflected> extends NetObjectEnumerable  
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.List-1.Find" target="_top">.NET documentation</a>
      */
-    public T Find(Predicate_1 match) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+    public T Find(Predicate_1<T> match) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectFind = null;
@@ -1514,7 +1514,7 @@ public class List_1<T extends IJCOBridgeReflected> extends NetObjectEnumerable  
     /**
      * Invokes the .NET member FindLast.
      *
-     * @param match the argument of type {@code Predicate_1}
+     * @param match the argument of type {@code Predicate_1<T>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -1529,7 +1529,7 @@ public class List_1<T extends IJCOBridgeReflected> extends NetObjectEnumerable  
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.List-1.FindLast" target="_top">.NET documentation</a>
      */
-    public T FindLast(Predicate_1 match) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+    public T FindLast(Predicate_1<T> match) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectFindLast = null;
@@ -1607,7 +1607,7 @@ public T[] ToArray() throws Throwable, system.ArgumentException, system.NotSuppo
     /**
      * Invokes the .NET member AddRange.
      *
-     * @param collection the argument of type {@code IEnumerable_1}
+     * @param collection the argument of type {@code IEnumerable_1<T>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -1621,7 +1621,7 @@ public T[] ToArray() throws Throwable, system.ArgumentException, system.NotSuppo
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.List-1.AddRange" target="_top">.NET documentation</a>
      */
-    public void AddRange(IEnumerable_1 collection) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+    public void AddRange(IEnumerable_1<T> collection) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -1742,7 +1742,7 @@ public T[] ToArray() throws Throwable, system.ArgumentException, system.NotSuppo
     /**
      * Invokes the .NET member ForEach.
      *
-     * @param action the argument of type {@code Action_1}
+     * @param action the argument of type {@code Action_1<T>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -1756,7 +1756,7 @@ public T[] ToArray() throws Throwable, system.ArgumentException, system.NotSuppo
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.List-1.ForEach" target="_top">.NET documentation</a>
      */
-    public void ForEach(Action_1 action) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+    public void ForEach(Action_1<T> action) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -1797,7 +1797,7 @@ public T[] ToArray() throws Throwable, system.ArgumentException, system.NotSuppo
      * Invokes the .NET member InsertRange.
      *
      * @param index the argument of type {@code int}
-     * @param collection the argument of type {@code IEnumerable_1}
+     * @param collection the argument of type {@code IEnumerable_1<T>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -1811,7 +1811,7 @@ public T[] ToArray() throws Throwable, system.ArgumentException, system.NotSuppo
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.List-1.InsertRange" target="_top">.NET documentation</a>
      */
-    public void InsertRange(int index, IEnumerable_1 collection) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+    public void InsertRange(int index, IEnumerable_1<T> collection) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -1951,7 +1951,7 @@ public T[] ToArray() throws Throwable, system.ArgumentException, system.NotSuppo
      *
      * @param index the argument of type {@code int}
      * @param count the argument of type {@code int}
-     * @param comparer the argument of type {@code IComparer_1}
+     * @param comparer the argument of type {@code IComparer_1<T>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -1964,7 +1964,7 @@ public T[] ToArray() throws Throwable, system.ArgumentException, system.NotSuppo
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.List-1.Sort" target="_top">.NET documentation</a>
      */
-    public void Sort(int index, int count, IComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public void Sort(int index, int count, IComparer_1<T> comparer) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -1977,7 +1977,7 @@ public T[] ToArray() throws Throwable, system.ArgumentException, system.NotSuppo
     /**
      * Invokes the .NET member Sort.
      *
-     * @param comparer the argument of type {@code IComparer_1}
+     * @param comparer the argument of type {@code IComparer_1<T>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.NotSupportedException if the .NET member raises it
@@ -1987,7 +1987,7 @@ public T[] ToArray() throws Throwable, system.ArgumentException, system.NotSuppo
      * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.List-1.Sort" target="_top">.NET documentation</a>
      */
-    public void Sort(IComparer_1 comparer) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
+    public void Sort(IComparer_1<T> comparer) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -2000,7 +2000,7 @@ public T[] ToArray() throws Throwable, system.ArgumentException, system.NotSuppo
     /**
      * Invokes the .NET member Sort.
      *
-     * @param comparison the argument of type {@code Comparison_1}
+     * @param comparison the argument of type {@code Comparison_1<T>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -2014,7 +2014,7 @@ public T[] ToArray() throws Throwable, system.ArgumentException, system.NotSuppo
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.List-1.Sort" target="_top">.NET documentation</a>
      */
-    public void Sort(Comparison_1 comparison) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+    public void Sort(Comparison_1<T> comparison) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

@@ -161,7 +161,7 @@ public class SignatureDecoder_2<TType extends IJCOBridgeReflected, TGenericConte
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param provider the argument of type {@code ISignatureTypeProvider_2}
+     * @param provider the argument of type {@code ISignatureTypeProvider_2<TType, TGenericContext>}
      * @param metadataReader the argument of type {@code MetadataReader}
      * @param genericContext the argument of type {@code TGenericContext}
      * @throws Throwable if the .NET constructor fails
@@ -177,7 +177,7 @@ public class SignatureDecoder_2<TType extends IJCOBridgeReflected, TGenericConte
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.SignatureDecoder-2.-ctor" target="_top">.NET documentation</a>
      */
-    public SignatureDecoder_2(ISignatureTypeProvider_2 provider, MetadataReader metadataReader, TGenericContext genericContext) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+    public SignatureDecoder_2(ISignatureTypeProvider_2<TType, TGenericContext> provider, MetadataReader metadataReader, TGenericContext genericContext) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);

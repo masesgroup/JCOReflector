@@ -42,6 +42,7 @@ import system.collections.generic.IComparer_1;
 import system.collections.generic.IComparer_1Implementation;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.ValueTuple_2;
 import system.collections.generic.IEqualityComparer_1;
 import system.collections.generic.IEqualityComparer_1Implementation;
 
@@ -176,7 +177,7 @@ public class PriorityQueue_2<TElement extends IJCOBridgeReflected, TPriority ext
      * Initializes a new instance by invoking the .NET constructor.
      *
      * @param initialCapacity the argument of type {@code int}
-     * @param comparer the argument of type {@code IComparer_1}
+     * @param comparer the argument of type {@code IComparer_1<TPriority>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -190,7 +191,7 @@ public class PriorityQueue_2<TElement extends IJCOBridgeReflected, TPriority ext
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.PriorityQueue-2.-ctor" target="_top">.NET documentation</a>
      */
-    public PriorityQueue_2(int initialCapacity, IComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+    public PriorityQueue_2(int initialCapacity, IComparer_1<TPriority> comparer) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -235,11 +236,11 @@ public class PriorityQueue_2<TElement extends IJCOBridgeReflected, TPriority ext
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param comparer the argument of type {@code IComparer_1}
+     * @param comparer the argument of type {@code IComparer_1<TPriority>}
      * @throws Throwable if the .NET constructor fails
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.PriorityQueue-2.-ctor" target="_top">.NET documentation</a>
      */
-    public PriorityQueue_2(IComparer_1 comparer) throws Throwable {
+    public PriorityQueue_2(IComparer_1<TPriority> comparer) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -254,8 +255,8 @@ public class PriorityQueue_2<TElement extends IJCOBridgeReflected, TPriority ext
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param items the argument of type {@code IEnumerable_1}
-     * @param comparer the argument of type {@code IComparer_1}
+     * @param items the argument of type {@code IEnumerable_1<ValueTuple_2<TElement, TPriority>>}
+     * @param comparer the argument of type {@code IComparer_1<TPriority>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -268,7 +269,7 @@ public class PriorityQueue_2<TElement extends IJCOBridgeReflected, TPriority ext
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.PriorityQueue-2.-ctor" target="_top">.NET documentation</a>
      */
-    public PriorityQueue_2(IEnumerable_1 items, IComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+    public PriorityQueue_2(IEnumerable_1<ValueTuple_2<TElement, TPriority>> items, IComparer_1<TPriority> comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -283,7 +284,7 @@ public class PriorityQueue_2<TElement extends IJCOBridgeReflected, TPriority ext
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param items the argument of type {@code IEnumerable_1}
+     * @param items the argument of type {@code IEnumerable_1<ValueTuple_2<TElement, TPriority>>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.NotSupportedException if the .NET member raises it
@@ -293,7 +294,7 @@ public class PriorityQueue_2<TElement extends IJCOBridgeReflected, TPriority ext
      * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.PriorityQueue-2.-ctor" target="_top">.NET documentation</a>
      */
-    public PriorityQueue_2(IEnumerable_1 items) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
+    public PriorityQueue_2(IEnumerable_1<ValueTuple_2<TElement, TPriority>> items) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -315,7 +316,7 @@ public class PriorityQueue_2<TElement extends IJCOBridgeReflected, TPriority ext
      * @param element the argument of type {@code TElement}
      * @param removedElement the argument of type {@code JCORefOut<TElement>}
      * @param priority the argument of type {@code JCORefOut<TPriority>}
-     * @param equalityComparer the argument of type {@code IEqualityComparer_1}
+     * @param equalityComparer the argument of type {@code IEqualityComparer_1<TElement>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.NotSupportedException if the .NET member raises it
@@ -326,7 +327,7 @@ public class PriorityQueue_2<TElement extends IJCOBridgeReflected, TPriority ext
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.PriorityQueue-2.Remove" target="_top">.NET documentation</a>
      */
-    public boolean Remove(TElement element, JCORefOut<TElement> removedElement, JCORefOut<TPriority> priority, IEqualityComparer_1 equalityComparer) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException {
+    public boolean Remove(TElement element, JCORefOut<TElement> removedElement, JCORefOut<TPriority> priority, IEqualityComparer_1<TElement> equalityComparer) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectRemove = null;
@@ -607,7 +608,7 @@ public class PriorityQueue_2<TElement extends IJCOBridgeReflected, TPriority ext
     /**
      * Invokes the .NET member EnqueueRange.
      *
-     * @param items the argument of type {@code IEnumerable_1}
+     * @param items the argument of type {@code IEnumerable_1<ValueTuple_2<TElement, TPriority>>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -620,7 +621,7 @@ public class PriorityQueue_2<TElement extends IJCOBridgeReflected, TPriority ext
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.PriorityQueue-2.EnqueueRange" target="_top">.NET documentation</a>
      */
-    public void EnqueueRange(IEnumerable_1 items) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+    public void EnqueueRange(IEnumerable_1<ValueTuple_2<TElement, TPriority>> items) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -633,7 +634,7 @@ public class PriorityQueue_2<TElement extends IJCOBridgeReflected, TPriority ext
     /**
      * Invokes the .NET member EnqueueRange.
      *
-     * @param elements the argument of type {@code IEnumerable_1}
+     * @param elements the argument of type {@code IEnumerable_1<TElement>}
      * @param priority the argument of type {@code TPriority}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -647,7 +648,7 @@ public class PriorityQueue_2<TElement extends IJCOBridgeReflected, TPriority ext
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.PriorityQueue-2.EnqueueRange" target="_top">.NET documentation</a>
      */
-    public void EnqueueRange(IEnumerable_1 elements, TPriority priority) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+    public void EnqueueRange(IEnumerable_1<TElement> elements, TPriority priority) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

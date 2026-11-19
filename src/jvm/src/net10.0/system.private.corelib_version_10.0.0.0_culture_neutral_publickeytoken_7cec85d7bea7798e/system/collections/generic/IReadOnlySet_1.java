@@ -121,17 +121,17 @@ public interface IReadOnlySet_1<T extends IJCOBridgeReflected> extends IJCOBridg
     
     public boolean Contains(T item) throws Throwable;
 
-    public boolean IsProperSubsetOf(IEnumerable_1 other) throws Throwable;
+    public boolean IsProperSubsetOf(IEnumerable_1<T> other) throws Throwable;
 
-    public boolean IsProperSupersetOf(IEnumerable_1 other) throws Throwable;
+    public boolean IsProperSupersetOf(IEnumerable_1<T> other) throws Throwable;
 
-    public boolean IsSubsetOf(IEnumerable_1 other) throws Throwable;
+    public boolean IsSubsetOf(IEnumerable_1<T> other) throws Throwable;
 
-    public boolean IsSupersetOf(IEnumerable_1 other) throws Throwable;
+    public boolean IsSupersetOf(IEnumerable_1<T> other) throws Throwable;
 
-    public boolean Overlaps(IEnumerable_1 other) throws Throwable;
+    public boolean Overlaps(IEnumerable_1<T> other) throws Throwable;
 
-    public boolean SetEquals(IEnumerable_1 other) throws Throwable;
+    public boolean SetEquals(IEnumerable_1<T> other) throws Throwable;
 
 
     

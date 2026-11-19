@@ -156,11 +156,11 @@ public class PostConfigureOptions_1<TOptions extends IJCOBridgeReflected> extend
      * Initializes a new instance by invoking the .NET constructor.
      *
      * @param name the argument of type {@code java.lang.String}
-     * @param action the argument of type {@code Action_1}
+     * @param action the argument of type {@code Action_1<TOptions>}
      * @throws Throwable if the .NET constructor fails
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Options.PostConfigureOptions-1.-ctor" target="_top">.NET documentation</a>
      */
-    public PostConfigureOptions_1(java.lang.String name, Action_1 action) throws Throwable {
+    public PostConfigureOptions_1(java.lang.String name, Action_1<TOptions> action) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);

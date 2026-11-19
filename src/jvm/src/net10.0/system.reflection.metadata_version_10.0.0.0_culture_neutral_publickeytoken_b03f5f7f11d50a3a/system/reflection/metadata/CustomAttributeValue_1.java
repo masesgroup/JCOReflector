@@ -40,6 +40,8 @@ import java.util.ArrayList;
 // Import section
 import system.ValueType;
 import system.collections.immutable.ImmutableArray_1;
+import system.reflection.metadata.CustomAttributeTypedArgument_1;
+import system.reflection.metadata.CustomAttributeNamedArgument_1;
 
 
 /**
@@ -156,12 +158,12 @@ public class CustomAttributeValue_1<TType extends IJCOBridgeReflected> extends s
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param fixedArguments the argument of type {@code ImmutableArray_1}
-     * @param namedArguments the argument of type {@code ImmutableArray_1}
+     * @param fixedArguments the argument of type {@code ImmutableArray_1<CustomAttributeTypedArgument_1<TType>>}
+     * @param namedArguments the argument of type {@code ImmutableArray_1<CustomAttributeNamedArgument_1<TType>>}
      * @throws Throwable if the .NET constructor fails
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.CustomAttributeValue-1.-ctor" target="_top">.NET documentation</a>
      */
-    public CustomAttributeValue_1(ImmutableArray_1 fixedArguments, ImmutableArray_1 namedArguments) throws Throwable {
+    public CustomAttributeValue_1(ImmutableArray_1<CustomAttributeTypedArgument_1<TType>> fixedArguments, ImmutableArray_1<CustomAttributeNamedArgument_1<TType>> namedArguments) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);

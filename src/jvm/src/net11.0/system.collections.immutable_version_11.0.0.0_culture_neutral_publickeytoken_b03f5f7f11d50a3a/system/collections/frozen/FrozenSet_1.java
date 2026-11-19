@@ -185,7 +185,7 @@ public class FrozenSet_1<T extends IJCOBridgeReflected> extends NetObjectEnumera
     /**
      * Invokes the .NET member IsProperSubsetOf.
      *
-     * @param other the argument of type {@code IEnumerable_1}
+     * @param other the argument of type {@code IEnumerable_1<T>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -197,7 +197,7 @@ public class FrozenSet_1<T extends IJCOBridgeReflected> extends NetObjectEnumera
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Frozen.FrozenSet-1.IsProperSubsetOf" target="_top">.NET documentation</a>
      */
-    public boolean IsProperSubsetOf(IEnumerable_1 other) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
+    public boolean IsProperSubsetOf(IEnumerable_1<T> other) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectIsProperSubsetOf = null;
@@ -214,7 +214,7 @@ public class FrozenSet_1<T extends IJCOBridgeReflected> extends NetObjectEnumera
     /**
      * Invokes the .NET member IsProperSupersetOf.
      *
-     * @param other the argument of type {@code IEnumerable_1}
+     * @param other the argument of type {@code IEnumerable_1<T>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -226,7 +226,7 @@ public class FrozenSet_1<T extends IJCOBridgeReflected> extends NetObjectEnumera
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Frozen.FrozenSet-1.IsProperSupersetOf" target="_top">.NET documentation</a>
      */
-    public boolean IsProperSupersetOf(IEnumerable_1 other) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
+    public boolean IsProperSupersetOf(IEnumerable_1<T> other) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectIsProperSupersetOf = null;
@@ -243,7 +243,7 @@ public class FrozenSet_1<T extends IJCOBridgeReflected> extends NetObjectEnumera
     /**
      * Invokes the .NET member IsSubsetOf.
      *
-     * @param other the argument of type {@code IEnumerable_1}
+     * @param other the argument of type {@code IEnumerable_1<T>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -255,7 +255,7 @@ public class FrozenSet_1<T extends IJCOBridgeReflected> extends NetObjectEnumera
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Frozen.FrozenSet-1.IsSubsetOf" target="_top">.NET documentation</a>
      */
-    public boolean IsSubsetOf(IEnumerable_1 other) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
+    public boolean IsSubsetOf(IEnumerable_1<T> other) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectIsSubsetOf = null;
@@ -272,7 +272,7 @@ public class FrozenSet_1<T extends IJCOBridgeReflected> extends NetObjectEnumera
     /**
      * Invokes the .NET member IsSupersetOf.
      *
-     * @param other the argument of type {@code IEnumerable_1}
+     * @param other the argument of type {@code IEnumerable_1<T>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -284,7 +284,7 @@ public class FrozenSet_1<T extends IJCOBridgeReflected> extends NetObjectEnumera
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Frozen.FrozenSet-1.IsSupersetOf" target="_top">.NET documentation</a>
      */
-    public boolean IsSupersetOf(IEnumerable_1 other) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
+    public boolean IsSupersetOf(IEnumerable_1<T> other) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectIsSupersetOf = null;
@@ -301,7 +301,7 @@ public class FrozenSet_1<T extends IJCOBridgeReflected> extends NetObjectEnumera
     /**
      * Invokes the .NET member Overlaps.
      *
-     * @param other the argument of type {@code IEnumerable_1}
+     * @param other the argument of type {@code IEnumerable_1<T>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -313,7 +313,7 @@ public class FrozenSet_1<T extends IJCOBridgeReflected> extends NetObjectEnumera
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Frozen.FrozenSet-1.Overlaps" target="_top">.NET documentation</a>
      */
-    public boolean Overlaps(IEnumerable_1 other) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
+    public boolean Overlaps(IEnumerable_1<T> other) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectOverlaps = null;
@@ -330,7 +330,7 @@ public class FrozenSet_1<T extends IJCOBridgeReflected> extends NetObjectEnumera
     /**
      * Invokes the .NET member SetEquals.
      *
-     * @param other the argument of type {@code IEnumerable_1}
+     * @param other the argument of type {@code IEnumerable_1<T>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -342,7 +342,7 @@ public class FrozenSet_1<T extends IJCOBridgeReflected> extends NetObjectEnumera
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Frozen.FrozenSet-1.SetEquals" target="_top">.NET documentation</a>
      */
-    public boolean SetEquals(IEnumerable_1 other) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
+    public boolean SetEquals(IEnumerable_1<T> other) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSetEquals = null;

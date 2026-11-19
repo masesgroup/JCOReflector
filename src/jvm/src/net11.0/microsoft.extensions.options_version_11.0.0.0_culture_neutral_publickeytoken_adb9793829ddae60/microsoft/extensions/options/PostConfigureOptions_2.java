@@ -157,11 +157,11 @@ public class PostConfigureOptions_2<TOptions extends IJCOBridgeReflected, TDep e
      *
      * @param name the argument of type {@code java.lang.String}
      * @param dependency the argument of type {@code TDep}
-     * @param action the argument of type {@code Action_2}
+     * @param action the argument of type {@code Action_2<TOptions, TDep>}
      * @throws Throwable if the .NET constructor fails
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Options.PostConfigureOptions-2.-ctor" target="_top">.NET documentation</a>
      */
-    public PostConfigureOptions_2(java.lang.String name, TDep dependency, Action_2 action) throws Throwable {
+    public PostConfigureOptions_2(java.lang.String name, TDep dependency, Action_2<TOptions, TDep> action) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);

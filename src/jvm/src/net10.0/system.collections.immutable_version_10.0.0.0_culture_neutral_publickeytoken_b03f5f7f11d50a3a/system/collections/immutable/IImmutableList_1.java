@@ -126,31 +126,31 @@ public interface IImmutableList_1<T extends IJCOBridgeReflected> extends IJCOBri
 
     // Methods section
     
-    public int IndexOf(T item, int index, int count, IEqualityComparer_1 equalityComparer) throws Throwable;
+    public int IndexOf(T item, int index, int count, IEqualityComparer_1<T> equalityComparer) throws Throwable;
 
-    public int LastIndexOf(T item, int index, int count, IEqualityComparer_1 equalityComparer) throws Throwable;
+    public int LastIndexOf(T item, int index, int count, IEqualityComparer_1<T> equalityComparer) throws Throwable;
 
     public IImmutableList_1 Add(T value) throws Throwable;
 
-    public IImmutableList_1 AddRange(IEnumerable_1 items) throws Throwable;
+    public IImmutableList_1 AddRange(IEnumerable_1<T> items) throws Throwable;
 
     public IImmutableList_1 Clear() throws Throwable;
 
     public IImmutableList_1 Insert(int index, T element) throws Throwable;
 
-    public IImmutableList_1 InsertRange(int index, IEnumerable_1 items) throws Throwable;
+    public IImmutableList_1 InsertRange(int index, IEnumerable_1<T> items) throws Throwable;
 
-    public IImmutableList_1 Remove(T value, IEqualityComparer_1 equalityComparer) throws Throwable;
+    public IImmutableList_1 Remove(T value, IEqualityComparer_1<T> equalityComparer) throws Throwable;
 
-    public IImmutableList_1 RemoveAll(Predicate_1 match) throws Throwable;
+    public IImmutableList_1 RemoveAll(Predicate_1<T> match) throws Throwable;
 
     public IImmutableList_1 RemoveAt(int index) throws Throwable;
 
     public IImmutableList_1 RemoveRange(int index, int count) throws Throwable;
 
-    public IImmutableList_1 RemoveRange(IEnumerable_1 items, IEqualityComparer_1 equalityComparer) throws Throwable;
+    public IImmutableList_1 RemoveRange(IEnumerable_1<T> items, IEqualityComparer_1<T> equalityComparer) throws Throwable;
 
-    public IImmutableList_1 Replace(T oldValue, T newValue, IEqualityComparer_1 equalityComparer) throws Throwable;
+    public IImmutableList_1 Replace(T oldValue, T newValue, IEqualityComparer_1<T> equalityComparer) throws Throwable;
 
     public IImmutableList_1 SetItem(int index, T value) throws Throwable;
 

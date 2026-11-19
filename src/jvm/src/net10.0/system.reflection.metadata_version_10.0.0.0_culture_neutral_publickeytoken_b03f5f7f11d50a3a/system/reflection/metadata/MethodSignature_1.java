@@ -161,11 +161,11 @@ public class MethodSignature_1<TType extends IJCOBridgeReflected> extends system
      * @param returnType the argument of type {@code TType}
      * @param requiredParameterCount the argument of type {@code int}
      * @param genericParameterCount the argument of type {@code int}
-     * @param parameterTypes the argument of type {@code ImmutableArray_1}
+     * @param parameterTypes the argument of type {@code ImmutableArray_1<TType>}
      * @throws Throwable if the .NET constructor fails
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.MethodSignature-1.-ctor" target="_top">.NET documentation</a>
      */
-    public MethodSignature_1(SignatureHeader header, TType returnType, int requiredParameterCount, int genericParameterCount, ImmutableArray_1 parameterTypes) throws Throwable {
+    public MethodSignature_1(SignatureHeader header, TType returnType, int requiredParameterCount, int genericParameterCount, ImmutableArray_1<TType> parameterTypes) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);

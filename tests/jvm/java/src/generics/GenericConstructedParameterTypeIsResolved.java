@@ -55,21 +55,20 @@ public class GenericConstructedParameterTypeIsResolved {
 
     /**
      * Exercises a method parameter that is itself a constructed generic type over a class-level
-     * type parameter: List<T>.AddRange(IEnumerable<T>). The parameter must be exposed as
-     * IEnumerable_1<T>, not as the raw IEnumerable_1, otherwise the type argument is lost and
-     * the same fallback would keep members such as ICollection<KeyValuePair<TKey,TValue>>.Add
-     * out of reach.
+     * type parameter: List<T>.ForEach(Action<T>). The parameter must be exposed as Action_1<T>,
+     * not as the raw Action_1, otherwise the type argument is lost and the same fallback would
+     * keep members such as ICollection<KeyValuePair<TKey,TValue>>.Add out of reach.
      */
     static void testGenericConstructedParameterTypeIsResolved() throws Throwable {
         // the signature carries the type argument...
-        java.lang.reflect.Method addRange = List_1.class.getMethod("AddRange", IEnumerable_1.class);
-        java.lang.reflect.Type parameter = addRange.getGenericParameterTypes()[0];
+        java.lang.reflect.Method forEach = List_1.class.getMethod("ForEach", Action_1.class);
+        java.lang.reflect.Type parameter = forEach.getGenericParameterTypes()[0];
         if (!(parameter instanceof java.lang.reflect.ParameterizedType))
-            throw new AssertionError("AddRange parameter must be IEnumerable_1<T>, got " + parameter);
+            throw new AssertionError("ForEach parameter must be Action_1<T>, got " + parameter);
 
         java.lang.reflect.ParameterizedType parameterized = (java.lang.reflect.ParameterizedType) parameter;
-        if (parameterized.getRawType() != IEnumerable_1.class)
-            throw new AssertionError("AddRange parameter must be an IEnumerable_1, got " + parameterized.getRawType());
+        if (parameterized.getRawType() != Action_1.class)
+            throw new AssertionError("ForEach parameter must be an Action_1, got " + parameterized.getRawType());
 
         java.lang.reflect.Type argument = parameterized.getActualTypeArguments()[0];
         if (!(argument instanceof java.lang.reflect.TypeVariable)
@@ -77,12 +76,20 @@ public class GenericConstructedParameterTypeIsResolved {
             throw new AssertionError("The type argument must be the type parameter of List_1, got " + argument);
 
         // ...and the call still works end to end
-        List_1<system.Object> source = new List_1<system.Object>() {};
-        source.Add(new system.Object());
-        source.Add(new system.Object());
+        List_1<system.Object> list = new List_1<system.Object>() {};
+        list.Add(new system.Object());
+        list.Add(new system.Object());
 
-        List_1<system.Object> target = new List_1<system.Object>() {};
-        target.AddRange(source);
-        if (target.getCount() != 2) throw new AssertionError("Expected 2 elements after AddRange");
+        final java.util.concurrent.atomic.AtomicInteger calls = new java.util.concurrent.atomic.AtomicInteger();
+
+        Action_1<system.Object> action = new Action_1<system.Object>() {
+            @Override
+            public void Invoke(system.Object obj) {
+                calls.incrementAndGet();
+            }
+        };
+        list.ForEach(action);
+
+        if (calls.get() != 2) throw new AssertionError("Java action must be invoked once per element, got " + calls.get());
     }
 }

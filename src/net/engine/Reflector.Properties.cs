@@ -37,7 +37,7 @@ namespace MASES.JCOReflector.Engine
 {
     static partial class Reflector
     {
-        static string BuildPropertySignature(string templateToUse, string propertyJavaName, string propertyName, string propertyType, string exceptionStr, bool isPrimitive, bool isArray, bool needInterfaceImplementation, bool statics, string propertyInterfaceName)
+        static string BuildPropertySignature(string templateToUse, string propertyJavaName, string propertyName, string propertyType, string exceptionStr, bool isPrimitive, bool isArray, bool needInterfaceImplementation, bool statics, string propertyInterfaceName, string declaredType = null)
         {
             StringBuilder inputParams = new StringBuilder();
             StringBuilder execParams = new StringBuilder();
@@ -58,9 +58,9 @@ namespace MASES.JCOReflector.Engine
                                            .Replace(Const.Properties.PROPERTY_JAVA_NAME, propertyJavaName)
                                            .Replace(Const.Properties.PROPERTY_NAME, propertyName)
                                            .Replace(Const.Exceptions.THROWABLE_TEMPLATE, exceptionStr)
-                                           .Replace(Const.Properties.PROPERTY_INPUTTYPE, (isArray) ? propertyType + Const.SpecialNames.ArrayTrailer : propertyType)
+                                           .Replace(Const.Properties.PROPERTY_INPUTTYPE, (isArray) ? propertyType + Const.SpecialNames.ArrayTrailer : (declaredType ?? propertyType))
                                            .Replace(Const.Properties.PROPERTY_INPUTNAME, propertyName)
-                                           .Replace(Const.Properties.PROPERTY_OUTPUTTYPE, propertyType)
+                                           .Replace(Const.Properties.PROPERTY_OUTPUTTYPE, declaredType ?? propertyType)
                                            .Replace(Const.Properties.PROPERTY_IMPLEMENTATION_OUTPUTTYPE, needInterfaceImplementation ? propertyType + Const.SpecialNames.ImplementationTrailer : propertyType)
                                            .Replace(Const.Properties.PROPERTY_PARAMETERS, string.Empty)
                                            .Replace(Const.Properties.PROPERTY_INVOKE_PARAMETERS, string.Empty)
@@ -213,6 +213,10 @@ namespace MASES.JCOReflector.Engine
                     if (item.SetMethod != null && item.SetMethod.IsStatic && referencesClassLevelGenericParameter) continue;
 
                     string propertyType = "void";
+                    // Declared (Java-visible) type when the property is a constructed generic over in-scope type
+                    // parameters (ICollection<TKey>): propertyType stays the raw name because it also builds the
+                    // "...Implementation" instance, which is created raw.
+                    string declaredPropertyType = null;
                     var unwrappedPropertyType = item.PropertyType.IsByRef ? item.PropertyType.GetElementType() : item.PropertyType;
                     bool isPropertyGeneric = EnableGenerics && !isException && item.PropertyType.IsGenericParameter;
                     bool isByRefClassGenericProperty = EnableGenerics && !isException && item.PropertyType.IsByRef
@@ -249,6 +253,13 @@ namespace MASES.JCOReflector.Engine
                     {
                         propertyType = ConvertType(imports, item.PropertyType, out isPrimitive, out defaultPrimitiveValue, out isManaged, out isSpecial, out isArray);
                         if (!isManaged) continue; // found not managed type, jump to next 
+
+                        if (EnableGenerics && !isException && !isPrimitive && !isSpecial && !isArray
+                            && IsResolvableConstructedGeneric(item.PropertyType)
+                            && !DeclaresSamePropertyInBaseClass(type, item.Name))
+                        {
+                            declaredPropertyType = ResolveGenericTypeName(item.PropertyType, imports);
+                        }
                     }
 
                     bool isPropertyTypeInterface = isArray ? item.PropertyType.GetElementType().IsInterface : item.PropertyType.IsInterface;
@@ -271,7 +282,7 @@ namespace MASES.JCOReflector.Engine
                         {
                             string propertyInterfaceTemplate = Const.Templates.GetTemplate(isArray ? Const.Templates.ReflectorInterfaceGetArrayTemplate : Const.Templates.ReflectorInterfaceGetTemplate);
 
-                            var propertyInterfaceStr = BuildPropertySignature(propertyInterfaceTemplate, isNewPropertyVal ? newPropertyName : propertyName, propertyName, propertyType, exceptionStr, isPrimitive, isArray, isPropertyTypeInterface, statics, string.Empty);
+                            var propertyInterfaceStr = BuildPropertySignature(propertyInterfaceTemplate, isNewPropertyVal ? newPropertyName : propertyName, propertyName, propertyType, exceptionStr, isPrimitive, isArray, isPropertyTypeInterface, statics, string.Empty, declaredPropertyType);
                             propertyInterfaceBuilder.AppendLine(CompleteMemberJavadoc(propertyInterfaceStr, type));
                         }
 
@@ -308,7 +319,7 @@ namespace MASES.JCOReflector.Engine
                                 }
                             }
 
-                            var propertyStr = BuildPropertySignature(templateToUse, isNewPropertyVal ? newPropertyName : propertyName, propertyName, propertyType, exceptionStr, isPrimitive, isArray, isPropertyTypeInterface, statics, string.Empty);
+                            var propertyStr = BuildPropertySignature(templateToUse, isNewPropertyVal ? newPropertyName : propertyName, propertyName, propertyType, exceptionStr, isPrimitive, isArray, isPropertyTypeInterface, statics, string.Empty, declaredPropertyType);
 
                             // Same reasoning as ExportConstructors: IJCOBridgeReflected has no "...Implementation" class
                             // of its own (it's the root interface, not one of our reflected interfaces) — needInterfaceImplementation
@@ -339,14 +350,14 @@ namespace MASES.JCOReflector.Engine
                         {
                             string propertyInterfaceTemplate = Const.Templates.GetTemplate(Const.Templates.ReflectorInterfaceSetTemplate);
 
-                            var propertyInterfaceStr = BuildPropertySignature(propertyInterfaceTemplate, isNewPropertyVal ? newPropertyName : propertyName, propertyName, propertyType, exceptionStr, isPrimitive, isArray, isPropertyTypeInterface, statics, string.Empty);
+                            var propertyInterfaceStr = BuildPropertySignature(propertyInterfaceTemplate, isNewPropertyVal ? newPropertyName : propertyName, propertyName, propertyType, exceptionStr, isPrimitive, isArray, isPropertyTypeInterface, statics, string.Empty, declaredPropertyType);
                             propertyInterfaceBuilder.AppendLine(CompleteMemberJavadoc(propertyInterfaceStr, type));
                         }
 
                         if (withInheritance ? (isInterface || (item.SetMethod.GetBaseDefinition().DeclaringType == type)) : true)
                         {
                             templateToUse = Const.Templates.GetTemplate(Const.Templates.ReflectorClassSetTemplate);
-                            var propertyStr = BuildPropertySignature(templateToUse, isNewPropertyVal ? newPropertyName : propertyName, propertyName, propertyType, exceptionStr, isPrimitive, isArray, isPropertyTypeInterface, statics, string.Empty);
+                            var propertyStr = BuildPropertySignature(templateToUse, isNewPropertyVal ? newPropertyName : propertyName, propertyName, propertyType, exceptionStr, isPrimitive, isArray, isPropertyTypeInterface, statics, string.Empty, declaredPropertyType);
 
                             // GENERICS UPDATED: Inject marshalling cast for generic property parameters inside the compiled output string
                             if (isPropertyGeneric)

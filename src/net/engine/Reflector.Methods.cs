@@ -430,7 +430,8 @@ namespace MASES.JCOReflector.Engine
                                                  (parameter.ParameterType.IsArray && parameter.ParameterType.GetElementType().IsGenericParameter));
                             // ...or a constructed generic over in-scope type parameters (KeyValuePair<TKey,TValue>):
                             // resolved recursively instead of falling back to the raw type.
-                            bool isParamConstructedGeneric = !isParamGeneric && IsResolvableConstructedGeneric(parameter.ParameterType);
+                            bool isParamConstructedGeneric = !isParamGeneric && IsResolvableConstructedGeneric(parameter.ParameterType)
+                                                             && !DeclaresSameNameAndArityInBaseClass(type, methodName, parameters.Length);
 
                             if (isParamGeneric)
                             {
@@ -448,14 +449,6 @@ namespace MASES.JCOReflector.Engine
                                 isManaged = true;
                                 isSpecial = false;
                             }
-                            else if (isParamConstructedGeneric)
-                            {
-                                paramType = ResolveGenericTypeName(parameter.ParameterType, imports);
-                                isArray = false;
-                                isPrimitive = false;
-                                isManaged = true;
-                                isSpecial = false;
-                            }
                             else
                             {
                                 paramType = ConvertType(imports, parameter.ParameterType, out isPrimitive, out defaultPrimitiveValue, out isManaged, out isSpecial, out isArray);
@@ -464,6 +457,13 @@ namespace MASES.JCOReflector.Engine
                                 if (paramType.Contains("`"))
                                 {
                                     paramType = paramType.Split('`')[0];
+                                }
+
+                                // ConvertType has already accepted the type (managed, exportable, not a ref struct):
+                                // now keep its type arguments instead of the raw name.
+                                if (isParamConstructedGeneric && isManaged && !isPrimitive && !isSpecial && !isArray)
+                                {
+                                    paramType = ResolveGenericTypeName(parameter.ParameterType, imports);
                                 }
                             }
 

@@ -98,8 +98,37 @@ namespace MASES.JCOReflector.Engine
             if (!EnableGenerics) return false;
             if (t.IsByRef || t.IsArray || t.IsPointer) return false;
             if (!t.IsGenericType || t.IsGenericTypeDefinition || !t.ContainsGenericParameters) return false;
+            // Nested types (e.g. ConditionalWeakTable<TKey,TValue>.CreateValueCallback) are not generated as
+            // classes of their own, so there is nothing to parameterize: keep the previous behavior.
+            if (t.IsNested) return false;
+            // An array can never be a type argument: it does not satisfy the IJCOBridgeReflected bound
+            // (Func<Task[],TResult>, Predicate<T[]>, ITargetBlock<T[]>...).
+            if (ContainsArrayTypeArgument(t)) return false;
             if (ViolatesReflectedBound(t)) return false;
             return !ContainsMethodLevelGenericParameter(t);
+        }
+
+        static bool ContainsArrayTypeArgument(Type t)
+        {
+            if (t == null) return false;
+            if (t.IsArray) return true;
+            if (t.HasElementType) return ContainsArrayTypeArgument(t.GetElementType());
+            if (t.IsGenericType) return t.GetGenericArguments().Any(ContainsArrayTypeArgument);
+            return false;
+        }
+
+        // True when an ancestor class already declares a method with the same name and number of
+        // parameters. A parameterized override such as Task<TResult>.ContinueWith(Action<Task<TResult>>)
+        // would not override the raw Task.ContinueWith(Action) and Java rejects the pair as a name
+        // clash (same erasure, neither overrides the other): in that case the parameter stays raw.
+        static bool DeclaresSameNameAndArityInBaseClass(Type type, string methodName, int paramCount)
+        {
+            for (var b = type.BaseType; b != null && b != typeof(object); b = b.BaseType)
+            {
+                if (b.GetMethods(BindingFlags.Public | BindingFlags.Instance | BindingFlags.Static | BindingFlags.DeclaredOnly)
+                     .Any(m => m.Name == methodName && m.GetParameters().Length == paramCount)) return true;
+            }
+            return false;
         }
 
         static bool ContainsMethodLevelGenericParameter(Type t)

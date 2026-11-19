@@ -344,7 +344,7 @@ public class PoolingAsyncValueTaskMethodBuilder_1<TResult extends IJCOBridgeRefl
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder-1.Task" target="_top">.NET documentation</a>
      */
-    public ValueTask_1 getTask() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
+    public ValueTask_1<TResult> getTask() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectTask = null;

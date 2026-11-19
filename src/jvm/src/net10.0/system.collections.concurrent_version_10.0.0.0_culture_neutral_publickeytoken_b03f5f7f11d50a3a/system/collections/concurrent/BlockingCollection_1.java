@@ -208,7 +208,7 @@ public class BlockingCollection_1<T extends IJCOBridgeReflected> extends NetObje
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param collection the argument of type {@code IProducerConsumerCollection_1}
+     * @param collection the argument of type {@code IProducerConsumerCollection_1<T>}
      * @param boundedCapacity the argument of type {@code int}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
@@ -224,7 +224,7 @@ public class BlockingCollection_1<T extends IJCOBridgeReflected> extends NetObje
      * @throws system.FormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Concurrent.BlockingCollection-1.-ctor" target="_top">.NET documentation</a>
      */
-    public BlockingCollection_1(IProducerConsumerCollection_1 collection, int boundedCapacity) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
+    public BlockingCollection_1(IProducerConsumerCollection_1<T> collection, int boundedCapacity) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -239,7 +239,7 @@ public class BlockingCollection_1<T extends IJCOBridgeReflected> extends NetObje
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param collection the argument of type {@code IProducerConsumerCollection_1}
+     * @param collection the argument of type {@code IProducerConsumerCollection_1<T>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -252,7 +252,7 @@ public class BlockingCollection_1<T extends IJCOBridgeReflected> extends NetObje
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Concurrent.BlockingCollection-1.-ctor" target="_top">.NET documentation</a>
      */
-    public BlockingCollection_1(IProducerConsumerCollection_1 collection) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+    public BlockingCollection_1(IProducerConsumerCollection_1<T> collection) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -564,7 +564,7 @@ public class BlockingCollection_1<T extends IJCOBridgeReflected> extends NetObje
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Concurrent.BlockingCollection-1.GetConsumingEnumerable" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 GetConsumingEnumerable() throws Throwable {
+    public IEnumerable_1<T> GetConsumingEnumerable() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetConsumingEnumerable = null;
@@ -587,7 +587,7 @@ public class BlockingCollection_1<T extends IJCOBridgeReflected> extends NetObje
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Concurrent.BlockingCollection-1.GetConsumingEnumerable" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 GetConsumingEnumerable(CancellationToken cancellationToken) throws Throwable {
+    public IEnumerable_1<T> GetConsumingEnumerable(CancellationToken cancellationToken) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetConsumingEnumerable = null;

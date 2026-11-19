@@ -155,11 +155,11 @@ public class ConfigureOptions_1<TOptions extends IJCOBridgeReflected> extends Ne
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param action the argument of type {@code Action_1}
+     * @param action the argument of type {@code Action_1<TOptions>}
      * @throws Throwable if the .NET constructor fails
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Options.ConfigureOptions-1.-ctor" target="_top">.NET documentation</a>
      */
-    public ConfigureOptions_1(Action_1 action) throws Throwable {
+    public ConfigureOptions_1(Action_1<TOptions> action) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -211,15 +211,15 @@ public class ConfigureOptions_1<TOptions extends IJCOBridgeReflected> extends Ne
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Options.ConfigureOptions-1.Action" target="_top">.NET documentation</a>
      */
-    public Action_1 getAction() throws Throwable {
+    public Action_1<TOptions> getAction() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAction = null;
         try {
             retObjectAction = classInstance.Get("Action");
-            return (Action_1)retObjectAction;
+            return (Action_1<TOptions>)retObjectAction;
         } catch (java.lang.ClassCastException cce) {
-            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Action_1", retObjectAction != null ? retObjectAction.getClass() : "null"), cce);
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Action_1<TOptions>", retObjectAction != null ? retObjectAction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

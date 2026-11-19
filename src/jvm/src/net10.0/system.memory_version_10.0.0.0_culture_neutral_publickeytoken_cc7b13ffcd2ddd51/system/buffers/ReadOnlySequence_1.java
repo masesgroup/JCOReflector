@@ -159,9 +159,9 @@ public class ReadOnlySequence_1<T extends IJCOBridgeReflected> extends system.Va
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param startSegment the argument of type {@code ReadOnlySequenceSegment_1}
+     * @param startSegment the argument of type {@code ReadOnlySequenceSegment_1<T>}
      * @param startIndex the argument of type {@code int}
-     * @param endSegment the argument of type {@code ReadOnlySequenceSegment_1}
+     * @param endSegment the argument of type {@code ReadOnlySequenceSegment_1<T>}
      * @param endIndex the argument of type {@code int}
      * @throws Throwable if the .NET constructor fails
      * @throws system.PlatformNotSupportedException if the .NET member raises it
@@ -171,7 +171,7 @@ public class ReadOnlySequence_1<T extends IJCOBridgeReflected> extends system.Va
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Buffers.ReadOnlySequence-1.-ctor" target="_top">.NET documentation</a>
      */
-    public ReadOnlySequence_1(ReadOnlySequenceSegment_1 startSegment, int startIndex, ReadOnlySequenceSegment_1 endSegment, int endIndex) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public ReadOnlySequence_1(ReadOnlySequenceSegment_1<T> startSegment, int startIndex, ReadOnlySequenceSegment_1<T> endSegment, int endIndex) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -186,13 +186,13 @@ public class ReadOnlySequence_1<T extends IJCOBridgeReflected> extends system.Va
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param memory the argument of type {@code ReadOnlyMemory_1}
+     * @param memory the argument of type {@code ReadOnlyMemory_1<T>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Buffers.ReadOnlySequence-1.-ctor" target="_top">.NET documentation</a>
      */
-    public ReadOnlySequence_1(ReadOnlyMemory_1 memory) throws Throwable, system.PlatformNotSupportedException, system.InvalidOperationException {
+    public ReadOnlySequence_1(ReadOnlyMemory_1<T> memory) throws Throwable, system.PlatformNotSupportedException, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -351,7 +351,7 @@ public class ReadOnlySequence_1<T extends IJCOBridgeReflected> extends system.Va
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Buffers.ReadOnlySequence-1.Slice" target="_top">.NET documentation</a>
      */
-    public ReadOnlySequence_1 Slice(int start, int length) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException {
+    public ReadOnlySequence_1<T> Slice(int start, int length) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSlice = null;
@@ -379,7 +379,7 @@ public class ReadOnlySequence_1<T extends IJCOBridgeReflected> extends system.Va
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Buffers.ReadOnlySequence-1.Slice" target="_top">.NET documentation</a>
      */
-    public ReadOnlySequence_1 Slice(int start, SequencePosition end) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException {
+    public ReadOnlySequence_1<T> Slice(int start, SequencePosition end) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSlice = null;
@@ -408,7 +408,7 @@ public class ReadOnlySequence_1<T extends IJCOBridgeReflected> extends system.Va
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Buffers.ReadOnlySequence-1.Slice" target="_top">.NET documentation</a>
      */
-    public ReadOnlySequence_1 Slice(long start, long length) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public ReadOnlySequence_1<T> Slice(long start, long length) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSlice = null;
@@ -437,7 +437,7 @@ public class ReadOnlySequence_1<T extends IJCOBridgeReflected> extends system.Va
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Buffers.ReadOnlySequence-1.Slice" target="_top">.NET documentation</a>
      */
-    public ReadOnlySequence_1 Slice(long start, SequencePosition end) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public ReadOnlySequence_1<T> Slice(long start, SequencePosition end) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSlice = null;
@@ -465,7 +465,7 @@ public class ReadOnlySequence_1<T extends IJCOBridgeReflected> extends system.Va
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Buffers.ReadOnlySequence-1.Slice" target="_top">.NET documentation</a>
      */
-    public ReadOnlySequence_1 Slice(long start) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public ReadOnlySequence_1<T> Slice(long start) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSlice = null;
@@ -494,7 +494,7 @@ public class ReadOnlySequence_1<T extends IJCOBridgeReflected> extends system.Va
      * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Buffers.ReadOnlySequence-1.Slice" target="_top">.NET documentation</a>
      */
-    public ReadOnlySequence_1 Slice(SequencePosition start, int length) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public ReadOnlySequence_1<T> Slice(SequencePosition start, int length) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSlice = null;
@@ -527,7 +527,7 @@ public class ReadOnlySequence_1<T extends IJCOBridgeReflected> extends system.Va
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Buffers.ReadOnlySequence-1.Slice" target="_top">.NET documentation</a>
      */
-    public ReadOnlySequence_1 Slice(SequencePosition start, long length) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public ReadOnlySequence_1<T> Slice(SequencePosition start, long length) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSlice = null;
@@ -555,7 +555,7 @@ public class ReadOnlySequence_1<T extends IJCOBridgeReflected> extends system.Va
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Buffers.ReadOnlySequence-1.Slice" target="_top">.NET documentation</a>
      */
-    public ReadOnlySequence_1 Slice(SequencePosition start, SequencePosition end) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public ReadOnlySequence_1<T> Slice(SequencePosition start, SequencePosition end) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSlice = null;
@@ -582,7 +582,7 @@ public class ReadOnlySequence_1<T extends IJCOBridgeReflected> extends system.Va
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Buffers.ReadOnlySequence-1.Slice" target="_top">.NET documentation</a>
      */
-    public ReadOnlySequence_1 Slice(SequencePosition start) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public ReadOnlySequence_1<T> Slice(SequencePosition start) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSlice = null;
@@ -766,7 +766,7 @@ public class ReadOnlySequence_1<T extends IJCOBridgeReflected> extends system.Va
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Buffers.ReadOnlySequence-1.First" target="_top">.NET documentation</a>
      */
-    public ReadOnlyMemory_1 getFirst() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public ReadOnlyMemory_1<T> getFirst() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectFirst = null;

@@ -183,7 +183,7 @@ public class Expression_1<TDelegate extends IJCOBridgeReflected> extends system.
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.Expression-1.Update" target="_top">.NET documentation</a>
      */
-    public Expression_1 Update(Expression body, IEnumerable_1 parameters) throws Throwable, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.ArrayTypeMismatchException, system.InvalidCastException, system.OutOfMemoryException, system.FormatException, system.InvalidOperationException {
+    public Expression_1<TDelegate> Update(Expression body, IEnumerable_1 parameters) throws Throwable, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.ArrayTypeMismatchException, system.InvalidCastException, system.OutOfMemoryException, system.FormatException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectUpdate = null;

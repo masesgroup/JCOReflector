@@ -123,7 +123,7 @@ public interface IMemoryOwner_1<T extends IJCOBridgeReflected> extends IJCOBridg
     
     // Properties section
     
-    public Memory_1 getMemory() throws Throwable;
+    public Memory_1<T> getMemory() throws Throwable;
 
 
 

@@ -191,7 +191,7 @@ public class InstrumentAdvice_1<T extends IJCOBridgeReflected> extends NetObject
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Metrics.InstrumentAdvice-1.HistogramBucketBoundaries" target="_top">.NET documentation</a>
      */
-    public IReadOnlyList_1 getHistogramBucketBoundaries() throws Throwable {
+    public IReadOnlyList_1<T> getHistogramBucketBoundaries() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectHistogramBucketBoundaries = null;
@@ -222,7 +222,7 @@ public class InstrumentAdvice_1<T extends IJCOBridgeReflected> extends NetObject
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Metrics.InstrumentAdvice-1.HistogramBucketBoundaries" target="_top">.NET documentation</a>
      */
-    public void setHistogramBucketBoundaries(IReadOnlyList_1 HistogramBucketBoundaries) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+    public void setHistogramBucketBoundaries(IReadOnlyList_1<T> HistogramBucketBoundaries) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

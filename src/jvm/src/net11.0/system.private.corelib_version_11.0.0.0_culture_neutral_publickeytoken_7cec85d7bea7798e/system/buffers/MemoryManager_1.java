@@ -237,7 +237,7 @@ public class MemoryManager_1<T extends IJCOBridgeReflected> extends NetObject im
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Buffers.MemoryManager-1.Memory" target="_top">.NET documentation</a>
      */
-    public Memory_1 getMemory() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException {
+    public Memory_1<T> getMemory() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectMemory = null;

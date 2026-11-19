@@ -220,14 +220,14 @@ public class XamlValueConverter_1<TConverterBase extends IJCOBridgeReflected> ex
     /**
      * Invokes the .NET member Equals.
      *
-     * @param other the argument of type {@code XamlValueConverter_1}
+     * @param other the argument of type {@code XamlValueConverter_1<TConverterBase>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.Schema.XamlValueConverter-1.Equals" target="_top">.NET documentation</a>
      */
-    public boolean Equals(XamlValueConverter_1 other) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
+    public boolean Equals(XamlValueConverter_1<TConverterBase> other) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectEquals = null;

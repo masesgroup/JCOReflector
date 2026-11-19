@@ -155,13 +155,13 @@ public class ITargetBlock_1Implementation<TInput extends IJCOBridgeReflected> ex
      *
      * @param messageHeader the argument of type {@code DataflowMessageHeader}
      * @param messageValue the argument of type {@code TInput}
-     * @param source the argument of type {@code ISourceBlock_1}
+     * @param source the argument of type {@code ISourceBlock_1<TInput>}
      * @param consumeToAccept the argument of type {@code boolean}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Dataflow.ITargetBlock-1.OfferMessage" target="_top">.NET documentation</a>
      */
-    public DataflowMessageStatus OfferMessage(DataflowMessageHeader messageHeader, TInput messageValue, ISourceBlock_1 source, boolean consumeToAccept) throws Throwable {
+    public DataflowMessageStatus OfferMessage(DataflowMessageHeader messageHeader, TInput messageValue, ISourceBlock_1<TInput> source, boolean consumeToAccept) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectOfferMessage = null;

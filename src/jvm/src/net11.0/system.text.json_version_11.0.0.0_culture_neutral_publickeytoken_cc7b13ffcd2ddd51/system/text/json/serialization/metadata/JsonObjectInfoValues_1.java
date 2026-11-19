@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.Action_2;
+import system.text.json.Utf8JsonWriter;
 import system.Func_1;
 import system.Func_2;
 import system.text.json.serialization.JsonNumberHandling;
@@ -187,15 +188,15 @@ public class JsonObjectInfoValues_1<T extends IJCOBridgeReflected> extends NetOb
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonObjectInfoValues-1.SerializeHandler" target="_top">.NET documentation</a>
      */
-    public Action_2 getSerializeHandler() throws Throwable {
+    public Action_2<Utf8JsonWriter, T> getSerializeHandler() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSerializeHandler = null;
         try {
             retObjectSerializeHandler = classInstance.Get("SerializeHandler");
-            return (Action_2)retObjectSerializeHandler;
+            return (Action_2<Utf8JsonWriter, T>)retObjectSerializeHandler;
         } catch (java.lang.ClassCastException cce) {
-            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Action_2", retObjectSerializeHandler != null ? retObjectSerializeHandler.getClass() : "null"), cce);
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Action_2<Utf8JsonWriter, T>", retObjectSerializeHandler != null ? retObjectSerializeHandler.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,7 +209,7 @@ public class JsonObjectInfoValues_1<T extends IJCOBridgeReflected> extends NetOb
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonObjectInfoValues-1.SerializeHandler" target="_top">.NET documentation</a>
      */
-    public void setSerializeHandler(Action_2 SerializeHandler) throws Throwable {
+    public void setSerializeHandler(Action_2<Utf8JsonWriter, T> SerializeHandler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -301,15 +302,15 @@ public class JsonObjectInfoValues_1<T extends IJCOBridgeReflected> extends NetOb
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonObjectInfoValues-1.ObjectCreator" target="_top">.NET documentation</a>
      */
-    public Func_1 getObjectCreator() throws Throwable {
+    public Func_1<T> getObjectCreator() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectObjectCreator = null;
         try {
             retObjectObjectCreator = classInstance.Get("ObjectCreator");
-            return (Func_1)retObjectObjectCreator;
+            return (Func_1<T>)retObjectObjectCreator;
         } catch (java.lang.ClassCastException cce) {
-            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Func_1", retObjectObjectCreator != null ? retObjectObjectCreator.getClass() : "null"), cce);
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Func_1<T>", retObjectObjectCreator != null ? retObjectObjectCreator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -322,7 +323,7 @@ public class JsonObjectInfoValues_1<T extends IJCOBridgeReflected> extends NetOb
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonObjectInfoValues-1.ObjectCreator" target="_top">.NET documentation</a>
      */
-    public void setObjectCreator(Func_1 ObjectCreator) throws Throwable {
+    public void setObjectCreator(Func_1<T> ObjectCreator) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

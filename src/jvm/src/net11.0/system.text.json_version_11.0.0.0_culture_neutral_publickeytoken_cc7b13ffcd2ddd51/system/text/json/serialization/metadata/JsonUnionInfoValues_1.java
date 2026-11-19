@@ -41,6 +41,8 @@ import java.util.ArrayList;
 import system.collections.generic.IList_1;
 import system.collections.generic.IList_1Implementation;
 import system.Func_2;
+import system.ValueTuple_2;
+import system.Object;
 import system.Func_3;
 import system.text.json.serialization.JsonTypeClassifierFactory;
 
@@ -225,15 +227,15 @@ public class JsonUnionInfoValues_1<T extends IJCOBridgeReflected> extends NetObj
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonUnionInfoValues-1.UnionDeconstructor" target="_top">.NET documentation</a>
      */
-    public Func_2 getUnionDeconstructor() throws Throwable {
+    public Func_2<T, ValueTuple_2<NetType, Object>> getUnionDeconstructor() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectUnionDeconstructor = null;
         try {
             retObjectUnionDeconstructor = classInstance.Get("UnionDeconstructor");
-            return (Func_2)retObjectUnionDeconstructor;
+            return (Func_2<T, ValueTuple_2<NetType, Object>>)retObjectUnionDeconstructor;
         } catch (java.lang.ClassCastException cce) {
-            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Func_2", retObjectUnionDeconstructor != null ? retObjectUnionDeconstructor.getClass() : "null"), cce);
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Func_2<T, ValueTuple_2<NetType, Object>>", retObjectUnionDeconstructor != null ? retObjectUnionDeconstructor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,7 +248,7 @@ public class JsonUnionInfoValues_1<T extends IJCOBridgeReflected> extends NetObj
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonUnionInfoValues-1.UnionDeconstructor" target="_top">.NET documentation</a>
      */
-    public void setUnionDeconstructor(Func_2 UnionDeconstructor) throws Throwable {
+    public void setUnionDeconstructor(Func_2<T, ValueTuple_2<NetType, Object>> UnionDeconstructor) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -263,15 +265,15 @@ public class JsonUnionInfoValues_1<T extends IJCOBridgeReflected> extends NetObj
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonUnionInfoValues-1.UnionConstructor" target="_top">.NET documentation</a>
      */
-    public Func_3 getUnionConstructor() throws Throwable {
+    public Func_3<NetType, Object, T> getUnionConstructor() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectUnionConstructor = null;
         try {
             retObjectUnionConstructor = classInstance.Get("UnionConstructor");
-            return (Func_3)retObjectUnionConstructor;
+            return (Func_3<NetType, Object, T>)retObjectUnionConstructor;
         } catch (java.lang.ClassCastException cce) {
-            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Func_3", retObjectUnionConstructor != null ? retObjectUnionConstructor.getClass() : "null"), cce);
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Func_3<NetType, Object, T>", retObjectUnionConstructor != null ? retObjectUnionConstructor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -284,7 +286,7 @@ public class JsonUnionInfoValues_1<T extends IJCOBridgeReflected> extends NetObj
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonUnionInfoValues-1.UnionConstructor" target="_top">.NET documentation</a>
      */
-    public void setUnionConstructor(Func_3 UnionConstructor) throws Throwable {
+    public void setUnionConstructor(Func_3<NetType, Object, T> UnionConstructor) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

@@ -122,7 +122,7 @@ public interface ITargetBlock_1<TInput extends IJCOBridgeReflected> extends IJCO
 
     // Methods section
     
-    public DataflowMessageStatus OfferMessage(DataflowMessageHeader messageHeader, TInput messageValue, ISourceBlock_1 source, boolean consumeToAccept) throws Throwable;
+    public DataflowMessageStatus OfferMessage(DataflowMessageHeader messageHeader, TInput messageValue, ISourceBlock_1<TInput> source, boolean consumeToAccept) throws Throwable;
 
 
 

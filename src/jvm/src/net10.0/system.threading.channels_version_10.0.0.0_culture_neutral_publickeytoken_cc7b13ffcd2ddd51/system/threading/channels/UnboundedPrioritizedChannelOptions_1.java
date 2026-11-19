@@ -184,7 +184,7 @@ public class UnboundedPrioritizedChannelOptions_1<T extends IJCOBridgeReflected>
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Channels.UnboundedPrioritizedChannelOptions-1.Comparer" target="_top">.NET documentation</a>
      */
-    public IComparer_1 getComparer() throws Throwable {
+    public IComparer_1<T> getComparer() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectComparer = null;
@@ -206,7 +206,7 @@ public class UnboundedPrioritizedChannelOptions_1<T extends IJCOBridgeReflected>
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Channels.UnboundedPrioritizedChannelOptions-1.Comparer" target="_top">.NET documentation</a>
      */
-    public void setComparer(IComparer_1 Comparer) throws Throwable {
+    public void setComparer(IComparer_1<T> Comparer) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

@@ -156,11 +156,11 @@ public class ConfigureNamedOptions_1<TOptions extends IJCOBridgeReflected> exten
      * Initializes a new instance by invoking the .NET constructor.
      *
      * @param name the argument of type {@code java.lang.String}
-     * @param action the argument of type {@code Action_1}
+     * @param action the argument of type {@code Action_1<TOptions>}
      * @throws Throwable if the .NET constructor fails
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Options.ConfigureNamedOptions-1.-ctor" target="_top">.NET documentation</a>
      */
-    public ConfigureNamedOptions_1(java.lang.String name, Action_1 action) throws Throwable {
+    public ConfigureNamedOptions_1(java.lang.String name, Action_1<TOptions> action) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -235,15 +235,15 @@ public class ConfigureNamedOptions_1<TOptions extends IJCOBridgeReflected> exten
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Options.ConfigureNamedOptions-1.Action" target="_top">.NET documentation</a>
      */
-    public Action_1 getAction() throws Throwable {
+    public Action_1<TOptions> getAction() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAction = null;
         try {
             retObjectAction = classInstance.Get("Action");
-            return (Action_1)retObjectAction;
+            return (Action_1<TOptions>)retObjectAction;
         } catch (java.lang.ClassCastException cce) {
-            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Action_1", retObjectAction != null ? retObjectAction.getClass() : "null"), cce);
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Action_1<TOptions>", retObjectAction != null ? retObjectAction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

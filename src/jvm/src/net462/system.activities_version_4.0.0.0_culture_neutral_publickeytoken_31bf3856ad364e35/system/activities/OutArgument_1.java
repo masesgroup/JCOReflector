@@ -40,10 +40,11 @@ import java.util.ArrayList;
 // Import section
 import system.activities.OutArgument;
 import system.activities.Activity_1;
+import system.activities.Location_1;
 import system.activities.DelegateArgument;
 import system.activities.Variable;
 import system.linq.expressions.Expression_1;
-import system.activities.Location_1;
+import system.Func_2;
 import system.activities.ActivityContext;
 
 
@@ -185,7 +186,7 @@ public class OutArgument_1<T extends IJCOBridgeReflected> extends system.activit
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param expression the argument of type {@code Activity_1}
+     * @param expression the argument of type {@code Activity_1<Location_1<T>>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
@@ -196,7 +197,7 @@ public class OutArgument_1<T extends IJCOBridgeReflected> extends system.activit
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.OutArgument-1.-ctor" target="_top">.NET documentation</a>
      */
-    public OutArgument_1(Activity_1 expression) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public OutArgument_1(Activity_1<Location_1<T>> expression) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -263,7 +264,7 @@ public class OutArgument_1<T extends IJCOBridgeReflected> extends system.activit
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param expression the argument of type {@code Expression_1}
+     * @param expression the argument of type {@code Expression_1<Func_2<ActivityContext, T>>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
@@ -274,7 +275,7 @@ public class OutArgument_1<T extends IJCOBridgeReflected> extends system.activit
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.OutArgument-1.-ctor" target="_top">.NET documentation</a>
      */
-    public OutArgument_1(Expression_1 expression) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public OutArgument_1(Expression_1<Func_2<ActivityContext, T>> expression) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -305,7 +306,7 @@ public class OutArgument_1<T extends IJCOBridgeReflected> extends system.activit
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.OutArgument-1.GetLocationNewOutArgument_1" target="_top">.NET documentation</a>
      */
-    public Location_1 GetLocationNewOutArgument_1(ActivityContext context) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+    public Location_1<T> GetLocationNewOutArgument_1(ActivityContext context) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetLocation = null;

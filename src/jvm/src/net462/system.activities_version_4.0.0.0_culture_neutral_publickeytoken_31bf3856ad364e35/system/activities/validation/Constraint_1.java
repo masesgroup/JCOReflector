@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.activities.validation.Constraint;
 import system.activities.ActivityAction_2;
+import system.activities.validation.ValidationContext;
 
 
 /**
@@ -190,7 +191,7 @@ public class Constraint_1<T extends IJCOBridgeReflected> extends system.activiti
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Validation.Constraint-1.Body" target="_top">.NET documentation</a>
      */
-    public ActivityAction_2 getBody() throws Throwable {
+    public ActivityAction_2<T, ValidationContext> getBody() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectBody = null;
@@ -212,7 +213,7 @@ public class Constraint_1<T extends IJCOBridgeReflected> extends system.activiti
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Validation.Constraint-1.Body" target="_top">.NET documentation</a>
      */
-    public void setBody(ActivityAction_2 Body) throws Throwable {
+    public void setBody(ActivityAction_2<T, ValidationContext> Body) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

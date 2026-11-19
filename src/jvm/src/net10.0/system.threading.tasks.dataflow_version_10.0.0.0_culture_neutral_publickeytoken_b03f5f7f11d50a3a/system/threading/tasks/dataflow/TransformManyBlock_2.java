@@ -39,7 +39,12 @@ import java.util.ArrayList;
 
 // Import section
 import system.Func_2;
+import system.collections.generic.IAsyncEnumerable_1;
+import system.collections.generic.IAsyncEnumerable_1Implementation;
 import system.threading.tasks.dataflow.ExecutionDataflowBlockOptions;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
+import system.threading.tasks.Task_1;
 import system.Predicate_1;
 import system.collections.generic.IList_1;
 import system.collections.generic.IList_1Implementation;
@@ -165,7 +170,7 @@ public class TransformManyBlock_2<TInput extends IJCOBridgeReflected, TOutput ex
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param transform the argument of type {@code Func_2}
+     * @param transform the argument of type {@code Func_2<TInput, IAsyncEnumerable_1<TOutput>>}
      * @param dataflowBlockOptions the argument of type {@code ExecutionDataflowBlockOptions}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
@@ -181,7 +186,7 @@ public class TransformManyBlock_2<TInput extends IJCOBridgeReflected, TOutput ex
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Dataflow.TransformManyBlock-2.-ctor" target="_top">.NET documentation</a>
      */
-    public TransformManyBlock_2(Func_2 transform, ExecutionDataflowBlockOptions dataflowBlockOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.threading.tasks.TaskSchedulerException, system.IndexOutOfRangeException {
+    public TransformManyBlock_2(Func_2<TInput, IAsyncEnumerable_1<TOutput>> transform, ExecutionDataflowBlockOptions dataflowBlockOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.threading.tasks.TaskSchedulerException, system.IndexOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -196,7 +201,7 @@ public class TransformManyBlock_2<TInput extends IJCOBridgeReflected, TOutput ex
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param transform the argument of type {@code Func_2}
+     * @param transform the argument of type {@code Func_2<TInput, IAsyncEnumerable_1<TOutput>>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.NotSupportedException if the .NET member raises it
@@ -209,7 +214,7 @@ public class TransformManyBlock_2<TInput extends IJCOBridgeReflected, TOutput ex
      * @throws system.FormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Dataflow.TransformManyBlock-2.-ctor" target="_top">.NET documentation</a>
      */
-    public TransformManyBlock_2(Func_2 transform) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.threading.tasks.TaskSchedulerException, system.diagnostics.tracing.EventSourceException, system.FormatException {
+    public TransformManyBlock_2(Func_2<TInput, IAsyncEnumerable_1<TOutput>> transform) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.threading.tasks.TaskSchedulerException, system.diagnostics.tracing.EventSourceException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -229,7 +234,7 @@ public class TransformManyBlock_2<TInput extends IJCOBridgeReflected, TOutput ex
     /**
      * Invokes the .NET member TryReceive.
      *
-     * @param filter the argument of type {@code Predicate_1}
+     * @param filter the argument of type {@code Predicate_1<TOutput>}
      * @param item the argument of type {@code JCORefOut<TOutput>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
@@ -247,7 +252,7 @@ public class TransformManyBlock_2<TInput extends IJCOBridgeReflected, TOutput ex
      * @throws system.threading.tasks.TaskSchedulerException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Dataflow.TransformManyBlock-2.TryReceive" target="_top">.NET documentation</a>
      */
-    public boolean TryReceive(Predicate_1 filter, JCORefOut<TOutput> item) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.ArgumentNullException, system.OutOfMemoryException, system.threading.tasks.TaskSchedulerException {
+    public boolean TryReceive(Predicate_1<TOutput> filter, JCORefOut<TOutput> item) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.ArgumentNullException, system.OutOfMemoryException, system.threading.tasks.TaskSchedulerException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectTryReceive = null;
@@ -298,7 +303,7 @@ public class TransformManyBlock_2<TInput extends IJCOBridgeReflected, TOutput ex
     /**
      * Invokes the .NET member LinkTo.
      *
-     * @param target the argument of type {@code ITargetBlock_1}
+     * @param target the argument of type {@code ITargetBlock_1<TOutput>}
      * @param linkOptions the argument of type {@code DataflowLinkOptions}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
@@ -314,7 +319,7 @@ public class TransformManyBlock_2<TInput extends IJCOBridgeReflected, TOutput ex
      * @throws system.threading.tasks.TaskSchedulerException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Dataflow.TransformManyBlock-2.LinkTo" target="_top">.NET documentation</a>
      */
-    public IDisposable LinkTo(ITargetBlock_1 target, DataflowLinkOptions linkOptions) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.FormatException, system.threading.tasks.TaskSchedulerException {
+    public IDisposable LinkTo(ITargetBlock_1<TOutput> target, DataflowLinkOptions linkOptions) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.FormatException, system.threading.tasks.TaskSchedulerException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectLinkTo = null;

@@ -156,7 +156,7 @@ public class ReadOnlyObservableCollection_1<T extends IJCOBridgeReflected> exten
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param list the argument of type {@code ObservableCollection_1}
+     * @param list the argument of type {@code ObservableCollection_1<T>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -167,7 +167,7 @@ public class ReadOnlyObservableCollection_1<T extends IJCOBridgeReflected> exten
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.ObjectModel.ReadOnlyObservableCollection-1.-ctor" target="_top">.NET documentation</a>
      */
-    public ReadOnlyObservableCollection_1(ObservableCollection_1 list) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
+    public ReadOnlyObservableCollection_1(ObservableCollection_1<T> list) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);

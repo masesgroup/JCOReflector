@@ -164,7 +164,7 @@ public class ImmutableStack_1<T extends IJCOBridgeReflected> extends NetObjectEn
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableStack-1.Clear" target="_top">.NET documentation</a>
      */
-    public ImmutableStack_1 Clear() throws Throwable {
+    public ImmutableStack_1<T> Clear() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectClear = null;
@@ -194,7 +194,7 @@ public class ImmutableStack_1<T extends IJCOBridgeReflected> extends NetObjectEn
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableStack-1.Pop" target="_top">.NET documentation</a>
      */
-    public ImmutableStack_1 Pop() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
+    public ImmutableStack_1<T> Pop() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectPop = null;
@@ -225,7 +225,7 @@ public class ImmutableStack_1<T extends IJCOBridgeReflected> extends NetObjectEn
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableStack-1.Pop" target="_top">.NET documentation</a>
      */
-    public ImmutableStack_1 Pop(JCORefOut<T> value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException {
+    public ImmutableStack_1<T> Pop(JCORefOut<T> value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectPop = null;
@@ -248,7 +248,7 @@ public class ImmutableStack_1<T extends IJCOBridgeReflected> extends NetObjectEn
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableStack-1.Push" target="_top">.NET documentation</a>
      */
-    public ImmutableStack_1 Push(T value) throws Throwable {
+    public ImmutableStack_1<T> Push(T value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectPush = null;

@@ -185,7 +185,7 @@ public class ValueTypeIndexerReference_2<TOperand extends IJCOBridgeReflected, T
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Expressions.ValueTypeIndexerReference-2.OperandLocation" target="_top">.NET documentation</a>
      */
-    public InOutArgument_1 getOperandLocation() throws Throwable {
+    public InOutArgument_1<TOperand> getOperandLocation() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectOperandLocation = null;
@@ -207,7 +207,7 @@ public class ValueTypeIndexerReference_2<TOperand extends IJCOBridgeReflected, T
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Expressions.ValueTypeIndexerReference-2.OperandLocation" target="_top">.NET documentation</a>
      */
-    public void setOperandLocation(InOutArgument_1 OperandLocation) throws Throwable {
+    public void setOperandLocation(InOutArgument_1<TOperand> OperandLocation) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

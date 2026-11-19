@@ -159,12 +159,12 @@ public class IPropagatorBlock_2Implementation<TInput extends IJCOBridgeReflected
      * Invokes the .NET member ReserveMessage.
      *
      * @param messageHeader the argument of type {@code DataflowMessageHeader}
-     * @param target the argument of type {@code ITargetBlock_1}
+     * @param target the argument of type {@code ITargetBlock_1<TOutput>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Dataflow.IPropagatorBlock-2.ReserveMessage" target="_top">.NET documentation</a>
      */
-    public boolean ReserveMessage(DataflowMessageHeader messageHeader, ITargetBlock_1 target) throws Throwable {
+    public boolean ReserveMessage(DataflowMessageHeader messageHeader, ITargetBlock_1<TOutput> target) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectReserveMessage = null;
@@ -181,13 +181,13 @@ public class IPropagatorBlock_2Implementation<TInput extends IJCOBridgeReflected
     /**
      * Invokes the .NET member LinkTo.
      *
-     * @param target the argument of type {@code ITargetBlock_1}
+     * @param target the argument of type {@code ITargetBlock_1<TOutput>}
      * @param linkOptions the argument of type {@code DataflowLinkOptions}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Dataflow.IPropagatorBlock-2.LinkTo" target="_top">.NET documentation</a>
      */
-    public IDisposable LinkTo(ITargetBlock_1 target, DataflowLinkOptions linkOptions) throws Throwable {
+    public IDisposable LinkTo(ITargetBlock_1<TOutput> target, DataflowLinkOptions linkOptions) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectLinkTo = null;
@@ -207,13 +207,13 @@ public class IPropagatorBlock_2Implementation<TInput extends IJCOBridgeReflected
      *
      * @param messageHeader the argument of type {@code DataflowMessageHeader}
      * @param messageValue the argument of type {@code TInput}
-     * @param source the argument of type {@code ISourceBlock_1}
+     * @param source the argument of type {@code ISourceBlock_1<TInput>}
      * @param consumeToAccept the argument of type {@code boolean}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Dataflow.IPropagatorBlock-2.OfferMessage" target="_top">.NET documentation</a>
      */
-    public DataflowMessageStatus OfferMessage(DataflowMessageHeader messageHeader, TInput messageValue, ISourceBlock_1 source, boolean consumeToAccept) throws Throwable {
+    public DataflowMessageStatus OfferMessage(DataflowMessageHeader messageHeader, TInput messageValue, ISourceBlock_1<TInput> source, boolean consumeToAccept) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectOfferMessage = null;
@@ -232,13 +232,13 @@ public class IPropagatorBlock_2Implementation<TInput extends IJCOBridgeReflected
      * Invokes the .NET member ConsumeMessage.
      *
      * @param messageHeader the argument of type {@code DataflowMessageHeader}
-     * @param target the argument of type {@code ITargetBlock_1}
+     * @param target the argument of type {@code ITargetBlock_1<TOutput>}
      * @param messageConsumed the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicBoolean>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Dataflow.IPropagatorBlock-2.ConsumeMessage" target="_top">.NET documentation</a>
      */
-    public TOutput ConsumeMessage(DataflowMessageHeader messageHeader, ITargetBlock_1 target, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> messageConsumed) throws Throwable {
+    public TOutput ConsumeMessage(DataflowMessageHeader messageHeader, ITargetBlock_1<TOutput> target, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> messageConsumed) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectConsumeMessage = null;
@@ -289,11 +289,11 @@ public class IPropagatorBlock_2Implementation<TInput extends IJCOBridgeReflected
      * Invokes the .NET member ReleaseReservation.
      *
      * @param messageHeader the argument of type {@code DataflowMessageHeader}
-     * @param target the argument of type {@code ITargetBlock_1}
+     * @param target the argument of type {@code ITargetBlock_1<TOutput>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Dataflow.IPropagatorBlock-2.ReleaseReservation" target="_top">.NET documentation</a>
      */
-    public void ReleaseReservation(DataflowMessageHeader messageHeader, ITargetBlock_1 target) throws Throwable {
+    public void ReleaseReservation(DataflowMessageHeader messageHeader, ITargetBlock_1<TOutput> target) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

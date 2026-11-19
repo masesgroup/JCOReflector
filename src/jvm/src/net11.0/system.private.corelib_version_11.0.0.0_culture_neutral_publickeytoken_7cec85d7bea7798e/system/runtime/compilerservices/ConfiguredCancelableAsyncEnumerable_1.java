@@ -167,7 +167,7 @@ public class ConfiguredCancelableAsyncEnumerable_1<T extends IJCOBridgeReflected
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.ConfiguredCancelableAsyncEnumerable-1.ConfigureAwait" target="_top">.NET documentation</a>
      */
-    public ConfiguredCancelableAsyncEnumerable_1 ConfigureAwait(boolean continueOnCapturedContext) throws Throwable {
+    public ConfiguredCancelableAsyncEnumerable_1<T> ConfigureAwait(boolean continueOnCapturedContext) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectConfigureAwait = null;
@@ -190,7 +190,7 @@ public class ConfiguredCancelableAsyncEnumerable_1<T extends IJCOBridgeReflected
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.ConfiguredCancelableAsyncEnumerable-1.WithCancellation" target="_top">.NET documentation</a>
      */
-    public ConfiguredCancelableAsyncEnumerable_1 WithCancellation(CancellationToken cancellationToken) throws Throwable {
+    public ConfiguredCancelableAsyncEnumerable_1<T> WithCancellation(CancellationToken cancellationToken) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectWithCancellation = null;

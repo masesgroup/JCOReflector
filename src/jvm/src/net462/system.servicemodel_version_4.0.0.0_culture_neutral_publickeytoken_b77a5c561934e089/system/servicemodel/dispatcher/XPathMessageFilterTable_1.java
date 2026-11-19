@@ -218,12 +218,12 @@ public class XPathMessageFilterTable_1<TFilterData extends IJCOBridgeReflected> 
     /**
      * Invokes the .NET member Contains.
      *
-     * @param item the argument of type {@code KeyValuePair_2}
+     * @param item the argument of type {@code KeyValuePair_2<MessageFilter, TFilterData>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.XPathMessageFilterTable-1.Contains" target="_top">.NET documentation</a>
      */
-    public boolean Contains(KeyValuePair_2 item) throws Throwable {
+    public boolean Contains(KeyValuePair_2<MessageFilter, TFilterData> item) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectContains = null;
@@ -699,7 +699,7 @@ public class XPathMessageFilterTable_1<TFilterData extends IJCOBridgeReflected> 
      * Invokes the .NET member GetMatchingValues.
      *
      * @param message the argument of type {@code Message}
-     * @param results the argument of type {@code ICollection_1}
+     * @param results the argument of type {@code ICollection_1<TFilterData>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -718,7 +718,7 @@ public class XPathMessageFilterTable_1<TFilterData extends IJCOBridgeReflected> 
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.XPathMessageFilterTable-1.GetMatchingValues" target="_top">.NET documentation</a>
      */
-    public boolean GetMatchingValues(Message message, ICollection_1 results) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.xml.XmlException, system.collections.generic.KeyNotFoundException, system.NotSupportedException {
+    public boolean GetMatchingValues(Message message, ICollection_1<TFilterData> results) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.xml.XmlException, system.collections.generic.KeyNotFoundException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetMatchingValues = null;
@@ -736,7 +736,7 @@ public class XPathMessageFilterTable_1<TFilterData extends IJCOBridgeReflected> 
      * Invokes the .NET member GetMatchingValues.
      *
      * @param messageBuffer the argument of type {@code MessageBuffer}
-     * @param results the argument of type {@code ICollection_1}
+     * @param results the argument of type {@code ICollection_1<TFilterData>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -755,7 +755,7 @@ public class XPathMessageFilterTable_1<TFilterData extends IJCOBridgeReflected> 
      * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.XPathMessageFilterTable-1.GetMatchingValues" target="_top">.NET documentation</a>
      */
-    public boolean GetMatchingValues(MessageBuffer messageBuffer, ICollection_1 results) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.xml.XmlException, system.collections.generic.KeyNotFoundException {
+    public boolean GetMatchingValues(MessageBuffer messageBuffer, ICollection_1<TFilterData> results) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.xml.XmlException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetMatchingValues = null;
@@ -773,7 +773,7 @@ public class XPathMessageFilterTable_1<TFilterData extends IJCOBridgeReflected> 
      * Invokes the .NET member GetMatchingValues.
      *
      * @param navigator the argument of type {@code SeekableXPathNavigator}
-     * @param results the argument of type {@code ICollection_1}
+     * @param results the argument of type {@code ICollection_1<TFilterData>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -791,7 +791,7 @@ public class XPathMessageFilterTable_1<TFilterData extends IJCOBridgeReflected> 
      * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.XPathMessageFilterTable-1.GetMatchingValues" target="_top">.NET documentation</a>
      */
-    public boolean GetMatchingValues(SeekableXPathNavigator navigator, ICollection_1 results) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.collections.generic.KeyNotFoundException {
+    public boolean GetMatchingValues(SeekableXPathNavigator navigator, ICollection_1<TFilterData> results) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetMatchingValues = null;
@@ -809,7 +809,7 @@ public class XPathMessageFilterTable_1<TFilterData extends IJCOBridgeReflected> 
      * Invokes the .NET member GetMatchingValues.
      *
      * @param navigator the argument of type {@code XPathNavigator}
-     * @param results the argument of type {@code ICollection_1}
+     * @param results the argument of type {@code ICollection_1<TFilterData>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -827,7 +827,7 @@ public class XPathMessageFilterTable_1<TFilterData extends IJCOBridgeReflected> 
      * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.XPathMessageFilterTable-1.GetMatchingValues" target="_top">.NET documentation</a>
      */
-    public boolean GetMatchingValues(XPathNavigator navigator, ICollection_1 results) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.collections.generic.KeyNotFoundException {
+    public boolean GetMatchingValues(XPathNavigator navigator, ICollection_1<TFilterData> results) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetMatchingValues = null;
@@ -844,7 +844,7 @@ public class XPathMessageFilterTable_1<TFilterData extends IJCOBridgeReflected> 
     /**
      * Invokes the .NET member Remove.
      *
-     * @param item the argument of type {@code KeyValuePair_2}
+     * @param item the argument of type {@code KeyValuePair_2<MessageFilter, TFilterData>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -852,7 +852,7 @@ public class XPathMessageFilterTable_1<TFilterData extends IJCOBridgeReflected> 
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.XPathMessageFilterTable-1.Remove" target="_top">.NET documentation</a>
      */
-    public boolean Remove(KeyValuePair_2 item) throws Throwable, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.ArgumentOutOfRangeException {
+    public boolean Remove(KeyValuePair_2<MessageFilter, TFilterData> item) throws Throwable, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectRemove = null;
@@ -961,7 +961,7 @@ public class XPathMessageFilterTable_1<TFilterData extends IJCOBridgeReflected> 
     /**
      * Invokes the .NET member Add.
      *
-     * @param item the argument of type {@code KeyValuePair_2}
+     * @param item the argument of type {@code KeyValuePair_2<MessageFilter, TFilterData>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.IndexOutOfRangeException if the .NET member raises it
@@ -971,7 +971,7 @@ public class XPathMessageFilterTable_1<TFilterData extends IJCOBridgeReflected> 
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.XPathMessageFilterTable-1.Add" target="_top">.NET documentation</a>
      */
-    public void Add(KeyValuePair_2 item) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.ArgumentOutOfRangeException {
+    public void Add(KeyValuePair_2<MessageFilter, TFilterData> item) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -1274,7 +1274,7 @@ public class XPathMessageFilterTable_1<TFilterData extends IJCOBridgeReflected> 
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.XPathMessageFilterTable-1.Values" target="_top">.NET documentation</a>
      */
-    public ICollection_1 getValues() throws Throwable, system.ArgumentNullException {
+    public ICollection_1<TFilterData> getValues() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectValues = null;

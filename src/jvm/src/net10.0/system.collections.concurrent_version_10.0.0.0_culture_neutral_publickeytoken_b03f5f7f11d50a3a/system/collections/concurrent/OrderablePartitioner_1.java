@@ -43,6 +43,8 @@ import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
 import system.collections.generic.IList_1;
 import system.collections.generic.IList_1Implementation;
+import system.collections.generic.IEnumerator_1;
+import system.collections.generic.IEnumerator_1Implementation;
 
 
 /**
@@ -204,7 +206,7 @@ public class OrderablePartitioner_1<TSource extends IJCOBridgeReflected> extends
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Concurrent.OrderablePartitioner-1.GetDynamicPartitions" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 GetDynamicPartitions() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException {
+    public IEnumerable_1<TSource> GetDynamicPartitions() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetDynamicPartitions = null;
@@ -259,7 +261,7 @@ public class OrderablePartitioner_1<TSource extends IJCOBridgeReflected> extends
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Concurrent.OrderablePartitioner-1.GetPartitions" target="_top">.NET documentation</a>
      */
-    public IList_1 GetPartitions(int partitionCount) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
+    public IList_1<IEnumerator_1<TSource>> GetPartitions(int partitionCount) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetPartitions = null;

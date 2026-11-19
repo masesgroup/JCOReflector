@@ -317,7 +317,7 @@ public class ObjectQuery_1<T extends IJCOBridgeReflected> extends system.data.ob
      * @throws system.globalization.CultureNotFoundException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectQuery-1.Distinct" target="_top">.NET documentation</a>
      */
-    public ObjectQuery_1 Distinct() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException {
+    public ObjectQuery_1<T> Distinct() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectDistinct = null;
@@ -335,7 +335,7 @@ public class ObjectQuery_1<T extends IJCOBridgeReflected> extends system.data.ob
     /**
      * Invokes the .NET member Except.
      *
-     * @param query the argument of type {@code ObjectQuery_1}
+     * @param query the argument of type {@code ObjectQuery_1<T>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -349,7 +349,7 @@ public class ObjectQuery_1<T extends IJCOBridgeReflected> extends system.data.ob
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectQuery-1.Except" target="_top">.NET documentation</a>
      */
-    public ObjectQuery_1 Except(ObjectQuery_1 query) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
+    public ObjectQuery_1<T> Except(ObjectQuery_1<T> query) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectExcept = null;
@@ -380,7 +380,7 @@ public class ObjectQuery_1<T extends IJCOBridgeReflected> extends system.data.ob
      * @throws system.FormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectQuery-1.Include" target="_top">.NET documentation</a>
      */
-    public ObjectQuery_1 Include(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
+    public ObjectQuery_1<T> Include(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectInclude = null;
@@ -398,7 +398,7 @@ public class ObjectQuery_1<T extends IJCOBridgeReflected> extends system.data.ob
     /**
      * Invokes the .NET member Intersect.
      *
-     * @param query the argument of type {@code ObjectQuery_1}
+     * @param query the argument of type {@code ObjectQuery_1<T>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -413,7 +413,7 @@ public class ObjectQuery_1<T extends IJCOBridgeReflected> extends system.data.ob
      * @throws system.globalization.CultureNotFoundException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectQuery-1.Intersect" target="_top">.NET documentation</a>
      */
-    public ObjectQuery_1 Intersect(ObjectQuery_1 query) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException {
+    public ObjectQuery_1<T> Intersect(ObjectQuery_1<T> query) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectIntersect = null;
@@ -449,7 +449,7 @@ public class ObjectQuery_1<T extends IJCOBridgeReflected> extends system.data.ob
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectQuery-1.OrderBy" target="_top">.NET documentation</a>
      */
-    public ObjectQuery_1 OrderBy(java.lang.String keys, ObjectParameter... parameters) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.IndexOutOfRangeException {
+    public ObjectQuery_1<T> OrderBy(java.lang.String keys, ObjectParameter... parameters) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectOrderBy = null;
@@ -486,7 +486,7 @@ public class ObjectQuery_1<T extends IJCOBridgeReflected> extends system.data.ob
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectQuery-1.Skip" target="_top">.NET documentation</a>
      */
-    public ObjectQuery_1 Skip(java.lang.String keys, java.lang.String count, ObjectParameter... parameters) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.IndexOutOfRangeException {
+    public ObjectQuery_1<T> Skip(java.lang.String keys, java.lang.String count, ObjectParameter... parameters) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSkip = null;
@@ -522,7 +522,7 @@ public class ObjectQuery_1<T extends IJCOBridgeReflected> extends system.data.ob
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectQuery-1.Top" target="_top">.NET documentation</a>
      */
-    public ObjectQuery_1 Top(java.lang.String count, ObjectParameter... parameters) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.IndexOutOfRangeException {
+    public ObjectQuery_1<T> Top(java.lang.String count, ObjectParameter... parameters) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectTop = null;
@@ -540,7 +540,7 @@ public class ObjectQuery_1<T extends IJCOBridgeReflected> extends system.data.ob
     /**
      * Invokes the .NET member Union.
      *
-     * @param query the argument of type {@code ObjectQuery_1}
+     * @param query the argument of type {@code ObjectQuery_1<T>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -555,7 +555,7 @@ public class ObjectQuery_1<T extends IJCOBridgeReflected> extends system.data.ob
      * @throws system.globalization.CultureNotFoundException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectQuery-1.Union" target="_top">.NET documentation</a>
      */
-    public ObjectQuery_1 Union(ObjectQuery_1 query) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException {
+    public ObjectQuery_1<T> Union(ObjectQuery_1<T> query) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectUnion = null;
@@ -573,7 +573,7 @@ public class ObjectQuery_1<T extends IJCOBridgeReflected> extends system.data.ob
     /**
      * Invokes the .NET member UnionAll.
      *
-     * @param query the argument of type {@code ObjectQuery_1}
+     * @param query the argument of type {@code ObjectQuery_1<T>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -589,7 +589,7 @@ public class ObjectQuery_1<T extends IJCOBridgeReflected> extends system.data.ob
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectQuery-1.UnionAll" target="_top">.NET documentation</a>
      */
-    public ObjectQuery_1 UnionAll(ObjectQuery_1 query) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.OutOfMemoryException, system.IndexOutOfRangeException {
+    public ObjectQuery_1<T> UnionAll(ObjectQuery_1<T> query) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectUnionAll = null;
@@ -625,7 +625,7 @@ public class ObjectQuery_1<T extends IJCOBridgeReflected> extends system.data.ob
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectQuery-1.Where" target="_top">.NET documentation</a>
      */
-    public ObjectQuery_1 Where(java.lang.String predicate, ObjectParameter... parameters) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.IndexOutOfRangeException {
+    public ObjectQuery_1<T> Where(java.lang.String predicate, ObjectParameter... parameters) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectWhere = null;
@@ -740,7 +740,7 @@ public class ObjectQuery_1<T extends IJCOBridgeReflected> extends system.data.ob
      * @throws system.data.EntityCommandExecutionException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectQuery-1.ExecuteNewObjectQuery_1" target="_top">.NET documentation</a>
      */
-    public ObjectResult_1 ExecuteNewObjectQuery_1(MergeOption mergeOption) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.data.MetadataException, system.threading.SynchronizationLockException, system.NullReferenceException, system.NotSupportedException, system.data.ProviderIncompatibleException, system.data.EntityCommandExecutionException {
+    public ObjectResult_1<T> ExecuteNewObjectQuery_1(MergeOption mergeOption) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.data.MetadataException, system.threading.SynchronizationLockException, system.NullReferenceException, system.NotSupportedException, system.data.ProviderIncompatibleException, system.data.EntityCommandExecutionException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectExecute = null;

@@ -154,7 +154,7 @@ public class IImmutableQueue_1Implementation<T extends IJCOBridgeReflected> exte
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.IImmutableQueue-1.Clear" target="_top">.NET documentation</a>
      */
-    public IImmutableQueue_1 Clear() throws Throwable {
+    public IImmutableQueue_1<T> Clear() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectClear = null;
@@ -176,7 +176,7 @@ public class IImmutableQueue_1Implementation<T extends IJCOBridgeReflected> exte
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.IImmutableQueue-1.Dequeue" target="_top">.NET documentation</a>
      */
-    public IImmutableQueue_1 Dequeue() throws Throwable {
+    public IImmutableQueue_1<T> Dequeue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectDequeue = null;
@@ -199,7 +199,7 @@ public class IImmutableQueue_1Implementation<T extends IJCOBridgeReflected> exte
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.IImmutableQueue-1.Enqueue" target="_top">.NET documentation</a>
      */
-    public IImmutableQueue_1 Enqueue(T value) throws Throwable {
+    public IImmutableQueue_1<T> Enqueue(T value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectEnqueue = null;

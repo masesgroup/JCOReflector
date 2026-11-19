@@ -153,12 +153,12 @@ public class IExtensionCollection_1Implementation<T extends IJCOBridgeReflected>
     /**
      * Invokes the .NET member Contains.
      *
-     * @param item the argument of type {@code IExtension_1}
+     * @param item the argument of type {@code IExtension_1<T>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.IExtensionCollection-1.Contains" target="_top">.NET documentation</a>
      */
-    public boolean Contains(IExtension_1 item) throws Throwable {
+    public boolean Contains(IExtension_1<T> item) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectContains = null;
@@ -175,12 +175,12 @@ public class IExtensionCollection_1Implementation<T extends IJCOBridgeReflected>
     /**
      * Invokes the .NET member Remove.
      *
-     * @param item the argument of type {@code IExtension_1}
+     * @param item the argument of type {@code IExtension_1<T>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.IExtensionCollection-1.Remove" target="_top">.NET documentation</a>
      */
-    public boolean Remove(IExtension_1 item) throws Throwable {
+    public boolean Remove(IExtension_1<T> item) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectRemove = null;
@@ -220,11 +220,11 @@ public class IExtensionCollection_1Implementation<T extends IJCOBridgeReflected>
     /**
      * Invokes the .NET member Add.
      *
-     * @param item the argument of type {@code IExtension_1}
+     * @param item the argument of type {@code IExtension_1<T>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.IExtensionCollection-1.Add" target="_top">.NET documentation</a>
      */
-    public void Add(IExtension_1 item) throws Throwable {
+    public void Add(IExtension_1<T> item) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

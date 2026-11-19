@@ -154,7 +154,7 @@ public class IImmutableStack_1Implementation<T extends IJCOBridgeReflected> exte
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.IImmutableStack-1.Clear" target="_top">.NET documentation</a>
      */
-    public IImmutableStack_1 Clear() throws Throwable {
+    public IImmutableStack_1<T> Clear() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectClear = null;
@@ -176,7 +176,7 @@ public class IImmutableStack_1Implementation<T extends IJCOBridgeReflected> exte
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.IImmutableStack-1.Pop" target="_top">.NET documentation</a>
      */
-    public IImmutableStack_1 Pop() throws Throwable {
+    public IImmutableStack_1<T> Pop() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectPop = null;
@@ -199,7 +199,7 @@ public class IImmutableStack_1Implementation<T extends IJCOBridgeReflected> exte
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.IImmutableStack-1.Push" target="_top">.NET documentation</a>
      */
-    public IImmutableStack_1 Push(T value) throws Throwable {
+    public IImmutableStack_1<T> Push(T value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectPush = null;

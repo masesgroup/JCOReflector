@@ -119,11 +119,11 @@ public interface IImmutableQueue_1<T extends IJCOBridgeReflected> extends IJCOBr
 
     // Methods section
     
-    public IImmutableQueue_1 Clear() throws Throwable;
+    public IImmutableQueue_1<T> Clear() throws Throwable;
 
-    public IImmutableQueue_1 Dequeue() throws Throwable;
+    public IImmutableQueue_1<T> Dequeue() throws Throwable;
 
-    public IImmutableQueue_1 Enqueue(T value) throws Throwable;
+    public IImmutableQueue_1<T> Enqueue(T value) throws Throwable;
 
     public T Peek() throws Throwable;
 

@@ -43,6 +43,7 @@ import system.Func_1;
 import system.threading.CancellationToken;
 import system.threading.tasks.TaskCreationOptions;
 import system.Func_2;
+import system.Object;
 import system.runtime.compilerservices.ConfiguredTaskAwaitable_1;
 import system.runtime.compilerservices.TaskAwaiter_1;
 import system.Action_1;
@@ -167,7 +168,7 @@ public class Task_1<TResult extends IJCOBridgeReflected> extends system.threadin
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param function the argument of type {@code Func_1}
+     * @param function the argument of type {@code Func_1<TResult>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -176,7 +177,7 @@ public class Task_1<TResult extends IJCOBridgeReflected> extends system.threadin
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Task-1.-ctor" target="_top">.NET documentation</a>
      */
-    public Task_1(Func_1 function) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.ObjectDisposedException {
+    public Task_1(Func_1<TResult> function) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -191,7 +192,7 @@ public class Task_1<TResult extends IJCOBridgeReflected> extends system.threadin
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param function the argument of type {@code Func_1}
+     * @param function the argument of type {@code Func_1<TResult>}
      * @param cancellationToken the argument of type {@code CancellationToken}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -201,7 +202,7 @@ public class Task_1<TResult extends IJCOBridgeReflected> extends system.threadin
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Task-1.-ctor" target="_top">.NET documentation</a>
      */
-    public Task_1(Func_1 function, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.ObjectDisposedException {
+    public Task_1(Func_1<TResult> function, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -216,7 +217,7 @@ public class Task_1<TResult extends IJCOBridgeReflected> extends system.threadin
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param function the argument of type {@code Func_1}
+     * @param function the argument of type {@code Func_1<TResult>}
      * @param cancellationToken the argument of type {@code CancellationToken}
      * @param creationOptions the argument of type {@code TaskCreationOptions}
      * @throws Throwable if the .NET constructor fails
@@ -227,7 +228,7 @@ public class Task_1<TResult extends IJCOBridgeReflected> extends system.threadin
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Task-1.-ctor" target="_top">.NET documentation</a>
      */
-    public Task_1(Func_1 function, CancellationToken cancellationToken, TaskCreationOptions creationOptions) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.ObjectDisposedException {
+    public Task_1(Func_1<TResult> function, CancellationToken cancellationToken, TaskCreationOptions creationOptions) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -242,7 +243,7 @@ public class Task_1<TResult extends IJCOBridgeReflected> extends system.threadin
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param function the argument of type {@code Func_1}
+     * @param function the argument of type {@code Func_1<TResult>}
      * @param creationOptions the argument of type {@code TaskCreationOptions}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -252,7 +253,7 @@ public class Task_1<TResult extends IJCOBridgeReflected> extends system.threadin
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Task-1.-ctor" target="_top">.NET documentation</a>
      */
-    public Task_1(Func_1 function, TaskCreationOptions creationOptions) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.ObjectDisposedException {
+    public Task_1(Func_1<TResult> function, TaskCreationOptions creationOptions) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -267,7 +268,7 @@ public class Task_1<TResult extends IJCOBridgeReflected> extends system.threadin
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param function the argument of type {@code Func_2}
+     * @param function the argument of type {@code Func_2<Object, TResult>}
      * @param state the argument of type {@code NetObject}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -277,7 +278,7 @@ public class Task_1<TResult extends IJCOBridgeReflected> extends system.threadin
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Task-1.-ctor" target="_top">.NET documentation</a>
      */
-    public Task_1(Func_2 function, NetObject state) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.ObjectDisposedException {
+    public Task_1(Func_2<Object, TResult> function, NetObject state) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -292,7 +293,7 @@ public class Task_1<TResult extends IJCOBridgeReflected> extends system.threadin
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param function the argument of type {@code Func_2}
+     * @param function the argument of type {@code Func_2<Object, TResult>}
      * @param state the argument of type {@code NetObject}
      * @param cancellationToken the argument of type {@code CancellationToken}
      * @throws Throwable if the .NET constructor fails
@@ -303,7 +304,7 @@ public class Task_1<TResult extends IJCOBridgeReflected> extends system.threadin
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Task-1.-ctor" target="_top">.NET documentation</a>
      */
-    public Task_1(Func_2 function, NetObject state, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.ObjectDisposedException {
+    public Task_1(Func_2<Object, TResult> function, NetObject state, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -318,7 +319,7 @@ public class Task_1<TResult extends IJCOBridgeReflected> extends system.threadin
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param function the argument of type {@code Func_2}
+     * @param function the argument of type {@code Func_2<Object, TResult>}
      * @param state the argument of type {@code NetObject}
      * @param cancellationToken the argument of type {@code CancellationToken}
      * @param creationOptions the argument of type {@code TaskCreationOptions}
@@ -330,7 +331,7 @@ public class Task_1<TResult extends IJCOBridgeReflected> extends system.threadin
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Task-1.-ctor" target="_top">.NET documentation</a>
      */
-    public Task_1(Func_2 function, NetObject state, CancellationToken cancellationToken, TaskCreationOptions creationOptions) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.ObjectDisposedException {
+    public Task_1(Func_2<Object, TResult> function, NetObject state, CancellationToken cancellationToken, TaskCreationOptions creationOptions) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -345,7 +346,7 @@ public class Task_1<TResult extends IJCOBridgeReflected> extends system.threadin
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param function the argument of type {@code Func_2}
+     * @param function the argument of type {@code Func_2<Object, TResult>}
      * @param state the argument of type {@code NetObject}
      * @param creationOptions the argument of type {@code TaskCreationOptions}
      * @throws Throwable if the .NET constructor fails
@@ -356,7 +357,7 @@ public class Task_1<TResult extends IJCOBridgeReflected> extends system.threadin
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Task-1.-ctor" target="_top">.NET documentation</a>
      */
-    public Task_1(Func_2 function, NetObject state, TaskCreationOptions creationOptions) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.ObjectDisposedException {
+    public Task_1(Func_2<Object, TResult> function, NetObject state, TaskCreationOptions creationOptions) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -381,7 +382,7 @@ public class Task_1<TResult extends IJCOBridgeReflected> extends system.threadin
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Task-1.ConfigureAwaitNewTask_1" target="_top">.NET documentation</a>
      */
-    public ConfiguredTaskAwaitable_1 ConfigureAwaitNewTask_1(boolean continueOnCapturedContext) throws Throwable {
+    public ConfiguredTaskAwaitable_1<TResult> ConfigureAwaitNewTask_1(boolean continueOnCapturedContext) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectConfigureAwait = null;
@@ -403,7 +404,7 @@ public class Task_1<TResult extends IJCOBridgeReflected> extends system.threadin
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Task-1.GetAwaiterNewTask_1" target="_top">.NET documentation</a>
      */
-    public TaskAwaiter_1 GetAwaiterNewTask_1() throws Throwable {
+    public TaskAwaiter_1<TResult> GetAwaiterNewTask_1() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetAwaiter = null;

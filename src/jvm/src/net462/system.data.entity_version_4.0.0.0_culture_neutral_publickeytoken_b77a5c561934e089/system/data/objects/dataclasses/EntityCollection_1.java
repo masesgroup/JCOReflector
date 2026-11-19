@@ -255,7 +255,7 @@ public class EntityCollection_1<TEntity extends IJCOBridgeReflected> extends sys
      * @throws system.data.ProviderIncompatibleException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DataClasses.EntityCollection-1.CreateSourceQuery" target="_top">.NET documentation</a>
      */
-    public ObjectQuery_1 CreateSourceQuery() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.data.MappingException, system.data.MetadataException, system.threading.SynchronizationLockException, system.NullReferenceException, system.data.ProviderIncompatibleException {
+    public ObjectQuery_1<TEntity> CreateSourceQuery() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.data.MappingException, system.data.MetadataException, system.threading.SynchronizationLockException, system.NullReferenceException, system.data.ProviderIncompatibleException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectCreateSourceQuery = null;
@@ -301,7 +301,7 @@ public class EntityCollection_1<TEntity extends IJCOBridgeReflected> extends sys
     /**
      * Invokes the .NET member Attach.
      *
-     * @param entities the argument of type {@code IEnumerable_1}
+     * @param entities the argument of type {@code IEnumerable_1<TEntity>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
@@ -319,7 +319,7 @@ public class EntityCollection_1<TEntity extends IJCOBridgeReflected> extends sys
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DataClasses.EntityCollection-1.Attach" target="_top">.NET documentation</a>
      */
-    public void Attach(IEnumerable_1 entities) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.threading.SynchronizationLockException, system.threading.LockRecursionException, system.FormatException, system.NullReferenceException, system.data.MetadataException, system.data.MappingException, system.NotSupportedException {
+    public void Attach(IEnumerable_1<TEntity> entities) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.threading.SynchronizationLockException, system.threading.LockRecursionException, system.FormatException, system.NullReferenceException, system.data.MetadataException, system.data.MappingException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

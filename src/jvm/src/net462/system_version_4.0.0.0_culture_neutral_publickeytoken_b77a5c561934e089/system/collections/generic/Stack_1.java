@@ -201,12 +201,12 @@ public class Stack_1<T extends IJCOBridgeReflected> extends NetObjectEnumerable 
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param collection the argument of type {@code IEnumerable_1}
+     * @param collection the argument of type {@code IEnumerable_1<T>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.Stack-1.-ctor" target="_top">.NET documentation</a>
      */
-    public Stack_1(IEnumerable_1 collection) throws Throwable, system.ArgumentNullException {
+    public Stack_1(IEnumerable_1<T> collection) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);

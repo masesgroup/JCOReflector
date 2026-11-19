@@ -150,6 +150,9 @@ namespace MASES.JCOReflector.Engine
 
                     bool isParamGeneric = EnableGenerics && !isException && (parameter.ParameterType.IsGenericParameter ||
                                          (parameter.ParameterType.IsArray && parameter.ParameterType.GetElementType().IsGenericParameter));
+                    // A constructed generic over in-scope type parameters (IEnumerable<T>, IDictionary<TKey,TValue>...) keeps
+                    // its type arguments; never for an exception, which cannot declare type variables.
+                    bool isParamConstructedGeneric = !isException && !isParamGeneric && IsResolvableConstructedGeneric(parameter.ParameterType);
 
                     string paramType;
                     if (isException && isClassLevelGenericParam)
@@ -175,6 +178,12 @@ namespace MASES.JCOReflector.Engine
                         paramType = paramType.Split('`')[0];
                     }
 
+                    // ConvertType has already accepted the type: now keep its type arguments instead of the raw name.
+                    if (isParamConstructedGeneric && isManaged && !isPrimitive && !isSpecial && !isArray)
+                    {
+                        paramType = ResolveGenericTypeName(parameter.ParameterType, imports);
+                    }
+
                     if (isParamGeneric)
                     {
                         isArray = parameter.ParameterType.IsArray;
@@ -185,7 +194,7 @@ namespace MASES.JCOReflector.Engine
 
                     if (!isManaged) break; // found not managed type, stop here
 
-                    erasedCtorParamTypes.Add(isArray ? paramType + "[]" : paramType);
+                    erasedCtorParamTypes.Add(isArray ? paramType + "[]" : (isParamConstructedGeneric ? paramType.Split('<')[0] : paramType));
 
                     var paramName = ReplaceSinglekeyword(parameter.Name);
                     isPrimitive |= typeof(Delegate).IsAssignableFrom(parameter.ParameterType);

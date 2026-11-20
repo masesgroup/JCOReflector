@@ -71,7 +71,7 @@ public class GenericClosedTypeArgumentsAreResolved {
                 IList_1.class, CustomAttributeData.class);
 
         // a typed property is usable end to end
-        Assembly assembly = system.Type.GetType("System.Object").getAssembly();
+        Assembly assembly = Assembly.GetExecutingAssembly();
         IEnumerable_1<TypeInfo> types = assembly.getDefinedTypes();
         if (types == null) throw new AssertionError("Expected a non-null collection of defined types");
     }

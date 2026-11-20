@@ -93,13 +93,15 @@ namespace MASES.JCOReflector.Engine
         // arguments reference generic parameters in scope and that can be rendered as a parameterized
         // Java type in a member signature. Method-level parameters are excluded: they need the method's
         // own <T> declaration, which is handled by the dedicated method-generic paths.
-        static bool IsResolvableConstructedGeneric(Type t)
+        static bool IsResolvableConstructedGeneric(Type t, bool allowClosed = false)
         {
             if (!EnableGenerics) return false;
             if (t.IsByRef || t.IsArray || t.IsPointer) return false;
             // A member of List<T> that mentions List<T> itself (GetRange returns List<T>) sees the generic type
             // DEFINITION, whose arguments are the type's own parameters, i.e. already in scope.
-            if (!t.IsGenericType || !t.ContainsGenericParameters) return false;
+            // allowClosed: also a fully closed type such as EventHandler<FirstChanceExceptionEventArgs>, whose
+            // arguments are reflected classes (checked by ViolatesReflectedBound) and need no type parameter in scope.
+            if (!t.IsGenericType || (!allowClosed && !t.ContainsGenericParameters)) return false;
             // Nested types (e.g. ConditionalWeakTable<TKey,TValue>.CreateValueCallback) are not generated as
             // classes of their own, so there is nothing to parameterize: keep the previous behavior.
             if (t.IsNested) return false;

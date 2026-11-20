@@ -23,7 +23,8 @@
 (ns generics.GenericClosedTypeArgumentsAreResolved
   (:gen-class)
   (:require [generics.GenericSupport :as gs])
-  (:import [org.mases.jcobridge.netreflection IJCOBridgeReflected JCOReflector NetObject]
+  (:import [java.lang.reflect ParameterizedType TypeVariable]
+           [org.mases.jcobridge.netreflection IJCOBridgeReflected JCOReflector NetObject]
            [system Console Environment]
            [system.collections.generic IEnumerable_1 IList_1]
            [system.reflection Assembly CustomAttributeData TypeInfo]
@@ -36,11 +37,11 @@
 ;; Arguments that are not reflected classes (string, int...) keep the raw type, as before.
 (defn- test-generic-closed-type-arguments-are-resolved []
   (gs/assert-closed (aget (.getGenericParameterTypes (.getMethod Task "WhenAll" (into-array Class [IEnumerable_1]))) 0)
-                    IEnumerable_1 Task)
+                 IEnumerable_1 Task)
   (gs/assert-closed (.getGenericReturnType (.getMethod Assembly "getDefinedTypes" (into-array Class [])))
-                    IEnumerable_1 TypeInfo)
+                 IEnumerable_1 TypeInfo)
   (gs/assert-closed (.getGenericReturnType (.getMethod Assembly "GetCustomAttributesData" (into-array Class [])))
-                    IList_1 CustomAttributeData)
+                 IList_1 CustomAttributeData)
 
   ;; a typed property is usable end to end
   (let [assembly (Assembly/GetExecutingAssembly)]

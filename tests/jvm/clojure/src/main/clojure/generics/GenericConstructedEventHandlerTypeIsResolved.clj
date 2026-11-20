@@ -23,7 +23,8 @@
 (ns generics.GenericConstructedEventHandlerTypeIsResolved
   (:gen-class)
   (:require [generics.GenericSupport :as gs])
-  (:import [org.mases.jcobridge.netreflection IJCOBridgeReflected JCOReflector NetObject]
+  (:import [java.lang.reflect ParameterizedType TypeVariable]
+           [org.mases.jcobridge.netreflection IJCOBridgeReflected JCOReflector NetObject]
            [system Console Environment EventHandler_1 Progress_1]))
 
 ;; Exercises an event whose handler is a constructed generic delegate over a class-level type
@@ -32,9 +33,9 @@
 ;; removeProgressChanged are generated and take an EventHandler_1<T>.
 (defn- test-generic-constructed-event-handler-type-is-resolved []
   (gs/assert-parameterized (aget (.getGenericParameterTypes (.getMethod Progress_1 "addProgressChanged" (into-array Class [EventHandler_1]))) 0)
-                           EventHandler_1 Progress_1 "T")
+                        EventHandler_1 Progress_1 "T")
   (gs/assert-parameterized (aget (.getGenericParameterTypes (.getMethod Progress_1 "removeProgressChanged" (into-array Class [EventHandler_1]))) 0)
-                           EventHandler_1 Progress_1 "T"))
+                        EventHandler_1 Progress_1 "T"))
 
 (defn -main [& args]
   (JCOReflector/setCommandLineArgs (into-array String args))

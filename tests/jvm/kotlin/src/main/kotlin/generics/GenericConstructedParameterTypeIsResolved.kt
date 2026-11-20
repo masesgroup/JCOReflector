@@ -74,8 +74,12 @@ object GenericConstructedParameterTypeIsResolved {
 
         val calls = java.util.concurrent.atomic.AtomicInteger()
         val action = object : Action_1<system.Object>() {
-            override fun Invoke(obj: system.Object) {
-                calls.incrementAndGet()
+            override fun Invoke(obj: system.Object?) {
+                try {
+                    calls.incrementAndGet()
+                } catch (t: Throwable) {
+                    t.printStackTrace()
+                }
             }
         }
         list.ForEach(action)

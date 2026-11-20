@@ -23,7 +23,8 @@
 (ns generics.GenericConstructedReturnTypeIsResolved
   (:gen-class)
   (:require [generics.GenericSupport :as gs])
-  (:import [org.mases.jcobridge.netreflection IJCOBridgeReflected JCOReflector NetObject]
+  (:import [java.lang.reflect ParameterizedType TypeVariable]
+           [org.mases.jcobridge.netreflection IJCOBridgeReflected JCOReflector NetObject]
            [system Console Environment]
            [system.collections.generic List_1]
            [system.collections.objectmodel ReadOnlyCollection_1]))
@@ -34,9 +35,9 @@
 ;; classes, while the returned instance is still wrapped correctly.
 (defn- test-generic-constructed-return-type-is-resolved []
   (gs/assert-parameterized (.getGenericReturnType (.getMethod List_1 "AsReadOnly" (into-array Class [])))
-                           ReadOnlyCollection_1 List_1 "T")
+                        ReadOnlyCollection_1 List_1 "T")
   (gs/assert-parameterized (.getGenericReturnType (.getMethod List_1 "GetRange" (into-array Class [Integer/TYPE Integer/TYPE])))
-                           List_1 List_1 "T")
+                        List_1 List_1 "T")
 
   ;; the typed results are usable end to end
   (let [^List_1 lst (gs/new-generic List_1 [system.Object])

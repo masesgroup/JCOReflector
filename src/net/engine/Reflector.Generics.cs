@@ -140,10 +140,6 @@ namespace MASES.JCOReflector.Engine
                 if (b.GetProperties(BindingFlags.Public | BindingFlags.Instance | BindingFlags.Static | BindingFlags.DeclaredOnly)
                      .Any(p => p.Name == propertyName)) return true;
             }
-            foreach (var i in type.GetInterfaces())
-            {
-                if (i.GetProperties(BindingFlags.Public | BindingFlags.Instance).Any(p => p.Name == propertyName)) return true;
-            }
             return false;
         }
 
@@ -155,10 +151,6 @@ namespace MASES.JCOReflector.Engine
             {
                 if (b.GetEvents(BindingFlags.Public | BindingFlags.Instance | BindingFlags.Static | BindingFlags.DeclaredOnly)
                      .Any(e => e.Name == eventName)) return true;
-            }
-            foreach (var i in type.GetInterfaces())
-            {
-                if (i.GetEvents(BindingFlags.Public | BindingFlags.Instance).Any(e => e.Name == eventName)) return true;
             }
             return false;
         }
@@ -183,12 +175,16 @@ namespace MASES.JCOReflector.Engine
                 if (b.GetMethods(BindingFlags.Public | BindingFlags.Instance | BindingFlags.Static | BindingFlags.DeclaredOnly)
                      .Any(m => m.Name == methodName && m.GetParameters().Length == paramCount)) return true;
             }
-            // Same for the interfaces the type implements or extends: a class implementing IObservable<A> that also
-            // declares Subscribe(IObserver<B>) must keep the raw parameter, or Java no longer sees an override.
-            foreach (var i in type.GetInterfaces())
+            // A type that implements the SAME generic interface more than once with different type arguments
+            // (AspNetMemoryMonitor: IObservable<RecycleLimitInfo> and IObservable<LowPhysicalMemoryInfo>) is
+            // exported by Java as one of them only: the members of that interface keep the raw parameter.
+            // Any other interface method is declared parameterized by the interface itself, and the
+            // implementing type or its "...Implementation" class must declare it the same way.
+            foreach (var group in type.GetInterfaces().Where(i => i.IsGenericType).GroupBy(i => i.GetGenericTypeDefinition()))
             {
-                if (i.GetMethods(BindingFlags.Public | BindingFlags.Instance)
-                     .Any(m => m.Name == methodName && m.GetParameters().Length == paramCount)) return true;
+                if (group.Count() < 2) continue;
+                if (group.Key.GetMethods(BindingFlags.Public | BindingFlags.Instance)
+                         .Any(m => m.Name == methodName && m.GetParameters().Length == paramCount)) return true;
             }
             return false;
         }

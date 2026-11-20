@@ -475,6 +475,9 @@ jobs:
       - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" generics.GenericClosedTypeArgumentsAreResolved
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" generics.GenericInheritedInterfaceMethodsAreConsistent
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+
       - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" generics.GenericExceptionTypeArgumentStaysRaw
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
@@ -1213,6 +1216,9 @@ jobs:
       - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" generics.GenericClosedTypeArgumentsAreResolved
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" generics.GenericInheritedInterfaceMethodsAreConsistent
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+
       - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" generics.GenericExceptionTypeArgumentStaysRaw
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
@@ -1818,6 +1824,9 @@ jobs:
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
       - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" generics.GenericClosedTypeArgumentsAreResolved
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" generics.GenericInheritedInterfaceMethodsAreConsistent
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
       - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" generics.GenericExceptionTypeArgumentStaysRaw

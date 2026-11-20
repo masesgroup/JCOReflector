@@ -122,6 +122,9 @@ namespace MASES.JCOReflector.Engine
             {
                 if (arg.IsGenericParameter) continue;
                 if (arg.IsNested) return false;
+                // Exceptions are generated as Java Throwables (System.Exception has no system.Exception class):
+                // they do not satisfy the IJCOBridgeReflected bound of a type parameter.
+                if (typeof(Exception).IsAssignableFrom(arg)) return false;
                 if (!arg.IsManagedType(0, 2)) return false;
                 if (arg.IsGenericType && !AreTypeArgumentsExportable(arg)) return false;
             }
@@ -137,6 +140,10 @@ namespace MASES.JCOReflector.Engine
                 if (b.GetProperties(BindingFlags.Public | BindingFlags.Instance | BindingFlags.Static | BindingFlags.DeclaredOnly)
                      .Any(p => p.Name == propertyName)) return true;
             }
+            foreach (var i in type.GetInterfaces())
+            {
+                if (i.GetProperties(BindingFlags.Public | BindingFlags.Instance).Any(p => p.Name == propertyName)) return true;
+            }
             return false;
         }
 
@@ -148,6 +155,10 @@ namespace MASES.JCOReflector.Engine
             {
                 if (b.GetEvents(BindingFlags.Public | BindingFlags.Instance | BindingFlags.Static | BindingFlags.DeclaredOnly)
                      .Any(e => e.Name == eventName)) return true;
+            }
+            foreach (var i in type.GetInterfaces())
+            {
+                if (i.GetEvents(BindingFlags.Public | BindingFlags.Instance).Any(e => e.Name == eventName)) return true;
             }
             return false;
         }
@@ -170,6 +181,13 @@ namespace MASES.JCOReflector.Engine
             for (var b = type.BaseType; b != null && b != typeof(object); b = b.BaseType)
             {
                 if (b.GetMethods(BindingFlags.Public | BindingFlags.Instance | BindingFlags.Static | BindingFlags.DeclaredOnly)
+                     .Any(m => m.Name == methodName && m.GetParameters().Length == paramCount)) return true;
+            }
+            // Same for the interfaces the type implements or extends: a class implementing IObservable<A> that also
+            // declares Subscribe(IObserver<B>) must keep the raw parameter, or Java no longer sees an override.
+            foreach (var i in type.GetInterfaces())
+            {
+                if (i.GetMethods(BindingFlags.Public | BindingFlags.Instance)
                      .Any(m => m.Name == methodName && m.GetParameters().Length == paramCount)) return true;
             }
             return false;

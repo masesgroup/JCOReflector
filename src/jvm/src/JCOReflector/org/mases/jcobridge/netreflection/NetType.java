@@ -92,23 +92,87 @@ public class NetType extends NetObject {
     public static void AssertCast(IJCOBridgeReflected to, IJCOBridgeReflected from) throws Throwable {
         if (!NetType.CanCast(to, from)) {
             throw new UnsupportedOperationException(String.format("%s cannot be casted to %s", from.getJCOObjectName(),
-                    (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName)));
+                    to.getJCOObjectName()));
         }
     }
 
     public static void AssertCast(JCType to, IJCOBridgeReflected from) throws Throwable {
         if (!NetType.CanCast(to, from)) {
             throw new UnsupportedOperationException(String.format("%s cannot be casted to %s", from.getJCOObjectName(),
-                    (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName)));
+                    to.toString()));
         }
     }
 
     public static boolean CanCast(IJCOBridgeReflected to, IJCOBridgeReflected from) throws Throwable {
-        return IsAssignableFrom(to.getJCOType(), from.getJCOType()) || IsSubclassOf(to.getJCOType(), from.getJCOType());
+        return CanCast(to.getJCOType(), from);
     }
 
+    /**
+     * Checks if {@code from} can be casted to the type {@code to}.
+     * <p>
+     * The wrapper of a generic type returns from {@code getJCOType()} the type created from its class name, that is
+     * the <b>open</b> generic definition (for example {@code Dictionary`2}), never the closed type of the instance.
+     * {@code Type.IsAssignableFrom} is always false between open generic definitions, so, when the quick check
+     * fails and {@code to} is a generic type definition, the runtime type of the instance is inspected
+     * (see {@link #IsInstanceOfGenericDefinition(JCType, IJCOBridgeReflected)}).
+     */
     public static boolean CanCast(JCType to, IJCOBridgeReflected from) throws Throwable {
-        return IsAssignableFrom(to, from.getJCOType()) || IsSubclassOf(to, from.getJCOType());
+        return IsAssignableFrom(to, from.getJCOType()) || IsSubclassOf(to, from.getJCOType())
+                || IsInstanceOfGenericDefinition(to, from);
+    }
+
+    /**
+     * Checks if the runtime type of {@code from} is built from the generic type definition {@code to}, either because
+     * the type itself, one of its base types or one of the interfaces it implements is a constructed form of it:
+     * {@code Dictionary<string, int>} is an instance of the definition {@code IDictionary`2}.
+     */
+    static boolean IsInstanceOfGenericDefinition(JCType to, IJCOBridgeReflected from) throws Throwable {
+        try {
+            if (!(boolean) to.GetOnType("IsGenericTypeDefinition"))
+                return false;
+            Object instance = from.getJCOInstance();
+            if (!(instance instanceof JCObject))
+                return false;
+
+            // the real, closed, type of the instance
+            Object runtimeType = ((JCObject) instance).Invoke("GetType");
+
+            // the type and its base types
+            for (Object current = runtimeType; current != null; current = TypeGet(current, "BaseType")) {
+                if (IsConstructedFrom(to, current))
+                    return true;
+            }
+            // every interface the type implements, inherited ones included
+            Object interfaces = TypeInvoke(runtimeType, "GetInterfaces");
+            if (interfaces instanceof JCObject) {
+                JCObject array = (JCObject) interfaces;
+                int length = (int) array.Get("Length");
+                for (int i = 0; i < length; i++) {
+                    Object item = array.Invoke("GetValue", i);
+                    if (item != null && IsConstructedFrom(to, item))
+                        return true;
+                }
+            }
+            return false;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    // the CLR type objects can be returned as JCType or as JCObject: the same member is read in the two ways
+    private static Object TypeGet(Object type, String property) throws JCNativeException {
+        return (type instanceof JCType) ? ((JCType) type).GetOnType(property) : ((JCObject) type).Get(property);
+    }
+
+    private static Object TypeInvoke(Object type, String method, Object... params) throws JCNativeException {
+        return (type instanceof JCType) ? ((JCType) type).InvokeOnType(method, params) : ((JCObject) type).Invoke(method, params);
+    }
+
+    private static boolean IsConstructedFrom(JCType definition, Object type) throws JCNativeException {
+        if (!(boolean) TypeGet(type, "IsGenericType"))
+            return false;
+        Object typeDefinition = TypeInvoke(type, "GetGenericTypeDefinition");
+        return (boolean) definition.InvokeOnType("Equals", typeDefinition);
     }
 
     public static boolean CanCast(JCType to, JCType from) throws Throwable {
